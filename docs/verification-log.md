@@ -66,6 +66,38 @@ Seeded LMHG wp-env site content.
 HTTP/1.1 200 OK
 ```
 
+### LMHG Route Manifest Import
+
+```bash
+npm run wp-env:import:lmhg
+npm run wp-env:import:lmhg
+npx --no-install wp-env run cli wp post list --post_type=page --meta_key=_lmhg_source_url --format=count
+npx --no-install wp-env run cli wp eval 'echo get_post_meta((int) get_option("page_on_front"), "_lmhg_source_url", true);'
+npx --no-install wp-env run cli wp eval '$ok = get_page_by_path("faq/cost", OBJECT, "page") instanceof WP_Post; echo $ok ? "faq/cost ok" : "faq/cost missing";'
+npx --no-install wp-env run cli wp eval '$q = new WP_Query(array("post_type"=>"page","post_status"=>"any","meta_key"=>"_lmhg_source_url","meta_value"=>"/404.html","posts_per_page"=>20,"orderby"=>"ID","order"=>"ASC")); $rows = array_map(fn($p) => array("ID"=>$p->ID,"post_name"=>$p->post_name,"post_status"=>$p->post_status), $q->posts); echo wp_json_encode($rows);'
+```
+
+Result:
+
+```text
+Success: {"created":0,"updated":52,"skipped":3,"failed":0}
+Success: {"created":0,"updated":52,"skipped":3,"failed":0}
+52
+/
+faq/cost ok
+[{"ID":8,"post_name":"not-found","post_status":"publish"}]
+```
+
+Importer notes:
+
+- The first fixed import created 51 pages, updated the existing front page,
+  skipped 3 out-of-scope routes, and failed 0 routes.
+- The importer now resolves existing pages by `_lmhg_source_url` before path
+  lookup, which keeps `/404.html` idempotent even though WordPress rewrites
+  numeric slugs.
+- Temporary manifest files are written inside the mounted plugin directory and
+  removed after the import command exits.
+
 ### Screenshots And Lighthouse
 
 ```bash

@@ -18,6 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+require_once __DIR__ . '/includes/importer.php';
+
 add_filter( 'pre_option_home', 'lmhg_site_core_tailnet_url_for_serve' );
 add_filter( 'pre_option_siteurl', 'lmhg_site_core_tailnet_url_for_serve' );
 add_action( 'wp_head', 'lmhg_site_core_output_meta_description', 5 );

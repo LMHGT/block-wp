@@ -19,6 +19,7 @@
     "wp-env:destroy": "wp-env destroy",
     "wp-env:cli": "wp-env run cli wp",
     "wp-env:seed": "node tools/seed-wp-env.mjs",
+    "wp-env:import:lmhg": "node tools/seed-lmhg-wp.mjs",
     "playground:start": "node tools/run-playground.mjs",
     "playground:blueprint": "node tools/run-playground.mjs --run-blueprint",
     "test:screenshots": "playwright test --config=tests/playwright.config.mjs",

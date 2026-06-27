@@ -8,6 +8,7 @@ const requiredFiles = [
   "blueprints/local-dev/blueprint.json",
   "docs/source-provenance.md",
   "docs/worker-checklist.md",
+  "docs/content-model.md",
   "data/lmhg/source-route-manifest.json",
   "data/lmhg/source-design-manifest.json",
   "data/lmhg/source-assets-manifest.json",
@@ -17,6 +18,8 @@ const requiredFiles = [
   "wp-content/themes/lmhg-block-theme/parts/header.html",
   "wp-content/themes/lmhg-block-theme/parts/footer.html",
   "wp-content/plugins/lmhg-site-core/lmhg-site-core.php",
+  "wp-content/plugins/lmhg-site-core/includes/importer.php",
+  "tools/seed-lmhg-wp.mjs",
   ".codex/skills/wordpress-router/SKILL.md",
   ".codex/skills/wp-playground/SKILL.md",
   ".codex/skills/wp-block-themes/SKILL.md"
