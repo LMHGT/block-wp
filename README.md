@@ -25,6 +25,7 @@ npm run setup:browsers
 npm run verify
 npm run wp-env:start
 npm run wp-env:seed
+npm run verify:lmhg
 npm run verify:site
 ```
 
@@ -42,6 +43,18 @@ Give remote reviewers the Tailscale Serve URL, not the localhost URL.
 - Theme boundary: `wp-content/themes/lmhg-block-theme`
 - Durable behavior boundary: `wp-content/plugins/lmhg-site-core`
 - Project-local Codex skills: `.codex/skills`
+
+## LMHG Verification
+
+```bash
+npm run verify:lmhg-static
+npm run verify:lmhg-routes
+npm run verify:lmhg
+```
+
+`verify:lmhg-static` checks the repo-owned route/redirect manifests.
+`verify:lmhg-routes` checks the running `wp-env` database after
+`npm run wp-env:seed`.
 
 ## Tailscale Serve
 

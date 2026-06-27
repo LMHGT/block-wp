@@ -39,6 +39,7 @@ npm run check:prereqs
 npm run wp-env:start
 npm run wp-env:seed
 npm run wp-env:import:lmhg
+npm run verify:lmhg
 npm run test:screenshots
 npm run test:lighthouse
 ```
@@ -56,6 +57,7 @@ For WordPress runtime changes, run:
 ```bash
 npm run wp-env:start
 npm run wp-env:seed
+npm run verify:lmhg
 npm run test:screenshots
 npm run test:lighthouse
 ```

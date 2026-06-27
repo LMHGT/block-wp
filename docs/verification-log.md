@@ -112,6 +112,39 @@ Importer notes:
 - Temporary manifest files are written inside the mounted plugin directory and
   removed after the import command exits.
 
+### LMHG Static And Route Verification
+
+```bash
+npm run verify:lmhg
+```
+
+Result:
+
+```text
+LMHG static verification:
+{
+  "routes": 55,
+  "inScopeRoutes": 52,
+  "redirects": 117,
+  "sourceOnlyRoutes": 1,
+  "canonicalUrls": 53
+}
+LMHG static verification passed.
+
+LMHG route verification:
+{
+  "expectedRoutes": 52,
+  "importedPages": 52,
+  "frontSourceUrl": "/",
+  "showOnFront": "page"
+}
+LMHG route verification passed.
+```
+
+Current scope: this proves repo manifest shape and imported WordPress route/meta
+state. It does not yet prove redirect, canonical tag, schema, breadcrumb,
+related-link, FAQ, or Workbench marker parity.
+
 ### Screenshots And Lighthouse
 
 ```bash
