@@ -29,6 +29,7 @@ const requiredFiles = [
   "tools/verify-lmhg-taxonomies.mjs",
   "tools/verify-lmhg-redirects.mjs",
   "tools/verify-lmhg-links.mjs",
+  "tools/verify-lmhg-actions.mjs",
   "tools/verify-lmhg-head.mjs",
   "tools/verify-lmhg-markers.mjs",
   ".codex/skills/wordpress-router/SKILL.md",

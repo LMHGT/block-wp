@@ -41,6 +41,18 @@ Plugin: `wp-content/plugins/lmhg-site-core`
 - Tailscale URL behavior
 - rendered-marker helpers
 
+Sitewide actions:
+
+- Primary CTA label: `Reach Out`
+- Primary CTA href: `https://intakeq.com/new/g91Z8x/bjxuno`
+- Phone label: `Call (502) 416-1416`
+- Phone href: `tel:5024161416`
+
+These values are mirrored from the read-only Astro source files
+`src/data/site.ts` and `src/data/editable/site-content.json`. They are rendered
+as ordinary anchors in the WordPress header/footer so crawlers and local review
+do not depend on JavaScript or the Astro runtime.
+
 The public WordPress frontend must not depend on live NocoBase, the LMHG
 Workbench, the SEO Dashboard, or the Astro dev server.
 
@@ -115,6 +127,8 @@ truth.
 - Redirect-only URLs stay in the manifest and are not imported as pages.
 - Public navigation and generated related links must point at canonical imported
   routes, not redirect-only sources or unsupported city/service-area pages.
+- Sitewide CTA and phone actions must remain active links; the primary CTA
+  stays external to IntakeQ and the phone action stays a `tel:` link.
 - Existing imported pages are matched by `_lmhg_source_url` before path lookup so
   path/slug rewrites do not create duplicates.
 

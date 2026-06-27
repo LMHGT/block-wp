@@ -167,6 +167,17 @@ LMHG link verification:
 }
 LMHG link verification passed.
 
+LMHG action verification:
+{
+  "baseUrl": "http://localhost:8888",
+  "checkedRoutes": 51,
+  "checkedPrimaryCtas": 102,
+  "checkedPhoneLinks": 51,
+  "primaryCtaHref": "https://intakeq.com/new/g91Z8x/bjxuno",
+  "phoneHref": "tel:5024161416"
+}
+LMHG action verification passed.
+
 LMHG head verification:
 {
   "baseUrl": "http://localhost:8888",
@@ -196,8 +207,9 @@ Current scope: this proves repo manifest shape, imported WordPress route/meta
 state, plugin-owned taxonomy registration and term assignment, front-end
 redirect responses for effective legacy redirects, canonical paths, populated
 source SEO titles/descriptions, rendered internal links that avoid redirect-only
-or unsupported service-area URLs, JSON-LD schema types, one rendered FAQ section
-with FAQPage schema, rendered graph breadcrumbs, related links, and
+or unsupported service-area URLs, the sitewide IntakeQ primary CTA, active phone
+links, JSON-LD schema types, one rendered FAQ section with FAQPage schema,
+rendered graph breadcrumbs, related links, and
 Workbench-style marker presence. It also verifies source H1 values where present
 and rejects scaffold/proof-track visible copy. FAQ answer parity remains
 incomplete for pages whose source records still contain workbook prompts; those

@@ -47,7 +47,45 @@ Text Domain: lmhg-block-theme
   text-decoration: none;
 }
 
-:where(.lmhg-header-nav a:focus-visible) {
+:where(.lmhg-header-cta, .lmhg-footer-cta) {
+  border: 1px solid var(--wp--preset--color--evergreen);
+  border-radius: 6px;
+  background: var(--wp--preset--color--evergreen);
+  color: var(--wp--preset--color--canvas);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.55rem 0.9rem;
+}
+
+:where(.lmhg-header-cta:hover, .lmhg-footer-cta:hover) {
+  background: color-mix(in srgb, var(--wp--preset--color--evergreen) 84%, black);
+  color: var(--wp--preset--color--canvas);
+}
+
+:where(.lmhg-footer-brand) {
+  max-width: 34rem;
+}
+
+:where(.lmhg-footer-actions) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+  align-items: center;
+  font-size: var(--wp--preset--font-size--small);
+  font-weight: 700;
+}
+
+:where(.lmhg-footer-actions a) {
+  text-decoration: none;
+}
+
+:where(.lmhg-footer-phone) {
+  color: var(--wp--preset--color--plum);
+}
+
+:where(.lmhg-header-nav a:focus-visible, .lmhg-footer-actions a:focus-visible) {
   outline: 2px solid currentColor;
   outline-offset: 3px;
 }
