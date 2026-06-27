@@ -147,12 +147,31 @@ LMHG redirect verification:
   "uniqueRedirectChecks": 49
 }
 LMHG redirect verification passed.
+
+LMHG head verification:
+{
+  "baseUrl": "http://localhost:8888",
+  "checkedRoutes": 51,
+  "checkedSeoTitles": 22,
+  "checkedMetaDescriptions": 22,
+  "checkedSchemaTypes": 50
+}
+LMHG head verification passed.
 ```
 
 Current scope: this proves repo manifest shape, imported WordPress route/meta
-state, and front-end redirect responses for effective legacy redirects. It does
-not yet prove canonical tag, schema, breadcrumb, related-link, FAQ, or Workbench
-marker parity.
+state, front-end redirect responses for effective legacy redirects, canonical
+paths, populated source SEO titles/descriptions, and JSON-LD schema types. It
+does not yet prove breadcrumb, related-link, FAQ, or Workbench marker parity.
+
+Representative rendered head output:
+
+```html
+<title>Individual Therapy in Louisville, KY | Counseling | LMHG</title>
+<link rel="canonical" href="http://localhost:8888/individual-counseling/" />
+<meta name="description" content="Individual therapy in Louisville for anxiety, depression, trauma, stress, grief, relationship strain, life transitions, and one-on-one support." />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage",...}</script>
+```
 
 ### Screenshots And Lighthouse
 

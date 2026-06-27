@@ -20,10 +20,12 @@ const requiredFiles = [
   "wp-content/plugins/lmhg-site-core/lmhg-site-core.php",
   "wp-content/plugins/lmhg-site-core/includes/importer.php",
   "wp-content/plugins/lmhg-site-core/includes/redirects.php",
+  "wp-content/plugins/lmhg-site-core/includes/seo.php",
   "tools/seed-lmhg-wp.mjs",
   "tools/verify-lmhg-static.mjs",
   "tools/verify-lmhg-routes.mjs",
   "tools/verify-lmhg-redirects.mjs",
+  "tools/verify-lmhg-head.mjs",
   ".codex/skills/wordpress-router/SKILL.md",
   ".codex/skills/wp-playground/SKILL.md",
   ".codex/skills/wp-block-themes/SKILL.md"

@@ -21,10 +21,10 @@ function lmhg_site_core_import_manifest( array $manifest ): array {
 		: array();
 
 	$result = array(
-		'created' => 0,
-		'updated' => 0,
-		'skipped' => 0,
-		'failed'  => 0,
+		'created'   => 0,
+		'updated'   => 0,
+		'skipped'   => 0,
+		'failed'    => 0,
 		'redirects' => 0,
 	);
 
@@ -243,10 +243,16 @@ function lmhg_site_core_update_route_meta( int $page_id, array $route, string $u
 		'_lmhg_template_family'        => (string) ( $route['templateFamily'] ?? '' ),
 		'_lmhg_faceted_page_type'      => (string) ( $route['facetedPageType'] ?? '' ),
 		'_lmhg_migration_status'       => (string) ( $route['migrationStatus'] ?? '' ),
+		'_lmhg_seo_title'              => (string) ( $seo['title'] ?? '' ),
+		'_lmhg_meta_description'       => (string) ( $seo['description'] ?? '' ),
+		'_lmhg_h1'                     => (string) ( $seo['h1'] ?? '' ),
 		'_lmhg_primary_keyword'        => (string) ( $seo['primaryKeyword'] ?? '' ),
 		'_lmhg_secondary_keywords'     => wp_json_encode( $seo['secondaryKeywords'] ?? array() ),
+		'_lmhg_optimization_terms'     => wp_json_encode( $seo['optimizationTerms'] ?? array() ),
 		'_lmhg_schema_type'            => (string) ( $seo['schemaType'] ?? '' ),
 		'_lmhg_canonical_url'          => (string) ( $seo['canonicalUrl'] ?? $url ),
+		'_lmhg_noindex'                => ! empty( $seo['noindex'] ) ? '1' : '0',
+		'_lmhg_seo_status'             => (string) ( $seo['status'] ?? '' ),
 		'_lmhg_related_pages'          => wp_json_encode( $route['relatedPages'] ?? array() ),
 		'_lmhg_faq_items'              => wp_json_encode( $route['faqItems'] ?? array() ),
 		'_lmhg_route_manifest_entry'   => wp_json_encode( $route ),

@@ -68,10 +68,16 @@ Each imported page stores these post meta values:
 - `_lmhg_template_family`
 - `_lmhg_faceted_page_type`
 - `_lmhg_migration_status`
+- `_lmhg_seo_title`
+- `_lmhg_meta_description`
+- `_lmhg_h1`
 - `_lmhg_primary_keyword`
 - `_lmhg_secondary_keywords`
+- `_lmhg_optimization_terms`
 - `_lmhg_schema_type`
 - `_lmhg_canonical_url`
+- `_lmhg_noindex`
+- `_lmhg_seo_status`
 - `_lmhg_related_pages`
 - `_lmhg_faq_items`
 - `_lmhg_route_manifest_entry`
@@ -133,6 +139,8 @@ Expected behavior:
   route-manifest meta
 - store manifest redirect rules in the plugin-owned `lmhg_route_redirects`
   option for front-end redirect handling
+- render source SEO titles, canonical URLs, meta descriptions, robots directives,
+  and JSON-LD schema types from plugin-owned metadata
 - set the WordPress front page
 - store route, SEO, relationship, and FAQ metadata
 - print a JSON summary

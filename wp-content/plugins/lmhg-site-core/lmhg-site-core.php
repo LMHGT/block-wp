@@ -20,11 +20,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once __DIR__ . '/includes/importer.php';
 require_once __DIR__ . '/includes/redirects.php';
+require_once __DIR__ . '/includes/seo.php';
 
 add_filter( 'pre_option_home', 'lmhg_site_core_tailnet_url_for_serve' );
 add_filter( 'pre_option_siteurl', 'lmhg_site_core_tailnet_url_for_serve' );
-add_action( 'wp_head', 'lmhg_site_core_output_meta_description', 5 );
-add_action( 'wp_head', 'lmhg_site_core_output_json_ld', 20 );
 add_action( 'init', 'lmhg_site_core_disable_emoji_assets' );
 
 /**
@@ -64,77 +63,4 @@ function lmhg_site_core_tailnet_url_for_serve( mixed $value ): mixed {
 	}
 
 	return 'https://' . $tailnet_host;
-}
-
-/**
- * Outputs a concise meta description for baseline SEO checks.
- */
-function lmhg_site_core_output_meta_description(): void {
-	if ( is_admin() || is_feed() || is_robots() ) {
-		return;
-	}
-
-	$description = get_bloginfo( 'description' );
-
-	if ( is_singular() ) {
-		$excerpt = get_the_excerpt();
-		if ( '' !== trim( $excerpt ) ) {
-			$description = $excerpt;
-		}
-	}
-
-	$description = wp_html_excerpt( wp_strip_all_tags( $description ), 155, '...' );
-
-	if ( '' === trim( $description ) ) {
-		return;
-	}
-
-	printf(
-		'<meta name="description" content="%s" />' . "\n",
-		esc_attr( $description )
-	);
-}
-
-/**
- * Outputs minimal JSON-LD that reflects visible site identity.
- */
-function lmhg_site_core_output_json_ld(): void {
-	if ( is_admin() || is_feed() || is_robots() ) {
-		return;
-	}
-
-	$site_url = home_url( '/' );
-	$name     = get_bloginfo( 'name' );
-
-	$graph = array(
-		'@context'        => 'https://schema.org',
-		'@type'           => 'WebSite',
-		'name'            => $name,
-		'url'             => $site_url,
-		'potentialAction' => array(
-			'@type'       => 'SearchAction',
-			'target'      => add_query_arg( 's', '{search_term_string}', $site_url ),
-			'query-input' => 'required name=search_term_string',
-		),
-	);
-
-	if ( is_singular() ) {
-		$graph = array(
-			'@context'     => 'https://schema.org',
-			'@type'        => is_front_page() ? 'WebPage' : 'Article',
-			'headline'     => wp_strip_all_tags( get_the_title() ),
-			'url'          => get_permalink(),
-			'isPartOf'     => array(
-				'@type' => 'WebSite',
-				'name'  => $name,
-				'url'   => $site_url,
-			),
-			'dateModified' => get_the_modified_date( DATE_W3C ),
-		);
-	}
-
-	printf(
-		'<script type="application/ld+json">%s</script>' . "\n",
-		wp_json_encode( $graph, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE )
-	);
 }

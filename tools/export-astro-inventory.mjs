@@ -204,9 +204,13 @@ function main() {
       routeFile: staticRouteByUrl.get(url) || "",
       dynamicRouteFile: staticRouteByUrl.has(url) ? "" : (url.startsWith("/articles/") ? "src/pages/articles/[slug].astro" : "src/pages/[service].astro"),
       seo: seo ? {
+        title: cleanPlaceholder(seo.title),
+        description: cleanPlaceholder(seo.description),
+        h1: cleanPlaceholder(seo.h1),
         canonicalUrl: normalizeUrl(seo.canonicalUrl || url),
         primaryKeyword: cleanPlaceholder(seo.primaryKeyword),
         secondaryKeywords: seo.secondaryKeywords || [],
+        optimizationTerms: seo.optimizationTerms || [],
         schemaType: cleanPlaceholder(seo.schemaType || relationshipBrief?.recommendedSchemaType),
         noindex: Boolean(seo.noindex),
         status: cleanPlaceholder(seo.status)

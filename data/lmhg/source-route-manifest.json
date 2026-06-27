@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27T16:44:22.823Z",
+  "generatedAt": "2026-06-27T17:11:31.828Z",
   "sourceRoot": "/Users/tyler-lcsw/projects/lmhg-astro-integrate",
   "sourceBranch": "codex/homepage-alignment-polish",
   "sourceHead": "63d7ed9e58eb34f2fd730561ca0e0514a32ebcb0",
@@ -27,10 +27,18 @@
       "routeFile": "src/pages/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/",
         "primaryKeyword": "mental health services louisville ky",
         "secondaryKeywords": [
           "counseling louisville ky"
+        ],
+        "optimizationTerms": [
+          "A local mental health practice in Louisville",
+          "Therapy, case management, and community support",
+          "Care in the office, at home, school, or community"
         ],
         "schemaType": "MedicalClinic",
         "noindex": false,
@@ -144,12 +152,16 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/[service].astro",
       "seo": {
+        "title": "Teen Therapy in Louisville, KY | Adolescent Counseling | LMHG",
+        "description": "Teen therapy in Louisville for mood changes, anxiety, trauma, school pressure, identity stress, family conflict, and social strain.",
+        "h1": "Teen Therapy in Louisville, KY",
         "canonicalUrl": "/adolescent-counseling/",
         "primaryKeyword": "teen therapy louisville ky",
         "secondaryKeywords": [
           "adolescent counseling louisville ky",
           "adolescent therapy louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -239,12 +251,16 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/[service].astro",
       "seo": {
+        "title": "Adult Counseling in Louisville, KY | LMHG",
+        "description": "Adult counseling in Louisville for stress, anxiety, depression, grief, trauma, burnout, relationship strain, and major life transitions.",
+        "h1": "Adult Counseling in Louisville, KY",
         "canonicalUrl": "/adult-counseling/",
         "primaryKeyword": "adult counseling louisville ky",
         "secondaryKeywords": [
           "adult therapy louisville ky",
           "counseling for adults louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -325,12 +341,16 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/[service].astro",
       "seo": {
+        "title": "Anxiety and Depression Therapy in Louisville, KY | LMHG",
+        "description": "Therapy for anxiety and depression in Louisville for worry, panic, low mood, burnout, irritability, avoidance, and emotional overwhelm.",
+        "h1": "Anxiety and Depression Therapy in Louisville, KY",
         "canonicalUrl": "/anxiety-depression-therapy/",
         "primaryKeyword": "anxiety and depression therapy louisville ky",
         "secondaryKeywords": [
           "anxiety therapy louisville ky",
           "depression therapy louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -429,10 +449,18 @@
       "routeFile": "src/pages/articles/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/articles/",
         "primaryKeyword": "mental health articles louisville ky",
         "secondaryKeywords": [
           "therapy resources louisville ky"
+        ],
+        "optimizationTerms": [
+          "Plain-language mental health articles",
+          "Therapy, family support, and care settings",
+          "Practical answers before reaching out"
         ],
         "schemaType": "Article",
         "noindex": false,
@@ -523,10 +551,18 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/articles/[slug].astro",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/articles/family-therapy-vs-individual-therapy/",
         "primaryKeyword": "family therapy vs individual therapy",
         "secondaryKeywords": [
           "family counseling vs individual counseling"
+        ],
+        "optimizationTerms": [
+          "Start with where the problem shows up",
+          "When individual therapy fits",
+          "When family therapy fits"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -587,10 +623,18 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/articles/[slug].astro",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/articles/guide-to-individual-therapy/",
         "primaryKeyword": "guide to individual therapy",
         "secondaryKeywords": [
           "what is individual therapy"
+        ],
+        "optimizationTerms": [
+          "What individual therapy is",
+          "What usually happens in sessions",
+          "How to choose a good fit"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -651,10 +695,18 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/articles/[slug].astro",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/",
         "primaryKeyword": "how to talk to someone about therapy",
         "secondaryKeywords": [
           "how to tell family you are going to therapy"
+        ],
+        "optimizationTerms": [
+          "Know why you are starting",
+          "Choose a calmer moment",
+          "Use direct, non-blaming language"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -715,10 +767,18 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/articles/[slug].astro",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/articles/top-5-signs-its-time-to-seek-therapy/",
         "primaryKeyword": "when to seek therapy",
         "secondaryKeywords": [
           "signs you need therapy"
+        ],
+        "optimizationTerms": [
+          "You do not have to wait for a crisis",
+          "Daily life feels harder to maintain",
+          "A major change still affects you"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -802,12 +862,16 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/[service].astro",
       "seo": {
+        "title": "Attachment Therapy in Louisville, KY | LMHG",
+        "description": "Attachment therapy in Louisville for families working on trust, caregiver connection, emotional safety, relationship repair, and steadier routines.",
+        "h1": "Attachment Therapy in Louisville, KY",
         "canonicalUrl": "/attachment-therapy/",
         "primaryKeyword": "attachment therapy louisville ky",
         "secondaryKeywords": [
           "attachment based therapy louisville ky",
           "parent child therapy louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -879,10 +943,18 @@
       "routeFile": "src/pages/bullitt-county-ky/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/bullitt-county-ky/",
         "primaryKeyword": "mental health services bullitt county ky",
         "secondaryKeywords": [
           "therapy bullitt county ky"
+        ],
+        "optimizationTerms": [
+          "Support for Bullitt County clients",
+          "Louisville-based practice, flexible care options",
+          "Therapy and case management when appropriate"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -973,10 +1045,18 @@
       "routeFile": "src/pages/careers/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/careers/",
         "primaryKeyword": "mental health careers louisville ky",
         "secondaryKeywords": [
           "therapy jobs louisville ky"
+        ],
+        "optimizationTerms": [
+          "Join a multidisciplinary care team",
+          "Therapy, case management, and community support roles",
+          "Work that is local and practical"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -1067,12 +1147,16 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/[service].astro",
       "seo": {
+        "title": "Targeted Case Management in Louisville, KY | LMHG",
+        "description": "Targeted case management in Louisville for Medicaid clients who need care coordination, referrals, resources, appointments, paperwork, and follow-through.",
+        "h1": "Targeted Case Management in Louisville, KY",
         "canonicalUrl": "/case-management/",
         "primaryKeyword": "targeted case management louisville ky",
         "secondaryKeywords": [
           "mental health case management louisville ky",
           "medicaid case management louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -1171,12 +1255,16 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/[service].astro",
       "seo": {
+        "title": "Child Behavioral Therapy in Louisville, KY | LMHG",
+        "description": "Child behavioral therapy in Louisville for emotional outbursts, behavior concerns, school stress, routines, caregiver support, and regulation skills.",
+        "h1": "Child Behavioral Therapy in Louisville, KY",
         "canonicalUrl": "/child-behavioral-intervention/",
         "primaryKeyword": "child behavioral therapy louisville ky",
         "secondaryKeywords": [
           "child behavioral intervention louisville ky",
           "child behavior therapist louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -1266,12 +1354,16 @@
       "routeFile": "src/pages/child-counseling/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "Child Counseling in Louisville, KY | Therapy | LMHG",
+        "description": "Child counseling in Louisville for behavior concerns, emotional regulation, trauma, school stress, anxiety, and practical caregiver support.",
+        "h1": "Child Counseling in Louisville, KY",
         "canonicalUrl": "/child-counseling/",
         "primaryKeyword": "child counseling louisville ky",
         "secondaryKeywords": [
           "child therapy louisville ky",
           "child therapist louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -1352,12 +1444,16 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/[service].astro",
       "seo": {
+        "title": "Co-Parenting Services in Louisville, KY | LMHG",
+        "description": "Co-parenting services in Louisville for child-focused communication, parenting structure, coordination, boundaries, and steadier family transitions.",
+        "h1": "Co-Parenting Services in Louisville, KY",
         "canonicalUrl": "/co-parenting/",
         "primaryKeyword": "co parenting services louisville ky",
         "secondaryKeywords": [
           "coparenting services louisville ky",
           "co parenting counseling louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -1447,12 +1543,16 @@
       "routeFile": "src/pages/community-based-services/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "Community-Based Mental Health Services in Louisville, KY | LMHG",
+        "description": "Community-based mental health services in Louisville including targeted case management, community support, in-home help, resources, and follow-through.",
+        "h1": "Community-Based Mental Health Services in Louisville, KY",
         "canonicalUrl": "/community-based-services/",
         "primaryKeyword": "community based mental health services louisville ky",
         "secondaryKeywords": [
           "targeted case management louisville ky",
           "community support services louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -1533,12 +1633,16 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/[service].astro",
       "seo": {
+        "title": "Community Support Services in Louisville, KY | LMHG",
+        "description": "Community support services in Louisville for skill-building, routines, resource connection, daily-life stability, care coordination, and follow-through.",
+        "h1": "Community Support Services in Louisville, KY",
         "canonicalUrl": "/community-support/",
         "primaryKeyword": "community support services louisville ky",
         "secondaryKeywords": [
           "community support associate louisville ky",
           "medicaid community support louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -1628,10 +1732,18 @@
       "routeFile": "src/pages/compliance/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/compliance/",
         "primaryKeyword": "mental health compliance louisville ky",
         "secondaryKeywords": [
           "hipaa mental health louisville ky"
+        ],
+        "optimizationTerms": [
+          "Compliance and privacy information",
+          "Licensing and ethical practice",
+          "Questions about records or privacy"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -1697,10 +1809,18 @@
       "routeFile": "src/pages/contact-us.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/contact-us/",
         "primaryKeyword": "contact louisville mental health group",
         "secondaryKeywords": [
           "start therapy louisville ky"
+        ],
+        "optimizationTerms": [
+          "Start with a simple request",
+          "What to include when you reach out",
+          "Phone, form, and next-step routing"
         ],
         "schemaType": "ContactPage",
         "noindex": false,
@@ -1791,12 +1911,16 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/[service].astro",
       "seo": {
+        "title": "Couples Conflict Resolution in Louisville, KY | LMHG",
+        "description": "Couples conflict resolution in Louisville for recurring arguments, escalation, shutdown, repair, communication patterns, and steadier next steps.",
+        "h1": "Couples Conflict Resolution in Louisville, KY",
         "canonicalUrl": "/couples-conflict-resolution/",
         "primaryKeyword": "couples conflict resolution louisville ky",
         "secondaryKeywords": [
           "couples conflict therapy louisville ky",
           "communication counseling for couples louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -1877,12 +2001,16 @@
       "routeFile": "src/pages/couples-counseling/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "Couples Counseling in Louisville, KY | LMHG",
+        "description": "Couples counseling in Louisville for communication, recurring conflict, emotional distance, trust repair, decision-making, and relationship stress.",
+        "h1": "Couples Counseling in Louisville, KY",
         "canonicalUrl": "/couples-counseling/",
         "primaryKeyword": "couples counseling louisville ky",
         "secondaryKeywords": [
           "couples therapy louisville ky",
           "marriage counseling louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -1954,12 +2082,16 @@
       "routeFile": "src/pages/court-ordered/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "Court-Ordered Services in Louisville, KY | LMHG",
+        "description": "Court-ordered services in Louisville for family reunification, co-parenting support, documentation questions, family stability, and practical next steps.",
+        "h1": "Court-Ordered Services in Louisville, KY",
         "canonicalUrl": "/court-ordered/",
         "primaryKeyword": "court ordered services louisville ky",
         "secondaryKeywords": [
           "family court services louisville ky",
           "court ordered counseling louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -2031,10 +2163,18 @@
       "routeFile": "src/pages/emdr-therapy/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/emdr-therapy/",
         "primaryKeyword": "emdr therapy louisville ky",
         "secondaryKeywords": [
           "emdr for trauma louisville ky"
+        ],
+        "optimizationTerms": [
+          "When past experiences still feel active",
+          "How EMDR may support trauma work",
+          "EMDR as one possible therapy path"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -2125,12 +2265,16 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/[service].astro",
       "seo": {
+        "title": "Family Reunification Services in Louisville, KY | LMHG",
+        "description": "Family reunification services in Louisville for restoring contact, rebuilding trust, supporting communication, and working toward safer family connection.",
+        "h1": "Family Reunification Services in Louisville, KY",
         "canonicalUrl": "/family-reunification/",
         "primaryKeyword": "family reunification services louisville ky",
         "secondaryKeywords": [
           "reunification therapy louisville ky",
           "family reunification counseling louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -2220,12 +2364,16 @@
       "routeFile": "src/pages/family-therapy/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "Family Therapy in Louisville, KY | LMHG",
+        "description": "Family therapy in Louisville for communication, parenting stress, conflict, attachment concerns, routines, trust, and major family transitions.",
+        "h1": "Family Therapy in Louisville, KY",
         "canonicalUrl": "/family-therapy/",
         "primaryKeyword": "family therapy louisville ky",
         "secondaryKeywords": [
           "family counseling louisville ky",
           "family therapist louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -2297,10 +2445,18 @@
       "routeFile": "src/pages/faq/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/faq/",
         "primaryKeyword": "mental health services faq louisville ky",
         "secondaryKeywords": [
           "therapy faq louisville ky"
+        ],
+        "optimizationTerms": [
+          "Questions before starting care",
+          "Services, insurance, and care settings",
+          "How LMHG helps route requests"
         ],
         "schemaType": "FAQPage",
         "noindex": false,
@@ -2366,10 +2522,18 @@
       "routeFile": "src/pages/faq/about-lmhg/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/faq/about-lmhg/",
         "primaryKeyword": "about louisville mental health group",
         "secondaryKeywords": [
           "mental health group louisville ky"
+        ],
+        "optimizationTerms": [
+          "What kind of practice LMHG is",
+          "Not a hospital system or solo therapy office",
+          "A team that can route care"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -2435,10 +2599,18 @@
       "routeFile": "src/pages/faq/cost/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/faq/cost/",
         "primaryKeyword": "therapy cost louisville ky",
         "secondaryKeywords": [
           "medicaid therapy louisville ky"
+        ],
+        "optimizationTerms": [
+          "Cost questions before starting",
+          "Medicaid and insurance checks",
+          "What can affect cost or coverage"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -2504,10 +2676,18 @@
       "routeFile": "src/pages/faq/our-approach/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/faq/our-approach/",
         "primaryKeyword": "louisville mental health group approach",
         "secondaryKeywords": [
           "team based mental health care louisville ky"
+        ],
+        "optimizationTerms": [
+          "Start with what is happening now",
+          "Provider fit and care setting fit",
+          "Practical support without pressure"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -2573,12 +2753,16 @@
       "routeFile": "src/pages/group-therapy/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "Group Therapy in Louisville, KY | LMHG",
+        "description": "Group therapy in Louisville for structured support, guided discussion, shared learning, skill practice, connection, and steady next steps.",
+        "h1": "Group Therapy in Louisville, KY",
         "canonicalUrl": "/group-therapy/",
         "primaryKeyword": "group therapy louisville ky",
         "secondaryKeywords": [
           "group counseling louisville ky",
           "therapy groups louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -2631,12 +2815,16 @@
       "routeFile": "src/pages/individual-counseling/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "Individual Therapy in Louisville, KY | Counseling | LMHG",
+        "description": "Individual therapy in Louisville for anxiety, depression, trauma, stress, grief, relationship strain, life transitions, and one-on-one support.",
+        "h1": "Individual Therapy in Louisville, KY",
         "canonicalUrl": "/individual-counseling/",
         "primaryKeyword": "individual therapy louisville ky",
         "secondaryKeywords": [
           "individual counseling louisville ky",
           "adult therapy louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -2708,10 +2896,18 @@
       "routeFile": "src/pages/insurance/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/insurance/",
         "primaryKeyword": "medicaid mental health services louisville ky",
         "secondaryKeywords": [
           "medicaid counseling louisville ky"
+        ],
+        "optimizationTerms": [
+          "Medicaid, commercial insurance, and private pay",
+          "Coverage questions before care starts",
+          "Insurance for therapy and support services"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -2802,10 +2998,18 @@
       "routeFile": "src/pages/jefferson-county-ky/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/jefferson-county-ky/",
         "primaryKeyword": "mental health services jefferson county ky",
         "secondaryKeywords": [
           "therapy jefferson county ky"
+        ],
+        "optimizationTerms": [
+          "Serving Jefferson County from Louisville",
+          "Therapy and practical support",
+          "Care settings that fit the situation"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -2896,10 +3100,18 @@
       "routeFile": "src/pages/locations/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/locations/",
         "primaryKeyword": "mental health services near louisville ky",
         "secondaryKeywords": [
           "louisville mental health practice"
+        ],
+        "optimizationTerms": [
+          "One Louisville office, several care settings",
+          "In person, online, at home, school, or community",
+          "Service areas without fake offices"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -2990,10 +3202,18 @@
       "routeFile": "src/pages/locations/community/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/locations/community/",
         "primaryKeyword": "community based mental health care louisville ky",
         "secondaryKeywords": [
           "community mental health support louisville ky"
+        ],
+        "optimizationTerms": [
+          "Care outside the office when life is the barrier",
+          "Community support and care coordination",
+          "Practical help alongside therapy"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -3084,10 +3304,18 @@
       "routeFile": "src/pages/locations/in-home/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/locations/in-home/",
         "primaryKeyword": "in home mental health services louisville ky",
         "secondaryKeywords": [
           "home based mental health services louisville ky"
+        ],
+        "optimizationTerms": [
+          "Support connected to daily life",
+          "In-home services when appropriate",
+          "Home-based care without losing clinical focus"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -3169,10 +3397,18 @@
       "routeFile": "src/pages/locations/in-person/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/locations/in-person/",
         "primaryKeyword": "in person counseling louisville ky",
         "secondaryKeywords": [
           "in office therapy louisville ky"
+        ],
+        "optimizationTerms": [
+          "Office-based care in Louisville",
+          "When in-person therapy may fit",
+          "Starting at the Bardstown Road office"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -3263,10 +3499,18 @@
       "routeFile": "src/pages/locations/online/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/locations/online/",
         "primaryKeyword": "online therapy kentucky",
         "secondaryKeywords": [
           "telehealth counseling kentucky"
+        ],
+        "optimizationTerms": [
+          "Telehealth when it fits the care plan",
+          "Online counseling from a Kentucky practice",
+          "When online therapy may or may not work"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -3357,10 +3601,18 @@
       "routeFile": "src/pages/locations/school/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/locations/school/",
         "primaryKeyword": "school based mental health support louisville ky",
         "secondaryKeywords": [
           "school counseling support louisville ky"
+        ],
+        "optimizationTerms": [
+          "When school is part of the concern",
+          "Support connecting caregivers and school stress",
+          "Child and family care with practical coordination"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -3451,10 +3703,18 @@
       "routeFile": "src/pages/louisville-ky.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/louisville-ky/",
         "primaryKeyword": "louisville mental health services",
         "secondaryKeywords": [
           "counseling louisville ky"
+        ],
+        "optimizationTerms": [
+          "A local Louisville practice",
+          "Counseling, therapy, and practical support",
+          "One office with flexible care settings"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -3545,10 +3805,18 @@
       "routeFile": "src/pages/meet-the-team.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/meet-the-team/",
         "primaryKeyword": "mental health providers louisville ky",
         "secondaryKeywords": [
           "therapists louisville ky"
+        ],
+        "optimizationTerms": [
+          "A team approach to care",
+          "Matching clients with the right provider",
+          "Therapists, counselors, and support staff"
         ],
         "schemaType": "AboutPage",
         "noindex": false,
@@ -3639,10 +3907,18 @@
       "routeFile": "src/pages/oldham-county-ky/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/oldham-county-ky/",
         "primaryKeyword": "mental health services oldham county ky",
         "secondaryKeywords": [
           "therapy oldham county ky"
+        ],
+        "optimizationTerms": [
+          "Support for Oldham County clients",
+          "Private practice care with flexible settings",
+          "Therapy, counseling, and practical support"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -3733,12 +4009,16 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/[service].astro",
       "seo": {
+        "title": "Parenting Support in Louisville, KY | LMHG",
+        "description": "Parenting support in Louisville for behavior concerns, boundaries, routines, communication, co-parenting stress, and family stability.",
+        "h1": "Parenting Support in Louisville, KY",
         "canonicalUrl": "/parenting-support/",
         "primaryKeyword": "parenting support louisville ky",
         "secondaryKeywords": [
           "parenting help louisville ky",
           "parent counseling louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -3828,12 +4108,16 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/[service].astro",
       "seo": {
+        "title": "Play Therapy in Louisville, KY | LMHG",
+        "description": "Play therapy in Louisville for children who need age-appropriate support for feelings, behavior, stress, trauma, or family change.",
+        "h1": "Play Therapy in Louisville, KY",
         "canonicalUrl": "/play-therapy/",
         "primaryKeyword": "play therapy louisville ky",
         "secondaryKeywords": [
           "child play therapy louisville ky",
           "play therapist louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -3923,10 +4207,18 @@
       "routeFile": "src/pages/privacy-policy/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/privacy-policy/",
         "primaryKeyword": "privacy policy louisville mental health group",
         "secondaryKeywords": [
           "lmhg privacy policy"
+        ],
+        "optimizationTerms": [
+          "Privacy policy",
+          "Website and practice-related information",
+          "Contact questions"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -3992,12 +4284,16 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/[service].astro",
       "seo": {
+        "title": "Relationship Counseling in Louisville, KY | LMHG",
+        "description": "Relationship counseling in Louisville for communication patterns, trust, conflict, emotional distance, repair, boundaries, and relationship decisions.",
+        "h1": "Relationship Counseling in Louisville, KY",
         "canonicalUrl": "/relationship-counseling/",
         "primaryKeyword": "relationship counseling louisville ky",
         "secondaryKeywords": [
           "relationship therapy louisville ky",
           "counseling for relationship problems louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -4078,10 +4374,18 @@
       "routeFile": "src/pages/reviews.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/reviews/",
         "primaryKeyword": "louisville mental health group reviews",
         "secondaryKeywords": [
           "therapy reviews louisville ky"
+        ],
+        "optimizationTerms": [
+          "What clients and families notice",
+          "Trust signals for starting care",
+          "Reviews as one part of choosing a practice"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -4172,10 +4476,18 @@
       "routeFile": "src/pages/services/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/services/",
         "primaryKeyword": "mental health services louisville ky",
         "secondaryKeywords": [
           "therapy and counseling louisville ky"
+        ],
+        "optimizationTerms": [
+          "Find the right starting point",
+          "Therapy, counseling, and practical support",
+          "Services that can work together"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -4302,10 +4614,18 @@
       "routeFile": "src/pages/specialties/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/specialties/",
         "primaryKeyword": "mental health specialties louisville ky",
         "secondaryKeywords": [
           "emdr therapy louisville ky; play therapy louisville ky"
+        ],
+        "optimizationTerms": [
+          "Focused care paths",
+          "Therapy specialties and practical supports",
+          "When a specific service may fit"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -4405,10 +4725,18 @@
       "routeFile": "src/pages/terms-of-use/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "",
+        "description": "",
+        "h1": "",
         "canonicalUrl": "/terms-of-use/",
         "primaryKeyword": "terms of use louisville mental health group",
         "secondaryKeywords": [
           "lmhg terms of use"
+        ],
+        "optimizationTerms": [
+          "Terms of use",
+          "Website content limits",
+          "General information only"
         ],
         "schemaType": "MedicalWebPage",
         "noindex": false,
@@ -4474,12 +4802,16 @@
       "routeFile": "",
       "dynamicRouteFile": "src/pages/[service].astro",
       "seo": {
+        "title": "In-Home Therapy in Louisville, KY | LMHG",
+        "description": "In-home therapy in Louisville for clients and families who need mental health support connected to home routines, access barriers, and daily life.",
+        "h1": "In-Home Therapy in Louisville, KY",
         "canonicalUrl": "/therapy-in-your-home/",
         "primaryKeyword": "in home therapy louisville ky",
         "secondaryKeywords": [
           "therapy in your home louisville ky",
           "home based mental health services louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
@@ -4578,12 +4910,16 @@
       "routeFile": "src/pages/trauma-therapy/index.astro",
       "dynamicRouteFile": "",
       "seo": {
+        "title": "Trauma Therapy in Louisville, KY | LMHG",
+        "description": "Trauma therapy in Louisville for distressing memories, triggers, grief, anxiety, PTSD symptoms, and experiences that still feel active.",
+        "h1": "Trauma Therapy in Louisville, KY",
         "canonicalUrl": "/trauma-therapy/",
         "primaryKeyword": "trauma therapy louisville ky",
         "secondaryKeywords": [
           "trauma-focused therapy louisville ky",
           "ptsd therapy louisville ky"
         ],
+        "optimizationTerms": [],
         "schemaType": "MedicalWebPage",
         "noindex": false,
         "status": "current"
