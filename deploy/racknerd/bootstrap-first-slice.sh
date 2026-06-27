@@ -13,6 +13,7 @@ fi
 set -a
 # shellcheck disable=SC1090
 source "${ENV_FILE}"
+LMHG_REPO_ROOT="${ROOT_DIR}"
 set +a
 
 compose() {

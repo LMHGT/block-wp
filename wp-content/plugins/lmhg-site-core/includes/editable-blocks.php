@@ -282,6 +282,14 @@ function lmhg_site_core_sideload_editable_media_asset( array $asset, string $sou
 	require_once ABSPATH . 'wp-admin/includes/media.php';
 	require_once ABSPATH . 'wp-admin/includes/image.php';
 
+	$upload_dir = wp_upload_dir();
+	if ( ! empty( $upload_dir['error'] ) ) {
+		return new WP_Error( 'lmhg_upload_dir_unavailable', (string) $upload_dir['error'] );
+	}
+	if ( ! wp_mkdir_p( (string) $upload_dir['path'] ) ) {
+		return new WP_Error( 'lmhg_upload_dir_not_writable', 'Unable to create the WordPress upload directory.' );
+	}
+
 	$alt = sanitize_text_field( (string) ( $asset['alt'] ?? '' ) );
 	$attachment_id = media_sideload_image( $source_url, 0, $alt, 'id' );
 	if ( is_wp_error( $attachment_id ) ) {

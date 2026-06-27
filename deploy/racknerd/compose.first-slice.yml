@@ -33,9 +33,9 @@ services:
         define( 'WP_ENVIRONMENT_TYPE', 'staging' );
     volumes:
       - wp_data:/var/www/html
-      - ../../wp-content/themes/lmhg-block-theme:/var/www/html/wp-content/themes/lmhg-block-theme:ro
-      - ../../wp-content/plugins/lmhg-site-core:/var/www/html/wp-content/plugins/lmhg-site-core:ro
-      - ../../data:/var/www/html/data:ro
+      - ${LMHG_REPO_ROOT}/wp-content/themes/lmhg-block-theme:/var/www/html/wp-content/themes/lmhg-block-theme:ro
+      - ${LMHG_REPO_ROOT}/wp-content/plugins/lmhg-site-core:/var/www/html/wp-content/plugins/lmhg-site-core:ro
+      - ${LMHG_REPO_ROOT}/data:/var/www/html/data:ro
 
   cli:
     image: wordpress:cli-php8.3
@@ -52,9 +52,9 @@ services:
       WORDPRESS_DB_PASSWORD: ${LMHG_DB_PASSWORD}
     volumes:
       - wp_data:/var/www/html
-      - ../../wp-content/themes/lmhg-block-theme:/var/www/html/wp-content/themes/lmhg-block-theme:ro
-      - ../../wp-content/plugins/lmhg-site-core:/var/www/html/wp-content/plugins/lmhg-site-core:ro
-      - ../../data:/var/www/html/data:ro
+      - ${LMHG_REPO_ROOT}/wp-content/themes/lmhg-block-theme:/var/www/html/wp-content/themes/lmhg-block-theme:ro
+      - ${LMHG_REPO_ROOT}/wp-content/plugins/lmhg-site-core:/var/www/html/wp-content/plugins/lmhg-site-core:ro
+      - ${LMHG_REPO_ROOT}/data:/var/www/html/data:ro
     working_dir: /var/www/html
 
 volumes:

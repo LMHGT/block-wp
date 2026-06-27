@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-06-27.first-slice-export.v1",
-  "generatedAt": "2026-06-27T20:52:02.824Z",
+  "generatedAt": "2026-06-27T20:57:34.770Z",
   "purpose": "Exportable source package manifest for the first editable Gutenberg migration slice.",
   "routes": [
     "/compliance/",
@@ -55,13 +55,13 @@
     },
     {
       "path": "deploy/racknerd/bootstrap-first-slice.sh",
-      "bytes": 1507,
-      "sha256": "90ae3d618db59f2a60bfd492eb0f593325f240cb14ceb6d33395d26c83efdd47"
+      "bytes": 1536,
+      "sha256": "c7e55ac769752df97e9321f00657c977ee465d83623501f3546049ecfb3f60c9"
     },
     {
       "path": "deploy/racknerd/compose.first-slice.yml",
-      "bytes": 1945,
-      "sha256": "a36d050cd6b39460eee3d9b6ff06990f86448b5df8d652872e9c18498322adeb"
+      "bytes": 2017,
+      "sha256": "9570cbd0375fb4d02696393ff37bdb6c3e65cefd7e1eeeb38588f38ae21f01c4"
     },
     {
       "path": "docs/block-migration-slice-report.md",
@@ -125,8 +125,8 @@
     },
     {
       "path": "wp-content/plugins/lmhg-site-core/includes/editable-blocks.php",
-      "bytes": 11257,
-      "sha256": "d09b829fa855030619168e85cb2d1f7551557ab4b34bcbd7e5f51a7f003c4d41"
+      "bytes": 11589,
+      "sha256": "888bfda37bbf047e971d3cd033a734129764aa1d1d2ec1e60a0cfb8f6263219c"
     },
     {
       "path": "wp-content/plugins/lmhg-site-core/includes/importer.php",
