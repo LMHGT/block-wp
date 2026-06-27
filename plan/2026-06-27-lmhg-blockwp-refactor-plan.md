@@ -81,8 +81,9 @@ Still intentionally not complete:
   render generated source-content and graph sections rather than every Astro
   content block and layout.
 - Live Workbench write integration into WordPress is not built.
-- Protected legal/utility pages remain out-of-scope because the source manifest
-  marks them out-of-scope for this proof track.
+- The older proof-track exclusion for protected legal/utility pages has been
+  superseded by the verbatim migration plan; the current import includes those
+  routes because Cloudflare staging serves them with `200`.
 - Human review and a public staging/cutover decision are still required before
   any production recommendation.
 

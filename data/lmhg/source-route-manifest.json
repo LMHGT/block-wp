@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27T18:11:42.978Z",
+  "generatedAt": "2026-06-27T19:44:52.858Z",
   "sourceRoot": "/Users/tyler-lcsw/projects/lmhg-astro-integrate",
   "sourceBranch": "codex/homepage-alignment-polish",
   "sourceHead": "63d7ed9e58eb34f2fd730561ca0e0514a32ebcb0",
@@ -3328,7 +3328,7 @@
           "Contact the office if you have questions about privacy practices, compliance standards, records, or your rights as a client."
         ]
       },
-      "migrationStatus": "out-of-scope"
+      "migrationStatus": "needs-copy-model"
     },
     {
       "url": "/contact-us/",
@@ -7338,7 +7338,7 @@
           "Contact the office directly for questions about privacy practices, records, or client information while final policy text is reviewed."
         ]
       },
-      "migrationStatus": "out-of-scope"
+      "migrationStatus": "needs-copy-model"
     },
     {
       "url": "/relationship-counseling/",
@@ -8206,7 +8206,7 @@
           "Contact the office directly if you have questions about using this website or contacting the practice while final terms are reviewed."
         ]
       },
-      "migrationStatus": "out-of-scope"
+      "migrationStatus": "needs-copy-model"
     },
     {
       "url": "/therapy-in-your-home/",
@@ -9463,7 +9463,6 @@
     }
   ],
   "migrationStatusCounts": {
-    "needs-copy-model": 52,
-    "out-of-scope": 3
+    "needs-copy-model": 55
   }
 }

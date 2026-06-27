@@ -1,6 +1,6 @@
 # LMHG Route Parity Matrix
 
-Date: 2026-06-27T19:31:32.165Z
+Date: 2026-06-27T19:48:51.022Z
 
 Staging baseline: https://staging.website-production-26u.pages.dev
 
@@ -30,7 +30,7 @@ Cloudflare staging site changes.
 | /co-parenting/ | manifest | specialty | needs-copy-model | 200 | migrate-verbatim | Co-Parenting Services in Louisville, KY | 21 | a1855220f975 |
 | /community-based-services/ | manifest | broad-service-category | needs-copy-model | 200 | migrate-verbatim | Community-Based Mental Health Services in Louisville, KY | 18 | 11f723eff42b |
 | /community-support/ | manifest | specialty | needs-copy-model | 200 | migrate-verbatim | Community Support Services in Louisville, KY | 18 | cbf4a18821f0 |
-| /compliance/ | manifest | utility | out-of-scope | 200 | requires-verbatim-decision | Mental Health Compliance in Louisville, KY | 7 | cdb00d5c271e |
+| /compliance/ | manifest | utility | needs-copy-model | 200 | migrate-verbatim | Mental Health Compliance in Louisville, KY | 7 | cdb00d5c271e |
 | /contact-us/ | manifest | primary-hub | needs-copy-model | 200 | migrate-verbatim | Contact Louisville Mental Health Group | 7 | 0cb1f2299936 |
 | /couples-conflict-resolution/ | manifest | concern-condition | needs-copy-model | 200 | migrate-verbatim | Couples Conflict Resolution in Louisville, KY | 18 | 328d967e5c69 |
 | /couples-counseling/ | manifest | broad-service-category | needs-copy-model | 200 | migrate-verbatim | Couples Counseling in Louisville, KY | 15 | ba96b60f0653 |
@@ -57,11 +57,11 @@ Cloudflare staging site changes.
 | /oldham-county-ky/ | manifest | service-area | needs-copy-model | 200 | migrate-verbatim | Mental Health Services in Oldham County, KY | 7 | ecc6f027adca |
 | /parenting-support/ | manifest | concern-condition | needs-copy-model | 200 | migrate-verbatim | Parenting Support in Louisville, KY | 21 | b5294c7b0806 |
 | /play-therapy/ | manifest | specialty | needs-copy-model | 200 | migrate-verbatim | Play Therapy in Louisville, KY | 21 | e7d2475ecde1 |
-| /privacy-policy/ | manifest | utility | out-of-scope | 200 | requires-verbatim-decision | Privacy Policy for Louisville Mental Health Group | 7 | 0951ee4bd89b |
+| /privacy-policy/ | manifest | utility | needs-copy-model | 200 | migrate-verbatim | Privacy Policy for Louisville Mental Health Group | 7 | 0951ee4bd89b |
 | /relationship-counseling/ | manifest | specialty | needs-copy-model | 200 | migrate-verbatim | Relationship Counseling in Louisville, KY | 18 | 7c6b390cfdd3 |
 | /reviews/ | manifest | secondary-footer | needs-copy-model | 200 | migrate-verbatim | Louisville Mental Health Group Reviews \| Client Feedback | 7 | 4172381518d8 |
 | /services/ | manifest | primary-hub | needs-copy-model | 200 | migrate-verbatim | Mental Health Services in Louisville, KY | 31 | 6c727c990bad |
 | /specialties/ | manifest | primary-hub | needs-copy-model | 200 | migrate-verbatim | Mental Health Specialties in Louisville, KY | 37 | ad6c280f8b7c |
-| /terms-of-use/ | manifest | utility | out-of-scope | 200 | requires-verbatim-decision | Terms of Use for Louisville Mental Health Group | 7 | 8d86ead2034d |
+| /terms-of-use/ | manifest | utility | needs-copy-model | 200 | migrate-verbatim | Terms of Use for Louisville Mental Health Group | 7 | 8d86ead2034d |
 | /therapy-in-your-home/ | manifest | specialty | needs-copy-model | 200 | migrate-verbatim | In-Home Therapy in Louisville, KY | 18 | 0854ab7eac0b |
 | /trauma-therapy/ | manifest | broad-service-category | needs-copy-model | 200 | migrate-verbatim | Trauma Therapy in Louisville, KY | 12 | c437dc9bdc0b |

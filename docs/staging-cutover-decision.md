@@ -35,8 +35,9 @@ Date: 2026-06-27
 - LMHG Workbench Standard mode is proven against rendered Astro markers today;
   WordPress write integration is not built.
 - NocoBase extraction/validation remains attached to the Astro workflow.
-- Protected utility/legal pages are present in the Astro source but intentionally
-  out-of-scope in the current WordPress import manifest.
+- Legal and utility pages are included in the current WordPress import because
+  Cloudflare staging serves them as live `200` routes; final legal review is
+  still required before cutover.
 - The WordPress proof currently renders source-derived summaries, source-copy
   snippets, JSON source cards, Markdown article structure, and graph sections,
   not full hand-polished layout parity for every page family.

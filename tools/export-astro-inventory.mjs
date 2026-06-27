@@ -293,7 +293,6 @@ function parseRedirects(text) {
 function migrationStatusForPage(page) {
   if (page.status && page.status !== "current") return "out-of-scope";
   if (page.url?.startsWith("/review/")) return "out-of-scope";
-  if (page.protected) return "out-of-scope";
   if (page.implementationTarget) return "needs-copy-model";
   if (page.templateFamily) return "needs-template";
   return "ready";

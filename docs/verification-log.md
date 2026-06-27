@@ -433,7 +433,7 @@ Result:
 ```text
 capturedRoutes: 55
 visibleRoutes: 54
-decisionRoutes: 3
+decisionRoutes: 0
 redirects: 117
 assets: 131
 screenshots: 108
@@ -442,12 +442,9 @@ screenshots: 108
 All 117 manifest redirects returned live `301` responses from Cloudflare
 staging. All 131 referenced assets fetched with status `200`. Every visible
 staging route includes noindex suppression in both `X-Robots-Tag` and robots
-meta output.
-
-The three decision routes are `/compliance/`, `/privacy-policy/`, and
-`/terms-of-use/`: the earlier proof-track manifest marked them out-of-scope, but
-Cloudflare staging serves each with `200`, so a verbatim migration must either
-port them or record an explicit exclusion decision.
+meta output. The legal and utility pages `/compliance/`, `/privacy-policy/`,
+and `/terms-of-use/` now classify as `migrate-verbatim` and are imported because
+Cloudflare staging serves each with `200`.
 
 ### Initial WordPress vs Staging Gap Report
 
@@ -463,14 +460,13 @@ routesWithIssues: 54
 title mismatch: 32
 h1 mismatch: 31
 visible text hash mismatch: 54
-status 404 != staging 200: 3
 ```
 
 This is expected. The current local WordPress surface now preserves development
 noindex suppression, but remains a proof scaffold rather than the verbatim
 migration. The strict `npm run verify:wp-vs-staging` command is available for
 future parity work but is intentionally not part of `npm run verify` until the
-remaining content, title/H1, and utility-route gaps are closed.
+remaining content and title/H1 gaps are closed.
 
 The local WordPress proof now sends:
 

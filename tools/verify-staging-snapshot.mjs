@@ -53,8 +53,8 @@ if (visibleRoutes.length < 50) {
   fail(`expected at least 50 visible staging routes, found ${visibleRoutes.length}`);
 }
 
-if (decisionRoutes.length !== 3) {
-  fail(`expected 3 utility/legal decision routes, found ${decisionRoutes.length}`);
+if (decisionRoutes.length !== 0) {
+  fail(`expected no route-decision gaps, found ${decisionRoutes.length}`);
 }
 
 if (specialRoutes.length !== 1 || specialRoutes[0].url !== "/404.html") {

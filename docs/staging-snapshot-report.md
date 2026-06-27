@@ -1,6 +1,6 @@
 # LMHG Cloudflare Staging Snapshot
 
-Date: 2026-06-27T19:31:32.165Z
+Date: 2026-06-27T19:48:51.022Z
 
 Staging baseline: https://staging.website-production-26u.pages.dev
 
@@ -19,7 +19,7 @@ indexes are committed under `data/lmhg/staging-snapshot/`.
 - Distinct assets captured: 131
 - Screenshots captured: 108
 - Route status counts: `{"200":54,"308":1}`
-- Route classifications: `{"migrate-verbatim":51,"special-404-route":1,"requires-verbatim-decision":3}`
+- Route classifications: `{"migrate-verbatim":54,"special-404-route":1}`
 - Redirect status counts: `{"301":117}`
 - Asset extension counts: `{"js":2,"css":4,"svg":5,"woff2":1,"webp":119}`
 - Asset status counts: `{"200":131}`
@@ -33,9 +33,7 @@ and discovery-file behavior separately from the future production launch switch.
 
 ## Decisions Required
 
-- `/compliance/` is marked `out-of-scope` in the current manifest but returns `200` on staging.
-- `/privacy-policy/` is marked `out-of-scope` in the current manifest but returns `200` on staging.
-- `/terms-of-use/` is marked `out-of-scope` in the current manifest but returns `200` on staging.
+- No out-of-scope staging 200 routes were found.
 
 ## Redirect Status Mismatches
 

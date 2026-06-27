@@ -182,9 +182,10 @@ The current committed staging snapshot recorded:
 - 117 live `301` redirect responses.
 - 131 captured staging assets.
 - 108 screenshot records across desktop and mobile.
-- 3 utility/legal routes that the proof-track manifest marked out-of-scope but
-  live staging serves with `200`: `/compliance/`, `/privacy-policy/`, and
-  `/terms-of-use/`.
+- All 54 live `200` staging routes classify as `migrate-verbatim`, including
+  `/compliance/`, `/privacy-policy/`, and `/terms-of-use/`.
+- `/404.html` remains the only special manifest route, returning `308` from
+  Cloudflare staging.
 
 Every visible staging route currently includes staging noindex suppression in
 both the `X-Robots-Tag` response header and robots meta tag. WordPress
@@ -221,8 +222,10 @@ Expected behavior:
   tailnet URL behavior, and then imports the current route manifest.
 - `wp-env:import:lmhg` reruns only the route manifest import against an already
   running `wp-env` site.
-- import current route manifest pages
-- skip out-of-scope routes
+- import the current route manifest pages; the current staging migration
+  manifest imports all 55 route entries
+- skip only explicitly out-of-scope or review routes if future manifests add
+  them
 - update existing imported pages idempotently
 - clean duplicate proof pages that share `_lmhg_source_url` and carry imported
   route-manifest meta

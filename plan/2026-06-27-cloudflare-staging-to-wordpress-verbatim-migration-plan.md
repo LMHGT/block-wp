@@ -44,7 +44,9 @@ Not yet sufficient for the corrected objective:
 
 - It renders generated source-content sections, not verbatim staging page bodies.
 - It does not port every staging layout, section, class, and asset behavior.
-- It intentionally treats legal/protected utility pages as out-of-scope.
+- Earlier proof-track snapshots treated legal/protected utility pages as
+  out-of-scope; that gap has now been corrected by importing every staging
+  `200` route.
 - It does not import every live staging asset into an exportable WordPress
   package.
 - It does not prove visual or DOM parity against the Cloudflare staging URL.
@@ -57,16 +59,12 @@ Sampled on 2026-06-27 from `https://staging.website-production-26u.pages.dev/`.
 From the current route manifest cross-check:
 
 - 55 manifest routes total.
-- 52 routes marked `needs-copy-model`.
-- 3 utility/legal routes marked `out-of-scope` in the proof track, but they
-  return `200` on staging and must be handled for a verbatim migration unless
-  explicitly excluded.
+- 55 routes marked `needs-copy-model` for the staging migration import.
 - 117 redirect rules in the route manifest.
 - 50 JSON-backed content routes.
 - 5 Markdown-backed article routes.
 - Across manifest routes, live staging returned:
-  - 51 normal public `200` routes.
-  - 3 utility/legal `200` routes.
+  - 54 `200` routes, including legal and utility pages.
   - `/404.html` as a `308` special case.
 - Across the in-scope live pages sampled from the manifest, 58 distinct
   referenced live assets were found:
@@ -720,8 +718,8 @@ before cloud staging or cutover:
   until visual parity is complete?
 - Should Workbench remain the long-term editing surface, or should WordPress
   editor become primary after migration?
-- Should the three currently out-of-scope legal/utility routes be migrated
-  verbatim because staging serves them with `200`?
+- Legal and utility pages are included by default because staging serves them
+  with `200`; final legal review is still required before cutover.
 - Where should the first cloud WordPress staging environment live?
 - When Rank Math Pro is available, should `lmhg-site-core` continue emitting
   schema/head tags until Rank Math parity is proven, or should Rank Math be

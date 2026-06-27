@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27T19:31:32.165Z",
+  "generatedAt": "2026-06-27T19:48:51.022Z",
   "stagingBaseUrl": "https://staging.website-production-26u.pages.dev",
   "manifestRoutes": 55,
   "manifestRedirects": 117,
@@ -13,9 +13,8 @@
     "308": 1
   },
   "routeClassificationCounts": {
-    "migrate-verbatim": 51,
-    "special-404-route": 1,
-    "requires-verbatim-decision": 3
+    "migrate-verbatim": 54,
+    "special-404-route": 1
   },
   "redirectStatusCounts": {
     "301": 117
