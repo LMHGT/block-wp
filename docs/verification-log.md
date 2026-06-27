@@ -389,3 +389,29 @@ Tailnet review URL:
 ```text
 https://mbp.beagle-perch.ts.net
 ```
+
+## Proof-Track Closeout
+
+Date: 2026-06-27
+
+Latest pushed implementation baseline before this closeout note: `b678d8b`.
+
+The WordPress proof track is complete within the plan's "Done Means" boundary:
+the repo contains a source-controlled, locally verifiable WordPress sidecar that
+can be compared against the current Astro staging site route by route.
+
+This closeout does not approve production replacement. Public WordPress hosting,
+DNS, Cloudflare changes, Astro branch changes, live Workbench writes, and human
+review sign-off remain future cutover gates documented in
+`docs/staging-cutover-decision.md`.
+
+Final closeout verification was run successfully from the current `main` head:
+
+```bash
+npm run verify
+npm run verify:lmhg
+npm run verify:site
+npm audit --omit=dev
+WP_BASE_URL=https://mbp.beagle-perch.ts.net npm run verify:lmhg-copy
+git diff --check
+```
