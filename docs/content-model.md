@@ -113,14 +113,19 @@ Future rendered editable fields must preserve LMHG's launch-editing model:
 The current route importer preserves metadata needed to build those markers, but
 it does not yet expose marker-enabled page templates.
 
-## Import Command
+## Seed And Import Commands
 
 ```bash
+npm run wp-env:seed
 npm run wp-env:import:lmhg
 ```
 
 Expected behavior:
 
+- `wp-env:seed` activates the local theme/plugin, configures permalinks and
+  tailnet URL behavior, and then imports the current route manifest.
+- `wp-env:import:lmhg` reruns only the route manifest import against an already
+  running `wp-env` site.
 - import current route manifest pages
 - skip out-of-scope routes
 - update existing imported pages idempotently

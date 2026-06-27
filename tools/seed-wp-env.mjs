@@ -10,6 +10,17 @@ function runWp(args) {
   if (result.stdout.trim()) console.log(result.stdout.trim());
 }
 
+function runNodeScript(script) {
+  const result = spawnSync("node", [script], { encoding: "utf8" });
+  if (result.status !== 0) {
+    console.error(result.stdout);
+    console.error(result.stderr);
+    process.exit(result.status ?? 1);
+  }
+  if (result.stdout.trim()) console.log(result.stdout.trim());
+  if (result.stderr.trim()) console.error(result.stderr.trim());
+}
+
 function detectTailnetHost() {
   if (process.env.TAILSCALE_HOST) return process.env.TAILSCALE_HOST.trim();
   const result = spawnSync("tailscale", ["status", "--json"], { encoding: "utf8" });
@@ -60,4 +71,5 @@ update_option('page_on_front', $home_id);
 flush_rewrite_rules();
 `
 ]);
-console.log("Seeded LMHG wp-env site content.");
+runNodeScript("tools/seed-lmhg-wp.mjs");
+console.log("Seeded LMHG wp-env site content and route manifest.");

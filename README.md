@@ -28,6 +28,10 @@ npm run wp-env:seed
 npm run verify:site
 ```
 
+`npm run wp-env:seed` activates the LMHG theme/plugin, configures local
+permalinks and tailnet URL behavior, and imports the repo-owned LMHG route
+manifest into WordPress.
+
 The default `@wordpress/env` local URL is `http://localhost:8888`.
 Give remote reviewers the Tailscale Serve URL, not the localhost URL.
 

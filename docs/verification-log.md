@@ -62,8 +62,22 @@ Success: Switched to 'LMHG Block Theme' theme.
 Success: Plugin already activated.
 Success: Rewrite structure set.
 Success: Rewrite rules flushed.
-Seeded LMHG wp-env site content.
+Success: {"created":0,"updated":52,"skipped":3,"failed":0}
+Seeded LMHG wp-env site content and route manifest.
 HTTP/1.1 200 OK
+```
+
+Current seed behavior: `npm run wp-env:seed` activates the local theme/plugin,
+configures permalinks and tailnet URL behavior, and imports the route manifest.
+The latest verified run printed:
+
+```text
+Success: Plugin already activated.
+Success: Rewrite structure set.
+Success: Rewrite rules flushed.
+Success: Value passed for 'lmhg_tailnet_host' option is unchanged.
+Success: {"created":0,"updated":52,"skipped":3,"failed":0}
+Seeded LMHG wp-env site content and route manifest.
 ```
 
 ### LMHG Route Manifest Import

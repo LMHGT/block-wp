@@ -38,6 +38,7 @@ npm run check:static
 npm run check:prereqs
 npm run wp-env:start
 npm run wp-env:seed
+npm run wp-env:import:lmhg
 npm run test:screenshots
 npm run test:lighthouse
 ```
