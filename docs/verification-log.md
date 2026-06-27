@@ -284,6 +284,33 @@ Performance note: the first Lighthouse run scored 76 because the scaffold used
 the core Navigation block and default emoji assets. The current theme uses a
 static header nav, and `lmhg-site-core` disables frontend emoji assets.
 
+### Tailnet Review Surface
+
+```bash
+tailscale serve status --json
+curl -sS -I https://mbp.beagle-perch.ts.net/
+WP_BASE_URL=https://mbp.beagle-perch.ts.net npm run verify:lmhg-redirects
+WP_BASE_URL=https://mbp.beagle-perch.ts.net npm run verify:lmhg-links
+WP_BASE_URL=https://mbp.beagle-perch.ts.net npm run verify:lmhg-actions
+WP_BASE_URL=https://mbp.beagle-perch.ts.net npm run verify:lmhg-head
+```
+
+Result:
+
+```text
+Tailscale Serve: mbp.beagle-perch.ts.net:443 / -> http://127.0.0.1:8888
+HTTP/2 200
+LMHG redirect verification passed.
+LMHG link verification passed.
+LMHG action verification passed.
+LMHG head verification passed.
+```
+
+Tailnet evidence confirms the reviewer URL is
+`https://mbp.beagle-perch.ts.net/`, not raw localhost, and that canonical,
+redirect, action, link, and JSON-LD output survive the Tailscale Serve host
+replacement.
+
 ### Production Audit
 
 ```bash
