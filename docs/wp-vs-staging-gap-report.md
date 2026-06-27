@@ -2,7 +2,7 @@
 
 Snapshot date: 2026-06-27T19:48:51.022Z
 
-WordPress base URL: http://localhost:8888
+WordPress base URL: http://racknerd.beagle-perch.ts.net:8091
 
 Staging snapshot: `data/lmhg/staging-snapshot/routes.json`
 
@@ -14,13 +14,13 @@ content, asset, theme, metadata, and noindex parity work is implemented.
 
 - Comparable staging routes: 54
 - Routes with issues: 54
-- Issue counts: `{"title mismatch":32,"h1 mismatch":31,"visible text hash mismatch":54}`
+- Issue counts: `{"title mismatch":32,"visible text hash mismatch":54,"h1 mismatch":27}`
 
 ## Route Gaps
 
 | Route | WP Status | Classification | Staging H1 | WP H1 | Staging Assets | WP Assets | Issues |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| / | 200 | migrate-verbatim | Mental Health Clinic in Louisville, KY |  | 31 | 0 | title mismatch; h1 mismatch; visible text hash mismatch |
+| / | 200 | migrate-verbatim | Mental Health Clinic in Louisville, KY | Mental Health Clinic in Louisville, KY | 31 | 0 | title mismatch; visible text hash mismatch |
 | /adolescent-counseling/ | 200 | migrate-verbatim | Teen Therapy in Louisville, KY | Teen Therapy in Louisville, KY | 18 | 0 | visible text hash mismatch |
 | /adult-counseling/ | 200 | migrate-verbatim | Adult Counseling in Louisville, KY | Adult Counseling in Louisville, KY | 15 | 0 | visible text hash mismatch |
 | /anxiety-depression-therapy/ | 200 | migrate-verbatim | Anxiety and Depression Therapy in Louisville, KY | Anxiety and Depression Therapy in Louisville, KY | 24 | 0 | visible text hash mismatch |
@@ -39,7 +39,7 @@ content, asset, theme, metadata, and noindex parity work is implemented.
 | /co-parenting/ | 200 | migrate-verbatim | Co-Parenting Services in Louisville, KY | Co-Parenting Services in Louisville, KY | 21 | 0 | visible text hash mismatch |
 | /community-based-services/ | 200 | migrate-verbatim | Community-Based Mental Health Services in Louisville, KY | Community-Based Mental Health Services in Louisville, KY | 18 | 0 | visible text hash mismatch |
 | /community-support/ | 200 | migrate-verbatim | Community Support Services in Louisville, KY | Community Support Services in Louisville, KY | 18 | 0 | visible text hash mismatch |
-| /compliance/ | 200 | migrate-verbatim | Mental Health Compliance in Louisville, KY | Compliance | 7 | 0 | title mismatch; h1 mismatch; visible text hash mismatch |
+| /compliance/ | 200 | migrate-verbatim | Mental Health Compliance in Louisville, KY | Mental Health Compliance in Louisville, KY | 7 | 0 | title mismatch; visible text hash mismatch |
 | /contact-us/ | 200 | migrate-verbatim | Contact Louisville Mental Health Group | Contact Us | 7 | 0 | title mismatch; h1 mismatch; visible text hash mismatch |
 | /couples-conflict-resolution/ | 200 | migrate-verbatim | Couples Conflict Resolution in Louisville, KY | Couples Conflict Resolution in Louisville, KY | 18 | 0 | visible text hash mismatch |
 | /couples-counseling/ | 200 | migrate-verbatim | Couples Counseling in Louisville, KY | Couples Counseling in Louisville, KY | 15 | 0 | visible text hash mismatch |
@@ -52,7 +52,7 @@ content, asset, theme, metadata, and noindex parity work is implemented.
 | /faq/cost/ | 200 | migrate-verbatim | Therapy Cost in Louisville, KY | Cost | 7 | 0 | title mismatch; h1 mismatch; visible text hash mismatch |
 | /faq/our-approach/ | 200 | migrate-verbatim | Louisville Mental Health Group Approach | Our Approach | 7 | 0 | title mismatch; h1 mismatch; visible text hash mismatch |
 | /group-therapy/ | 200 | migrate-verbatim | Group Therapy in Louisville, KY | Group Therapy in Louisville, KY | 9 | 0 | visible text hash mismatch |
-| /individual-counseling/ | 200 | migrate-verbatim | Individual Therapy in Louisville, KY | Individual Therapy in Louisville, KY | 15 | 0 | visible text hash mismatch |
+| /individual-counseling/ | 200 | migrate-verbatim | Individual Therapy in Louisville, KY | Individual Therapy in Louisville, KY | 15 | 2 | visible text hash mismatch |
 | /insurance/ | 200 | migrate-verbatim | Medicaid Mental Health Services in Louisville, KY | Insurance | 7 | 0 | title mismatch; h1 mismatch; visible text hash mismatch |
 | /jefferson-county-ky/ | 200 | migrate-verbatim | Mental Health Services in Jefferson County, KY | Jefferson County Ky | 7 | 0 | title mismatch; h1 mismatch; visible text hash mismatch |
 | /locations/ | 200 | migrate-verbatim | Mental Health Services Near Louisville, KY | Locations | 7 | 0 | title mismatch; h1 mismatch; visible text hash mismatch |
@@ -66,11 +66,11 @@ content, asset, theme, metadata, and noindex parity work is implemented.
 | /oldham-county-ky/ | 200 | migrate-verbatim | Mental Health Services in Oldham County, KY | Oldham County Ky | 7 | 0 | title mismatch; h1 mismatch; visible text hash mismatch |
 | /parenting-support/ | 200 | migrate-verbatim | Parenting Support in Louisville, KY | Parenting Support in Louisville, KY | 21 | 0 | visible text hash mismatch |
 | /play-therapy/ | 200 | migrate-verbatim | Play Therapy in Louisville, KY | Play Therapy in Louisville, KY | 21 | 0 | visible text hash mismatch |
-| /privacy-policy/ | 200 | migrate-verbatim | Privacy Policy for Louisville Mental Health Group | Privacy Policy | 7 | 0 | title mismatch; h1 mismatch; visible text hash mismatch |
+| /privacy-policy/ | 200 | migrate-verbatim | Privacy Policy for Louisville Mental Health Group | Privacy Policy for Louisville Mental Health Group | 7 | 0 | title mismatch; visible text hash mismatch |
 | /relationship-counseling/ | 200 | migrate-verbatim | Relationship Counseling in Louisville, KY | Relationship Counseling in Louisville, KY | 18 | 0 | visible text hash mismatch |
 | /reviews/ | 200 | migrate-verbatim | Louisville Mental Health Group Reviews \| Client Feedback | Reviews | 7 | 0 | title mismatch; h1 mismatch; visible text hash mismatch |
 | /services/ | 200 | migrate-verbatim | Mental Health Services in Louisville, KY | Services | 31 | 0 | title mismatch; h1 mismatch; visible text hash mismatch |
 | /specialties/ | 200 | migrate-verbatim | Mental Health Specialties in Louisville, KY | Specialties | 37 | 0 | title mismatch; h1 mismatch; visible text hash mismatch |
-| /terms-of-use/ | 200 | migrate-verbatim | Terms of Use for Louisville Mental Health Group | Terms Of Use | 7 | 0 | title mismatch; h1 mismatch; visible text hash mismatch |
+| /terms-of-use/ | 200 | migrate-verbatim | Terms of Use for Louisville Mental Health Group | Terms of Use for Louisville Mental Health Group | 7 | 0 | title mismatch; visible text hash mismatch |
 | /therapy-in-your-home/ | 200 | migrate-verbatim | In-Home Therapy in Louisville, KY | In-Home Therapy in Louisville, KY | 18 | 0 | visible text hash mismatch |
 | /trauma-therapy/ | 200 | migrate-verbatim | Trauma Therapy in Louisville, KY | Trauma Therapy in Louisville, KY | 12 | 0 | visible text hash mismatch |

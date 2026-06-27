@@ -27,6 +27,7 @@ const explicitFiles = [
   "data/lmhg/block-migration/first-slice-media-manifest.json",
   "docs/block-migration-slice-report.md",
   "docs/cloud-verification-workflow.md",
+  "docs/full-site-page-confirmation.md",
   "docs/hosted-first-slice-verification.md",
   "docs/racknerd-first-slice-runtime.md",
   "docs/staging-snapshot-report.md",
