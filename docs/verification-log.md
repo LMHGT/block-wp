@@ -196,6 +196,8 @@ LMHG source copy verification:
   "checkedRoutes": 51,
   "checkedCopyRoutes": 51,
   "checkedSnippets": 204,
+  "checkedSourceCards": 38,
+  "checkedMarkdownRoutes": 5,
   "checkedReadinessRoutes": 0
 }
 LMHG source copy verification passed.
@@ -220,9 +222,10 @@ redirect responses for effective legacy redirects, canonical paths, populated
 source SEO titles/descriptions, rendered internal links that avoid redirect-only
 or unsupported service-area URLs, the sitewide IntakeQ primary CTA, active phone
 links, JSON-LD schema types and required fields, graph-derived BreadcrumbList
-nodes, 204 rendered source-copy snippet checks across all 51 public routes, one
-rendered FAQ section with FAQPage schema, rendered graph breadcrumbs, related
-links, and
+nodes, 204 rendered source-copy snippet checks across all 51 public routes, 38
+rendered JSON source cards, five Markdown article routes with heading markers,
+one rendered FAQ section with FAQPage schema, rendered graph breadcrumbs,
+related links, and
 Workbench-style marker presence. It also verifies source H1 values where present
 and rejects scaffold/proof-track visible copy. FAQ answer parity remains
 incomplete for pages whose source records still contain workbook prompts; those

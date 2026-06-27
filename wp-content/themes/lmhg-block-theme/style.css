@@ -85,6 +85,30 @@ Text Domain: lmhg-block-theme
   color: var(--wp--preset--color--plum);
 }
 
+:where(.lmhg-source-copy__intro, .lmhg-source-card-group) {
+  margin-top: var(--wp--preset--spacing--40);
+}
+
+:where(.lmhg-source-card-list) {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+:where(.lmhg-source-card) {
+  border: 1px solid color-mix(in srgb, var(--wp--preset--color--muted-text) 28%, transparent);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+:where(.lmhg-source-card h3) {
+  font-size: var(--wp--preset--font-size--large);
+  margin-top: 0;
+}
+
 :where(.lmhg-header-nav a:focus-visible, .lmhg-footer-actions a:focus-visible) {
   outline: 2px solid currentColor;
   outline-offset: 3px;

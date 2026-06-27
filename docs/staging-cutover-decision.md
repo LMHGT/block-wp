@@ -38,8 +38,8 @@ Date: 2026-06-27
 - Protected utility/legal pages are present in the Astro source but intentionally
   out-of-scope in the current WordPress import manifest.
 - The WordPress proof currently renders source-derived summaries, source-copy
-  snippets, and graph sections, not full hand-polished layout parity for every
-  page family.
+  snippets, JSON source cards, Markdown article structure, and graph sections,
+  not full hand-polished layout parity for every page family.
 
 ## Required Staging Model Before Public Use
 
@@ -69,10 +69,11 @@ A future cutover recommendation must include:
 - A human review sign-off for representative pages on the WordPress staging URL.
 - A route-by-route redirect and canonical report against the final staging host.
 - A content parity report for full page copy and layout, not only source-derived
-  snippets.
+  snippets and generated source-content sections.
 - A Workbench/editor workflow decision.
 - A Rank Math configuration decision that treats `lmhg-site-core` as taxonomy
-  owner and Rank Math as SEO consumer.
+  owner and Rank Math as SEO consumer for titles, meta, schema, and sitemap
+  settings.
 - A rollback plan that keeps the Astro deployment available until WordPress is
   proven and accepted.
 

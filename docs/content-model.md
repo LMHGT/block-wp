@@ -137,13 +137,14 @@ truth.
 
 The importer stores migration-stub block content in `post_content`, but the
 front-end render layer replaces it for imported pages with source-derived
-summary, source-copy snippets, graph breadcrumbs, related links, FAQ content, and
-readiness markers. This keeps the proof track rebuildable from repo-owned
-manifests without manual Site Editor state.
+summary, source-copy snippets, JSON source card groups, Markdown article
+structure, graph breadcrumbs, related links, FAQ content, and readiness markers.
+This keeps the proof track rebuildable from repo-owned manifests without manual
+Site Editor state.
 
 This still does not claim full hand-polished Astro layout parity. Later
-page-family template work can replace the generic source-copy snippet section
-with richer cards, panels, article body structure, and approved visual assets.
+page-family template work can replace the generated source-content section with
+richer panels, page-specific layouts, and approved visual assets.
 
 ## Workbench Marker Contract
 
@@ -156,7 +157,8 @@ Future rendered editable fields must preserve LMHG's launch-editing model:
 
 The current plugin renders stable `data-lmhg-edit-field` markers for imported
 page H1s, source summaries, source-copy snippets exported from Astro
-implementation targets, graph breadcrumbs, related-page sections, and publishable
+implementation targets, JSON source card titles/descriptions, Markdown article
+headings/body blocks, graph breadcrumbs, related-page sections, and publishable
 FAQ question-answer pairs. FAQ workbook prompts are not published as visible
 copy; pages with FAQ source records but no migrated answers receive hidden
 readiness markers instead.
@@ -190,6 +192,8 @@ Expected behavior:
 - store route, SEO, relationship, and FAQ metadata
 - store sanitized source-copy snippets from Astro JSON/Markdown implementation
   targets
+- render source-derived JSON card groups and Markdown article structure with
+  stable marker IDs
 - print a JSON summary
 
 ## Acceptance Gate For This Phase
@@ -203,5 +207,6 @@ The Phase 3 gate passes when:
 - runtime verification still passes after import.
 - `npm run verify:lmhg-links` rejects stale internal links, redirect-only source
   paths, and unsupported service-area/city links in rendered WordPress pages.
-- `npm run verify:lmhg-copy` proves exported source-copy snippets render with
-  stable markers and without unresolved template tokens.
+- `npm run verify:lmhg-copy` proves exported source-copy snippets, JSON source
+  cards, and Markdown article headings render with stable markers and without
+  unresolved template tokens.

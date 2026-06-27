@@ -48,6 +48,16 @@ function marker(sourceUrl, field) {
   return `page:${sourceUrl}:` + field;
 }
 
+function collectCardCount(value) {
+  if (!value || typeof value !== "object") return 0;
+  let count = 0;
+  if (Array.isArray(value.cards)) count += value.cards.filter((card) => card && typeof card === "object").length;
+  if (value.services && typeof value.services === "object" && Array.isArray(value.services.cards)) {
+    count += value.services.cards.filter((card) => card && typeof card === "object").length;
+  }
+  return count;
+}
+
 const routes = manifest.routes
   .filter((route) => route.migrationStatus !== "out-of-scope")
   .filter((route) => normalizePath(route.url) !== "/404.html")
@@ -56,6 +66,8 @@ const routes = manifest.routes
 let checkedRoutes = 0;
 let checkedCopyRoutes = 0;
 let checkedSnippets = 0;
+let checkedSourceCards = 0;
+let checkedMarkdownRoutes = 0;
 let checkedReadinessRoutes = 0;
 
 for (const route of routes) {
@@ -104,6 +116,22 @@ for (const route of routes) {
       fail(`${sourcePath} missing source snippet marker ${index}`);
     }
   }
+
+  const expectedCardCount = collectCardCount(sourceContent.data);
+  if (expectedCardCount > 0) {
+    const renderedCardCount = [...html.matchAll(/data-lmhg-source-card=/g)].length;
+    checkedSourceCards += renderedCardCount;
+    if (renderedCardCount !== expectedCardCount) {
+      fail(`${sourcePath} expected ${expectedCardCount} source cards, found ${renderedCardCount}`);
+    }
+  }
+
+  if (sourceContent.type === "markdown") {
+    checkedMarkdownRoutes += 1;
+    if (!/<h2[^>]*data-lmhg-edit-field="page:[^"]+:sourceContent\.blocks\[\d+\]\.text"/.test(html)) {
+      fail(`${sourcePath} missing rendered markdown heading markers`);
+    }
+  }
 }
 
 console.log(JSON.stringify({
@@ -111,6 +139,8 @@ console.log(JSON.stringify({
   checkedRoutes,
   checkedCopyRoutes,
   checkedSnippets,
+  checkedSourceCards,
+  checkedMarkdownRoutes,
   checkedReadinessRoutes
 }, null, 2));
 

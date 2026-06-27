@@ -57,9 +57,9 @@ Completed and pushed to `origin/main`:
   JSON-LD schema types, FAQPage output, graph-derived BreadcrumbList output,
   redirects, related links, unsupported city/service-area suppression, and
   local/tailnet URL handling.
-- Phase 6 rendered-marker parity for H1, summary, source-copy snippets,
-  breadcrumbs, related links, publishable FAQ items, FAQ readiness warnings, and
-  scaffold-copy rejection.
+- Phase 6 rendered-marker parity for H1, summary, source-copy snippets, JSON
+  source cards, Markdown article headings, breadcrumbs, related links,
+  publishable FAQ items, FAQ readiness warnings, and scaffold-copy rejection.
 - Phase 7 verification commands covering static manifests, imported routes,
   custom taxonomies, redirects, internal links, IntakeQ/phone actions, head
   metadata/schema, rendered markers, representative route browser checks,
@@ -69,16 +69,17 @@ Completed and pushed to `origin/main`:
 Partially complete:
 
 - Phase 4 has LMHG-owned tokens, header/footer actions, crawlable generated
-  source-copy and graph sections, and representative route browser checks. Full
-  hand-polished page-family template parity is not claimed.
+  source-copy, JSON source card, Markdown article, and graph sections, plus
+  representative route browser checks. Full hand-polished page-family template
+  parity is not claimed.
 
 Still intentionally not complete:
 
 - Public WordPress hosting, DNS, Cloudflare, and Astro branch changes remain out
   of scope.
 - Full hand-polished page copy parity is not claimed; current WordPress pages
-  render source-copy snippets and graph sections rather than every Astro content
-  block and layout.
+  render generated source-content and graph sections rather than every Astro
+  content block and layout.
 - Live Workbench write integration into WordPress is not built.
 - Protected legal/utility pages remain out-of-scope because the source manifest
   marks them out-of-scope for this proof track.

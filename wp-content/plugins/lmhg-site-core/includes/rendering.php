@@ -124,21 +124,249 @@ function lmhg_site_core_render_source_copy_section( array $route, string $source
 		);
 	}
 
-	$items = array();
-	foreach ( array_slice( $snippets, 0, 12 ) as $index => $snippet ) {
-		$items[] = sprintf(
-			'<p data-lmhg-edit-field="%1$s">%2$s</p>',
-			esc_attr( lmhg_site_core_marker_id( $source_url, 'sourceContent.textSnippets[' . $index . ']' ) ),
-			esc_html( $snippet )
-		);
+	$content = 'markdown' === (string) ( $source_content['type'] ?? '' )
+		? lmhg_site_core_render_markdown_source_content( $source_content, $source_url )
+		: lmhg_site_core_render_json_source_content( $source_content, $source_url );
+
+	if ( '' === $content ) {
+		$content = lmhg_site_core_render_source_snippets( $source_content, $source_url, 12 );
 	}
 
 	return sprintf(
 		'<section class="lmhg-source-copy" data-lmhg-edit-field="%1$s" data-lmhg-source-content-path="%2$s"><h2>Page copy</h2>%3$s</section>',
 		esc_attr( lmhg_site_core_marker_id( $source_url, 'source-content' ) ),
 		esc_attr( (string) ( $source_content['path'] ?? '' ) ),
-		implode( '', $items )
+		$content
 	);
+}
+
+/**
+ * Renders source-copy snippets as marked paragraphs.
+ *
+ * @param array<string,mixed> $source_content Source content payload.
+ * @param string              $source_url Source URL.
+ * @param int                 $limit Snippet limit.
+ * @return string
+ */
+function lmhg_site_core_render_source_snippets( array $source_content, string $source_url, int $limit ): string {
+	$snippets = isset( $source_content['textSnippets'] ) && is_array( $source_content['textSnippets'] )
+		? array_values( $source_content['textSnippets'] )
+		: array();
+	$items = array();
+
+	foreach ( array_slice( $snippets, 0, $limit ) as $index => $snippet ) {
+		$text = trim( wp_strip_all_tags( (string) $snippet ) );
+		if ( '' === $text ) {
+			continue;
+		}
+
+		$items[] = sprintf(
+			'<p data-lmhg-edit-field="%1$s">%2$s</p>',
+			esc_attr( lmhg_site_core_marker_id( $source_url, 'sourceContent.textSnippets[' . $index . ']' ) ),
+			esc_html( $text )
+		);
+	}
+
+	return implode( '', $items );
+}
+
+/**
+ * Renders Markdown source content with article structure.
+ *
+ * @param array<string,mixed> $source_content Source content payload.
+ * @param string              $source_url Source URL.
+ * @return string
+ */
+function lmhg_site_core_render_markdown_source_content( array $source_content, string $source_url ): string {
+	$blocks = isset( $source_content['blocks'] ) && is_array( $source_content['blocks'] )
+		? $source_content['blocks']
+		: array();
+	$html = array();
+
+	foreach ( array_slice( $blocks, 0, 24 ) as $index => $block ) {
+		if ( ! is_array( $block ) ) {
+			continue;
+		}
+
+		$type = (string) ( $block['type'] ?? '' );
+		if ( 'heading' === $type ) {
+			$level = 3 === (int) ( $block['level'] ?? 2 ) ? 3 : 2;
+			$text = trim( wp_strip_all_tags( (string) ( $block['text'] ?? '' ) ) );
+			if ( '' !== $text ) {
+				$html[] = sprintf(
+					'<h%1$d data-lmhg-edit-field="%2$s">%3$s</h%1$d>',
+					$level,
+					esc_attr( lmhg_site_core_marker_id( $source_url, 'sourceContent.blocks[' . $index . '].text' ) ),
+					esc_html( $text )
+				);
+			}
+			continue;
+		}
+
+		if ( 'paragraph' === $type ) {
+			$text = trim( wp_strip_all_tags( (string) ( $block['text'] ?? '' ) ) );
+			if ( '' !== $text ) {
+				$html[] = lmhg_site_core_render_marked_source_paragraph( $source_content, $source_url, $text, 'sourceContent.blocks[' . $index . '].text' );
+			}
+			continue;
+		}
+
+		if ( 'list' === $type && isset( $block['items'] ) && is_array( $block['items'] ) ) {
+			$items = array();
+			foreach ( $block['items'] as $item_index => $item ) {
+				$text = trim( wp_strip_all_tags( (string) $item ) );
+				if ( '' === $text ) {
+					continue;
+				}
+				$items[] = sprintf(
+					'<li data-lmhg-edit-field="%1$s">%2$s</li>',
+					esc_attr( lmhg_site_core_source_text_marker( $source_content, $source_url, $text, 'sourceContent.blocks[' . $index . '].items[' . $item_index . ']' ) ),
+					esc_html( $text )
+				);
+			}
+			if ( ! empty( $items ) ) {
+				$html[] = '<ul class="lmhg-source-copy__list">' . implode( '', $items ) . '</ul>';
+			}
+		}
+	}
+
+	return implode( '', $html );
+}
+
+/**
+ * Renders JSON source content with intro snippets and card groups.
+ *
+ * @param array<string,mixed> $source_content Source content payload.
+ * @param string              $source_url Source URL.
+ * @return string
+ */
+function lmhg_site_core_render_json_source_content( array $source_content, string $source_url ): string {
+	$data = isset( $source_content['data'] ) && is_array( $source_content['data'] )
+		? $source_content['data']
+		: array();
+	if ( empty( $data ) ) {
+		return '';
+	}
+
+	$sections = array(
+		'<div class="lmhg-source-copy__intro">' . lmhg_site_core_render_source_snippets( $source_content, $source_url, 8 ) . '</div>',
+		lmhg_site_core_render_source_card_groups( $data, $source_content, $source_url ),
+	);
+
+	return implode( '', array_filter( $sections ) );
+}
+
+/**
+ * Renders card groups from known source-copy card arrays.
+ *
+ * @param array<string,mixed> $data Source JSON data.
+ * @param array<string,mixed> $source_content Source content payload.
+ * @param string              $source_url Source URL.
+ * @return string
+ */
+function lmhg_site_core_render_source_card_groups( array $data, array $source_content, string $source_url ): string {
+	$groups = array();
+	if ( isset( $data['cards'] ) && is_array( $data['cards'] ) ) {
+		$groups[] = array(
+			'title' => 'Explore options',
+			'path'  => 'sourceContent.data.cards',
+			'cards' => $data['cards'],
+		);
+	}
+	if ( isset( $data['services']['cards'] ) && is_array( $data['services']['cards'] ) ) {
+		$groups[] = array(
+			'title' => (string) ( $data['services']['title'] ?? 'Services' ),
+			'path'  => 'sourceContent.data.services.cards',
+			'cards' => $data['services']['cards'],
+		);
+	}
+
+	$html = array();
+	foreach ( $groups as $group_index => $group ) {
+		$cards = array_values( array_filter( $group['cards'], 'is_array' ) );
+		if ( empty( $cards ) ) {
+			continue;
+		}
+
+		$items = array();
+		foreach ( array_slice( $cards, 0, 12 ) as $card_index => $card ) {
+			$title = trim( wp_strip_all_tags( (string) ( $card['title'] ?? '' ) ) );
+			$description = trim( wp_strip_all_tags( (string) ( $card['description'] ?? '' ) ) );
+			$href = trim( (string) ( $card['href'] ?? '' ) );
+			if ( '' === $title && '' === $description ) {
+				continue;
+			}
+
+			$title_html = '' !== $href
+				? sprintf(
+					'<a href="%1$s" data-lmhg-source-card-link="%2$s">%3$s</a>',
+					esc_url( home_url( $href ) ),
+					esc_attr( $href ),
+					esc_html( $title )
+				)
+				: esc_html( $title );
+
+			$items[] = sprintf(
+				'<li class="lmhg-source-card" data-lmhg-source-card="%1$s"><h3 data-lmhg-edit-field="%2$s">%3$s</h3>%4$s</li>',
+				esc_attr( $group_index . ':' . $card_index ),
+				esc_attr( lmhg_site_core_marker_id( $source_url, $group['path'] . '[' . $card_index . '].title' ) ),
+				$title_html,
+				'' !== $description ? lmhg_site_core_render_marked_source_paragraph( $source_content, $source_url, $description, $group['path'] . '[' . $card_index . '].description' ) : ''
+			);
+		}
+
+		if ( empty( $items ) ) {
+			continue;
+		}
+
+		$html[] = sprintf(
+			'<section class="lmhg-source-card-group" data-lmhg-edit-field="%1$s"><h3>%2$s</h3><ul class="lmhg-source-card-list">%3$s</ul></section>',
+			esc_attr( lmhg_site_core_marker_id( $source_url, $group['path'] ) ),
+			esc_html( (string) $group['title'] ),
+			implode( '', $items )
+		);
+	}
+
+	return implode( '', $html );
+}
+
+/**
+ * Renders a paragraph with a snippet marker when the text maps to one.
+ *
+ * @param array<string,mixed> $source_content Source content payload.
+ * @param string              $source_url Source URL.
+ * @param string              $text Paragraph text.
+ * @param string              $fallback_field Fallback marker field.
+ * @return string
+ */
+function lmhg_site_core_render_marked_source_paragraph( array $source_content, string $source_url, string $text, string $fallback_field ): string {
+	return sprintf(
+		'<p data-lmhg-edit-field="%1$s">%2$s</p>',
+		esc_attr( lmhg_site_core_source_text_marker( $source_content, $source_url, $text, $fallback_field ) ),
+		esc_html( $text )
+	);
+}
+
+/**
+ * Resolves a stable marker for a source text value.
+ *
+ * @param array<string,mixed> $source_content Source content payload.
+ * @param string              $source_url Source URL.
+ * @param string              $text Source text.
+ * @param string              $fallback_field Fallback marker field.
+ * @return string
+ */
+function lmhg_site_core_source_text_marker( array $source_content, string $source_url, string $text, string $fallback_field ): string {
+	$snippets = isset( $source_content['textSnippets'] ) && is_array( $source_content['textSnippets'] )
+		? array_values( $source_content['textSnippets'] )
+		: array();
+	foreach ( $snippets as $index => $snippet ) {
+		if ( trim( wp_strip_all_tags( (string) $snippet ) ) === $text ) {
+			return lmhg_site_core_marker_id( $source_url, 'sourceContent.textSnippets[' . $index . ']' );
+		}
+	}
+
+	return lmhg_site_core_marker_id( $source_url, $fallback_field );
 }
 
 /**
