@@ -15,6 +15,8 @@
     "inventory:astro": "node tools/export-astro-inventory.mjs",
     "crawl:staging": "node tools/crawl-staging-snapshot.mjs",
     "verify:staging-snapshot": "node tools/verify-staging-snapshot.mjs",
+    "report:wp-vs-staging": "node tools/verify-wp-vs-staging.mjs --report-only",
+    "verify:wp-vs-staging": "node tools/verify-wp-vs-staging.mjs",
     "setup:browsers": "playwright install chromium",
     "wp-env:start": "wp-env start",
     "wp-env:stop": "wp-env stop",

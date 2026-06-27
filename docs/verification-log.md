@@ -448,3 +448,27 @@ The three decision routes are `/compliance/`, `/privacy-policy/`, and
 `/terms-of-use/`: the earlier proof-track manifest marked them out-of-scope, but
 Cloudflare staging serves each with `200`, so a verbatim migration must either
 port them or record an explicit exclusion decision.
+
+### Initial WordPress vs Staging Gap Report
+
+```bash
+npm run report:wp-vs-staging
+```
+
+Result:
+
+```text
+comparableRoutes: 54
+routesWithIssues: 54
+title mismatch: 32
+h1 mismatch: 31
+visible text hash mismatch: 54
+missing staging X-Robots-Tag noindex: 54
+missing staging robots meta noindex: 54
+status 404 != staging 200: 3
+```
+
+This is expected. The current local WordPress surface remains a proof scaffold,
+not the verbatim migration. The strict `npm run verify:wp-vs-staging` command is
+available for future parity work but is intentionally not part of `npm run
+verify` until these gaps are closed.

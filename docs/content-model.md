@@ -258,3 +258,7 @@ The Phase 3 gate passes when:
 - `npm run verify:staging-snapshot` proves the committed Cloudflare staging
   snapshot has route, redirect, asset, screenshot, and noindex-suppression
   coverage for the next parity implementation slice.
+- `npm run report:wp-vs-staging` writes the current expected gap report against
+  the local WordPress proof surface.
+- `npm run verify:wp-vs-staging` is the future strict gate for verbatim parity
+  and is expected to fail until the full migration catches up to the snapshot.
