@@ -1,6 +1,6 @@
 # WordPress vs Cloudflare Staging Gap Report
 
-Date: 2026-06-27T19:38:04.689Z
+Snapshot date: 2026-06-27T19:31:32.165Z
 
 WordPress base URL: http://localhost:8888
 

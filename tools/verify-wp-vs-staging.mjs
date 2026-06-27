@@ -4,10 +4,12 @@ import path from "node:path";
 
 const root = process.cwd();
 const snapshotPath = path.join(root, "data/lmhg/staging-snapshot/routes.json");
+const snapshotSummaryPath = path.join(root, "data/lmhg/staging-snapshot/summary.json");
 const reportPath = path.join(root, "docs/wp-vs-staging-gap-report.md");
 const wpBaseUrl = process.env.WP_BASE_URL || "http://localhost:8888";
 const reportOnly = process.argv.includes("--report-only");
 const routes = JSON.parse(fs.readFileSync(snapshotPath, "utf8"));
+const snapshotSummary = JSON.parse(fs.readFileSync(snapshotSummaryPath, "utf8"));
 const failures = [];
 const rows = [];
 
@@ -152,7 +154,7 @@ const routesWithIssues = rows.filter((row) => row.issues.length > 0);
 
 fs.writeFileSync(reportPath, `# WordPress vs Cloudflare Staging Gap Report
 
-Date: ${new Date().toISOString()}
+Snapshot date: ${snapshotSummary.generatedAt}
 
 WordPress base URL: ${wpBaseUrl}
 
