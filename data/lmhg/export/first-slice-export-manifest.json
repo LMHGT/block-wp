@@ -1,0 +1,222 @@
+{
+  "schemaVersion": "2026-06-27.first-slice-export.v1",
+  "generatedAt": "2026-06-27T20:41:45.198Z",
+  "purpose": "Exportable source package manifest for the first editable Gutenberg migration slice.",
+  "routes": [
+    "/compliance/",
+    "/privacy-policy/",
+    "/terms-of-use/",
+    "/individual-counseling/"
+  ],
+  "importCommands": [
+    "wp lmhg import-manifest data/lmhg/source-route-manifest.json",
+    "wp lmhg import-block-manifest data/lmhg/block-migration/first-slice-block-manifest.json data/lmhg/block-migration/first-slice-media-manifest.json"
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 2166,
+      "sha256": "54d41d18ecd0f7d6e6837f5da68e862e7564f01ca7e0bbb526f5a99ed7ad9205"
+    },
+    {
+      "path": "data/lmhg/block-migration/first-slice-block-manifest.json",
+      "bytes": 107206,
+      "sha256": "ca2b171528df5f54ccb7641f2ec80d64fb0d189b4dd9df8c25977374b995fb86"
+    },
+    {
+      "path": "data/lmhg/block-migration/first-slice-media-manifest.json",
+      "bytes": 2923,
+      "sha256": "c8c697c0a098a9fda310d9829ca98e90e45916c24a5ef3753b8532e6749f436e"
+    },
+    {
+      "path": "data/lmhg/source-route-manifest.json",
+      "bytes": 478578,
+      "sha256": "0a92853ae5906535eb38695971c7a3e60c24178d0b25b053a9e3162ce98df039"
+    },
+    {
+      "path": "data/lmhg/staging-snapshot/assets.json",
+      "bytes": 99094,
+      "sha256": "50cdddcb326503c513e8226b8be8460490edd8826bcb5b7c35734ee2169c9fbe"
+    },
+    {
+      "path": "data/lmhg/staging-snapshot/routes.json",
+      "bytes": 223417,
+      "sha256": "1c11650ebecadc5bfa994d0f30fce6ef935f5ee0199d932a9e2e50ba9d8eb7f8"
+    },
+    {
+      "path": "data/lmhg/staging-snapshot/summary.json",
+      "bytes": 672,
+      "sha256": "ae874a447da6dcab2b9553d29e05a25cf3de81891b25b12b58b859f8c94c75a4"
+    },
+    {
+      "path": "docs/block-migration-slice-report.md",
+      "bytes": 2424,
+      "sha256": "b3be84f66bca383498a891ddff494603f577b09b8fbfcc16cf5b7c7041c1c936"
+    },
+    {
+      "path": "docs/cloud-verification-workflow.md",
+      "bytes": 2362,
+      "sha256": "7fd4675df2ca2f03bbef88be641652a748d5a8560e8ea9d96dae521492594dab"
+    },
+    {
+      "path": "docs/route-parity-matrix.md",
+      "bytes": 9197,
+      "sha256": "8931d6358f8fd17b0fe04088a96404a39c53a63c4382c789aa39637794c5d171"
+    },
+    {
+      "path": "docs/staging-snapshot-report.md",
+      "bytes": 1802,
+      "sha256": "cc765bc2814747facbee0c7f3637cd3cd6409ae2a4b775b49f714ece09056ae0"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 274333,
+      "sha256": "f1b97ddd926272216b80caf7da543453991a45da39dcaadb3b70fab5c5802fbb"
+    },
+    {
+      "path": "package.json",
+      "bytes": 3228,
+      "sha256": "e1dc9954d83a50cb8269f8d4492b2a917b3cabab9f4147b8ccb222eb7c541210"
+    },
+    {
+      "path": "plan/2026-06-27-cloud-run-editable-gutenberg-migration-pipeline.md",
+      "bytes": 21527,
+      "sha256": "a1767f90e395fa489a331e94e7d59909344ffe936ded686213b562abaa7bafa6"
+    },
+    {
+      "path": "tools/generate-block-migration-slice.mjs",
+      "bytes": 19232,
+      "sha256": "30dfdc17e9596f186039b256102b2d145c3d10d4d534c0429f1062a50eeb13b3"
+    },
+    {
+      "path": "tools/generate-export-manifest.mjs",
+      "bytes": 4011,
+      "sha256": "9c69102e9697cec40bf69e5966326da9b3d259d6bfcf4e87a4f26d103afb6903"
+    },
+    {
+      "path": "tools/verify-block-migration-slice.mjs",
+      "bytes": 2730,
+      "sha256": "907cb3fd865636b62243a3973926fbe73d2acefc35258c0027ed12515743a613"
+    },
+    {
+      "path": "tools/verify-export-manifest.mjs",
+      "bytes": 1723,
+      "sha256": "7033807babffad3c41dd205e40004cf27f5f24b868ac4964a49dcce1a8f827b2"
+    },
+    {
+      "path": "wp-content/plugins/lmhg-site-core/includes/editable-blocks.php",
+      "bytes": 11257,
+      "sha256": "d09b829fa855030619168e85cb2d1f7551557ab4b34bcbd7e5f51a7f003c4d41"
+    },
+    {
+      "path": "wp-content/plugins/lmhg-site-core/includes/importer.php",
+      "bytes": 11637,
+      "sha256": "836efb57f0448294f97c10d21eedb6a8c7b8358dc85420c3998d3c4beed35166"
+    },
+    {
+      "path": "wp-content/plugins/lmhg-site-core/includes/redirects.php",
+      "bytes": 3642,
+      "sha256": "9df7fe8da586d9273cd6f80d022e05f4ba94e3b3326b63d80a4be9d7a1977f49"
+    },
+    {
+      "path": "wp-content/plugins/lmhg-site-core/includes/rendering.php",
+      "bytes": 18716,
+      "sha256": "98039970206ad7ea3a9422b2de2fea7fd0c4deda27064a94d1ecef0e613cda5b"
+    },
+    {
+      "path": "wp-content/plugins/lmhg-site-core/includes/seo.php",
+      "bytes": 12092,
+      "sha256": "073fa0384a8e4eedfae9ab6f6fdc3960539241697de8b2cf73d79a3bc5f78e4a"
+    },
+    {
+      "path": "wp-content/plugins/lmhg-site-core/includes/taxonomies.php",
+      "bytes": 3707,
+      "sha256": "37fae4f59d1671d065f07775a90057b6ad861c02db561565969d92451c07fd0e"
+    },
+    {
+      "path": "wp-content/plugins/lmhg-site-core/lmhg-site-core.php",
+      "bytes": 2076,
+      "sha256": "9aed806e2974734477335112dd438123833f18af1e449953a6ca01146cffd554"
+    },
+    {
+      "path": "wp-content/themes/lmhg-block-theme/assets/css/blocks/navigation.css",
+      "bytes": 293,
+      "sha256": "9d7e181b1d2bf8aa0fcc41e5d66efe9821748aeb667616299a75c91279e40838"
+    },
+    {
+      "path": "wp-content/themes/lmhg-block-theme/functions.php",
+      "bytes": 673,
+      "sha256": "4547f2cb879bb6ca466c64c041884b15bd10d4b8de4bfd217a4a2c215237f3b0"
+    },
+    {
+      "path": "wp-content/themes/lmhg-block-theme/parts/footer.html",
+      "bytes": 1052,
+      "sha256": "e0f66013f50954bb6c42b7d05953b8b67be9624486dc46a95ed8da68dec06af3"
+    },
+    {
+      "path": "wp-content/themes/lmhg-block-theme/parts/header.html",
+      "bytes": 928,
+      "sha256": "6cb99977e510d5a743e41122642f2cec8d47fa8d99eb832ec4381fdf9c5ba559"
+    },
+    {
+      "path": "wp-content/themes/lmhg-block-theme/patterns/content-band.php",
+      "bytes": 1025,
+      "sha256": "43eb41405b166eaaea36f7f237842f88551aaf8d564a163a56c96278c4556db7"
+    },
+    {
+      "path": "wp-content/themes/lmhg-block-theme/patterns/hero.php",
+      "bytes": 1189,
+      "sha256": "3490fa1dad3ea1dd52e693417a8bee4c1c311d607f3706a78323ac6f43512c81"
+    },
+    {
+      "path": "wp-content/themes/lmhg-block-theme/style.css",
+      "bytes": 2655,
+      "sha256": "43a72fda193055166f1456a3dc585de6b3046c0f26dc25f48f34890df82235e2"
+    },
+    {
+      "path": "wp-content/themes/lmhg-block-theme/styles/editorial.json",
+      "bytes": 300,
+      "sha256": "8681bed7e397f4035568feedd965ba34eeeb208ec0ef7138ff44e4fa2eb12d48"
+    },
+    {
+      "path": "wp-content/themes/lmhg-block-theme/styles/high-contrast.json",
+      "bytes": 423,
+      "sha256": "56d04be7d87c0cfc91c648c80b55e41551c2321d1008960b8f0990d626ecc4a9"
+    },
+    {
+      "path": "wp-content/themes/lmhg-block-theme/templates/404.html",
+      "bytes": 616,
+      "sha256": "2574a1cd3457cda83d3a0282e9eb22e95fd527bb4e4bbf043e241c7b899c4ffe"
+    },
+    {
+      "path": "wp-content/themes/lmhg-block-theme/templates/archive.html",
+      "bytes": 922,
+      "sha256": "89a3d32295ae239482eac51ffe035b76c3bc60c91a1f012735a8819bda3e1771"
+    },
+    {
+      "path": "wp-content/themes/lmhg-block-theme/templates/front-page.html",
+      "bytes": 315,
+      "sha256": "4baf5eab8b4ef6d937c78dca15f8c4075fb1ba538d3253f898c741fbe77406a4"
+    },
+    {
+      "path": "wp-content/themes/lmhg-block-theme/templates/index.html",
+      "bytes": 993,
+      "sha256": "94b072ae469d72363729b99a105c4838207de83b05f7af79086403bdfde879a0"
+    },
+    {
+      "path": "wp-content/themes/lmhg-block-theme/templates/page.html",
+      "bytes": 449,
+      "sha256": "df60f85d026dfa3a04527c037cede7cf066e1522671d6dc3fa342a51ad873878"
+    },
+    {
+      "path": "wp-content/themes/lmhg-block-theme/templates/single.html",
+      "bytes": 473,
+      "sha256": "1e00e82652e35c055ca4bdaf256170653ff5bba4501e056f70b5f2d6e4090ff1"
+    },
+    {
+      "path": "wp-content/themes/lmhg-block-theme/theme.json",
+      "bytes": 3805,
+      "sha256": "e3eb803653bd0d4366c475b3eb4465d7094bdf75afd886f3eeb33a9bc67b0229"
+    }
+  ]
+}
