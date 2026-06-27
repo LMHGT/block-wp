@@ -9,6 +9,7 @@ const requiredFiles = [
   "docs/source-provenance.md",
   "docs/worker-checklist.md",
   "docs/content-model.md",
+  "docs/staging-cutover-decision.md",
   "data/lmhg/source-route-manifest.json",
   "data/lmhg/source-design-manifest.json",
   "data/lmhg/source-assets-manifest.json",

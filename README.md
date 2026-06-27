@@ -14,6 +14,10 @@ Source handoff:
 
 - [docs/superpowers/plans/2026-06-26-agentic-wordpress-codex-environment-handoff.md](docs/superpowers/plans/2026-06-26-agentic-wordpress-codex-environment-handoff.md)
 
+Cutover boundary:
+
+- [docs/staging-cutover-decision.md](docs/staging-cutover-decision.md)
+
 The existing Astro Integrate worktree is read-only for this track unless Tyler
 explicitly authorizes changes there.
 
