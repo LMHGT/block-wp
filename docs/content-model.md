@@ -36,7 +36,7 @@ Plugin: `wp-content/plugins/lmhg-site-core`
 - SEO metadata storage
 - schema type storage
 - breadcrumb/relationship metadata storage
-- redirect inventory storage
+- redirect inventory storage and front-end redirect handling
 - Tailscale URL behavior
 - future rendered-marker helpers
 
@@ -131,6 +131,8 @@ Expected behavior:
 - update existing imported pages idempotently
 - clean duplicate proof pages that share `_lmhg_source_url` and carry imported
   route-manifest meta
+- store manifest redirect rules in the plugin-owned `lmhg_route_redirects`
+  option for front-end redirect handling
 - set the WordPress front page
 - store route, SEO, relationship, and FAQ metadata
 - print a JSON summary

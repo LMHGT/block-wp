@@ -25,6 +25,7 @@ function lmhg_site_core_import_manifest( array $manifest ): array {
 		'updated' => 0,
 		'skipped' => 0,
 		'failed'  => 0,
+		'redirects' => 0,
 	);
 
 	foreach ( $routes as $route ) {
@@ -56,7 +57,25 @@ function lmhg_site_core_import_manifest( array $manifest ): array {
 		}
 	}
 
+	$result['redirects'] = lmhg_site_core_store_redirect_rules( $manifest );
+
 	return $result;
+}
+
+/**
+ * Stores redirect inventory for front-end redirect handling.
+ *
+ * @param array<string,mixed> $manifest Source route manifest.
+ * @return int
+ */
+function lmhg_site_core_store_redirect_rules( array $manifest ): int {
+	$redirects = isset( $manifest['redirects'] ) && is_array( $manifest['redirects'] )
+		? array_values( array_filter( $manifest['redirects'], 'is_array' ) )
+		: array();
+
+	update_option( 'lmhg_route_redirects', $redirects, false );
+
+	return count( $redirects );
 }
 
 /**

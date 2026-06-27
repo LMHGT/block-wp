@@ -19,6 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 require_once __DIR__ . '/includes/importer.php';
+require_once __DIR__ . '/includes/redirects.php';
 
 add_filter( 'pre_option_home', 'lmhg_site_core_tailnet_url_for_serve' );
 add_filter( 'pre_option_siteurl', 'lmhg_site_core_tailnet_url_for_serve' );

@@ -49,12 +49,14 @@ Give remote reviewers the Tailscale Serve URL, not the localhost URL.
 ```bash
 npm run verify:lmhg-static
 npm run verify:lmhg-routes
+npm run verify:lmhg-redirects
 npm run verify:lmhg
 ```
 
 `verify:lmhg-static` checks the repo-owned route/redirect manifests.
 `verify:lmhg-routes` checks the running `wp-env` database after
-`npm run wp-env:seed`.
+`npm run wp-env:seed`. `verify:lmhg-redirects` checks the running WordPress
+frontend's redirect responses against the manifest.
 
 ## Tailscale Serve
 

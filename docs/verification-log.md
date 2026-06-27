@@ -62,7 +62,7 @@ Success: Switched to 'LMHG Block Theme' theme.
 Success: Plugin already activated.
 Success: Rewrite structure set.
 Success: Rewrite rules flushed.
-Success: {"created":0,"updated":52,"skipped":3,"failed":0}
+Success: {"created":0,"updated":52,"skipped":3,"failed":0,"redirects":117}
 Seeded LMHG wp-env site content and route manifest.
 HTTP/1.1 200 OK
 ```
@@ -76,7 +76,7 @@ Success: Plugin already activated.
 Success: Rewrite structure set.
 Success: Rewrite rules flushed.
 Success: Value passed for 'lmhg_tailnet_host' option is unchanged.
-Success: {"created":0,"updated":52,"skipped":3,"failed":0}
+Success: {"created":0,"updated":52,"skipped":3,"failed":0,"redirects":117}
 Seeded LMHG wp-env site content and route manifest.
 ```
 
@@ -94,8 +94,8 @@ npx --no-install wp-env run cli wp eval '$q = new WP_Query(array("post_type"=>"p
 Result:
 
 ```text
-Success: {"created":0,"updated":52,"skipped":3,"failed":0}
-Success: {"created":0,"updated":52,"skipped":3,"failed":0}
+Success: {"created":0,"updated":52,"skipped":3,"failed":0,"redirects":117}
+Success: {"created":0,"updated":52,"skipped":3,"failed":0,"redirects":117}
 52
 /
 faq/cost ok
@@ -139,11 +139,20 @@ LMHG route verification:
   "showOnFront": "page"
 }
 LMHG route verification passed.
+
+LMHG redirect verification:
+{
+  "baseUrl": "http://localhost:8888",
+  "manifestRedirects": 117,
+  "uniqueRedirectChecks": 49
+}
+LMHG redirect verification passed.
 ```
 
-Current scope: this proves repo manifest shape and imported WordPress route/meta
-state. It does not yet prove redirect, canonical tag, schema, breadcrumb,
-related-link, FAQ, or Workbench marker parity.
+Current scope: this proves repo manifest shape, imported WordPress route/meta
+state, and front-end redirect responses for effective legacy redirects. It does
+not yet prove canonical tag, schema, breadcrumb, related-link, FAQ, or Workbench
+marker parity.
 
 ### Screenshots And Lighthouse
 
