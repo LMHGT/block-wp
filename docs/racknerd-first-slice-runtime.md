@@ -48,7 +48,9 @@ deploy/racknerd/bootstrap-first-slice.sh
 The bootstrap script installs WordPress if needed, activates the LMHG block
 theme and `lmhg-site-core`, preserves `blog_public=0`, imports all route
 manifest pages, imports the first editable block slice, sideloads first-slice
-media, and flushes permalinks.
+media, and flushes permalinks. It force-recreates the WordPress service so
+bind mounts always point at the current deployed repo tree after an archive
+replacement.
 
 ## Review URL
 

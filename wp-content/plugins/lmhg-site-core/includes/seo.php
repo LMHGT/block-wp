@@ -12,6 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 remove_action( 'wp_head', 'rel_canonical' );
 add_filter( 'pre_get_document_title', 'lmhg_site_core_document_title' );
 add_filter( 'wp_robots', 'lmhg_site_core_filter_robots' );
+add_filter( 'wp_headers', 'lmhg_site_core_filter_development_robots_headers' );
 add_action( 'send_headers', 'lmhg_site_core_send_development_robots_header' );
 add_action( 'wp_head', 'lmhg_site_core_output_development_robots_meta', 1 );
 add_action( 'wp_head', 'lmhg_site_core_output_canonical', 4 );
@@ -64,6 +65,21 @@ function lmhg_site_core_filter_robots( array $robots ): array {
 	}
 
 	return $robots;
+}
+
+/**
+ * Adds staging/development discovery suppression headers through WordPress' header filter.
+ *
+ * @param array<string,string> $headers HTTP headers.
+ * @return array<string,string>
+ */
+function lmhg_site_core_filter_development_robots_headers( array $headers ): array {
+	if ( is_admin() || ! lmhg_site_core_should_suppress_indexing() ) {
+		return $headers;
+	}
+
+	$headers['X-Robots-Tag'] = LMHG_SITE_CORE_DEVELOPMENT_ROBOTS;
+	return $headers;
 }
 
 /**

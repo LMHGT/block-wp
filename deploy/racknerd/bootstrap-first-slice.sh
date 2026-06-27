@@ -24,7 +24,9 @@ wp() {
   compose run --rm cli "$@" --allow-root
 }
 
-compose up -d db wordpress
+compose up -d db
+# Recreate WordPress so bind mounts point at the current deployed repo tree.
+compose up -d --force-recreate --no-deps wordpress
 
 for _ in $(seq 1 60); do
   if wp core version >/dev/null 2>&1; then

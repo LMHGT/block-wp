@@ -1,6 +1,6 @@
 # First Slice Export Bundle Manifest
 
-Date: 2026-06-27T21:01:06.724Z
+Date: 2026-06-27T21:09:02.291Z
 
 This manifest defines the exportable source package for the first editable
 Gutenberg migration slice. It is not a database dump and does not contain
@@ -34,11 +34,11 @@ wp lmhg import-block-manifest data/lmhg/block-migration/first-slice-block-manife
 | data/lmhg/staging-snapshot/assets.json | 99094 | 50cdddcb3265 |
 | data/lmhg/staging-snapshot/routes.json | 223417 | 1c11650ebeca |
 | data/lmhg/staging-snapshot/summary.json | 672 | ae874a447da6 |
-| deploy/racknerd/bootstrap-first-slice.sh | 1536 | c7e55ac76975 |
+| deploy/racknerd/bootstrap-first-slice.sh | 1654 | 4af88f7d3dc5 |
 | deploy/racknerd/compose.first-slice.yml | 2035 | f10105341b8a |
 | docs/block-migration-slice-report.md | 2424 | b3be84f66bca |
 | docs/cloud-verification-workflow.md | 2362 | 7fd4675df2ca |
-| docs/racknerd-first-slice-runtime.md | 2084 | ed416748f8e5 |
+| docs/racknerd-first-slice-runtime.md | 2217 | 3f1fe4ec2274 |
 | docs/route-parity-matrix.md | 9197 | 8931d6358f8f |
 | docs/staging-snapshot-report.md | 1802 | cc765bc28147 |
 | package-lock.json | 274333 | f1b97ddd9262 |
@@ -52,7 +52,7 @@ wp lmhg import-block-manifest data/lmhg/block-migration/first-slice-block-manife
 | wp-content/plugins/lmhg-site-core/includes/importer.php | 11637 | 836efb57f044 |
 | wp-content/plugins/lmhg-site-core/includes/redirects.php | 3642 | 9df7fe8da586 |
 | wp-content/plugins/lmhg-site-core/includes/rendering.php | 18716 | 98039970206a |
-| wp-content/plugins/lmhg-site-core/includes/seo.php | 12092 | 073fa0384a8e |
+| wp-content/plugins/lmhg-site-core/includes/seo.php | 12621 | 336cb33c2005 |
 | wp-content/plugins/lmhg-site-core/includes/taxonomies.php | 3707 | 37fae4f59d16 |
 | wp-content/plugins/lmhg-site-core/lmhg-site-core.php | 2076 | 9aed806e2974 |
 | wp-content/themes/lmhg-block-theme/assets/css/blocks/navigation.css | 293 | 9d7e181b1d2b |
