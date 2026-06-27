@@ -347,9 +347,11 @@ Do not start this phase until Phases 1 through 7 pass.
 Acceptance gate: a cutover recommendation must name what remains better in Astro,
 what is proven in WordPress, what editor workflow changes, and how rollback works.
 
-## First Implementation Slice
+## Historical First Implementation Slice
 
-The next worker should do only this slice:
+This was the initial bounded slice used to establish the repo. It is now
+complete and preserved here as provenance rather than current next-step
+direction:
 
 1. Commit the copied handoff and this plan.
 2. Create `docs/source-provenance.md`.
