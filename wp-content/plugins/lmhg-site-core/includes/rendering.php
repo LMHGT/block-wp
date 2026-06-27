@@ -24,6 +24,10 @@ function lmhg_site_core_render_imported_content( string $content ): string {
 		return $content;
 	}
 
+	if ( function_exists( 'lmhg_site_core_has_editable_block_content' ) && lmhg_site_core_has_editable_block_content( $post_id ) ) {
+		return $content;
+	}
+
 	$route = lmhg_site_core_route_manifest_entry( $post_id );
 	if ( empty( $route ) ) {
 		return $content;
@@ -57,6 +61,10 @@ function lmhg_site_core_mark_post_title_block( string $block_content, array $blo
 	$post_id = lmhg_site_core_imported_post_id();
 	if ( 0 === $post_id ) {
 		return $block_content;
+	}
+
+	if ( function_exists( 'lmhg_site_core_has_editable_block_content' ) && lmhg_site_core_has_editable_block_content( $post_id ) ) {
+		return '';
 	}
 
 	$source_url = trim( (string) get_post_meta( $post_id, '_lmhg_source_url', true ) );

@@ -282,6 +282,9 @@ function lmhg_site_core_json_meta_keys(): array {
 		'_lmhg_faq_items',
 		'_lmhg_source_content',
 		'_lmhg_route_manifest_entry',
+		'_lmhg_editable_blocks_manifest_entry',
+		'_lmhg_editable_blocks',
+		'_lmhg_editable_media_assets',
 	);
 }
 

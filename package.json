@@ -15,6 +15,8 @@
     "inventory:astro": "node tools/export-astro-inventory.mjs",
     "crawl:staging": "node tools/crawl-staging-snapshot.mjs",
     "verify:staging-snapshot": "node tools/verify-staging-snapshot.mjs",
+    "generate:block-slice": "node tools/generate-block-migration-slice.mjs",
+    "verify:block-slice": "node tools/verify-block-migration-slice.mjs",
     "report:wp-vs-staging": "node tools/verify-wp-vs-staging.mjs --report-only",
     "verify:wp-vs-staging": "node tools/verify-wp-vs-staging.mjs",
     "setup:browsers": "playwright install chromium",
@@ -24,6 +26,7 @@
     "wp-env:cli": "wp-env run cli wp",
     "wp-env:seed": "node tools/seed-wp-env.mjs",
     "wp-env:import:lmhg": "node tools/seed-lmhg-wp.mjs",
+    "cloud:import:block-slice": "wp lmhg import-manifest data/lmhg/source-route-manifest.json && wp lmhg import-block-manifest data/lmhg/block-migration/first-slice-block-manifest.json data/lmhg/block-migration/first-slice-media-manifest.json",
     "verify:lmhg-static": "node tools/verify-lmhg-static.mjs",
     "verify:lmhg-routes": "node tools/verify-lmhg-routes.mjs",
     "verify:lmhg-taxonomies": "node tools/verify-lmhg-taxonomies.mjs",
@@ -39,7 +42,7 @@
     "test:screenshots": "playwright test --config=tests/playwright.config.mjs",
     "test:lighthouse": "node tools/run-lighthouse.mjs",
     "verify:site": "npm run test:screenshots && npm run test:lighthouse",
-    "verify": "npm run check:static && npm run check:prereqs && npm run verify:staging-snapshot"
+    "verify": "npm run check:static && npm run check:prereqs && npm run verify:staging-snapshot && npm run verify:block-slice"
   },
   "devDependencies": {
     "@playwright/test": "1.61.1",

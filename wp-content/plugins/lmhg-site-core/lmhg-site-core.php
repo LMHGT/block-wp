@@ -19,6 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 require_once __DIR__ . '/includes/importer.php';
+require_once __DIR__ . '/includes/editable-blocks.php';
 require_once __DIR__ . '/includes/redirects.php';
 require_once __DIR__ . '/includes/seo.php';
 require_once __DIR__ . '/includes/rendering.php';
