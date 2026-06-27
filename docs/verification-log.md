@@ -162,7 +162,8 @@ LMHG head verification:
   "checkedRoutes": 51,
   "checkedSeoTitles": 22,
   "checkedMetaDescriptions": 22,
-  "checkedSchemaTypes": 50
+  "checkedSchemaTypes": 50,
+  "checkedFaqSchemaTypes": 1
 }
 LMHG head verification passed.
 
@@ -173,7 +174,8 @@ LMHG marker verification:
   "checkedSummaryMarkers": 50,
   "checkedBreadcrumbs": 50,
   "checkedRelatedSections": 49,
-  "checkedFaqReadiness": 42
+  "checkedFaqSections": 1,
+  "checkedFaqReadiness": 41
 }
 LMHG marker verification passed.
 ```
@@ -181,10 +183,11 @@ LMHG marker verification passed.
 Current scope: this proves repo manifest shape, imported WordPress route/meta
 state, plugin-owned taxonomy registration and term assignment, front-end
 redirect responses for effective legacy redirects, canonical paths, populated
-source SEO titles/descriptions, JSON-LD schema types, rendered graph
-breadcrumbs, related links, and Workbench-style marker presence. FAQ answer
-parity remains incomplete; current FAQ proof is a hidden readiness marker that
-prevents workbook prompts from being published as visible page copy.
+source SEO titles/descriptions, JSON-LD schema types, one rendered FAQ section
+with FAQPage schema, rendered graph breadcrumbs, related links, and
+Workbench-style marker presence. FAQ answer parity remains incomplete for pages
+whose source records still contain workbook prompts; those pages receive hidden
+readiness markers so prompts are not published as visible page copy.
 
 Representative rendered head output:
 
@@ -203,6 +206,17 @@ Representative rendered marker output:
 <nav data-lmhg-edit-field="page:/individual-counseling/:breadcrumbs">...</nav>
 <section data-lmhg-edit-field="page:/individual-counseling/:related-pages">...</section>
 <div hidden data-lmhg-readiness-warning="faq-answer-missing" data-lmhg-faq-count="3" data-lmhg-edit-field="page:/individual-counseling/:faq-readiness"></div>
+```
+
+Representative rendered FAQ output:
+
+```html
+<section class="lmhg-faq-section" data-lmhg-edit-field="page:/case-management/:faq">
+  <details class="lmhg-faq-item" data-lmhg-faq-question="0">
+    <summary data-lmhg-edit-field="page:/case-management/:faq[0].question">Is case management the same as therapy?</summary>
+    <p data-lmhg-edit-field="page:/case-management/:faq[0].answer">No. Therapy focuses on clinical treatment goals...</p>
+  </details>
+</section>
 ```
 
 ### Screenshots And Lighthouse

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27T17:11:31.828Z",
+  "generatedAt": "2026-06-27T17:37:27.616Z",
   "sourceRoot": "/Users/tyler-lcsw/projects/lmhg-astro-integrate",
   "sourceBranch": "codex/homepage-alignment-polish",
   "sourceHead": "63d7ed9e58eb34f2fd730561ca0e0514a32ebcb0",
@@ -91,6 +91,7 @@
       "faqItems": [
         {
           "question": "[What should someone know before contacting LMHG?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -99,6 +100,7 @@
         },
         {
           "question": "[How does someone choose the right service?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -107,6 +109,7 @@
         },
         {
           "question": "[What happens after reaching out?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -213,6 +216,7 @@
       "faqItems": [
         {
           "question": "[When should a teen consider counseling?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -221,6 +225,7 @@
         },
         {
           "question": "[How are parents involved?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -229,6 +234,7 @@
         },
         {
           "question": "[Can counseling help with school stress, mood, or family conflict?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -303,6 +309,7 @@
       "faqItems": [
         {
           "question": "[...]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -311,6 +318,7 @@
         },
         {
           "question": "[...]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -319,6 +327,7 @@
         },
         {
           "question": "[...]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -411,6 +420,7 @@
       "faqItems": [
         {
           "question": "[Can therapy help with anxiety and depression together?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -419,6 +429,7 @@
         },
         {
           "question": "[What if I am not sure whether it is anxiety, depression, or stress?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -427,6 +438,7 @@
         },
         {
           "question": "[How do I start?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -513,6 +525,7 @@
       "faqItems": [
         {
           "question": "[Are articles a substitute for therapy?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -521,6 +534,7 @@
         },
         {
           "question": "[How should readers use these articles?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -529,6 +543,7 @@
         },
         {
           "question": "[How do I contact LMHG after reading?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -905,6 +920,7 @@
       "faqItems": [
         {
           "question": "[What is attachment therapy in plain language?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -913,6 +929,7 @@
         },
         {
           "question": "[Who might attachment-focused support help?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -921,6 +938,7 @@
         },
         {
           "question": "[How does this relate to family therapy?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -1007,6 +1025,7 @@
       "faqItems": [
         {
           "question": "[Does LMHG serve Bullitt County?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -1015,6 +1034,7 @@
         },
         {
           "question": "[Can Bullitt County clients use online or office-based care?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -1023,6 +1043,7 @@
         },
         {
           "question": "[How do I ask about availability?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -1109,6 +1130,7 @@
       "faqItems": [
         {
           "question": "[How do I apply?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -1117,6 +1139,7 @@
         },
         {
           "question": "[What roles does LMHG hire for?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -1125,6 +1148,7 @@
         },
         {
           "question": "[Can I ask about openings before applying?]",
+          "answer": "[...]`\n\n---\n\n# FAQ Hub Pages",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -1217,6 +1241,7 @@
       "faqItems": [
         {
           "question": "Is case management the same as therapy?",
+          "answer": "No. Therapy focuses on clinical treatment goals, while case management focuses on practical coordination, resource connection, referrals, appointments, and follow-through. They may work together when both kinds of support are useful.",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -1225,6 +1250,7 @@
         },
         {
           "question": "Can case management help with telehealth or office-based care?",
+          "answer": "Yes. Case management can help clarify whether care should start through telehealth, the Louisville office, community-based support, or another service path depending on the client's needs and service fit.",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -1233,6 +1259,7 @@
         },
         {
           "question": "Does case management mean LMHG has offices in every county?",
+          "answer": "No. Louisville Mental Health Group has one in-person office in Louisville, KY. We also provide telehealth site wide and may offer community-based support when the service, location, and client needs fit.`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -1316,6 +1343,7 @@
       "faqItems": [
         {
           "question": "[What kinds of child behavior concerns can therapy help with?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -1324,6 +1352,7 @@
         },
         {
           "question": "[Do parents participate?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -1332,6 +1361,7 @@
         },
         {
           "question": "[Can this support connect with school concerns?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -1406,6 +1436,7 @@
       "faqItems": [
         {
           "question": "[How do I know if my child needs counseling?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -1414,6 +1445,7 @@
         },
         {
           "question": "[Do parents participate in child counseling?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -1422,6 +1454,7 @@
         },
         {
           "question": "[Do you support teens as well as younger children?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -1505,6 +1538,7 @@
       "faqItems": [
         {
           "question": "[Who is co-parenting support for?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -1513,6 +1547,7 @@
         },
         {
           "question": "[Can co-parenting support help when communication is tense?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -1521,6 +1556,7 @@
         },
         {
           "question": "[How is co-parenting support different from reunification support?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -1595,6 +1631,7 @@
       "faqItems": [
         {
           "question": "[What are community-based services?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -1603,6 +1640,7 @@
         },
         {
           "question": "[How are community-based services different from office-based therapy?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -1611,6 +1649,7 @@
         },
         {
           "question": "[Can community-based services help with school, home, or community needs?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -1694,6 +1733,7 @@
       "faqItems": [
         {
           "question": "[What is community support?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -1702,6 +1742,7 @@
         },
         {
           "question": "[Who can benefit from community support?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -1710,6 +1751,7 @@
         },
         {
           "question": "[How does community support connect with therapy or case management?]",
+          "answer": "[...]`\n\n---\n\n# Specialty Page",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -1873,6 +1915,7 @@
       "faqItems": [
         {
           "question": "[How quickly will someone hear back?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -1881,6 +1924,7 @@
         },
         {
           "question": "[Should I call or use the online form?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -1889,6 +1933,7 @@
         },
         {
           "question": "[What information should I have ready?]",
+          "answer": "[...]`\n\n---\n\n# Core Service Category Pages",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -1963,6 +2008,7 @@
       "faqItems": [
         {
           "question": "[Can therapy help if conflict is frequent or intense?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -1971,6 +2017,7 @@
         },
         {
           "question": "[What if we argue about the same things repeatedly?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -1979,6 +2026,7 @@
         },
         {
           "question": "[Do both partners need to attend?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -2044,6 +2092,7 @@
       "faqItems": [
         {
           "question": "[When should couples consider counseling?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -2052,6 +2101,7 @@
         },
         {
           "question": "[Can counseling help if conflict has become frequent?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -2060,6 +2110,7 @@
         },
         {
           "question": "[Do both partners need to be ready?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -2125,6 +2176,7 @@
       "faqItems": [
         {
           "question": "[Are court-ordered services the same as general family therapy?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -2133,6 +2185,7 @@
         },
         {
           "question": "[Can LMHG help with reunification or co-parenting concerns?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -2141,6 +2194,7 @@
         },
         {
           "question": "[What should I bring or know before reaching out?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -2227,6 +2281,7 @@
       "faqItems": [
         {
           "question": "[What is EMDR therapy?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -2235,6 +2290,7 @@
         },
         {
           "question": "[Who might EMDR help?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -2243,6 +2299,7 @@
         },
         {
           "question": "[How do I ask whether EMDR is right for me?]",
+          "answer": "[...]`\n\n---\n\n# Location And Care Setting Pages",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -2326,6 +2383,7 @@
       "faqItems": [
         {
           "question": "[Is reunification support only for court-ordered situations?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -2334,6 +2392,7 @@
         },
         {
           "question": "[What is the goal of family reunification support?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -2342,6 +2401,7 @@
         },
         {
           "question": "[How do families start this process with LMHG?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -2407,6 +2467,7 @@
       "faqItems": [
         {
           "question": "[When should a family consider therapy?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -2415,6 +2476,7 @@
         },
         {
           "question": "[Does everyone in the family need to attend?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -2423,6 +2485,7 @@
         },
         {
           "question": "[Can family therapy help with communication or conflict?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -2777,6 +2840,7 @@
       "faqItems": [
         {
           "question": "[Is group therapy right for me?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -2785,6 +2849,7 @@
         },
         {
           "question": "[Is group therapy a replacement for individual counseling?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -2793,6 +2858,7 @@
         },
         {
           "question": "[How do I find out what groups are currently available?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -2858,6 +2924,7 @@
       "faqItems": [
         {
           "question": "[Who is individual counseling for?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -2866,6 +2933,7 @@
         },
         {
           "question": "[Can individual counseling help with anxiety, depression, or stress?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -2874,6 +2942,7 @@
         },
         {
           "question": "[How do I start individual counseling in Louisville?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -2960,6 +3029,7 @@
       "faqItems": [
         {
           "question": "[What insurance does LMHG accept?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -2968,6 +3038,7 @@
         },
         {
           "question": "[Can LMHG confirm my coverage?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -2976,6 +3047,7 @@
         },
         {
           "question": "[Is private pay available?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -3062,6 +3134,7 @@
       "faqItems": [
         {
           "question": "[Does LMHG serve Jefferson County?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -3070,6 +3143,7 @@
         },
         {
           "question": "[What kinds of services are available for Jefferson County clients?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -3078,6 +3152,7 @@
         },
         {
           "question": "[How do I contact LMHG from Jefferson County?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -3164,6 +3239,7 @@
       "faqItems": [
         {
           "question": "[Where is LMHG located?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -3172,6 +3248,7 @@
         },
         {
           "question": "[Does LMHG offer therapy outside the office?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -3180,6 +3257,7 @@
         },
         {
           "question": "[Which counties or areas does LMHG serve?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -3266,6 +3344,7 @@
       "faqItems": [
         {
           "question": "[What does community-based support mean?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -3274,6 +3353,7 @@
         },
         {
           "question": "[Who is community support for?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -3282,6 +3362,7 @@
         },
         {
           "question": "[How do I ask whether this setting is available?]",
+          "answer": "[...]`\n\n---\n\n# Service Area Pages",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -3359,6 +3440,7 @@
       "faqItems": [
         {
           "question": "[When is in-home care considered?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -3367,6 +3449,7 @@
         },
         {
           "question": "[Is in-home care available for every service?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -3375,6 +3458,7 @@
         },
         {
           "question": "[How do I ask whether in-home care is available?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -3461,6 +3545,7 @@
       "faqItems": [
         {
           "question": "[Where is the office?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -3469,6 +3554,7 @@
         },
         {
           "question": "[Who is in-person therapy best for?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -3477,6 +3563,7 @@
         },
         {
           "question": "[Can I switch between in-person and online care?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -3563,6 +3650,7 @@
       "faqItems": [
         {
           "question": "[Is online therapy available in Kentucky?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -3571,6 +3659,7 @@
         },
         {
           "question": "[Who is online therapy a good fit for?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -3579,6 +3668,7 @@
         },
         {
           "question": "[What do I need for online therapy?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -3665,6 +3755,7 @@
       "faqItems": [
         {
           "question": "[When is school-based support appropriate?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -3673,6 +3764,7 @@
         },
         {
           "question": "[Does LMHG coordinate with schools?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -3681,6 +3773,7 @@
         },
         {
           "question": "[How do parents ask about school-related support?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -3767,6 +3860,7 @@
       "faqItems": [
         {
           "question": "[Does LMHG serve Louisville?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -3775,6 +3869,7 @@
         },
         {
           "question": "[What services are available in Louisville?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -3783,6 +3878,7 @@
         },
         {
           "question": "[Can Louisville clients use online or office-based care?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -3869,6 +3965,7 @@
       "faqItems": [
         {
           "question": "[How do I choose a therapist?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -3877,6 +3974,7 @@
         },
         {
           "question": "[Can the office help match me with someone?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -3885,6 +3983,7 @@
         },
         {
           "question": "[Are all providers available for new clients?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -3971,6 +4070,7 @@
       "faqItems": [
         {
           "question": "[Does LMHG serve Oldham County?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -3979,6 +4079,7 @@
         },
         {
           "question": "[What care settings may be available?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -3987,6 +4088,7 @@
         },
         {
           "question": "[How do I ask about service availability?]",
+          "answer": "[...]`\n\n---\n\n# Trust, Information, And Support Pages",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -4070,6 +4172,7 @@
       "faqItems": [
         {
           "question": "[What kinds of parenting concerns can support help with?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -4078,6 +4181,7 @@
         },
         {
           "question": "[Is parenting support therapy for the parent, the child, or both?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -4086,6 +4190,7 @@
         },
         {
           "question": "[Can this help when home routines feel difficult?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -4169,6 +4274,7 @@
       "faqItems": [
         {
           "question": "[What is play therapy?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -4177,6 +4283,7 @@
         },
         {
           "question": "[Is play therapy just playing?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -4185,6 +4292,7 @@
         },
         {
           "question": "[Are parents or caregivers involved?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -4336,6 +4444,7 @@
       "faqItems": [
         {
           "question": "[What relationship concerns can counseling help with?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -4344,6 +4453,7 @@
         },
         {
           "question": "[Is this only for couples?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -4352,6 +4462,7 @@
         },
         {
           "question": "[What if communication has already broken down?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -4438,6 +4549,7 @@
       "faqItems": [
         {
           "question": "[Where can I read LMHG reviews?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -4446,6 +4558,7 @@
         },
         {
           "question": "[Can reviews tell me whether therapy will work for me?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -4454,6 +4567,7 @@
         },
         {
           "question": "[How should I use reviews when choosing care?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -4576,6 +4690,7 @@
       "faqItems": [
         {
           "question": "[How do I know which service to choose?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -4584,6 +4699,7 @@
         },
         {
           "question": "[Can the office help me decide?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -4592,6 +4708,7 @@
         },
         {
           "question": "[Are these services available in Louisville?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -4687,6 +4804,7 @@
       "faqItems": [
         {
           "question": "[What counts as a specialty at LMHG?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -4695,6 +4813,7 @@
         },
         {
           "question": "[Should I start with a specialty page or a service page?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -4703,6 +4822,7 @@
         },
         {
           "question": "[Can I ask the office which page fits my situation?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -4872,6 +4992,7 @@
       "faqItems": [
         {
           "question": "[When is therapy in the home appropriate?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -4880,6 +5001,7 @@
         },
         {
           "question": "[How is home-based therapy different from office therapy?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -4888,6 +5010,7 @@
         },
         {
           "question": "[Is home-based therapy available everywhere?]",
+          "answer": "[...]`\n\n---",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,
@@ -4944,6 +5067,7 @@
       "faqItems": [
         {
           "question": "[What is trauma therapy?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 1,
@@ -4952,6 +5076,7 @@
         },
         {
           "question": "[Is trauma therapy the same as EMDR?]",
+          "answer": "[...]",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 2,
@@ -4960,6 +5085,7 @@
         },
         {
           "question": "[Do I have to talk about everything that happened right away?]",
+          "answer": "[...]`\n\n---\n\n# Specific Service Pages",
           "schemaEligible": true,
           "optional": false,
           "sortOrder": 3,

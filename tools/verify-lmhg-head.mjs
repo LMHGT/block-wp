@@ -53,6 +53,17 @@ function jsonLdTypes(html) {
   return types;
 }
 
+function cleanFaqText(value) {
+  const text = String(value || "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s*---\s*$/g, "")
+    .replace(/`+\s*$/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!text || text === "[...]" || text.includes("[...]") || /^\[[^\]]+\]$/.test(text)) return "";
+  return text;
+}
+
 const routes = manifest.routes
   .filter((route) => route.migrationStatus !== "out-of-scope")
   .filter((route) => normalizePath(route.url) !== "/404.html")
@@ -61,6 +72,7 @@ const routes = manifest.routes
 let checkedMetaDescriptions = 0;
 let checkedSeoTitles = 0;
 let checkedSchemaTypes = 0;
+let checkedFaqSchemaTypes = 0;
 
 for (const route of routes) {
   const sourcePath = normalizePath(route.url);
@@ -97,11 +109,21 @@ for (const route of routes) {
   }
 
   const schemaType = seo.schemaType || "";
+  const types = jsonLdTypes(html);
   if (schemaType) {
     checkedSchemaTypes += 1;
-    const types = jsonLdTypes(html);
     if (!types.includes(schemaType)) {
       fail(`${sourcePath} JSON-LD expected type ${schemaType}, got ${types.join(", ") || "(missing)"}`);
+    }
+  }
+
+  const publishableFaqItems = Array.isArray(route.faqItems)
+    ? route.faqItems.filter((item) => cleanFaqText(item?.question) && cleanFaqText(item?.answer))
+    : [];
+  if (publishableFaqItems.length > 0) {
+    checkedFaqSchemaTypes += 1;
+    if (!types.includes("FAQPage")) {
+      fail(`${sourcePath} JSON-LD expected FAQPage for ${publishableFaqItems.length} rendered FAQs`);
     }
   }
 }
@@ -111,7 +133,8 @@ console.log(JSON.stringify({
   checkedRoutes: routes.length,
   checkedSeoTitles,
   checkedMetaDescriptions,
-  checkedSchemaTypes
+  checkedSchemaTypes,
+  checkedFaqSchemaTypes
 }, null, 2));
 
 if (failures.length > 0) {

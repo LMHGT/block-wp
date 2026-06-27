@@ -135,10 +135,10 @@ Future rendered editable fields must preserve LMHG's launch-editing model:
 - Hidden SEO/AIO data must stay out of visible block copy.
 
 The current plugin renders stable `data-lmhg-edit-field` markers for imported
-page H1s, source summaries, graph breadcrumbs, related-page sections, and FAQ
-readiness. FAQ workbook prompts are not published as visible copy; pages with
-FAQ source records but no migrated answers receive hidden readiness markers
-instead.
+page H1s, source summaries, graph breadcrumbs, related-page sections, and
+publishable FAQ question-answer pairs. FAQ workbook prompts are not published as
+visible copy; pages with FAQ source records but no migrated answers receive
+hidden readiness markers instead.
 
 ## Seed And Import Commands
 

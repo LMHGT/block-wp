@@ -260,8 +260,27 @@ function lmhg_site_core_update_route_meta( int $page_id, array $route, string $u
 	);
 
 	foreach ( $meta as $key => $value ) {
-		update_post_meta( $page_id, $key, $value );
+		if ( in_array( $key, lmhg_site_core_json_meta_keys(), true ) ) {
+			update_post_meta( $page_id, $key, wp_slash( $value ) );
+		} else {
+			update_post_meta( $page_id, $key, $value );
+		}
 	}
+}
+
+/**
+ * Lists meta keys whose values are stored as JSON strings.
+ *
+ * @return string[]
+ */
+function lmhg_site_core_json_meta_keys(): array {
+	return array(
+		'_lmhg_secondary_keywords',
+		'_lmhg_optimization_terms',
+		'_lmhg_related_pages',
+		'_lmhg_faq_items',
+		'_lmhg_route_manifest_entry',
+	);
 }
 
 /**

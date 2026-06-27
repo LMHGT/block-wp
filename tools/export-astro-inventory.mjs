@@ -168,6 +168,7 @@ function main() {
     if (!faqByUrl.has(key)) faqByUrl.set(key, []);
     faqByUrl.get(key).push({
       question: entry.question,
+      answer: entry.answer || "",
       schemaEligible: Boolean(entry.schemaEligible),
       optional: Boolean(entry.optional),
       sortOrder: entry.sortOrder,

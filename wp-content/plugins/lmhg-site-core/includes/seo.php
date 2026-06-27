@@ -138,7 +138,7 @@ function lmhg_site_core_output_json_ld(): void {
 		$headline    = wp_strip_all_tags( get_the_title( $post_id ) );
 		$canonical   = lmhg_site_core_imported_canonical_url( $post_id );
 
-		$graph = array(
+		$page_graph = array(
 			'@context'     => 'https://schema.org',
 			'@type'        => $schema_type,
 			'name'         => $headline,
@@ -151,6 +151,32 @@ function lmhg_site_core_output_json_ld(): void {
 			),
 			'dateModified' => get_the_modified_date( DATE_W3C, $post_id ),
 		);
+
+		$faq_items = lmhg_site_core_publishable_faq_items( lmhg_site_core_route_manifest_entry( $post_id ) );
+		if ( empty( $faq_items ) ) {
+			$graph = $page_graph;
+		} else {
+			$graph = array(
+				'@context' => 'https://schema.org',
+				'@graph'   => array(
+					$page_graph,
+					array(
+						'@type'      => 'FAQPage',
+						'mainEntity' => array_map(
+							static fn( array $item ): array => array(
+								'@type'          => 'Question',
+								'name'           => $item['question'],
+								'acceptedAnswer' => array(
+									'@type' => 'Answer',
+									'text'  => $item['answer'],
+								),
+							),
+							$faq_items
+						),
+					),
+				),
+			);
+		}
 	}
 
 	printf(
@@ -176,6 +202,18 @@ function lmhg_site_core_imported_post_id(): int {
 
 	$source_url = trim( (string) get_post_meta( $post_id, '_lmhg_source_url', true ) );
 	return '' !== $source_url ? $post_id : 0;
+}
+
+/**
+ * Gets the stored route manifest entry for an imported page.
+ *
+ * @param int $post_id Post ID.
+ * @return array<string,mixed>
+ */
+function lmhg_site_core_route_manifest_entry( int $post_id ): array {
+	$json = (string) get_post_meta( $post_id, '_lmhg_route_manifest_entry', true );
+	$route = json_decode( $json, true );
+	return is_array( $route ) ? $route : array();
 }
 
 /**
@@ -233,4 +271,56 @@ function lmhg_site_core_fallback_meta_description( int $post_id ): string {
 	}
 
 	return wp_html_excerpt( $description, 155, '...' );
+}
+
+/**
+ * Returns FAQ items that have publishable question and answer text.
+ *
+ * @param array<string,mixed> $route Route entry.
+ * @return array<int,array{question:string,answer:string}>
+ */
+function lmhg_site_core_publishable_faq_items( array $route ): array {
+	$items = isset( $route['faqItems'] ) && is_array( $route['faqItems'] )
+		? $route['faqItems']
+		: array();
+	$publishable = array();
+
+	foreach ( $items as $item ) {
+		if ( ! is_array( $item ) ) {
+			continue;
+		}
+
+		$question = lmhg_site_core_clean_faq_text( (string) ( $item['question'] ?? '' ) );
+		$answer = lmhg_site_core_clean_faq_text( (string) ( $item['answer'] ?? '' ) );
+
+		if ( '' === $question || '' === $answer ) {
+			continue;
+		}
+
+		$publishable[] = array(
+			'question' => $question,
+			'answer'   => $answer,
+		);
+	}
+
+	return $publishable;
+}
+
+/**
+ * Cleans source FAQ text and rejects workbook placeholders.
+ *
+ * @param string $value Source text.
+ * @return string
+ */
+function lmhg_site_core_clean_faq_text( string $value ): string {
+	$value = trim( wp_strip_all_tags( $value ) );
+	$value = preg_replace( '/\s*---\s*$/', '', $value ) ?? $value;
+	$value = preg_replace( '/`+\s*$/', '', $value ) ?? $value;
+	$value = trim( $value );
+
+	if ( '' === $value || '[...]' === $value || str_contains( $value, '[...]' ) || preg_match( '/^\[[^\]]+\]$/', $value ) ) {
+		return '';
+	}
+
+	return $value;
 }

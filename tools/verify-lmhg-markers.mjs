@@ -40,6 +40,17 @@ function visibleText(html) {
     .trim();
 }
 
+function cleanFaqText(value) {
+  let text = String(value || "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s*---\s*$/g, "")
+    .replace(/`+\s*$/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!text || text === "[...]" || text.includes("[...]") || /^\[[^\]]+\]$/.test(text)) return "";
+  return text;
+}
+
 const routes = manifest.routes
   .filter((route) => route.migrationStatus !== "out-of-scope")
   .filter((route) => normalizePath(route.url) !== "/404.html")
@@ -49,6 +60,7 @@ let checkedRoutes = 0;
 let checkedSummaryMarkers = 0;
 let checkedBreadcrumbs = 0;
 let checkedRelatedSections = 0;
+let checkedFaqSections = 0;
 let checkedFaqReadiness = 0;
 
 for (const route of routes) {
@@ -103,13 +115,26 @@ for (const route of routes) {
   }
 
   const faqItems = Array.isArray(route.faqItems) ? route.faqItems : [];
-  if (faqItems.length > 0) {
+  const publishableFaqItems = faqItems.filter((item) => cleanFaqText(item?.question) && cleanFaqText(item?.answer));
+  if (publishableFaqItems.length > 0) {
+    checkedFaqSections += 1;
+    if (!html.includes(`data-lmhg-edit-field="${marker(sourceUrl, "faq")}"`)) {
+      fail(`${sourceUrl} missing FAQ section marker`);
+    }
+    const renderedFaqCount = countMatches(html, /data-lmhg-faq-question=/g);
+    if (renderedFaqCount !== publishableFaqItems.length) {
+      fail(`${sourceUrl} expected ${publishableFaqItems.length} rendered FAQs, found ${renderedFaqCount}`);
+    }
+  }
+
+  const incompleteFaqCount = faqItems.length - publishableFaqItems.length;
+  if (incompleteFaqCount > 0) {
     checkedFaqReadiness += 1;
     if (!html.includes(`data-lmhg-edit-field="${marker(sourceUrl, "faq-readiness")}"`)) {
       fail(`${sourceUrl} missing FAQ readiness marker`);
     }
-    if (!new RegExp(`data-lmhg-faq-count="${escapeRegExp(String(faqItems.length))}"`).test(html)) {
-      fail(`${sourceUrl} missing FAQ readiness count ${faqItems.length}`);
+    if (!new RegExp(`data-lmhg-faq-count="${escapeRegExp(String(incompleteFaqCount))}"`).test(html)) {
+      fail(`${sourceUrl} missing FAQ readiness count ${incompleteFaqCount}`);
     }
   }
 }
@@ -120,6 +145,7 @@ console.log(JSON.stringify({
   checkedSummaryMarkers,
   checkedBreadcrumbs,
   checkedRelatedSections,
+  checkedFaqSections,
   checkedFaqReadiness
 }, null, 2));
 

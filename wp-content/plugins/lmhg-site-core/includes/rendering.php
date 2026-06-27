@@ -34,6 +34,7 @@ function lmhg_site_core_render_imported_content( string $content ): string {
 		lmhg_site_core_render_summary_section( $post_id, $source_url ),
 		lmhg_site_core_render_breadcrumb_section( $post_id, $route, $source_url ),
 		lmhg_site_core_render_related_section( $route, $source_url ),
+		lmhg_site_core_render_faq_section( $route, $source_url ),
 		lmhg_site_core_render_faq_readiness( $route, $source_url ),
 	);
 
@@ -66,18 +67,6 @@ function lmhg_site_core_mark_post_title_block( string $block_content, array $blo
 		$block_content,
 		1
 	) ?? $block_content;
-}
-
-/**
- * Gets the stored route manifest entry for an imported page.
- *
- * @param int $post_id Post ID.
- * @return array<string,mixed>
- */
-function lmhg_site_core_route_manifest_entry( int $post_id ): array {
-	$json = (string) get_post_meta( $post_id, '_lmhg_route_manifest_entry', true );
-	$route = json_decode( $json, true );
-	return is_array( $route ) ? $route : array();
 }
 
 /**
@@ -211,6 +200,38 @@ function lmhg_site_core_render_related_section( array $route, string $source_url
 }
 
 /**
+ * Renders publishable FAQ items.
+ *
+ * @param array<string,mixed> $route Route entry.
+ * @param string              $source_url Source URL.
+ * @return string
+ */
+function lmhg_site_core_render_faq_section( array $route, string $source_url ): string {
+	$faq_items = lmhg_site_core_publishable_faq_items( $route );
+	if ( empty( $faq_items ) ) {
+		return '';
+	}
+
+	$items = array();
+	foreach ( $faq_items as $index => $item ) {
+		$items[] = sprintf(
+			'<details class="lmhg-faq-item" data-lmhg-faq-question="%1$d"><summary data-lmhg-edit-field="%2$s">%3$s</summary><p data-lmhg-edit-field="%4$s">%5$s</p></details>',
+			$index,
+			esc_attr( lmhg_site_core_marker_id( $source_url, 'faq[' . $index . '].question' ) ),
+			esc_html( $item['question'] ),
+			esc_attr( lmhg_site_core_marker_id( $source_url, 'faq[' . $index . '].answer' ) ),
+			esc_html( $item['answer'] )
+		);
+	}
+
+	return sprintf(
+		'<section class="lmhg-faq-section" data-lmhg-edit-field="%1$s"><h2>Common questions</h2>%2$s</section>',
+		esc_attr( lmhg_site_core_marker_id( $source_url, 'faq' ) ),
+		implode( '', $items )
+	);
+}
+
+/**
  * Emits hidden FAQ readiness markers without publishing workbook prompts.
  *
  * @param array<string,mixed> $route Route entry.
@@ -221,9 +242,9 @@ function lmhg_site_core_render_faq_readiness( array $route, string $source_url )
 	$faq_items = isset( $route['faqItems'] ) && is_array( $route['faqItems'] )
 		? $route['faqItems']
 		: array();
-	$count = count( $faq_items );
+	$count = count( $faq_items ) - count( lmhg_site_core_publishable_faq_items( $route ) );
 
-	if ( 0 === $count ) {
+	if ( $count <= 0 ) {
 		return '';
 	}
 
