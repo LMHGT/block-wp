@@ -65,7 +65,7 @@ Before treating it as reviewer-ready, verify:
 
 ```bash
 curl -sSI http://racknerd.beagle-perch.ts.net:8091/ | grep -i 'x-robots-tag'
-curl -sS http://racknerd.beagle-perch.ts.net:8091/compliance/ | grep -i 'data-lmhg'
+curl -sS http://racknerd.beagle-perch.ts.net:8091/compliance/ | grep -i 'lmhg-migrated-block'
 ```
 
 ## Boundaries

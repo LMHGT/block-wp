@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-06-27.first-slice-export.v1",
-  "generatedAt": "2026-06-27T21:12:24.948Z",
+  "generatedAt": "2026-06-27T21:17:09.103Z",
   "purpose": "Exportable source package manifest for the first editable Gutenberg migration slice.",
   "routes": [
     "/compliance/",
@@ -74,9 +74,14 @@
       "sha256": "7fd4675df2ca2f03bbef88be641652a748d5a8560e8ea9d96dae521492594dab"
     },
     {
+      "path": "docs/hosted-first-slice-verification.md",
+      "bytes": 2786,
+      "sha256": "1aeb0e05e3789548fc940bfae5f069dfafe39ec9e40732d98d2cf7eb97d89e93"
+    },
+    {
       "path": "docs/racknerd-first-slice-runtime.md",
-      "bytes": 2217,
-      "sha256": "3f1fe4ec22742de2992089147cc463d4365214b0801248dd08e0ac20756c1f0a"
+      "bytes": 2227,
+      "sha256": "504cb520f3baa0fe74d126739ff199cb0b56300ddafc199c2d29fd36bafed4a1"
     },
     {
       "path": "docs/route-parity-matrix.md",
@@ -110,8 +115,8 @@
     },
     {
       "path": "tools/generate-export-manifest.mjs",
-      "bytes": 4160,
-      "sha256": "58914d3c7de1a85996b2e65c7a965a3c8b7dbabec944876eefbccf9c30442f8d"
+      "bytes": 4205,
+      "sha256": "57401fdd759c7cbc8af77c12e71722593009178e3751e6a147d3cd50ffa3c05b"
     },
     {
       "path": "tools/verify-block-migration-slice.mjs",
