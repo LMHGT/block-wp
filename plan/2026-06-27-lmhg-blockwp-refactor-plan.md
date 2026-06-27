@@ -33,6 +33,57 @@ route inventory parity, Core30 IA parity, static SEO/schema parity, redirect
 parity, rendered content parity, Workbench/editing parity, and staging proof must
 be shown before any cutover discussion.
 
+## Implementation Status Addendum
+
+Updated: 2026-06-27
+
+The original checklists in this plan are the implementation baseline. Current
+repo status is recorded here so future workers do not mistake the baseline
+checklist for current state.
+
+Completed and pushed to `origin/main`:
+
+- Phase 0 provenance, handoff copy, no-edit source boundary, and worker
+  checklist.
+- Phase 1 LMHG-owned WordPress scaffold, project-local WordPress skills,
+  `@wordpress/env`, Playground blueprint, Playwright, Lighthouse, and static
+  prerequisite checks.
+- Phase 2 read-only Astro inventory export into route, design, and asset
+  manifests.
+- Phase 3 idempotent WordPress import contract for 52 in-scope pages, 117
+  redirects, front-page setup, route meta, custom taxonomies, and source-owned
+  structured data fields.
+- Phase 5 site-core parity for canonical URLs, SEO titles/descriptions, robots,
+  JSON-LD schema types, FAQPage output, graph-derived BreadcrumbList output,
+  redirects, related links, unsupported city/service-area suppression, and
+  local/tailnet URL handling.
+- Phase 6 rendered-marker parity for H1, summary, breadcrumbs, related links,
+  publishable FAQ items, FAQ readiness warnings, and scaffold-copy rejection.
+- Phase 7 verification commands covering static manifests, imported routes,
+  custom taxonomies, redirects, internal links, IntakeQ/phone actions, head
+  metadata/schema, rendered markers, representative route browser checks,
+  Lighthouse, PHP lint, npm audit, and tailnet proof.
+- Phase 8 boundary artifact in `docs/staging-cutover-decision.md`.
+
+Partially complete:
+
+- Phase 4 has LMHG-owned tokens, header/footer actions, crawlable generated
+  content sections, and representative route browser checks. Full hand-polished
+  page-family template parity is not claimed.
+
+Still intentionally not complete:
+
+- Public WordPress hosting, DNS, Cloudflare, and Astro branch changes remain out
+  of scope.
+- Full hand-polished page copy parity is not claimed; current WordPress pages
+  render source summaries and graph sections rather than every Astro content
+  block.
+- Live Workbench write integration into WordPress is not built.
+- Protected legal/utility pages remain out-of-scope because the source manifest
+  marks them out-of-scope for this proof track.
+- Human review and a public staging/cutover decision are still required before
+  any production recommendation.
+
 ## Hard Boundaries
 
 - Do not edit `/Users/tyler-lcsw/projects/lmhg-astro-integrate` during this work.
