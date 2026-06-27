@@ -106,6 +106,32 @@ Use this order when data disagrees:
 4. Rank Math Pro may consume SEO/taxonomy data later, but it should not own the
    LMHG taxonomy model. `lmhg-site-core` should register custom taxonomies.
 
+## Development And Indexing Suppression Policy
+
+This remains a continued development and staging project until Tyler explicitly
+approves a live cutover.
+
+All WordPress development, tailnet review, cloud staging, and exportable staging
+builds must preserve discovery suppression by default:
+
+- Send `X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex` on
+  staging/development hosts where server control is available.
+- Render `<meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex">`
+  on staging/development hosts.
+- Keep staging `robots.txt` restrictive unless a specific verification task
+  requires a temporary exception.
+- Do not publish sitemap, `llms.txt`, IndexNow, search-console, analytics,
+  public discovery feeds, or production canonical host signals from development
+  WordPress.
+- Do not submit, ping, or advertise the WordPress staging host to search engines
+  or third-party discovery tools.
+- Keep production-ready sitemap and discovery behavior as a cutover-time switch,
+  not a default during migration.
+
+These controls should be verified by the parity scripts separately from the
+production launch configuration. The expected production behavior can change
+later if this WordPress version is approved to go live.
+
 ## Definition Of Verbatim
 
 For this migration, "verbatim" means:
@@ -131,6 +157,32 @@ For this migration, "verbatim" means:
 ## Architecture Decision
 
 Use a split WordPress architecture:
+
+### Theme Starter Recommendation
+
+D3 Lite was located in the WordPress.org theme directory, but it should not be
+the default base for this migration without a local code audit. The public
+listing describes it as a fast, lightweight multipurpose theme with block editor
+styles and compatibility with Elementor, Beaver Builder, Brizy, and the block
+editor. That is not the same as a true block theme built entirely from block
+templates and `theme.json`.
+
+For a verbatim LMHG staging port, the recommended base is the existing custom
+`lmhg-block-theme`, tightened into a minimal exportable block theme. It already
+has the correct ownership boundary in this repo, avoids inherited page-builder
+opinions, and can be shaped around exact staging markup, assets, and verification
+requirements.
+
+Use D3 Lite only if a source audit proves it has no unwanted classic-theme,
+Customizer, sidebar/widget, or page-builder assumptions that would make exact
+LMHG parity harder.
+
+Acceptable alternatives if the custom theme needs a reset:
+
+- Start from a blank custom block theme generated through the WordPress Site
+  Editor/Create Block Theme workflow.
+- Use a current default WordPress block theme only as a reference for file
+  structure and `theme.json`, not as a design source.
 
 ### Theme: Minimal LMHG Block Theme
 
