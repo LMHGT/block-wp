@@ -51,6 +51,7 @@ npm run verify:lmhg-static
 npm run verify:lmhg-routes
 npm run verify:lmhg-taxonomies
 npm run verify:lmhg-redirects
+npm run verify:lmhg-links
 npm run verify:lmhg-head
 npm run verify:lmhg-markers
 npm run verify:lmhg
@@ -61,6 +62,8 @@ npm run verify:lmhg
 `npm run wp-env:seed`. `verify:lmhg-taxonomies` checks plugin-owned custom
 taxonomy registration and term assignment. `verify:lmhg-redirects` checks the
 running WordPress frontend's redirect responses against the manifest.
+`verify:lmhg-links` checks rendered internal anchors against canonical imported
+routes and rejects redirect-only or unsupported service-area/city URLs.
 `verify:lmhg-head` checks rendered canonical paths, source SEO titles and
 descriptions, and JSON-LD schema types. `verify:lmhg-markers` checks rendered
 Workbench-style markers, graph breadcrumbs, related links, and FAQ readiness

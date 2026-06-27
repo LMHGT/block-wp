@@ -156,6 +156,17 @@ LMHG redirect verification:
 }
 LMHG redirect verification passed.
 
+LMHG link verification:
+{
+  "baseUrl": "http://localhost:8888",
+  "checkedRoutes": 51,
+  "checkedLinks": 730,
+  "redirectOnlySources": 117,
+  "unsupportedLocationSources": 26,
+  "checkedUnsupportedLocationSources": 0
+}
+LMHG link verification passed.
+
 LMHG head verification:
 {
   "baseUrl": "http://localhost:8888",
@@ -184,7 +195,8 @@ LMHG marker verification passed.
 Current scope: this proves repo manifest shape, imported WordPress route/meta
 state, plugin-owned taxonomy registration and term assignment, front-end
 redirect responses for effective legacy redirects, canonical paths, populated
-source SEO titles/descriptions, JSON-LD schema types, one rendered FAQ section
+source SEO titles/descriptions, rendered internal links that avoid redirect-only
+or unsupported service-area URLs, JSON-LD schema types, one rendered FAQ section
 with FAQPage schema, rendered graph breadcrumbs, related links, and
 Workbench-style marker presence. It also verifies source H1 values where present
 and rejects scaffold/proof-track visible copy. FAQ answer parity remains

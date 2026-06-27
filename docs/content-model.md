@@ -113,6 +113,8 @@ truth.
 - Imported slugs preserve source URL path segments.
 - Diagnostic/review routes are skipped.
 - Redirect-only URLs stay in the manifest and are not imported as pages.
+- Public navigation and generated related links must point at canonical imported
+  routes, not redirect-only sources or unsupported city/service-area pages.
 - Existing imported pages are matched by `_lmhg_source_url` before path lookup so
   path/slug rewrites do not create duplicates.
 
@@ -177,3 +179,5 @@ The Phase 3 gate passes when:
 - repeated imports update existing pages instead of duplicating them.
 - `npm run check:static` requires the importer and content model artifacts.
 - runtime verification still passes after import.
+- `npm run verify:lmhg-links` rejects stale internal links, redirect-only source
+  paths, and unsupported service-area/city links in rendered WordPress pages.
