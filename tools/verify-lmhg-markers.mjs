@@ -51,6 +51,21 @@ function cleanFaqText(value) {
   return text;
 }
 
+function decodeHtml(value) {
+  return String(value || "")
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number.parseInt(code, 10)))
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#039;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
+function firstH1Text(html) {
+  const match = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
+  return match ? decodeHtml(visibleText(match[1])) : "";
+}
+
 const routes = manifest.routes
   .filter((route) => route.migrationStatus !== "out-of-scope")
   .filter((route) => normalizePath(route.url) !== "/404.html")
@@ -58,6 +73,7 @@ const routes = manifest.routes
 
 let checkedRoutes = 0;
 let checkedSummaryMarkers = 0;
+let checkedH1Values = 0;
 let checkedBreadcrumbs = 0;
 let checkedRelatedSections = 0;
 let checkedFaqSections = 0;
@@ -76,9 +92,18 @@ for (const route of routes) {
 
   const text = visibleText(html);
   if (/Migration stub/i.test(text)) fail(`${sourceUrl} still renders migration stub copy`);
+  if (/LMHG Block WP|WordPress proof track|Source parity is still being verified|Built for controlled parity/i.test(text)) {
+    fail(`${sourceUrl} renders scaffold/proof-track copy`);
+  }
   if (/\[[^\]]+\]/.test(text)) fail(`${sourceUrl} renders bracketed workbook prompt text`);
 
   const seo = route.seo && typeof route.seo === "object" ? route.seo : {};
+  if (seo.h1) {
+    checkedH1Values += 1;
+    const h1 = firstH1Text(html);
+    if (h1 !== seo.h1) fail(`${sourceUrl} H1 expected "${seo.h1}", got "${h1 || "(missing)"}"`);
+  }
+
   const hasSummarySource = Boolean(seo.description || (Array.isArray(seo.optimizationTerms) && seo.optimizationTerms.length > 0));
   if (hasSummarySource) {
     checkedSummaryMarkers += 1;
@@ -143,6 +168,7 @@ console.log(JSON.stringify({
   baseUrl,
   checkedRoutes,
   checkedSummaryMarkers,
+  checkedH1Values,
   checkedBreadcrumbs,
   checkedRelatedSections,
   checkedFaqSections,

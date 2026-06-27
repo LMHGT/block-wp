@@ -172,6 +172,7 @@ LMHG marker verification:
   "baseUrl": "http://localhost:8888",
   "checkedRoutes": 51,
   "checkedSummaryMarkers": 50,
+  "checkedH1Values": 22,
   "checkedBreadcrumbs": 50,
   "checkedRelatedSections": 49,
   "checkedFaqSections": 1,
@@ -185,9 +186,18 @@ state, plugin-owned taxonomy registration and term assignment, front-end
 redirect responses for effective legacy redirects, canonical paths, populated
 source SEO titles/descriptions, JSON-LD schema types, one rendered FAQ section
 with FAQPage schema, rendered graph breadcrumbs, related links, and
-Workbench-style marker presence. FAQ answer parity remains incomplete for pages
-whose source records still contain workbook prompts; those pages receive hidden
-readiness markers so prompts are not published as visible page copy.
+Workbench-style marker presence. It also verifies source H1 values where present
+and rejects scaffold/proof-track visible copy. FAQ answer parity remains
+incomplete for pages whose source records still contain workbook prompts; those
+pages receive hidden readiness markers so prompts are not published as visible
+page copy.
+
+Site identity evidence:
+
+```text
+blogname: Louisville Mental Health Group
+blogdescription: Therapy, case management, and community support in Louisville, Kentucky.
+```
 
 Representative rendered head output:
 

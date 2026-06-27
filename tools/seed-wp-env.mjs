@@ -64,8 +64,8 @@ if (!$about) {
         'post_content' => '<!-- wp:heading --><h2>Built for controlled parity</h2><!-- /wp:heading --><!-- wp:paragraph --><p>This page is seeded by the local WordPress environment so screenshots and Lighthouse checks have stable content before LMHG route import begins.</p><!-- /wp:paragraph -->'
     ));
 }
-update_option('blogname', 'LMHG Block WP');
-update_option('blogdescription', 'WordPress proof track for LMHG parity work.');
+update_option('blogname', 'Louisville Mental Health Group');
+update_option('blogdescription', 'Therapy, case management, and community support in Louisville, Kentucky.');
 update_option('show_on_front', 'page');
 update_option('page_on_front', $home_id);
 flush_rewrite_rules();
