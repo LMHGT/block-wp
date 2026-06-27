@@ -39,6 +39,7 @@ services:
 
   cli:
     image: wordpress:cli-php8.3
+    entrypoint: ["wp"]
     depends_on:
       db:
         condition: service_healthy

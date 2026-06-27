@@ -1,6 +1,6 @@
 # First Slice Export Bundle Manifest
 
-Date: 2026-06-27T20:46:52.805Z
+Date: 2026-06-27T20:52:02.824Z
 
 This manifest defines the exportable source package for the first editable
 Gutenberg migration slice. It is not a database dump and does not contain
@@ -35,7 +35,7 @@ wp lmhg import-block-manifest data/lmhg/block-migration/first-slice-block-manife
 | data/lmhg/staging-snapshot/routes.json | 223417 | 1c11650ebeca |
 | data/lmhg/staging-snapshot/summary.json | 672 | ae874a447da6 |
 | deploy/racknerd/bootstrap-first-slice.sh | 1507 | 90ae3d618db5 |
-| deploy/racknerd/compose.first-slice.yml | 1922 | d58162d48bb2 |
+| deploy/racknerd/compose.first-slice.yml | 1945 | a36d050cd6b3 |
 | docs/block-migration-slice-report.md | 2424 | b3be84f66bca |
 | docs/cloud-verification-workflow.md | 2362 | 7fd4675df2ca |
 | docs/racknerd-first-slice-runtime.md | 2084 | ed416748f8e5 |
