@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-06-27.first-slice-export.v1",
-  "generatedAt": "2026-06-27T20:41:45.198Z",
+  "generatedAt": "2026-06-27T20:45:41.476Z",
   "purpose": "Exportable source package manifest for the first editable Gutenberg migration slice.",
   "routes": [
     "/compliance/",
@@ -13,6 +13,11 @@
     "wp lmhg import-block-manifest data/lmhg/block-migration/first-slice-block-manifest.json data/lmhg/block-migration/first-slice-media-manifest.json"
   ],
   "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 165,
+      "sha256": "950c1b1af69771b0b7ae0fd0496ee1a1cdecaae45735a64540cf74e587147f0f"
+    },
     {
       "path": "AGENTS.md",
       "bytes": 2166,
@@ -49,6 +54,16 @@
       "sha256": "ae874a447da6dcab2b9553d29e05a25cf3de81891b25b12b58b859f8c94c75a4"
     },
     {
+      "path": "deploy/racknerd/bootstrap-first-slice.sh",
+      "bytes": 1443,
+      "sha256": "48f5e7df776b40aaa4de3bd69ed7cc3a7233a68fe539f8e1d0841bd559fb8461"
+    },
+    {
+      "path": "deploy/racknerd/compose.first-slice.yml",
+      "bytes": 1922,
+      "sha256": "d58162d48bb29c06cab888fc3e4d9ace0611a01f7e792d23023c1db48ab91d60"
+    },
+    {
       "path": "docs/block-migration-slice-report.md",
       "bytes": 2424,
       "sha256": "b3be84f66bca383498a891ddff494603f577b09b8fbfcc16cf5b7c7041c1c936"
@@ -57,6 +72,11 @@
       "path": "docs/cloud-verification-workflow.md",
       "bytes": 2362,
       "sha256": "7fd4675df2ca2f03bbef88be641652a748d5a8560e8ea9d96dae521492594dab"
+    },
+    {
+      "path": "docs/racknerd-first-slice-runtime.md",
+      "bytes": 2084,
+      "sha256": "ed416748f8e558281ab6d0229c1da3a3d14be27aa513bfb69fabc527ef4c8589"
     },
     {
       "path": "docs/route-parity-matrix.md",
@@ -90,8 +110,8 @@
     },
     {
       "path": "tools/generate-export-manifest.mjs",
-      "bytes": 4011,
-      "sha256": "9c69102e9697cec40bf69e5966326da9b3d259d6bfcf4e87a4f26d103afb6903"
+      "bytes": 4160,
+      "sha256": "58914d3c7de1a85996b2e65c7a965a3c8b7dbabec944876eefbccf9c30442f8d"
     },
     {
       "path": "tools/verify-block-migration-slice.mjs",

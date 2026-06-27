@@ -4,6 +4,7 @@ import path from "node:path";
 const root = process.cwd();
 const requiredFiles = [
   "AGENTS.md",
+  ".gitignore",
   ".wp-env.json",
   "blueprints/local-dev/blueprint.json",
   "docs/source-provenance.md",
@@ -15,6 +16,7 @@ const requiredFiles = [
   "docs/wp-vs-staging-gap-report.md",
   "docs/block-migration-slice-report.md",
   "docs/export-bundle-manifest.md",
+  "docs/racknerd-first-slice-runtime.md",
   "plan/2026-06-27-cloudflare-staging-to-wordpress-verbatim-migration-plan.md",
   "plan/2026-06-27-cloud-run-editable-gutenberg-migration-pipeline.md",
   "data/lmhg/source-route-manifest.json",
@@ -57,6 +59,8 @@ const requiredFiles = [
   "tools/verify-lmhg-head.mjs",
   "tools/verify-lmhg-copy.mjs",
   "tools/verify-lmhg-markers.mjs",
+  "deploy/racknerd/bootstrap-first-slice.sh",
+  "deploy/racknerd/compose.first-slice.yml",
   ".codex/skills/wordpress-router/SKILL.md",
   ".codex/skills/wp-playground/SKILL.md",
   ".codex/skills/wp-block-themes/SKILL.md"

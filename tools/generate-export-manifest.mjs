@@ -14,8 +14,11 @@ const roots = [
 ];
 const explicitFiles = [
   "AGENTS.md",
+  ".gitignore",
   "package.json",
   "package-lock.json",
+  "deploy/racknerd/bootstrap-first-slice.sh",
+  "deploy/racknerd/compose.first-slice.yml",
   "data/lmhg/source-route-manifest.json",
   "data/lmhg/staging-snapshot/summary.json",
   "data/lmhg/staging-snapshot/routes.json",
@@ -24,6 +27,7 @@ const explicitFiles = [
   "data/lmhg/block-migration/first-slice-media-manifest.json",
   "docs/block-migration-slice-report.md",
   "docs/cloud-verification-workflow.md",
+  "docs/racknerd-first-slice-runtime.md",
   "docs/staging-snapshot-report.md",
   "docs/route-parity-matrix.md",
   "plan/2026-06-27-cloud-run-editable-gutenberg-migration-pipeline.md",

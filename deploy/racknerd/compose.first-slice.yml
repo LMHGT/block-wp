@@ -1,0 +1,61 @@
+services:
+  db:
+    image: mariadb:lts
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: ${LMHG_DB_NAME}
+      MARIADB_USER: ${LMHG_DB_USER}
+      MARIADB_PASSWORD: ${LMHG_DB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${LMHG_DB_ROOT_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  wordpress:
+    image: wordpress:php8.3-apache
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${LMHG_BIND_IP}:${LMHG_BIND_PORT}:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: ${LMHG_DB_NAME}
+      WORDPRESS_DB_USER: ${LMHG_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${LMHG_DB_PASSWORD}
+      WORDPRESS_CONFIG_EXTRA: |
+        define( 'DISALLOW_FILE_EDIT', true );
+        define( 'WP_ENVIRONMENT_TYPE', 'staging' );
+    volumes:
+      - wp_data:/var/www/html
+      - ../../wp-content/themes/lmhg-block-theme:/var/www/html/wp-content/themes/lmhg-block-theme:ro
+      - ../../wp-content/plugins/lmhg-site-core:/var/www/html/wp-content/plugins/lmhg-site-core:ro
+      - ../../data:/var/www/html/data:ro
+
+  cli:
+    image: wordpress:cli-php8.3
+    depends_on:
+      db:
+        condition: service_healthy
+      wordpress:
+        condition: service_started
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: ${LMHG_DB_NAME}
+      WORDPRESS_DB_USER: ${LMHG_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${LMHG_DB_PASSWORD}
+    volumes:
+      - wp_data:/var/www/html
+      - ../../wp-content/themes/lmhg-block-theme:/var/www/html/wp-content/themes/lmhg-block-theme:ro
+      - ../../wp-content/plugins/lmhg-site-core:/var/www/html/wp-content/plugins/lmhg-site-core:ro
+      - ../../data:/var/www/html/data:ro
+    working_dir: /var/www/html
+
+volumes:
+  db_data:
+  wp_data:
