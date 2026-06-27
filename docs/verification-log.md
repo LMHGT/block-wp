@@ -264,7 +264,7 @@ npm run verify:site
 Result:
 
 ```text
-Playwright: 4 passed
+Playwright: 22 passed
 Lighthouse:
 {
   "performance": 100,
@@ -273,6 +273,12 @@ Lighthouse:
   "seo": 100
 }
 ```
+
+Playwright now checks the plan's representative route set on desktop and mobile:
+home, services, individual counseling, child counseling, play therapy,
+community-based services, locations, FAQ, contact, one article page, and team.
+Each screenshot check asserts HTTP 200, canonical URL, non-empty main content,
+the active IntakeQ CTA, the active phone link, and no visible scaffold/stub copy.
 
 Performance note: the first Lighthouse run scored 76 because the scaffold used
 the core Navigation block and default emoji assets. The current theme uses a
