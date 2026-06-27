@@ -45,12 +45,18 @@ const scores = Object.fromEntries(
 console.log(`Lighthouse report written to ${outFile}`);
 console.log(JSON.stringify(scores, null, 2));
 
+const allowIndexing = ["1", "true"].includes(String(process.env.LMHG_ALLOW_INDEXING || "").toLowerCase());
+const expectNoindex = process.env.LH_EXPECT_NOINDEX !== "0" && !allowIndexing;
 const minimums = {
   performance: Number(process.env.LH_PERFORMANCE_MIN || 85),
   accessibility: Number(process.env.LH_ACCESSIBILITY_MIN || 95),
   "best-practices": Number(process.env.LH_BEST_PRACTICES_MIN || 90),
-  seo: Number(process.env.LH_SEO_MIN || 95)
+  seo: Number(process.env.LH_SEO_MIN || (expectNoindex ? 60 : 95))
 };
+
+if (expectNoindex) {
+  console.log("Lighthouse SEO threshold is using the development noindex floor. Set LMHG_ALLOW_INDEXING=1 or LH_EXPECT_NOINDEX=0 for production-like SEO gating.");
+}
 
 let failed = false;
 for (const [category, minimum] of Object.entries(minimums)) {

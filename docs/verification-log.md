@@ -463,12 +463,22 @@ routesWithIssues: 54
 title mismatch: 32
 h1 mismatch: 31
 visible text hash mismatch: 54
-missing staging X-Robots-Tag noindex: 54
-missing staging robots meta noindex: 54
 status 404 != staging 200: 3
 ```
 
-This is expected. The current local WordPress surface remains a proof scaffold,
-not the verbatim migration. The strict `npm run verify:wp-vs-staging` command is
-available for future parity work but is intentionally not part of `npm run
-verify` until these gaps are closed.
+This is expected. The current local WordPress surface now preserves development
+noindex suppression, but remains a proof scaffold rather than the verbatim
+migration. The strict `npm run verify:wp-vs-staging` command is available for
+future parity work but is intentionally not part of `npm run verify` until the
+remaining content, title/H1, and utility-route gaps are closed.
+
+The local WordPress proof now sends:
+
+```text
+X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+```
+
+`npm run verify:site` passes with Lighthouse `100/100/100/66`. The SEO floor is
+lowered only for development noindex mode; production-like Lighthouse gating can
+be restored by setting `LMHG_ALLOW_INDEXING=1` or `LH_EXPECT_NOINDEX=0`.

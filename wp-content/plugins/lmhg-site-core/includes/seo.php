@@ -12,9 +12,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 remove_action( 'wp_head', 'rel_canonical' );
 add_filter( 'pre_get_document_title', 'lmhg_site_core_document_title' );
 add_filter( 'wp_robots', 'lmhg_site_core_filter_robots' );
+add_action( 'send_headers', 'lmhg_site_core_send_development_robots_header' );
+add_action( 'wp_head', 'lmhg_site_core_output_development_robots_meta', 1 );
 add_action( 'wp_head', 'lmhg_site_core_output_canonical', 4 );
 add_action( 'wp_head', 'lmhg_site_core_output_meta_description', 5 );
 add_action( 'wp_head', 'lmhg_site_core_output_json_ld', 20 );
+
+const LMHG_SITE_CORE_DEVELOPMENT_ROBOTS = 'noindex, nofollow, noarchive, nosnippet, noimageindex';
 
 /**
  * Uses source SEO title when an imported page has one.
@@ -39,6 +43,15 @@ function lmhg_site_core_document_title( string $title ): string {
  * @return array<string,bool|string>
  */
 function lmhg_site_core_filter_robots( array $robots ): array {
+	if ( lmhg_site_core_should_suppress_indexing() ) {
+		$robots['noindex']     = true;
+		$robots['nofollow']    = true;
+		$robots['noarchive']   = true;
+		$robots['nosnippet']   = true;
+		$robots['noimageindex'] = true;
+		unset( $robots['index'] );
+	}
+
 	$post_id = lmhg_site_core_imported_post_id();
 	if ( 0 === $post_id ) {
 		return $robots;
@@ -51,6 +64,46 @@ function lmhg_site_core_filter_robots( array $robots ): array {
 	}
 
 	return $robots;
+}
+
+/**
+ * Sends staging/development discovery suppression headers.
+ */
+function lmhg_site_core_send_development_robots_header(): void {
+	if ( is_admin() || ! lmhg_site_core_should_suppress_indexing() ) {
+		return;
+	}
+
+	header( 'X-Robots-Tag: ' . LMHG_SITE_CORE_DEVELOPMENT_ROBOTS, true );
+}
+
+/**
+ * Outputs explicit staging/development robots meta for parity checks.
+ */
+function lmhg_site_core_output_development_robots_meta(): void {
+	if ( is_admin() || is_feed() || is_robots() || ! lmhg_site_core_should_suppress_indexing() ) {
+		return;
+	}
+
+	printf( '<meta name="robots" content="%s" />' . "\n", esc_attr( LMHG_SITE_CORE_DEVELOPMENT_ROBOTS ) );
+}
+
+/**
+ * Determines whether this WordPress surface must stay hidden from indexing.
+ *
+ * @return bool
+ */
+function lmhg_site_core_should_suppress_indexing(): bool {
+	if ( defined( 'LMHG_ALLOW_INDEXING' ) && LMHG_ALLOW_INDEXING ) {
+		return false;
+	}
+
+	$allow_indexing = getenv( 'LMHG_ALLOW_INDEXING' );
+	if ( '1' === $allow_indexing || 'true' === strtolower( (string) $allow_indexing ) ) {
+		return false;
+	}
+
+	return true;
 }
 
 /**
