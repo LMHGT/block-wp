@@ -31,15 +31,32 @@ function lmhg_site_core_import_block_manifest( array $manifest ): array {
 		: array();
 
 	$result = array(
-		'updated' => 0,
-		'missing' => 0,
-		'skipped' => 0,
-		'failed'  => 0,
-		'blocks'  => 0,
-		'assets'  => 0,
+		'updated'        => 0,
+		'missing'        => 0,
+		'skipped'        => 0,
+		'failed'         => 0,
+		'blocks'         => 0,
+		'assets'         => 0,
+		'mediaImported'  => 0,
+		'mediaExisting'  => 0,
+		'mediaSkipped'   => 0,
+		'mediaFailed'    => 0,
 	);
 
-	$assets = lmhg_site_core_editable_media_assets_by_route( $manifest );
+	$media_imports = lmhg_site_core_import_editable_media_assets( $manifest );
+	$assets = lmhg_site_core_editable_media_assets_by_route( $manifest, $media_imports );
+	foreach ( $media_imports as $import ) {
+		$status = (string) ( $import['status'] ?? '' );
+		if ( 'imported' === $status ) {
+			++$result['mediaImported'];
+		} elseif ( 'existing' === $status ) {
+			++$result['mediaExisting'];
+		} elseif ( 'skipped' === $status ) {
+			++$result['mediaSkipped'];
+		} elseif ( 'failed' === $status ) {
+			++$result['mediaFailed'];
+		}
+	}
 
 	foreach ( $routes as $route ) {
 		if ( ! is_array( $route ) ) {
@@ -59,6 +76,7 @@ function lmhg_site_core_import_block_manifest( array $manifest ): array {
 			++$result['failed'];
 			continue;
 		}
+		$content = lmhg_site_core_rewrite_editable_media_urls( $content, $media_imports );
 
 		$page = lmhg_site_core_find_existing_route_page( $url, implode( '/', lmhg_site_core_url_segments( $url ) ) );
 		if ( ! $page instanceof WP_Post ) {
@@ -130,9 +148,10 @@ function lmhg_site_core_update_editable_block_meta( int $post_id, array $manifes
  * Groups media-manifest assets by source route.
  *
  * @param array<string,mixed> $manifest Block migration manifest.
+ * @param array<string,array<string,mixed>> $media_imports Imported media details by asset ID.
  * @return array<string,array<int,array<string,mixed>>>
  */
-function lmhg_site_core_editable_media_assets_by_route( array $manifest ): array {
+function lmhg_site_core_editable_media_assets_by_route( array $manifest, array $media_imports ): array {
 	$assets = isset( $manifest['mediaAssets'] ) && is_array( $manifest['mediaAssets'] )
 		? $manifest['mediaAssets']
 		: array();
@@ -154,11 +173,152 @@ function lmhg_site_core_editable_media_assets_by_route( array $manifest ): array
 			}
 			$route = lmhg_site_core_normalize_manifest_url( $raw_route );
 
+			$asset_id = (string) ( $asset['assetId'] ?? '' );
+			if ( '' !== $asset_id && isset( $media_imports[ $asset_id ] ) ) {
+				$asset['wordpress'] = $media_imports[ $asset_id ];
+			}
+
 			$by_route[ $route ][] = $asset;
 		}
 	}
 
 	return $by_route;
+}
+
+/**
+ * Imports editor-owned media assets and returns WordPress attachment mappings.
+ *
+ * @param array<string,mixed> $manifest Block migration manifest.
+ * @return array<string,array<string,mixed>>
+ */
+function lmhg_site_core_import_editable_media_assets( array $manifest ): array {
+	$assets = isset( $manifest['mediaAssets'] ) && is_array( $manifest['mediaAssets'] )
+		? $manifest['mediaAssets']
+		: array();
+	$imports = array();
+
+	foreach ( $assets as $asset ) {
+		if ( ! is_array( $asset ) ) {
+			continue;
+		}
+
+		$asset_id = (string) ( $asset['assetId'] ?? '' );
+		if ( '' === $asset_id ) {
+			continue;
+		}
+
+		$kind = (string) ( $asset['kind'] ?? '' );
+		$source_url = esc_url_raw( (string) ( $asset['sourceUrl'] ?? '' ) );
+		if ( 'image' !== $kind || '' === $source_url ) {
+			$imports[ $asset_id ] = array(
+				'status' => 'skipped',
+				'kind'   => $kind,
+			);
+			continue;
+		}
+
+		$existing_id = lmhg_site_core_find_existing_media_asset( $source_url );
+		if ( $existing_id > 0 ) {
+			$imports[ $asset_id ] = array(
+				'status'       => 'existing',
+				'attachmentId' => $existing_id,
+				'url'          => wp_get_attachment_url( $existing_id ),
+				'sourceUrl'    => $source_url,
+			);
+			continue;
+		}
+
+		$attachment_id = lmhg_site_core_sideload_editable_media_asset( $asset, $source_url );
+		if ( is_wp_error( $attachment_id ) ) {
+			$imports[ $asset_id ] = array(
+				'status'    => 'failed',
+				'sourceUrl' => $source_url,
+				'error'     => $attachment_id->get_error_message(),
+			);
+			continue;
+		}
+
+		$imports[ $asset_id ] = array(
+			'status'       => 'imported',
+			'attachmentId' => $attachment_id,
+			'url'          => wp_get_attachment_url( $attachment_id ),
+			'sourceUrl'    => $source_url,
+		);
+	}
+
+	return $imports;
+}
+
+/**
+ * Finds an existing media attachment for a source asset URL.
+ *
+ * @param string $source_url Source asset URL.
+ * @return int
+ */
+function lmhg_site_core_find_existing_media_asset( string $source_url ): int {
+	$attachments = get_posts(
+		array(
+			'post_type'      => 'attachment',
+			'post_status'    => 'inherit',
+			'meta_key'       => '_lmhg_source_asset_url',
+			'meta_value'     => $source_url,
+			'fields'         => 'ids',
+			'posts_per_page' => 1,
+		)
+	);
+
+	return ! empty( $attachments ) ? (int) $attachments[0] : 0;
+}
+
+/**
+ * Sideloads one media asset into the WordPress media library.
+ *
+ * @param array<string,mixed> $asset Asset manifest entry.
+ * @param string              $source_url Source asset URL.
+ * @return int|WP_Error
+ */
+function lmhg_site_core_sideload_editable_media_asset( array $asset, string $source_url ): int|WP_Error {
+	require_once ABSPATH . 'wp-admin/includes/file.php';
+	require_once ABSPATH . 'wp-admin/includes/media.php';
+	require_once ABSPATH . 'wp-admin/includes/image.php';
+
+	$alt = sanitize_text_field( (string) ( $asset['alt'] ?? '' ) );
+	$attachment_id = media_sideload_image( $source_url, 0, $alt, 'id' );
+	if ( is_wp_error( $attachment_id ) ) {
+		return $attachment_id;
+	}
+
+	$attachment_id = (int) $attachment_id;
+	update_post_meta( $attachment_id, '_lmhg_source_asset_url', $source_url );
+	update_post_meta( $attachment_id, '_lmhg_source_asset_id', (string) ( $asset['assetId'] ?? '' ) );
+	update_post_meta( $attachment_id, '_lmhg_source_asset_hash', (string) ( $asset['sourceHash'] ?? '' ) );
+	if ( '' !== $alt ) {
+		update_post_meta( $attachment_id, '_wp_attachment_image_alt', $alt );
+	}
+
+	return $attachment_id;
+}
+
+/**
+ * Rewrites staging media URLs to imported WordPress attachment URLs.
+ *
+ * @param string $content Serialized block content.
+ * @param array<string,array<string,mixed>> $media_imports Imported media details by asset ID.
+ * @return string
+ */
+function lmhg_site_core_rewrite_editable_media_urls( string $content, array $media_imports ): string {
+	foreach ( $media_imports as $import ) {
+		$source_url = (string) ( $import['sourceUrl'] ?? '' );
+		$target_url = (string) ( $import['url'] ?? '' );
+		if ( '' === $source_url || '' === $target_url ) {
+			continue;
+		}
+
+		$content = str_replace( $source_url, $target_url, $content );
+		$content = str_replace( esc_url( $source_url ), esc_url( $target_url ), $content );
+	}
+
+	return $content;
 }
 
 if ( defined( 'WP_CLI' ) && WP_CLI ) {

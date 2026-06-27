@@ -40,9 +40,9 @@ stores source-to-block correlation metadata for audit and future editor tooling.
 
 ## Current Limits
 
-- Image blocks still reference staging asset URLs in serialized block content;
-  the paired media manifest records the assets to sideload and rewrite in the
-  cloud runtime.
+- The generated block manifest records source staging image URLs; the cloud
+  WordPress import command sideloads the paired media manifest and rewrites
+  block content to WordPress attachment URLs during import.
 - Inline SVG illustrations are preserved as editable custom HTML blocks for the
   first slice; a later pass can convert repeatable icons/illustrations to block
   patterns or media-library SVG records if the host permits SVG uploads.
