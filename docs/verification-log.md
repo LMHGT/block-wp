@@ -415,3 +415,36 @@ npm audit --omit=dev
 WP_BASE_URL=https://mbp.beagle-perch.ts.net npm run verify:lmhg-copy
 git diff --check
 ```
+
+## Verbatim Migration Staging Baseline
+
+Date: 2026-06-27
+
+The corrected migration objective requires a crawler-backed Cloudflare staging
+baseline before further WordPress theme/import work.
+
+```bash
+npm run crawl:staging
+npm run verify:staging-snapshot
+```
+
+Result:
+
+```text
+capturedRoutes: 55
+visibleRoutes: 54
+decisionRoutes: 3
+redirects: 117
+assets: 131
+screenshots: 108
+```
+
+All 117 manifest redirects returned live `301` responses from Cloudflare
+staging. All 131 referenced assets fetched with status `200`. Every visible
+staging route includes noindex suppression in both `X-Robots-Tag` and robots
+meta output.
+
+The three decision routes are `/compliance/`, `/privacy-policy/`, and
+`/terms-of-use/`: the earlier proof-track manifest marked them out-of-scope, but
+Cloudflare staging serves each with `200`, so a verbatim migration must either
+port them or record an explicit exclusion decision.

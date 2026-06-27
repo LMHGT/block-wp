@@ -1,0 +1,1172 @@
+[
+  {
+    "source": "/family-therapy",
+    "expectedTarget": "/family-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Slashless canonicalization for current service pages",
+    "liveStatus": 301,
+    "liveLocation": "/family-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/group-therapy",
+    "expectedTarget": "/group-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Slashless canonicalization for current service pages",
+    "liveStatus": 301,
+    "liveLocation": "/group-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/trauma-therapy",
+    "expectedTarget": "/trauma-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Slashless canonicalization for current service pages",
+    "liveStatus": 301,
+    "liveLocation": "/trauma-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/play-therapy",
+    "expectedTarget": "/play-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Slashless canonicalization for current service pages",
+    "liveStatus": 301,
+    "liveLocation": "/play-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/community-support",
+    "expectedTarget": "/community-support/",
+    "expectedStatusCode": 301,
+    "section": "Slashless canonicalization for current service pages",
+    "liveStatus": 301,
+    "liveLocation": "/community-support/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/community-based-services",
+    "expectedTarget": "/community-based-services/",
+    "expectedStatusCode": 301,
+    "section": "Slashless canonicalization for current service pages",
+    "liveStatus": 301,
+    "liveLocation": "/community-based-services/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/case-management",
+    "expectedTarget": "/case-management/",
+    "expectedStatusCode": 301,
+    "section": "Slashless canonicalization for current service pages",
+    "liveStatus": 301,
+    "liveLocation": "/case-management/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/co-parenting",
+    "expectedTarget": "/co-parenting/",
+    "expectedStatusCode": 301,
+    "section": "Slashless canonicalization for current service pages",
+    "liveStatus": 301,
+    "liveLocation": "/co-parenting/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/court-ordered",
+    "expectedTarget": "/court-ordered/",
+    "expectedStatusCode": 301,
+    "section": "Slashless canonicalization for current service pages",
+    "liveStatus": 301,
+    "liveLocation": "/court-ordered/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/individual-therapy",
+    "expectedTarget": "/individual-counseling/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/individual-counseling/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/individual-therapy/",
+    "expectedTarget": "/individual-counseling/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/individual-counseling/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/family-counseling",
+    "expectedTarget": "/family-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/family-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/family-counseling/",
+    "expectedTarget": "/family-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/family-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/child-therapy",
+    "expectedTarget": "/child-counseling/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/child-counseling/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/child-therapy/",
+    "expectedTarget": "/child-counseling/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/child-counseling/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/couples-therapy",
+    "expectedTarget": "/couples-counseling/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/couples-counseling/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/couples-therapy/",
+    "expectedTarget": "/couples-counseling/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/couples-counseling/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/anxiety-treatment",
+    "expectedTarget": "/anxiety-depression-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/anxiety-depression-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/anxiety-treatment/",
+    "expectedTarget": "/anxiety-depression-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/anxiety-depression-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/depression-treatment",
+    "expectedTarget": "/anxiety-depression-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/anxiety-depression-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/depression-treatment/",
+    "expectedTarget": "/anxiety-depression-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/anxiety-depression-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/trauma-treatment",
+    "expectedTarget": "/trauma-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/trauma-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/trauma-treatment/",
+    "expectedTarget": "/trauma-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/trauma-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/private-counseling",
+    "expectedTarget": "/attachment-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/attachment-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/private-counseling/",
+    "expectedTarget": "/attachment-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/attachment-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/community-support-associates",
+    "expectedTarget": "/community-support/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/community-support/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/community-support-associates/",
+    "expectedTarget": "/community-support/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/community-support/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/coparenting-services",
+    "expectedTarget": "/co-parenting/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/co-parenting/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/coparenting-services/",
+    "expectedTarget": "/co-parenting/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/co-parenting/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/co-parenting-services",
+    "expectedTarget": "/co-parenting/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/co-parenting/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/co-parenting-services/",
+    "expectedTarget": "/co-parenting/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/co-parenting/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/family-court",
+    "expectedTarget": "/court-ordered/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/court-ordered/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/family-court/",
+    "expectedTarget": "/court-ordered/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/court-ordered/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/family-court-services",
+    "expectedTarget": "/court-ordered/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/court-ordered/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/family-court-services/",
+    "expectedTarget": "/court-ordered/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/court-ordered/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/court-ordered-evaluations",
+    "expectedTarget": "/court-ordered/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/court-ordered/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/court-ordered-evaluations/",
+    "expectedTarget": "/court-ordered/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/court-ordered/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/court-ordered-treatment",
+    "expectedTarget": "/court-ordered/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/court-ordered/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/court-ordered-treatment/",
+    "expectedTarget": "/court-ordered/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/court-ordered/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/family-rebuilding",
+    "expectedTarget": "/family-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/family-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/family-rebuilding/",
+    "expectedTarget": "/family-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/family-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/trauma-focused-emdr",
+    "expectedTarget": "/emdr-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/emdr-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/trauma-focused-emdr/",
+    "expectedTarget": "/emdr-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/emdr-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/emdr-for-ptsd",
+    "expectedTarget": "/emdr-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/emdr-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/emdr-for-ptsd/",
+    "expectedTarget": "/emdr-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/emdr-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/emdr-for-anxiety",
+    "expectedTarget": "/emdr-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/emdr-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/emdr-for-anxiety/",
+    "expectedTarget": "/emdr-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Legacy therapy-entry pages -> current category/service structure",
+    "liveStatus": 301,
+    "liveLocation": "/emdr-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations",
+    "expectedTarget": "/locations/",
+    "expectedStatusCode": 301,
+    "section": "Trailing slash redirects for kept pages",
+    "liveStatus": 301,
+    "liveLocation": "/locations/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/in-person",
+    "expectedTarget": "/locations/in-person/",
+    "expectedStatusCode": 301,
+    "section": "Trailing slash redirects for kept pages",
+    "liveStatus": 301,
+    "liveLocation": "/locations/in-person/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/community",
+    "expectedTarget": "/locations/community/",
+    "expectedStatusCode": 301,
+    "section": "Trailing slash redirects for kept pages",
+    "liveStatus": 301,
+    "liveLocation": "/locations/community/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/in-home",
+    "expectedTarget": "/locations/in-home/",
+    "expectedStatusCode": 301,
+    "section": "Trailing slash redirects for kept pages",
+    "liveStatus": 301,
+    "liveLocation": "/locations/in-home/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/online",
+    "expectedTarget": "/locations/online/",
+    "expectedStatusCode": 301,
+    "section": "Trailing slash redirects for kept pages",
+    "liveStatus": 301,
+    "liveLocation": "/locations/online/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/school",
+    "expectedTarget": "/locations/school/",
+    "expectedStatusCode": 301,
+    "section": "Trailing slash redirects for kept pages",
+    "liveStatus": 301,
+    "liveLocation": "/locations/school/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/louisville-ky",
+    "expectedTarget": "/louisville-ky/",
+    "expectedStatusCode": 301,
+    "section": "Trailing slash redirects for kept pages",
+    "liveStatus": 301,
+    "liveLocation": "/louisville-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/in-office",
+    "expectedTarget": "/locations/in-person/",
+    "expectedStatusCode": 301,
+    "section": "Legacy care setting URLs -> canonical location structure",
+    "liveStatus": 301,
+    "liveLocation": "/locations/in-person/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/in-office/",
+    "expectedTarget": "/locations/in-person/",
+    "expectedStatusCode": 301,
+    "section": "Legacy care setting URLs -> canonical location structure",
+    "liveStatus": 301,
+    "liveLocation": "/locations/in-person/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/in-the-community",
+    "expectedTarget": "/locations/community/",
+    "expectedStatusCode": 301,
+    "section": "Legacy care setting URLs -> canonical location structure",
+    "liveStatus": 301,
+    "liveLocation": "/locations/community/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/in-the-community/",
+    "expectedTarget": "/locations/community/",
+    "expectedStatusCode": 301,
+    "section": "Legacy care setting URLs -> canonical location structure",
+    "liveStatus": 301,
+    "liveLocation": "/locations/community/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/in-your-home",
+    "expectedTarget": "/locations/in-home/",
+    "expectedStatusCode": 301,
+    "section": "Legacy care setting URLs -> canonical location structure",
+    "liveStatus": 301,
+    "liveLocation": "/locations/in-home/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/in-your-home/",
+    "expectedTarget": "/locations/in-home/",
+    "expectedStatusCode": 301,
+    "section": "Legacy care setting URLs -> canonical location structure",
+    "liveStatus": 301,
+    "liveLocation": "/locations/in-home/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/office",
+    "expectedTarget": "/locations/in-person/",
+    "expectedStatusCode": 301,
+    "section": "Legacy care setting URLs -> canonical location structure",
+    "liveStatus": 301,
+    "liveLocation": "/locations/in-person/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/office/",
+    "expectedTarget": "/locations/in-person/",
+    "expectedStatusCode": 301,
+    "section": "Legacy care setting URLs -> canonical location structure",
+    "liveStatus": 301,
+    "liveLocation": "/locations/in-person/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/home",
+    "expectedTarget": "/locations/in-home/",
+    "expectedStatusCode": 301,
+    "section": "Legacy care setting URLs -> canonical location structure",
+    "liveStatus": 301,
+    "liveLocation": "/locations/in-home/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/home/",
+    "expectedTarget": "/locations/in-home/",
+    "expectedStatusCode": 301,
+    "section": "Legacy care setting URLs -> canonical location structure",
+    "liveStatus": 301,
+    "liveLocation": "/locations/in-home/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/telehealth",
+    "expectedTarget": "/locations/online/",
+    "expectedStatusCode": 301,
+    "section": "Legacy care setting URLs -> canonical location structure",
+    "liveStatus": 301,
+    "liveLocation": "/locations/online/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/locations/telehealth/",
+    "expectedTarget": "/locations/online/",
+    "expectedStatusCode": 301,
+    "section": "Legacy care setting URLs -> canonical location structure",
+    "liveStatus": 301,
+    "liveLocation": "/locations/online/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/jefferson-county-ky",
+    "expectedTarget": "/jefferson-county-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/jefferson-county-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/bullitt-county-ky",
+    "expectedTarget": "/bullitt-county-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/bullitt-county-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/oldham-county-ky",
+    "expectedTarget": "/oldham-county-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/oldham-county-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/clarksville-in",
+    "expectedTarget": "/locations/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/locations/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/clarksville-in/",
+    "expectedTarget": "/locations/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/locations/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/clarksville-ky",
+    "expectedTarget": "/locations/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/locations/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/clarksville-ky/",
+    "expectedTarget": "/locations/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/locations/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/jeffersonville-in",
+    "expectedTarget": "/locations/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/locations/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/jeffersonville-in/",
+    "expectedTarget": "/locations/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/locations/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/new-albany-in",
+    "expectedTarget": "/locations/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/locations/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/new-albany-in/",
+    "expectedTarget": "/locations/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/locations/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/jeffersontown-ky",
+    "expectedTarget": "/jefferson-county-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/jefferson-county-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/jeffersontown-ky/",
+    "expectedTarget": "/jefferson-county-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/jefferson-county-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/shively-ky",
+    "expectedTarget": "/jefferson-county-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/jefferson-county-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/shively-ky/",
+    "expectedTarget": "/jefferson-county-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/jefferson-county-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/prospect-ky",
+    "expectedTarget": "/oldham-county-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/oldham-county-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/prospect-ky/",
+    "expectedTarget": "/oldham-county-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/oldham-county-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/jeffersonville-ky",
+    "expectedTarget": "/louisville-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/louisville-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/jeffersonville-ky/",
+    "expectedTarget": "/louisville-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/louisville-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/springhurst-ky",
+    "expectedTarget": "/louisville-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/louisville-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/springhurst-ky/",
+    "expectedTarget": "/louisville-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/louisville-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/crestwood-ky",
+    "expectedTarget": "/louisville-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/louisville-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/crestwood-ky/",
+    "expectedTarget": "/louisville-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/louisville-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/taylorsville-ky",
+    "expectedTarget": "/louisville-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/louisville-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/taylorsville-ky/",
+    "expectedTarget": "/louisville-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/louisville-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/bardstown-ky",
+    "expectedTarget": "/locations/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/locations/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/bardstown-ky/",
+    "expectedTarget": "/locations/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/locations/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/la-grange-ky",
+    "expectedTarget": "/louisville-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/louisville-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/la-grange-ky/",
+    "expectedTarget": "/louisville-ky/",
+    "expectedStatusCode": 301,
+    "section": "Legacy city/county location pages -> current service area pages",
+    "liveStatus": 301,
+    "liveLocation": "/louisville-ky/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/meet-the-team",
+    "expectedTarget": "/meet-the-team/",
+    "expectedStatusCode": 301,
+    "section": "OTHER PAGE RENAMES",
+    "liveStatus": 301,
+    "liveLocation": "/meet-the-team/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/reviews",
+    "expectedTarget": "/reviews/",
+    "expectedStatusCode": 301,
+    "section": "OTHER PAGE RENAMES",
+    "liveStatus": 301,
+    "liveLocation": "/reviews/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/contact-us",
+    "expectedTarget": "/contact-us/",
+    "expectedStatusCode": 301,
+    "section": "OTHER PAGE RENAMES",
+    "liveStatus": 301,
+    "liveLocation": "/contact-us/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/we-are-hiring",
+    "expectedTarget": "/careers/",
+    "expectedStatusCode": 301,
+    "section": "Careers page moved",
+    "liveStatus": 301,
+    "liveLocation": "/careers/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/we-are-hiring/",
+    "expectedTarget": "/careers/",
+    "expectedStatusCode": 301,
+    "section": "Careers page moved",
+    "liveStatus": 301,
+    "liveLocation": "/careers/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/what-we-do",
+    "expectedTarget": "/services/",
+    "expectedStatusCode": 301,
+    "section": "Content migration",
+    "liveStatus": 301,
+    "liveLocation": "/services/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/what-we-do/",
+    "expectedTarget": "/services/",
+    "expectedStatusCode": 301,
+    "section": "Content migration",
+    "liveStatus": 301,
+    "liveLocation": "/services/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/blogs",
+    "expectedTarget": "/articles/",
+    "expectedStatusCode": 301,
+    "section": "Content migration",
+    "liveStatus": 301,
+    "liveLocation": "/articles/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/blogs/",
+    "expectedTarget": "/articles/",
+    "expectedStatusCode": 301,
+    "section": "Content migration",
+    "liveStatus": 301,
+    "liveLocation": "/articles/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/how-to-talk-to-your-loved-ones-about-going-to-therapy",
+    "expectedTarget": "/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Content migration",
+    "liveStatus": 301,
+    "liveLocation": "/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/how-to-talk-to-your-loved-ones-about-going-to-therapy/",
+    "expectedTarget": "/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Content migration",
+    "liveStatus": 301,
+    "liveLocation": "/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/family-therapy-vs-individual-therapy",
+    "expectedTarget": "/articles/family-therapy-vs-individual-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Content migration",
+    "liveStatus": 301,
+    "liveLocation": "/articles/family-therapy-vs-individual-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/family-therapy-vs-individual-therapy/",
+    "expectedTarget": "/articles/family-therapy-vs-individual-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Content migration",
+    "liveStatus": 301,
+    "liveLocation": "/articles/family-therapy-vs-individual-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/top-5-signs-its-time-to-seek-therapy",
+    "expectedTarget": "/articles/top-5-signs-its-time-to-seek-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Content migration",
+    "liveStatus": 301,
+    "liveLocation": "/articles/top-5-signs-its-time-to-seek-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/top-5-signs-its-time-to-seek-therapy/",
+    "expectedTarget": "/articles/top-5-signs-its-time-to-seek-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Content migration",
+    "liveStatus": 301,
+    "liveLocation": "/articles/top-5-signs-its-time-to-seek-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/guide-to-individual-therapy",
+    "expectedTarget": "/articles/guide-to-individual-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Content migration",
+    "liveStatus": 301,
+    "liveLocation": "/articles/guide-to-individual-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/guide-to-individual-therapy/",
+    "expectedTarget": "/articles/guide-to-individual-therapy/",
+    "expectedStatusCode": 301,
+    "section": "Content migration",
+    "liveStatus": 301,
+    "liveLocation": "/articles/guide-to-individual-therapy/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/our-services",
+    "expectedTarget": "/services/",
+    "expectedStatusCode": 301,
+    "section": "Our Services -> Services hub",
+    "liveStatus": 301,
+    "liveLocation": "/services/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/our-services/",
+    "expectedTarget": "/services/",
+    "expectedStatusCode": 301,
+    "section": "Our Services -> Services hub",
+    "liveStatus": 301,
+    "liveLocation": "/services/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/about",
+    "expectedTarget": "/meet-the-team/",
+    "expectedStatusCode": 301,
+    "section": "LEGACY REDIRECTS (from old site)",
+    "liveStatus": 301,
+    "liveLocation": "/meet-the-team/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/blog",
+    "expectedTarget": "/",
+    "expectedStatusCode": 301,
+    "section": "LEGACY REDIRECTS (from old site)",
+    "liveStatus": 301,
+    "liveLocation": "/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  },
+  {
+    "source": "/career",
+    "expectedTarget": "/careers/",
+    "expectedStatusCode": 301,
+    "section": "LEGACY REDIRECTS (from old site)",
+    "liveStatus": 301,
+    "liveLocation": "/careers/",
+    "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "matchesExpectedStatus": true
+  }
+]

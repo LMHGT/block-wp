@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-06-27T19:31:32.165Z",
+  "stagingBaseUrl": "https://staging.website-production-26u.pages.dev",
+  "manifestRoutes": 55,
+  "manifestRedirects": 117,
+  "capturedRoutes": 55,
+  "discoveredRoutes": 0,
+  "capturedRedirects": 117,
+  "capturedAssets": 131,
+  "capturedScreenshots": 108,
+  "routeStatusCounts": {
+    "200": 54,
+    "308": 1
+  },
+  "routeClassificationCounts": {
+    "migrate-verbatim": 51,
+    "special-404-route": 1,
+    "requires-verbatim-decision": 3
+  },
+  "redirectStatusCounts": {
+    "301": 117
+  },
+  "assetStatusCounts": {
+    "200": 131
+  },
+  "assetExtensionCounts": {
+    "js": 2,
+    "css": 4,
+    "svg": 5,
+    "woff2": 1,
+    "webp": 119
+  },
+  "failures": []
+}

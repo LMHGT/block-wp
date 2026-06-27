@@ -13,6 +13,8 @@
     "check:prereqs": "node tools/check-prereqs.mjs",
     "check:prereqs:strict": "node tools/check-prereqs.mjs --strict",
     "inventory:astro": "node tools/export-astro-inventory.mjs",
+    "crawl:staging": "node tools/crawl-staging-snapshot.mjs",
+    "verify:staging-snapshot": "node tools/verify-staging-snapshot.mjs",
     "setup:browsers": "playwright install chromium",
     "wp-env:start": "wp-env start",
     "wp-env:stop": "wp-env stop",
@@ -35,7 +37,7 @@
     "test:screenshots": "playwright test --config=tests/playwright.config.mjs",
     "test:lighthouse": "node tools/run-lighthouse.mjs",
     "verify:site": "npm run test:screenshots && npm run test:lighthouse",
-    "verify": "npm run check:static && npm run check:prereqs"
+    "verify": "npm run check:static && npm run check:prereqs && npm run verify:staging-snapshot"
   },
   "devDependencies": {
     "@playwright/test": "1.61.1",
