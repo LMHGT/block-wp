@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "title": "High Contrast",
+  "styles": {
+    "color": {
+      "background": "#ffffff",
+      "text": "#111111"
+    },
+    "elements": {
+      "button": {
+        "color": {
+          "background": "#111111",
+          "text": "#ffffff"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "#064e3b"
+        }
+      }
+    }
+  }
+}

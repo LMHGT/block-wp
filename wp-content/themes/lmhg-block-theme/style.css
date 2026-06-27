@@ -1,0 +1,34 @@
+/*
+Theme Name: LMHG Block Theme
+Theme URI: https://github.com/LMHGT/block-wp
+Author: Codex
+Description: Minimal cache-friendly block theme for the LMHG WordPress proof track.
+Requires at least: 6.9
+Tested up to: 6.9
+Requires PHP: 8.1
+Version: 0.1.0
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: lmhg-block-theme
+*/
+
+:where(a) {
+  text-underline-offset: 0.18em;
+}
+
+:where(.wp-site-blocks) {
+  min-height: 100vh;
+}
+
+:where(.wp-block-navigation a:focus-visible, .wp-block-button__link:focus-visible) {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+:where(.wp-block-group[style*="min-height"]) {
+  box-sizing: border-box;
+}
+
+:where(.lmhg-proof-note) {
+  color: var(--wp--preset--color--muted-text);
+}

@@ -1,0 +1,34 @@
+{
+  "name": "lmhg-block-wp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "LMHG WordPress proof track with a block theme, site-core plugin, Playground Blueprint, wp-env, screenshots, and Lighthouse checks.",
+  "type": "module",
+  "engines": {
+    "node": ">=20.18.0",
+    "npm": ">=10.2.3"
+  },
+  "scripts": {
+    "check:static": "node tools/check-static.mjs",
+    "check:prereqs": "node tools/check-prereqs.mjs",
+    "check:prereqs:strict": "node tools/check-prereqs.mjs --strict",
+    "setup:browsers": "playwright install chromium",
+    "wp-env:start": "wp-env start",
+    "wp-env:stop": "wp-env stop",
+    "wp-env:destroy": "wp-env destroy",
+    "wp-env:cli": "wp-env run cli wp",
+    "wp-env:seed": "node tools/seed-wp-env.mjs",
+    "playground:start": "node tools/run-playground.mjs",
+    "playground:blueprint": "node tools/run-playground.mjs --run-blueprint",
+    "test:screenshots": "playwright test --config=tests/playwright.config.mjs",
+    "test:lighthouse": "node tools/run-lighthouse.mjs",
+    "verify:site": "npm run test:screenshots && npm run test:lighthouse",
+    "verify": "npm run check:static && npm run check:prereqs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.61.1",
+    "@wordpress/env": "11.9.0",
+    "@wp-playground/cli": "3.1.42",
+    "lighthouse": "12.8.2"
+  }
+}

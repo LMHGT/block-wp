@@ -1,0 +1,12 @@
+.wp-block-navigation__responsive-container.is-menu-open {
+  padding: var(--wp--preset--spacing--40);
+}
+
+.wp-block-navigation__responsive-container-close,
+.wp-block-navigation__responsive-container-open {
+  border-radius: 6px;
+}
+
+.wp-block-navigation-item__content {
+  text-decoration: none;
+}
