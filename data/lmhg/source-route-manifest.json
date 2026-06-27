@@ -1,0 +1,5601 @@
+{
+  "generatedAt": "2026-06-27T16:44:22.823Z",
+  "sourceRoot": "/Users/tyler-lcsw/projects/lmhg-astro-integrate",
+  "sourceBranch": "codex/homepage-alignment-polish",
+  "sourceHead": "63d7ed9e58eb34f2fd730561ca0e0514a32ebcb0",
+  "sourceOriginStaging": "63d7ed9e58eb34f2fd730561ca0e0514a32ebcb0",
+  "dataset": {
+    "generatedAt": "2026-06-25T10:09:14.260Z",
+    "version": 1,
+    "pageCount": 55,
+    "relatedPageCount": 197,
+    "faqItemCount": 126,
+    "teamCount": 16,
+    "articleCount": 164
+  },
+  "routes": [
+    {
+      "url": "/",
+      "title": "Homepage",
+      "pageFamily": "homepage",
+      "templateFamily": "home",
+      "facetedPageType": "homepage",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/homepage.json",
+      "routeFile": "src/pages/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/",
+        "primaryKeyword": "mental health services louisville ky",
+        "secondaryKeywords": [
+          "counseling louisville ky"
+        ],
+        "schemaType": "MedicalClinic",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalClinic",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/louisville-ky/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/insurance/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/meet-the-team/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[What should someone know before contacting LMHG?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How does someone choose the right service?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[What happens after reaching out?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/404.html",
+      "title": "Page Not Found | Louisville Mental Health Group",
+      "pageFamily": "page",
+      "templateFamily": "not-found",
+      "facetedPageType": "",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "src/data/copy/pages/not-found.json",
+      "implementationTarget": "src/data/copy/pages/not-found.json",
+      "routeFile": "src/pages/404.astro",
+      "dynamicRouteFile": "",
+      "seo": null,
+      "relationship": {
+        "primaryParentPageUrl": "",
+        "specialtyKind": "",
+        "recommendedSchemaType": "",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [],
+      "faqItems": [],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/adolescent-counseling/",
+      "title": "/Adolescent Counseling/",
+      "pageFamily": "concern-condition",
+      "templateFamily": "specialty",
+      "facetedPageType": "concern-condition",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/services/adolescent-counseling.json",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/[service].astro",
+      "seo": {
+        "canonicalUrl": "/adolescent-counseling/",
+        "primaryKeyword": "teen therapy louisville ky",
+        "secondaryKeywords": [
+          "adolescent counseling louisville ky",
+          "adolescent therapy louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/child-counseling/",
+        "specialtyKind": "concern",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/child-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/individual-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/family-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/online/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[When should a teen consider counseling?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How are parents involved?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can counseling help with school stress, mood, or family conflict?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/adult-counseling/",
+      "title": "/Adult Counseling/",
+      "pageFamily": "specialty",
+      "templateFamily": "specialty",
+      "facetedPageType": "specialty",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/services/adult-counseling.json",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/[service].astro",
+      "seo": {
+        "canonicalUrl": "/adult-counseling/",
+        "primaryKeyword": "adult counseling louisville ky",
+        "secondaryKeywords": [
+          "adult therapy louisville ky",
+          "counseling for adults louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/individual-counseling/",
+        "specialtyKind": "audience-service",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/individual-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/anxiety-depression-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/online/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[...]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[...]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[...]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/anxiety-depression-therapy/",
+      "title": "/Anxiety Depression Therapy/",
+      "pageFamily": "concern-condition",
+      "templateFamily": "specialty",
+      "facetedPageType": "concern-condition",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/services/anxiety-depression-therapy.json",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/[service].astro",
+      "seo": {
+        "canonicalUrl": "/anxiety-depression-therapy/",
+        "primaryKeyword": "anxiety and depression therapy louisville ky",
+        "secondaryKeywords": [
+          "anxiety therapy louisville ky",
+          "depression therapy louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/individual-counseling/",
+        "specialtyKind": "concern",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/individual-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/child-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/family-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/adult-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/adolescent-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 5,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[Can therapy help with anxiety and depression together?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[What if I am not sure whether it is anxiety, depression, or stress?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How do I start?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/articles/",
+      "title": "/Articles/",
+      "pageFamily": "secondary-footer",
+      "templateFamily": "article",
+      "facetedPageType": "secondary-footer",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/pages/articles-index.json",
+      "routeFile": "src/pages/articles/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/articles/",
+        "primaryKeyword": "mental health articles louisville ky",
+        "secondaryKeywords": [
+          "therapy resources louisville ky"
+        ],
+        "schemaType": "Article",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "",
+        "specialtyKind": "",
+        "recommendedSchemaType": "Article",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/specialties/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/faq/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/insurance/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[Are articles a substitute for therapy?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How should readers use these articles?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How do I contact LMHG after reading?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/articles/family-therapy-vs-individual-therapy/",
+      "title": "/Articles/Family Therapy Vs Individual Therapy/",
+      "pageFamily": "support",
+      "templateFamily": "article",
+      "facetedPageType": "support",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/content/articles/family-therapy-vs-individual-therapy.md",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/articles/[slug].astro",
+      "seo": {
+        "canonicalUrl": "/articles/family-therapy-vs-individual-therapy/",
+        "primaryKeyword": "family therapy vs individual therapy",
+        "secondaryKeywords": [
+          "family counseling vs individual counseling"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": null,
+      "relatedPages": [
+        {
+          "targetPageUrl": "/articles/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/family-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/individual-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/child-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/articles/guide-to-individual-therapy/",
+      "title": "/Articles/Guide To Individual Therapy/",
+      "pageFamily": "support",
+      "templateFamily": "article",
+      "facetedPageType": "support",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/content/articles/guide-to-individual-therapy.md",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/articles/[slug].astro",
+      "seo": {
+        "canonicalUrl": "/articles/guide-to-individual-therapy/",
+        "primaryKeyword": "guide to individual therapy",
+        "secondaryKeywords": [
+          "what is individual therapy"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": null,
+      "relatedPages": [
+        {
+          "targetPageUrl": "/articles/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/individual-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/contact-us/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/",
+      "title": "/Articles/How To Talk To Your Loved Ones About Going To Therapy/",
+      "pageFamily": "support",
+      "templateFamily": "article",
+      "facetedPageType": "support",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/content/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy.md",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/articles/[slug].astro",
+      "seo": {
+        "canonicalUrl": "/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/",
+        "primaryKeyword": "how to talk to someone about therapy",
+        "secondaryKeywords": [
+          "how to tell family you are going to therapy"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": null,
+      "relatedPages": [
+        {
+          "targetPageUrl": "/articles/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/individual-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/family-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/articles/top-5-signs-its-time-to-seek-therapy/",
+      "title": "/Articles/Top 5 Signs Its Time To Seek Therapy/",
+      "pageFamily": "support",
+      "templateFamily": "article",
+      "facetedPageType": "support",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/content/articles/top-5-signs-its-time-to-seek-therapy.md",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/articles/[slug].astro",
+      "seo": {
+        "canonicalUrl": "/articles/top-5-signs-its-time-to-seek-therapy/",
+        "primaryKeyword": "when to seek therapy",
+        "secondaryKeywords": [
+          "signs you need therapy"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": null,
+      "relatedPages": [
+        {
+          "targetPageUrl": "/articles/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/individual-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/anxiety-depression-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/articles/what-to-expect-when-starting-therapy/",
+      "title": "What to Expect When Starting Therapy",
+      "pageFamily": "article",
+      "templateFamily": "article",
+      "facetedPageType": "article",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "src/content/articles/what-to-expect-when-starting-therapy.md",
+      "implementationTarget": "src/content/articles/what-to-expect-when-starting-therapy.md",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/articles/[slug].astro",
+      "seo": null,
+      "relationship": {
+        "primaryParentPageUrl": "",
+        "specialtyKind": "",
+        "recommendedSchemaType": "",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [],
+      "faqItems": [],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/attachment-therapy/",
+      "title": "/Attachment Therapy/",
+      "pageFamily": "specialty",
+      "templateFamily": "specialty",
+      "facetedPageType": "specialty",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/services/attachment-therapy.json",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/[service].astro",
+      "seo": {
+        "canonicalUrl": "/attachment-therapy/",
+        "primaryKeyword": "attachment therapy louisville ky",
+        "secondaryKeywords": [
+          "attachment based therapy louisville ky",
+          "parent child therapy louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/family-therapy/",
+        "specialtyKind": "support-service",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/family-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/child-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[What is attachment therapy in plain language?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Who might attachment-focused support help?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How does this relate to family therapy?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/bullitt-county-ky/",
+      "title": "/Bullitt County Ky/",
+      "pageFamily": "service-area",
+      "templateFamily": "location-access",
+      "facetedPageType": "service-area",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/service-areas/bullitt-county-ky.json",
+      "routeFile": "src/pages/bullitt-county-ky/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/bullitt-county-ky/",
+        "primaryKeyword": "mental health services bullitt county ky",
+        "secondaryKeywords": [
+          "therapy bullitt county ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/locations/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/locations/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/online/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/family-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[Does LMHG serve Bullitt County?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can Bullitt County clients use online or office-based care?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How do I ask about availability?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/careers/",
+      "title": "/Careers/",
+      "pageFamily": "secondary-footer",
+      "templateFamily": "trust",
+      "facetedPageType": "secondary-footer",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/pages/careers.json",
+      "routeFile": "src/pages/careers/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/careers/",
+        "primaryKeyword": "mental health careers louisville ky",
+        "secondaryKeywords": [
+          "therapy jobs louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/meet-the-team/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/community/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/contact-us/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[How do I apply?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[What roles does LMHG hire for?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can I ask about openings before applying?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/case-management/",
+      "title": "/Case Management/",
+      "pageFamily": "specialty",
+      "templateFamily": "specialty",
+      "facetedPageType": "specialty",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/services/case-management.json",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/[service].astro",
+      "seo": {
+        "canonicalUrl": "/case-management/",
+        "primaryKeyword": "targeted case management louisville ky",
+        "secondaryKeywords": [
+          "mental health case management louisville ky",
+          "medicaid case management louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/community-based-services/",
+        "specialtyKind": "community-service",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/community-based-services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/community-support/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/therapy-in-your-home/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/community/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/in-home/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 5,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "Is case management the same as therapy?",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "Can case management help with telehealth or office-based care?",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "Does case management mean LMHG has offices in every county?",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/child-behavioral-intervention/",
+      "title": "/Child Behavioral Intervention/",
+      "pageFamily": "specialty",
+      "templateFamily": "specialty",
+      "facetedPageType": "specialty",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/services/child-behavioral-intervention.json",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/[service].astro",
+      "seo": {
+        "canonicalUrl": "/child-behavioral-intervention/",
+        "primaryKeyword": "child behavioral therapy louisville ky",
+        "secondaryKeywords": [
+          "child behavioral intervention louisville ky",
+          "child behavior therapist louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/child-counseling/",
+        "specialtyKind": "support-service",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/child-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/parenting-support/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/family-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/school/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[What kinds of child behavior concerns can therapy help with?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Do parents participate?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can this support connect with school concerns?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/child-counseling/",
+      "title": "/Child Counseling/",
+      "pageFamily": "broad-service-category",
+      "templateFamily": "service",
+      "facetedPageType": "broad-service-category",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/categories/child-counseling.json",
+      "routeFile": "src/pages/child-counseling/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/child-counseling/",
+        "primaryKeyword": "child counseling louisville ky",
+        "secondaryKeywords": [
+          "child therapy louisville ky",
+          "child therapist louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/services/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/adolescent-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/play-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/child-behavioral-intervention/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[How do I know if my child needs counseling?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Do parents participate in child counseling?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Do you support teens as well as younger children?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/co-parenting/",
+      "title": "/Co Parenting/",
+      "pageFamily": "specialty",
+      "templateFamily": "specialty",
+      "facetedPageType": "specialty",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/services/co-parenting.json",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/[service].astro",
+      "seo": {
+        "canonicalUrl": "/co-parenting/",
+        "primaryKeyword": "co parenting services louisville ky",
+        "secondaryKeywords": [
+          "coparenting services louisville ky",
+          "co parenting counseling louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/court-ordered/",
+        "specialtyKind": "court-service",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/court-ordered/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/family-reunification/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/family-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/parenting-support/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[Who is co-parenting support for?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can co-parenting support help when communication is tense?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How is co-parenting support different from reunification support?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/community-based-services/",
+      "title": "/Community Based Services/",
+      "pageFamily": "broad-service-category",
+      "templateFamily": "service",
+      "facetedPageType": "broad-service-category",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/categories/community-based-services.json",
+      "routeFile": "src/pages/community-based-services/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/community-based-services/",
+        "primaryKeyword": "community based mental health services louisville ky",
+        "secondaryKeywords": [
+          "targeted case management louisville ky",
+          "community support services louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/services/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/case-management/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/community-support/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/therapy-in-your-home/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[What are community-based services?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How are community-based services different from office-based therapy?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can community-based services help with school, home, or community needs?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/community-support/",
+      "title": "/Community Support/",
+      "pageFamily": "specialty",
+      "templateFamily": "specialty",
+      "facetedPageType": "specialty",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/services/community-support.json",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/[service].astro",
+      "seo": {
+        "canonicalUrl": "/community-support/",
+        "primaryKeyword": "community support services louisville ky",
+        "secondaryKeywords": [
+          "community support associate louisville ky",
+          "medicaid community support louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/community-based-services/",
+        "specialtyKind": "community-service",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/community-based-services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/case-management/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/therapy-in-your-home/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/community/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[What is community support?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Who can benefit from community support?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How does community support connect with therapy or case management?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/compliance/",
+      "title": "/Compliance/",
+      "pageFamily": "utility",
+      "templateFamily": "legal-utility",
+      "facetedPageType": "utility",
+      "status": "current",
+      "protected": true,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/support/compliance.json",
+      "routeFile": "src/pages/compliance/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/compliance/",
+        "primaryKeyword": "mental health compliance louisville ky",
+        "secondaryKeywords": [
+          "hipaa mental health louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/privacy-policy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/terms-of-use/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/contact-us/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/insurance/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [],
+      "migrationStatus": "out-of-scope"
+    },
+    {
+      "url": "/contact-us/",
+      "title": "/Contact Us/",
+      "pageFamily": "primary-hub",
+      "templateFamily": "trust",
+      "facetedPageType": "primary-hub",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/pages/contact-us.json",
+      "routeFile": "src/pages/contact-us.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/contact-us/",
+        "primaryKeyword": "contact louisville mental health group",
+        "secondaryKeywords": [
+          "start therapy louisville ky"
+        ],
+        "schemaType": "ContactPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "",
+        "specialtyKind": "",
+        "recommendedSchemaType": "ContactPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/insurance/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/faq/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[How quickly will someone hear back?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Should I call or use the online form?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[What information should I have ready?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/couples-conflict-resolution/",
+      "title": "/Couples Conflict Resolution/",
+      "pageFamily": "concern-condition",
+      "templateFamily": "specialty",
+      "facetedPageType": "concern-condition",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/services/couples-conflict-resolution.json",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/[service].astro",
+      "seo": {
+        "canonicalUrl": "/couples-conflict-resolution/",
+        "primaryKeyword": "couples conflict resolution louisville ky",
+        "secondaryKeywords": [
+          "couples conflict therapy louisville ky",
+          "communication counseling for couples louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/couples-counseling/",
+        "specialtyKind": "concern",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/couples-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/relationship-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/family-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[Can therapy help if conflict is frequent or intense?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[What if we argue about the same things repeatedly?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Do both partners need to attend?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/couples-counseling/",
+      "title": "/Couples Counseling/",
+      "pageFamily": "broad-service-category",
+      "templateFamily": "service",
+      "facetedPageType": "broad-service-category",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/categories/couples-counseling.json",
+      "routeFile": "src/pages/couples-counseling/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/couples-counseling/",
+        "primaryKeyword": "couples counseling louisville ky",
+        "secondaryKeywords": [
+          "couples therapy louisville ky",
+          "marriage counseling louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/services/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/relationship-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/couples-conflict-resolution/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[When should couples consider counseling?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can counseling help if conflict has become frequent?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Do both partners need to be ready?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/court-ordered/",
+      "title": "/Court Ordered/",
+      "pageFamily": "broad-service-category",
+      "templateFamily": "service",
+      "facetedPageType": "broad-service-category",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/categories/court-ordered.json",
+      "routeFile": "src/pages/court-ordered/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/court-ordered/",
+        "primaryKeyword": "court ordered services louisville ky",
+        "secondaryKeywords": [
+          "family court services louisville ky",
+          "court ordered counseling louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/services/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/family-reunification/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/co-parenting/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[Are court-ordered services the same as general family therapy?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can LMHG help with reunification or co-parenting concerns?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[What should I bring or know before reaching out?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/emdr-therapy/",
+      "title": "/Emdr Therapy/",
+      "pageFamily": "specialty",
+      "templateFamily": "specialty",
+      "facetedPageType": "specialty",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/pages/emdr-therapy.json",
+      "routeFile": "src/pages/emdr-therapy/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/emdr-therapy/",
+        "primaryKeyword": "emdr therapy louisville ky",
+        "secondaryKeywords": [
+          "emdr for trauma louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/trauma-therapy/",
+        "specialtyKind": "modality",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/trauma-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/individual-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/family-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/anxiety-depression-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[What is EMDR therapy?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Who might EMDR help?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How do I ask whether EMDR is right for me?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/family-reunification/",
+      "title": "/Family Reunification/",
+      "pageFamily": "specialty",
+      "templateFamily": "specialty",
+      "facetedPageType": "specialty",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/services/family-reunification.json",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/[service].astro",
+      "seo": {
+        "canonicalUrl": "/family-reunification/",
+        "primaryKeyword": "family reunification services louisville ky",
+        "secondaryKeywords": [
+          "reunification therapy louisville ky",
+          "family reunification counseling louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/court-ordered/",
+        "specialtyKind": "court-service",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/court-ordered/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/co-parenting/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/family-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/parenting-support/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[Is reunification support only for court-ordered situations?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[What is the goal of family reunification support?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How do families start this process with LMHG?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/family-therapy/",
+      "title": "/Family Therapy/",
+      "pageFamily": "broad-service-category",
+      "templateFamily": "service",
+      "facetedPageType": "broad-service-category",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/categories/family-therapy.json",
+      "routeFile": "src/pages/family-therapy/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/family-therapy/",
+        "primaryKeyword": "family therapy louisville ky",
+        "secondaryKeywords": [
+          "family counseling louisville ky",
+          "family therapist louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/services/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/attachment-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/parenting-support/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[When should a family consider therapy?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Does everyone in the family need to attend?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can family therapy help with communication or conflict?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/faq/",
+      "title": "/Faq/",
+      "pageFamily": "primary-hub",
+      "templateFamily": "faq",
+      "facetedPageType": "primary-hub",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/pages/faq-index.json",
+      "routeFile": "src/pages/faq/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/faq/",
+        "primaryKeyword": "mental health services faq louisville ky",
+        "secondaryKeywords": [
+          "therapy faq louisville ky"
+        ],
+        "schemaType": "FAQPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "",
+        "specialtyKind": "",
+        "recommendedSchemaType": "FAQPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/faq/about-lmhg/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/faq/cost/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/faq/our-approach/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/contact-us/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/faq/about-lmhg/",
+      "title": "/Faq/About Lmhg/",
+      "pageFamily": "support",
+      "templateFamily": "faq",
+      "facetedPageType": "support",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/support/about-lmhg.json",
+      "routeFile": "src/pages/faq/about-lmhg/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/faq/about-lmhg/",
+        "primaryKeyword": "about louisville mental health group",
+        "secondaryKeywords": [
+          "mental health group louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/faq/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/faq/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/meet-the-team/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/contact-us/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/faq/cost/",
+      "title": "/Faq/Cost/",
+      "pageFamily": "support",
+      "templateFamily": "faq",
+      "facetedPageType": "support",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/support/cost.json",
+      "routeFile": "src/pages/faq/cost/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/faq/cost/",
+        "primaryKeyword": "therapy cost louisville ky",
+        "secondaryKeywords": [
+          "medicaid therapy louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/faq/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/insurance/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/faq/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/contact-us/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/faq/our-approach/",
+      "title": "/Faq/Our Approach/",
+      "pageFamily": "support",
+      "templateFamily": "faq",
+      "facetedPageType": "support",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/support/our-approach.json",
+      "routeFile": "src/pages/faq/our-approach/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/faq/our-approach/",
+        "primaryKeyword": "louisville mental health group approach",
+        "secondaryKeywords": [
+          "team based mental health care louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/faq/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/faq/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/specialties/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/emdr-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/group-therapy/",
+      "title": "/Group Therapy/",
+      "pageFamily": "broad-service-category",
+      "templateFamily": "service",
+      "facetedPageType": "broad-service-category",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/categories/group-therapy.json",
+      "routeFile": "src/pages/group-therapy/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/group-therapy/",
+        "primaryKeyword": "group therapy louisville ky",
+        "secondaryKeywords": [
+          "group counseling louisville ky",
+          "therapy groups louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/services/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [],
+      "faqItems": [
+        {
+          "question": "[Is group therapy right for me?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Is group therapy a replacement for individual counseling?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How do I find out what groups are currently available?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/individual-counseling/",
+      "title": "/Individual Counseling/",
+      "pageFamily": "broad-service-category",
+      "templateFamily": "service",
+      "facetedPageType": "broad-service-category",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/categories/individual-counseling.json",
+      "routeFile": "src/pages/individual-counseling/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/individual-counseling/",
+        "primaryKeyword": "individual therapy louisville ky",
+        "secondaryKeywords": [
+          "individual counseling louisville ky",
+          "adult therapy louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/services/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/adult-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/anxiety-depression-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[Who is individual counseling for?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can individual counseling help with anxiety, depression, or stress?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How do I start individual counseling in Louisville?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/insurance/",
+      "title": "/Insurance/",
+      "pageFamily": "secondary-footer",
+      "templateFamily": "trust",
+      "facetedPageType": "secondary-footer",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/pages/insurance.json",
+      "routeFile": "src/pages/insurance/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/insurance/",
+        "primaryKeyword": "medicaid mental health services louisville ky",
+        "secondaryKeywords": [
+          "medicaid counseling louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/faq/cost/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/contact-us/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/individual-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[What insurance does LMHG accept?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can LMHG confirm my coverage?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Is private pay available?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/jefferson-county-ky/",
+      "title": "/Jefferson County Ky/",
+      "pageFamily": "service-area",
+      "templateFamily": "location-access",
+      "facetedPageType": "service-area",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/service-areas/jefferson-county-ky.json",
+      "routeFile": "src/pages/jefferson-county-ky/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/jefferson-county-ky/",
+        "primaryKeyword": "mental health services jefferson county ky",
+        "secondaryKeywords": [
+          "therapy jefferson county ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/locations/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/locations/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/louisville-ky/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/community-based-services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[Does LMHG serve Jefferson County?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[What kinds of services are available for Jefferson County clients?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How do I contact LMHG from Jefferson County?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/locations/",
+      "title": "/Locations/",
+      "pageFamily": "primary-hub",
+      "templateFamily": "location-access",
+      "facetedPageType": "primary-hub",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/pages/locations.json",
+      "routeFile": "src/pages/locations/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/locations/",
+        "primaryKeyword": "mental health services near louisville ky",
+        "secondaryKeywords": [
+          "louisville mental health practice"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/louisville-ky/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/in-person/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/online/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/in-home/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[Where is LMHG located?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Does LMHG offer therapy outside the office?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Which counties or areas does LMHG serve?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/locations/community/",
+      "title": "/Locations/Community/",
+      "pageFamily": "contextual-parent",
+      "templateFamily": "location-access",
+      "facetedPageType": "contextual-parent",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/care-settings/community.json",
+      "routeFile": "src/pages/locations/community/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/locations/community/",
+        "primaryKeyword": "community based mental health care louisville ky",
+        "secondaryKeywords": [
+          "community mental health support louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/locations/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/community-support/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/community-based-services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/in-home/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[What does community-based support mean?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Who is community support for?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How do I ask whether this setting is available?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/locations/in-home/",
+      "title": "/Locations/In Home/",
+      "pageFamily": "contextual-parent",
+      "templateFamily": "location-access",
+      "facetedPageType": "contextual-parent",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/care-settings/in-home.json",
+      "routeFile": "src/pages/locations/in-home/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/locations/in-home/",
+        "primaryKeyword": "in home mental health services louisville ky",
+        "secondaryKeywords": [
+          "home based mental health services louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/locations/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/community-based-services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/community/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/community-support/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[When is in-home care considered?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Is in-home care available for every service?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How do I ask whether in-home care is available?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/locations/in-person/",
+      "title": "/Locations/In Person/",
+      "pageFamily": "contextual-parent",
+      "templateFamily": "location-access",
+      "facetedPageType": "contextual-parent",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/care-settings/in-person.json",
+      "routeFile": "src/pages/locations/in-person/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/locations/in-person/",
+        "primaryKeyword": "in person counseling louisville ky",
+        "secondaryKeywords": [
+          "in office therapy louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/locations/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/locations/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/louisville-ky/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/contact-us/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[Where is the office?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Who is in-person therapy best for?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can I switch between in-person and online care?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/locations/online/",
+      "title": "/Locations/Online/",
+      "pageFamily": "contextual-parent",
+      "templateFamily": "location-access",
+      "facetedPageType": "contextual-parent",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/care-settings/online.json",
+      "routeFile": "src/pages/locations/online/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/locations/online/",
+        "primaryKeyword": "online therapy kentucky",
+        "secondaryKeywords": [
+          "telehealth counseling kentucky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/locations/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/locations/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/individual-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/insurance/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[Is online therapy available in Kentucky?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Who is online therapy a good fit for?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[What do I need for online therapy?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/locations/school/",
+      "title": "/Locations/School/",
+      "pageFamily": "contextual-parent",
+      "templateFamily": "location-access",
+      "facetedPageType": "contextual-parent",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/care-settings/school.json",
+      "routeFile": "src/pages/locations/school/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/locations/school/",
+        "primaryKeyword": "school based mental health support louisville ky",
+        "secondaryKeywords": [
+          "school counseling support louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/locations/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/child-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/adolescent-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/child-behavioral-intervention/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/parenting-support/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[When is school-based support appropriate?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Does LMHG coordinate with schools?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How do parents ask about school-related support?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/louisville-ky/",
+      "title": "/Louisville Ky/",
+      "pageFamily": "service-area",
+      "templateFamily": "location-access",
+      "facetedPageType": "service-area",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/service-areas/louisville-ky.json",
+      "routeFile": "src/pages/louisville-ky.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/louisville-ky/",
+        "primaryKeyword": "louisville mental health services",
+        "secondaryKeywords": [
+          "counseling louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/locations/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/locations/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/contact-us/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/insurance/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[Does LMHG serve Louisville?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[What services are available in Louisville?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can Louisville clients use online or office-based care?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/meet-the-team/",
+      "title": "/Meet The Team/",
+      "pageFamily": "primary-hub",
+      "templateFamily": "trust",
+      "facetedPageType": "primary-hub",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/pages/team-index.json",
+      "routeFile": "src/pages/meet-the-team.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/meet-the-team/",
+        "primaryKeyword": "mental health providers louisville ky",
+        "secondaryKeywords": [
+          "therapists louisville ky"
+        ],
+        "schemaType": "AboutPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "",
+        "specialtyKind": "",
+        "recommendedSchemaType": "AboutPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/specialties/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/contact-us/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/faq/about-lmhg/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[How do I choose a therapist?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can the office help match me with someone?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Are all providers available for new clients?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/oldham-county-ky/",
+      "title": "/Oldham County Ky/",
+      "pageFamily": "service-area",
+      "templateFamily": "location-access",
+      "facetedPageType": "service-area",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/service-areas/oldham-county-ky.json",
+      "routeFile": "src/pages/oldham-county-ky/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/oldham-county-ky/",
+        "primaryKeyword": "mental health services oldham county ky",
+        "secondaryKeywords": [
+          "therapy oldham county ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/locations/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/locations/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/online/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/couples-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[Does LMHG serve Oldham County?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[What care settings may be available?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How do I ask about service availability?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/parenting-support/",
+      "title": "/Parenting Support/",
+      "pageFamily": "concern-condition",
+      "templateFamily": "specialty",
+      "facetedPageType": "concern-condition",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/services/parenting-support.json",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/[service].astro",
+      "seo": {
+        "canonicalUrl": "/parenting-support/",
+        "primaryKeyword": "parenting support louisville ky",
+        "secondaryKeywords": [
+          "parenting help louisville ky",
+          "parent counseling louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/family-therapy/",
+        "specialtyKind": "concern",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/family-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/child-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/child-behavioral-intervention/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/co-parenting/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[What kinds of parenting concerns can support help with?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Is parenting support therapy for the parent, the child, or both?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can this help when home routines feel difficult?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/play-therapy/",
+      "title": "/Play Therapy/",
+      "pageFamily": "specialty",
+      "templateFamily": "specialty",
+      "facetedPageType": "specialty",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/services/play-therapy.json",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/[service].astro",
+      "seo": {
+        "canonicalUrl": "/play-therapy/",
+        "primaryKeyword": "play therapy louisville ky",
+        "secondaryKeywords": [
+          "child play therapy louisville ky",
+          "play therapist louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/child-counseling/",
+        "specialtyKind": "child-service",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/child-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/child-behavioral-intervention/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/parenting-support/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/family-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[What is play therapy?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Is play therapy just playing?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Are parents or caregivers involved?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/privacy-policy/",
+      "title": "/Privacy Policy/",
+      "pageFamily": "utility",
+      "templateFamily": "legal-utility",
+      "facetedPageType": "utility",
+      "status": "current",
+      "protected": true,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/support/privacy-policy.json",
+      "routeFile": "src/pages/privacy-policy/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/privacy-policy/",
+        "primaryKeyword": "privacy policy louisville mental health group",
+        "secondaryKeywords": [
+          "lmhg privacy policy"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/compliance/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/terms-of-use/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/contact-us/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/faq/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [],
+      "migrationStatus": "out-of-scope"
+    },
+    {
+      "url": "/relationship-counseling/",
+      "title": "/Relationship Counseling/",
+      "pageFamily": "specialty",
+      "templateFamily": "specialty",
+      "facetedPageType": "specialty",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/services/relationship-counseling.json",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/[service].astro",
+      "seo": {
+        "canonicalUrl": "/relationship-counseling/",
+        "primaryKeyword": "relationship counseling louisville ky",
+        "secondaryKeywords": [
+          "relationship therapy louisville ky",
+          "counseling for relationship problems louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/couples-counseling/",
+        "specialtyKind": "relationship",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/couples-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/couples-conflict-resolution/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/family-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[What relationship concerns can counseling help with?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Is this only for couples?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[What if communication has already broken down?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/reviews/",
+      "title": "/Reviews/",
+      "pageFamily": "secondary-footer",
+      "templateFamily": "trust",
+      "facetedPageType": "secondary-footer",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/pages/reviews.json",
+      "routeFile": "src/pages/reviews.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/reviews/",
+        "primaryKeyword": "louisville mental health group reviews",
+        "secondaryKeywords": [
+          "therapy reviews louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/contact-us/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/meet-the-team/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/faq/about-lmhg/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[Where can I read LMHG reviews?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can reviews tell me whether therapy will work for me?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How should I use reviews when choosing care?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/services/",
+      "title": "/Services/",
+      "pageFamily": "primary-hub",
+      "templateFamily": "service",
+      "facetedPageType": "primary-hub",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/pages/services.json",
+      "routeFile": "src/pages/services/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/services/",
+        "primaryKeyword": "mental health services louisville ky",
+        "secondaryKeywords": [
+          "therapy and counseling louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/individual-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/child-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/family-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/couples-counseling/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/court-ordered/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 5,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/community-based-services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 6,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/group-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 7,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/trauma-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 8,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[How do I know which service to choose?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can the office help me decide?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Are these services available in Louisville?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/specialties/",
+      "title": "/Specialties/",
+      "pageFamily": "primary-hub",
+      "templateFamily": "specialty",
+      "facetedPageType": "primary-hub",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/pages/specialties.json",
+      "routeFile": "src/pages/specialties/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/specialties/",
+        "primaryKeyword": "mental health specialties louisville ky",
+        "secondaryKeywords": [
+          "emdr therapy louisville ky; play therapy louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/emdr-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/play-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/community-support/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/family-reunification/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/anxiety-depression-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 5,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[What counts as a specialty at LMHG?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Should I start with a specialty page or a service page?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Can I ask the office which page fits my situation?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/terms-of-use/",
+      "title": "/Terms Of Use/",
+      "pageFamily": "utility",
+      "templateFamily": "legal-utility",
+      "facetedPageType": "utility",
+      "status": "current",
+      "protected": true,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/support/terms-of-use.json",
+      "routeFile": "src/pages/terms-of-use/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/terms-of-use/",
+        "primaryKeyword": "terms of use louisville mental health group",
+        "secondaryKeywords": [
+          "lmhg terms of use"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "keyword-guidance"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/privacy-policy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/compliance/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/contact-us/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/faq/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [],
+      "migrationStatus": "out-of-scope"
+    },
+    {
+      "url": "/therapy-in-your-home/",
+      "title": "/Therapy In Your Home/",
+      "pageFamily": "specialty",
+      "templateFamily": "specialty",
+      "facetedPageType": "specialty",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/services/therapy-in-your-home.json",
+      "routeFile": "",
+      "dynamicRouteFile": "src/pages/[service].astro",
+      "seo": {
+        "canonicalUrl": "/therapy-in-your-home/",
+        "primaryKeyword": "in home therapy louisville ky",
+        "secondaryKeywords": [
+          "therapy in your home louisville ky",
+          "home based mental health services louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/community-based-services/",
+        "specialtyKind": "support-service",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/community-based-services/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/case-management/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 2,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/community-support/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 3,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/in-home/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 4,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        },
+        {
+          "targetPageUrl": "/locations/community/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 5,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[When is therapy in the home appropriate?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[How is home-based therapy different from office therapy?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Is home-based therapy available everywhere?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    },
+    {
+      "url": "/trauma-therapy/",
+      "title": "/Trauma Therapy/",
+      "pageFamily": "broad-service-category",
+      "templateFamily": "service",
+      "facetedPageType": "broad-service-category",
+      "status": "current",
+      "protected": false,
+      "sourceFile": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+      "implementationTarget": "src/data/copy/categories/trauma-therapy.json",
+      "routeFile": "src/pages/trauma-therapy/index.astro",
+      "dynamicRouteFile": "",
+      "seo": {
+        "canonicalUrl": "/trauma-therapy/",
+        "primaryKeyword": "trauma therapy louisville ky",
+        "secondaryKeywords": [
+          "trauma-focused therapy louisville ky",
+          "ptsd therapy louisville ky"
+        ],
+        "schemaType": "MedicalWebPage",
+        "noindex": false,
+        "status": "current"
+      },
+      "relationship": {
+        "primaryParentPageUrl": "/services/",
+        "specialtyKind": "",
+        "recommendedSchemaType": "MedicalWebPage",
+        "sourceFile": "docs/copywriting/page-copy-workbook.md"
+      },
+      "relatedPages": [
+        {
+          "targetPageUrl": "/emdr-therapy/",
+          "relationshipBucket": "keyword-map",
+          "label": "",
+          "sortOrder": 1,
+          "avoidLink": false,
+          "source": "docs/seo/lmhg-page-keyword-map-2026-05-30.csv",
+          "truthSource": "relationship"
+        }
+      ],
+      "faqItems": [
+        {
+          "question": "[What is trauma therapy?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 1,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Is trauma therapy the same as EMDR?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 2,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        },
+        {
+          "question": "[Do I have to talk about everything that happened right away?]",
+          "schemaEligible": true,
+          "optional": false,
+          "sortOrder": 3,
+          "status": "workbook-prompt",
+          "sourceFile": "docs/copywriting/page-copy-workbook.md"
+        }
+      ],
+      "migrationStatus": "needs-copy-model"
+    }
+  ],
+  "sourceOnlyRoutes": [
+    {
+      "url": "/review/nocobase-content/",
+      "routeFile": "src/pages/review/nocobase-content.astro",
+      "dynamic": false,
+      "migrationStatus": "out-of-scope"
+    }
+  ],
+  "dynamicRoutes": [
+    {
+      "file": "src/pages/[service].astro",
+      "url": null,
+      "dynamic": true,
+      "generatedByDynamicRoute": true
+    },
+    {
+      "file": "src/pages/articles/[slug].astro",
+      "url": null,
+      "dynamic": true,
+      "generatedByDynamicRoute": true
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/family-therapy",
+      "target": "/family-therapy/",
+      "statusCode": "301",
+      "section": "Slashless canonicalization for current service pages",
+      "lineNumber": 8,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/group-therapy",
+      "target": "/group-therapy/",
+      "statusCode": "301",
+      "section": "Slashless canonicalization for current service pages",
+      "lineNumber": 9,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/trauma-therapy",
+      "target": "/trauma-therapy/",
+      "statusCode": "301",
+      "section": "Slashless canonicalization for current service pages",
+      "lineNumber": 10,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/play-therapy",
+      "target": "/play-therapy/",
+      "statusCode": "301",
+      "section": "Slashless canonicalization for current service pages",
+      "lineNumber": 11,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/community-support",
+      "target": "/community-support/",
+      "statusCode": "301",
+      "section": "Slashless canonicalization for current service pages",
+      "lineNumber": 12,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/community-based-services",
+      "target": "/community-based-services/",
+      "statusCode": "301",
+      "section": "Slashless canonicalization for current service pages",
+      "lineNumber": 13,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/case-management",
+      "target": "/case-management/",
+      "statusCode": "301",
+      "section": "Slashless canonicalization for current service pages",
+      "lineNumber": 14,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/co-parenting",
+      "target": "/co-parenting/",
+      "statusCode": "301",
+      "section": "Slashless canonicalization for current service pages",
+      "lineNumber": 15,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/court-ordered",
+      "target": "/court-ordered/",
+      "statusCode": "301",
+      "section": "Slashless canonicalization for current service pages",
+      "lineNumber": 16,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/individual-therapy",
+      "target": "/individual-counseling/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 19,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/individual-therapy/",
+      "target": "/individual-counseling/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 20,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/family-counseling",
+      "target": "/family-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 21,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/family-counseling/",
+      "target": "/family-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 22,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/child-therapy",
+      "target": "/child-counseling/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 23,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/child-therapy/",
+      "target": "/child-counseling/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 24,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/couples-therapy",
+      "target": "/couples-counseling/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 25,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/couples-therapy/",
+      "target": "/couples-counseling/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 26,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/anxiety-treatment",
+      "target": "/anxiety-depression-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 27,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/anxiety-treatment/",
+      "target": "/anxiety-depression-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 28,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/depression-treatment",
+      "target": "/anxiety-depression-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 29,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/depression-treatment/",
+      "target": "/anxiety-depression-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 30,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/trauma-treatment",
+      "target": "/trauma-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 31,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/trauma-treatment/",
+      "target": "/trauma-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 32,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/private-counseling",
+      "target": "/attachment-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 33,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/private-counseling/",
+      "target": "/attachment-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 34,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/community-support-associates",
+      "target": "/community-support/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 35,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/community-support-associates/",
+      "target": "/community-support/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 36,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/coparenting-services",
+      "target": "/co-parenting/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 37,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/coparenting-services/",
+      "target": "/co-parenting/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 38,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/co-parenting-services",
+      "target": "/co-parenting/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 39,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/co-parenting-services/",
+      "target": "/co-parenting/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 40,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/family-court",
+      "target": "/court-ordered/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 42,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/family-court/",
+      "target": "/court-ordered/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 43,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/family-court-services",
+      "target": "/court-ordered/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 44,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/family-court-services/",
+      "target": "/court-ordered/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 45,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/court-ordered-evaluations",
+      "target": "/court-ordered/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 46,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/court-ordered-evaluations/",
+      "target": "/court-ordered/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 47,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/court-ordered-treatment",
+      "target": "/court-ordered/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 48,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/court-ordered-treatment/",
+      "target": "/court-ordered/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 49,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/family-rebuilding",
+      "target": "/family-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 50,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/family-rebuilding/",
+      "target": "/family-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 51,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/trauma-focused-emdr",
+      "target": "/emdr-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 52,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/trauma-focused-emdr/",
+      "target": "/emdr-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 53,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/emdr-for-ptsd",
+      "target": "/emdr-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 54,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/emdr-for-ptsd/",
+      "target": "/emdr-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 55,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/emdr-for-anxiety",
+      "target": "/emdr-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 56,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/emdr-for-anxiety/",
+      "target": "/emdr-therapy/",
+      "statusCode": "301",
+      "section": "Legacy therapy-entry pages -> current category/service structure",
+      "lineNumber": 57,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations",
+      "target": "/locations/",
+      "statusCode": "301",
+      "section": "Trailing slash redirects for kept pages",
+      "lineNumber": 63,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/in-person",
+      "target": "/locations/in-person/",
+      "statusCode": "301",
+      "section": "Trailing slash redirects for kept pages",
+      "lineNumber": 64,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/community",
+      "target": "/locations/community/",
+      "statusCode": "301",
+      "section": "Trailing slash redirects for kept pages",
+      "lineNumber": 65,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/in-home",
+      "target": "/locations/in-home/",
+      "statusCode": "301",
+      "section": "Trailing slash redirects for kept pages",
+      "lineNumber": 66,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/online",
+      "target": "/locations/online/",
+      "statusCode": "301",
+      "section": "Trailing slash redirects for kept pages",
+      "lineNumber": 67,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/school",
+      "target": "/locations/school/",
+      "statusCode": "301",
+      "section": "Trailing slash redirects for kept pages",
+      "lineNumber": 68,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/louisville-ky",
+      "target": "/louisville-ky/",
+      "statusCode": "301",
+      "section": "Trailing slash redirects for kept pages",
+      "lineNumber": 69,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/in-office",
+      "target": "/locations/in-person/",
+      "statusCode": "301",
+      "section": "Legacy care setting URLs -> canonical location structure",
+      "lineNumber": 72,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/in-office/",
+      "target": "/locations/in-person/",
+      "statusCode": "301",
+      "section": "Legacy care setting URLs -> canonical location structure",
+      "lineNumber": 73,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/in-the-community",
+      "target": "/locations/community/",
+      "statusCode": "301",
+      "section": "Legacy care setting URLs -> canonical location structure",
+      "lineNumber": 74,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/in-the-community/",
+      "target": "/locations/community/",
+      "statusCode": "301",
+      "section": "Legacy care setting URLs -> canonical location structure",
+      "lineNumber": 75,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/in-your-home",
+      "target": "/locations/in-home/",
+      "statusCode": "301",
+      "section": "Legacy care setting URLs -> canonical location structure",
+      "lineNumber": 76,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/in-your-home/",
+      "target": "/locations/in-home/",
+      "statusCode": "301",
+      "section": "Legacy care setting URLs -> canonical location structure",
+      "lineNumber": 77,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/office",
+      "target": "/locations/in-person/",
+      "statusCode": "301",
+      "section": "Legacy care setting URLs -> canonical location structure",
+      "lineNumber": 78,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/office/",
+      "target": "/locations/in-person/",
+      "statusCode": "301",
+      "section": "Legacy care setting URLs -> canonical location structure",
+      "lineNumber": 79,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/home",
+      "target": "/locations/in-home/",
+      "statusCode": "301",
+      "section": "Legacy care setting URLs -> canonical location structure",
+      "lineNumber": 80,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/home/",
+      "target": "/locations/in-home/",
+      "statusCode": "301",
+      "section": "Legacy care setting URLs -> canonical location structure",
+      "lineNumber": 81,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/telehealth",
+      "target": "/locations/online/",
+      "statusCode": "301",
+      "section": "Legacy care setting URLs -> canonical location structure",
+      "lineNumber": 82,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/locations/telehealth/",
+      "target": "/locations/online/",
+      "statusCode": "301",
+      "section": "Legacy care setting URLs -> canonical location structure",
+      "lineNumber": 83,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/jefferson-county-ky",
+      "target": "/jefferson-county-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 86,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/bullitt-county-ky",
+      "target": "/bullitt-county-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 87,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/oldham-county-ky",
+      "target": "/oldham-county-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 88,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/clarksville-in",
+      "target": "/locations/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 89,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/clarksville-in/",
+      "target": "/locations/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 90,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/clarksville-ky",
+      "target": "/locations/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 91,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/clarksville-ky/",
+      "target": "/locations/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 92,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/jeffersonville-in",
+      "target": "/locations/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 93,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/jeffersonville-in/",
+      "target": "/locations/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 94,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/new-albany-in",
+      "target": "/locations/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 95,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/new-albany-in/",
+      "target": "/locations/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 96,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/jeffersontown-ky",
+      "target": "/jefferson-county-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 97,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/jeffersontown-ky/",
+      "target": "/jefferson-county-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 98,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/shively-ky",
+      "target": "/jefferson-county-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 99,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/shively-ky/",
+      "target": "/jefferson-county-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 100,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/prospect-ky",
+      "target": "/oldham-county-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 101,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/prospect-ky/",
+      "target": "/oldham-county-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 102,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/jeffersonville-ky",
+      "target": "/louisville-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 103,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/jeffersonville-ky/",
+      "target": "/louisville-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 104,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/springhurst-ky",
+      "target": "/louisville-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 105,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/springhurst-ky/",
+      "target": "/louisville-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 106,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/crestwood-ky",
+      "target": "/louisville-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 107,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/crestwood-ky/",
+      "target": "/louisville-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 108,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/taylorsville-ky",
+      "target": "/louisville-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 109,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/taylorsville-ky/",
+      "target": "/louisville-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 110,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/bardstown-ky",
+      "target": "/locations/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 111,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/bardstown-ky/",
+      "target": "/locations/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 112,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/la-grange-ky",
+      "target": "/louisville-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 113,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/la-grange-ky/",
+      "target": "/louisville-ky/",
+      "statusCode": "301",
+      "section": "Legacy city/county location pages -> current service area pages",
+      "lineNumber": 114,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/meet-the-team",
+      "target": "/meet-the-team/",
+      "statusCode": "301",
+      "section": "OTHER PAGE RENAMES",
+      "lineNumber": 119,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/reviews",
+      "target": "/reviews/",
+      "statusCode": "301",
+      "section": "OTHER PAGE RENAMES",
+      "lineNumber": 120,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/contact-us",
+      "target": "/contact-us/",
+      "statusCode": "301",
+      "section": "OTHER PAGE RENAMES",
+      "lineNumber": 121,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/we-are-hiring",
+      "target": "/careers/",
+      "statusCode": "301",
+      "section": "Careers page moved",
+      "lineNumber": 124,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/we-are-hiring/",
+      "target": "/careers/",
+      "statusCode": "301",
+      "section": "Careers page moved",
+      "lineNumber": 125,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/what-we-do",
+      "target": "/services/",
+      "statusCode": "301",
+      "section": "Content migration",
+      "lineNumber": 128,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/what-we-do/",
+      "target": "/services/",
+      "statusCode": "301",
+      "section": "Content migration",
+      "lineNumber": 129,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/blogs",
+      "target": "/articles/",
+      "statusCode": "301",
+      "section": "Content migration",
+      "lineNumber": 130,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/blogs/",
+      "target": "/articles/",
+      "statusCode": "301",
+      "section": "Content migration",
+      "lineNumber": 131,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/how-to-talk-to-your-loved-ones-about-going-to-therapy",
+      "target": "/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/",
+      "statusCode": "301",
+      "section": "Content migration",
+      "lineNumber": 132,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/how-to-talk-to-your-loved-ones-about-going-to-therapy/",
+      "target": "/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/",
+      "statusCode": "301",
+      "section": "Content migration",
+      "lineNumber": 133,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/family-therapy-vs-individual-therapy",
+      "target": "/articles/family-therapy-vs-individual-therapy/",
+      "statusCode": "301",
+      "section": "Content migration",
+      "lineNumber": 134,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/family-therapy-vs-individual-therapy/",
+      "target": "/articles/family-therapy-vs-individual-therapy/",
+      "statusCode": "301",
+      "section": "Content migration",
+      "lineNumber": 135,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/top-5-signs-its-time-to-seek-therapy",
+      "target": "/articles/top-5-signs-its-time-to-seek-therapy/",
+      "statusCode": "301",
+      "section": "Content migration",
+      "lineNumber": 136,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/top-5-signs-its-time-to-seek-therapy/",
+      "target": "/articles/top-5-signs-its-time-to-seek-therapy/",
+      "statusCode": "301",
+      "section": "Content migration",
+      "lineNumber": 137,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/guide-to-individual-therapy",
+      "target": "/articles/guide-to-individual-therapy/",
+      "statusCode": "301",
+      "section": "Content migration",
+      "lineNumber": 138,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/guide-to-individual-therapy/",
+      "target": "/articles/guide-to-individual-therapy/",
+      "statusCode": "301",
+      "section": "Content migration",
+      "lineNumber": 139,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/our-services",
+      "target": "/services/",
+      "statusCode": "301",
+      "section": "Our Services -> Services hub",
+      "lineNumber": 142,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/our-services/",
+      "target": "/services/",
+      "statusCode": "301",
+      "section": "Our Services -> Services hub",
+      "lineNumber": 143,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/about",
+      "target": "/meet-the-team/",
+      "statusCode": "301",
+      "section": "LEGACY REDIRECTS (from old site)",
+      "lineNumber": 148,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/blog",
+      "target": "/",
+      "statusCode": "301",
+      "section": "LEGACY REDIRECTS (from old site)",
+      "lineNumber": 149,
+      "migrationStatus": "redirect-only"
+    },
+    {
+      "source": "/career",
+      "target": "/careers/",
+      "statusCode": "301",
+      "section": "LEGACY REDIRECTS (from old site)",
+      "lineNumber": 150,
+      "migrationStatus": "redirect-only"
+    }
+  ],
+  "migrationStatusCounts": {
+    "needs-copy-model": 52,
+    "out-of-scope": 3
+  }
+}

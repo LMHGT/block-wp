@@ -12,6 +12,7 @@
     "check:static": "node tools/check-static.mjs",
     "check:prereqs": "node tools/check-prereqs.mjs",
     "check:prereqs:strict": "node tools/check-prereqs.mjs --strict",
+    "inventory:astro": "node tools/export-astro-inventory.mjs",
     "setup:browsers": "playwright install chromium",
     "wp-env:start": "wp-env start",
     "wp-env:stop": "wp-env stop",
