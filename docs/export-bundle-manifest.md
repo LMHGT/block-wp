@@ -1,6 +1,6 @@
 # First Slice Export Bundle Manifest
 
-Date: 2026-06-27T21:09:02.291Z
+Date: 2026-06-27T21:12:24.948Z
 
 This manifest defines the exportable source package for the first editable
 Gutenberg migration slice. It is not a database dump and does not contain
@@ -54,7 +54,7 @@ wp lmhg import-block-manifest data/lmhg/block-migration/first-slice-block-manife
 | wp-content/plugins/lmhg-site-core/includes/rendering.php | 18716 | 98039970206a |
 | wp-content/plugins/lmhg-site-core/includes/seo.php | 12621 | 336cb33c2005 |
 | wp-content/plugins/lmhg-site-core/includes/taxonomies.php | 3707 | 37fae4f59d16 |
-| wp-content/plugins/lmhg-site-core/lmhg-site-core.php | 2076 | 9aed806e2974 |
+| wp-content/plugins/lmhg-site-core/lmhg-site-core.php | 2369 | 9d41632b8671 |
 | wp-content/themes/lmhg-block-theme/assets/css/blocks/navigation.css | 293 | 9d7e181b1d2b |
 | wp-content/themes/lmhg-block-theme/functions.php | 673 | 4547f2cb879b |
 | wp-content/themes/lmhg-block-theme/parts/footer.html | 1052 | e0f66013f509 |

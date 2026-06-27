@@ -55,14 +55,21 @@ function lmhg_site_core_tailnet_url_for_serve( mixed $value ): mixed {
 		return $value;
 	}
 
-	$host = isset( $_SERVER['HTTP_X_FORWARDED_HOST'] )
+	$request_host = isset( $_SERVER['HTTP_X_FORWARDED_HOST'] )
 		? sanitize_text_field( wp_unslash( $_SERVER['HTTP_X_FORWARDED_HOST'] ) )
 		: sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ?? '' ) );
 
-	$host = preg_replace( '/:\d+$/', '', $host );
+	$host = preg_replace( '/:\d+$/', '', $request_host );
 
 	if ( $tailnet_host !== $host ) {
 		return $value;
+	}
+
+	$forwarded_proto = sanitize_text_field( wp_unslash( $_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '' ) );
+	$scheme = is_ssl() || 'https' === strtolower( $forwarded_proto ) ? 'https' : 'http';
+
+	if ( str_contains( $request_host, ':' ) ) {
+		return $scheme . '://' . $request_host;
 	}
 
 	return 'https://' . $tailnet_host;
