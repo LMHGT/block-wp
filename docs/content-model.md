@@ -177,7 +177,8 @@ Expected behavior:
 - store manifest redirect rules in the plugin-owned `lmhg_route_redirects`
   option for front-end redirect handling
 - render source SEO titles, canonical URLs, meta descriptions, robots directives,
-  and JSON-LD schema types from plugin-owned metadata
+  JSON-LD schema types, FAQPage nodes, and graph-derived BreadcrumbList nodes
+  from plugin-owned metadata
 - assign LMHG custom taxonomy terms from route-manifest page family, template
   family, faceted type, schema type, migration status, and SEO status
 - set the WordPress front page

@@ -68,7 +68,8 @@ routes and rejects redirect-only or unsupported service-area/city URLs.
 `verify:lmhg-actions` checks the rendered sitewide Reach Out CTA and active
 phone link against the current Astro source values.
 `verify:lmhg-head` checks rendered canonical paths, source SEO titles and
-descriptions, and JSON-LD schema types. `verify:lmhg-markers` checks rendered
+descriptions, JSON-LD schema types, FAQPage structure, and BreadcrumbList
+fields. `verify:lmhg-markers` checks rendered
 Workbench-style markers, graph breadcrumbs, related links, and FAQ readiness
 markers.
 

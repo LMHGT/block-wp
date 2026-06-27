@@ -137,6 +137,7 @@ function lmhg_site_core_output_json_ld(): void {
 		$schema_type = '' !== $schema_type ? $schema_type : ( is_front_page() ? 'WebPage' : 'Article' );
 		$headline    = wp_strip_all_tags( get_the_title( $post_id ) );
 		$canonical   = lmhg_site_core_imported_canonical_url( $post_id );
+		$route       = lmhg_site_core_route_manifest_entry( $post_id );
 
 		$page_graph = array(
 			'@context'     => 'https://schema.org',
@@ -152,29 +153,36 @@ function lmhg_site_core_output_json_ld(): void {
 			'dateModified' => get_the_modified_date( DATE_W3C, $post_id ),
 		);
 
-		$faq_items = lmhg_site_core_publishable_faq_items( lmhg_site_core_route_manifest_entry( $post_id ) );
-		if ( empty( $faq_items ) ) {
+		$graph_nodes = array( $page_graph );
+		$breadcrumb = lmhg_site_core_breadcrumb_json_ld( $post_id, $route, $canonical );
+		if ( ! empty( $breadcrumb ) ) {
+			$graph_nodes[] = $breadcrumb;
+		}
+
+		$faq_items = lmhg_site_core_publishable_faq_items( $route );
+		if ( empty( $faq_items ) && 1 === count( $graph_nodes ) ) {
 			$graph = $page_graph;
 		} else {
+			if ( ! empty( $faq_items ) ) {
+				$graph_nodes[] = array(
+					'@type'      => 'FAQPage',
+					'mainEntity' => array_map(
+						static fn( array $item ): array => array(
+							'@type'          => 'Question',
+							'name'           => $item['question'],
+							'acceptedAnswer' => array(
+								'@type' => 'Answer',
+								'text'  => $item['answer'],
+							),
+						),
+						$faq_items
+					),
+				);
+			}
+
 			$graph = array(
 				'@context' => 'https://schema.org',
-				'@graph'   => array(
-					$page_graph,
-					array(
-						'@type'      => 'FAQPage',
-						'mainEntity' => array_map(
-							static fn( array $item ): array => array(
-								'@type'          => 'Question',
-								'name'           => $item['question'],
-								'acceptedAnswer' => array(
-									'@type' => 'Answer',
-									'text'  => $item['answer'],
-								),
-							),
-							$faq_items
-						),
-					),
-				),
+				'@graph'   => $graph_nodes,
 			);
 		}
 	}
@@ -182,6 +190,56 @@ function lmhg_site_core_output_json_ld(): void {
 	printf(
 		'<script type="application/ld+json">%s</script>' . "\n",
 		wp_json_encode( $graph, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE )
+	);
+}
+
+/**
+ * Builds graph-derived BreadcrumbList JSON-LD for imported pages.
+ *
+ * @param int                 $post_id Post ID.
+ * @param array<string,mixed> $route Route manifest entry.
+ * @param string              $canonical Canonical URL.
+ * @return array<string,mixed>
+ */
+function lmhg_site_core_breadcrumb_json_ld( int $post_id, array $route, string $canonical ): array {
+	$source_url = trim( (string) get_post_meta( $post_id, '_lmhg_source_url', true ) );
+	if ( '' === $source_url || '/' === $source_url ) {
+		return array();
+	}
+
+	$crumbs = array(
+		array(
+			'name' => 'Home',
+			'item' => home_url( '/' ),
+		),
+	);
+
+	$relationship = isset( $route['relationship'] ) && is_array( $route['relationship'] ) ? $route['relationship'] : array();
+	$parent_url = trim( (string) ( $relationship['primaryParentPageUrl'] ?? '' ) );
+	if ( '' !== $parent_url && '/' !== $parent_url && $parent_url !== $source_url ) {
+		$crumbs[] = array(
+			'name' => lmhg_site_core_title_for_source_url( $parent_url ),
+			'item' => home_url( '/' . ltrim( $parent_url, '/' ) ),
+		);
+	}
+
+	$crumbs[] = array(
+		'name' => wp_strip_all_tags( get_the_title( $post_id ) ),
+		'item' => '' !== $canonical ? $canonical : get_permalink( $post_id ),
+	);
+
+	return array(
+		'@type'           => 'BreadcrumbList',
+		'itemListElement' => array_map(
+			static fn( array $crumb, int $index ): array => array(
+				'@type'    => 'ListItem',
+				'position' => $index + 1,
+				'name'     => $crumb['name'],
+				'item'     => $crumb['item'],
+			),
+			$crumbs,
+			array_keys( $crumbs )
+		),
 	);
 }
 

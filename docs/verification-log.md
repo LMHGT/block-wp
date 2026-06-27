@@ -185,7 +185,8 @@ LMHG head verification:
   "checkedSeoTitles": 22,
   "checkedMetaDescriptions": 22,
   "checkedSchemaTypes": 50,
-  "checkedFaqSchemaTypes": 1
+  "checkedFaqSchemaTypes": 1,
+  "checkedBreadcrumbLists": 50
 }
 LMHG head verification passed.
 
@@ -208,8 +209,9 @@ state, plugin-owned taxonomy registration and term assignment, front-end
 redirect responses for effective legacy redirects, canonical paths, populated
 source SEO titles/descriptions, rendered internal links that avoid redirect-only
 or unsupported service-area URLs, the sitewide IntakeQ primary CTA, active phone
-links, JSON-LD schema types, one rendered FAQ section with FAQPage schema,
-rendered graph breadcrumbs, related links, and
+links, JSON-LD schema types and required fields, graph-derived BreadcrumbList
+nodes, one rendered FAQ section with FAQPage schema, rendered graph breadcrumbs,
+related links, and
 Workbench-style marker presence. It also verifies source H1 values where present
 and rejects scaffold/proof-track visible copy. FAQ answer parity remains
 incomplete for pages whose source records still contain workbook prompts; those
