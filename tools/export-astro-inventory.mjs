@@ -57,7 +57,203 @@ function cleanPlaceholder(value) {
   const trimmed = value.trim();
   if (/^\[.*\]$/.test(trimmed)) return "";
   if (trimmed === "none" || trimmed === "/none/" || trimmed === "/none") return "";
-  return trimmed;
+  return applyTemplateReplacements(trimmed);
+}
+
+function applyTemplateReplacements(value) {
+  if (!value || typeof value !== "string") return value || "";
+  const replacements = {
+    "{address}": "4229 Bardstown Rd, Suite 310, Louisville, KY 40218",
+    "{neighborhoods}": "Highlands, St. Matthews, Germantown, Clifton, Crescent Hill",
+    "{counties}": "Jefferson County, Bullitt County, Oldham County"
+  };
+
+  return Object.entries(replacements).reduce(
+    (text, [token, replacement]) => text.replaceAll(token, replacement),
+    value
+  );
+}
+
+function isRenderableCopyString(key, value) {
+  if (!value || typeof value !== "string") return false;
+  const trimmed = cleanPlaceholder(value);
+  if (!trimmed || trimmed.length < 24) return false;
+  if (/^https?:\/\//.test(trimmed) || trimmed.startsWith("/") || trimmed.startsWith("tel:")) return false;
+  if (/\.(webp|png|jpg|jpeg|svg)$/i.test(trimmed)) return false;
+  if (/[{}]/.test(trimmed)) return false;
+
+  const lowerKey = String(key || "").toLowerCase();
+  const excludedKeys = new Set([
+    "slug",
+    "image",
+    "icon",
+    "heroimage",
+    "heroimagealt",
+    "href",
+    "linkhref",
+    "primaryhref",
+    "secondaryhref",
+    "seotitle",
+    "primaryhrefkind",
+    "secondarykind",
+    "valuekind",
+    "hrefkind",
+    "metakey"
+  ]);
+  return !excludedKeys.has(lowerKey);
+}
+
+function sanitizeContentValue(value) {
+  if (typeof value === "string") return cleanPlaceholder(value);
+  if (Array.isArray(value)) return value.map(sanitizeContentValue);
+  if (value && typeof value === "object") {
+    return Object.fromEntries(
+      Object.entries(value)
+        .map(([key, entryValue]) => [key, sanitizeContentValue(entryValue)])
+        .filter(([, entryValue]) => entryValue !== "" && entryValue !== null && entryValue !== undefined)
+    );
+  }
+  return value;
+}
+
+function collectTextSnippets(value, snippets = [], key = "") {
+  if (typeof value === "string") {
+    const cleaned = cleanPlaceholder(value);
+    if (isRenderableCopyString(key, cleaned) && !snippets.includes(cleaned)) snippets.push(cleaned);
+    return snippets;
+  }
+
+  if (Array.isArray(value)) {
+    for (const item of value) collectTextSnippets(item, snippets, key);
+    return snippets;
+  }
+
+  if (value && typeof value === "object") {
+    for (const [entryKey, entryValue] of Object.entries(value)) {
+      collectTextSnippets(entryValue, snippets, entryKey);
+    }
+  }
+
+  return snippets;
+}
+
+function parseFrontmatter(text) {
+  if (!text.startsWith("---")) return { frontmatter: {}, body: text };
+  const match = text.match(/^---\s*\n([\s\S]*?)\n---\s*\n?([\s\S]*)$/);
+  if (!match) return { frontmatter: {}, body: text };
+
+  const frontmatter = {};
+  for (const line of match[1].split(/\r?\n/)) {
+    const entry = line.match(/^([A-Za-z0-9_-]+):\s*(.*)$/);
+    if (!entry) continue;
+    frontmatter[entry[1]] = cleanPlaceholder(entry[2].replace(/^["']|["']$/g, ""));
+  }
+
+  return { frontmatter, body: match[2] };
+}
+
+function markdownInlineToText(value) {
+  return String(value || "")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/[*_`]+/g, "")
+    .trim();
+}
+
+function parseMarkdownBlocks(body) {
+  const blocks = [];
+  const lines = body.split(/\r?\n/);
+  let paragraph = [];
+  let list = [];
+
+  function flushParagraph() {
+    if (paragraph.length === 0) return;
+    const text = cleanPlaceholder(markdownInlineToText(paragraph.join(" ").replace(/\s+/g, " ")));
+    if (text) blocks.push({ type: "paragraph", text });
+    paragraph = [];
+  }
+
+  function flushList() {
+    if (list.length === 0) return;
+    blocks.push({ type: "list", items: list });
+    list = [];
+  }
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (!line) {
+      flushParagraph();
+      flushList();
+      continue;
+    }
+
+    const heading = line.match(/^(#{2,3})\s+(.+)$/);
+    if (heading) {
+      flushParagraph();
+      flushList();
+      blocks.push({ type: "heading", level: heading[1].length, text: cleanPlaceholder(markdownInlineToText(heading[2])) });
+      continue;
+    }
+
+    const listItem = line.match(/^-\s+(.+)$/);
+    if (listItem) {
+      flushParagraph();
+      const text = cleanPlaceholder(markdownInlineToText(listItem[1]));
+      if (text) list.push(text);
+      continue;
+    }
+
+    flushList();
+    paragraph.push(line);
+  }
+
+  flushParagraph();
+  flushList();
+
+  return blocks.filter((block) => {
+    if (block.type === "heading") return Boolean(block.text);
+    if (block.type === "paragraph") return isRenderableCopyString("paragraph", block.text);
+    if (block.type === "list") return block.items.length > 0;
+    return false;
+  });
+}
+
+function markdownTextSnippets(blocks) {
+  return blocks.flatMap((block) => {
+    if (block.type === "paragraph") return [block.text];
+    if (block.type === "list") return block.items;
+    return [];
+  }).filter((snippet) => isRenderableCopyString("markdown", snippet));
+}
+
+function extractSourceContent(file) {
+  if (!file || !exists(file)) return null;
+  const extension = path.extname(file).toLowerCase();
+  const text = readText(file);
+
+  if (extension === ".json") {
+    const data = sanitizeContentValue(JSON.parse(text));
+    const textSnippets = collectTextSnippets(data).slice(0, 18);
+    return {
+      path: file,
+      type: "json",
+      data,
+      textSnippets
+    };
+  }
+
+  if (extension === ".md" || extension === ".mdx") {
+    const parsed = parseFrontmatter(text);
+    const blocks = parseMarkdownBlocks(parsed.body);
+    return {
+      path: file,
+      type: "markdown",
+      frontmatter: sanitizeContentValue(parsed.frontmatter),
+      blocks,
+      textSnippets: markdownTextSnippets(blocks).slice(0, 18)
+    };
+  }
+
+  return null;
 }
 
 function pageFileToRoute(file) {
@@ -224,6 +420,7 @@ function main() {
       } : null,
       relatedPages: (relatedByUrl.get(url) || []).sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0)),
       faqItems: (faqByUrl.get(url) || []).sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0)),
+      sourceContent: extractSourceContent(page.implementationTarget || ""),
       migrationStatus: migrationStatusForPage(page)
     };
   });

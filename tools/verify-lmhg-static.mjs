@@ -69,6 +69,13 @@ if (!fs.existsSync(manifestPath)) {
       if (!route.pageFamily) fail(`${url} missing pageFamily`);
       if (!route.templateFamily) fail(`${url} missing templateFamily`);
       if (!route.title) fail(`${url} missing title`);
+      if (route.implementationTarget) {
+        const sourceContent = route.sourceContent && typeof route.sourceContent === "object" ? route.sourceContent : null;
+        if (!sourceContent?.path) fail(`${url} missing sourceContent path for ${route.implementationTarget}`);
+        if (!Array.isArray(sourceContent?.textSnippets) || sourceContent.textSnippets.length < 1) {
+          fail(`${url} missing sourceContent text snippets for ${route.implementationTarget}`);
+        }
+      }
     }
 
     const seo = route.seo && typeof route.seo === "object" ? route.seo : null;

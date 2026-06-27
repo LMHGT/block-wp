@@ -190,6 +190,16 @@ LMHG head verification:
 }
 LMHG head verification passed.
 
+LMHG source copy verification:
+{
+  "baseUrl": "http://localhost:8888",
+  "checkedRoutes": 51,
+  "checkedCopyRoutes": 51,
+  "checkedSnippets": 204,
+  "checkedReadinessRoutes": 0
+}
+LMHG source copy verification passed.
+
 LMHG marker verification:
 {
   "baseUrl": "http://localhost:8888",
@@ -210,8 +220,9 @@ redirect responses for effective legacy redirects, canonical paths, populated
 source SEO titles/descriptions, rendered internal links that avoid redirect-only
 or unsupported service-area URLs, the sitewide IntakeQ primary CTA, active phone
 links, JSON-LD schema types and required fields, graph-derived BreadcrumbList
-nodes, one rendered FAQ section with FAQPage schema, rendered graph breadcrumbs,
-related links, and
+nodes, 204 rendered source-copy snippet checks across all 51 public routes, one
+rendered FAQ section with FAQPage schema, rendered graph breadcrumbs, related
+links, and
 Workbench-style marker presence. It also verifies source H1 values where present
 and rejects scaffold/proof-track visible copy. FAQ answer parity remains
 incomplete for pages whose source records still contain workbook prompts; those
@@ -239,6 +250,7 @@ Representative rendered marker output:
 ```html
 <h1 data-lmhg-edit-field="page:/individual-counseling/:h1">Individual Therapy in Louisville, KY</h1>
 <section data-lmhg-edit-field="page:/individual-counseling/:summary">...</section>
+<section class="lmhg-source-copy" data-lmhg-edit-field="page:/individual-counseling/:source-content" data-lmhg-source-content-path="src/data/copy/categories/individual-counseling.json">...</section>
 <nav data-lmhg-edit-field="page:/individual-counseling/:breadcrumbs">...</nav>
 <section data-lmhg-edit-field="page:/individual-counseling/:related-pages">...</section>
 <div hidden data-lmhg-readiness-warning="faq-answer-missing" data-lmhg-faq-count="3" data-lmhg-edit-field="page:/individual-counseling/:faq-readiness"></div>
@@ -293,6 +305,7 @@ WP_BASE_URL=https://mbp.beagle-perch.ts.net npm run verify:lmhg-redirects
 WP_BASE_URL=https://mbp.beagle-perch.ts.net npm run verify:lmhg-links
 WP_BASE_URL=https://mbp.beagle-perch.ts.net npm run verify:lmhg-actions
 WP_BASE_URL=https://mbp.beagle-perch.ts.net npm run verify:lmhg-head
+WP_BASE_URL=https://mbp.beagle-perch.ts.net npm run verify:lmhg-copy
 ```
 
 Result:
@@ -304,12 +317,13 @@ LMHG redirect verification passed.
 LMHG link verification passed.
 LMHG action verification passed.
 LMHG head verification passed.
+LMHG source copy verification passed.
 ```
 
 Tailnet evidence confirms the reviewer URL is
 `https://mbp.beagle-perch.ts.net/`, not raw localhost, and that canonical,
-redirect, action, link, and JSON-LD output survive the Tailscale Serve host
-replacement.
+redirect, action, link, source-copy, and JSON-LD output survive the Tailscale
+Serve host replacement.
 
 ### Production Audit
 

@@ -58,6 +58,7 @@ npm run verify:lmhg-redirects
 npm run verify:lmhg-links
 npm run verify:lmhg-actions
 npm run verify:lmhg-head
+npm run verify:lmhg-copy
 npm run verify:lmhg-markers
 npm run verify:lmhg
 ```
@@ -73,7 +74,8 @@ routes and rejects redirect-only or unsupported service-area/city URLs.
 phone link against the current Astro source values.
 `verify:lmhg-head` checks rendered canonical paths, source SEO titles and
 descriptions, JSON-LD schema types, FAQPage structure, and BreadcrumbList
-fields. `verify:lmhg-markers` checks rendered
+fields. `verify:lmhg-copy` checks rendered source-copy snippets exported from
+Astro JSON/Markdown implementation targets. `verify:lmhg-markers` checks rendered
 Workbench-style markers, graph breadcrumbs, related links, and FAQ readiness
 markers.
 

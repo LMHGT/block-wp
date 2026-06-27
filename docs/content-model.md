@@ -3,7 +3,7 @@
 This document defines how the WordPress proof track represents the current
 Astro/NocoBase/Workbench content model.
 
-Status: Phase 3 import contract, not production parity.
+Status: import and rendered source-copy contract, not production parity.
 
 ## Source Inputs
 
@@ -110,6 +110,7 @@ Each imported page stores these post meta values:
 - `_lmhg_seo_status`
 - `_lmhg_related_pages`
 - `_lmhg_faq_items`
+- `_lmhg_source_content`
 - `_lmhg_route_manifest_entry`
 
 These values are deliberately plugin-owned. Theme templates may read them later,
@@ -134,12 +135,15 @@ truth.
 
 ## Current Import Content
 
-The Phase 3 importer creates migration stub body content. That is intentional:
-the first contract proves idempotent route creation, metadata preservation, and
-hierarchical URL shape. It does not claim copy parity.
+The importer stores migration-stub block content in `post_content`, but the
+front-end render layer replaces it for imported pages with source-derived
+summary, source-copy snippets, graph breadcrumbs, related links, FAQ content, and
+readiness markers. This keeps the proof track rebuildable from repo-owned
+manifests without manual Site Editor state.
 
-Stub content must be removed by later page-family template/import work before
-any migrated LMHG page is considered parity-complete.
+This still does not claim full hand-polished Astro layout parity. Later
+page-family template work can replace the generic source-copy snippet section
+with richer cards, panels, article body structure, and approved visual assets.
 
 ## Workbench Marker Contract
 
@@ -151,10 +155,11 @@ Future rendered editable fields must preserve LMHG's launch-editing model:
 - Hidden SEO/AIO data must stay out of visible block copy.
 
 The current plugin renders stable `data-lmhg-edit-field` markers for imported
-page H1s, source summaries, graph breadcrumbs, related-page sections, and
-publishable FAQ question-answer pairs. FAQ workbook prompts are not published as
-visible copy; pages with FAQ source records but no migrated answers receive
-hidden readiness markers instead.
+page H1s, source summaries, source-copy snippets exported from Astro
+implementation targets, graph breadcrumbs, related-page sections, and publishable
+FAQ question-answer pairs. FAQ workbook prompts are not published as visible
+copy; pages with FAQ source records but no migrated answers receive hidden
+readiness markers instead.
 
 ## Seed And Import Commands
 
@@ -183,6 +188,8 @@ Expected behavior:
   family, faceted type, schema type, migration status, and SEO status
 - set the WordPress front page
 - store route, SEO, relationship, and FAQ metadata
+- store sanitized source-copy snippets from Astro JSON/Markdown implementation
+  targets
 - print a JSON summary
 
 ## Acceptance Gate For This Phase
@@ -196,3 +203,5 @@ The Phase 3 gate passes when:
 - runtime verification still passes after import.
 - `npm run verify:lmhg-links` rejects stale internal links, redirect-only source
   paths, and unsupported service-area/city links in rendered WordPress pages.
+- `npm run verify:lmhg-copy` proves exported source-copy snippets render with
+  stable markers and without unresolved template tokens.

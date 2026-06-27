@@ -32,6 +32,7 @@ function lmhg_site_core_render_imported_content( string $content ): string {
 	$source_url = trim( (string) get_post_meta( $post_id, '_lmhg_source_url', true ) );
 	$sections = array(
 		lmhg_site_core_render_summary_section( $post_id, $source_url ),
+		lmhg_site_core_render_source_copy_section( $route, $source_url ),
 		lmhg_site_core_render_breadcrumb_section( $post_id, $route, $source_url ),
 		lmhg_site_core_render_related_section( $route, $source_url ),
 		lmhg_site_core_render_faq_section( $route, $source_url ),
@@ -90,6 +91,53 @@ function lmhg_site_core_render_summary_section( int $post_id, string $source_url
 		'<section class="lmhg-source-summary" data-lmhg-edit-field="%1$s"><p>%2$s</p></section>',
 		esc_attr( lmhg_site_core_marker_id( $source_url, 'summary' ) ),
 		esc_html( $description )
+	);
+}
+
+/**
+ * Renders sanitized source copy from the exported implementation target.
+ *
+ * @param array<string,mixed> $route Route entry.
+ * @param string              $source_url Source URL.
+ * @return string
+ */
+function lmhg_site_core_render_source_copy_section( array $route, string $source_url ): string {
+	$source_content = isset( $route['sourceContent'] ) && is_array( $route['sourceContent'] )
+		? $route['sourceContent']
+		: array();
+	$snippets = isset( $source_content['textSnippets'] ) && is_array( $source_content['textSnippets'] )
+		? $source_content['textSnippets']
+		: array();
+	$snippets = array_values(
+		array_filter(
+			array_map(
+				static fn( $snippet ): string => trim( wp_strip_all_tags( (string) $snippet ) ),
+				$snippets
+			)
+		)
+	);
+
+	if ( empty( $snippets ) ) {
+		return sprintf(
+			'<div hidden data-lmhg-readiness-warning="source-copy-missing" data-lmhg-edit-field="%s"></div>',
+			esc_attr( lmhg_site_core_marker_id( $source_url, 'source-content-readiness' ) )
+		);
+	}
+
+	$items = array();
+	foreach ( array_slice( $snippets, 0, 12 ) as $index => $snippet ) {
+		$items[] = sprintf(
+			'<p data-lmhg-edit-field="%1$s">%2$s</p>',
+			esc_attr( lmhg_site_core_marker_id( $source_url, 'sourceContent.textSnippets[' . $index . ']' ) ),
+			esc_html( $snippet )
+		);
+	}
+
+	return sprintf(
+		'<section class="lmhg-source-copy" data-lmhg-edit-field="%1$s" data-lmhg-source-content-path="%2$s"><h2>Page copy</h2>%3$s</section>',
+		esc_attr( lmhg_site_core_marker_id( $source_url, 'source-content' ) ),
+		esc_attr( (string) ( $source_content['path'] ?? '' ) ),
+		implode( '', $items )
 	);
 }
 

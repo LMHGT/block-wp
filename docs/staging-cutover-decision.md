@@ -20,8 +20,8 @@ Date: 2026-06-27
   schema type, migration status, and SEO status.
 - Source canonical URLs, SEO titles, meta descriptions, H1 values where present,
   JSON-LD schema types, FAQPage nodes, and graph-derived BreadcrumbList nodes.
-- Rendered graph breadcrumbs, related-page sections, FAQ readiness markers, and
-  visible `data-lmhg-edit-field` markers.
+- Rendered source-copy snippets, graph breadcrumbs, related-page sections, FAQ
+  readiness markers, and visible `data-lmhg-edit-field` markers.
 - Sitewide `Reach Out` IntakeQ CTA and active `tel:5024161416` phone link.
 - Suppression of redirect-only and unsupported city/service-area links in the
   rendered WordPress output.
@@ -37,8 +37,9 @@ Date: 2026-06-27
 - NocoBase extraction/validation remains attached to the Astro workflow.
 - Protected utility/legal pages are present in the Astro source but intentionally
   out-of-scope in the current WordPress import manifest.
-- The WordPress proof currently renders source-derived summaries and graph
-  sections, not full hand-polished page-copy parity for every page family.
+- The WordPress proof currently renders source-derived summaries, source-copy
+  snippets, and graph sections, not full hand-polished layout parity for every
+  page family.
 
 ## Required Staging Model Before Public Use
 
@@ -67,7 +68,8 @@ A future cutover recommendation must include:
 
 - A human review sign-off for representative pages on the WordPress staging URL.
 - A route-by-route redirect and canonical report against the final staging host.
-- A content parity report for full page copy, not only source-derived summaries.
+- A content parity report for full page copy and layout, not only source-derived
+  snippets.
 - A Workbench/editor workflow decision.
 - A Rank Math configuration decision that treats `lmhg-site-core` as taxonomy
   owner and Rank Math as SEO consumer.

@@ -256,6 +256,7 @@ function lmhg_site_core_update_route_meta( int $page_id, array $route, string $u
 		'_lmhg_seo_status'             => (string) ( $seo['status'] ?? '' ),
 		'_lmhg_related_pages'          => wp_json_encode( $route['relatedPages'] ?? array() ),
 		'_lmhg_faq_items'              => wp_json_encode( $route['faqItems'] ?? array() ),
+		'_lmhg_source_content'         => wp_json_encode( $route['sourceContent'] ?? array() ),
 		'_lmhg_route_manifest_entry'   => wp_json_encode( $route ),
 	);
 
@@ -279,6 +280,7 @@ function lmhg_site_core_json_meta_keys(): array {
 		'_lmhg_optimization_terms',
 		'_lmhg_related_pages',
 		'_lmhg_faq_items',
+		'_lmhg_source_content',
 		'_lmhg_route_manifest_entry',
 	);
 }
