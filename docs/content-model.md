@@ -39,7 +39,7 @@ Plugin: `wp-content/plugins/lmhg-site-core`
 - breadcrumb/relationship metadata storage
 - redirect inventory storage and front-end redirect handling
 - Tailscale URL behavior
-- future rendered-marker helpers
+- rendered-marker helpers
 
 The public WordPress frontend must not depend on live NocoBase, the LMHG
 Workbench, the SEO Dashboard, or the Astro dev server.
@@ -134,8 +134,11 @@ Future rendered editable fields must preserve LMHG's launch-editing model:
 - Collection-backed records need stable record identity.
 - Hidden SEO/AIO data must stay out of visible block copy.
 
-The current route importer preserves metadata needed to build those markers, but
-it does not yet expose marker-enabled page templates.
+The current plugin renders stable `data-lmhg-edit-field` markers for imported
+page H1s, source summaries, graph breadcrumbs, related-page sections, and FAQ
+readiness. FAQ workbook prompts are not published as visible copy; pages with
+FAQ source records but no migrated answers receive hidden readiness markers
+instead.
 
 ## Seed And Import Commands
 

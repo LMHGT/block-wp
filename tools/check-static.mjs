@@ -20,6 +20,7 @@ const requiredFiles = [
   "wp-content/plugins/lmhg-site-core/lmhg-site-core.php",
   "wp-content/plugins/lmhg-site-core/includes/importer.php",
   "wp-content/plugins/lmhg-site-core/includes/redirects.php",
+  "wp-content/plugins/lmhg-site-core/includes/rendering.php",
   "wp-content/plugins/lmhg-site-core/includes/seo.php",
   "wp-content/plugins/lmhg-site-core/includes/taxonomies.php",
   "tools/seed-lmhg-wp.mjs",
@@ -28,6 +29,7 @@ const requiredFiles = [
   "tools/verify-lmhg-taxonomies.mjs",
   "tools/verify-lmhg-redirects.mjs",
   "tools/verify-lmhg-head.mjs",
+  "tools/verify-lmhg-markers.mjs",
   ".codex/skills/wordpress-router/SKILL.md",
   ".codex/skills/wp-playground/SKILL.md",
   ".codex/skills/wp-block-themes/SKILL.md"

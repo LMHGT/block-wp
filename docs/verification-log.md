@@ -165,13 +165,26 @@ LMHG head verification:
   "checkedSchemaTypes": 50
 }
 LMHG head verification passed.
+
+LMHG marker verification:
+{
+  "baseUrl": "http://localhost:8888",
+  "checkedRoutes": 51,
+  "checkedSummaryMarkers": 50,
+  "checkedBreadcrumbs": 50,
+  "checkedRelatedSections": 49,
+  "checkedFaqReadiness": 42
+}
+LMHG marker verification passed.
 ```
 
 Current scope: this proves repo manifest shape, imported WordPress route/meta
 state, plugin-owned taxonomy registration and term assignment, front-end
 redirect responses for effective legacy redirects, canonical paths, populated
-source SEO titles/descriptions, and JSON-LD schema types. It does not yet prove
-breadcrumb, related-link, FAQ, or Workbench marker parity.
+source SEO titles/descriptions, JSON-LD schema types, rendered graph
+breadcrumbs, related links, and Workbench-style marker presence. FAQ answer
+parity remains incomplete; current FAQ proof is a hidden readiness marker that
+prevents workbook prompts from being published as visible page copy.
 
 Representative rendered head output:
 
@@ -180,6 +193,16 @@ Representative rendered head output:
 <link rel="canonical" href="http://localhost:8888/individual-counseling/" />
 <meta name="description" content="Individual therapy in Louisville for anxiety, depression, trauma, stress, grief, relationship strain, life transitions, and one-on-one support." />
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage",...}</script>
+```
+
+Representative rendered marker output:
+
+```html
+<h1 data-lmhg-edit-field="page:/individual-counseling/:h1">Individual Therapy in Louisville, KY</h1>
+<section data-lmhg-edit-field="page:/individual-counseling/:summary">...</section>
+<nav data-lmhg-edit-field="page:/individual-counseling/:breadcrumbs">...</nav>
+<section data-lmhg-edit-field="page:/individual-counseling/:related-pages">...</section>
+<div hidden data-lmhg-readiness-warning="faq-answer-missing" data-lmhg-faq-count="3" data-lmhg-edit-field="page:/individual-counseling/:faq-readiness"></div>
 ```
 
 ### Screenshots And Lighthouse
