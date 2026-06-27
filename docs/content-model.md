@@ -35,6 +35,7 @@ Plugin: `wp-content/plugins/lmhg-site-core`
 - route manifest import
 - SEO metadata storage
 - schema type storage
+- LMHG custom taxonomy registration and term assignment
 - breadcrumb/relationship metadata storage
 - redirect inventory storage and front-end redirect handling
 - Tailscale URL behavior
@@ -56,6 +57,23 @@ Workbench, the SEO Dashboard, or the Astro dev server.
 | article | `page` for current scaffold import | Later work may move active articles to `post` or a custom post type after parity rules are defined. |
 | support / utility | `page` | Legal/support pages stay quiet and lower pressure. |
 | review/diagnostic routes | out of scope | Not imported into public WordPress. |
+
+## Custom Taxonomies
+
+The WordPress content model does not rely on Rank Math Pro to create LMHG
+classification structures. `lmhg-site-core` registers plugin-owned custom
+taxonomies for imported pages:
+
+- `lmhg_page_family`
+- `lmhg_template_family`
+- `lmhg_faceted_type`
+- `lmhg_schema_type`
+- `lmhg_migration_status`
+- `lmhg_seo_status`
+
+These taxonomies are admin/REST-visible but not public archive surfaces. They
+exist so the LMHG crossover model can be queried inside WordPress while Rank
+Math remains an optional SEO layer above registered WordPress objects.
 
 ## Imported Metadata
 
@@ -141,6 +159,8 @@ Expected behavior:
   option for front-end redirect handling
 - render source SEO titles, canonical URLs, meta descriptions, robots directives,
   and JSON-LD schema types from plugin-owned metadata
+- assign LMHG custom taxonomy terms from route-manifest page family, template
+  family, faceted type, schema type, migration status, and SEO status
 - set the WordPress front page
 - store route, SEO, relationship, and FAQ metadata
 - print a JSON summary

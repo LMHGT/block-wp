@@ -140,6 +140,14 @@ LMHG route verification:
 }
 LMHG route verification passed.
 
+LMHG taxonomy verification:
+{
+  "expectedRoutes": 52,
+  "importedPages": 52,
+  "taxonomies": 6
+}
+LMHG taxonomy verification passed.
+
 LMHG redirect verification:
 {
   "baseUrl": "http://localhost:8888",
@@ -160,9 +168,10 @@ LMHG head verification passed.
 ```
 
 Current scope: this proves repo manifest shape, imported WordPress route/meta
-state, front-end redirect responses for effective legacy redirects, canonical
-paths, populated source SEO titles/descriptions, and JSON-LD schema types. It
-does not yet prove breadcrumb, related-link, FAQ, or Workbench marker parity.
+state, plugin-owned taxonomy registration and term assignment, front-end
+redirect responses for effective legacy redirects, canonical paths, populated
+source SEO titles/descriptions, and JSON-LD schema types. It does not yet prove
+breadcrumb, related-link, FAQ, or Workbench marker parity.
 
 Representative rendered head output:
 

@@ -137,6 +137,7 @@ function lmhg_site_core_import_route_page( array $route ): int|WP_Error {
 	}
 
 	lmhg_site_core_update_route_meta( $page_id, $route, $url );
+	lmhg_site_core_assign_route_terms( $page_id, $route );
 
 	if ( '/' === $url ) {
 		update_option( 'show_on_front', 'page' );
@@ -327,6 +328,12 @@ function lmhg_site_core_url_segments( string $url ): array {
  * @return string
  */
 function lmhg_site_core_page_title_from_route( array $route, array $segments ): string {
+	$seo = isset( $route['seo'] ) && is_array( $route['seo'] ) ? $route['seo'] : array();
+	$h1  = trim( (string) ( $seo['h1'] ?? '' ) );
+	if ( '' !== $h1 ) {
+		return $h1;
+	}
+
 	$title = trim( (string) ( $route['title'] ?? '' ) );
 
 	if ( '' !== $title && ! str_starts_with( $title, '/' ) ) {
