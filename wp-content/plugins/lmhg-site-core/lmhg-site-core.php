@@ -22,6 +22,20 @@ add_filter( 'pre_option_home', 'lmhg_site_core_tailnet_url_for_serve' );
 add_filter( 'pre_option_siteurl', 'lmhg_site_core_tailnet_url_for_serve' );
 add_action( 'wp_head', 'lmhg_site_core_output_meta_description', 5 );
 add_action( 'wp_head', 'lmhg_site_core_output_json_ld', 20 );
+add_action( 'init', 'lmhg_site_core_disable_emoji_assets' );
+
+/**
+ * Removes default emoji assets from the public scaffold.
+ */
+function lmhg_site_core_disable_emoji_assets(): void {
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+}
 
 /**
  * Uses the Tailscale Serve URL when the request arrives through MagicDNS.

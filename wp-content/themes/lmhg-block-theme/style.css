@@ -32,3 +32,22 @@ Text Domain: lmhg-block-theme
 :where(.lmhg-proof-note) {
   color: var(--wp--preset--color--muted-text);
 }
+
+:where(.lmhg-header-nav) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  font-size: var(--wp--preset--font-size--small);
+  font-weight: 700;
+}
+
+:where(.lmhg-header-nav a) {
+  color: var(--wp--preset--color--contrast);
+  text-decoration: none;
+}
+
+:where(.lmhg-header-nav a:focus-visible) {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
