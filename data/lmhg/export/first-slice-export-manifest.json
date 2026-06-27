@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-06-27.first-slice-export.v1",
-  "generatedAt": "2026-06-27T21:17:09.103Z",
+  "generatedAt": "2026-06-27T23:09:50.909Z",
   "purpose": "Exportable source package manifest for the first editable Gutenberg migration slice.",
   "routes": [
     "/compliance/",
@@ -135,8 +135,8 @@
     },
     {
       "path": "wp-content/plugins/lmhg-site-core/includes/importer.php",
-      "bytes": 11637,
-      "sha256": "836efb57f0448294f97c10d21eedb6a8c7b8358dc85420c3998d3c4beed35166"
+      "bytes": 12361,
+      "sha256": "2584d5916fe5532b1cef56b16f54a2494b190b91a180649fd828cb3cf31014f4"
     },
     {
       "path": "wp-content/plugins/lmhg-site-core/includes/redirects.php",
@@ -220,8 +220,8 @@
     },
     {
       "path": "wp-content/themes/lmhg-block-theme/templates/front-page.html",
-      "bytes": 315,
-      "sha256": "4baf5eab8b4ef6d937c78dca15f8c4075fb1ba538d3253f898c741fbe77406a4"
+      "bytes": 352,
+      "sha256": "6b2cb671b77538d4119884aba2f2cef6c6f2dd3064c523083174cd1ceceff8d4"
     },
     {
       "path": "wp-content/themes/lmhg-block-theme/templates/index.html",

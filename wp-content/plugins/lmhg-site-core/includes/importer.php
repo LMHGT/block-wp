@@ -91,7 +91,7 @@ function lmhg_site_core_import_route_page( array $route ): int|WP_Error {
 
 	if ( '/' === $url ) {
 		$segments = array( 'home' );
-		$title    = 'Home';
+		$title    = lmhg_site_core_homepage_title_from_route( $route );
 	} elseif ( '/404.html' === $url ) {
 		$segments = array( 'not-found' );
 	}
@@ -366,6 +366,27 @@ function lmhg_site_core_page_title_from_route( array $route, array $segments ): 
 
 	$slug = end( $segments );
 	return $slug ? lmhg_site_core_title_from_slug( (string) $slug ) : 'Home';
+}
+
+/**
+ * Gets the source homepage title for front-page rendering.
+ *
+ * @param array<string,mixed> $route Route entry.
+ * @return string
+ */
+function lmhg_site_core_homepage_title_from_route( array $route ): string {
+	$source_content = isset( $route['sourceContent'] ) && is_array( $route['sourceContent'] )
+		? $route['sourceContent']
+		: array();
+	$data = isset( $source_content['data'] ) && is_array( $source_content['data'] )
+		? $source_content['data']
+		: array();
+	$hero = isset( $data['hero'] ) && is_array( $data['hero'] )
+		? $data['hero']
+		: array();
+	$title = trim( wp_strip_all_tags( (string) ( $hero['title'] ?? '' ) ) );
+
+	return '' !== $title ? $title : 'Home';
 }
 
 /**

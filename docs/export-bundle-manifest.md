@@ -1,6 +1,6 @@
 # First Slice Export Bundle Manifest
 
-Date: 2026-06-27T21:17:09.103Z
+Date: 2026-06-27T23:09:50.909Z
 
 This manifest defines the exportable source package for the first editable
 Gutenberg migration slice. It is not a database dump and does not contain
@@ -50,7 +50,7 @@ wp lmhg import-block-manifest data/lmhg/block-migration/first-slice-block-manife
 | tools/verify-block-migration-slice.mjs | 2730 | 907cb3fd8656 |
 | tools/verify-export-manifest.mjs | 1723 | 7033807babff |
 | wp-content/plugins/lmhg-site-core/includes/editable-blocks.php | 11589 | 888bfda37bbf |
-| wp-content/plugins/lmhg-site-core/includes/importer.php | 11637 | 836efb57f044 |
+| wp-content/plugins/lmhg-site-core/includes/importer.php | 12361 | 2584d5916fe5 |
 | wp-content/plugins/lmhg-site-core/includes/redirects.php | 3642 | 9df7fe8da586 |
 | wp-content/plugins/lmhg-site-core/includes/rendering.php | 18716 | 98039970206a |
 | wp-content/plugins/lmhg-site-core/includes/seo.php | 12621 | 336cb33c2005 |
@@ -67,7 +67,7 @@ wp lmhg import-block-manifest data/lmhg/block-migration/first-slice-block-manife
 | wp-content/themes/lmhg-block-theme/styles/high-contrast.json | 423 | 56d04be7d87c |
 | wp-content/themes/lmhg-block-theme/templates/404.html | 616 | 2574a1cd3457 |
 | wp-content/themes/lmhg-block-theme/templates/archive.html | 922 | 89a3d32295ae |
-| wp-content/themes/lmhg-block-theme/templates/front-page.html | 315 | 4baf5eab8b4e |
+| wp-content/themes/lmhg-block-theme/templates/front-page.html | 352 | 6b2cb671b775 |
 | wp-content/themes/lmhg-block-theme/templates/index.html | 993 | 94b072ae469d |
 | wp-content/themes/lmhg-block-theme/templates/page.html | 449 | df60f85d026d |
 | wp-content/themes/lmhg-block-theme/templates/single.html | 473 | 1e00e82652e3 |
