@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-06-27.first-slice-export.v1",
-  "generatedAt": "2026-06-27T20:57:34.770Z",
+  "generatedAt": "2026-06-27T21:01:06.724Z",
   "purpose": "Exportable source package manifest for the first editable Gutenberg migration slice.",
   "routes": [
     "/compliance/",
@@ -60,8 +60,8 @@
     },
     {
       "path": "deploy/racknerd/compose.first-slice.yml",
-      "bytes": 2017,
-      "sha256": "9570cbd0375fb4d02696393ff37bdb6c3e65cefd7e1eeeb38588f38ae21f01c4"
+      "bytes": 2035,
+      "sha256": "f10105341b8a0b24bacbdeca3c0ad6d63957518faa489e10a13607614820efbf"
     },
     {
       "path": "docs/block-migration-slice-report.md",
