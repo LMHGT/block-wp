@@ -53,7 +53,7 @@ wp theme activate lmhg-block-theme
 wp plugin activate lmhg-site-core
 wp option update lmhg_tailnet_host "${LMHG_TAILNET_HOST}"
 wp lmhg import-manifest data/lmhg/source-route-manifest.json
-wp lmhg import-block-manifest data/lmhg/block-migration/first-slice-block-manifest.json data/lmhg/block-migration/first-slice-media-manifest.json
+wp lmhg import-block-manifest data/lmhg/block-migration/full-site-block-manifest.json data/lmhg/block-migration/full-site-media-manifest.json
 wp rewrite flush --hard
 
 echo "First-slice WordPress runtime is ready: ${LMHG_WP_URL}"

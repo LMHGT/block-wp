@@ -135,6 +135,21 @@ function lmhg_site_core_update_editable_block_meta( int $post_id, array $manifes
 		'_lmhg_editable_media_assets'          => wp_json_encode( $assets ),
 	);
 
+	$title = trim( (string) ( $route['title'] ?? '' ) );
+	if ( '' !== $title ) {
+		$meta['_lmhg_seo_title'] = $title;
+	}
+
+	$description = trim( (string) ( $route['metaDescription'] ?? '' ) );
+	if ( '' !== $description ) {
+		$meta['_lmhg_meta_description'] = $description;
+	}
+
+	$h1 = trim( (string) ( $route['h1'] ?? '' ) );
+	if ( '' !== $h1 ) {
+		$meta['_lmhg_h1'] = $h1;
+	}
+
 	foreach ( $meta as $key => $value ) {
 		if ( in_array( $key, lmhg_site_core_json_meta_keys(), true ) ) {
 			update_post_meta( $post_id, $key, wp_slash( $value ) );

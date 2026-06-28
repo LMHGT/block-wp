@@ -11,6 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_filter( 'the_content', 'lmhg_site_core_render_imported_content', 20 );
 add_filter( 'render_block', 'lmhg_site_core_mark_post_title_block', 20, 2 );
+add_filter( 'render_block', 'lmhg_site_core_hide_theme_chrome_for_editable_blocks', 19, 2 );
 
 /**
  * Replaces migration stubs with source-derived proof content.
@@ -76,6 +77,26 @@ function lmhg_site_core_mark_post_title_block( string $block_content, array $blo
 		$block_content,
 		1
 	) ?? $block_content;
+}
+
+/**
+ * Removes theme-owned header/footer template parts when post content owns full-page staging text.
+ *
+ * @param string              $block_content Rendered block HTML.
+ * @param array<string,mixed> $block Parsed block.
+ * @return string
+ */
+function lmhg_site_core_hide_theme_chrome_for_editable_blocks( string $block_content, array $block ): string {
+	if ( ( $block['blockName'] ?? '' ) !== 'core/template-part' ) {
+		return $block_content;
+	}
+
+	$post_id = lmhg_site_core_imported_post_id();
+	if ( 0 === $post_id || ! lmhg_site_core_has_editable_block_content( $post_id ) ) {
+		return $block_content;
+	}
+
+	return '';
 }
 
 /**

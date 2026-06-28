@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-06-27.first-slice-export.v1",
-  "generatedAt": "2026-06-27T23:13:39.357Z",
+  "generatedAt": "2026-06-28T00:32:02.898Z",
   "purpose": "Exportable source package manifest for the first editable Gutenberg migration slice.",
   "routes": [
     "/compliance/",
@@ -34,6 +34,16 @@
       "sha256": "c8c697c0a098a9fda310d9829ca98e90e45916c24a5ef3753b8532e6749f436e"
     },
     {
+      "path": "data/lmhg/block-migration/full-site-block-manifest.json",
+      "bytes": 1189017,
+      "sha256": "1a1661f06c29cabbb991652ae7cbe3156b19b04d353832c2405033db51721e8f"
+    },
+    {
+      "path": "data/lmhg/block-migration/full-site-media-manifest.json",
+      "bytes": 44700,
+      "sha256": "1099606e080c95242643070d48beaf54ccbdf8f9b351808a6d38dd8f9420eca0"
+    },
+    {
       "path": "data/lmhg/source-route-manifest.json",
       "bytes": 478578,
       "sha256": "0a92853ae5906535eb38695971c7a3e60c24178d0b25b053a9e3162ce98df039"
@@ -55,8 +65,8 @@
     },
     {
       "path": "deploy/racknerd/bootstrap-first-slice.sh",
-      "bytes": 1654,
-      "sha256": "4af88f7d3dc5bbbf470daf49e43a4a3b3ed4cfc1a0620a180a5ef4172fa154a5"
+      "bytes": 1650,
+      "sha256": "5d9d6cf9817c7bdd8fff2d803afce76b78214b834da34f7d386da3747ca94692"
     },
     {
       "path": "deploy/racknerd/compose.first-slice.yml",
@@ -72,6 +82,11 @@
       "path": "docs/cloud-verification-workflow.md",
       "bytes": 2362,
       "sha256": "7fd4675df2ca2f03bbef88be641652a748d5a8560e8ea9d96dae521492594dab"
+    },
+    {
+      "path": "docs/full-site-block-migration-report.md",
+      "bytes": 14947,
+      "sha256": "580d9872b0fea9677dd6502d0f3fcc9146513d911bb4888fb2d809d524b6936d"
     },
     {
       "path": "docs/full-site-page-confirmation.md",
@@ -105,8 +120,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 3228,
-      "sha256": "e1dc9954d83a50cb8269f8d4492b2a917b3cabab9f4147b8ccb222eb7c541210"
+      "bytes": 3413,
+      "sha256": "d4cca1aafd08bc6084c43b90c4efe94a8d4695fd54f213a01d9b6715897762a2"
     },
     {
       "path": "plan/2026-06-27-cloud-run-editable-gutenberg-migration-pipeline.md",
@@ -120,8 +135,13 @@
     },
     {
       "path": "tools/generate-export-manifest.mjs",
-      "bytes": 4246,
-      "sha256": "3ba6dc5d5d58af0ed9ee7517c75757733840ddb973290c619b8f3c840cb06b51"
+      "bytes": 4512,
+      "sha256": "59b0220803810655330d743766393ec44ae8a198bc8a1247be7ef18844780496"
+    },
+    {
+      "path": "tools/generate-full-site-block-migration.mjs",
+      "bytes": 16020,
+      "sha256": "b17cb52a8011735493a1b9c07910ba947eeb1a5e8ac67b3c0127416a9ce1b746"
     },
     {
       "path": "tools/verify-block-migration-slice.mjs",
@@ -134,9 +154,14 @@
       "sha256": "7033807babffad3c41dd205e40004cf27f5f24b868ac4964a49dcce1a8f827b2"
     },
     {
+      "path": "tools/verify-full-site-block-migration.mjs",
+      "bytes": 3269,
+      "sha256": "55caaa8be04c66ad05988ae931650673da518cb7bb9c64ae108ad21b9a9b3146"
+    },
+    {
       "path": "wp-content/plugins/lmhg-site-core/includes/editable-blocks.php",
-      "bytes": 11589,
-      "sha256": "888bfda37bbf047e971d3cd033a734129764aa1d1d2ec1e60a0cfb8f6263219c"
+      "bytes": 11962,
+      "sha256": "0c667d218e1208ee1d60c5dda129cafd6cb4c52d10b1a880b28186ad0f05663f"
     },
     {
       "path": "wp-content/plugins/lmhg-site-core/includes/importer.php",
@@ -150,8 +175,8 @@
     },
     {
       "path": "wp-content/plugins/lmhg-site-core/includes/rendering.php",
-      "bytes": 18716,
-      "sha256": "98039970206ad7ea3a9422b2de2fea7fd0c4deda27064a94d1ecef0e613cda5b"
+      "bytes": 19434,
+      "sha256": "589cbe3ccdaa994f2f530403c73f1ce2d4efe923baff5ae456412c621079f219"
     },
     {
       "path": "wp-content/plugins/lmhg-site-core/includes/seo.php",

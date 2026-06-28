@@ -17,6 +17,8 @@
     "verify:staging-snapshot": "node tools/verify-staging-snapshot.mjs",
     "generate:block-slice": "node tools/generate-block-migration-slice.mjs",
     "verify:block-slice": "node tools/verify-block-migration-slice.mjs",
+    "generate:block-full": "node tools/generate-full-site-block-migration.mjs",
+    "verify:block-full": "node tools/verify-full-site-block-migration.mjs",
     "generate:export-manifest": "node tools/generate-export-manifest.mjs",
     "verify:export-manifest": "node tools/verify-export-manifest.mjs",
     "report:wp-vs-staging": "node tools/verify-wp-vs-staging.mjs --report-only",
@@ -44,7 +46,7 @@
     "test:screenshots": "playwright test --config=tests/playwright.config.mjs",
     "test:lighthouse": "node tools/run-lighthouse.mjs",
     "verify:site": "npm run test:screenshots && npm run test:lighthouse",
-    "verify": "npm run check:static && npm run check:prereqs && npm run verify:staging-snapshot && npm run verify:block-slice && npm run verify:export-manifest"
+    "verify": "npm run check:static && npm run check:prereqs && npm run verify:staging-snapshot && npm run verify:block-slice && npm run verify:block-full && npm run verify:export-manifest"
   },
   "devDependencies": {
     "@playwright/test": "1.61.1",
