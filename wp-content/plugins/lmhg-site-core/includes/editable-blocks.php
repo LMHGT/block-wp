@@ -232,6 +232,17 @@ function lmhg_site_core_import_editable_media_assets( array $manifest ): array {
 			continue;
 		}
 
+		if ( str_ends_with( strtolower( (string) wp_parse_url( $source_url, PHP_URL_PATH ) ), '.svg' ) ) {
+			$static_url = lmhg_site_core_static_imported_asset_url( $asset );
+			$imports[ $asset_id ] = array(
+				'status'    => '' !== $static_url ? 'static' : 'failed',
+				'url'       => $static_url,
+				'sourceUrl' => $source_url,
+				'kind'      => $kind,
+			);
+			continue;
+		}
+
 		$existing_id = lmhg_site_core_find_existing_media_asset( $source_url );
 		if ( $existing_id > 0 ) {
 			$imports[ $asset_id ] = array(
@@ -342,6 +353,27 @@ function lmhg_site_core_rewrite_editable_media_urls( string $content, array $med
 	}
 
 	return $content;
+}
+
+/**
+ * Gets a plugin-served URL for packaged imported assets that should not be sideloaded.
+ *
+ * @param array<string,mixed> $asset Asset manifest entry.
+ * @return string
+ */
+function lmhg_site_core_static_imported_asset_url( array $asset ): string {
+	$artifact_path = (string) ( $asset['artifactPath'] ?? '' );
+	$file_name = sanitize_file_name( basename( $artifact_path ) );
+	if ( '' === $file_name ) {
+		return '';
+	}
+
+	$file_path = dirname( __DIR__ ) . '/assets/imported/' . $file_name;
+	if ( ! file_exists( $file_path ) ) {
+		return '';
+	}
+
+	return plugins_url( 'assets/imported/' . $file_name, dirname( __DIR__ ) . '/lmhg-site-core.php' );
 }
 
 if ( defined( 'WP_CLI' ) && WP_CLI ) {

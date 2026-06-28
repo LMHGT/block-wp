@@ -11,6 +11,8 @@ const blockManifestPath = path.join(outputDir, "full-site-block-manifest.json");
 const mediaManifestPath = path.join(outputDir, "full-site-media-manifest.json");
 const routeManifest = readJson("data/lmhg/source-route-manifest.json");
 const stagingRoutes = readJson("data/lmhg/staging-snapshot/routes.json");
+const stagingAssets = readJson("data/lmhg/staging-snapshot/assets.json");
+const stagingAssetByUrl = new Map(stagingAssets.map((asset) => [asset.url, asset]));
 const generatedAt = new Date().toISOString();
 
 await fs.promises.mkdir(outputDir, { recursive: true });
@@ -38,8 +40,9 @@ try {
       stagingBaseUrl,
     });
     const canonicalBodyText = bodyVisibleText(source.html);
-    const canonicalFullText = cleanText([stagingEntry.title || extraction.title, canonicalBodyText].filter(Boolean).join(" "));
-    const canonicalTextBlocks = canonicalTextItems(canonicalBodyText, stagingEntry.h1 || extraction.h1);
+    const bodyForBlocks = removeLeadingSkipLinkText(canonicalBodyText);
+    const canonicalFullText = cleanText([stagingEntry.title || extraction.title, "Skip to content", bodyForBlocks].filter(Boolean).join(" "));
+    const canonicalTextBlocks = canonicalTextItems(bodyForBlocks, stagingEntry.h1 || extraction.h1);
 
     const blocks = [];
     const postContent = [];
@@ -326,8 +329,13 @@ function splitOnWordBoundaries(text, maxLength) {
 }
 
 function bodyVisibleText(html) {
-  const body = String(html || "").match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1] || "";
-  return stripVisibleText(body);
+	const body = String(html || "").match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1] || "";
+	return stripVisibleText(body);
+}
+
+function removeLeadingSkipLinkText(text) {
+	const clean = cleanText(text);
+	return clean.startsWith("Skip to content ") ? clean.slice("Skip to content ".length) : clean;
 }
 
 function stripVisibleText(html) {
@@ -388,6 +396,7 @@ function toBlock(item, route, order) {
 
   if (item.kind === "image") {
     const assetId = `asset-${hashText(item.src).slice(0, 12)}`;
+    const asset = stagingAssetByUrl.get(item.src) || {};
     const attrs = blockAttrs({ sizeSlug: "large", linkDestination: "none", className, metadata });
     return {
       entry: { ...baseEntry, coreBlockName: "core/image", assetId, alt: item.alt, sourceUrl: item.src },
@@ -398,6 +407,9 @@ function toBlock(item, route, order) {
         srcset: item.srcset,
         alt: item.alt,
         sourceHash: hashText(item.src),
+        artifactPath: asset.artifactPath || "",
+        contentHash: asset.contentHash || "",
+        contentType: asset.contentType || "",
       },
       content: `<!-- wp:image ${attrs} --><figure class="wp-block-image size-large ${className}"><img src="${escapeAttribute(item.src)}" alt="${escapeAttribute(item.alt)}"/></figure><!-- /wp:image -->`,
     };

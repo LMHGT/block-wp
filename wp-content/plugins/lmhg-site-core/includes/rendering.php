@@ -12,6 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_filter( 'the_content', 'lmhg_site_core_render_imported_content', 20 );
 add_filter( 'render_block', 'lmhg_site_core_mark_post_title_block', 20, 2 );
 add_filter( 'render_block', 'lmhg_site_core_hide_theme_chrome_for_editable_blocks', 19, 2 );
+add_filter( 'run_wptexturize', 'lmhg_site_core_disable_texturize_for_editable_blocks' );
 
 /**
  * Replaces migration stubs with source-derived proof content.
@@ -97,6 +98,21 @@ function lmhg_site_core_hide_theme_chrome_for_editable_blocks( string $block_con
 	}
 
 	return '';
+}
+
+/**
+ * Preserves staging-derived punctuation for imported full-page block content.
+ *
+ * @param bool $run_texturize Whether WordPress should apply smart punctuation.
+ * @return bool
+ */
+function lmhg_site_core_disable_texturize_for_editable_blocks( bool $run_texturize ): bool {
+	$post_id = lmhg_site_core_imported_post_id();
+	if ( 0 !== $post_id && lmhg_site_core_has_editable_block_content( $post_id ) ) {
+		return false;
+	}
+
+	return $run_texturize;
 }
 
 /**

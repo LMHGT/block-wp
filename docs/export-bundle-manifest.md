@@ -1,6 +1,6 @@
 # First Slice Export Bundle Manifest
 
-Date: 2026-06-28T00:32:02.898Z
+Date: 2026-06-28T00:37:44.320Z
 
 This manifest defines the exportable source package for the first editable
 Gutenberg migration slice. It is not a database dump and does not contain
@@ -30,8 +30,8 @@ wp lmhg import-block-manifest data/lmhg/block-migration/first-slice-block-manife
 | AGENTS.md | 2166 | 54d41d18ecd0 |
 | data/lmhg/block-migration/first-slice-block-manifest.json | 107206 | ca2b171528df |
 | data/lmhg/block-migration/first-slice-media-manifest.json | 2923 | c8c697c0a098 |
-| data/lmhg/block-migration/full-site-block-manifest.json | 1189017 | 1a1661f06c29 |
-| data/lmhg/block-migration/full-site-media-manifest.json | 44700 | 1099606e080c |
+| data/lmhg/block-migration/full-site-block-manifest.json | 1187289 | f3f784a1f5e8 |
+| data/lmhg/block-migration/full-site-media-manifest.json | 58792 | 50569b93f75c |
 | data/lmhg/source-route-manifest.json | 478578 | 0a92853ae590 |
 | data/lmhg/staging-snapshot/assets.json | 99094 | 50cdddcb3265 |
 | data/lmhg/staging-snapshot/routes.json | 223417 | 1c11650ebeca |
@@ -40,7 +40,7 @@ wp lmhg import-block-manifest data/lmhg/block-migration/first-slice-block-manife
 | deploy/racknerd/compose.first-slice.yml | 2035 | f10105341b8a |
 | docs/block-migration-slice-report.md | 2424 | b3be84f66bca |
 | docs/cloud-verification-workflow.md | 2362 | 7fd4675df2ca |
-| docs/full-site-block-migration-report.md | 14947 | 580d9872b0fe |
+| docs/full-site-block-migration-report.md | 14947 | 80fbe7fa970e |
 | docs/full-site-page-confirmation.md | 2468 | 8b973e13d60e |
 | docs/hosted-first-slice-verification.md | 2786 | 1aeb0e05e378 |
 | docs/racknerd-first-slice-runtime.md | 2227 | 504cb520f3ba |
@@ -51,14 +51,18 @@ wp lmhg import-block-manifest data/lmhg/block-migration/first-slice-block-manife
 | plan/2026-06-27-cloud-run-editable-gutenberg-migration-pipeline.md | 21527 | a1767f90e395 |
 | tools/generate-block-migration-slice.mjs | 19232 | 30dfdc17e959 |
 | tools/generate-export-manifest.mjs | 4512 | 59b022080381 |
-| tools/generate-full-site-block-migration.mjs | 16020 | b17cb52a8011 |
+| tools/generate-full-site-block-migration.mjs | 16630 | 6987ba3121df |
 | tools/verify-block-migration-slice.mjs | 2730 | 907cb3fd8656 |
 | tools/verify-export-manifest.mjs | 1723 | 7033807babff |
 | tools/verify-full-site-block-migration.mjs | 3269 | 55caaa8be04c |
-| wp-content/plugins/lmhg-site-core/includes/editable-blocks.php | 11962 | 0c667d218e12 |
+| wp-content/plugins/lmhg-site-core/assets/imported/illustrations-service-areas-bullitt-county-ky-shape-transparent-f868511776a2.svg | 5752 | 3755d9b5f283 |
+| wp-content/plugins/lmhg-site-core/assets/imported/illustrations-service-areas-jefferson-county-ky-shape-transparent-5f497cd6e3da.svg | 4014 | fade61fc1c49 |
+| wp-content/plugins/lmhg-site-core/assets/imported/illustrations-service-areas-louisville-ky-county-shape-transparent-1b2453a8ae4b.svg | 4010 | cd9c44c49668 |
+| wp-content/plugins/lmhg-site-core/assets/imported/illustrations-service-areas-oldham-county-ky-shape-transparent-f467133beaf2.svg | 3290 | 832dce920794 |
+| wp-content/plugins/lmhg-site-core/includes/editable-blocks.php | 12990 | 344d09c05afe |
 | wp-content/plugins/lmhg-site-core/includes/importer.php | 12361 | 2584d5916fe5 |
 | wp-content/plugins/lmhg-site-core/includes/redirects.php | 3642 | 9df7fe8da586 |
-| wp-content/plugins/lmhg-site-core/includes/rendering.php | 19434 | 589cbe3ccdaa |
+| wp-content/plugins/lmhg-site-core/includes/rendering.php | 19978 | 285c00a93460 |
 | wp-content/plugins/lmhg-site-core/includes/seo.php | 12621 | 336cb33c2005 |
 | wp-content/plugins/lmhg-site-core/includes/taxonomies.php | 3707 | 37fae4f59d16 |
 | wp-content/plugins/lmhg-site-core/lmhg-site-core.php | 2369 | 9d41632b8671 |
