@@ -1,16 +1,18 @@
 {
-  "schemaVersion": "2026-06-27.first-slice-export.v1",
-  "generatedAt": "2026-06-28T01:00:50.556Z",
-  "purpose": "Exportable source package manifest for the first editable Gutenberg migration slice.",
-  "routes": [
-    "/compliance/",
-    "/privacy-policy/",
-    "/terms-of-use/",
-    "/individual-counseling/"
-  ],
+  "schemaVersion": "2026-06-28.codex-cloud-wordpress-export.v1",
+  "generatedAt": "2026-06-28T16:57:29.765Z",
+  "purpose": "Exportable full-site package manifest for the Codex-managed cloud WordPress runtime.",
+  "sourceOfTruth": "/Users/tyler-lcsw/projects/lmhg-astro-integrate",
+  "workingRepo": "/Users/tyler-lcsw/projects/lmhg-blockwp",
+  "runtimeTarget": "Codex-managed cloud WordPress environment",
+  "routeCount": 55,
   "importCommands": [
+    "WP_PATH=\"/path/to/wordpress\" bash tools/import-codex-cloud-wordpress.sh",
+    "wp core is-installed",
     "wp lmhg import-manifest data/lmhg/source-route-manifest.json",
-    "wp lmhg import-block-manifest data/lmhg/block-migration/first-slice-block-manifest.json data/lmhg/block-migration/first-slice-media-manifest.json"
+    "wp lmhg import-block-manifest data/lmhg/block-migration/full-site-block-manifest.json data/lmhg/block-migration/full-site-media-manifest.json",
+    "wp export --post_type=page --dir=data/lmhg/export/runtime --filename_format=lmhg-pages.xml",
+    "wp db export data/lmhg/export/runtime/lmhg-wordpress.sql"
   ],
   "files": [
     {
@@ -20,28 +22,18 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 2166,
-      "sha256": "54d41d18ecd0f7d6e6837f5da68e862e7564f01ca7e0bbb526f5a99ed7ad9205"
-    },
-    {
-      "path": "data/lmhg/block-migration/first-slice-block-manifest.json",
-      "bytes": 107206,
-      "sha256": "ca2b171528df5f54ccb7641f2ec80d64fb0d189b4dd9df8c25977374b995fb86"
-    },
-    {
-      "path": "data/lmhg/block-migration/first-slice-media-manifest.json",
-      "bytes": 2923,
-      "sha256": "c8c697c0a098a9fda310d9829ca98e90e45916c24a5ef3753b8532e6749f436e"
+      "bytes": 2560,
+      "sha256": "91cb17aee37071605ad72e0dfcb88150a801e800844d9ab6e3b2250cb7ff2a76"
     },
     {
       "path": "data/lmhg/block-migration/full-site-block-manifest.json",
-      "bytes": 880726,
-      "sha256": "26f25660b06e3c24abf8380e2171dd7a71be76b994bc88ff6da67648a445d70a"
+      "bytes": 1730490,
+      "sha256": "1ac837a07fc6e7008249cd177baab0653447bad373fb43b4b6aeb447bff3c765"
     },
     {
       "path": "data/lmhg/block-migration/full-site-media-manifest.json",
-      "bytes": 58792,
-      "sha256": "45e8df9f1de465b6bdd8d5649ed48630129fdf6fda5572d70320b43873870d83"
+      "bytes": 59803,
+      "sha256": "8c59dc1292a7e1153673322f1ad53b1fb2c5cfe12445bbb5ed1f07b5093f24b0"
     },
     {
       "path": "data/lmhg/source-route-manifest.json",
@@ -55,63 +47,38 @@
     },
     {
       "path": "data/lmhg/staging-snapshot/routes.json",
-      "bytes": 227305,
-      "sha256": "99745cf9a893b9461f13a2dcfb1ea306c3d0f250614d8b4796d8245a3eaf27ca"
+      "bytes": 240908,
+      "sha256": "91f4056b7bc7429a05ca9c614014b2eadce9283cbe71195cd4728cd118ae9ea7"
     },
     {
       "path": "data/lmhg/staging-snapshot/summary.json",
       "bytes": 658,
-      "sha256": "7f209edf3071ac3d06a2347408bf9848821bb29a3127156718d4fa8dc518411c"
-    },
-    {
-      "path": "deploy/racknerd/bootstrap-first-slice.sh",
-      "bytes": 1650,
-      "sha256": "5d9d6cf9817c7bdd8fff2d803afce76b78214b834da34f7d386da3747ca94692"
-    },
-    {
-      "path": "deploy/racknerd/compose.first-slice.yml",
-      "bytes": 2035,
-      "sha256": "f10105341b8a0b24bacbdeca3c0ad6d63957518faa489e10a13607614820efbf"
-    },
-    {
-      "path": "docs/block-migration-slice-report.md",
-      "bytes": 2424,
-      "sha256": "b3be84f66bca383498a891ddff494603f577b09b8fbfcc16cf5b7c7041c1c936"
+      "sha256": "6d5f64b6848f823afb99407a2d1fa778602c0de600f24296ef6056e218a2786b"
     },
     {
       "path": "docs/cloud-verification-workflow.md",
-      "bytes": 2362,
-      "sha256": "7fd4675df2ca2f03bbef88be641652a748d5a8560e8ea9d96dae521492594dab"
+      "bytes": 3264,
+      "sha256": "475503a187e1060a357682833dd1f67a55a41dde5bfc67cb155c162b9356e59f"
+    },
+    {
+      "path": "docs/codex-cloud-runtime-report.md",
+      "bytes": 356,
+      "sha256": "9297aee37ee52410ac70acea8ecb59e0e0b30cf4c3a0e7a136bfe42cf93f7726"
     },
     {
       "path": "docs/full-site-block-migration-report.md",
-      "bytes": 15043,
-      "sha256": "360d4c02d07cd622e63629486c219130e0e8b55aa8b15e1dd807fcb4b57c7abf"
-    },
-    {
-      "path": "docs/full-site-page-confirmation.md",
-      "bytes": 2468,
-      "sha256": "8b973e13d60e7221ef33aea9f90dd18e1661097ccde83a6f273421f74a2de354"
-    },
-    {
-      "path": "docs/hosted-first-slice-verification.md",
-      "bytes": 2786,
-      "sha256": "1aeb0e05e3789548fc940bfae5f069dfafe39ec9e40732d98d2cf7eb97d89e93"
-    },
-    {
-      "path": "docs/racknerd-first-slice-runtime.md",
-      "bytes": 2227,
-      "sha256": "504cb520f3baa0fe74d126739ff199cb0b56300ddafc199c2d29fd36bafed4a1"
+      "bytes": 13799,
+      "sha256": "0f907d3c35d096bcefc5caa8fc2e1e2d4c52cf3057f06ebaaca82f4d890c3dfe"
     },
     {
       "path": "docs/route-parity-matrix.md",
       "bytes": 9211,
-      "sha256": "f6055f06af6458feae8933ccbe5251c4fb3608616e0b1a6a9b7cc04e34eaa42b"
+      "sha256": "73b9ae6da43ee35e0f276b74ce93f4f270a56cc7eebd216c788cd8801741e4e5"
     },
     {
       "path": "docs/staging-snapshot-report.md",
       "bytes": 1794,
-      "sha256": "6f4b48272f0f4439ac29f3f17e2fcb334c3524b2746dfdbfb321b10b12557c75"
+      "sha256": "6e33c9c20f15628323088029c52eabdd97988e7cdf915d30a6c88c1ce867eed7"
     },
     {
       "path": "package-lock.json",
@@ -120,43 +87,43 @@
     },
     {
       "path": "package.json",
-      "bytes": 3413,
-      "sha256": "d4cca1aafd08bc6084c43b90c4efe94a8d4695fd54f213a01d9b6715897762a2"
+      "bytes": 3224,
+      "sha256": "68835d5de1094ad82dd76948530600b9f623bbe096584824896071561950b670"
     },
     {
-      "path": "plan/2026-06-27-cloud-run-editable-gutenberg-migration-pipeline.md",
-      "bytes": 21527,
-      "sha256": "a1767f90e395fa489a331e94e7d59909344ffe936ded686213b562abaa7bafa6"
-    },
-    {
-      "path": "tools/generate-block-migration-slice.mjs",
-      "bytes": 19232,
-      "sha256": "30dfdc17e9596f186039b256102b2d145c3d10d4d534c0429f1062a50eeb13b3"
+      "path": "plan/2026-06-27-cloudflare-staging-to-wordpress-verbatim-migration-plan.md",
+      "bytes": 24064,
+      "sha256": "afe578c851929612fc01851c59cbf9252cd9432990796a7407afeb43d79d199f"
     },
     {
       "path": "tools/generate-export-manifest.mjs",
-      "bytes": 4512,
-      "sha256": "59b0220803810655330d743766393ec44ae8a198bc8a1247be7ef18844780496"
+      "bytes": 4884,
+      "sha256": "9c346fe956e6f1867a4d8fa7cd690a58f9bd5c93295b499a470dae103cd82102"
     },
     {
       "path": "tools/generate-full-site-block-migration.mjs",
-      "bytes": 15298,
-      "sha256": "4a63b9e57fbad9892c732d0c2ee3f2b7b05ae15dd00b14a893bc54db31421dc3"
+      "bytes": 35918,
+      "sha256": "ad2e2506d3afa4d0a0a94e1282c4877e3f50e710a23a1a7675097d82caeb68a7"
     },
     {
-      "path": "tools/verify-block-migration-slice.mjs",
-      "bytes": 2730,
-      "sha256": "907cb3fd865636b62243a3973926fbe73d2acefc35258c0027ed12515743a613"
+      "path": "tools/import-codex-cloud-wordpress.sh",
+      "bytes": 2828,
+      "sha256": "0fc226465bf27f1fa5e4ec5f5f50e1190224dc6e696e3b4dc85c593695311904"
+    },
+    {
+      "path": "tools/verify-codex-cloud-runtime.mjs",
+      "bytes": 5193,
+      "sha256": "9a4b531f1cf0e8565485b7ffe42a129bc8f590d986e9a10c63b99af0dfbf1d22"
     },
     {
       "path": "tools/verify-export-manifest.mjs",
-      "bytes": 1723,
-      "sha256": "7033807babffad3c41dd205e40004cf27f5f24b868ac4964a49dcce1a8f827b2"
+      "bytes": 2071,
+      "sha256": "fd20fe8deeedd623ca401478c58e58d97c88dd195bb03312cebcc6b678d89538"
     },
     {
       "path": "tools/verify-full-site-block-migration.mjs",
-      "bytes": 3269,
-      "sha256": "55caaa8be04c66ad05988ae931650673da518cb7bb9c64ae108ad21b9a9b3146"
+      "bytes": 4107,
+      "sha256": "2477fb824bb1099393cd7ac334e1cedcb4a32324d5588126b69d61fd0d0b39b3"
     },
     {
       "path": "wp-content/plugins/lmhg-site-core/assets/imported/illustrations-service-areas-bullitt-county-ky-shape-transparent-f868511776a2.svg",
@@ -195,8 +162,8 @@
     },
     {
       "path": "wp-content/plugins/lmhg-site-core/includes/rendering.php",
-      "bytes": 19978,
-      "sha256": "285c00a93460866420719dd2f138802aee5f23dbfbc0fed6b0cc67db25b5e667"
+      "bytes": 19885,
+      "sha256": "88414abeb2f5de49e40f85551e1bdfdbf4ad770c67fd1735be9b31c1fdad5179"
     },
     {
       "path": "wp-content/plugins/lmhg-site-core/includes/seo.php",
@@ -220,8 +187,8 @@
     },
     {
       "path": "wp-content/themes/lmhg-block-theme/functions.php",
-      "bytes": 673,
-      "sha256": "4547f2cb879bb6ca466c64c041884b15bd10d4b8de4bfd217a4a2c215237f3b0"
+      "bytes": 857,
+      "sha256": "1c9ed4b1a6607e5d15fed3abcc30457851aa4d6da46a386410590108a8e6e058"
     },
     {
       "path": "wp-content/themes/lmhg-block-theme/parts/footer.html",
@@ -230,8 +197,8 @@
     },
     {
       "path": "wp-content/themes/lmhg-block-theme/parts/header.html",
-      "bytes": 928,
-      "sha256": "6cb99977e510d5a743e41122642f2cec8d47fa8d99eb832ec4381fdf9c5ba559"
+      "bytes": 1019,
+      "sha256": "75b3df0aca486a3c3e3be4d410f4b12941e8dff6b3145b779532b0a3ee5d3bc8"
     },
     {
       "path": "wp-content/themes/lmhg-block-theme/patterns/content-band.php",
@@ -245,8 +212,8 @@
     },
     {
       "path": "wp-content/themes/lmhg-block-theme/style.css",
-      "bytes": 2655,
-      "sha256": "43a72fda193055166f1456a3dc585de6b3046c0f26dc25f48f34890df82235e2"
+      "bytes": 10576,
+      "sha256": "72de2bb9328fe696c4217e6c65bf02f721196de1cd0e0893bca0e8bbef3e8205"
     },
     {
       "path": "wp-content/themes/lmhg-block-theme/styles/editorial.json",
@@ -270,8 +237,8 @@
     },
     {
       "path": "wp-content/themes/lmhg-block-theme/templates/front-page.html",
-      "bytes": 352,
-      "sha256": "6b2cb671b77538d4119884aba2f2cef6c6f2dd3064c523083174cd1ceceff8d4"
+      "bytes": 413,
+      "sha256": "92a9dd79ae6e2af4f2dd18b0bd75d34e168d935aff70b60fda1a13a1cdd101dc"
     },
     {
       "path": "wp-content/themes/lmhg-block-theme/templates/index.html",
@@ -280,8 +247,8 @@
     },
     {
       "path": "wp-content/themes/lmhg-block-theme/templates/page.html",
-      "bytes": 449,
-      "sha256": "df60f85d026dfa3a04527c037cede7cf066e1522671d6dc3fa342a51ad873878"
+      "bytes": 490,
+      "sha256": "00d7bd587dfcd6c614d2bc5c625157865ac5669cbee36573deb65ee75772d63a"
     },
     {
       "path": "wp-content/themes/lmhg-block-theme/templates/single.html",

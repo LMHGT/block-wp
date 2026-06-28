@@ -11,7 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_filter( 'the_content', 'lmhg_site_core_render_imported_content', 20 );
 add_filter( 'render_block', 'lmhg_site_core_mark_post_title_block', 20, 2 );
-add_filter( 'render_block', 'lmhg_site_core_hide_theme_chrome_for_editable_blocks', 19, 2 );
 add_filter( 'run_wptexturize', 'lmhg_site_core_disable_texturize_for_editable_blocks' );
 
 /**

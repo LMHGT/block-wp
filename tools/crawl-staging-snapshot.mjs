@@ -268,7 +268,14 @@ async function fetchTextRoute(routePath) {
   const response = await fetch(url, { redirect: "manual" });
   const body = await response.text();
   const text = stripVisibleText(body);
-  return { response, body, text, textSource: "html-strip-fallback" };
+  return {
+    response,
+    body,
+    text,
+    mainText: text,
+    structure: {},
+    textSource: "html-strip-fallback",
+  };
 }
 
 async function createBrowserRouteReader() {
@@ -293,7 +300,21 @@ async function fetchBrowserTextRoute(routePath, reader) {
 
   const body = await response.text();
   const text = cleanVisibleText(await reader.page.evaluate(() => document.body?.innerText || ""));
-  return { response, body, text, textSource: "browser-innerText" };
+  const mainText = cleanVisibleText(await reader.page.evaluate(() => document.querySelector("main")?.innerText || document.body?.innerText || ""));
+  const structure = await reader.page.evaluate(() => {
+    const clean = (value) => String(value || "").replace(/\s+/g, " ").trim();
+    const root = document.querySelector("main") || document.body;
+    const paragraphs = Array.from(root.querySelectorAll("p"))
+      .map((element) => clean(element.innerText))
+      .filter(Boolean);
+    return {
+      headingCount: root.querySelectorAll("h1,h2,h3,h4,h5,h6").length,
+      paragraphCount: paragraphs.length,
+      imageCount: root.querySelectorAll("img").length,
+      maxParagraphLength: Math.max(0, ...paragraphs.map((text) => text.length)),
+    };
+  });
+  return { response, body, text, mainText, structure, textSource: "browser-innerText" };
 }
 
 function classifyRoute(route, liveStatus) {
@@ -328,7 +349,7 @@ async function crawlRoutes() {
       const htmlFile = path.join(htmlDir, `${stem}.html`);
 
       try {
-      const { response, body, text, textSource } = await fetchBrowserTextRoute(routePath, browserRouteReader);
+      const { response, body, text, mainText, structure, textSource } = await fetchBrowserTextRoute(routePath, browserRouteReader);
       fs.writeFileSync(htmlFile, body);
 
       const headers = headersObject(response);
@@ -390,6 +411,12 @@ async function crawlRoutes() {
         headingOutline: headings.slice(0, 20),
         visibleTextHash: sha256(text),
         visibleTextLength: text.length,
+        mainVisibleTextHash: sha256(mainText),
+        mainVisibleTextLength: mainText.length,
+        mainHeadingCount: Number(structure.headingCount || 0),
+        mainParagraphCount: Number(structure.paragraphCount || 0),
+        mainImageCount: Number(structure.imageCount || 0),
+        mainMaxParagraphLength: Number(structure.maxParagraphLength || 0),
         visibleTextSource: textSource,
         editableMarkerCount: editableMarkers,
         internalLinkCount: links.filter((link) => link.internalPath).length,

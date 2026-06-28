@@ -2,6 +2,7 @@ import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 
 const strict = process.argv.includes("--strict");
+const localRuntime = process.argv.includes("--local-runtime");
 
 function commandExists(command) {
   return spawnSync("bash", ["-lc", `command -v ${command}`], { encoding: "utf8" }).status === 0;
@@ -30,7 +31,7 @@ const checks = [];
 checks.push({
   name: "Node.js",
   ok: isAtLeast(parseVersion(process.version), [20, 18, 0]),
-  detail: `${process.version}; required >=20.18.0 for this WordPress proof track`
+  detail: `${process.version}; required >=20.18.0 for source generation and export packaging`
 });
 
 const npm = commandOutput("npm", ["--version"]);
@@ -41,24 +42,24 @@ checks.push({
 });
 
 const php = commandOutput("php", ["--version"]);
-checks.push({ name: "PHP", ok: php.ok, detail: php.ok ? php.output.split("\n")[0] : "not found" });
+checks.push({ name: "PHP", ok: php.ok, detail: php.ok ? `${php.output.split("\n")[0]} (optional locally; required in cloud WordPress runtime)` : "not found locally; required in cloud WordPress runtime" });
 
 const wp = commandOutput("wp", ["--info"]);
-checks.push({ name: "WP-CLI", ok: wp.ok, detail: wp.ok ? "available" : "not found" });
+checks.push({ name: "WP-CLI", ok: wp.ok, detail: wp.ok ? "available locally (optional)" : "not found locally; required in cloud WordPress runtime" });
 
 const dockerInstalled = commandExists("docker");
 const dockerInfo = dockerInstalled ? commandOutput("docker", ["info"]) : { ok: false, output: "not found" };
 checks.push({
   name: "Docker",
   ok: dockerInstalled && dockerInfo.ok,
-  detail: dockerInstalled ? (dockerInfo.ok ? "daemon available" : "installed but daemon unavailable") : "not found; required for @wordpress/env"
+  detail: dockerInstalled ? (dockerInfo.ok ? "daemon available (optional local runtime)" : "installed but daemon unavailable; optional local runtime only") : "not found; optional local runtime only"
 });
 
 const dockerCompose = dockerInstalled ? commandOutput("docker", ["compose", "version"]) : { ok: false, output: "not found" };
 checks.push({
   name: "Docker Compose",
   ok: dockerCompose.ok,
-  detail: dockerCompose.ok ? dockerCompose.output : "not found; required for @wordpress/env"
+  detail: dockerCompose.ok ? `${dockerCompose.output} (optional local runtime)` : "not found; optional local runtime only"
 });
 
 const composer = commandOutput("composer", ["--version"]);
@@ -85,12 +86,15 @@ checks.push({
 let missingRequired = 0;
 for (const check of checks) {
   console.log(`${(check.ok ? "OK" : "MISSING").padEnd(8)} ${check.name}: ${check.detail}`);
-  if (!check.ok && ["Node.js", "npm", "PHP", "WP-CLI", "Docker", "Docker Compose"].includes(check.name)) {
+  const required = localRuntime
+    ? ["Node.js", "npm", "PHP", "WP-CLI", "Docker", "Docker Compose", "Automation browser"]
+    : ["Node.js", "npm", "Automation browser"];
+  if (!check.ok && required.includes(check.name)) {
     missingRequired += 1;
   }
 }
 
 if (strict && missingRequired > 0) process.exit(1);
 if (missingRequired > 0) {
-  console.log("\nSome required runtime prerequisites are missing. Static checks can still run, but wp-env/Playground runtime verification will be blocked.");
+  console.log("\nSome required local prerequisites are missing. Cloud WordPress import still runs inside the Codex-managed cloud runtime.");
 }

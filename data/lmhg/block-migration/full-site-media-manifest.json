@@ -1,109 +1,139 @@
 {
   "schemaVersion": "2026-06-27.full-site-editable-media.v1",
-  "generatedAt": "2026-06-28T00:51:04.165Z",
+  "generatedAt": "2026-06-28T16:57:29.383Z",
   "source": {
     "stagingBaseUrl": "https://staging.website-production-26u.pages.dev",
-    "mode": "local-artifact-preferred"
+    "astroSourceRoot": "/Users/tyler-lcsw/projects/lmhg-astro-integrate",
+    "mode": "astro-source-file-driven"
   },
   "assets": [
     {
-      "assetId": "asset-01f8b32d49f2",
+      "assetId": "asset-012e6ebfb46a",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/emdr-therapy-page-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/specialties/emdr-therapy-page-graphic-transparent-320w.webp 320w, /illustrations/specialties/emdr-therapy-page-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "01f8b32d49f279d20e357d16f1e010f048e3d069107e3946b0df311b027d9dd1",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-emdr-therapy-page-graphic-transparent-512w-01f8b32d49f2.webp",
-      "contentHash": "27b0c70baa7ebd980460a7bb3187b08ec16ce2724dba81f47950e5d3efd3344b",
-      "contentType": "image/webp",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/community-based-services-category-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/service-categories/community-based-services-category-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/community-based-services-category-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/community-based-services-category-graphic-transparent-512w.webp 512w",
+      "alt": "Community-Based Mental Health Services illustration",
+      "sourceHash": "012e6ebfb46ae185f319e5d1dc1f89967a1b0544e0ccaae36587b832bd3816d9",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
         {
-          "route": "/emdr-therapy/",
-          "blockId": "emdr-therapy-0008"
+          "route": "/community-based-services/",
+          "blockId": "community-based-services-0004"
         }
       ]
     },
     {
-      "assetId": "asset-07935ffc1a31",
+      "assetId": "asset-022fdaf81ef9",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/relationship-counseling-page-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/specialties/relationship-counseling-page-graphic-transparent-320w.webp 320w, /illustrations/specialties/relationship-counseling-page-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "07935ffc1a310de0b85772bd1926abc88d47aa4edb217e48dd912a74d12d64ef",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-relationship-counseling-page-graphic-transparent-512w-07935ffc1a31.webp",
-      "contentHash": "7316c31beea8b006897e37cd02561d1ec6b151bff3cc9761cef66b1db188d58e",
-      "contentType": "image/webp",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/couples-counseling-category-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/service-categories/couples-counseling-category-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/couples-counseling-category-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/couples-counseling-category-graphic-transparent-512w.webp 512w",
+      "alt": "Couples Counseling illustration",
+      "sourceHash": "022fdaf81ef9ec4cc61341a3420bfc5d8df7b613afb8ab2f7ae93a26eeace415",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
+        {
+          "route": "/couples-counseling/",
+          "blockId": "couples-counseling-0004"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-07d357941a26",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/couples-conflict-resolution-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/couples-conflict-resolution-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/couples-conflict-resolution-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/specialties/couples-conflict-resolution-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/couples-conflict-resolution-card-icon-transparent-512w.webp 512w",
+      "alt": "",
+      "sourceHash": "07d357941a26a6ff7c05611398825648e28b903949f3bd61949d8f77ef28d034",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/couples-counseling/",
+          "blockId": "couples-counseling-0014"
+        },
         {
           "route": "/relationship-counseling/",
-          "blockId": "relationship-counseling-0007"
+          "blockId": "relationship-counseling-0018"
         }
       ]
     },
     {
-      "assetId": "asset-0d6ce57ca79d",
+      "assetId": "asset-089bf375fd20",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/adolescent-counseling-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/specialties/adolescent-counseling-card-icon-transparent-160w.webp 160w, /illustrations/specialties/adolescent-counseling-card-icon-transparent-320w.webp 320w, /illustrations/specialties/adolescent-counseling-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "0d6ce57ca79db3faa76c4b21c41fd7caa37c193af08958cb7b52c55dc511afcb",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-adolescent-counseling-card-icon-transparent-320w-0d6ce57ca79d.webp",
-      "contentHash": "cbb08019660aadf30121bb578798eb64359997342e5578a2bffdaf545066635e",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/anxiety-depression-therapy/",
-          "blockId": "anxiety-depression-therapy-0013"
-        },
-        {
-          "route": "/child-behavioral-intervention/",
-          "blockId": "child-behavioral-intervention-0009"
-        },
-        {
-          "route": "/child-counseling/",
-          "blockId": "child-counseling-0008"
-        },
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0013"
-        },
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0028"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-11f262a25fdc",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/attachment-therapy-page-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/specialties/attachment-therapy-page-graphic-transparent-320w.webp 320w, /illustrations/specialties/attachment-therapy-page-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "11f262a25fdc50565e2387c293f1fac64747d5cc05ec5faef6e3dc231094e2f0",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-attachment-therapy-page-graphic-transparent-512w-11f262a25fdc.webp",
-      "contentHash": "2c82bd22c5835254adc02c6a79da231b426fe66018e258c98147b49199870114",
-      "contentType": "image/webp",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/attachment-therapy-page-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/attachment-therapy-page-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/attachment-therapy-page-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/attachment-therapy-page-graphic-transparent-512w.webp 512w",
+      "alt": "Attachment Therapy illustration",
+      "sourceHash": "089bf375fd207de89f5758bb45e6f7e34c4183993278f8ace82c29c072e675ab",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
         {
           "route": "/attachment-therapy/",
-          "blockId": "attachment-therapy-0007"
+          "blockId": "attachment-therapy-0004"
         }
       ]
     },
     {
-      "assetId": "asset-11fe9c4c6d59",
+      "assetId": "asset-0f0b69e11d7c",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/anxiety-depression-therapy-page-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/specialties/anxiety-depression-therapy-page-graphic-transparent-320w.webp 320w, /illustrations/specialties/anxiety-depression-therapy-page-graphic-transparent-512w.webp 512w",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/group-therapy-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/service-categories/group-therapy-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/group-therapy-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/group-therapy-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/group-therapy-card-icon-transparent-512w.webp 512w",
       "alt": "",
-      "sourceHash": "11fe9c4c6d5912d44062cff8e252254a343b686a61b674c40a191732ad718232",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-anxiety-depression-therapy-page-graphic-transparent-512w-11fe9c4c6d59.webp",
-      "contentHash": "4dc017fc558c2ea6aaa160ee146798c546a495fdb52ba5a6a4ce889dc74d6805",
-      "contentType": "image/webp",
+      "sourceHash": "0f0b69e11d7cf80e61e1c024539af4469fa17412e736633b52a52f06d0d3e6a7",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
         {
-          "route": "/anxiety-depression-therapy/",
-          "blockId": "anxiety-depression-therapy-0008"
+          "route": "/",
+          "blockId": "home-0030"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-13fd29a04a80",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/play-therapy-page-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/play-therapy-page-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/play-therapy-page-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/play-therapy-page-graphic-transparent-512w.webp 512w",
+      "alt": "Play Therapy illustration",
+      "sourceHash": "13fd29a04a8049d1f332b5b1d0d3d045fc6dc649637af5baff2735e2f518fadb",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/play-therapy/",
+          "blockId": "play-therapy-0004"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-1663165df253",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/group-therapy-category-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/service-categories/group-therapy-category-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/group-therapy-category-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/group-therapy-category-graphic-transparent-512w.webp 512w",
+      "alt": "Group Therapy illustration",
+      "sourceHash": "1663165df253d10412054c14efd9bc5aa8c32496ac78fdcdf2c0b7b179863370",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/group-therapy/",
+          "blockId": "group-therapy-0004"
         }
       ]
     },
@@ -111,240 +141,275 @@
       "assetId": "asset-1b2453a8ae4b",
       "kind": "image",
       "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-areas/louisville-ky-county-shape-transparent.svg",
+      "sourcePath": "public/illustrations/service-areas/louisville-ky-county-shape-transparent.svg",
       "srcset": "",
-      "alt": "Map outline for Louisville, Kentucky",
+      "alt": "",
       "sourceHash": "1b2453a8ae4b4bd33cf8955f42ecc7630890500225acaeba334218f527568e6f",
       "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-areas-louisville-ky-county-shape-transparent-1b2453a8ae4b.svg",
       "contentHash": "cd9c44c4966834ae71073fc94873df2ab8cc7701ba3f3687903b1c7d95c1407a",
       "contentType": "image/svg+xml",
       "routeUsage": [
         {
+          "route": "/jefferson-county-ky/",
+          "blockId": "jefferson-county-ky-0015"
+        },
+        {
+          "route": "/locations/in-person/",
+          "blockId": "locations-in-person-0013"
+        },
+        {
           "route": "/louisville-ky/",
-          "blockId": "louisville-ky-0009"
+          "blockId": "louisville-ky-0004"
         }
       ]
     },
     {
-      "assetId": "asset-1b3d44de7cf6",
+      "assetId": "asset-1c824377db07",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/family-reunification-page-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/specialties/family-reunification-page-graphic-transparent-320w.webp 320w, /illustrations/specialties/family-reunification-page-graphic-transparent-512w.webp 512w",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/attachment-therapy-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/attachment-therapy-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/attachment-therapy-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/specialties/attachment-therapy-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/attachment-therapy-card-icon-transparent-512w.webp 512w",
       "alt": "",
-      "sourceHash": "1b3d44de7cf636cc3b1e01c7bc8af3d6e4a87307c84e11e630effc9594784eaa",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-family-reunification-page-graphic-transparent-512w-1b3d44de7cf6.webp",
-      "contentHash": "65f481afad54fc3bc361b681e7a91f1771dccf329e56738d1b8b802257c74db4",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/family-reunification/",
-          "blockId": "family-reunification-0007"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-1e9b31e08114",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/trauma-therapy-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/service-categories/trauma-therapy-card-icon-transparent-160w.webp 160w, /illustrations/service-categories/trauma-therapy-card-icon-transparent-320w.webp 320w, /illustrations/service-categories/trauma-therapy-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "1e9b31e08114bb783dfe0a86c28ceefe50bae238e6a49b088091756d2e231ec0",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-categories-trauma-therapy-card-icon-transparent-320w-1e9b31e08114.webp",
-      "contentHash": "64ef523efd3801d02d330b203d5e5fcbf845922b3e72a88cc9dc201d7bf204bf",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/",
-          "blockId": "home-0015"
-        },
-        {
-          "route": "/emdr-therapy/",
-          "blockId": "emdr-therapy-0009"
-        },
-        {
-          "route": "/services/",
-          "blockId": "services-0020"
-        },
-        {
-          "route": "/services/",
-          "blockId": "services-0028"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-1ef1a71e30c9",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/trauma-therapy-category-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/service-categories/trauma-therapy-category-graphic-transparent-320w.webp 320w, /illustrations/service-categories/trauma-therapy-category-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "1ef1a71e30c9c424ce3c8622d09a1e6ba5a1a811f782a53d64095787c43bc1f5",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-categories-trauma-therapy-category-graphic-transparent-512w-1ef1a71e30c9.webp",
-      "contentHash": "b682e27d9efe26be477a7465e54b2ed571f086a7c76097eaf5aec69f73f60b26",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/trauma-therapy/",
-          "blockId": "trauma-therapy-0007"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-213a817af1f0",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/case-management-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/specialties/case-management-card-icon-transparent-160w.webp 160w, /illustrations/specialties/case-management-card-icon-transparent-320w.webp 320w, /illustrations/specialties/case-management-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "213a817af1f0a89a2757c9197aec255d8e29c853391b3d7052be57640b991e0d",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-case-management-card-icon-transparent-320w-213a817af1f0.webp",
-      "contentHash": "5fcf8f288eb22ef7e2262e990ab14419399c46edbedbc931da24513eb140f0bb",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/community-based-services/",
-          "blockId": "community-based-services-0008"
-        },
-        {
-          "route": "/community-support/",
-          "blockId": "community-support-0009"
-        },
-        {
-          "route": "/locations/community/",
-          "blockId": "locations-community-0010"
-        },
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0016"
-        },
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0023"
-        },
-        {
-          "route": "/therapy-in-your-home/",
-          "blockId": "therapy-in-your-home-0010"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-22c3e0f9cdfc",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/family-therapy-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/service-categories/family-therapy-card-icon-transparent-160w.webp 160w, /illustrations/service-categories/family-therapy-card-icon-transparent-320w.webp 320w, /illustrations/service-categories/family-therapy-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "22c3e0f9cdfcaa1fabbd43800d4815895ffde04c35a5d6aa61eb80edb27f8fac",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-categories-family-therapy-card-icon-transparent-320w-22c3e0f9cdfc.webp",
-      "contentHash": "ccad3647c20ad155f4613a6c35a83e7e0b8fe4ce0c45c390144919bc0fc71742",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/",
-          "blockId": "home-0010"
-        },
-        {
-          "route": "/adolescent-counseling/",
-          "blockId": "adolescent-counseling-0010"
-        },
-        {
-          "route": "/anxiety-depression-therapy/",
-          "blockId": "anxiety-depression-therapy-0011"
-        },
-        {
-          "route": "/attachment-therapy/",
-          "blockId": "attachment-therapy-0008"
-        },
-        {
-          "route": "/co-parenting/",
-          "blockId": "co-parenting-0009"
-        },
-        {
-          "route": "/couples-conflict-resolution/",
-          "blockId": "couples-conflict-resolution-0009"
-        },
-        {
-          "route": "/emdr-therapy/",
-          "blockId": "emdr-therapy-0011"
-        },
-        {
-          "route": "/family-reunification/",
-          "blockId": "family-reunification-0009"
-        },
-        {
-          "route": "/parenting-support/",
-          "blockId": "parenting-support-0008"
-        },
-        {
-          "route": "/play-therapy/",
-          "blockId": "play-therapy-0009"
-        },
-        {
-          "route": "/relationship-counseling/",
-          "blockId": "relationship-counseling-0009"
-        },
-        {
-          "route": "/services/",
-          "blockId": "services-0015"
-        },
-        {
-          "route": "/services/",
-          "blockId": "services-0023"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-2cdb8f7c7fb5",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/child-counseling-category-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/service-categories/child-counseling-category-graphic-transparent-320w.webp 320w, /illustrations/service-categories/child-counseling-category-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "2cdb8f7c7fb55ac5d3d95b12671ac2cc685d81ce32d7ce20b6d9e58d6ae53ad3",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-categories-child-counseling-category-graphic-transparent-512w-2cdb8f7c7fb5.webp",
-      "contentHash": "97b18b2467360789655566aeff4069543ae68ff09fdb6f8b1be253cfe1e236e1",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/child-counseling/",
-          "blockId": "child-counseling-0007"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-433e14d8148c",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/emdr-therapy-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/specialties/emdr-therapy-card-icon-transparent-160w.webp 160w, /illustrations/specialties/emdr-therapy-card-icon-transparent-320w.webp 320w, /illustrations/specialties/emdr-therapy-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "433e14d8148c3b087deb96ebce957f85be85ec67b6a5bfe0e9ebe17eb667be36",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-emdr-therapy-card-icon-transparent-320w-433e14d8148c.webp",
-      "contentHash": "255764964f21de1de76820c02ba6d524748d7fd966a939b38ad2a4f096239de4",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0011"
-        },
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0021"
-        },
-        {
-          "route": "/trauma-therapy/",
-          "blockId": "trauma-therapy-0008"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-4e715ebcb602",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/attachment-therapy-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/specialties/attachment-therapy-card-icon-transparent-160w.webp 160w, /illustrations/specialties/attachment-therapy-card-icon-transparent-320w.webp 320w, /illustrations/specialties/attachment-therapy-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "4e715ebcb602e05318f705853abeb373f5af6a8b80bef3e278aa0d450bc11150",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-attachment-therapy-card-icon-transparent-320w-4e715ebcb602.webp",
-      "contentHash": "6c8455e8606f621221b2185896abbf3a4bde97851088b3689ae57f1a9d554d90",
-      "contentType": "image/webp",
+      "sourceHash": "1c824377db071d654a45f54517db350cb775663cc6395d2c0caa7ab28a191a17",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
         {
           "route": "/family-therapy/",
-          "blockId": "family-therapy-0008"
+          "blockId": "family-therapy-0009"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-29ae339d1f52",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/emdr-therapy-page-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/emdr-therapy-page-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/emdr-therapy-page-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/emdr-therapy-page-graphic-transparent-512w.webp 512w",
+      "alt": "EMDR Therapy in Louisville, KY illustration",
+      "sourceHash": "29ae339d1f52d49f6351abbdbc6df0ce6d3d6994ec182a4ea55f2584d618d38b",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/emdr-therapy/",
+          "blockId": "emdr-therapy-0004"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-312c3ea95211",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/family-reunification-page-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/family-reunification-page-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/family-reunification-page-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/family-reunification-page-graphic-transparent-512w.webp 512w",
+      "alt": "Family Reunification Services illustration",
+      "sourceHash": "312c3ea9521183842de2fdffec8ce80b951cd2b47344acf5442bd1aa015d2eb2",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/family-reunification/",
+          "blockId": "family-reunification-0004"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-335ad19808b4",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/relationship-counseling-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/relationship-counseling-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/relationship-counseling-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/specialties/relationship-counseling-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/relationship-counseling-card-icon-transparent-512w.webp 512w",
+      "alt": "",
+      "sourceHash": "335ad19808b4bfe5720f298bd56b466d93c597eb3cbe756e19a895beac28c92e",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/couples-conflict-resolution/",
+          "blockId": "couples-conflict-resolution-0018"
+        },
+        {
+          "route": "/couples-counseling/",
+          "blockId": "couples-counseling-0009"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-379907324737",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/adult-counseling-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/adult-counseling-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/adult-counseling-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/specialties/adult-counseling-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/adult-counseling-card-icon-transparent-512w.webp 512w",
+      "alt": "",
+      "sourceHash": "37990732473785a0742b4243a8a42700311eb826b16cbe8d8dd7c138e870b6ba",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/anxiety-depression-therapy/",
+          "blockId": "anxiety-depression-therapy-0028"
+        },
+        {
+          "route": "/individual-counseling/",
+          "blockId": "individual-counseling-0009"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-39f58ca95833",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/parenting-support-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/parenting-support-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/parenting-support-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/specialties/parenting-support-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/parenting-support-card-icon-transparent-512w.webp 512w",
+      "alt": "",
+      "sourceHash": "39f58ca95833803deae3aac31cd44731a42928e87649f72ce8d27e6119f5ba5b",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/child-behavioral-intervention/",
+          "blockId": "child-behavioral-intervention-0018"
+        },
+        {
+          "route": "/co-parenting/",
+          "blockId": "co-parenting-0028"
+        },
+        {
+          "route": "/family-reunification/",
+          "blockId": "family-reunification-0028"
+        },
+        {
+          "route": "/family-therapy/",
+          "blockId": "family-therapy-0014"
+        },
+        {
+          "route": "/locations/school/",
+          "blockId": "locations-school-0025"
+        },
+        {
+          "route": "/play-therapy/",
+          "blockId": "play-therapy-0023"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-43c7a6710298",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/community-based-services-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/service-categories/community-based-services-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/community-based-services-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/community-based-services-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/community-based-services-card-icon-transparent-512w.webp 512w",
+      "alt": "",
+      "sourceHash": "43c7a671029863c56e1241885c2a3bc5fca0be00a38b173cb748738af7058ccb",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/case-management/",
+          "blockId": "case-management-0013"
+        },
+        {
+          "route": "/community-support/",
+          "blockId": "community-support-0013"
+        },
+        {
+          "route": "/jefferson-county-ky/",
+          "blockId": "jefferson-county-ky-0023"
+        },
+        {
+          "route": "/locations/community/",
+          "blockId": "locations-community-0015"
+        },
+        {
+          "route": "/locations/in-home/",
+          "blockId": "locations-in-home-0010"
+        },
+        {
+          "route": "/therapy-in-your-home/",
+          "blockId": "therapy-in-your-home-0013"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-4613d91f49c1",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/trauma-therapy-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/service-categories/trauma-therapy-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/trauma-therapy-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/trauma-therapy-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/trauma-therapy-card-icon-transparent-512w.webp 512w",
+      "alt": "",
+      "sourceHash": "4613d91f49c1a5eaaac05d850f87f6abde5a7fd2597d877490c46674b67721f4",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/",
+          "blockId": "home-0034"
+        },
+        {
+          "route": "/emdr-therapy/",
+          "blockId": "emdr-therapy-0007"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-545d173a8f62",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/trauma-therapy-category-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/service-categories/trauma-therapy-category-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/trauma-therapy-category-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/trauma-therapy-category-graphic-transparent-512w.webp 512w",
+      "alt": "Trauma Therapy illustration",
+      "sourceHash": "545d173a8f62701b301a25b7ea1bed449bca8e1218ddf6654d61517269f50209",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/trauma-therapy/",
+          "blockId": "trauma-therapy-0004"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-566000de0b17",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/adult-counseling-page-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/adult-counseling-page-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/adult-counseling-page-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/adult-counseling-page-graphic-transparent-512w.webp 512w",
+      "alt": "Adult Counseling illustration",
+      "sourceHash": "566000de0b172424fae20ee548dc9d1e9bc72f2c5994d0918dcae56987809ad1",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/adult-counseling/",
+          "blockId": "adult-counseling-0004"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-5c520ab9fb34",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/parenting-support-page-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/parenting-support-page-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/parenting-support-page-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/parenting-support-page-graphic-transparent-512w.webp 512w",
+      "alt": "Parenting Support illustration",
+      "sourceHash": "5c520ab9fb340ff7f2242ecb405e176ba77731800d0cf71bf75c48c9bf147989",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/parenting-support/",
+          "blockId": "parenting-support-0004"
         }
       ]
     },
@@ -352,8 +417,9 @@
       "assetId": "asset-5f497cd6e3da",
       "kind": "image",
       "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-areas/jefferson-county-ky-shape-transparent.svg",
+      "sourcePath": "public/illustrations/service-areas/jefferson-county-ky-shape-transparent.svg",
       "srcset": "",
-      "alt": "Map outline for Jefferson County, Kentucky",
+      "alt": "Transparent LMHG map-shape graphic for Jefferson County, Kentucky",
       "sourceHash": "5f497cd6e3da9b648a004d106cbd8715628866d64c4a4740618cc9032b900c8a",
       "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-areas-jefferson-county-ky-shape-transparent-5f497cd6e3da.svg",
       "contentHash": "fade61fc1c49255200945ed2df42068614762cf3f3d1df5fb57edc2712e9d7d2",
@@ -361,184 +427,133 @@
       "routeUsage": [
         {
           "route": "/jefferson-county-ky/",
-          "blockId": "jefferson-county-ky-0009"
+          "blockId": "jefferson-county-ky-0004"
         }
       ]
     },
     {
-      "assetId": "asset-6294f862e815",
+      "assetId": "asset-60446669b79f",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/case-management-page-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/specialties/case-management-page-graphic-transparent-320w.webp 320w, /illustrations/specialties/case-management-page-graphic-transparent-512w.webp 512w",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/family-therapy-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/service-categories/family-therapy-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/family-therapy-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/family-therapy-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/family-therapy-card-icon-transparent-512w.webp 512w",
       "alt": "",
-      "sourceHash": "6294f862e815356614b39022539b9e80376049b0f455cee6f1e2f338939e5e8a",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-case-management-page-graphic-transparent-512w-6294f862e815.webp",
-      "contentHash": "4783d96070024e9887491305572b0d91fe42dbfe4dbb66ab49858427fda5a9ab",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/case-management/",
-          "blockId": "case-management-0008"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-6dc900e366f4",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/child-behavioral-intervention-page-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/specialties/child-behavioral-intervention-page-graphic-transparent-320w.webp 320w, /illustrations/specialties/child-behavioral-intervention-page-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "6dc900e366f44ff3e1f3efca6dab424be1c430a10abe8965a81028f152ce72a2",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-child-behavioral-intervention-page-graphic-transparent-512w-6dc900e366f4.webp",
-      "contentHash": "721bfe0729b9464926903325b6c0996b85736024d3612249b73ab8e56e70373d",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/child-behavioral-intervention/",
-          "blockId": "child-behavioral-intervention-0007"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-72ea4fc0e0e8",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/therapy-in-your-home-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/specialties/therapy-in-your-home-card-icon-transparent-160w.webp 160w, /illustrations/specialties/therapy-in-your-home-card-icon-transparent-320w.webp 320w, /illustrations/specialties/therapy-in-your-home-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "72ea4fc0e0e81c623b89a0194b09b641dd0b0577bf3907826a997bb39b0bcba0",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-therapy-in-your-home-card-icon-transparent-320w-72ea4fc0e0e8.webp",
-      "contentHash": "037590c9d9503a9ea5a0a34ade13a203cc26c0743f9058070dc2510ff6de166d",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/case-management/",
-          "blockId": "case-management-0011"
-        },
-        {
-          "route": "/community-based-services/",
-          "blockId": "community-based-services-0010"
-        },
-        {
-          "route": "/community-support/",
-          "blockId": "community-support-0010"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-75718613e100",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/court-ordered-category-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/service-categories/court-ordered-category-graphic-transparent-320w.webp 320w, /illustrations/service-categories/court-ordered-category-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "75718613e100461ac050c387e08e27eeb1f986943701c8f3555c99c2ffa60301",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-categories-court-ordered-category-graphic-transparent-512w-75718613e100.webp",
-      "contentHash": "ca907435269882e995af0a8e8dd4e7726c5fa24f3fe82d1fb2b3842ede87e95a",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/court-ordered/",
-          "blockId": "court-ordered-0007"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-764a96d9203d",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/adult-counseling-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/specialties/adult-counseling-card-icon-transparent-160w.webp 160w, /illustrations/specialties/adult-counseling-card-icon-transparent-320w.webp 320w, /illustrations/specialties/adult-counseling-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "764a96d9203d3f511880b8323852640948ae9eafb7e8e13f716b8fe5aab5b231",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-adult-counseling-card-icon-transparent-320w-764a96d9203d.webp",
-      "contentHash": "b79153cc9c08cf26fc1829bfc1337d2ca9acd91bad5e3442bfbcaf0ad0ed8688",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/anxiety-depression-therapy/",
-          "blockId": "anxiety-depression-therapy-0012"
-        },
-        {
-          "route": "/individual-counseling/",
-          "blockId": "individual-counseling-0008"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-76ba467172e8",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/couples-counseling-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/service-categories/couples-counseling-card-icon-transparent-160w.webp 160w, /illustrations/service-categories/couples-counseling-card-icon-transparent-320w.webp 320w, /illustrations/service-categories/couples-counseling-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "76ba467172e814e295888529e51226d6dfcdae7a6b79a6b602a9039ca9c81508",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-categories-couples-counseling-card-icon-transparent-320w-76ba467172e8.webp",
-      "contentHash": "7aec0eefe009c8381fd986867bcc78070c4168c38d02e31a7dcdc9267a851670",
-      "contentType": "image/webp",
+      "sourceHash": "60446669b79f06efd04e2924921d4bdb7987e8b0ba99cc660595946d5261c445",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
         {
           "route": "/",
-          "blockId": "home-0011"
+          "blockId": "home-0016"
+        },
+        {
+          "route": "/adolescent-counseling/",
+          "blockId": "adolescent-counseling-0023"
+        },
+        {
+          "route": "/anxiety-depression-therapy/",
+          "blockId": "anxiety-depression-therapy-0023"
+        },
+        {
+          "route": "/articles/family-therapy-vs-individual-therapy/",
+          "blockId": "articles-family-therapy-vs-individual-therapy-0022"
+        },
+        {
+          "route": "/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/",
+          "blockId": "articles-how-to-talk-to-your-loved-ones-about-going-to-therapy-0041"
+        },
+        {
+          "route": "/attachment-therapy/",
+          "blockId": "attachment-therapy-0013"
+        },
+        {
+          "route": "/bullitt-county-ky/",
+          "blockId": "bullitt-county-ky-0022"
+        },
+        {
+          "route": "/child-behavioral-intervention/",
+          "blockId": "child-behavioral-intervention-0023"
+        },
+        {
+          "route": "/co-parenting/",
+          "blockId": "co-parenting-0023"
         },
         {
           "route": "/couples-conflict-resolution/",
-          "blockId": "couples-conflict-resolution-0008"
+          "blockId": "couples-conflict-resolution-0023"
+        },
+        {
+          "route": "/emdr-therapy/",
+          "blockId": "emdr-therapy-0017"
+        },
+        {
+          "route": "/family-reunification/",
+          "blockId": "family-reunification-0023"
+        },
+        {
+          "route": "/parenting-support/",
+          "blockId": "parenting-support-0013"
+        },
+        {
+          "route": "/play-therapy/",
+          "blockId": "play-therapy-0028"
         },
         {
           "route": "/relationship-counseling/",
-          "blockId": "relationship-counseling-0008"
-        },
-        {
-          "route": "/services/",
-          "blockId": "services-0016"
-        },
-        {
-          "route": "/services/",
-          "blockId": "services-0024"
+          "blockId": "relationship-counseling-0023"
         }
       ]
     },
     {
-      "assetId": "asset-863fc5f1236a",
+      "assetId": "asset-623c3bb8fa9b",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/group-therapy-category-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/service-categories/group-therapy-category-graphic-transparent-320w.webp 320w, /illustrations/service-categories/group-therapy-category-graphic-transparent-512w.webp 512w",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/community-support-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/community-support-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/community-support-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/specialties/community-support-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/community-support-card-icon-transparent-512w.webp 512w",
       "alt": "",
-      "sourceHash": "863fc5f1236ac1d37e310298d268832f953de9275da67801dffdd4acf7e56440",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-categories-group-therapy-category-graphic-transparent-512w-863fc5f1236a.webp",
-      "contentHash": "6d8291b83a2b727dc2235022dea8306fbcf37b7654bec34251fc36dedc855698",
-      "contentType": "image/webp",
+      "sourceHash": "623c3bb8fa9be4ca245ec85a1539989a4fc504f0467f831ea51ec985de4f7eb1",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
         {
-          "route": "/group-therapy/",
-          "blockId": "group-therapy-0006"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-8656c22b479e",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/couples-conflict-resolution-page-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/specialties/couples-conflict-resolution-page-graphic-transparent-320w.webp 320w, /illustrations/specialties/couples-conflict-resolution-page-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "8656c22b479e3ba337b624dae1579b0f1f76917b949829f82acaa3ad7303efbc",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-couples-conflict-resolution-page-graphic-transparent-512w-8656c22b479e.webp",
-      "contentHash": "ee1589d84765d55802f3d8109c315ec2e0fead0cabff36a3518420e28c73168b",
-      "contentType": "image/webp",
-      "routeUsage": [
+          "route": "/case-management/",
+          "blockId": "case-management-0018"
+        },
         {
-          "route": "/couples-conflict-resolution/",
-          "blockId": "couples-conflict-resolution-0007"
+          "route": "/community-based-services/",
+          "blockId": "community-based-services-0014"
+        },
+        {
+          "route": "/locations/community/",
+          "blockId": "locations-community-0010"
+        },
+        {
+          "route": "/locations/in-home/",
+          "blockId": "locations-in-home-0019"
+        },
+        {
+          "route": "/specialties/",
+          "blockId": "specialties-0013"
+        },
+        {
+          "route": "/therapy-in-your-home/",
+          "blockId": "therapy-in-your-home-0023"
         }
       ]
     },
     {
-      "assetId": "asset-9680b0b25263",
+      "assetId": "asset-641dd3d1bfce",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/individual-counseling-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/service-categories/individual-counseling-card-icon-transparent-160w.webp 160w, /illustrations/service-categories/individual-counseling-card-icon-transparent-320w.webp 320w, /illustrations/service-categories/individual-counseling-card-icon-transparent-512w.webp 512w",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/individual-counseling-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/service-categories/individual-counseling-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/individual-counseling-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/individual-counseling-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/individual-counseling-card-icon-transparent-512w.webp 512w",
       "alt": "",
-      "sourceHash": "9680b0b25263d35f003610fe35c301c536e3d39029b1f84be972d72b44b09d08",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-categories-individual-counseling-card-icon-transparent-320w-9680b0b25263.webp",
-      "contentHash": "13b8a971ad6058bdd61d0dedc8bf6d91c5ee1f29e2540cdb080c5b927e683ba5",
-      "contentType": "image/webp",
+      "sourceHash": "641dd3d1bfcee3c2f28fb2b67c2a91e49bce3bb78ca5c0bcb796318be5423e71",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
         {
           "route": "/",
@@ -546,539 +561,595 @@
         },
         {
           "route": "/adolescent-counseling/",
-          "blockId": "adolescent-counseling-0009"
+          "blockId": "adolescent-counseling-0018"
         },
         {
           "route": "/adult-counseling/",
-          "blockId": "adult-counseling-0008"
+          "blockId": "adult-counseling-0013"
         },
         {
           "route": "/anxiety-depression-therapy/",
-          "blockId": "anxiety-depression-therapy-0009"
+          "blockId": "anxiety-depression-therapy-0013"
         },
         {
-          "route": "/emdr-therapy/",
-          "blockId": "emdr-therapy-0010"
+          "route": "/articles/family-therapy-vs-individual-therapy/",
+          "blockId": "articles-family-therapy-vs-individual-therapy-0027"
         },
         {
-          "route": "/services/",
-          "blockId": "services-0013"
+          "route": "/articles/guide-to-individual-therapy/",
+          "blockId": "articles-guide-to-individual-therapy-0023"
         },
         {
-          "route": "/services/",
-          "blockId": "services-0021"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-99004420e59a",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/play-therapy-page-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/specialties/play-therapy-page-graphic-transparent-320w.webp 320w, /illustrations/specialties/play-therapy-page-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "99004420e59aa2cec8ee8dcab2798370c527dcf70455c6fb024f5096b367caae",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-play-therapy-page-graphic-transparent-512w-99004420e59a.webp",
-      "contentHash": "893ff60b58eed3de8614bdf372b736e5478b28c5292b5451dc0f52986765d02f",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/play-therapy/",
-          "blockId": "play-therapy-0007"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-9b66cac0e31c",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/relationship-counseling-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/specialties/relationship-counseling-card-icon-transparent-160w.webp 160w, /illustrations/specialties/relationship-counseling-card-icon-transparent-320w.webp 320w, /illustrations/specialties/relationship-counseling-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "9b66cac0e31c062fd10f584f25b004da616e53896d5e9d29bbee371048b6eaa3",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-relationship-counseling-card-icon-transparent-320w-9b66cac0e31c.webp",
-      "contentHash": "674ba6803eff1bd182e0a1a9927143d6be2499c4b2bd51071c6e56632e2ad047",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/couples-conflict-resolution/",
-          "blockId": "couples-conflict-resolution-0010"
+          "route": "/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/",
+          "blockId": "articles-how-to-talk-to-your-loved-ones-about-going-to-therapy-0036"
         },
         {
-          "route": "/couples-counseling/",
-          "blockId": "couples-counseling-0008"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-9cefa3443cce",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/play-therapy-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/specialties/play-therapy-card-icon-transparent-160w.webp 160w, /illustrations/specialties/play-therapy-card-icon-transparent-320w.webp 320w, /illustrations/specialties/play-therapy-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "9cefa3443cce335c144986e3cef11c372a7f07226d09b4f03bd5e368b0bb3148",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-play-therapy-card-icon-transparent-320w-9cefa3443cce.webp",
-      "contentHash": "5481bcc5ae1c3c6935f44a9f19353e2204bee5e5e1fb6f0a49688d0b4f1e9632",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/child-behavioral-intervention/",
-          "blockId": "child-behavioral-intervention-0010"
-        },
-        {
-          "route": "/child-counseling/",
-          "blockId": "child-counseling-0009"
-        },
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0014"
-        },
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0022"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-9da229e49f70",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/couples-counseling-category-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/service-categories/couples-counseling-category-graphic-transparent-320w.webp 320w, /illustrations/service-categories/couples-counseling-category-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "9da229e49f70cb2aed24d99f3cb8daa70e4c1507e061f9bcbf41ba68816c8b38",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-categories-couples-counseling-category-graphic-transparent-512w-9da229e49f70.webp",
-      "contentHash": "bdcacc60282e7eb9f910ae272f56c5f5f5928758b2b340c31f9e4a7ac0a1c89d",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/couples-counseling/",
-          "blockId": "couples-counseling-0007"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-a1923bbddf80",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/group-therapy-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/service-categories/group-therapy-card-icon-transparent-160w.webp 160w, /illustrations/service-categories/group-therapy-card-icon-transparent-320w.webp 320w, /illustrations/service-categories/group-therapy-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "a1923bbddf8096a954595cb11992856ae1433913eed192f5d7e02e18e4327337",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-categories-group-therapy-card-icon-transparent-320w-a1923bbddf80.webp",
-      "contentHash": "0fd9a2faff01a32d2295f78896a34211a11ef8f544ef213c226d6e6c33f9717f",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/",
-          "blockId": "home-0014"
-        },
-        {
-          "route": "/services/",
-          "blockId": "services-0019"
-        },
-        {
-          "route": "/services/",
-          "blockId": "services-0027"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-aac5df3ada9a",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/court-ordered-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/service-categories/court-ordered-card-icon-transparent-160w.webp 160w, /illustrations/service-categories/court-ordered-card-icon-transparent-320w.webp 320w, /illustrations/service-categories/court-ordered-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "aac5df3ada9a1633f426633a2dac365032dd2e2d7ec1ff9718e04ee0c7a202c3",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-categories-court-ordered-card-icon-transparent-320w-aac5df3ada9a.webp",
-      "contentHash": "a6b2972105c566a9299c0af15fc4778cd65798c33dd9bd021cfd851370ffe120",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/",
-          "blockId": "home-0012"
-        },
-        {
-          "route": "/co-parenting/",
-          "blockId": "co-parenting-0008"
-        },
-        {
-          "route": "/family-reunification/",
-          "blockId": "family-reunification-0008"
-        },
-        {
-          "route": "/services/",
-          "blockId": "services-0017"
-        },
-        {
-          "route": "/services/",
-          "blockId": "services-0025"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-aafac787c6b6",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/images/team/brooklyn-atherton-lpca-256w.webp",
-      "srcset": "/images/team/brooklyn-atherton-lpca-128w.webp 128w, /images/team/brooklyn-atherton-lpca-256w.webp 256w, /images/team/brooklyn-atherton-lpca-384w.webp 384w",
-      "alt": "Brooklyn Atherton, LPCA",
-      "sourceHash": "aafac787c6b62ae3985a105565135a0295518bbef5fd2ff0a85fce5ec630d31e",
-      "artifactPath": "artifacts/staging-snapshot/assets/images-team-brooklyn-atherton-lpca-256w-aafac787c6b6.webp",
-      "contentHash": "9fac9f9a7fc07b1cecf788929f532d01c80a67832856785f1ea11563d5b76e68",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/meet-the-team/",
-          "blockId": "meet-the-team-0006"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-ac1eb67df08e",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/anxiety-depression-therapy-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/specialties/anxiety-depression-therapy-card-icon-transparent-160w.webp 160w, /illustrations/specialties/anxiety-depression-therapy-card-icon-transparent-320w.webp 320w, /illustrations/specialties/anxiety-depression-therapy-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "ac1eb67df08e18bcaeceaaa4c1f21ba116758ab39291d6c27437918e2ba3f100",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-anxiety-depression-therapy-card-icon-transparent-320w-ac1eb67df08e.webp",
-      "contentHash": "dd86e0a66e4ebc455dfc09e0fb3c7e331e6e9247ed50727b8f3417844af67027",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/adult-counseling/",
-          "blockId": "adult-counseling-0009"
+          "route": "/articles/top-5-signs-its-time-to-seek-therapy/",
+          "blockId": "articles-top-5-signs-its-time-to-seek-therapy-0028"
         },
         {
           "route": "/emdr-therapy/",
           "blockId": "emdr-therapy-0012"
         },
         {
-          "route": "/individual-counseling/",
-          "blockId": "individual-counseling-0009"
-        },
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0012"
-        },
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0027"
+          "route": "/locations/online/",
+          "blockId": "locations-online-0016"
         }
       ]
     },
     {
-      "assetId": "asset-ae8c560a0736",
+      "assetId": "asset-646cbda1b142",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/family-reunification-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/specialties/family-reunification-card-icon-transparent-160w.webp 160w, /illustrations/specialties/family-reunification-card-icon-transparent-320w.webp 320w, /illustrations/specialties/family-reunification-card-icon-transparent-512w.webp 512w",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/co-parenting-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/co-parenting-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/co-parenting-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/specialties/co-parenting-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/co-parenting-card-icon-transparent-512w.webp 512w",
       "alt": "",
-      "sourceHash": "ae8c560a07360a6a7e6e64cfe21e19f7f0d084e807126f48ab5c82517c0cbf15",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-family-reunification-card-icon-transparent-320w-ae8c560a0736.webp",
-      "contentHash": "b9f9358e8d39265091ddfef6e84d6a2fb63a71db01877bb0d977fafd70fa3492",
-      "contentType": "image/webp",
+      "sourceHash": "646cbda1b14266d6e1808c5385aa7e798b706b6bfe1cf54c2c88d3fc25e7a54d",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
-        {
-          "route": "/co-parenting/",
-          "blockId": "co-parenting-0010"
-        },
         {
           "route": "/court-ordered/",
-          "blockId": "court-ordered-0008"
+          "blockId": "court-ordered-0014"
         },
         {
-          "route": "/specialties/",
-          "blockId": "specialties-0019"
+          "route": "/family-reunification/",
+          "blockId": "family-reunification-0018"
         },
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0025"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-aeeae6accab5",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/parenting-support-page-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/specialties/parenting-support-page-graphic-transparent-320w.webp 320w, /illustrations/specialties/parenting-support-page-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "aeeae6accab5c4db6e8d3e11307401b3aefab36d0eaf6a52d604a6147ec599e5",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-parenting-support-page-graphic-transparent-512w-aeeae6accab5.webp",
-      "contentHash": "c8ef730d854263ce5230f5a5307ceee5ed352a0f473e7dc242815971fca4f3a5",
-      "contentType": "image/webp",
-      "routeUsage": [
         {
           "route": "/parenting-support/",
-          "blockId": "parenting-support-0007"
+          "blockId": "parenting-support-0028"
         }
       ]
     },
     {
-      "assetId": "asset-b3e87127bec9",
+      "assetId": "asset-67f05f28eb42",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/adult-counseling-page-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/specialties/adult-counseling-page-graphic-transparent-320w.webp 320w, /illustrations/specialties/adult-counseling-page-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "b3e87127bec9e506daffa3a5c414eeb6ae6694cf218fe1bc8243db8cbae69dda",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-adult-counseling-page-graphic-transparent-512w-b3e87127bec9.webp",
-      "contentHash": "56ff2f822d4ddfdc4632776152cea95667af9d0c15d6c0c71c0ffb9ebb950117",
-      "contentType": "image/webp",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/community-support-page-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/community-support-page-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/community-support-page-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/community-support-page-graphic-transparent-512w.webp 512w",
+      "alt": "Community Support Services illustration",
+      "sourceHash": "67f05f28eb42545a0f2e5a3b26190e9c3a8d09835c465c832ff2f4237c524a89",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
         {
-          "route": "/adult-counseling/",
-          "blockId": "adult-counseling-0007"
+          "route": "/community-support/",
+          "blockId": "community-support-0004"
         }
       ]
     },
     {
-      "assetId": "asset-b4b2d82162cd",
+      "assetId": "asset-693dd6df5431",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/co-parenting-page-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/specialties/co-parenting-page-graphic-transparent-320w.webp 320w, /illustrations/specialties/co-parenting-page-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "b4b2d82162cdb5a728bba95069d42ecd86a50c8d9b9fde6e6827434131df18c9",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-co-parenting-page-graphic-transparent-512w-b4b2d82162cd.webp",
-      "contentHash": "616384547b67a16925ea749d88e6b642188e7e6af5150ed6174f9ef5dce3dd31",
-      "contentType": "image/webp",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/family-therapy-category-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/service-categories/family-therapy-category-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/family-therapy-category-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/family-therapy-category-graphic-transparent-512w.webp 512w",
+      "alt": "Family Therapy illustration",
+      "sourceHash": "693dd6df54317f2b75849d37af86ccce4ce7bc7535ac1ce2607d3795aafbcdcc",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
         {
-          "route": "/co-parenting/",
-          "blockId": "co-parenting-0007"
+          "route": "/family-therapy/",
+          "blockId": "family-therapy-0004"
         }
       ]
     },
     {
-      "assetId": "asset-b76e4bbc5400",
+      "assetId": "asset-6c171a8329b6",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/child-behavioral-intervention-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/specialties/child-behavioral-intervention-card-icon-transparent-160w.webp 160w, /illustrations/specialties/child-behavioral-intervention-card-icon-transparent-320w.webp 320w, /illustrations/specialties/child-behavioral-intervention-card-icon-transparent-512w.webp 512w",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/couples-counseling-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/service-categories/couples-counseling-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/couples-counseling-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/couples-counseling-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/couples-counseling-card-icon-transparent-512w.webp 512w",
       "alt": "",
-      "sourceHash": "b76e4bbc5400a0c7e55d1e47b74d35fa5731c4bce944adf03b3c960b61088fdd",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-child-behavioral-intervention-card-icon-transparent-320w-b76e4bbc5400.webp",
-      "contentHash": "6827342db5e961929a92e401e69a1c298836539910d5f5cda46f55a671cc340d",
-      "contentType": "image/webp",
+      "sourceHash": "6c171a8329b6fb3f16dcd1d0e303a9599803685beb61a2372f0a2614fb70b760",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/",
+          "blockId": "home-0020"
+        },
+        {
+          "route": "/couples-conflict-resolution/",
+          "blockId": "couples-conflict-resolution-0013"
+        },
+        {
+          "route": "/oldham-county-ky/",
+          "blockId": "oldham-county-ky-0022"
+        },
+        {
+          "route": "/relationship-counseling/",
+          "blockId": "relationship-counseling-0013"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-6db775023709",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/child-behavioral-intervention-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/child-behavioral-intervention-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/child-behavioral-intervention-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/specialties/child-behavioral-intervention-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/child-behavioral-intervention-card-icon-transparent-512w.webp 512w",
+      "alt": "",
+      "sourceHash": "6db775023709e0f4c5077e84f343c5bc1cc08679b108a441486132ac5a795fd7",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
         {
           "route": "/child-counseling/",
-          "blockId": "child-counseling-0010"
+          "blockId": "child-counseling-0019"
+        },
+        {
+          "route": "/locations/school/",
+          "blockId": "locations-school-0020"
         },
         {
           "route": "/parenting-support/",
-          "blockId": "parenting-support-0010"
+          "blockId": "parenting-support-0023"
         },
         {
           "route": "/play-therapy/",
-          "blockId": "play-therapy-0010"
+          "blockId": "play-therapy-0018"
         }
       ]
     },
     {
-      "assetId": "asset-bcc9fa0aed1a",
+      "assetId": "asset-75d4a1f5238e",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/co-parenting-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/specialties/co-parenting-card-icon-transparent-160w.webp 160w, /illustrations/specialties/co-parenting-card-icon-transparent-320w.webp 320w, /illustrations/specialties/co-parenting-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "bcc9fa0aed1ad322717174f3bf23561f91a45340752d0a26ae2368c0a429f942",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-co-parenting-card-icon-transparent-320w-bcc9fa0aed1a.webp",
-      "contentHash": "955ccb2d957ad60a364fe2383573b6f29606edbf90710f6be672097e5fbf5393",
-      "contentType": "image/webp",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/child-counseling-category-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/service-categories/child-counseling-category-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/child-counseling-category-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/child-counseling-category-graphic-transparent-512w.webp 512w",
+      "alt": "Child Counseling illustration",
+      "sourceHash": "75d4a1f5238e2af9daf6eb99e2954cbc01738cd8734241298a383ed7ca996e1f",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
+        {
+          "route": "/child-counseling/",
+          "blockId": "child-counseling-0004"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-7a5241d8ee89",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/adolescent-counseling-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/adolescent-counseling-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/adolescent-counseling-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/specialties/adolescent-counseling-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/adolescent-counseling-card-icon-transparent-512w.webp 512w",
+      "alt": "",
+      "sourceHash": "7a5241d8ee893300dfcc936724a695e7108374e5f6b949d67cff9638d7ff8ee5",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/anxiety-depression-therapy/",
+          "blockId": "anxiety-depression-therapy-0033"
+        },
+        {
+          "route": "/child-counseling/",
+          "blockId": "child-counseling-0009"
+        },
+        {
+          "route": "/locations/school/",
+          "blockId": "locations-school-0015"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-7d278659d92f",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/family-reunification-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/family-reunification-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/family-reunification-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/specialties/family-reunification-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/family-reunification-card-icon-transparent-512w.webp 512w",
+      "alt": "",
+      "sourceHash": "7d278659d92f69606490de63d6df5197687c25c7795cf8d22d4cdeca26177184",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/co-parenting/",
+          "blockId": "co-parenting-0018"
+        },
         {
           "route": "/court-ordered/",
           "blockId": "court-ordered-0009"
         },
         {
-          "route": "/family-reunification/",
-          "blockId": "family-reunification-0010"
-        },
-        {
-          "route": "/parenting-support/",
-          "blockId": "parenting-support-0011"
-        },
-        {
           "route": "/specialties/",
-          "blockId": "specialties-0020"
-        },
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0026"
+          "blockId": "specialties-0018"
         }
       ]
     },
     {
-      "assetId": "asset-c53d0c2c0a2c",
+      "assetId": "asset-822c78d11e61",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/individual-counseling-category-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/service-categories/individual-counseling-category-graphic-transparent-320w.webp 320w, /illustrations/service-categories/individual-counseling-category-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "c53d0c2c0a2c8675dc2d136a817ea4d77e4bb8d5e55f6971a772f1ada7cb2b16",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-categories-individual-counseling-category-graphic-transparent-512w-c53d0c2c0a2c.webp",
-      "contentHash": "bac11824812399b66f78ec606e414cbc9235ad2e671c84297e333ff7758c9773",
-      "contentType": "image/webp",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/court-ordered-category-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/service-categories/court-ordered-category-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/court-ordered-category-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/court-ordered-category-graphic-transparent-512w.webp 512w",
+      "alt": "Court-Ordered Services illustration",
+      "sourceHash": "822c78d11e61a978de2bf2b6d4f569c069aa40970404db687a34488af2e91288",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
         {
-          "route": "/individual-counseling/",
-          "blockId": "individual-counseling-0007"
+          "route": "/court-ordered/",
+          "blockId": "court-ordered-0004"
         }
       ]
     },
     {
-      "assetId": "asset-cb99d539775a",
+      "assetId": "asset-856d6d21edf7",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/parenting-support-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/specialties/parenting-support-card-icon-transparent-160w.webp 160w, /illustrations/specialties/parenting-support-card-icon-transparent-320w.webp 320w, /illustrations/specialties/parenting-support-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "cb99d539775aab2725133139f90d581ad620a352c52dc0c96abe3eb50db15b52",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-parenting-support-card-icon-transparent-320w-cb99d539775a.webp",
-      "contentHash": "1461cb96409306eb081c969feb1a4f6ddd43f14e9caaefd91692eddf627f1c97",
-      "contentType": "image/webp",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/couples-conflict-resolution-page-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/couples-conflict-resolution-page-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/couples-conflict-resolution-page-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/couples-conflict-resolution-page-graphic-transparent-512w.webp 512w",
+      "alt": "Couples Conflict Resolution illustration",
+      "sourceHash": "856d6d21edf7cf3de414272e254343696ba44779397e6d7e59c1b71bb52324c0",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
         {
-          "route": "/co-parenting/",
-          "blockId": "co-parenting-0011"
-        },
-        {
-          "route": "/family-reunification/",
-          "blockId": "family-reunification-0011"
-        },
-        {
-          "route": "/family-therapy/",
-          "blockId": "family-therapy-0009"
-        },
-        {
-          "route": "/play-therapy/",
-          "blockId": "play-therapy-0011"
-        },
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0015"
-        },
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0029"
+          "route": "/couples-conflict-resolution/",
+          "blockId": "couples-conflict-resolution-0004"
         }
       ]
     },
     {
-      "assetId": "asset-da621c2f36bd",
+      "assetId": "asset-87a1fb4bd518",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/couples-conflict-resolution-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/specialties/couples-conflict-resolution-card-icon-transparent-160w.webp 160w, /illustrations/specialties/couples-conflict-resolution-card-icon-transparent-320w.webp 320w, /illustrations/specialties/couples-conflict-resolution-card-icon-transparent-512w.webp 512w",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/child-counseling-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/service-categories/child-counseling-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/child-counseling-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/child-counseling-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/child-counseling-card-icon-transparent-512w.webp 512w",
       "alt": "",
-      "sourceHash": "da621c2f36bd85cb60c1fefd215f657e141c62f419c4dfb41d24ed0b7b16dad9",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-couples-conflict-resolution-card-icon-transparent-320w-da621c2f36bd.webp",
-      "contentHash": "cbb2cf1fecdaaa09501e77ca97011320eacc15ae70176ad00f6cc19b6e5ac0d2",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/couples-counseling/",
-          "blockId": "couples-counseling-0009"
-        },
-        {
-          "route": "/relationship-counseling/",
-          "blockId": "relationship-counseling-0010"
-        },
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0017"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-e70550bac20f",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/child-counseling-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/service-categories/child-counseling-card-icon-transparent-160w.webp 160w, /illustrations/service-categories/child-counseling-card-icon-transparent-320w.webp 320w, /illustrations/service-categories/child-counseling-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "e70550bac20fe44258856a027c2dfaafccfec482d32c5096ed3e540c0159c9be",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-categories-child-counseling-card-icon-transparent-320w-e70550bac20f.webp",
-      "contentHash": "8df8c2d76fceeb1aa0907d619f9499eee53595b0666a05e6ee2a4ead088186fa",
-      "contentType": "image/webp",
+      "sourceHash": "87a1fb4bd5183e28e6a400aad6a7c2bf6d3f72365dd5e9f4ac3fff125b2af8c1",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
         {
           "route": "/",
-          "blockId": "home-0009"
+          "blockId": "home-0012"
         },
         {
           "route": "/adolescent-counseling/",
-          "blockId": "adolescent-counseling-0008"
+          "blockId": "adolescent-counseling-0013"
         },
         {
           "route": "/anxiety-depression-therapy/",
-          "blockId": "anxiety-depression-therapy-0010"
+          "blockId": "anxiety-depression-therapy-0018"
+        },
+        {
+          "route": "/articles/family-therapy-vs-individual-therapy/",
+          "blockId": "articles-family-therapy-vs-individual-therapy-0032"
         },
         {
           "route": "/attachment-therapy/",
-          "blockId": "attachment-therapy-0009"
+          "blockId": "attachment-therapy-0018"
         },
         {
           "route": "/child-behavioral-intervention/",
-          "blockId": "child-behavioral-intervention-0008"
+          "blockId": "child-behavioral-intervention-0013"
+        },
+        {
+          "route": "/locations/school/",
+          "blockId": "locations-school-0010"
         },
         {
           "route": "/parenting-support/",
-          "blockId": "parenting-support-0009"
+          "blockId": "parenting-support-0018"
         },
         {
           "route": "/play-therapy/",
-          "blockId": "play-therapy-0008"
-        },
-        {
-          "route": "/services/",
-          "blockId": "services-0014"
-        },
-        {
-          "route": "/services/",
-          "blockId": "services-0022"
+          "blockId": "play-therapy-0013"
         }
       ]
     },
     {
-      "assetId": "asset-e7d8cb3b61bf",
+      "assetId": "asset-8c6a48519327",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/therapy-in-your-home-page-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/specialties/therapy-in-your-home-page-graphic-transparent-320w.webp 320w, /illustrations/specialties/therapy-in-your-home-page-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "e7d8cb3b61bfcb046a4e5afecaf6e1ea6fc4f5b7c60a671eb7d36ee334057361",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-therapy-in-your-home-page-graphic-transparent-512w-e7d8cb3b61bf.webp",
-      "contentHash": "519430a44ad63cb4dc91720598829f60356f1e16e4ec62cfa130ed9f818dff18",
-      "contentType": "image/webp",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/relationship-counseling-page-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/relationship-counseling-page-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/relationship-counseling-page-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/relationship-counseling-page-graphic-transparent-512w.webp 512w",
+      "alt": "Relationship Counseling illustration",
+      "sourceHash": "8c6a48519327e5acb435aac40a66ab06bc9416b6baee552664063810ef91b8b1",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
         {
-          "route": "/therapy-in-your-home/",
-          "blockId": "therapy-in-your-home-0008"
+          "route": "/relationship-counseling/",
+          "blockId": "relationship-counseling-0004"
         }
       ]
     },
     {
-      "assetId": "asset-f0f9897cb8cc",
+      "assetId": "asset-90fff235b17b",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/community-support-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/specialties/community-support-card-icon-transparent-160w.webp 160w, /illustrations/specialties/community-support-card-icon-transparent-320w.webp 320w, /illustrations/specialties/community-support-card-icon-transparent-512w.webp 512w",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/case-management-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/case-management-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/case-management-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/specialties/case-management-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/case-management-card-icon-transparent-512w.webp 512w",
       "alt": "",
-      "sourceHash": "f0f9897cb8ccc4927d54ff535ab619e7d2e63e83a49fb7dc3922b8a871c23363",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-community-support-card-icon-transparent-320w-f0f9897cb8cc.webp",
-      "contentHash": "7bcd35ef3daba8700f01f3c311e29442a88f61f2dff9eacba966898d0fbff3d1",
-      "contentType": "image/webp",
+      "sourceHash": "90fff235b17b5652e310ea00cf2447465c1fb4bc8c5d5180898f79f23bf9e883",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
-        {
-          "route": "/case-management/",
-          "blockId": "case-management-0010"
-        },
         {
           "route": "/community-based-services/",
           "blockId": "community-based-services-0009"
         },
         {
-          "route": "/locations/community/",
-          "blockId": "locations-community-0011"
-        },
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0018"
-        },
-        {
-          "route": "/specialties/",
-          "blockId": "specialties-0024"
+          "route": "/community-support/",
+          "blockId": "community-support-0018"
         },
         {
           "route": "/therapy-in-your-home/",
-          "blockId": "therapy-in-your-home-0011"
+          "blockId": "therapy-in-your-home-0018"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-979016d8aef9",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/therapy-in-your-home-page-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/therapy-in-your-home-page-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/therapy-in-your-home-page-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/therapy-in-your-home-page-graphic-transparent-512w.webp 512w",
+      "alt": "In-Home Therapy illustration",
+      "sourceHash": "979016d8aef992a31ea276d76e1d87d565f4669aec894aad2a7a1c713ded5e1d",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/therapy-in-your-home/",
+          "blockId": "therapy-in-your-home-0004"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-980093adedd6",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/co-parenting-page-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/co-parenting-page-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/co-parenting-page-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/co-parenting-page-graphic-transparent-512w.webp 512w",
+      "alt": "Co-Parenting Services illustration",
+      "sourceHash": "980093adedd6d0bfdc61be512a84f9474d7184dcafc3459f00452aff5a877b98",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/co-parenting/",
+          "blockId": "co-parenting-0004"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-9b0b7580e52c",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/court-ordered-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/service-categories/court-ordered-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/court-ordered-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/court-ordered-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/court-ordered-card-icon-transparent-512w.webp 512w",
+      "alt": "",
+      "sourceHash": "9b0b7580e52c3d184b1b3c0e075da4cc07b34b732be2aecf374d04852e4476e1",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/",
+          "blockId": "home-0024"
+        },
+        {
+          "route": "/co-parenting/",
+          "blockId": "co-parenting-0013"
+        },
+        {
+          "route": "/family-reunification/",
+          "blockId": "family-reunification-0013"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-a6475425b6df",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/case-management-page-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/case-management-page-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/case-management-page-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/case-management-page-graphic-transparent-512w.webp 512w",
+      "alt": "Targeted Case Management illustration",
+      "sourceHash": "a6475425b6dfb39c590f0e687be206244b44cb263dd7166f0250a49f29102017",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/case-management/",
+          "blockId": "case-management-0004"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-c7953ebd0fe3",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/adolescent-counseling-page-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/adolescent-counseling-page-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/adolescent-counseling-page-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/adolescent-counseling-page-graphic-transparent-512w.webp 512w",
+      "alt": "Teen Therapy illustration",
+      "sourceHash": "c7953ebd0fe391677e1c754623760610db251a6f18ec023494fd354978b8131a",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/adolescent-counseling/",
+          "blockId": "adolescent-counseling-0004"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-cc7c4f34fa7a",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/individual-counseling-category-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/service-categories/individual-counseling-category-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/individual-counseling-category-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/service-categories/individual-counseling-category-graphic-transparent-512w.webp 512w",
+      "alt": "Individual Counseling illustration",
+      "sourceHash": "cc7c4f34fa7a3cd55871d68452091cfb77a03216bad1247385d4a8b3eca20fcb",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/individual-counseling/",
+          "blockId": "individual-counseling-0004"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-cea2ffe8a559",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/anxiety-depression-therapy-page-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/anxiety-depression-therapy-page-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/anxiety-depression-therapy-page-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/anxiety-depression-therapy-page-graphic-transparent-512w.webp 512w",
+      "alt": "Anxiety And Depression Therapy illustration",
+      "sourceHash": "cea2ffe8a5594fba46ec95387605ee305cb9e41a3a0c078cc4d262dbddac1a18",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/anxiety-depression-therapy/",
+          "blockId": "anxiety-depression-therapy-0004"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-de0d0d7be174",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/anxiety-depression-therapy-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/anxiety-depression-therapy-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/anxiety-depression-therapy-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/specialties/anxiety-depression-therapy-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/anxiety-depression-therapy-card-icon-transparent-512w.webp 512w",
+      "alt": "",
+      "sourceHash": "de0d0d7be1748d4e1a6dc04b5d2d28678295f572e8d29a6b3f50a0eb95026079",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/adult-counseling/",
+          "blockId": "adult-counseling-0018"
+        },
+        {
+          "route": "/articles/top-5-signs-its-time-to-seek-therapy/",
+          "blockId": "articles-top-5-signs-its-time-to-seek-therapy-0033"
+        },
+        {
+          "route": "/emdr-therapy/",
+          "blockId": "emdr-therapy-0022"
+        },
+        {
+          "route": "/individual-counseling/",
+          "blockId": "individual-counseling-0014"
+        },
+        {
+          "route": "/specialties/",
+          "blockId": "specialties-0023"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-e1143e812909",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/play-therapy-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/play-therapy-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/play-therapy-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/specialties/play-therapy-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/play-therapy-card-icon-transparent-512w.webp 512w",
+      "alt": "",
+      "sourceHash": "e1143e812909766c2039bdfd8d882bd9a680e834a6152252ffdb277b1587a99b",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/child-counseling/",
+          "blockId": "child-counseling-0014"
+        },
+        {
+          "route": "/specialties/",
+          "blockId": "specialties-0008"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-e3e40a3d3f41",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/therapy-in-your-home-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/therapy-in-your-home-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/therapy-in-your-home-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/specialties/therapy-in-your-home-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/therapy-in-your-home-card-icon-transparent-512w.webp 512w",
+      "alt": "",
+      "sourceHash": "e3e40a3d3f41a42152856be532601c69aecee1dbcec899efff96bd61a743d70c",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/case-management/",
+          "blockId": "case-management-0023"
+        },
+        {
+          "route": "/community-based-services/",
+          "blockId": "community-based-services-0019"
+        },
+        {
+          "route": "/community-support/",
+          "blockId": "community-support-0023"
+        }
+      ]
+    },
+    {
+      "assetId": "asset-ecc0cec38d1a",
+      "kind": "image",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/child-behavioral-intervention-page-graphic-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/child-behavioral-intervention-page-graphic-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/child-behavioral-intervention-page-graphic-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/child-behavioral-intervention-page-graphic-transparent-512w.webp 512w",
+      "alt": "Child Behavioral Therapy illustration",
+      "sourceHash": "ecc0cec38d1a4a40c1f14559787a001318df8ca4c9a88b1df749ae68bcb35d84",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
+      "routeUsage": [
+        {
+          "route": "/child-behavioral-intervention/",
+          "blockId": "child-behavioral-intervention-0004"
         }
       ]
     },
@@ -1086,8 +1157,9 @@
       "assetId": "asset-f467133beaf2",
       "kind": "image",
       "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-areas/oldham-county-ky-shape-transparent.svg",
+      "sourcePath": "public/illustrations/service-areas/oldham-county-ky-shape-transparent.svg",
       "srcset": "",
-      "alt": "Map outline for Oldham County, Kentucky",
+      "alt": "Transparent LMHG map-shape graphic for Oldham County, Kentucky",
       "sourceHash": "f467133beaf29534bb93a20f87421b3bbc44a349f9c8156bb2a5f372c9d8f044",
       "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-areas-oldham-county-ky-shape-transparent-f467133beaf2.svg",
       "contentHash": "832dce9207948f1e87374c12b8e4c3614ace13b15527d9b481796ea8b6f27b04",
@@ -1095,24 +1167,29 @@
       "routeUsage": [
         {
           "route": "/oldham-county-ky/",
-          "blockId": "oldham-county-ky-0009"
+          "blockId": "oldham-county-ky-0004"
         }
       ]
     },
     {
-      "assetId": "asset-f483aa47eefb",
+      "assetId": "asset-f65de2694370",
       "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/community-based-services-category-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/service-categories/community-based-services-category-graphic-transparent-320w.webp 320w, /illustrations/service-categories/community-based-services-category-graphic-transparent-512w.webp 512w",
+      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/emdr-therapy-card-icon-transparent.webp",
+      "sourcePath": "public/illustrations/specialties/emdr-therapy-card-icon-transparent.webp",
+      "srcset": "https://staging.website-production-26u.pages.dev/illustrations/specialties/emdr-therapy-card-icon-transparent-160w.webp 160w, https://staging.website-production-26u.pages.dev/illustrations/specialties/emdr-therapy-card-icon-transparent-320w.webp 320w, https://staging.website-production-26u.pages.dev/illustrations/specialties/emdr-therapy-card-icon-transparent-512w.webp 512w",
       "alt": "",
-      "sourceHash": "f483aa47eefb3754c33b917d9cb1d3afc53a4e03869b0cfc215bd630d2bcb6f2",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-categories-community-based-services-category-graphic-transparent-512w-f483aa47eefb.webp",
-      "contentHash": "71c4d7f4534050beaa519682515c4122ac13ea9c0ac743fb469f9462538f9d47",
-      "contentType": "image/webp",
+      "sourceHash": "f65de2694370764065100991ff89018b3019f90bec02daac6c0b7e13d7c5f727",
+      "artifactPath": "",
+      "contentHash": "",
+      "contentType": "",
       "routeUsage": [
         {
-          "route": "/community-based-services/",
-          "blockId": "community-based-services-0007"
+          "route": "/specialties/",
+          "blockId": "specialties-0004"
+        },
+        {
+          "route": "/trauma-therapy/",
+          "blockId": "trauma-therapy-0009"
         }
       ]
     },
@@ -1120,8 +1197,9 @@
       "assetId": "asset-f868511776a2",
       "kind": "image",
       "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-areas/bullitt-county-ky-shape-transparent.svg",
+      "sourcePath": "public/illustrations/service-areas/bullitt-county-ky-shape-transparent.svg",
       "srcset": "",
-      "alt": "Map outline for Bullitt County, Kentucky",
+      "alt": "Transparent LMHG map-shape graphic for Bullitt County, Kentucky",
       "sourceHash": "f868511776a24b88706417afa810a5e8c5330b446cd54d0e55a7117e977b3dc9",
       "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-areas-bullitt-county-ky-shape-transparent-f868511776a2.svg",
       "contentHash": "3755d9b5f283c39b24a613b066c975d18f508d60136640de8a26cffa7deb9101",
@@ -1129,99 +1207,7 @@
       "routeUsage": [
         {
           "route": "/bullitt-county-ky/",
-          "blockId": "bullitt-county-ky-0009"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-f8a73dba7c85",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/community-support-page-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/specialties/community-support-page-graphic-transparent-320w.webp 320w, /illustrations/specialties/community-support-page-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "f8a73dba7c85d1b6b9e81c61d8a1835df6f519219a5946abf916ff4c75359dfd",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-community-support-page-graphic-transparent-512w-f8a73dba7c85.webp",
-      "contentHash": "cba530cae187d23cde839cc8aba428fe9b609a91763a66396a4951ecc56d03bd",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/community-support/",
-          "blockId": "community-support-0007"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-fc96c11a84f9",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/specialties/adolescent-counseling-page-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/specialties/adolescent-counseling-page-graphic-transparent-320w.webp 320w, /illustrations/specialties/adolescent-counseling-page-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "fc96c11a84f93ff34665b1b797db89d0530abf3a4b82b7b4c7ec23a2ff520b6d",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-specialties-adolescent-counseling-page-graphic-transparent-512w-fc96c11a84f9.webp",
-      "contentHash": "392de5468dd9a56fd515eacc8dfbf0a3542c3f29aac5e11f58e427bd81fe6235",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/adolescent-counseling/",
-          "blockId": "adolescent-counseling-0007"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-fe946fed5c09",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/community-based-services-card-icon-transparent-320w.webp",
-      "srcset": "/illustrations/service-categories/community-based-services-card-icon-transparent-160w.webp 160w, /illustrations/service-categories/community-based-services-card-icon-transparent-320w.webp 320w, /illustrations/service-categories/community-based-services-card-icon-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "fe946fed5c0986cdaadaf7153736d1a47fa177e24ce519af77f11eec8dfec0d3",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-categories-community-based-services-card-icon-transparent-320w-fe946fed5c09.webp",
-      "contentHash": "8ce21fdc468f9fb1867c9b3373b50ea4222343bbbf1c67bc6a18d2cb54da2904",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/",
-          "blockId": "home-0013"
-        },
-        {
-          "route": "/case-management/",
-          "blockId": "case-management-0009"
-        },
-        {
-          "route": "/community-support/",
-          "blockId": "community-support-0008"
-        },
-        {
-          "route": "/locations/community/",
-          "blockId": "locations-community-0009"
-        },
-        {
-          "route": "/services/",
-          "blockId": "services-0018"
-        },
-        {
-          "route": "/services/",
-          "blockId": "services-0026"
-        },
-        {
-          "route": "/therapy-in-your-home/",
-          "blockId": "therapy-in-your-home-0009"
-        }
-      ]
-    },
-    {
-      "assetId": "asset-ff0f75f87e79",
-      "kind": "image",
-      "sourceUrl": "https://staging.website-production-26u.pages.dev/illustrations/service-categories/family-therapy-category-graphic-transparent-512w.webp",
-      "srcset": "/illustrations/service-categories/family-therapy-category-graphic-transparent-320w.webp 320w, /illustrations/service-categories/family-therapy-category-graphic-transparent-512w.webp 512w",
-      "alt": "",
-      "sourceHash": "ff0f75f87e79a257a93177ec839fa8dab44314c8ebe246668d67d91b80509a70",
-      "artifactPath": "artifacts/staging-snapshot/assets/illustrations-service-categories-family-therapy-category-graphic-transparent-512w-ff0f75f87e79.webp",
-      "contentHash": "c5c8aec4ab1fc92466c4bba348a3493262bff311d26dfd7591be1b881fea454d",
-      "contentType": "image/webp",
-      "routeUsage": [
-        {
-          "route": "/family-therapy/",
-          "blockId": "family-therapy-0007"
+          "blockId": "bullitt-county-ky-0004"
         }
       ]
     }

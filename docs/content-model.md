@@ -3,9 +3,10 @@
 This document defines how the WordPress proof track represents the current
 Astro/NocoBase/Workbench content model.
 
-Status: migration-grade parity target in progress. The existing importer remains
-useful scaffold code, but the new baseline is verbatim parity with the live
-Cloudflare staging snapshot.
+Status: migration-grade parity target in progress. The active baseline is a
+source-driven full-site Gutenberg block manifest generated from the read-only
+Astro implementation and cross-checked against the live Cloudflare staging
+snapshot.
 
 ## Source Inputs
 
@@ -59,7 +60,7 @@ Plugin: `wp-content/plugins/lmhg-site-core`
 - LMHG custom taxonomy registration and term assignment
 - breadcrumb/relationship metadata storage
 - redirect inventory storage and front-end redirect handling
-- Tailscale URL behavior
+- development indexing suppression
 - rendered-marker helpers
 
 Sitewide actions:
@@ -156,22 +157,17 @@ truth.
 
 ## Current Import Content
 
-The importer stores migration-stub block content in `post_content`, but the
-front-end render layer replaces it for imported pages with source-derived
-summary, source-copy snippets, JSON source card groups, Markdown article
-structure, graph breadcrumbs, related links, FAQ content, and readiness markers.
+The full-site importer stores generated Gutenberg block content directly in
+`post_content`. The block manifest preserves source provenance for each route:
+source file path, source content hash, source field, source selector, source
+mode, expected H1, route family, and media references.
+
 This keeps the proof track rebuildable from repo-owned manifests without manual
-Site Editor state.
+Site Editor state while still leaving each page editable as WordPress blocks.
 
-This still does not claim full hand-polished Astro layout parity. Later
-page-family template work can replace the generated source-content section with
-richer panels, page-specific layouts, and approved visual assets.
-
-For the corrected migration objective, this source-content render layer is an
-intermediate scaffold only. The destination importer must generate full
-WordPress block content from the Cloudflare staging snapshot plus LMHG source
-semantics, preserving visible text, section order, image placement, links,
-metadata, schema, redirects, and asset references after host rewriting.
+The destination proof still requires Codex cloud WordPress import, browser
+verification, and visual review before any no-gap transition claim. The cloud
+runtime verifier is the active proof target for rendered output.
 
 ## Staging Snapshot Contract
 
@@ -209,21 +205,19 @@ FAQ question-answer pairs. FAQ workbook prompts are not published as visible
 copy; pages with FAQ source records but no migrated answers receive hidden
 readiness markers instead.
 
-## Seed And Import Commands
+## Cloud Import Commands
 
 ```bash
-npm run wp-env:seed
-npm run wp-env:import:lmhg
+WP_PATH="/path/to/wordpress" bash tools/import-codex-cloud-wordpress.sh
+CODEX_CLOUD_WP_URL="https://<codex-cloud-wordpress-url>" npm run cloud:verify
 ```
 
 Expected behavior:
 
-- `wp-env:seed` activates the local theme/plugin, configures permalinks and
-  tailnet URL behavior, and then imports the current route manifest.
-- `wp-env:import:lmhg` reruns only the route manifest import against an already
-  running `wp-env` site.
-- import the current route manifest pages; the current staging migration
-  manifest imports all 55 route entries
+- the cloud import activates the LMHG theme/plugin, configures permalinks,
+  disables indexing for the development runtime, and imports the current route
+  manifest.
+- the full-site block manifest imports all 55 route entries.
 - skip only explicitly out-of-scope or review routes if future manifests add
   them
 - update existing imported pages idempotently
@@ -240,28 +234,27 @@ Expected behavior:
 - store route, SEO, relationship, and FAQ metadata
 - store sanitized source-copy snippets from Astro JSON/Markdown implementation
   targets
-- render source-derived JSON card groups and Markdown article structure with
-  stable marker IDs
-- print a JSON summary
+- import source-derived Gutenberg sections and media references with stable
+  source metadata
+- export the runtime WXR content file and database SQL dump
 
 ## Acceptance Gate For This Phase
 
 The Phase 3 gate passes when:
 
 - `npm run inventory:astro` writes current manifests.
-- `npm run wp-env:import:lmhg` imports the manifest without fatal errors.
+- `npm run generate:block-full` writes full-site block and media manifests from
+  the read-only Astro source.
+- `npm run generate:export-manifest` writes
+  `data/lmhg/export/codex-cloud-export-manifest.json`.
+- `bash tools/import-codex-cloud-wordpress.sh` imports the manifest inside the
+  Codex-managed cloud WordPress runtime without fatal errors.
 - repeated imports update existing pages instead of duplicating them.
 - `npm run check:static` requires the importer and content model artifacts.
-- runtime verification still passes after import.
-- `npm run verify:lmhg-links` rejects stale internal links, redirect-only source
-  paths, and unsupported service-area/city links in rendered WordPress pages.
-- `npm run verify:lmhg-copy` proves exported source-copy snippets, JSON source
-  cards, and Markdown article headings render with stable markers and without
-  unresolved template tokens.
+- `npm run cloud:verify` checks every full-site route against the Codex cloud
+  WordPress URL.
 - `npm run verify:staging-snapshot` proves the committed Cloudflare staging
   snapshot has route, redirect, asset, screenshot, and noindex-suppression
   coverage for the next parity implementation slice.
-- `npm run report:wp-vs-staging` writes the current expected gap report against
-  the local WordPress proof surface.
-- `npm run verify:wp-vs-staging` is the future strict gate for verbatim parity
-  and is expected to fail until the full migration catches up to the snapshot.
+- `docs/codex-cloud-runtime-report.md` becomes the current route-by-route proof
+  report after cloud verification.

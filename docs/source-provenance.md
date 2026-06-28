@@ -100,5 +100,7 @@ Cloudflare Pages staging:
 
 - `https://staging.website-production-26u.pages.dev/`
 
-WordPress output in this repository is a local/tailnet proof track until a later
-cutover gate explicitly changes that status.
+WordPress output in this repository targets a Codex-managed cloud WordPress
+runtime until a later cutover gate explicitly changes that status. Local
+WordPress, local Docker, Tailscale Serve, and RackNerd are not accepted proof
+surfaces for the corrected transition workflow.

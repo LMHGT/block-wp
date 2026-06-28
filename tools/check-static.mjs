@@ -5,8 +5,6 @@ const root = process.cwd();
 const requiredFiles = [
   "AGENTS.md",
   ".gitignore",
-  ".wp-env.json",
-  "blueprints/local-dev/blueprint.json",
   "docs/source-provenance.md",
   "docs/worker-checklist.md",
   "docs/content-model.md",
@@ -16,15 +14,14 @@ const requiredFiles = [
   "docs/wp-vs-staging-gap-report.md",
   "docs/block-migration-slice-report.md",
   "docs/export-bundle-manifest.md",
-  "docs/racknerd-first-slice-runtime.md",
+  "docs/codex-cloud-runtime-report.md",
   "plan/2026-06-27-cloudflare-staging-to-wordpress-verbatim-migration-plan.md",
-  "plan/2026-06-27-cloud-run-editable-gutenberg-migration-pipeline.md",
   "data/lmhg/source-route-manifest.json",
   "data/lmhg/source-design-manifest.json",
   "data/lmhg/source-assets-manifest.json",
-  "data/lmhg/block-migration/first-slice-block-manifest.json",
-  "data/lmhg/block-migration/first-slice-media-manifest.json",
-  "data/lmhg/export/first-slice-export-manifest.json",
+  "data/lmhg/block-migration/full-site-block-manifest.json",
+  "data/lmhg/block-migration/full-site-media-manifest.json",
+  "data/lmhg/export/codex-cloud-export-manifest.json",
   "data/lmhg/staging-snapshot/summary.json",
   "data/lmhg/staging-snapshot/routes.json",
   "data/lmhg/staging-snapshot/redirects.json",
@@ -45,10 +42,14 @@ const requiredFiles = [
   "tools/seed-lmhg-wp.mjs",
   "tools/crawl-staging-snapshot.mjs",
   "tools/generate-block-migration-slice.mjs",
+  "tools/generate-full-site-block-migration.mjs",
   "tools/generate-export-manifest.mjs",
   "tools/verify-staging-snapshot.mjs",
   "tools/verify-block-migration-slice.mjs",
+  "tools/verify-full-site-block-migration.mjs",
   "tools/verify-export-manifest.mjs",
+  "tools/import-codex-cloud-wordpress.sh",
+  "tools/verify-codex-cloud-runtime.mjs",
   "tools/verify-wp-vs-staging.mjs",
   "tools/verify-lmhg-static.mjs",
   "tools/verify-lmhg-routes.mjs",
@@ -59,22 +60,18 @@ const requiredFiles = [
   "tools/verify-lmhg-head.mjs",
   "tools/verify-lmhg-copy.mjs",
   "tools/verify-lmhg-markers.mjs",
-  "deploy/racknerd/bootstrap-first-slice.sh",
-  "deploy/racknerd/compose.first-slice.yml",
   ".codex/skills/wordpress-router/SKILL.md",
   ".codex/skills/wp-playground/SKILL.md",
   ".codex/skills/wp-block-themes/SKILL.md"
 ];
 const jsonFiles = [
   "package.json",
-  ".wp-env.json",
-  "blueprints/local-dev/blueprint.json",
   "data/lmhg/source-route-manifest.json",
   "data/lmhg/source-design-manifest.json",
   "data/lmhg/source-assets-manifest.json",
-  "data/lmhg/block-migration/first-slice-block-manifest.json",
-  "data/lmhg/block-migration/first-slice-media-manifest.json",
-  "data/lmhg/export/first-slice-export-manifest.json",
+  "data/lmhg/block-migration/full-site-block-manifest.json",
+  "data/lmhg/block-migration/full-site-media-manifest.json",
+  "data/lmhg/export/codex-cloud-export-manifest.json",
   "data/lmhg/staging-snapshot/summary.json",
   "data/lmhg/staging-snapshot/routes.json",
   "data/lmhg/staging-snapshot/redirects.json",
@@ -86,7 +83,9 @@ const jsonFiles = [
 ];
 const forbiddenPaths = [
   "wp-content/themes/custom-block-theme",
-  "wp-content/plugins/agentic-site-core"
+  "wp-content/plugins/agentic-site-core",
+  "deploy/racknerd",
+  "data/lmhg/export/first-slice-export-manifest.json"
 ];
 let failures = 0;
 
@@ -113,10 +112,13 @@ for (const file of jsonFiles) {
   }
 }
 
-const blueprint = JSON.parse(fs.readFileSync(path.join(root, "blueprints/local-dev/blueprint.json"), "utf8"));
-if (blueprint.$schema !== "https://playground.wordpress.net/blueprint-schema.json") {
-  console.error("blueprint uses an unexpected schema URL");
-  failures += 1;
+const optionalBlueprintPath = path.join(root, "blueprints/local-dev/blueprint.json");
+if (fs.existsSync(optionalBlueprintPath)) {
+  const blueprint = JSON.parse(fs.readFileSync(optionalBlueprintPath, "utf8"));
+  if (blueprint.$schema !== "https://playground.wordpress.net/blueprint-schema.json") {
+    console.error("blueprint uses an unexpected schema URL");
+    failures += 1;
+  }
 }
 
 const themeJson = JSON.parse(fs.readFileSync(path.join(root, "wp-content/themes/lmhg-block-theme/theme.json"), "utf8"));
@@ -156,6 +158,12 @@ if (!Array.isArray(designManifest.files) || designManifest.files.length < 1) {
 const assetManifest = JSON.parse(fs.readFileSync(path.join(root, "data/lmhg/source-assets-manifest.json"), "utf8"));
 if (!Array.isArray(assetManifest.assets) || assetManifest.assets.length < 1) {
   console.error("LMHG asset manifest must contain runtime asset inventory");
+  failures += 1;
+}
+
+const staleRuntimeReport = fs.readFileSync(path.join(root, "docs/wp-vs-staging-gap-report.md"), "utf8");
+if (/racknerd\.beagle-perch\.ts\.net|:8091/i.test(staleRuntimeReport)) {
+  console.error("active WordPress gap report still points at the out-of-scope RackNerd runtime");
   failures += 1;
 }
 

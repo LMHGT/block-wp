@@ -2,7 +2,7 @@
   "name": "lmhg-block-wp",
   "version": "0.1.0",
   "private": true,
-  "description": "LMHG WordPress proof track with a block theme, site-core plugin, Playground Blueprint, wp-env, screenshots, and Lighthouse checks.",
+  "description": "LMHG source-driven custom block WordPress theme and exportable cloud runtime package.",
   "type": "module",
   "engines": {
     "node": ">=20.18.0",
@@ -30,7 +30,8 @@
     "wp-env:cli": "wp-env run cli wp",
     "wp-env:seed": "node tools/seed-wp-env.mjs",
     "wp-env:import:lmhg": "node tools/seed-lmhg-wp.mjs",
-    "cloud:import:block-slice": "wp lmhg import-manifest data/lmhg/source-route-manifest.json && wp lmhg import-block-manifest data/lmhg/block-migration/first-slice-block-manifest.json data/lmhg/block-migration/first-slice-media-manifest.json",
+    "cloud:import": "bash tools/import-codex-cloud-wordpress.sh",
+    "cloud:verify": "node tools/verify-codex-cloud-runtime.mjs",
     "verify:lmhg-static": "node tools/verify-lmhg-static.mjs",
     "verify:lmhg-routes": "node tools/verify-lmhg-routes.mjs",
     "verify:lmhg-taxonomies": "node tools/verify-lmhg-taxonomies.mjs",
@@ -46,7 +47,7 @@
     "test:screenshots": "playwright test --config=tests/playwright.config.mjs",
     "test:lighthouse": "node tools/run-lighthouse.mjs",
     "verify:site": "npm run test:screenshots && npm run test:lighthouse",
-    "verify": "npm run check:static && npm run check:prereqs && npm run verify:staging-snapshot && npm run verify:block-slice && npm run verify:block-full && npm run verify:export-manifest"
+    "verify": "npm run check:static && npm run check:prereqs && npm run verify:staging-snapshot && npm run verify:block-full && npm run verify:export-manifest"
   },
   "devDependencies": {
     "@playwright/test": "1.61.1",

@@ -9,6 +9,10 @@ Use this checklist before and during implementation in this repository.
 - [ ] Do not push or publish Astro `origin/staging`, `main`, or Cloudflare
       changes from this workflow.
 - [ ] Do not treat WordPress as the approved production replacement.
+- [ ] Use the Codex-managed cloud WordPress environment as the runtime proof
+      target.
+- [ ] Do not use RackNerd, local WordPress, local Docker, or Tailscale Serve as
+      accepted proof surfaces for the corrected workflow.
 - [ ] Do not add a page builder or heavy frontend framework.
 
 ## Naming
@@ -49,6 +53,8 @@ Do not claim migration parity until all of these have real evidence:
 - [ ] Visible editable content has stable marker identity.
 - [ ] Standard-mode field inventory can be derived from rendered markers.
 - [ ] Placeholder scaffold copy is absent from migrated LMHG pages.
+- [ ] `CODEX_CLOUD_WP_URL=... npm run cloud:verify` passes against every route
+      before any no-gap transition claim.
 
 ## Commit And Push
 

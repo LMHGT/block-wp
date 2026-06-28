@@ -1,81 +1,96 @@
-# Hosted Verification Workflow
+# Codex Cloud WordPress Verification Workflow
 
-Date: 2026-06-27
+Date: 2026-06-28
 
-This repository is ready for hosted verification of the editable block migration
-slice, but the current GitHub OAuth token does not have `workflow` scope. GitHub
-therefore rejected creating `.github/workflows/verify-block-slice.yml` from this
-session.
+This is the active runtime model for the LMHG WordPress transition.
 
-When a token with `workflow` scope is available, install this workflow to run the
-first block-slice generator and verifier on GitHub-hosted infrastructure. This
-keeps local machines free from WordPress and Docker requirements for this source
-manifest proof.
+- Source of truth: `/Users/tyler-lcsw/projects/lmhg-astro-integrate`, read-only.
+- Working repo: `/Users/tyler-lcsw/projects/lmhg-blockwp`.
+- Runtime target: Codex-managed cloud WordPress environment.
+- Out of scope: RackNerd, local WordPress, and local Docker as proof surfaces.
+- Staging controls: noindex/noarchive/noimageindex remain active until live use
+  is explicitly approved.
 
-```yaml
-name: Verify Editable Block Slice
+## Build The Exportable Package
 
-on:
-  workflow_dispatch:
-  push:
-    paths:
-      - "data/lmhg/**"
-      - "docs/**"
-      - "plan/**"
-      - "tools/**"
-      - "wp-content/**"
-      - "package.json"
-      - "package-lock.json"
-
-jobs:
-  verify:
-    name: Generate and verify first block slice
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Install Playwright browser
-        run: npx playwright install --with-deps chromium
-
-      - name: Generate block slice from live staging
-        run: npm run generate:block-slice -- --live
-
-      - name: Verify block slice
-        run: npm run verify:block-slice
-
-      - name: Verify staging snapshot contract
-        run: npm run verify:staging-snapshot
-
-      - name: Run static checks
-        run: npm run check:static
-
-      - name: Upload block migration reports
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: block-migration-slice
-          path: |
-            data/lmhg/block-migration/first-slice-block-manifest.json
-            data/lmhg/block-migration/first-slice-media-manifest.json
-            docs/block-migration-slice-report.md
-```
-
-This is not the final private WordPress staging proof. The next infrastructure
-step still needs a cloud WordPress runtime that can run:
+Run from the working repo:
 
 ```bash
-wp lmhg import-manifest data/lmhg/source-route-manifest.json
-wp lmhg import-block-manifest data/lmhg/block-migration/first-slice-block-manifest.json data/lmhg/block-migration/first-slice-media-manifest.json
+npm install
+npm run inventory:astro
+npm run generate:block-full
+npm run generate:export-manifest
+npm run verify
 ```
+
+The package is source-driven. `tools/generate-full-site-block-migration.mjs`
+reads the Astro source files directly through `ASTRO_SOURCE_ROOT`, then writes:
+
+- `data/lmhg/source-route-manifest.json`
+- `data/lmhg/block-migration/full-site-block-manifest.json`
+- `data/lmhg/block-migration/full-site-media-manifest.json`
+- `data/lmhg/export/codex-cloud-export-manifest.json`
+- `docs/export-bundle-manifest.md`
+
+## Import In Codex Cloud WordPress
+
+In the Codex-managed cloud WordPress runtime, check out or unpack this repo,
+then run the import from this repo. If the WordPress core root is not this repo
+root, set `WP_PATH`:
+
+```bash
+WP_PATH="/path/to/wordpress" bash tools/import-codex-cloud-wordpress.sh
+```
+
+The script runs:
+
+```bash
+wp core is-installed
+rsync -a --delete wp-content/themes/lmhg-block-theme/ "$WP_PATH/wp-content/themes/lmhg-block-theme/"
+rsync -a --delete wp-content/plugins/lmhg-site-core/ "$WP_PATH/wp-content/plugins/lmhg-site-core/"
+wp option update blog_public 0
+wp theme activate lmhg-block-theme
+wp plugin activate lmhg-site-core
+wp lmhg import-manifest data/lmhg/source-route-manifest.json
+wp lmhg import-block-manifest data/lmhg/block-migration/full-site-block-manifest.json data/lmhg/block-migration/full-site-media-manifest.json
+wp export --post_type=page --dir=data/lmhg/export/runtime --filename_format=lmhg-pages.xml
+wp db export data/lmhg/export/runtime/lmhg-wordpress.sql
+```
+
+Set `WP_ALLOW_ROOT=1` only if the cloud runtime requires `wp --allow-root`.
+
+## Verify The Cloud Runtime
+
+After import, run from this repo with the cloud URL:
+
+```bash
+CODEX_CLOUD_WP_URL="https://<codex-cloud-wordpress-url>" npm run cloud:verify
+```
+
+The verifier rejects RackNerd and local URLs. It checks every full-site route for:
+
+- HTTP 200.
+- Expected H1 from the full-site block manifest.
+- Source-generated Gutenberg sections.
+- Development noindex controls.
+- No staging host references.
+- No RackNerd references.
+- No oversized flattened paragraph blocks.
+
+The report is written to:
+
+```text
+docs/codex-cloud-runtime-report.md
+```
+
+## Export Artifacts
+
+After cloud import, preserve:
+
+- Theme: `wp-content/themes/lmhg-block-theme`
+- Plugin: `wp-content/plugins/lmhg-site-core`
+- Media manifest: `data/lmhg/block-migration/full-site-media-manifest.json`
+- Block/content manifest: `data/lmhg/block-migration/full-site-block-manifest.json`
+- Route/SEO/redirect manifest: `data/lmhg/source-route-manifest.json`
+- WXR content export: `data/lmhg/export/runtime/lmhg-pages.xml`
+- Database export: `data/lmhg/export/runtime/lmhg-wordpress.sql`

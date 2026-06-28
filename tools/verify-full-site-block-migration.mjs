@@ -32,14 +32,28 @@ for (const route of routes) {
   if (typeof route.postContent !== "string" || !route.postContent.includes("<!-- wp:")) {
     fail(`${route.url} has no serialized Gutenberg block content`);
   }
+  if (!String(route.sourceMode || "").startsWith("astro-source-")) {
+    fail(`${route.url} is not generated from Astro source files`);
+  }
+  if (!route.sourceFilePath && route.url !== "/404.html") {
+    fail(`${route.url} is missing source file path correlation`);
+  }
+  if (!route.sourceContentHash) {
+    fail(`${route.url} is missing source content hash`);
+  }
   if (!Array.isArray(route.blocks) || route.blocks.length < 1) {
     fail(`${route.url} has no correlated blocks`);
   }
-  if (!route.generatedTextMatchesSource) {
-    fail(`${route.url} generated visible text hash does not match staging source hash`);
+  if (!route.generatedTextHash || route.generatedTextHash !== route.sourceMainTextHash) {
+    fail(`${route.url} generated main-content hash does not match extracted source main hash`);
   }
-  if (route.generatedTextHash !== route.sourceRouteTextHash) {
-    fail(`${route.url} generated hash ${route.generatedTextHash} != source hash ${route.sourceRouteTextHash}`);
+  if (route.blockCount < 2) {
+    fail(`${route.url} has too few structured blocks`);
+  }
+  const paragraphs = route.blocks.filter((block) => block.coreBlockName === "core/paragraph" && typeof block.text === "string");
+  const longestParagraph = Math.max(0, ...paragraphs.map((block) => block.text.length));
+  if (longestParagraph > 500) {
+    fail(`${route.url} has an oversized paragraph block (${longestParagraph} chars)`);
   }
   const blockIds = new Set();
   for (const block of route.blocks ?? []) {
@@ -49,6 +63,9 @@ for (const route of routes) {
     blockIds.add(block.blockId);
     if (!block.coreBlockName || !block.sourceField || !block.sourceSelector) {
       fail(`${route.url} block ${block.blockId} is missing correlation fields`);
+    }
+    if (!String(block.sourceSelector).includes("#")) {
+      fail(`${route.url} block ${block.blockId} source selector does not include source-field identity`);
     }
   }
 }

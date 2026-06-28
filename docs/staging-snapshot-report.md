@@ -1,6 +1,6 @@
 # LMHG Cloudflare Staging Snapshot
 
-Date: 2026-06-28T00:48:54.410Z
+Date: 2026-06-28T16:57:22.461Z
 
 Staging baseline: https://staging.website-production-26u.pages.dev
 

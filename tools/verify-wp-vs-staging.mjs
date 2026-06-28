@@ -7,12 +7,35 @@ const root = process.cwd();
 const snapshotPath = path.join(root, "data/lmhg/staging-snapshot/routes.json");
 const snapshotSummaryPath = path.join(root, "data/lmhg/staging-snapshot/summary.json");
 const reportPath = path.join(root, "docs/wp-vs-staging-gap-report.md");
-const wpBaseUrl = process.env.WP_BASE_URL || "http://localhost:8888";
+const wpBaseUrl = process.env.CODEX_CLOUD_WP_URL || process.env.WP_BASE_URL || "";
 const reportOnly = process.argv.includes("--report-only");
 const routes = JSON.parse(fs.readFileSync(snapshotPath, "utf8"));
 const snapshotSummary = JSON.parse(fs.readFileSync(snapshotSummaryPath, "utf8"));
 const failures = [];
 const rows = [];
+
+if (!wpBaseUrl || /racknerd|localhost|127\.0\.0\.1/i.test(wpBaseUrl)) {
+  const issue = !wpBaseUrl
+    ? "Set CODEX_CLOUD_WP_URL or WP_BASE_URL to the Codex-managed cloud WordPress URL."
+    : `Out-of-scope WordPress URL for corrected workflow: ${wpBaseUrl}`;
+  fs.writeFileSync(reportPath, `# WordPress vs Cloudflare Staging Gap Report
+
+Snapshot date: ${snapshotSummary.generatedAt}
+
+WordPress base URL: ${wpBaseUrl || "not configured"}
+
+This verifier now requires the corrected runtime target: a Codex-managed cloud
+WordPress URL. RackNerd and local URLs are rejected.
+
+## Status
+
+- Comparable staging routes: ${routes.filter((route) => route.liveStatus === 200).length}
+- Verification status: not run.
+- Blocking issue: ${issue}
+`);
+  console.error(issue);
+  process.exit(1);
+}
 
 function decodeHtml(value) {
   return String(value || "")
@@ -86,6 +109,22 @@ function recordFailure(route, issue) {
   failures.push(`${route.url}: ${issue}`);
 }
 
+function structureIssue(row, stagingRoute, structure) {
+  const sourceParagraphs = Number(stagingRoute.mainParagraphCount || 0);
+  const sourceMaxParagraph = Number(stagingRoute.mainMaxParagraphLength || 0);
+  const sourceHeadings = Number(stagingRoute.mainHeadingCount || 0);
+
+  if (sourceParagraphs >= 4 && structure.paragraphCount < Math.max(3, Math.floor(sourceParagraphs * 0.45))) {
+    recordFailure(row, "flattened paragraph structure");
+  }
+  if (sourceHeadings >= 2 && structure.headingCount < Math.max(1, Math.floor(sourceHeadings * 0.5))) {
+    recordFailure(row, "missing heading structure");
+  }
+  if (sourceMaxParagraph > 0 && structure.maxParagraphLength > Math.max(450, sourceMaxParagraph * 2.25)) {
+    recordFailure(row, "oversized paragraph block");
+  }
+}
+
 const comparableRoutes = routes.filter((route) => route.liveStatus === 200);
 const browser = await chromium.launch();
 const context = await browser.newContext({ viewport: { width: 1440, height: 1200 } });
@@ -130,11 +169,26 @@ try {
         recordFailure(row, "h1 mismatch");
       }
 
-      const renderedText = cleanVisibleText(await page.evaluate(() => document.body?.innerText || ""));
-      const textHash = sha256(renderedText);
-      if (textHash !== stagingRoute.visibleTextHash) {
-        recordFailure(row, "visible text hash mismatch");
+      const renderedMainText = cleanVisibleText(await page.evaluate(() => document.querySelector("main")?.innerText || document.body?.innerText || ""));
+      const textHash = sha256(renderedMainText);
+      if (stagingRoute.mainVisibleTextHash && textHash !== stagingRoute.mainVisibleTextHash) {
+        recordFailure(row, "main visible text hash mismatch");
       }
+
+      const structure = await page.evaluate(() => {
+        const clean = (value) => String(value || "").replace(/\s+/g, " ").trim();
+        const root = document.querySelector("main") || document.body;
+        const paragraphs = Array.from(root.querySelectorAll("p"))
+          .map((element) => clean(element.innerText))
+          .filter(Boolean);
+        return {
+          headingCount: root.querySelectorAll("h1,h2,h3,h4,h5,h6").length,
+          paragraphCount: paragraphs.length,
+          imageCount: root.querySelectorAll("img").length,
+          maxParagraphLength: Math.max(0, ...paragraphs.map((text) => text.length)),
+        };
+      });
+      structureIssue(row, stagingRoute, structure);
 
       const xRobots = headers["x-robots-tag"] || "";
       const robotsMeta = matchFirst(html, /<meta[^>]+name=["']robots["'][^>]+content=["']([^"']+)["'][^>]*>/i);
@@ -166,9 +220,10 @@ WordPress base URL: ${wpBaseUrl}
 
 Staging snapshot: \`data/lmhg/staging-snapshot/routes.json\`
 
-This report intentionally compares the current WordPress proof surface against
-the verbatim Cloudflare staging snapshot. It fails when route status, titles,
-H1s, browser-visible text, staging host references, or noindex controls drift.
+This report intentionally compares the Codex cloud WordPress proof surface
+against the verbatim Cloudflare staging snapshot. It fails when route status,
+titles, H1s, main browser-visible text, basic block structure, staging host
+references, or noindex controls drift.
 
 ## Summary
 
