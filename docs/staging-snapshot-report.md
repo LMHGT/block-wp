@@ -1,6 +1,6 @@
 # LMHG Cloudflare Staging Snapshot
 
-Date: 2026-06-27T19:48:51.022Z
+Date: 2026-06-28T00:48:54.410Z
 
 Staging baseline: https://staging.website-production-26u.pages.dev
 
@@ -14,11 +14,11 @@ indexes are committed under `data/lmhg/staging-snapshot/`.
 - Manifest routes: 55
 - Captured routes: 55
 - Discovered non-manifest routes: 0
-- Visible `200` routes: 54
+- Visible `200` routes: 55
 - Manifest redirects checked: 117
 - Distinct assets captured: 131
-- Screenshots captured: 108
-- Route status counts: `{"200":54,"308":1}`
+- Screenshots captured: 110
+- Route status counts: `{"200":55}`
 - Route classifications: `{"migrate-verbatim":54,"special-404-route":1}`
 - Redirect status counts: `{"301":117}`
 - Asset extension counts: `{"js":2,"css":4,"svg":5,"woff2":1,"webp":119}`

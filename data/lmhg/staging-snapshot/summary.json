@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27T19:48:51.022Z",
+  "generatedAt": "2026-06-28T00:48:54.410Z",
   "stagingBaseUrl": "https://staging.website-production-26u.pages.dev",
   "manifestRoutes": 55,
   "manifestRedirects": 117,
@@ -7,10 +7,9 @@
   "discoveredRoutes": 0,
   "capturedRedirects": 117,
   "capturedAssets": 131,
-  "capturedScreenshots": 108,
+  "capturedScreenshots": 110,
   "routeStatusCounts": {
-    "200": 54,
-    "308": 1
+    "200": 55
   },
   "routeClassificationCounts": {
     "migrate-verbatim": 54,

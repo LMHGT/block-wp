@@ -6,6 +6,12 @@
     "artifactPath": "artifacts/staging-snapshot/screenshots/desktop/index.png"
   },
   {
+    "route": "/404.html",
+    "viewport": "desktop",
+    "status": 200,
+    "artifactPath": "artifacts/staging-snapshot/screenshots/desktop/404.html.png"
+  },
+  {
     "route": "/adolescent-counseling/",
     "viewport": "desktop",
     "status": 200,
@@ -328,6 +334,12 @@
     "viewport": "mobile",
     "status": 200,
     "artifactPath": "artifacts/staging-snapshot/screenshots/mobile/index.png"
+  },
+  {
+    "route": "/404.html",
+    "viewport": "mobile",
+    "status": 200,
+    "artifactPath": "artifacts/staging-snapshot/screenshots/mobile/404.html.png"
   },
   {
     "route": "/adolescent-counseling/",

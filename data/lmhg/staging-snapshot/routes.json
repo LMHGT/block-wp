@@ -94,8 +94,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "9eac9a912daa30e7203706c5d877b100c2b29f6bc7d570219ed47c2f600e76c8",
-    "visibleTextLength": 5617,
+    "visibleTextHash": "bab99c1a6d064bece070bfd84ffb53ef83b45a4ff80e468a2c54131fb8d2135c",
+    "visibleTextLength": 3875,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 35,
     "internalLinkCount": 66,
     "externalLinkCount": 6,
@@ -141,29 +142,61 @@
     "pageFamily": "page",
     "templateFamily": "not-found",
     "sourcePath": "src/data/copy/pages/not-found.json",
-    "liveStatus": 308,
-    "redirectLocation": "/404",
+    "liveStatus": 200,
+    "redirectLocation": "",
     "classification": "special-404-route",
-    "htmlHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "htmlHash": "23127116547a5a5f9fe9b94d0fa822af2b8583890aa72d1e1cbf8ccdcc2bce87",
     "htmlArtifactPath": "artifacts/staging-snapshot/html/404.html.html",
-    "title": "",
-    "h1": "",
+    "title": "Page Not Found | Louisville Mental Health Group",
+    "h1": "Page Not Found",
     "canonical": "",
-    "metaDescription": "",
-    "robotsMeta": "",
+    "metaDescription": "The page you requested could not be found. Use the navigation to find LMHG services, locations, articles, or contact options.",
+    "robotsMeta": "noindex, nofollow, noarchive, nosnippet, noimageindex",
     "xRobotsTag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
-    "openGraphCount": 0,
-    "twitterMetaCount": 0,
-    "jsonLdTypes": [],
-    "jsonLdCount": 0,
-    "headingOutline": [],
-    "visibleTextHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "visibleTextLength": 0,
-    "editableMarkerCount": 0,
-    "internalLinkCount": 0,
-    "externalLinkCount": 0,
-    "assetCount": 0,
-    "assets": []
+    "openGraphCount": 7,
+    "twitterMetaCount": 5,
+    "jsonLdTypes": [
+      "MedicalWebPage"
+    ],
+    "jsonLdCount": 1,
+    "headingOutline": [
+      {
+        "level": 2,
+        "text": "Louisville Mental Health Group Mental Health Clinic in Louisville, KY"
+      },
+      {
+        "level": 1,
+        "text": "Page Not Found"
+      },
+      {
+        "level": 2,
+        "text": "About LMHG"
+      },
+      {
+        "level": 2,
+        "text": "Helpful Links"
+      },
+      {
+        "level": 2,
+        "text": "Louisville Office"
+      }
+    ],
+    "visibleTextHash": "1d7bc9803431b0d3bc9c3cc0b7740616b9834b5a07148f0e7b655d60ed54b68f",
+    "visibleTextLength": 1607,
+    "visibleTextSource": "browser-innerText",
+    "editableMarkerCount": 2,
+    "internalLinkCount": 57,
+    "externalLinkCount": 3,
+    "assetCount": 7,
+    "assets": [
+      "https://staging.website-production-26u.pages.dev/_astro/Dialog.astro_astro_type_script_index_0_lang.Cml2qqUS.js",
+      "https://staging.website-production-26u.pages.dev/_astro/Layout.CijB05aq.css",
+      "https://staging.website-production-26u.pages.dev/_astro/SimplifiedPageLayout.BmXUpO2h.css",
+      "https://staging.website-production-26u.pages.dev/favicon.svg",
+      "https://staging.website-production-26u.pages.dev/fonts/source-sans-3-latin-400-700.woff2",
+      "https://staging.website-production-26u.pages.dev/nocobase-preview.css?v=2026-06-14-save-button",
+      "https://staging.website-production-26u.pages.dev/nocobase-preview.js?v=2026-06-14-save-button"
+    ]
   },
   {
     "url": "/adolescent-counseling/",
@@ -241,8 +274,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "a25b3c0085a85bae336ad9bf069cae7638fe93e9fffed73a9182b2fa373e6242",
-    "visibleTextLength": 5512,
+    "visibleTextHash": "5cf9718f239c44ac8a54ab016e783fc5e4fc3183d9a44ac085a08b2f3332aa05",
+    "visibleTextLength": 3361,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 64,
     "externalLinkCount": 3,
@@ -336,8 +370,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "06172285bee74a39715f044c139c0bdecd67a496f621121e4f9b2578934a2561",
-    "visibleTextLength": 5223,
+    "visibleTextHash": "7d63dd3d4d7aa10f35efcdcc0debe02252bb61b72b30135203453f234d7ea862",
+    "visibleTextLength": 3092,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 62,
     "externalLinkCount": 3,
@@ -440,8 +475,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "f19dda926fed172602fcd7a48a22491086463fe8a4f8c05db5379c0b5188beb1",
-    "visibleTextLength": 5692,
+    "visibleTextHash": "7a52360b0482748b8547f82850a24877422940f5ad09f112cb736cff591c232b",
+    "visibleTextLength": 3547,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 65,
     "externalLinkCount": 3,
@@ -568,8 +604,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "ba480d9fa802f1bfe819c1faa98272031d4bafe4057896b308d236febb37a30c",
-    "visibleTextLength": 5277,
+    "visibleTextHash": "4a6d0a100d77cfc62beafd1dc0635be47f8a7df01aa99173416f01febcbbd614",
+    "visibleTextLength": 3874,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 27,
     "internalLinkCount": 75,
     "externalLinkCount": 3,
@@ -651,8 +688,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "0441100663faf66612cbdf09e803021f51ddfb50c01f907879df626be272615b",
-    "visibleTextLength": 5742,
+    "visibleTextHash": "38be994e80711b212f9d85135af1d6efb756b9b22fc3d90f6c23d94c8e8dbbfa",
+    "visibleTextLength": 4445,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 3,
     "internalLinkCount": 61,
     "externalLinkCount": 3,
@@ -734,8 +772,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "22cf17063aedd9eb387ad685533dd632656e81c2a3fff2598759c193c915d164",
-    "visibleTextLength": 5726,
+    "visibleTextHash": "5bda090159053c087743dbeb15b2d923eb39079fa029863e9dd94621dc31af68",
+    "visibleTextLength": 4436,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 3,
     "internalLinkCount": 61,
     "externalLinkCount": 3,
@@ -825,8 +864,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "bc541d33ecf18740703f1621abdabe4c66f871cdc620c57018ef3de05b7a66b1",
-    "visibleTextLength": 5986,
+    "visibleTextHash": "82d97e7e9229639c54c37a7178f2672341690ac80769fd9fa9b33d313ac7f9ee",
+    "visibleTextLength": 4694,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 3,
     "internalLinkCount": 64,
     "externalLinkCount": 3,
@@ -912,8 +952,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "16eec0ecc47d012094e07c6bf849c734f1cbb6d1be6be3bd60d623db46cf54b2",
-    "visibleTextLength": 5764,
+    "visibleTextHash": "cd423ea01089645677630d1f1bffa935ee93d80999eeff8060e401287f10d33a",
+    "visibleTextLength": 4469,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 3,
     "internalLinkCount": 65,
     "externalLinkCount": 3,
@@ -987,8 +1028,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "2080d37a89ee45fe286b729df411bd1bc5827cd6900bfb19881fee1b2dcb4018",
-    "visibleTextLength": 4395,
+    "visibleTextHash": "99563692e7d5906941e1226ce8a35d509df91c8b184c6ce3da38107c60cbdcc4",
+    "visibleTextLength": 2991,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 5,
     "internalLinkCount": 59,
     "externalLinkCount": 3,
@@ -1071,8 +1113,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "ffd3df1352acadcefd3b32ac73e7747f5b0e662fd9803aee998ea8d54a32a5ae",
-    "visibleTextLength": 5115,
+    "visibleTextHash": "881b0d0a30ff9a676e9a0c818de625ebeb5ecee365e4f9167b3283f152147bec",
+    "visibleTextLength": 2982,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 62,
     "externalLinkCount": 3,
@@ -1202,8 +1245,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "2b79f51fded553fa18602f9138a3b19e596c89c56ccdb0df886e599051eefd1e",
-    "visibleTextLength": 5684,
+    "visibleTextHash": "6480f19dc0ef33141ce90d82046f8b4f0795d6ec268ffc0f0c992334ac7d5ca7",
+    "visibleTextLength": 4422,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 11,
     "internalLinkCount": 64,
     "externalLinkCount": 4,
@@ -1325,8 +1369,9 @@
         "text": "Helpful Links"
       }
     ],
-    "visibleTextHash": "1553512c5fc46417445f8e2432f5fff0700fbee3c0520e956258ecd0d4310b08",
-    "visibleTextLength": 6787,
+    "visibleTextHash": "86cf59d5aaee1ac193311debc5fc032cd76f3ec52054750b612cc68f63811c45",
+    "visibleTextLength": 3768,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 21,
     "internalLinkCount": 59,
     "externalLinkCount": 3,
@@ -1421,8 +1466,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "8b6c8ba08623ef7754ffb5714bc816f038097b82d2ec4905b7b04226e23863a2",
-    "visibleTextLength": 5927,
+    "visibleTextHash": "97f1f3ccc1c6fd3ff105cd803be9ca83795013747164f2694b411a99874535e9",
+    "visibleTextLength": 3788,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 65,
     "externalLinkCount": 3,
@@ -1520,8 +1566,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "83e4fec01c124ef7ab676ae45ebfeeebf7167cb2f82c7573045f8850fb1aa164",
-    "visibleTextLength": 5296,
+    "visibleTextHash": "1b26453972c149bd192eedb529becb218e221ab4ad9e2a140612e50a7a6f73d7",
+    "visibleTextLength": 3157,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 63,
     "externalLinkCount": 3,
@@ -1619,8 +1666,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "7454b101a4ccaaa63a803fa5aedd2849b9fb59ed3096da07678226ce84c30842",
-    "visibleTextLength": 5266,
+    "visibleTextHash": "8a766e9e05451a6cc2ac5405df77bcc165397a4dc6b54f12764253b8bf306b0d",
+    "visibleTextLength": 3200,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 62,
     "externalLinkCount": 3,
@@ -1722,8 +1770,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "a1855220f97599d9c3aab5154705d361e466a26815a13d05ef9d56516e8bde4f",
-    "visibleTextLength": 5490,
+    "visibleTextHash": "1de8bce312f58c32462976edbc5aa6cc2250401efa67f3bd844b981ca869e696",
+    "visibleTextLength": 3354,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 64,
     "externalLinkCount": 3,
@@ -1824,8 +1873,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "11f723eff42be919473512c3e3821de259896b634098bbb75b9d69106ac394a6",
-    "visibleTextLength": 5446,
+    "visibleTextHash": "7a649e7f61a55d3d4e638a4f8563cc34b5ad792d080eb5eccf0d140b6dd848b0",
+    "visibleTextLength": 3368,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 62,
     "externalLinkCount": 3,
@@ -1927,8 +1977,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "cbf4a18821f0116f1a8237998eac4b554e68a7f938ce1aeef9cb7ea210e19a25",
-    "visibleTextLength": 5529,
+    "visibleTextHash": "49eb4a68f84e5d91e842b4cff043e6c23ae3bc247874eba5742bffead34dc118",
+    "visibleTextLength": 3388,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 64,
     "externalLinkCount": 3,
@@ -2057,8 +2108,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "cdb00d5c271ee83092a34dec53a5c4200fdd32cf0e866de0790436f3790865f7",
-    "visibleTextLength": 5628,
+    "visibleTextHash": "12f586b3bcadccce8e6511965cfe2abe0daf0197e047cd29f618b27424cbebc8",
+    "visibleTextLength": 3809,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 19,
     "internalLinkCount": 61,
     "externalLinkCount": 3,
@@ -2180,8 +2232,9 @@
         "text": "Coverage questions"
       }
     ],
-    "visibleTextHash": "0cb1f2299936d150613a0907b49f95bda971f34a2f19d30056ebdd8017737f69",
-    "visibleTextLength": 8591,
+    "visibleTextHash": "ea1d23f0bbbb1c60a72cc13ba9db34bdeb430a9272142e4ae8e5bf7e002d7e6e",
+    "visibleTextLength": 4332,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 28,
     "internalLinkCount": 60,
     "externalLinkCount": 3,
@@ -2268,8 +2321,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "328d967e5c69e81d8892ddfe3e39fcd661248a4229eaf0974c67724cbba7aeb0",
-    "visibleTextLength": 5340,
+    "visibleTextHash": "a75e9ef1357aa10066c0d54fb801c5b86e8f5d197511277186905d39f8ff93a2",
+    "visibleTextLength": 3198,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 63,
     "externalLinkCount": 3,
@@ -2363,8 +2417,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "ba96b60f06531f824252b3c422f117d037e2e81d3f9646e6989fbbd12dccdaab",
-    "visibleTextLength": 5186,
+    "visibleTextHash": "b4052f775796d60e43ae17f99968064bf07c24abb0feeecfb67d9e57da03cb8e",
+    "visibleTextLength": 3128,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 61,
     "externalLinkCount": 3,
@@ -2455,8 +2510,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "365455cf17c4654fc6e58e789db0fbd21e2ac22a5349ea7788849083726b30e6",
-    "visibleTextLength": 5208,
+    "visibleTextHash": "d4c74a9823619c8b5f89f8bcc5983b786cd513b4bf0573cfb8eb56915765d97c",
+    "visibleTextLength": 3146,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 61,
     "externalLinkCount": 3,
@@ -2571,8 +2627,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "3459ad4a0995bd58d05b33bf13c4a5b22e8071b32e7c5f3c59ae54f91ea2f07e",
-    "visibleTextLength": 6839,
+    "visibleTextHash": "b98bee1c9bd282cbaad3b3444ef8d8fb3fe822cf4e48008963a816d3e03c7b91",
+    "visibleTextLength": 4163,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 19,
     "internalLinkCount": 64,
     "externalLinkCount": 3,
@@ -2677,8 +2734,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "2afd1f3873c0d0127c57944e6297ce997dcb09dbbf21f0bf28cb2a35959fde3a",
-    "visibleTextLength": 5477,
+    "visibleTextHash": "a9a010dd47e2d70303d30e621332b724f7a3d0148163237c27cab2f8aec88e6d",
+    "visibleTextLength": 3333,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 64,
     "externalLinkCount": 3,
@@ -2775,8 +2833,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "77fb5be97a704ba687586dc45718c061210172590798d3c9890cb5f0b1b1dab1",
-    "visibleTextLength": 5124,
+    "visibleTextHash": "d0432050bc7ad70adc43d7edba0928da98d46fb9a72cfc86028a83648ab827fa",
+    "visibleTextLength": 3070,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 61,
     "externalLinkCount": 3,
@@ -2902,8 +2961,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "73e62387a25bbe1df203b667545ab89e74e08de795a901681aa2cc12873efa4f",
-    "visibleTextLength": 4862,
+    "visibleTextHash": "d6a1c2cd6c95ac4c6790ffeb7626c88ed5efbdd0c6333cbe1bc9cc1b0c798ee3",
+    "visibleTextLength": 3480,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 10,
     "internalLinkCount": 66,
     "externalLinkCount": 3,
@@ -3006,8 +3066,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "4663cee82d775639d946cff18360db53bbc02dfd51af0cdcec47f7d2c53f266b",
-    "visibleTextLength": 5899,
+    "visibleTextHash": "b603b960f6b656b78b1d70d6416b1044075ca2c5d456424d2379e0dc6e0a5391",
+    "visibleTextLength": 3985,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 18,
     "internalLinkCount": 61,
     "externalLinkCount": 3,
@@ -3106,8 +3167,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "0af50378b6252b38abab57e329a76c7d057fb7539f01722473c1ab50aec8c5a7",
-    "visibleTextLength": 5571,
+    "visibleTextHash": "0a35caf9e9428f524eadfd10f9273e4884116250709dbc2375516897bcace420",
+    "visibleTextLength": 3706,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 18,
     "internalLinkCount": 61,
     "externalLinkCount": 3,
@@ -3210,8 +3272,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "cbe09e31cd677e547c2f598017f9cd97ef42973cd417e8d26773252a50da055c",
-    "visibleTextLength": 5729,
+    "visibleTextHash": "3ab292102d41eaf7642dfd1597a82f184e169549c04f5c7e368d5e5b7327433c",
+    "visibleTextLength": 3846,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 18,
     "internalLinkCount": 61,
     "externalLinkCount": 3,
@@ -3282,8 +3345,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "e05404743413b54c384161ba3f5206f2c39e452d9e19d773ce3a151450402516",
-    "visibleTextLength": 4792,
+    "visibleTextHash": "72b38fb60c9398192f4ff0cfc180a4c6595e7a102205aed346451832c0677c45",
+    "visibleTextLength": 2739,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 59,
     "externalLinkCount": 3,
@@ -3368,8 +3432,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "e03d7e9a2638380c62f15eb988724c7c7ed2a81b25eba1734670f788f4a6d071",
-    "visibleTextLength": 5225,
+    "visibleTextHash": "37455a3b4362ef20ad2b721fd8332d842058a5d7d80dd1c255654c32935c1ba3",
+    "visibleTextLength": 3154,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 61,
     "externalLinkCount": 3,
@@ -3487,8 +3552,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "0f2d630578aec8d78b34dc527f3123b8b24b582ad334c7606b85ca4dd74ab390",
-    "visibleTextLength": 5809,
+    "visibleTextHash": "8e886ffdbf2da22c32635be806761bbc10a09c73de4c4316b04314d8a1aa9a33",
+    "visibleTextLength": 3319,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 18,
     "internalLinkCount": 59,
     "externalLinkCount": 3,
@@ -3610,8 +3676,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "dfa1b663ff3a53e99facdf97703796d6b73718ac68cdb293d186af76a2d17364",
-    "visibleTextLength": 5511,
+    "visibleTextHash": "2a609b65fc254e59e1d2e3e84bdbc08ac5d91477ed5b72444518add5b347b1c7",
+    "visibleTextLength": 4247,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 11,
     "internalLinkCount": 64,
     "externalLinkCount": 4,
@@ -3733,8 +3800,9 @@
         "text": "Local Pages"
       }
     ],
-    "visibleTextHash": "0be719a9f58e3f7652413f8038a2cfc24b2f9930793b58facfbfa603fe26a405",
-    "visibleTextLength": 6954,
+    "visibleTextHash": "8e06a28497c6036400b98cfdfae6c68806e1b6f642daf2ed87562a667ca76cec",
+    "visibleTextLength": 5576,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 34,
     "internalLinkCount": 76,
     "externalLinkCount": 3,
@@ -3857,8 +3925,9 @@
         "text": "Community Support Services"
       }
     ],
-    "visibleTextHash": "5f0275d7f40122e55d177658249cac6a4291db96a8a2a0e518acca6398433a8f",
-    "visibleTextLength": 6411,
+    "visibleTextHash": "fb33084daf3ad1a8d083848d7a7f1c99a06b413558cb5e485b683a9a9e2653aa",
+    "visibleTextLength": 4502,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 11,
     "internalLinkCount": 67,
     "externalLinkCount": 3,
@@ -3990,8 +4059,9 @@
         "text": "Helpful Links"
       }
     ],
-    "visibleTextHash": "7d7fbef24dd779d8c4e56f49ec4391518891d0de5257251a90402c57069e8591",
-    "visibleTextLength": 6016,
+    "visibleTextHash": "908f06be122152515ffa54dc45e9a9ae3fd8bf44a5d51ae35b12433c65c2fe2e",
+    "visibleTextLength": 4115,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 11,
     "internalLinkCount": 65,
     "externalLinkCount": 3,
@@ -4114,8 +4184,9 @@
         "text": "Helpful Links"
       }
     ],
-    "visibleTextHash": "3a7c86a5d7c5ae6cdc1b71a38288b644e963f30e10187bc9e8729ee195433b60",
-    "visibleTextLength": 5896,
+    "visibleTextHash": "adeee7ab682c861facb0a17249d43a7d56654eeab90c786617795364b85afa2b",
+    "visibleTextLength": 4015,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 11,
     "internalLinkCount": 65,
     "externalLinkCount": 3,
@@ -4238,8 +4309,9 @@
         "text": "Helpful Links"
       }
     ],
-    "visibleTextHash": "50c0b6b6cd7680fb07ac7779c842bb5e21deac57759d230b764c97299e861cef",
-    "visibleTextLength": 5916,
+    "visibleTextHash": "3cb00aebaccd7390240d7557615cc24eaf9f3852b7bd3c72421afedf6a147ae4",
+    "visibleTextLength": 4059,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 11,
     "internalLinkCount": 65,
     "externalLinkCount": 3,
@@ -4362,8 +4434,9 @@
         "text": "Helpful Links"
       }
     ],
-    "visibleTextHash": "4020f995bad90dafc8dcec67dacda31cec1a74737bd7c0c9e51a4b94948c633b",
-    "visibleTextLength": 5925,
+    "visibleTextHash": "13132f2c47121eaef4ea7d28fc6fe7ed7669ec37244280199d561e98740a8214",
+    "visibleTextLength": 4016,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 11,
     "internalLinkCount": 65,
     "externalLinkCount": 3,
@@ -4485,8 +4558,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "6eae9a9277038d2a1837e8ac9602ea927dc2399ea5259fa82a91270fda07b398",
-    "visibleTextLength": 5564,
+    "visibleTextHash": "bcecf63a56fc7e8b75b2e0469d032ffe678881e82205b554fe27c9caa2c07f8f",
+    "visibleTextLength": 4298,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 11,
     "internalLinkCount": 64,
     "externalLinkCount": 4,
@@ -4608,8 +4682,9 @@
         "text": "More Ways To Compare Services"
       }
     ],
-    "visibleTextHash": "e0b6ef93721a75d6d4b8f95dcbe90a4527b5923075cf8eec12ed91c998a917e7",
-    "visibleTextLength": 8035,
+    "visibleTextHash": "84f6bef67483772e0e9f5befaf731f71723d9a45f67944df25a043b4b411de24",
+    "visibleTextLength": 2691,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 55,
     "internalLinkCount": 59,
     "externalLinkCount": 3,
@@ -4734,8 +4809,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "ecc6f027adca65759ccc20607a0e8786417ffca400cb24d2519603e4192012e4",
-    "visibleTextLength": 5571,
+    "visibleTextHash": "28986d61872f476ff863d2ba8e13a71124d7563b0088b63605e3b6e3237f3db4",
+    "visibleTextLength": 4310,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 11,
     "internalLinkCount": 64,
     "externalLinkCount": 4,
@@ -4826,8 +4902,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "b5294c7b080682c5b8e945356c60dae9b113cfee02018e3cbbecded23b29b4bc",
-    "visibleTextLength": 5480,
+    "visibleTextHash": "5400292ba1a85fb44e12b6e0c73add95025f619acc441d16411994386171fcee",
+    "visibleTextLength": 3348,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 64,
     "externalLinkCount": 3,
@@ -4932,8 +5009,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "e7d2475ecde190f2fb0556bf1e5bb5a89e856b3c41f57df215a63422b175abd9",
-    "visibleTextLength": 5604,
+    "visibleTextHash": "01b9814af7c8644621106a2a3ca7af5825ca4bac896c00b1f6451cf0906d1159",
+    "visibleTextLength": 3477,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 64,
     "externalLinkCount": 3,
@@ -5029,8 +5107,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "0951ee4bd89bb521edcf2b26dd34965dd4a23cad5703e4a54427545680beb1cb",
-    "visibleTextLength": 3982,
+    "visibleTextHash": "eb0ecfd86c090a04a8902ce1d7df92d8ec2222486817a084917f7c3e6d3fcbf1",
+    "visibleTextLength": 2336,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 7,
     "internalLinkCount": 60,
     "externalLinkCount": 3,
@@ -5117,8 +5196,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "7c6b390cfdd3cd6a7fe00122c3a0e86af23be6013dbb795b78e6707d92a95f6b",
-    "visibleTextLength": 5276,
+    "visibleTextHash": "d75b66d2ac942045f7d58d1d73729983be0d130117407a9059c2ff7882d94631",
+    "visibleTextLength": 3138,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 63,
     "externalLinkCount": 3,
@@ -5211,8 +5291,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "4172381518d8f60261fa9b061745794a3d0607d5800f4a039e004b98946f8da7",
-    "visibleTextLength": 5084,
+    "visibleTextHash": "cf303ea0efafc9b1c013adee3a7909214ddf09dc064b339b5cc6143a2f853946",
+    "visibleTextLength": 2953,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 15,
     "internalLinkCount": 59,
     "externalLinkCount": 3,
@@ -5335,8 +5416,9 @@
         "text": "Community-Based Mental Health Services"
       }
     ],
-    "visibleTextHash": "6c727c990bad92b150e1bc6f885673bbf87caa8ecf6db8886ab2defc657d4c7a",
-    "visibleTextLength": 9068,
+    "visibleTextHash": "b82a0be6a5aef7424a7790c94b2d83fd8f61a51d9e12b39be191fb0a12b3d6e9",
+    "visibleTextLength": 7040,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 35,
     "internalLinkCount": 78,
     "externalLinkCount": 3,
@@ -5483,8 +5565,9 @@
         "text": "Community Support Services"
       }
     ],
-    "visibleTextHash": "ad6c280f8b7c2f673eb4ef858a6d79307200249b99c9b8dbc8779b10fa48f0f4",
-    "visibleTextLength": 8011,
+    "visibleTextHash": "6ca8e176fe922b46ef5e945ac5a40c50b30ee1f3d44413e8f6ee842233499976",
+    "visibleTextLength": 5977,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 31,
     "internalLinkCount": 77,
     "externalLinkCount": 3,
@@ -5596,8 +5679,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "8d86ead2034d11ea592335bdcd9b79783351c9d0afd6a813dec41ccb90bfa3c9",
-    "visibleTextLength": 3951,
+    "visibleTextHash": "b6435c19b8b8d8d38984b40a23c2db3ba3f230511ee5dcd0442b827f41d0dca3",
+    "visibleTextLength": 2309,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 7,
     "internalLinkCount": 60,
     "externalLinkCount": 3,
@@ -5692,8 +5776,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "0854ab7eac0be6ccbb481c94b9f0e71c32df7ee7bcdbc842530dee254034cd3c",
-    "visibleTextLength": 5663,
+    "visibleTextHash": "09dfc35a7b330bb29730c6b3ffdf0ffa1d8b30ca7fc6a444eba4207a4057ca7d",
+    "visibleTextLength": 3533,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 65,
     "externalLinkCount": 3,
@@ -5783,8 +5868,9 @@
         "text": "Louisville Office"
       }
     ],
-    "visibleTextHash": "c437dc9bdc0bfaa50ce47ec723488a4298b9c8291af38a296315a4de7f7a65dd",
-    "visibleTextLength": 5150,
+    "visibleTextHash": "160ec9efda3c60c1443ea78f70cee00a67150b55b069b747569883eb79fa999e",
+    "visibleTextLength": 3096,
+    "visibleTextSource": "browser-innerText",
     "editableMarkerCount": 13,
     "internalLinkCount": 60,
     "externalLinkCount": 3,

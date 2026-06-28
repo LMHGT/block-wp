@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import crypto from "node:crypto";
 import path from "node:path";
+import { chromium } from "playwright";
 
 const root = process.cwd();
 const snapshotPath = path.join(root, "data/lmhg/staging-snapshot/routes.json");
@@ -25,15 +26,8 @@ function decodeHtml(value) {
     .replace(/&gt;/g, " ");
 }
 
-function stripVisibleText(html) {
-  return decodeHtml(html)
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<noscript[\s\S]*?<\/noscript>/gi, " ")
-    .replace(/<!--[\s\S]*?-->/g, " ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
+function cleanVisibleText(value) {
+  return String(value || "").replace(/\s+/g, " ").trim();
 }
 
 function sha256(value) {
@@ -93,57 +87,69 @@ function recordFailure(route, issue) {
 }
 
 const comparableRoutes = routes.filter((route) => route.liveStatus === 200);
+const browser = await chromium.launch();
+const context = await browser.newContext({ viewport: { width: 1440, height: 1200 } });
+const page = await context.newPage();
 
-for (const stagingRoute of comparableRoutes) {
-  const row = {
-    url: stagingRoute.url,
-    stagingClassification: stagingRoute.classification,
-    stagingStatus: stagingRoute.liveStatus,
-    wpStatus: 0,
-    issues: [],
-    stagingTitle: stagingRoute.title || "",
-    wpTitle: "",
-    stagingH1: stagingRoute.h1 || "",
-    wpH1: "",
-    stagingAssets: stagingRoute.assetCount || 0,
-    wpAssets: 0,
-    stagingHostReferences: 0
-  };
+try {
+  for (const stagingRoute of comparableRoutes) {
+    const row = {
+      url: stagingRoute.url,
+      stagingClassification: stagingRoute.classification,
+      stagingStatus: stagingRoute.liveStatus,
+      wpStatus: 0,
+      issues: [],
+      stagingTitle: stagingRoute.title || "",
+      wpTitle: "",
+      stagingH1: stagingRoute.h1 || "",
+      wpH1: "",
+      stagingAssets: stagingRoute.assetCount || 0,
+      wpAssets: 0,
+      stagingHostReferences: 0
+    };
 
-  try {
-    const response = await fetch(new URL(stagingRoute.url, wpBaseUrl), { redirect: "manual" });
-    const html = await response.text();
-    row.wpStatus = response.status;
-    row.wpTitle = matchFirst(html, /<title>([\s\S]*?)<\/title>/i);
-    row.wpH1 = matchFirst(html, /<h1[^>]*>([\s\S]*?)<\/h1>/i);
-    row.wpAssets = extractAssets(html, wpBaseUrl).length;
-    row.stagingHostReferences = (html.match(/staging\.website-production-26u\.pages\.dev/g) || []).length;
+    try {
+      const response = await page.goto(new URL(stagingRoute.url, wpBaseUrl).toString(), { waitUntil: "networkidle", timeout: 30000 });
+      if (!response) throw new Error(`no browser response for ${stagingRoute.url}`);
 
-    if (response.status !== stagingRoute.liveStatus) {
-      recordFailure(row, `status ${response.status} != staging ${stagingRoute.liveStatus}`);
+      const html = await response.text();
+      const headers = response.headers();
+      row.wpStatus = response.status();
+      row.wpTitle = matchFirst(html, /<title>([\s\S]*?)<\/title>/i);
+      row.wpH1 = matchFirst(html, /<h1[^>]*>([\s\S]*?)<\/h1>/i);
+      row.wpAssets = extractAssets(html, wpBaseUrl).length;
+      row.stagingHostReferences = (html.match(/staging\.website-production-26u\.pages\.dev/g) || []).length;
+
+      if (row.wpStatus !== stagingRoute.liveStatus) {
+        recordFailure(row, `status ${row.wpStatus} != staging ${stagingRoute.liveStatus}`);
+      }
+      if (row.wpTitle !== row.stagingTitle) {
+        recordFailure(row, "title mismatch");
+      }
+      if (row.wpH1 !== row.stagingH1) {
+        recordFailure(row, "h1 mismatch");
+      }
+
+      const renderedText = cleanVisibleText(await page.evaluate(() => document.body?.innerText || ""));
+      const textHash = sha256(renderedText);
+      if (textHash !== stagingRoute.visibleTextHash) {
+        recordFailure(row, "visible text hash mismatch");
+      }
+
+      const xRobots = headers["x-robots-tag"] || "";
+      const robotsMeta = matchFirst(html, /<meta[^>]+name=["']robots["'][^>]+content=["']([^"']+)["'][^>]*>/i);
+      if (!hasNoindex(xRobots)) recordFailure(row, "missing staging X-Robots-Tag noindex");
+      if (!hasNoindex(robotsMeta)) recordFailure(row, "missing staging robots meta noindex");
+      if (row.stagingHostReferences > 0) recordFailure(row, "contains staging host reference");
+    } catch (error) {
+      recordFailure(row, `fetch failed: ${error.message}`);
     }
-    if (row.wpTitle !== row.stagingTitle) {
-      recordFailure(row, "title mismatch");
-    }
-    if (row.wpH1 !== row.stagingH1) {
-      recordFailure(row, "h1 mismatch");
-    }
 
-    const textHash = sha256(stripVisibleText(html));
-    if (textHash !== stagingRoute.visibleTextHash) {
-      recordFailure(row, "visible text hash mismatch");
-    }
-
-    const xRobots = response.headers.get("x-robots-tag") || "";
-    const robotsMeta = matchFirst(html, /<meta[^>]+name=["']robots["'][^>]+content=["']([^"']+)["'][^>]*>/i);
-    if (!hasNoindex(xRobots)) recordFailure(row, "missing staging X-Robots-Tag noindex");
-    if (!hasNoindex(robotsMeta)) recordFailure(row, "missing staging robots meta noindex");
-    if (row.stagingHostReferences > 0) recordFailure(row, "contains staging host reference");
-  } catch (error) {
-    recordFailure(row, `fetch failed: ${error.message}`);
+    rows.push(row);
   }
-
-  rows.push(row);
+} finally {
+  await context.close();
+  await browser.close();
 }
 
 const issueCounts = countBy(
@@ -161,8 +167,8 @@ WordPress base URL: ${wpBaseUrl}
 Staging snapshot: \`data/lmhg/staging-snapshot/routes.json\`
 
 This report intentionally compares the current WordPress proof surface against
-the verbatim Cloudflare staging snapshot. It is expected to fail until the full
-content, asset, theme, metadata, and noindex parity work is implemented.
+the verbatim Cloudflare staging snapshot. It fails when route status, titles,
+H1s, browser-visible text, staging host references, or noindex controls drift.
 
 ## Summary
 

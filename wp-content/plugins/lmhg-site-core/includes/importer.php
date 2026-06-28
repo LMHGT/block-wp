@@ -124,6 +124,9 @@ function lmhg_site_core_import_route_page( array $route ): int|WP_Error {
 
 	if ( $existing instanceof WP_Post ) {
 		$post_data['ID'] = $existing->ID;
+		if ( '1' === (string) get_post_meta( $existing->ID, '_lmhg_editable_blocks_imported', true ) ) {
+			unset( $post_data['post_content'] );
+		}
 		$page_id = wp_update_post( wp_slash( $post_data ), true );
 	} else {
 		$page_id = wp_insert_post( wp_slash( $post_data ), true );

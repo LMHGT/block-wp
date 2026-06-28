@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-06-27.first-slice-export.v1",
-  "generatedAt": "2026-06-28T00:37:44.320Z",
+  "generatedAt": "2026-06-28T01:00:50.556Z",
   "purpose": "Exportable source package manifest for the first editable Gutenberg migration slice.",
   "routes": [
     "/compliance/",
@@ -35,13 +35,13 @@
     },
     {
       "path": "data/lmhg/block-migration/full-site-block-manifest.json",
-      "bytes": 1187289,
-      "sha256": "f3f784a1f5e8b8846d8f27a4793924ee42e008bd0fb59a77a0ad0844abd419ce"
+      "bytes": 880726,
+      "sha256": "26f25660b06e3c24abf8380e2171dd7a71be76b994bc88ff6da67648a445d70a"
     },
     {
       "path": "data/lmhg/block-migration/full-site-media-manifest.json",
       "bytes": 58792,
-      "sha256": "50569b93f75cf7af4ad8b1499487275a89edae3d838e9d35f16d4eb1f71ba116"
+      "sha256": "45e8df9f1de465b6bdd8d5649ed48630129fdf6fda5572d70320b43873870d83"
     },
     {
       "path": "data/lmhg/source-route-manifest.json",
@@ -50,18 +50,18 @@
     },
     {
       "path": "data/lmhg/staging-snapshot/assets.json",
-      "bytes": 99094,
-      "sha256": "50cdddcb326503c513e8226b8be8460490edd8826bcb5b7c35734ee2169c9fbe"
+      "bytes": 99227,
+      "sha256": "06a06632d13533a21323d9c818ee608e8e6774fc8cc1f74f316efeccbab81ce3"
     },
     {
       "path": "data/lmhg/staging-snapshot/routes.json",
-      "bytes": 223417,
-      "sha256": "1c11650ebecadc5bfa994d0f30fce6ef935f5ee0199d932a9e2e50ba9d8eb7f8"
+      "bytes": 227305,
+      "sha256": "99745cf9a893b9461f13a2dcfb1ea306c3d0f250614d8b4796d8245a3eaf27ca"
     },
     {
       "path": "data/lmhg/staging-snapshot/summary.json",
-      "bytes": 672,
-      "sha256": "ae874a447da6dcab2b9553d29e05a25cf3de81891b25b12b58b859f8c94c75a4"
+      "bytes": 658,
+      "sha256": "7f209edf3071ac3d06a2347408bf9848821bb29a3127156718d4fa8dc518411c"
     },
     {
       "path": "deploy/racknerd/bootstrap-first-slice.sh",
@@ -85,8 +85,8 @@
     },
     {
       "path": "docs/full-site-block-migration-report.md",
-      "bytes": 14947,
-      "sha256": "80fbe7fa970e4b9fdfb436c3403f4a1cde82ba89130fcdfd1223c9723445e105"
+      "bytes": 15043,
+      "sha256": "360d4c02d07cd622e63629486c219130e0e8b55aa8b15e1dd807fcb4b57c7abf"
     },
     {
       "path": "docs/full-site-page-confirmation.md",
@@ -105,13 +105,13 @@
     },
     {
       "path": "docs/route-parity-matrix.md",
-      "bytes": 9197,
-      "sha256": "8931d6358f8fd17b0fe04088a96404a39c53a63c4382c789aa39637794c5d171"
+      "bytes": 9211,
+      "sha256": "f6055f06af6458feae8933ccbe5251c4fb3608616e0b1a6a9b7cc04e34eaa42b"
     },
     {
       "path": "docs/staging-snapshot-report.md",
-      "bytes": 1802,
-      "sha256": "cc765bc2814747facbee0c7f3637cd3cd6409ae2a4b775b49f714ece09056ae0"
+      "bytes": 1794,
+      "sha256": "6f4b48272f0f4439ac29f3f17e2fcb334c3524b2746dfdbfb321b10b12557c75"
     },
     {
       "path": "package-lock.json",
@@ -140,8 +140,8 @@
     },
     {
       "path": "tools/generate-full-site-block-migration.mjs",
-      "bytes": 16630,
-      "sha256": "6987ba3121df4482d822d1aafb4c0f533249f88be6530ff5e1f5ec9460a1a043"
+      "bytes": 15298,
+      "sha256": "4a63b9e57fbad9892c732d0c2ee3f2b7b05ae15dd00b14a893bc54db31421dc3"
     },
     {
       "path": "tools/verify-block-migration-slice.mjs",
@@ -185,13 +185,13 @@
     },
     {
       "path": "wp-content/plugins/lmhg-site-core/includes/importer.php",
-      "bytes": 12361,
-      "sha256": "2584d5916fe5532b1cef56b16f54a2494b190b91a180649fd828cb3cf31014f4"
+      "bytes": 12504,
+      "sha256": "4ebeb7d18ce5363b774b45ed8ac80df96d3e4915eee9a2de85d8894acd87fd3e"
     },
     {
       "path": "wp-content/plugins/lmhg-site-core/includes/redirects.php",
-      "bytes": 3642,
-      "sha256": "9df7fe8da586d9273cd6f80d022e05f4ba94e3b3326b63d80a4be9d7a1977f49"
+      "bytes": 4928,
+      "sha256": "1aba8ee5b4fb8e36cc1719fc5b18e565a431786821b4c0081b18ebb059c48d46"
     },
     {
       "path": "wp-content/plugins/lmhg-site-core/includes/rendering.php",

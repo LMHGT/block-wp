@@ -138,9 +138,21 @@ function safeAssetName(assetUrl) {
 }
 
 function headersObject(response) {
+  if (typeof response.headers === "function") {
+    return response.headers();
+  }
+
   const headers = {};
   for (const [key, value] of response.headers.entries()) headers[key] = value;
   return headers;
+}
+
+function responseStatus(response) {
+  return typeof response.status === "function" ? response.status() : response.status;
+}
+
+function cleanVisibleText(value) {
+  return String(value || "").replace(/\s+/g, " ").trim();
 }
 
 function stripVisibleText(html) {
@@ -255,7 +267,33 @@ async function fetchTextRoute(routePath) {
   const url = new URL(routePath, stagingBaseUrl);
   const response = await fetch(url, { redirect: "manual" });
   const body = await response.text();
-  return { response, body };
+  const text = stripVisibleText(body);
+  return { response, body, text, textSource: "html-strip-fallback" };
+}
+
+async function createBrowserRouteReader() {
+  try {
+    const { chromium } = await import("playwright");
+    const browser = await chromium.launch();
+    const context = await browser.newContext({ viewport: { width: 1440, height: 1200 } });
+    const page = await context.newPage();
+    return { browser, context, page };
+  } catch (error) {
+    failures.push(`browser visible-text capture unavailable: ${error.message}`);
+    return null;
+  }
+}
+
+async function fetchBrowserTextRoute(routePath, reader) {
+  if (!reader) return fetchTextRoute(routePath);
+
+  const url = new URL(routePath, stagingBaseUrl);
+  const response = await reader.page.goto(url.toString(), { waitUntil: "networkidle", timeout: 30000 });
+  if (!response) throw new Error(`no browser response for ${url.toString()}`);
+
+  const body = await response.text();
+  const text = cleanVisibleText(await reader.page.evaluate(() => document.body?.innerText || ""));
+  return { response, body, text, textSource: "browser-innerText" };
 }
 
 function classifyRoute(route, liveStatus) {
@@ -280,19 +318,21 @@ function collectInitialPaths() {
 async function crawlRoutes() {
   const queue = [...collectInitialPaths()].sort();
   const queued = new Set(queue);
+  const browserRouteReader = await createBrowserRouteReader();
 
-  for (let index = 0; index < queue.length; index += 1) {
-    const routePath = queue[index];
-    const route = routeByPath.get(routePath) || null;
-    const stem = safeFileStem(routePath);
-    const htmlFile = path.join(htmlDir, `${stem}.html`);
+  try {
+    for (let index = 0; index < queue.length; index += 1) {
+      const routePath = queue[index];
+      const route = routeByPath.get(routePath) || null;
+      const stem = safeFileStem(routePath);
+      const htmlFile = path.join(htmlDir, `${stem}.html`);
 
-    try {
-      const { response, body } = await fetchTextRoute(routePath);
+      try {
+      const { response, body, text, textSource } = await fetchBrowserTextRoute(routePath, browserRouteReader);
       fs.writeFileSync(htmlFile, body);
 
       const headers = headersObject(response);
-      const text = stripVisibleText(body);
+      const liveStatus = responseStatus(response);
       const headings = extractHeadings(body);
       const links = extractLinks(body, routePath);
       const assets = extractAssets(body, routePath);
@@ -332,9 +372,9 @@ async function crawlRoutes() {
         pageFamily: route?.pageFamily || "",
         templateFamily: route?.templateFamily || "",
         sourcePath: route?.sourceContent?.path || "",
-        liveStatus: response.status,
+        liveStatus,
         redirectLocation: headers.location || "",
-        classification: classifyRoute(route, response.status),
+        classification: classifyRoute(route, liveStatus),
         htmlHash: sha256(body),
         htmlArtifactPath: relativeToRoot(htmlFile),
         title: matchFirst(body, /<title>([\s\S]*?)<\/title>/i),
@@ -350,26 +390,33 @@ async function crawlRoutes() {
         headingOutline: headings.slice(0, 20),
         visibleTextHash: sha256(text),
         visibleTextLength: text.length,
+        visibleTextSource: textSource,
         editableMarkerCount: editableMarkers,
         internalLinkCount: links.filter((link) => link.internalPath).length,
         externalLinkCount: links.filter((link) => !link.internalPath).length,
         assetCount: assets.length,
         assets
       });
-    } catch (error) {
-      failures.push(`${routePath}: ${error.message}`);
-      routes.push({
-        url: routePath,
-        source: route ? "manifest" : "discovered",
-        manifestStatus: route?.migrationStatus || "",
-        pageFamily: route?.pageFamily || "",
-        templateFamily: route?.templateFamily || "",
-        sourcePath: route?.sourceContent?.path || "",
-        liveStatus: 0,
-        redirectLocation: "",
-        classification: "blocked",
-        error: error.message
-      });
+      } catch (error) {
+        failures.push(`${routePath}: ${error.message}`);
+        routes.push({
+          url: routePath,
+          source: route ? "manifest" : "discovered",
+          manifestStatus: route?.migrationStatus || "",
+          pageFamily: route?.pageFamily || "",
+          templateFamily: route?.templateFamily || "",
+          sourcePath: route?.sourceContent?.path || "",
+          liveStatus: 0,
+          redirectLocation: "",
+          classification: "blocked",
+          error: error.message
+        });
+      }
+    }
+  } finally {
+    if (browserRouteReader) {
+      await browserRouteReader.context.close();
+      await browserRouteReader.browser.close();
     }
   }
 

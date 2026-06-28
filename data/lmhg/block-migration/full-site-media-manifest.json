@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-06-27.full-site-editable-media.v1",
-  "generatedAt": "2026-06-28T00:37:42.339Z",
+  "generatedAt": "2026-06-28T00:51:04.165Z",
   "source": {
     "stagingBaseUrl": "https://staging.website-production-26u.pages.dev",
     "mode": "local-artifact-preferred"
@@ -19,7 +19,7 @@
       "routeUsage": [
         {
           "route": "/emdr-therapy/",
-          "blockId": "emdr-therapy-0012"
+          "blockId": "emdr-therapy-0008"
         }
       ]
     },
@@ -36,7 +36,7 @@
       "routeUsage": [
         {
           "route": "/relationship-counseling/",
-          "blockId": "relationship-counseling-0010"
+          "blockId": "relationship-counseling-0007"
         }
       ]
     },
@@ -53,23 +53,23 @@
       "routeUsage": [
         {
           "route": "/anxiety-depression-therapy/",
-          "blockId": "anxiety-depression-therapy-0016"
+          "blockId": "anxiety-depression-therapy-0013"
         },
         {
           "route": "/child-behavioral-intervention/",
-          "blockId": "child-behavioral-intervention-0012"
+          "blockId": "child-behavioral-intervention-0009"
         },
         {
           "route": "/child-counseling/",
-          "blockId": "child-counseling-0011"
+          "blockId": "child-counseling-0008"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0016"
+          "blockId": "specialties-0013"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0031"
+          "blockId": "specialties-0028"
         }
       ]
     },
@@ -86,7 +86,7 @@
       "routeUsage": [
         {
           "route": "/attachment-therapy/",
-          "blockId": "attachment-therapy-0010"
+          "blockId": "attachment-therapy-0007"
         }
       ]
     },
@@ -103,7 +103,7 @@
       "routeUsage": [
         {
           "route": "/anxiety-depression-therapy/",
-          "blockId": "anxiety-depression-therapy-0011"
+          "blockId": "anxiety-depression-therapy-0008"
         }
       ]
     },
@@ -120,7 +120,7 @@
       "routeUsage": [
         {
           "route": "/louisville-ky/",
-          "blockId": "louisville-ky-0010"
+          "blockId": "louisville-ky-0009"
         }
       ]
     },
@@ -137,7 +137,7 @@
       "routeUsage": [
         {
           "route": "/family-reunification/",
-          "blockId": "family-reunification-0010"
+          "blockId": "family-reunification-0007"
         }
       ]
     },
@@ -154,19 +154,19 @@
       "routeUsage": [
         {
           "route": "/",
-          "blockId": "home-0018"
+          "blockId": "home-0015"
         },
         {
           "route": "/emdr-therapy/",
-          "blockId": "emdr-therapy-0013"
+          "blockId": "emdr-therapy-0009"
         },
         {
           "route": "/services/",
-          "blockId": "services-0022"
+          "blockId": "services-0020"
         },
         {
           "route": "/services/",
-          "blockId": "services-0030"
+          "blockId": "services-0028"
         }
       ]
     },
@@ -183,7 +183,7 @@
       "routeUsage": [
         {
           "route": "/trauma-therapy/",
-          "blockId": "trauma-therapy-0010"
+          "blockId": "trauma-therapy-0007"
         }
       ]
     },
@@ -200,27 +200,27 @@
       "routeUsage": [
         {
           "route": "/community-based-services/",
-          "blockId": "community-based-services-0011"
+          "blockId": "community-based-services-0008"
         },
         {
           "route": "/community-support/",
-          "blockId": "community-support-0012"
+          "blockId": "community-support-0009"
         },
         {
           "route": "/locations/community/",
-          "blockId": "locations-community-0013"
+          "blockId": "locations-community-0010"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0019"
+          "blockId": "specialties-0016"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0026"
+          "blockId": "specialties-0023"
         },
         {
           "route": "/therapy-in-your-home/",
-          "blockId": "therapy-in-your-home-0013"
+          "blockId": "therapy-in-your-home-0010"
         }
       ]
     },
@@ -237,55 +237,55 @@
       "routeUsage": [
         {
           "route": "/",
-          "blockId": "home-0013"
+          "blockId": "home-0010"
         },
         {
           "route": "/adolescent-counseling/",
-          "blockId": "adolescent-counseling-0013"
+          "blockId": "adolescent-counseling-0010"
         },
         {
           "route": "/anxiety-depression-therapy/",
-          "blockId": "anxiety-depression-therapy-0014"
+          "blockId": "anxiety-depression-therapy-0011"
         },
         {
           "route": "/attachment-therapy/",
-          "blockId": "attachment-therapy-0011"
+          "blockId": "attachment-therapy-0008"
         },
         {
           "route": "/co-parenting/",
-          "blockId": "co-parenting-0012"
+          "blockId": "co-parenting-0009"
         },
         {
           "route": "/couples-conflict-resolution/",
-          "blockId": "couples-conflict-resolution-0012"
+          "blockId": "couples-conflict-resolution-0009"
         },
         {
           "route": "/emdr-therapy/",
-          "blockId": "emdr-therapy-0015"
+          "blockId": "emdr-therapy-0011"
         },
         {
           "route": "/family-reunification/",
-          "blockId": "family-reunification-0012"
+          "blockId": "family-reunification-0009"
         },
         {
           "route": "/parenting-support/",
-          "blockId": "parenting-support-0011"
+          "blockId": "parenting-support-0008"
         },
         {
           "route": "/play-therapy/",
-          "blockId": "play-therapy-0012"
+          "blockId": "play-therapy-0009"
         },
         {
           "route": "/relationship-counseling/",
-          "blockId": "relationship-counseling-0012"
+          "blockId": "relationship-counseling-0009"
         },
         {
           "route": "/services/",
-          "blockId": "services-0017"
+          "blockId": "services-0015"
         },
         {
           "route": "/services/",
-          "blockId": "services-0025"
+          "blockId": "services-0023"
         }
       ]
     },
@@ -302,7 +302,7 @@
       "routeUsage": [
         {
           "route": "/child-counseling/",
-          "blockId": "child-counseling-0010"
+          "blockId": "child-counseling-0007"
         }
       ]
     },
@@ -319,15 +319,15 @@
       "routeUsage": [
         {
           "route": "/specialties/",
-          "blockId": "specialties-0014"
+          "blockId": "specialties-0011"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0024"
+          "blockId": "specialties-0021"
         },
         {
           "route": "/trauma-therapy/",
-          "blockId": "trauma-therapy-0011"
+          "blockId": "trauma-therapy-0008"
         }
       ]
     },
@@ -344,7 +344,7 @@
       "routeUsage": [
         {
           "route": "/family-therapy/",
-          "blockId": "family-therapy-0011"
+          "blockId": "family-therapy-0008"
         }
       ]
     },
@@ -361,7 +361,7 @@
       "routeUsage": [
         {
           "route": "/jefferson-county-ky/",
-          "blockId": "jefferson-county-ky-0010"
+          "blockId": "jefferson-county-ky-0009"
         }
       ]
     },
@@ -378,7 +378,7 @@
       "routeUsage": [
         {
           "route": "/case-management/",
-          "blockId": "case-management-0011"
+          "blockId": "case-management-0008"
         }
       ]
     },
@@ -395,7 +395,7 @@
       "routeUsage": [
         {
           "route": "/child-behavioral-intervention/",
-          "blockId": "child-behavioral-intervention-0010"
+          "blockId": "child-behavioral-intervention-0007"
         }
       ]
     },
@@ -412,15 +412,15 @@
       "routeUsage": [
         {
           "route": "/case-management/",
-          "blockId": "case-management-0014"
+          "blockId": "case-management-0011"
         },
         {
           "route": "/community-based-services/",
-          "blockId": "community-based-services-0013"
+          "blockId": "community-based-services-0010"
         },
         {
           "route": "/community-support/",
-          "blockId": "community-support-0013"
+          "blockId": "community-support-0010"
         }
       ]
     },
@@ -437,7 +437,7 @@
       "routeUsage": [
         {
           "route": "/court-ordered/",
-          "blockId": "court-ordered-0010"
+          "blockId": "court-ordered-0007"
         }
       ]
     },
@@ -454,11 +454,11 @@
       "routeUsage": [
         {
           "route": "/anxiety-depression-therapy/",
-          "blockId": "anxiety-depression-therapy-0015"
+          "blockId": "anxiety-depression-therapy-0012"
         },
         {
           "route": "/individual-counseling/",
-          "blockId": "individual-counseling-0011"
+          "blockId": "individual-counseling-0008"
         }
       ]
     },
@@ -475,23 +475,23 @@
       "routeUsage": [
         {
           "route": "/",
-          "blockId": "home-0014"
+          "blockId": "home-0011"
         },
         {
           "route": "/couples-conflict-resolution/",
-          "blockId": "couples-conflict-resolution-0011"
+          "blockId": "couples-conflict-resolution-0008"
         },
         {
           "route": "/relationship-counseling/",
-          "blockId": "relationship-counseling-0011"
+          "blockId": "relationship-counseling-0008"
         },
         {
           "route": "/services/",
-          "blockId": "services-0018"
+          "blockId": "services-0016"
         },
         {
           "route": "/services/",
-          "blockId": "services-0026"
+          "blockId": "services-0024"
         }
       ]
     },
@@ -508,7 +508,7 @@
       "routeUsage": [
         {
           "route": "/group-therapy/",
-          "blockId": "group-therapy-0009"
+          "blockId": "group-therapy-0006"
         }
       ]
     },
@@ -525,7 +525,7 @@
       "routeUsage": [
         {
           "route": "/couples-conflict-resolution/",
-          "blockId": "couples-conflict-resolution-0010"
+          "blockId": "couples-conflict-resolution-0007"
         }
       ]
     },
@@ -542,31 +542,31 @@
       "routeUsage": [
         {
           "route": "/",
-          "blockId": "home-0011"
+          "blockId": "home-0008"
         },
         {
           "route": "/adolescent-counseling/",
-          "blockId": "adolescent-counseling-0012"
+          "blockId": "adolescent-counseling-0009"
         },
         {
           "route": "/adult-counseling/",
-          "blockId": "adult-counseling-0011"
+          "blockId": "adult-counseling-0008"
         },
         {
           "route": "/anxiety-depression-therapy/",
-          "blockId": "anxiety-depression-therapy-0012"
+          "blockId": "anxiety-depression-therapy-0009"
         },
         {
           "route": "/emdr-therapy/",
-          "blockId": "emdr-therapy-0014"
+          "blockId": "emdr-therapy-0010"
         },
         {
           "route": "/services/",
-          "blockId": "services-0015"
+          "blockId": "services-0013"
         },
         {
           "route": "/services/",
-          "blockId": "services-0023"
+          "blockId": "services-0021"
         }
       ]
     },
@@ -583,7 +583,7 @@
       "routeUsage": [
         {
           "route": "/play-therapy/",
-          "blockId": "play-therapy-0010"
+          "blockId": "play-therapy-0007"
         }
       ]
     },
@@ -600,11 +600,11 @@
       "routeUsage": [
         {
           "route": "/couples-conflict-resolution/",
-          "blockId": "couples-conflict-resolution-0013"
+          "blockId": "couples-conflict-resolution-0010"
         },
         {
           "route": "/couples-counseling/",
-          "blockId": "couples-counseling-0011"
+          "blockId": "couples-counseling-0008"
         }
       ]
     },
@@ -621,19 +621,19 @@
       "routeUsage": [
         {
           "route": "/child-behavioral-intervention/",
-          "blockId": "child-behavioral-intervention-0013"
+          "blockId": "child-behavioral-intervention-0010"
         },
         {
           "route": "/child-counseling/",
-          "blockId": "child-counseling-0012"
+          "blockId": "child-counseling-0009"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0017"
+          "blockId": "specialties-0014"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0025"
+          "blockId": "specialties-0022"
         }
       ]
     },
@@ -650,7 +650,7 @@
       "routeUsage": [
         {
           "route": "/couples-counseling/",
-          "blockId": "couples-counseling-0010"
+          "blockId": "couples-counseling-0007"
         }
       ]
     },
@@ -667,15 +667,15 @@
       "routeUsage": [
         {
           "route": "/",
-          "blockId": "home-0017"
+          "blockId": "home-0014"
         },
         {
           "route": "/services/",
-          "blockId": "services-0021"
+          "blockId": "services-0019"
         },
         {
           "route": "/services/",
-          "blockId": "services-0029"
+          "blockId": "services-0027"
         }
       ]
     },
@@ -692,23 +692,23 @@
       "routeUsage": [
         {
           "route": "/",
-          "blockId": "home-0015"
+          "blockId": "home-0012"
         },
         {
           "route": "/co-parenting/",
-          "blockId": "co-parenting-0011"
+          "blockId": "co-parenting-0008"
         },
         {
           "route": "/family-reunification/",
-          "blockId": "family-reunification-0011"
+          "blockId": "family-reunification-0008"
         },
         {
           "route": "/services/",
-          "blockId": "services-0019"
+          "blockId": "services-0017"
         },
         {
           "route": "/services/",
-          "blockId": "services-0027"
+          "blockId": "services-0025"
         }
       ]
     },
@@ -725,7 +725,7 @@
       "routeUsage": [
         {
           "route": "/meet-the-team/",
-          "blockId": "meet-the-team-0014"
+          "blockId": "meet-the-team-0006"
         }
       ]
     },
@@ -742,23 +742,23 @@
       "routeUsage": [
         {
           "route": "/adult-counseling/",
-          "blockId": "adult-counseling-0012"
+          "blockId": "adult-counseling-0009"
         },
         {
           "route": "/emdr-therapy/",
-          "blockId": "emdr-therapy-0016"
+          "blockId": "emdr-therapy-0012"
         },
         {
           "route": "/individual-counseling/",
-          "blockId": "individual-counseling-0012"
+          "blockId": "individual-counseling-0009"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0015"
+          "blockId": "specialties-0012"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0030"
+          "blockId": "specialties-0027"
         }
       ]
     },
@@ -775,19 +775,19 @@
       "routeUsage": [
         {
           "route": "/co-parenting/",
-          "blockId": "co-parenting-0013"
+          "blockId": "co-parenting-0010"
         },
         {
           "route": "/court-ordered/",
-          "blockId": "court-ordered-0011"
+          "blockId": "court-ordered-0008"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0022"
+          "blockId": "specialties-0019"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0028"
+          "blockId": "specialties-0025"
         }
       ]
     },
@@ -804,7 +804,7 @@
       "routeUsage": [
         {
           "route": "/parenting-support/",
-          "blockId": "parenting-support-0010"
+          "blockId": "parenting-support-0007"
         }
       ]
     },
@@ -821,7 +821,7 @@
       "routeUsage": [
         {
           "route": "/adult-counseling/",
-          "blockId": "adult-counseling-0010"
+          "blockId": "adult-counseling-0007"
         }
       ]
     },
@@ -838,7 +838,7 @@
       "routeUsage": [
         {
           "route": "/co-parenting/",
-          "blockId": "co-parenting-0010"
+          "blockId": "co-parenting-0007"
         }
       ]
     },
@@ -855,15 +855,15 @@
       "routeUsage": [
         {
           "route": "/child-counseling/",
-          "blockId": "child-counseling-0013"
+          "blockId": "child-counseling-0010"
         },
         {
           "route": "/parenting-support/",
-          "blockId": "parenting-support-0013"
+          "blockId": "parenting-support-0010"
         },
         {
           "route": "/play-therapy/",
-          "blockId": "play-therapy-0013"
+          "blockId": "play-therapy-0010"
         }
       ]
     },
@@ -880,23 +880,23 @@
       "routeUsage": [
         {
           "route": "/court-ordered/",
-          "blockId": "court-ordered-0012"
+          "blockId": "court-ordered-0009"
         },
         {
           "route": "/family-reunification/",
-          "blockId": "family-reunification-0013"
+          "blockId": "family-reunification-0010"
         },
         {
           "route": "/parenting-support/",
-          "blockId": "parenting-support-0014"
+          "blockId": "parenting-support-0011"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0023"
+          "blockId": "specialties-0020"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0029"
+          "blockId": "specialties-0026"
         }
       ]
     },
@@ -913,7 +913,7 @@
       "routeUsage": [
         {
           "route": "/individual-counseling/",
-          "blockId": "individual-counseling-0010"
+          "blockId": "individual-counseling-0007"
         }
       ]
     },
@@ -930,27 +930,27 @@
       "routeUsage": [
         {
           "route": "/co-parenting/",
-          "blockId": "co-parenting-0014"
+          "blockId": "co-parenting-0011"
         },
         {
           "route": "/family-reunification/",
-          "blockId": "family-reunification-0014"
+          "blockId": "family-reunification-0011"
         },
         {
           "route": "/family-therapy/",
-          "blockId": "family-therapy-0012"
+          "blockId": "family-therapy-0009"
         },
         {
           "route": "/play-therapy/",
-          "blockId": "play-therapy-0014"
+          "blockId": "play-therapy-0011"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0018"
+          "blockId": "specialties-0015"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0032"
+          "blockId": "specialties-0029"
         }
       ]
     },
@@ -967,15 +967,15 @@
       "routeUsage": [
         {
           "route": "/couples-counseling/",
-          "blockId": "couples-counseling-0012"
+          "blockId": "couples-counseling-0009"
         },
         {
           "route": "/relationship-counseling/",
-          "blockId": "relationship-counseling-0013"
+          "blockId": "relationship-counseling-0010"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0020"
+          "blockId": "specialties-0017"
         }
       ]
     },
@@ -992,39 +992,39 @@
       "routeUsage": [
         {
           "route": "/",
-          "blockId": "home-0012"
+          "blockId": "home-0009"
         },
         {
           "route": "/adolescent-counseling/",
-          "blockId": "adolescent-counseling-0011"
+          "blockId": "adolescent-counseling-0008"
         },
         {
           "route": "/anxiety-depression-therapy/",
-          "blockId": "anxiety-depression-therapy-0013"
+          "blockId": "anxiety-depression-therapy-0010"
         },
         {
           "route": "/attachment-therapy/",
-          "blockId": "attachment-therapy-0012"
+          "blockId": "attachment-therapy-0009"
         },
         {
           "route": "/child-behavioral-intervention/",
-          "blockId": "child-behavioral-intervention-0011"
+          "blockId": "child-behavioral-intervention-0008"
         },
         {
           "route": "/parenting-support/",
-          "blockId": "parenting-support-0012"
+          "blockId": "parenting-support-0009"
         },
         {
           "route": "/play-therapy/",
-          "blockId": "play-therapy-0011"
+          "blockId": "play-therapy-0008"
         },
         {
           "route": "/services/",
-          "blockId": "services-0016"
+          "blockId": "services-0014"
         },
         {
           "route": "/services/",
-          "blockId": "services-0024"
+          "blockId": "services-0022"
         }
       ]
     },
@@ -1041,7 +1041,7 @@
       "routeUsage": [
         {
           "route": "/therapy-in-your-home/",
-          "blockId": "therapy-in-your-home-0011"
+          "blockId": "therapy-in-your-home-0008"
         }
       ]
     },
@@ -1058,27 +1058,27 @@
       "routeUsage": [
         {
           "route": "/case-management/",
-          "blockId": "case-management-0013"
+          "blockId": "case-management-0010"
         },
         {
           "route": "/community-based-services/",
-          "blockId": "community-based-services-0012"
+          "blockId": "community-based-services-0009"
         },
         {
           "route": "/locations/community/",
-          "blockId": "locations-community-0014"
+          "blockId": "locations-community-0011"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0021"
+          "blockId": "specialties-0018"
         },
         {
           "route": "/specialties/",
-          "blockId": "specialties-0027"
+          "blockId": "specialties-0024"
         },
         {
           "route": "/therapy-in-your-home/",
-          "blockId": "therapy-in-your-home-0014"
+          "blockId": "therapy-in-your-home-0011"
         }
       ]
     },
@@ -1095,7 +1095,7 @@
       "routeUsage": [
         {
           "route": "/oldham-county-ky/",
-          "blockId": "oldham-county-ky-0010"
+          "blockId": "oldham-county-ky-0009"
         }
       ]
     },
@@ -1112,7 +1112,7 @@
       "routeUsage": [
         {
           "route": "/community-based-services/",
-          "blockId": "community-based-services-0010"
+          "blockId": "community-based-services-0007"
         }
       ]
     },
@@ -1129,7 +1129,7 @@
       "routeUsage": [
         {
           "route": "/bullitt-county-ky/",
-          "blockId": "bullitt-county-ky-0011"
+          "blockId": "bullitt-county-ky-0009"
         }
       ]
     },
@@ -1146,7 +1146,7 @@
       "routeUsage": [
         {
           "route": "/community-support/",
-          "blockId": "community-support-0010"
+          "blockId": "community-support-0007"
         }
       ]
     },
@@ -1163,7 +1163,7 @@
       "routeUsage": [
         {
           "route": "/adolescent-counseling/",
-          "blockId": "adolescent-counseling-0010"
+          "blockId": "adolescent-counseling-0007"
         }
       ]
     },
@@ -1180,31 +1180,31 @@
       "routeUsage": [
         {
           "route": "/",
-          "blockId": "home-0016"
+          "blockId": "home-0013"
         },
         {
           "route": "/case-management/",
-          "blockId": "case-management-0012"
+          "blockId": "case-management-0009"
         },
         {
           "route": "/community-support/",
-          "blockId": "community-support-0011"
+          "blockId": "community-support-0008"
         },
         {
           "route": "/locations/community/",
-          "blockId": "locations-community-0012"
+          "blockId": "locations-community-0009"
         },
         {
           "route": "/services/",
-          "blockId": "services-0020"
+          "blockId": "services-0018"
         },
         {
           "route": "/services/",
-          "blockId": "services-0028"
+          "blockId": "services-0026"
         },
         {
           "route": "/therapy-in-your-home/",
-          "blockId": "therapy-in-your-home-0012"
+          "blockId": "therapy-in-your-home-0009"
         }
       ]
     },
@@ -1221,7 +1221,7 @@
       "routeUsage": [
         {
           "route": "/family-therapy/",
-          "blockId": "family-therapy-0010"
+          "blockId": "family-therapy-0007"
         }
       ]
     }

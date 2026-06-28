@@ -1,6 +1,6 @@
 # Full Site Editable Block Migration
 
-Date: 2026-06-28T00:37:42.339Z
+Date: 2026-06-28T00:51:04.165Z
 
 Source: https://staging.website-production-26u.pages.dev
 
@@ -18,60 +18,61 @@ wp lmhg import-block-manifest data/lmhg/block-migration/full-site-block-manifest
 
 | Route | Source mode | Blocks | Asset blocks | Text hash matches source | H1 |
 |---|---:|---:|---:|---:|---|
-| / | local-html-artifact | 18 | 8 | yes | Mental Health Clinic in Louisville, KY |
-| /adolescent-counseling/ | local-html-artifact | 13 | 4 | yes | Teen Therapy in Louisville, KY |
-| /adult-counseling/ | local-html-artifact | 12 | 3 | yes | Adult Counseling in Louisville, KY |
-| /anxiety-depression-therapy/ | local-html-artifact | 16 | 6 | yes | Anxiety and Depression Therapy in Louisville, KY |
-| /articles/ | local-html-artifact | 9 | 0 | yes | Mental Health Articles from Louisville Mental Health Group |
-| /articles/family-therapy-vs-individual-therapy/ | local-html-artifact | 10 | 0 | yes | Family Therapy vs. Individual Therapy \| Which Fits? |
-| /articles/guide-to-individual-therapy/ | local-html-artifact | 10 | 0 | yes | Guide to Individual Therapy \| What to Expect |
-| /articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/ | local-html-artifact | 10 | 0 | yes | How to Talk to Someone About Therapy |
-| /articles/top-5-signs-its-time-to-seek-therapy/ | local-html-artifact | 10 | 0 | yes | When to Seek Therapy \| 5 Signs Support May Help |
-| /articles/what-to-expect-when-starting-therapy/ | local-html-artifact | 8 | 0 | yes | What to Expect When Starting Therapy |
-| /attachment-therapy/ | local-html-artifact | 12 | 3 | yes | Attachment Therapy in Louisville, KY |
-| /bullitt-county-ky/ | local-html-artifact | 11 | 1 | yes | Mental Health Services in Bullitt County, KY |
-| /careers/ | local-html-artifact | 11 | 0 | yes | Mental Health Careers in Louisville, KY |
-| /case-management/ | local-html-artifact | 14 | 4 | yes | Targeted Case Management in Louisville, KY |
-| /child-behavioral-intervention/ | local-html-artifact | 13 | 4 | yes | Child Behavioral Therapy in Louisville, KY |
-| /child-counseling/ | local-html-artifact | 13 | 4 | yes | Child Counseling in Louisville, KY |
-| /co-parenting/ | local-html-artifact | 14 | 5 | yes | Co-Parenting Services in Louisville, KY |
-| /community-based-services/ | local-html-artifact | 13 | 4 | yes | Community-Based Mental Health Services in Louisville, KY |
-| /community-support/ | local-html-artifact | 13 | 4 | yes | Community Support Services in Louisville, KY |
-| /compliance/ | local-html-artifact | 9 | 0 | yes | Mental Health Compliance in Louisville, KY |
-| /contact-us/ | local-html-artifact | 14 | 0 | yes | Contact Louisville Mental Health Group |
-| /couples-conflict-resolution/ | local-html-artifact | 13 | 4 | yes | Couples Conflict Resolution in Louisville, KY |
-| /couples-counseling/ | local-html-artifact | 12 | 3 | yes | Couples Counseling in Louisville, KY |
-| /court-ordered/ | local-html-artifact | 12 | 3 | yes | Court-Ordered Services in Louisville, KY |
-| /emdr-therapy/ | local-html-artifact | 16 | 5 | yes | EMDR Therapy in Louisville, KY |
-| /family-reunification/ | local-html-artifact | 14 | 5 | yes | Family Reunification Services in Louisville, KY |
-| /family-therapy/ | local-html-artifact | 12 | 3 | yes | Family Therapy in Louisville, KY |
-| /faq/ | local-html-artifact | 8 | 0 | yes | Mental Health Services FAQ in Louisville, KY |
-| /faq/about-lmhg/ | local-html-artifact | 10 | 0 | yes | About Louisville Mental Health Group \| Therapy and Support |
-| /faq/cost/ | local-html-artifact | 9 | 0 | yes | Therapy Cost in Louisville, KY |
-| /faq/our-approach/ | local-html-artifact | 10 | 0 | yes | Louisville Mental Health Group Approach |
-| /group-therapy/ | local-html-artifact | 9 | 1 | yes | Group Therapy in Louisville, KY |
-| /individual-counseling/ | local-html-artifact | 12 | 3 | yes | Individual Therapy in Louisville, KY |
-| /insurance/ | local-html-artifact | 10 | 0 | yes | Medicaid Mental Health Services in Louisville, KY |
-| /jefferson-county-ky/ | local-html-artifact | 10 | 1 | yes | Mental Health Services in Jefferson County, KY |
-| /locations/ | local-html-artifact | 11 | 0 | yes | Mental Health Services Near Louisville, KY |
-| /locations/community/ | local-html-artifact | 14 | 3 | yes | Community-Based Mental Health Care in Louisville, KY |
-| /locations/in-home/ | local-html-artifact | 10 | 0 | yes | In-Home Mental Health Services in Louisville, KY |
-| /locations/in-person/ | local-html-artifact | 10 | 0 | yes | In-Person Counseling in Louisville, KY |
-| /locations/online/ | local-html-artifact | 10 | 0 | yes | Online Therapy in Kentucky |
-| /locations/school/ | local-html-artifact | 10 | 0 | yes | School-Based Mental Health Support in Louisville, KY |
-| /louisville-ky/ | local-html-artifact | 10 | 1 | yes | Louisville Mental Health Services and Counseling |
-| /meet-the-team/ | local-html-artifact | 14 | 1 | yes | Mental Health Providers in Louisville, KY |
-| /oldham-county-ky/ | local-html-artifact | 10 | 1 | yes | Mental Health Services in Oldham County, KY |
-| /parenting-support/ | local-html-artifact | 14 | 5 | yes | Parenting Support in Louisville, KY |
-| /play-therapy/ | local-html-artifact | 14 | 5 | yes | Play Therapy in Louisville, KY |
-| /privacy-policy/ | local-html-artifact | 7 | 0 | yes | Privacy Policy for Louisville Mental Health Group |
-| /relationship-counseling/ | local-html-artifact | 13 | 4 | yes | Relationship Counseling in Louisville, KY |
-| /reviews/ | local-html-artifact | 9 | 0 | yes | Louisville Mental Health Group Reviews \| Client Feedback |
-| /services/ | local-html-artifact | 30 | 16 | yes | Mental Health Services in Louisville, KY |
-| /specialties/ | local-html-artifact | 32 | 19 | yes | Mental Health Specialties in Louisville, KY |
-| /terms-of-use/ | local-html-artifact | 7 | 0 | yes | Terms of Use for Louisville Mental Health Group |
-| /therapy-in-your-home/ | local-html-artifact | 14 | 4 | yes | In-Home Therapy in Louisville, KY |
-| /trauma-therapy/ | local-html-artifact | 11 | 2 | yes | Trauma Therapy in Louisville, KY |
+| / | live-staging-browser | 15 | 8 | yes | Mental Health Clinic in Louisville, KY |
+| /404.html | live-staging-browser | 4 | 0 | yes | Page Not Found |
+| /adolescent-counseling/ | live-staging-browser | 10 | 4 | yes | Teen Therapy in Louisville, KY |
+| /adult-counseling/ | live-staging-browser | 9 | 3 | yes | Adult Counseling in Louisville, KY |
+| /anxiety-depression-therapy/ | live-staging-browser | 13 | 6 | yes | Anxiety and Depression Therapy in Louisville, KY |
+| /articles/ | live-staging-browser | 7 | 0 | yes | Mental Health Articles from Louisville Mental Health Group |
+| /articles/family-therapy-vs-individual-therapy/ | live-staging-browser | 8 | 0 | yes | Family Therapy vs. Individual Therapy \| Which Fits? |
+| /articles/guide-to-individual-therapy/ | live-staging-browser | 8 | 0 | yes | Guide to Individual Therapy \| What to Expect |
+| /articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/ | live-staging-browser | 8 | 0 | yes | How to Talk to Someone About Therapy |
+| /articles/top-5-signs-its-time-to-seek-therapy/ | live-staging-browser | 8 | 0 | yes | When to Seek Therapy \| 5 Signs Support May Help |
+| /articles/what-to-expect-when-starting-therapy/ | live-staging-browser | 6 | 0 | yes | What to Expect When Starting Therapy |
+| /attachment-therapy/ | live-staging-browser | 9 | 3 | yes | Attachment Therapy in Louisville, KY |
+| /bullitt-county-ky/ | live-staging-browser | 9 | 1 | yes | Mental Health Services in Bullitt County, KY |
+| /careers/ | live-staging-browser | 7 | 0 | yes | Mental Health Careers in Louisville, KY |
+| /case-management/ | live-staging-browser | 11 | 4 | yes | Targeted Case Management in Louisville, KY |
+| /child-behavioral-intervention/ | live-staging-browser | 10 | 4 | yes | Child Behavioral Therapy in Louisville, KY |
+| /child-counseling/ | live-staging-browser | 10 | 4 | yes | Child Counseling in Louisville, KY |
+| /co-parenting/ | live-staging-browser | 11 | 5 | yes | Co-Parenting Services in Louisville, KY |
+| /community-based-services/ | live-staging-browser | 10 | 4 | yes | Community-Based Mental Health Services in Louisville, KY |
+| /community-support/ | live-staging-browser | 10 | 4 | yes | Community Support Services in Louisville, KY |
+| /compliance/ | live-staging-browser | 7 | 0 | yes | Mental Health Compliance in Louisville, KY |
+| /contact-us/ | live-staging-browser | 8 | 0 | yes | Contact Louisville Mental Health Group |
+| /couples-conflict-resolution/ | live-staging-browser | 10 | 4 | yes | Couples Conflict Resolution in Louisville, KY |
+| /couples-counseling/ | live-staging-browser | 9 | 3 | yes | Couples Counseling in Louisville, KY |
+| /court-ordered/ | live-staging-browser | 9 | 3 | yes | Court-Ordered Services in Louisville, KY |
+| /emdr-therapy/ | live-staging-browser | 12 | 5 | yes | EMDR Therapy in Louisville, KY |
+| /family-reunification/ | live-staging-browser | 11 | 5 | yes | Family Reunification Services in Louisville, KY |
+| /family-therapy/ | live-staging-browser | 9 | 3 | yes | Family Therapy in Louisville, KY |
+| /faq/ | live-staging-browser | 6 | 0 | yes | Mental Health Services FAQ in Louisville, KY |
+| /faq/about-lmhg/ | live-staging-browser | 7 | 0 | yes | About Louisville Mental Health Group \| Therapy and Support |
+| /faq/cost/ | live-staging-browser | 7 | 0 | yes | Therapy Cost in Louisville, KY |
+| /faq/our-approach/ | live-staging-browser | 7 | 0 | yes | Louisville Mental Health Group Approach |
+| /group-therapy/ | live-staging-browser | 6 | 1 | yes | Group Therapy in Louisville, KY |
+| /individual-counseling/ | live-staging-browser | 9 | 3 | yes | Individual Therapy in Louisville, KY |
+| /insurance/ | live-staging-browser | 6 | 0 | yes | Medicaid Mental Health Services in Louisville, KY |
+| /jefferson-county-ky/ | live-staging-browser | 9 | 1 | yes | Mental Health Services in Jefferson County, KY |
+| /locations/ | live-staging-browser | 9 | 0 | yes | Mental Health Services Near Louisville, KY |
+| /locations/community/ | live-staging-browser | 11 | 3 | yes | Community-Based Mental Health Care in Louisville, KY |
+| /locations/in-home/ | live-staging-browser | 7 | 0 | yes | In-Home Mental Health Services in Louisville, KY |
+| /locations/in-person/ | live-staging-browser | 7 | 0 | yes | In-Person Counseling in Louisville, KY |
+| /locations/online/ | live-staging-browser | 7 | 0 | yes | Online Therapy in Kentucky |
+| /locations/school/ | live-staging-browser | 7 | 0 | yes | School-Based Mental Health Support in Louisville, KY |
+| /louisville-ky/ | live-staging-browser | 9 | 1 | yes | Louisville Mental Health Services and Counseling |
+| /meet-the-team/ | live-staging-browser | 6 | 1 | yes | Mental Health Providers in Louisville, KY |
+| /oldham-county-ky/ | live-staging-browser | 9 | 1 | yes | Mental Health Services in Oldham County, KY |
+| /parenting-support/ | live-staging-browser | 11 | 5 | yes | Parenting Support in Louisville, KY |
+| /play-therapy/ | live-staging-browser | 11 | 5 | yes | Play Therapy in Louisville, KY |
+| /privacy-policy/ | live-staging-browser | 5 | 0 | yes | Privacy Policy for Louisville Mental Health Group |
+| /relationship-counseling/ | live-staging-browser | 10 | 4 | yes | Relationship Counseling in Louisville, KY |
+| /reviews/ | live-staging-browser | 6 | 0 | yes | Louisville Mental Health Group Reviews \| Client Feedback |
+| /services/ | live-staging-browser | 28 | 16 | yes | Mental Health Services in Louisville, KY |
+| /specialties/ | live-staging-browser | 29 | 19 | yes | Mental Health Specialties in Louisville, KY |
+| /terms-of-use/ | live-staging-browser | 5 | 0 | yes | Terms of Use for Louisville Mental Health Group |
+| /therapy-in-your-home/ | live-staging-browser | 11 | 4 | yes | In-Home Therapy in Louisville, KY |
+| /trauma-therapy/ | live-staging-browser | 8 | 2 | yes | Trauma Therapy in Louisville, KY |
 
 ## Media And Visual Asset Correlation
 

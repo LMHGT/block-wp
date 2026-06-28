@@ -9,7 +9,44 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+add_action( 'init', 'lmhg_site_core_register_static_404_route', 1 );
+add_filter( 'query_vars', 'lmhg_site_core_register_static_route_query_vars' );
+add_filter( 'redirect_canonical', 'lmhg_site_core_preserve_static_404_url', 10, 2 );
 add_action( 'template_redirect', 'lmhg_site_core_handle_manifest_redirects', 0 );
+
+/**
+ * Registers the static Astro not-found page URL as an imported page route.
+ */
+function lmhg_site_core_register_static_404_route(): void {
+	add_rewrite_rule( '^404\.html$', 'index.php?pagename=not-found&lmhg_static_404=1', 'top' );
+}
+
+/**
+ * Allows the static route marker query var through WordPress routing.
+ *
+ * @param array<int,string> $vars Query vars.
+ * @return array<int,string>
+ */
+function lmhg_site_core_register_static_route_query_vars( array $vars ): array {
+	$vars[] = 'lmhg_static_404';
+	return $vars;
+}
+
+/**
+ * Keeps `/404.html` addressable instead of canonicalizing to `/not-found/`.
+ *
+ * @param string|false $redirect_url Proposed canonical URL.
+ * @param string       $requested_url Requested URL.
+ * @return string|false
+ */
+function lmhg_site_core_preserve_static_404_url( string|false $redirect_url, string $requested_url ): string|false {
+	$path = lmhg_site_core_normalize_redirect_path( (string) wp_parse_url( $requested_url, PHP_URL_PATH ) );
+	if ( '/404.html' === $path ) {
+		return false;
+	}
+
+	return $redirect_url;
+}
 
 /**
  * Handles repo-owned redirect rules before WordPress canonical redirects.
