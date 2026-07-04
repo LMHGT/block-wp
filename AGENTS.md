@@ -5,6 +5,40 @@ Start with `.codex/skills/wordpress-router/SKILL.md`, then follow the routed
 skill for block themes, plugins, WP-CLI, Playground, Blueprints, or performance
 work.
 
+## Branch Policy
+
+`main` is the deployable WordPress payload branch. Keep it limited to files that
+would be copied to a conventional WordPress host:
+
+- `wp-content/plugins/lmhg-site-core/**`
+- `wp-content/themes/wordpress-2026/**`
+
+Do not add documentation, extracted Astro data, Core30 research, redirect import
+working files, Codex skills, build tooling, package manifests, runtime scripts,
+local environment files, or planning artifacts to `main`. Those assets are useful,
+but they belong on the reference branch.
+
+`reference/wordpress-2026-full` is the working/reference branch. Keep project
+context there:
+
+- `.codex/**` project-local skills and workflow instructions.
+- `.wp-gutenberg-designer/**` design intake, page planning, navigation, and
+  editor-support artifacts.
+- `data/lmhg/astro-reference/**` Core30 documentation, redirect candidates, and
+  Astro-derived source context.
+- `docs/**`, `README.md`, and `AGENTS.md` documentation.
+- `tools/**`, `runtime/**`, `package.json`, and `package-lock.json` validation,
+  extraction, and runtime sync helpers.
+
+For publishable work, make or port only the deployable `wp-content` changes onto
+`main`, then keep the supporting notes, generated manifests, and source-analysis
+files on `reference/wordpress-2026-full`. If a task needs both, use separate
+commits on the appropriate branches instead of widening `main`.
+
+Use `/Users/tyler-lcsw/projects/lmhg-blockwp` as the local MBP development
+workspace. Treat `/srv/storage/services/lmhg-blockwp/repo` on Dell as a runtime
+mirror for sync and verification, not the normal Codex editing workspace.
+
 ## LMHG Boundaries
 
 - Work in `/Users/tyler-lcsw/projects/lmhg-blockwp`.
