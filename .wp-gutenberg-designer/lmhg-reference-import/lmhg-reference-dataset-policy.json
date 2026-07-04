@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-30T12:10:56.541Z",
+  "status": "active-planning-guardrail",
+  "approvedForPlanningImport": [
+    "page-topology-relationships",
+    "seo-metadata-schema",
+    "page-type-field-contracts",
+    "brand-design-gutenberg-adaptation"
+  ],
+  "notApprovedWithoutSeparateUserConfirmation": [
+    "WordPress page creation",
+    "WordPress metadata writes",
+    "theme file edits",
+    "template edits",
+    "block markup import",
+    "Astro/Starwind/CSS/code import",
+    "visual asset import",
+    "redirect implementation"
+  ],
+  "reviewTaxonomy": [
+    "clean",
+    "dirty",
+    "needs-user-decision",
+    "implement-later",
+    "do-not-use"
+  ],
+  "implementationPosture": "One page type at a time, with user-provided design parts translated into Gutenberg Basics."
+}

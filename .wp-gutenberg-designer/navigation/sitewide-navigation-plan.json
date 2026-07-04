@@ -1,0 +1,496 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-30T14:42:37.414Z",
+  "status": "planned-no-wordpress-writes",
+  "scope": "sitewide header footer breadcrumbs navigation plan",
+  "wordpressTarget": {
+    "root": "/srv/storage/services/wordpress 2026",
+    "url": "http://100.70.222.25:8093"
+  },
+  "sourceGuidance": [
+    "User-provided top-header IA on 2026-06-30.",
+    "LMHG plugin/content-design guidance for primary navigation, footer groups, service-area exclusions, and graph-backed breadcrumbs.",
+    "Gutenberg template planner rules: templates/*.html, flat parts/*.html, core Navigation/template-part blocks first, no PHP in block-template HTML."
+  ],
+  "guardrails": [
+    "Planning only; no WordPress menu, page, template, metadata, or visible surface was changed.",
+    "Header and footer must be implemented as Gutenberg block-theme template parts: parts/header.html and parts/footer.html.",
+    "Use core Navigation, Group, Columns, Buttons, Heading, and Paragraph blocks before custom code.",
+    "Do not import Astro code, Starwind markup, old CSS, legacy templates, old block markup, or prior plugin implementation code.",
+    "Footer city/service-area links must exclude Bardstown, Clarksville, Jeffersonville, and New Albany unless user explicitly approves future pages.",
+    "Breadcrumbs must follow approved relationship data, not raw URL parsing."
+  ],
+  "header": {
+    "implementationTarget": "parts/header.html",
+    "topLevelItems": [
+      {
+        "order": 1,
+        "label": "Home",
+        "path": "/",
+        "pageTitle": "Mental Health Clinic in Louisville, KY"
+      },
+      {
+        "order": 2,
+        "label": "Services",
+        "path": "/services/",
+        "pageTitle": "Mental Health Services in Louisville, KY",
+        "childrenSource": ".wp-gutenberg-designer/navigation/services-nested-menu.json",
+        "children": [
+          {
+            "order": 1,
+            "path": "/individual-counseling/",
+            "menuLabel": "Individual Counseling",
+            "submittedLabel": "Individual Counseling",
+            "pageTitle": "Individual Therapy in Louisville, KY",
+            "templateFamily": "service",
+            "template": "templates/service-page.html",
+            "children": [
+              {
+                "order": 1,
+                "path": "/adult-counseling/",
+                "menuLabel": "Adult Counseling",
+                "submittedLabel": "Adult Counseling",
+                "pageTitle": "Adult Counseling in Louisville, KY",
+                "templateFamily": "specialty",
+                "template": "templates/specialty-page.html"
+              },
+              {
+                "order": 2,
+                "path": "/anxiety-depression-therapy/",
+                "menuLabel": "Anxiety and Depression Therapy",
+                "submittedLabel": "Anxiety and Depression Therapy",
+                "pageTitle": "Anxiety and Depression Therapy in Louisville, KY",
+                "templateFamily": "specialty",
+                "template": "templates/specialty-page.html"
+              }
+            ]
+          },
+          {
+            "order": 2,
+            "path": "/child-counseling/",
+            "menuLabel": "Child Therapy",
+            "submittedLabel": "Child Counseling",
+            "pageTitle": "Child Therapy in Louisville, KY",
+            "templateFamily": "service",
+            "template": "templates/service-page.html",
+            "children": [
+              {
+                "order": 1,
+                "path": "/adolescent-counseling/",
+                "menuLabel": "Adolescent Counseling",
+                "submittedLabel": "Adolescent Counseling",
+                "pageTitle": "Teen Therapy in Louisville, KY",
+                "templateFamily": "specialty",
+                "template": "templates/specialty-page.html"
+              },
+              {
+                "order": 2,
+                "path": "/play-therapy/",
+                "menuLabel": "Play Therapy",
+                "submittedLabel": "Play Therapy",
+                "pageTitle": "Play Therapy in Louisville, KY",
+                "templateFamily": "specialty",
+                "template": "templates/specialty-page.html"
+              },
+              {
+                "order": 3,
+                "path": "/child-behavioral-intervention/",
+                "menuLabel": "Child Behavioral Intervention",
+                "submittedLabel": "Child Behavioral Intervention",
+                "pageTitle": "Child Behavioral Therapy in Louisville, KY",
+                "templateFamily": "specialty",
+                "template": "templates/specialty-page.html"
+              }
+            ],
+            "labelNote": "User previously corrected Child Counseling to Child Therapy for visible/core-service labeling."
+          },
+          {
+            "order": 3,
+            "path": "/family-therapy/",
+            "menuLabel": "Family Therapy",
+            "submittedLabel": "Family Therapy",
+            "pageTitle": "Family Therapy in Louisville, KY",
+            "templateFamily": "service",
+            "template": "templates/service-page.html",
+            "children": [
+              {
+                "order": 1,
+                "path": "/attachment-therapy/",
+                "menuLabel": "Attachment Therapy",
+                "submittedLabel": "Attachment Therapy",
+                "pageTitle": "Attachment Therapy in Louisville, KY",
+                "templateFamily": "specialty",
+                "template": "templates/specialty-page.html"
+              },
+              {
+                "order": 2,
+                "path": "/parenting-support/",
+                "menuLabel": "Parenting Support",
+                "submittedLabel": "Parenting Support",
+                "pageTitle": "Parenting Support in Louisville, KY",
+                "templateFamily": "specialty",
+                "template": "templates/specialty-page.html"
+              }
+            ]
+          },
+          {
+            "order": 4,
+            "path": "/couples-counseling/",
+            "menuLabel": "Couples Counseling",
+            "submittedLabel": "Couples Counseling",
+            "pageTitle": "Couples Counseling in Louisville, KY",
+            "templateFamily": "service",
+            "template": "templates/service-page.html",
+            "children": [
+              {
+                "order": 1,
+                "path": "/couples-conflict-resolution/",
+                "menuLabel": "Couples Conflict Resolution",
+                "submittedLabel": "Couples Conflict Resolution",
+                "pageTitle": "Couples Conflict Resolution in Louisville, KY",
+                "templateFamily": "specialty",
+                "template": "templates/specialty-page.html"
+              },
+              {
+                "order": 2,
+                "path": "/relationship-counseling/",
+                "menuLabel": "Relationship Counseling",
+                "submittedLabel": "Relationship Counseling",
+                "pageTitle": "Relationship Counseling in Louisville, KY",
+                "templateFamily": "specialty",
+                "template": "templates/specialty-page.html"
+              }
+            ]
+          },
+          {
+            "order": 5,
+            "path": "/court-ordered/",
+            "menuLabel": "Court Ordered Services",
+            "submittedLabel": "Court Ordered Services",
+            "pageTitle": "Court-Ordered Services in Louisville, KY",
+            "templateFamily": "service",
+            "template": "templates/service-page.html",
+            "children": [
+              {
+                "order": 1,
+                "path": "/co-parenting/",
+                "menuLabel": "Co-Parenting",
+                "submittedLabel": "Co-Parenting",
+                "pageTitle": "Co-Parenting Services in Louisville, KY",
+                "templateFamily": "specialty",
+                "template": "templates/specialty-page.html"
+              },
+              {
+                "order": 2,
+                "path": "/family-reunification/",
+                "menuLabel": "Family Reunification",
+                "submittedLabel": "Family Reunification",
+                "pageTitle": "Family Reunification Services in Louisville, KY",
+                "templateFamily": "specialty",
+                "template": "templates/specialty-page.html"
+              }
+            ]
+          },
+          {
+            "order": 6,
+            "path": "/community-based-services/",
+            "menuLabel": "Community Based Services",
+            "submittedLabel": "Community Based Services",
+            "pageTitle": "Community-Based Mental Health Services in Louisville, KY",
+            "templateFamily": "service",
+            "template": "templates/service-page.html",
+            "children": [
+              {
+                "order": 1,
+                "path": "/case-management/",
+                "menuLabel": "Case Management",
+                "submittedLabel": "Case Management",
+                "pageTitle": "Targeted Case Management in Louisville, KY",
+                "templateFamily": "specialty",
+                "template": "templates/specialty-page.html"
+              },
+              {
+                "order": 2,
+                "path": "/community-support/",
+                "menuLabel": "Community Support",
+                "submittedLabel": "Community Support",
+                "pageTitle": "Community Support Services in Louisville, KY",
+                "templateFamily": "specialty",
+                "template": "templates/specialty-page.html"
+              }
+            ]
+          },
+          {
+            "order": 7,
+            "path": "/group-therapy/",
+            "menuLabel": "Group Therapy",
+            "submittedLabel": "Group Therapy",
+            "pageTitle": "Group Therapy in Louisville, KY",
+            "templateFamily": "service",
+            "template": "templates/service-page.html",
+            "children": []
+          },
+          {
+            "order": 8,
+            "path": "/trauma-therapy/",
+            "menuLabel": "Trauma Therapy",
+            "submittedLabel": "Trauma Therapy",
+            "pageTitle": "Trauma Therapy in Louisville, KY",
+            "templateFamily": "service",
+            "template": "templates/service-page.html",
+            "children": [
+              {
+                "order": 1,
+                "path": "/emdr-therapy/",
+                "menuLabel": "EMDR Therapy",
+                "submittedLabel": "EMDR Therapy",
+                "pageTitle": "EMDR Therapy in Louisville, KY",
+                "templateFamily": "specialty",
+                "template": "templates/specialty-page.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "label": "Specialties",
+        "submittedLabel": "Specialities",
+        "path": "/specialties/",
+        "pageTitle": "Mental Health Specialties in Louisville, KY",
+        "children": [],
+        "note": "Normalized display spelling to existing route/title spelling. Keep as top-level link unless user explicitly asks to expose a separate Specialties dropdown."
+      },
+      {
+        "order": 4,
+        "label": "Team",
+        "path": "/meet-the-team/",
+        "pageTitle": "Mental Health Providers in Louisville, KY"
+      },
+      {
+        "order": 5,
+        "label": "Locations",
+        "path": "/locations/",
+        "pageTitle": "Mental Health Services Near Louisville, KY",
+        "children": [
+          {
+            "order": 1,
+            "label": "Office",
+            "path": "/locations/in-person/",
+            "sourceLabel": "In-Person",
+            "pageTitle": "In-Person Counseling in Louisville, KY"
+          },
+          {
+            "order": 2,
+            "label": "Telehealth",
+            "path": "/locations/online/",
+            "sourceLabel": "Telehealth",
+            "pageTitle": "Online Therapy in Kentucky"
+          },
+          {
+            "order": 3,
+            "label": "Community",
+            "path": "/locations/community/",
+            "sourceLabel": "Community",
+            "pageTitle": "Community-Based Mental Health Care in Louisville, KY"
+          },
+          {
+            "order": 4,
+            "label": "In Home",
+            "path": "/locations/in-home/",
+            "sourceLabel": "In-Home",
+            "pageTitle": "In-Home Mental Health Services in Louisville, KY"
+          },
+          {
+            "order": 5,
+            "label": "School",
+            "path": "/locations/school/",
+            "sourceLabel": "School",
+            "pageTitle": "School-Based Mental Health Support in Louisville, KY"
+          }
+        ]
+      },
+      {
+        "order": 6,
+        "label": "FAQ",
+        "path": "/faq/",
+        "pageTitle": "Mental Health Services FAQ in Louisville, KY",
+        "children": [],
+        "note": "FAQ detail pages remain reachable through the FAQ page unless a dropdown is approved later."
+      },
+      {
+        "order": 7,
+        "label": "Contact",
+        "path": "/contact-us/",
+        "pageTitle": "Contact Louisville Mental Health Group"
+      }
+    ],
+    "cta": {
+      "label": "Reach Out",
+      "href": "https://intakeq.com/new/g91Z8x/bjxuno",
+      "rel": "noopener",
+      "source": "lmhg guidance: active upper/footer CTA variant"
+    },
+    "coreBlocks": [
+      "core/template-part",
+      "core/group",
+      "core/site-logo",
+      "core/site-title",
+      "core/navigation",
+      "core/navigation-link",
+      "core/buttons"
+    ],
+    "notes": [
+      "Services uses the approved nested service tree.",
+      "Locations exposes Office, Telehealth, Community, In Home, and School children.",
+      "Reach Out is a separate CTA in the header, not a normal nav item."
+    ]
+  },
+  "footer": {
+    "structure": "responsive 1/2/3-column footer in parts/footer.html",
+    "implementationTarget": "parts/footer.html",
+    "coreBlocks": [
+      "core/template-part",
+      "core/group",
+      "core/columns",
+      "core/column",
+      "core/heading",
+      "core/paragraph",
+      "core/navigation",
+      "core/buttons"
+    ],
+    "cta": {
+      "label": "Reach Out",
+      "href": "https://intakeq.com/new/g91Z8x/bjxuno",
+      "rel": "noopener",
+      "source": "lmhg guidance: active upper/footer CTA variant"
+    },
+    "columns": [
+      {
+        "order": 1,
+        "title": "Louisville Mental Health Group",
+        "purpose": "entity information plus service-area coverage links",
+        "body": "Mental Health Clinic in Louisville, KY",
+        "links": [
+          {
+            "label": "Louisville, KY",
+            "path": "/louisville-ky/",
+            "pageTitle": "Louisville Mental Health Services and Counseling"
+          },
+          {
+            "label": "Jefferson County, KY",
+            "path": "/jefferson-county-ky/",
+            "pageTitle": "Mental Health Services in Jefferson County, KY"
+          },
+          {
+            "label": "Bullitt County, KY",
+            "path": "/bullitt-county-ky/",
+            "pageTitle": "Mental Health Services in Bullitt County, KY"
+          },
+          {
+            "label": "Oldham County, KY",
+            "path": "/oldham-county-ky/",
+            "pageTitle": "Mental Health Services in Oldham County, KY"
+          }
+        ],
+        "excludedLinks": [
+          "Bardstown",
+          "Clarksville",
+          "Jeffersonville",
+          "New Albany"
+        ]
+      },
+      {
+        "order": 2,
+        "title": "Other Links",
+        "purpose": "secondary utility paths; not primary header navigation",
+        "links": [
+          {
+            "label": "Insurance",
+            "path": "/insurance/",
+            "pageTitle": "Medicaid Mental Health Services in Louisville, KY"
+          },
+          {
+            "label": "Reviews",
+            "path": "/reviews/",
+            "pageTitle": "Louisville Mental Health Group Reviews | Client Feedback"
+          },
+          {
+            "label": "Articles",
+            "path": "/articles/",
+            "pageTitle": "Mental Health Articles from Louisville Mental Health Group"
+          },
+          {
+            "label": "Careers",
+            "path": "/careers/",
+            "pageTitle": "Mental Health Careers in Louisville, KY"
+          },
+          {
+            "label": "Client Portal",
+            "path": "#",
+            "status": "pending final destination"
+          },
+          {
+            "label": "HIPAA",
+            "path": "/compliance/",
+            "pageTitle": "Mental Health Compliance in Louisville, KY",
+            "note": "LMHG guidance allows HIPAA to remain pending; /compliance/ is the current available support page."
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "title": "Louisville Office",
+        "purpose": "single Louisville office contact details",
+        "office": {
+          "name": "Louisville Mental Health Group",
+          "addressLine1": "4229 Bardstown Rd, Suite 310",
+          "addressLine2": "Louisville, KY 40218",
+          "phone": "(502) 416-1416",
+          "phoneHref": "tel:5024161416",
+          "fax": "888-977-1527"
+        },
+        "links": [
+          {
+            "label": "Privacy Policy",
+            "path": "/privacy-policy/",
+            "pageTitle": "Privacy Policy for Louisville Mental Health Group"
+          },
+          {
+            "label": "Terms of Use",
+            "path": "/terms-of-use/",
+            "pageTitle": "Terms of Use for Louisville Mental Health Group"
+          }
+        ]
+      }
+    ],
+    "bottom": {
+      "copyright": "Dynamic current-year copyright notice when implemented.",
+      "insuranceText": "Accepting most commercial insurances, all Medicaid plans, and private pay. Serving Louisville, KY and surrounding areas in person, across Kentucky via telehealth."
+    }
+  },
+  "breadcrumbs": {
+    "status": "planned-no-wordpress-writes",
+    "implementationTarget": "Gutenberg-native breadcrumb pattern in templates/page content; no Astro Breadcrumb component or URL-parser runtime.",
+    "relationshipSource": ".wp-gutenberg-designer/lmhg-reference-import/lmhg-reference-import.json primaryParent plus serviceNavigationPlan",
+    "coreBlocks": [
+      "core/group",
+      "core/paragraph",
+      "core/html only if semantic nav attributes are explicitly approved later"
+    ],
+    "pureGutenbergPlan": [
+      "Render visible breadcrumb trails as normal Gutenberg block markup generated from the approved relationship graph.",
+      "Keep breadcrumb labels human-readable and separate from SEO title tags.",
+      "Use Home as the first breadcrumb, then hub/core parent, then current page.",
+      "Do not infer breadcrumbs from URL segments alone.",
+      "Do not import Astro Breadcrumb.astro, Starwind breadcrumb components, or route-parser packages."
+    ],
+    "schemaNote": "Visible breadcrumbs can be 100% Gutenberg block markup. BreadcrumbList JSON-LD should be handled by approved SEO/schema tooling later if needed; do not smuggle custom PHP into block-template HTML."
+  },
+  "openDecisions": [
+    "Confirm whether Specialties should remain a top-level link only or expose a separate dropdown in addition to the Services nested menu.",
+    "Confirm whether FAQ should remain a top-level link only or expose About LMHG, Our Approach, and Cost as a dropdown.",
+    "Confirm whether HIPAA should link to /compliance/ or remain pending until a separate HIPAA destination exists.",
+    "Confirm whether the Client Portal footer item should stay as # until an external portal URL is supplied."
+  ]
+}

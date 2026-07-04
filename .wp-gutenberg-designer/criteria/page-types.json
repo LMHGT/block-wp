@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "pageTypes": {
+    "page": {
+      "templates": [
+        "wp-content/themes/wordpress-2026/templates/page.html"
+      ],
+      "requiredBlocks": [
+        "core/template-part",
+        "core/post-title",
+        "core/post-content"
+      ],
+      "requiredSections": [
+        "header",
+        "content",
+        "footer"
+      ],
+      "maxH1": 1
+    },
+    "index": {
+      "templates": [
+        "wp-content/themes/wordpress-2026/templates/index.html"
+      ],
+      "requiredBlocks": [
+        "core/template-part"
+      ],
+      "requiredSections": [
+        "header",
+        "content",
+        "footer"
+      ],
+      "maxH1": 1
+    }
+  }
+}

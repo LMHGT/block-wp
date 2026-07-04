@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-30T13:44:30.501Z",
+  "status": "planned-no-wordpress-writes",
+  "scope": "services nested menu only",
+  "wordpressTarget": {
+    "root": "/srv/storage/services/wordpress 2026",
+    "url": "http://100.70.222.25:8093"
+  },
+  "rootItem": {
+    "path": "/services/",
+    "menuLabel": "Services",
+    "sourceTitle": "Mental Health Services in Louisville, KY"
+  },
+  "guardrails": [
+    "Do not create or update the WordPress navigation menu until the user approves implementation.",
+    "Do not import Astro navigation code, CSS, templates, or old block markup.",
+    "Use a Gutenberg Navigation block/template part when implementing later.",
+    "This pass covers the Services dropdown only; other top-level pages are pending."
+  ],
+  "relationships": [
+    {
+      "order": 1,
+      "path": "/individual-counseling/",
+      "menuLabel": "Individual Counseling",
+      "submittedLabel": "Individual Counseling",
+      "pageTitle": "Individual Therapy in Louisville, KY",
+      "templateFamily": "service",
+      "template": "templates/service-page.html",
+      "children": [
+        {
+          "order": 1,
+          "path": "/adult-counseling/",
+          "menuLabel": "Adult Counseling",
+          "submittedLabel": "Adult Counseling",
+          "pageTitle": "Adult Counseling in Louisville, KY",
+          "templateFamily": "specialty",
+          "template": "templates/specialty-page.html"
+        },
+        {
+          "order": 2,
+          "path": "/anxiety-depression-therapy/",
+          "menuLabel": "Anxiety and Depression Therapy",
+          "submittedLabel": "Anxiety and Depression Therapy",
+          "pageTitle": "Anxiety and Depression Therapy in Louisville, KY",
+          "templateFamily": "specialty",
+          "template": "templates/specialty-page.html"
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "path": "/child-counseling/",
+      "menuLabel": "Child Therapy",
+      "submittedLabel": "Child Counseling",
+      "pageTitle": "Child Therapy in Louisville, KY",
+      "templateFamily": "service",
+      "template": "templates/service-page.html",
+      "children": [
+        {
+          "order": 1,
+          "path": "/adolescent-counseling/",
+          "menuLabel": "Adolescent Counseling",
+          "submittedLabel": "Adolescent Counseling",
+          "pageTitle": "Teen Therapy in Louisville, KY",
+          "templateFamily": "specialty",
+          "template": "templates/specialty-page.html"
+        },
+        {
+          "order": 2,
+          "path": "/play-therapy/",
+          "menuLabel": "Play Therapy",
+          "submittedLabel": "Play Therapy",
+          "pageTitle": "Play Therapy in Louisville, KY",
+          "templateFamily": "specialty",
+          "template": "templates/specialty-page.html"
+        },
+        {
+          "order": 3,
+          "path": "/child-behavioral-intervention/",
+          "menuLabel": "Child Behavioral Intervention",
+          "submittedLabel": "Child Behavioral Intervention",
+          "pageTitle": "Child Behavioral Therapy in Louisville, KY",
+          "templateFamily": "specialty",
+          "template": "templates/specialty-page.html"
+        }
+      ],
+      "labelNote": "User previously corrected Child Counseling to Child Therapy for visible/core-service labeling."
+    },
+    {
+      "order": 3,
+      "path": "/family-therapy/",
+      "menuLabel": "Family Therapy",
+      "submittedLabel": "Family Therapy",
+      "pageTitle": "Family Therapy in Louisville, KY",
+      "templateFamily": "service",
+      "template": "templates/service-page.html",
+      "children": [
+        {
+          "order": 1,
+          "path": "/attachment-therapy/",
+          "menuLabel": "Attachment Therapy",
+          "submittedLabel": "Attachment Therapy",
+          "pageTitle": "Attachment Therapy in Louisville, KY",
+          "templateFamily": "specialty",
+          "template": "templates/specialty-page.html"
+        },
+        {
+          "order": 2,
+          "path": "/parenting-support/",
+          "menuLabel": "Parenting Support",
+          "submittedLabel": "Parenting Support",
+          "pageTitle": "Parenting Support in Louisville, KY",
+          "templateFamily": "specialty",
+          "template": "templates/specialty-page.html"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "path": "/couples-counseling/",
+      "menuLabel": "Couples Counseling",
+      "submittedLabel": "Couples Counseling",
+      "pageTitle": "Couples Counseling in Louisville, KY",
+      "templateFamily": "service",
+      "template": "templates/service-page.html",
+      "children": [
+        {
+          "order": 1,
+          "path": "/couples-conflict-resolution/",
+          "menuLabel": "Couples Conflict Resolution",
+          "submittedLabel": "Couples Conflict Resolution",
+          "pageTitle": "Couples Conflict Resolution in Louisville, KY",
+          "templateFamily": "specialty",
+          "template": "templates/specialty-page.html"
+        },
+        {
+          "order": 2,
+          "path": "/relationship-counseling/",
+          "menuLabel": "Relationship Counseling",
+          "submittedLabel": "Relationship Counseling",
+          "pageTitle": "Relationship Counseling in Louisville, KY",
+          "templateFamily": "specialty",
+          "template": "templates/specialty-page.html"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "path": "/court-ordered/",
+      "menuLabel": "Court Ordered Services",
+      "submittedLabel": "Court Ordered Services",
+      "pageTitle": "Court-Ordered Services in Louisville, KY",
+      "templateFamily": "service",
+      "template": "templates/service-page.html",
+      "children": [
+        {
+          "order": 1,
+          "path": "/co-parenting/",
+          "menuLabel": "Co-Parenting",
+          "submittedLabel": "Co-Parenting",
+          "pageTitle": "Co-Parenting Services in Louisville, KY",
+          "templateFamily": "specialty",
+          "template": "templates/specialty-page.html"
+        },
+        {
+          "order": 2,
+          "path": "/family-reunification/",
+          "menuLabel": "Family Reunification",
+          "submittedLabel": "Family Reunification",
+          "pageTitle": "Family Reunification Services in Louisville, KY",
+          "templateFamily": "specialty",
+          "template": "templates/specialty-page.html"
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "path": "/community-based-services/",
+      "menuLabel": "Community Based Services",
+      "submittedLabel": "Community Based Services",
+      "pageTitle": "Community-Based Mental Health Services in Louisville, KY",
+      "templateFamily": "service",
+      "template": "templates/service-page.html",
+      "children": [
+        {
+          "order": 1,
+          "path": "/case-management/",
+          "menuLabel": "Case Management",
+          "submittedLabel": "Case Management",
+          "pageTitle": "Targeted Case Management in Louisville, KY",
+          "templateFamily": "specialty",
+          "template": "templates/specialty-page.html"
+        },
+        {
+          "order": 2,
+          "path": "/community-support/",
+          "menuLabel": "Community Support",
+          "submittedLabel": "Community Support",
+          "pageTitle": "Community Support Services in Louisville, KY",
+          "templateFamily": "specialty",
+          "template": "templates/specialty-page.html"
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "path": "/group-therapy/",
+      "menuLabel": "Group Therapy",
+      "submittedLabel": "Group Therapy",
+      "pageTitle": "Group Therapy in Louisville, KY",
+      "templateFamily": "service",
+      "template": "templates/service-page.html",
+      "children": []
+    },
+    {
+      "order": 8,
+      "path": "/trauma-therapy/",
+      "menuLabel": "Trauma Therapy",
+      "submittedLabel": "Trauma Therapy",
+      "pageTitle": "Trauma Therapy in Louisville, KY",
+      "templateFamily": "service",
+      "template": "templates/service-page.html",
+      "children": [
+        {
+          "order": 1,
+          "path": "/emdr-therapy/",
+          "menuLabel": "EMDR Therapy",
+          "submittedLabel": "EMDR Therapy",
+          "pageTitle": "EMDR Therapy in Louisville, KY",
+          "templateFamily": "specialty",
+          "template": "templates/specialty-page.html"
+        }
+      ]
+    }
+  ]
+}

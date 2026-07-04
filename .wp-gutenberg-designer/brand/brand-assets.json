@@ -1,0 +1,18 @@
+{
+  "logo": {
+    "available": false
+  },
+  "colors": {
+    "available": false,
+    "notes": "Use provisional tokens until user provides brand direction."
+  },
+  "fonts": {
+    "available": false
+  },
+  "brandGuide": {
+    "available": false
+  },
+  "existingWebsite": {
+    "available": false
+  }
+}

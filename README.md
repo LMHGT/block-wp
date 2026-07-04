@@ -1,87 +1,84 @@
 # LMHG Block WP
 
-This repository is the exportable WordPress transition track for Louisville
-Mental Health Group. It reads the current Astro implementation as source context,
-then builds a standalone custom block WordPress theme, companion site-core
-plugin, route/content manifests, media manifest, and import/export workflow.
+This repository is the source-of-truth track for the Louisville Mental Health
+Group WordPress 2026 runtime currently served at `http://100.70.222.25:8093`.
+The active runtime is a non-Docker WordPress Playground instance on the Dell
+host. Astro is now read-only reference context for selected inputs, not the
+active WordPress implementation authority.
 
 Active operating model:
 
-- Source of truth: `/Users/tyler-lcsw/projects/lmhg-astro-integrate`, read-only.
+- Runtime source of truth: `http://100.70.222.25:8093` and its associated
+  `wordpress-2026` files mirrored into this repo.
+- Astro reference source: `/Users/tyler-lcsw/projects/lmhg-astro-integrate`,
+  read-only.
 - Working repo: `/Users/tyler-lcsw/projects/lmhg-blockwp`.
-- Runtime target: Codex-managed cloud WordPress environment.
-- Out of scope for this project: RackNerd, local WordPress, and local Docker as
-  proof surfaces.
+- Runtime target: Dell-hosted WordPress Playground CLI at
+  `/srv/storage/services/wordpress 2026/wordpress`.
+- Out of scope for this project: RackNerd, local WordPress, local Docker, and
+  the retired Codex cloud package workflow as proof surfaces.
 - Staging controls stay `noindex`/`noarchive` until live use is approved.
 
-Primary plan:
+Runtime workflow:
 
-- [plan/2026-06-27-lmhg-blockwp-refactor-plan.md](plan/2026-06-27-lmhg-blockwp-refactor-plan.md)
-- [plan/2026-06-27-lmhg-blockwp-refactor-plan.html](plan/2026-06-27-lmhg-blockwp-refactor-plan.html)
-
-Corrected cloud workflow:
-
+- [docs/wordpress-2026-source-of-truth.md](docs/wordpress-2026-source-of-truth.md)
+- [docs/design.md](docs/design.md)
 - [docs/cloud-verification-workflow.md](docs/cloud-verification-workflow.md)
-
-Cutover boundary:
-
-- [docs/staging-cutover-decision.md](docs/staging-cutover-decision.md)
+- [docs/astro-reference-intake.md](docs/astro-reference-intake.md)
 
 ## Quick Start
 
 ```bash
 npm install
-npm run setup:browsers
-npm run inventory:astro
-npm run generate:block-full
-npm run generate:export-manifest
+npm run extract:astro-reference
 npm run verify
 ```
 
-`npm run verify` is intentionally non-runtime. It confirms the source-driven
-full-site manifests, static repo shape, prerequisite availability for local
-artifact generation, Cloudflare staging snapshot integrity, and export manifest
-hashes.
+`npm run verify` confirms the current repo shape and compares the mirrored
+`wordpress-2026` theme against the live 8093 runtime.
 
-## Cloud WordPress Runtime
+## WordPress 2026 Runtime
 
-After the package is available inside the Codex-managed cloud WordPress runtime,
-run the import from this repo. If the WordPress core root is not the repo root,
-set `WP_PATH`:
+The active theme is:
+
+- `wp-content/themes/wordpress-2026`
+
+The active durable behavior plugin is:
+
+- `wp-content/plugins/lmhg-site-core`
+
+The project-local Gutenberg planning state is:
+
+- `.wp-gutenberg-designer`
+
+Astro-derived Core30 and redirect reference inputs are staged under:
+
+- `data/lmhg/astro-reference`
+- `docs/astro-reference-intake.md`
+
+To refresh the live Dell runtime from this repo, run on the Dell host or with
+`WP2026_WORDPRESS_DIR` pointed at the mounted 8093 WordPress root:
 
 ```bash
-WP_PATH="/path/to/wordpress" bash tools/import-codex-cloud-wordpress.sh
+WP2026_WORDPRESS_DIR="/srv/storage/services/wordpress 2026/wordpress" npm run runtime:sync
+WP2026_WORDPRESS_DIR="/srv/storage/services/wordpress 2026/wordpress" npm run runtime:verify
 ```
 
-The import script copies `lmhg-block-theme` and `lmhg-site-core` into the target
-WordPress runtime, activates them, imports the route manifest, imports all
-generated Gutenberg block content and media, keeps development indexing disabled,
-flushes rewrites, and exports runtime artifacts:
-
-- WXR content export: `data/lmhg/export/runtime/lmhg-pages.xml`
-- Database export: `data/lmhg/export/runtime/lmhg-wordpress.sql`
-- Runtime notes: `data/lmhg/export/runtime/README.md`
-
-Then verify the cloud runtime:
-
-```bash
-CODEX_CLOUD_WP_URL="https://<codex-cloud-wordpress-url>" npm run cloud:verify
-```
-
-The cloud verifier rejects RackNerd and local URLs.
+`runtime:sync` copies repo-owned theme/plugin/project-state files into the
+mounted runtime. It does not copy WordPress core, `wp-config.php`, the SQLite
+database, or `node_modules`.
 
 ## Runtime Roles
 
-- Theme boundary: `wp-content/themes/lmhg-block-theme`
+- Active theme boundary: `wp-content/themes/wordpress-2026`
 - Durable behavior boundary: `wp-content/plugins/lmhg-site-core`
-- Full-site block manifest: `data/lmhg/block-migration/full-site-block-manifest.json`
-- Media manifest: `data/lmhg/block-migration/full-site-media-manifest.json`
-- Export manifest: `data/lmhg/export/codex-cloud-export-manifest.json`
+- Gutenberg project state: `.wp-gutenberg-designer`
+- Astro reference intake: `data/lmhg/astro-reference`
 - Project-local WordPress skills: `.codex/skills`
 
-## Optional Local Tooling
+## Astro Reference Boundary
 
-The repository still contains legacy `wp-env`, Playground, Lighthouse, and
-Playwright helper scripts because they are useful for isolated experiments. They
-are not required on this machine and are not accepted as the active proof target
-for this transition.
+The only approved Astro inputs in this repo are the Core30 documentation and
+redirect lists extracted into `data/lmhg/astro-reference`. Rank Math is not
+installed in the 8093 runtime yet, so the redirect CSV is a candidate import
+resource only.

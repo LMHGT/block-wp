@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "requireAltText": true,
+  "disallowNestedInteractiveElements": true,
+  "requireLogicalHeadingOrder": true
+}

@@ -10,19 +10,20 @@ work.
 - Work in `/Users/tyler-lcsw/projects/lmhg-blockwp`.
 - Treat `/Users/tyler-lcsw/projects/lmhg-astro-integrate` as read-only source
   context unless Tyler explicitly changes the scope.
-- This repository is a WordPress transition/proof track. It is not the approved
-  production replacement for Astro/NocoBase/Workbench until cloud runtime parity
-  and user review are complete.
-- Runtime target for this project is a Codex-managed cloud WordPress
-  environment.
-- RackNerd, local WordPress, local Docker, and local Tailscale Serve are not
-  accepted proof surfaces for this corrected workflow.
+- This repository is the WordPress 2026 source-of-truth track for the runtime
+  currently served at `http://100.70.222.25:8093`. It is not the approved
+  production replacement for Astro/NocoBase/Workbench until user review is
+  complete.
+- Runtime target for this project is the Dell-hosted non-Docker WordPress
+  Playground instance at `/srv/storage/services/wordpress 2026/wordpress`.
+- RackNerd, local WordPress, local Docker, and the retired Codex cloud package
+  workflow are not accepted proof surfaces for this corrected workflow.
 - Do not publish WordPress, change DNS, change Cloudflare Pages, or push Astro
   branches from this workflow.
 
 ## Development Rules
 
-- Keep theme changes inside `wp-content/themes/lmhg-block-theme`.
+- Keep theme changes inside `wp-content/themes/wordpress-2026`.
 - Keep durable SEO, schema, redirects, graph behavior, and business logic inside
   `wp-content/plugins/lmhg-site-core`.
 - Prefer `theme.json`, templates, template parts, and patterns before adding
@@ -40,18 +41,16 @@ work.
 
 ```bash
 npm run check:static
-npm run check:prereqs
-npm run inventory:astro
-npm run generate:block-full
-npm run generate:export-manifest
+npm run extract:astro-reference
+npm run runtime:verify
 npm run verify
 ```
 
-Cloud runtime commands:
+Dell runtime commands:
 
 ```bash
-bash tools/import-codex-cloud-wordpress.sh
-CODEX_CLOUD_WP_URL="https://<codex-cloud-wordpress-url>" npm run cloud:verify
+WP2026_WORDPRESS_DIR="/srv/storage/services/wordpress 2026/wordpress" npm run runtime:sync
+WP2026_WORDPRESS_DIR="/srv/storage/services/wordpress 2026/wordpress" npm run runtime:verify
 ```
 
 ## Verification Before Completion
@@ -62,13 +61,14 @@ For file-only changes, run:
 npm run verify
 ```
 
-For cloud WordPress runtime changes, run the cloud import inside the
-Codex-managed WordPress runtime, then run:
+For Dell WordPress runtime changes, sync the repo-owned runtime files into the
+mounted 8093 WordPress root, then run:
 
 ```bash
-CODEX_CLOUD_WP_URL="https://<codex-cloud-wordpress-url>" npm run cloud:verify
+WP2026_WORDPRESS_DIR="/srv/storage/services/wordpress 2026/wordpress" npm run runtime:sync
+WP2026_WORDPRESS_DIR="/srv/storage/services/wordpress 2026/wordpress" npm run runtime:verify
 ```
 
-If Node, npm, browser prerequisites, or the Codex cloud WordPress runtime are
-missing, report the exact failing prerequisite or missing runtime URL instead of
-claiming runtime verification.
+If Node, npm, network access to `http://100.70.222.25:8093`, or the mounted
+WordPress root is missing, report the exact failing prerequisite or runtime URL
+instead of claiming runtime verification.

@@ -1,0 +1,22 @@
+{
+  "wordpressPlugins": {
+    "required": [],
+    "optional": [],
+    "suggested": [
+      "SEO plugin, caching/performance plugin, backup/export strategy after hosting target is confirmed"
+    ],
+    "forbidden": [
+      "Docker-only runtime dependencies for this instance"
+    ]
+  },
+  "codexPlugins": {
+    "required": [
+      "wp-gutenberg-designer@personal"
+    ],
+    "optional": [],
+    "suggested": [
+      "browser/editor testing after content or theme work begins"
+    ]
+  },
+  "generatedFrom": "onboarding"
+}

@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "maxH1": 1,
+  "requireCrawlableText": true,
+  "requireImageAltIntent": true
+}

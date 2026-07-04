@@ -1,0 +1,27 @@
+{
+  "name": "wordpress-2026",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Self-contained non-Docker WordPress Playground runtime on the Dell remote.",
+  "type": "module",
+  "scripts": {
+    "serve": "node scripts/start-server.mjs",
+    "serve:fresh": "WP2026_INSTALL_MODE=download-and-install node scripts/start-server.mjs",
+    "verify": "node scripts/verify-runtime.mjs",
+    "inventory": "find wordpress -maxdepth 2 -type f | sort | sed -n \"1,160p\""
+  },
+  "devDependencies": {
+    "@wp-playground/cli": "3.1.43"
+  },
+  "wp2026": {
+    "runtime": "WordPress Playground CLI",
+    "docker": false,
+    "defaultPort": 8093,
+    "defaultUrl": "http://100.70.222.25:8093",
+    "wordpressVersion": "latest",
+    "phpVersion": "8.3",
+    "codexTooling": [
+      "wp-gutenberg-designer@personal"
+    ]
+  }
+}

@@ -1,0 +1,1837 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-30T13:35:49.551Z",
+  "status": "planned-no-wordpress-writes",
+  "wordpressTarget": {
+    "root": "/srv/storage/services/wordpress 2026",
+    "url": "http://100.70.222.25:8093"
+  },
+  "sourceInputs": [
+    ".wp-gutenberg-designer/lmhg-reference-import/lmhg-reference-import.json",
+    ".wp-gutenberg-designer/page-plan/public-56-page-plan.json"
+  ],
+  "userConfirmedRequirements": [
+    "Carry page/template categories over to the fresh WordPress site.",
+    "Each approved page category needs a distinct Gutenberg template.",
+    "Header and footer remain consistent across the site.",
+    "Child Counseling should be renamed to Child Therapy in visible/core-service labeling.",
+    "Use planning artifacts only until the user approves WordPress surface changes.",
+    "The Services menu should be nested with core service pages owning one or more specialty pages where applicable.",
+    "Header, footer, and breadcrumbs must mirror LMHG guidance while being implemented in a 100% Gutenberg-native way."
+  ],
+  "guardrails": [
+    "Do not import Astro code, Starwind code, legacy CSS, theme templates, block markup, or old plugin implementation artifacts.",
+    "Use LMHG plugin data as reference planning material only until the user marks each field/template clean or dirty.",
+    "Register custom page templates in theme.json when creating the block theme.",
+    "Keep templates in templates/*.html and shared template parts in flat parts/*.html.",
+    "Do not put PHP inside block-template HTML files.",
+    "Use core Gutenberg blocks before custom blocks or code."
+  ],
+  "sharedTemplateParts": [
+    {
+      "id": "site-header",
+      "title": "Consistent Site Header",
+      "targetFile": "parts/header.html",
+      "area": "header",
+      "appliesTo": "all templates",
+      "coreBlocks": [
+        "core/template-part",
+        "core/group",
+        "core/site-logo",
+        "core/site-title",
+        "core/navigation",
+        "core/buttons"
+      ],
+      "implementationStatus": "planned-shared-template-part",
+      "notes": "Carry forward header intent as a fresh Gutenberg template part. Do not import Astro code or old block markup.",
+      "navigationPlan": "Use sitewide-navigation-plan header.topLevelItems and the approved services nested menu."
+    },
+    {
+      "id": "site-footer",
+      "title": "Consistent Site Footer",
+      "targetFile": "parts/footer.html",
+      "area": "footer",
+      "appliesTo": "all templates",
+      "coreBlocks": [
+        "core/template-part",
+        "core/group",
+        "core/site-logo",
+        "core/navigation",
+        "core/paragraph",
+        "core/social-links"
+      ],
+      "implementationStatus": "planned-shared-template-part",
+      "notes": "Carry forward footer intent as a fresh Gutenberg template part. Do not import Astro code or old block markup.",
+      "navigationPlan": "Use sitewide-navigation-plan footer columns and CTA."
+    }
+  ],
+  "templateDefinitions": [
+    {
+      "id": "required-index-fallback",
+      "sourceCategory": "required block-theme fallback",
+      "targetTemplateFile": "templates/index.html",
+      "wordpressTemplateType": "index",
+      "themeJsonCustomTemplate": null,
+      "fallbackOrder": [
+        "templates/index.html"
+      ],
+      "templateParts": [
+        "parts/header.html",
+        "parts/footer.html"
+      ],
+      "coreBlocks": [
+        "core/template-part",
+        "core/post-content"
+      ],
+      "plannedPatterns": [
+        "minimal-content-fallback"
+      ],
+      "customCodeNeeded": false,
+      "implementationGate": "required when fresh block theme is created",
+      "assignedPageCount": 0,
+      "assignedPages": []
+    },
+    {
+      "id": "home",
+      "sourceCategory": "home",
+      "title": "Home Page Template",
+      "targetTemplateFile": "templates/front-page.html",
+      "wordpressTemplateType": "front-page",
+      "themeJsonCustomTemplate": null,
+      "fallbackOrder": [
+        "templates/front-page.html",
+        "templates/home.html",
+        "templates/index.html"
+      ],
+      "templateParts": [
+        "parts/header.html",
+        "parts/footer.html"
+      ],
+      "coreBlocks": [
+        "core/template-part",
+        "core/group",
+        "core/heading",
+        "core/paragraph",
+        "core/buttons",
+        "core/columns",
+        "core/list",
+        "core/query"
+      ],
+      "plannedPatterns": [
+        "home-hero",
+        "service-category-grid",
+        "care-setting-summary",
+        "homepage-closing-cta"
+      ],
+      "customCodeNeeded": false,
+      "implementationGate": "homepage title and design transplant must be approved before WordPress write",
+      "assignedPageCount": 1,
+      "assignedPages": [
+        "/"
+      ]
+    },
+    {
+      "id": "services-hub",
+      "sourceCategory": "service primary hub",
+      "title": "Services Hub Template",
+      "targetTemplateFile": "templates/services-hub.html",
+      "wordpressTemplateType": "custom-page-template",
+      "themeJsonCustomTemplate": {
+        "name": "services-hub",
+        "title": "Services Hub",
+        "postTypes": [
+          "page"
+        ]
+      },
+      "fallbackOrder": [
+        "templates/services-hub.html",
+        "templates/page.html",
+        "templates/index.html"
+      ],
+      "templateParts": [
+        "parts/header.html",
+        "parts/footer.html"
+      ],
+      "coreBlocks": [
+        "core/template-part",
+        "core/post-title",
+        "core/post-content",
+        "core/group",
+        "core/heading",
+        "core/columns",
+        "core/buttons"
+      ],
+      "plannedPatterns": [
+        "services-hub-intro",
+        "broad-service-grid",
+        "support-pathways",
+        "services-hub-cta"
+      ],
+      "customCodeNeeded": false,
+      "implementationGate": "separate from home and service detail templates; approved by user as carried forward",
+      "assignedPageCount": 1,
+      "assignedPages": [
+        "/services/"
+      ]
+    },
+    {
+      "id": "service",
+      "sourceCategory": "service",
+      "title": "Core Service Page Template",
+      "targetTemplateFile": "templates/service-page.html",
+      "wordpressTemplateType": "custom-page-template",
+      "themeJsonCustomTemplate": {
+        "name": "service-page",
+        "title": "Core Service Page",
+        "postTypes": [
+          "page"
+        ]
+      },
+      "fallbackOrder": [
+        "templates/service-page.html",
+        "templates/page.html",
+        "templates/index.html"
+      ],
+      "templateParts": [
+        "parts/header.html",
+        "parts/footer.html"
+      ],
+      "coreBlocks": [
+        "core/template-part",
+        "core/post-title",
+        "core/post-content",
+        "core/group",
+        "core/heading",
+        "core/paragraph",
+        "core/list",
+        "core/buttons"
+      ],
+      "plannedPatterns": [
+        "service-hero",
+        "who-it-helps",
+        "what-to-expect",
+        "related-specialties",
+        "service-faq",
+        "service-cta"
+      ],
+      "customCodeNeeded": false,
+      "implementationGate": "core service page family approved as correct; per-page copy/title review still required",
+      "assignedPageCount": 8,
+      "assignedPages": [
+        "/child-counseling/",
+        "/community-based-services/",
+        "/couples-counseling/",
+        "/court-ordered/",
+        "/family-therapy/",
+        "/group-therapy/",
+        "/individual-counseling/",
+        "/trauma-therapy/"
+      ]
+    },
+    {
+      "id": "specialties-hub",
+      "sourceCategory": "specialties hub",
+      "title": "Specialties Hub Template",
+      "targetTemplateFile": "templates/specialties-hub.html",
+      "wordpressTemplateType": "custom-page-template",
+      "themeJsonCustomTemplate": {
+        "name": "specialties-hub",
+        "title": "Specialties Hub",
+        "postTypes": [
+          "page"
+        ]
+      },
+      "fallbackOrder": [
+        "templates/specialties-hub.html",
+        "templates/page.html",
+        "templates/index.html"
+      ],
+      "templateParts": [
+        "parts/header.html",
+        "parts/footer.html"
+      ],
+      "coreBlocks": [
+        "core/template-part",
+        "core/post-title",
+        "core/post-content",
+        "core/group",
+        "core/heading",
+        "core/columns",
+        "core/buttons"
+      ],
+      "plannedPatterns": [
+        "specialties-hub-intro",
+        "specialty-grid",
+        "concern-audience-crosslinks",
+        "specialties-cta"
+      ],
+      "customCodeNeeded": false,
+      "implementationGate": "hub layout must be reviewed before WordPress write",
+      "assignedPageCount": 1,
+      "assignedPages": [
+        "/specialties/"
+      ]
+    },
+    {
+      "id": "specialty",
+      "sourceCategory": "specialty",
+      "title": "Specialty Page Template",
+      "targetTemplateFile": "templates/specialty-page.html",
+      "wordpressTemplateType": "custom-page-template",
+      "themeJsonCustomTemplate": {
+        "name": "specialty-page",
+        "title": "Specialty Page",
+        "postTypes": [
+          "page"
+        ]
+      },
+      "fallbackOrder": [
+        "templates/specialty-page.html",
+        "templates/page.html",
+        "templates/index.html"
+      ],
+      "templateParts": [
+        "parts/header.html",
+        "parts/footer.html"
+      ],
+      "coreBlocks": [
+        "core/template-part",
+        "core/post-title",
+        "core/post-content",
+        "core/group",
+        "core/heading",
+        "core/paragraph",
+        "core/list",
+        "core/buttons"
+      ],
+      "plannedPatterns": [
+        "specialty-hero",
+        "practical-examples",
+        "care-fit",
+        "related-services",
+        "visible-faq-if-present",
+        "specialty-cta"
+      ],
+      "customCodeNeeded": false,
+      "implementationGate": "design transplant must be reviewed one subtype at a time",
+      "assignedPageCount": 15,
+      "assignedPages": [
+        "/adolescent-counseling/",
+        "/adult-counseling/",
+        "/anxiety-depression-therapy/",
+        "/attachment-therapy/",
+        "/case-management/",
+        "/child-behavioral-intervention/",
+        "/co-parenting/",
+        "/community-support/",
+        "/couples-conflict-resolution/",
+        "/emdr-therapy/",
+        "/family-reunification/",
+        "/parenting-support/",
+        "/play-therapy/",
+        "/relationship-counseling/",
+        "/therapy-in-your-home/"
+      ]
+    },
+    {
+      "id": "location-access",
+      "sourceCategory": "location-access",
+      "title": "Location and Access Template",
+      "targetTemplateFile": "templates/location-access-page.html",
+      "wordpressTemplateType": "custom-page-template",
+      "themeJsonCustomTemplate": {
+        "name": "location-access-page",
+        "title": "Location and Access Page",
+        "postTypes": [
+          "page"
+        ]
+      },
+      "fallbackOrder": [
+        "templates/location-access-page.html",
+        "templates/page.html",
+        "templates/index.html"
+      ],
+      "templateParts": [
+        "parts/header.html",
+        "parts/footer.html"
+      ],
+      "coreBlocks": [
+        "core/template-part",
+        "core/post-title",
+        "core/post-content",
+        "core/group",
+        "core/heading",
+        "core/paragraph",
+        "core/list",
+        "core/buttons"
+      ],
+      "plannedPatterns": [
+        "location-access-hero",
+        "setting-facts",
+        "coverage-notes",
+        "related-services",
+        "location-cta"
+      ],
+      "customCodeNeeded": false,
+      "implementationGate": "avoid doorway-page patterns; local claims require review before publishing",
+      "assignedPageCount": 10,
+      "assignedPages": [
+        "/bullitt-county-ky/",
+        "/jefferson-county-ky/",
+        "/locations/",
+        "/locations/community/",
+        "/locations/in-home/",
+        "/locations/in-person/",
+        "/locations/online/",
+        "/locations/school/",
+        "/louisville-ky/",
+        "/oldham-county-ky/"
+      ]
+    },
+    {
+      "id": "article-hub",
+      "sourceCategory": "article hub",
+      "title": "Article Hub Template",
+      "targetTemplateFile": "templates/article-hub.html",
+      "wordpressTemplateType": "custom-page-template",
+      "themeJsonCustomTemplate": {
+        "name": "article-hub",
+        "title": "Article Hub",
+        "postTypes": [
+          "page"
+        ]
+      },
+      "fallbackOrder": [
+        "templates/article-hub.html",
+        "templates/page.html",
+        "templates/index.html"
+      ],
+      "templateParts": [
+        "parts/header.html",
+        "parts/footer.html"
+      ],
+      "coreBlocks": [
+        "core/template-part",
+        "core/post-title",
+        "core/post-content",
+        "core/query",
+        "core/post-template",
+        "core/post-title",
+        "core/post-excerpt"
+      ],
+      "plannedPatterns": [
+        "article-hub-intro",
+        "article-listing-query",
+        "topic-links"
+      ],
+      "customCodeNeeded": false,
+      "implementationGate": "requires decision whether articles remain pages or move to posts",
+      "assignedPageCount": 1,
+      "assignedPages": [
+        "/articles/"
+      ]
+    },
+    {
+      "id": "article",
+      "sourceCategory": "article",
+      "title": "Article Detail Template",
+      "targetTemplateFile": "templates/article-page.html",
+      "wordpressTemplateType": "custom-page-template now; single.html if articles become posts",
+      "themeJsonCustomTemplate": {
+        "name": "article-page",
+        "title": "Article Page",
+        "postTypes": [
+          "page"
+        ]
+      },
+      "fallbackOrder": [
+        "templates/article-page.html",
+        "templates/page.html",
+        "templates/single.html",
+        "templates/index.html"
+      ],
+      "templateParts": [
+        "parts/header.html",
+        "parts/footer.html"
+      ],
+      "coreBlocks": [
+        "core/template-part",
+        "core/post-title",
+        "core/post-content",
+        "core/group",
+        "core/paragraph",
+        "core/list",
+        "core/table",
+        "core/buttons"
+      ],
+      "plannedPatterns": [
+        "article-header",
+        "article-body",
+        "comparison-table-if-needed",
+        "article-related-links",
+        "article-cta"
+      ],
+      "customCodeNeeded": false,
+      "implementationGate": "requires decision whether article routes stay pages or become posts",
+      "assignedPageCount": 5,
+      "assignedPages": [
+        "/articles/family-therapy-vs-individual-therapy/",
+        "/articles/guide-to-individual-therapy/",
+        "/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/",
+        "/articles/top-5-signs-its-time-to-seek-therapy/",
+        "/articles/what-to-expect-when-starting-therapy/"
+      ]
+    },
+    {
+      "id": "faq-hub",
+      "sourceCategory": "faq hub",
+      "title": "FAQ Hub Template",
+      "targetTemplateFile": "templates/faq-hub.html",
+      "wordpressTemplateType": "custom-page-template",
+      "themeJsonCustomTemplate": {
+        "name": "faq-hub",
+        "title": "FAQ Hub",
+        "postTypes": [
+          "page"
+        ]
+      },
+      "fallbackOrder": [
+        "templates/faq-hub.html",
+        "templates/page.html",
+        "templates/index.html"
+      ],
+      "templateParts": [
+        "parts/header.html",
+        "parts/footer.html"
+      ],
+      "coreBlocks": [
+        "core/template-part",
+        "core/post-title",
+        "core/post-content",
+        "core/group",
+        "core/details",
+        "core/heading",
+        "core/buttons"
+      ],
+      "plannedPatterns": [
+        "faq-hub-intro",
+        "faq-category-links",
+        "visible-faq-sections",
+        "faq-cta"
+      ],
+      "customCodeNeeded": false,
+      "implementationGate": "FAQ schema only after visible FAQ content is confirmed",
+      "assignedPageCount": 1,
+      "assignedPages": [
+        "/faq/"
+      ]
+    },
+    {
+      "id": "faq",
+      "sourceCategory": "faq",
+      "title": "FAQ Support Template",
+      "targetTemplateFile": "templates/faq-page.html",
+      "wordpressTemplateType": "custom-page-template",
+      "themeJsonCustomTemplate": {
+        "name": "faq-page",
+        "title": "FAQ Page",
+        "postTypes": [
+          "page"
+        ]
+      },
+      "fallbackOrder": [
+        "templates/faq-page.html",
+        "templates/page.html",
+        "templates/index.html"
+      ],
+      "templateParts": [
+        "parts/header.html",
+        "parts/footer.html"
+      ],
+      "coreBlocks": [
+        "core/template-part",
+        "core/post-title",
+        "core/post-content",
+        "core/group",
+        "core/details",
+        "core/buttons"
+      ],
+      "plannedPatterns": [
+        "faq-topic-header",
+        "visible-faq-list",
+        "related-faq-links",
+        "faq-topic-cta"
+      ],
+      "customCodeNeeded": false,
+      "implementationGate": "FAQ schema only after visible FAQ content is confirmed",
+      "assignedPageCount": 3,
+      "assignedPages": [
+        "/faq/about-lmhg/",
+        "/faq/cost/",
+        "/faq/our-approach/"
+      ]
+    },
+    {
+      "id": "trust",
+      "sourceCategory": "trust",
+      "title": "Trust and Support Template",
+      "targetTemplateFile": "templates/trust-page.html",
+      "wordpressTemplateType": "custom-page-template",
+      "themeJsonCustomTemplate": {
+        "name": "trust-page",
+        "title": "Trust and Support Page",
+        "postTypes": [
+          "page"
+        ]
+      },
+      "fallbackOrder": [
+        "templates/trust-page.html",
+        "templates/page.html",
+        "templates/index.html"
+      ],
+      "templateParts": [
+        "parts/header.html",
+        "parts/footer.html"
+      ],
+      "coreBlocks": [
+        "core/template-part",
+        "core/post-title",
+        "core/post-content",
+        "core/group",
+        "core/heading",
+        "core/paragraph",
+        "core/buttons"
+      ],
+      "plannedPatterns": [
+        "trust-hero",
+        "trust-proof-points",
+        "supporting-details",
+        "trust-cta"
+      ],
+      "customCodeNeeded": false,
+      "implementationGate": "contact/team/careers/reviews may need pattern variants after user review",
+      "assignedPageCount": 5,
+      "assignedPages": [
+        "/careers/",
+        "/contact-us/",
+        "/insurance/",
+        "/meet-the-team/",
+        "/reviews/"
+      ]
+    },
+    {
+      "id": "legal-utility",
+      "sourceCategory": "legal-utility",
+      "title": "Legal and Utility Template",
+      "targetTemplateFile": "templates/legal-utility-page.html",
+      "wordpressTemplateType": "custom-page-template",
+      "themeJsonCustomTemplate": {
+        "name": "legal-utility-page",
+        "title": "Legal and Utility Page",
+        "postTypes": [
+          "page"
+        ]
+      },
+      "fallbackOrder": [
+        "templates/legal-utility-page.html",
+        "templates/page.html",
+        "templates/index.html"
+      ],
+      "templateParts": [
+        "parts/header.html",
+        "parts/footer.html"
+      ],
+      "coreBlocks": [
+        "core/template-part",
+        "core/post-title",
+        "core/post-content",
+        "core/group",
+        "core/heading",
+        "core/list"
+      ],
+      "plannedPatterns": [
+        "plain-legal-header",
+        "longform-policy-content"
+      ],
+      "customCodeNeeded": false,
+      "implementationGate": "plain content import only after user approves source text and legal/compliance handling",
+      "assignedPageCount": 3,
+      "assignedPages": [
+        "/compliance/",
+        "/privacy-policy/",
+        "/terms-of-use/"
+      ]
+    },
+    {
+      "id": "not-found",
+      "sourceCategory": "not-found",
+      "title": "404 Template",
+      "targetTemplateFile": "templates/404.html",
+      "wordpressTemplateType": "404",
+      "themeJsonCustomTemplate": null,
+      "fallbackOrder": [
+        "templates/404.html",
+        "templates/index.html"
+      ],
+      "templateParts": [
+        "parts/header.html",
+        "parts/footer.html"
+      ],
+      "coreBlocks": [
+        "core/template-part",
+        "core/group",
+        "core/heading",
+        "core/paragraph",
+        "core/search",
+        "core/buttons"
+      ],
+      "plannedPatterns": [
+        "not-found-message",
+        "helpful-links",
+        "search"
+      ],
+      "customCodeNeeded": false,
+      "implementationGate": "planned; old /not-found/ page content should not be treated as canonical until reviewed",
+      "assignedPageCount": 1,
+      "assignedPages": [
+        "/not-found/"
+      ]
+    },
+    {
+      "id": "needs-classification",
+      "sourceCategory": "needs-classification",
+      "title": "Hold Template for Unclassified Pages",
+      "targetTemplateFile": "templates/page.html",
+      "wordpressTemplateType": "fallback-page",
+      "themeJsonCustomTemplate": null,
+      "fallbackOrder": [
+        "templates/page.html",
+        "templates/index.html"
+      ],
+      "templateParts": [
+        "parts/header.html",
+        "parts/footer.html"
+      ],
+      "coreBlocks": [
+        "core/template-part",
+        "core/post-title",
+        "core/post-content"
+      ],
+      "plannedPatterns": [],
+      "customCodeNeeded": false,
+      "implementationGate": "do not implement sample/unclassified page unless user approves keeping it",
+      "assignedPageCount": 1,
+      "assignedPages": [
+        "/sample-page/"
+      ]
+    }
+  ],
+  "themeJsonRegistrationPlan": {
+    "customTemplates": [
+      {
+        "name": "services-hub",
+        "title": "Services Hub",
+        "postTypes": [
+          "page"
+        ]
+      },
+      {
+        "name": "service-page",
+        "title": "Core Service Page",
+        "postTypes": [
+          "page"
+        ]
+      },
+      {
+        "name": "specialties-hub",
+        "title": "Specialties Hub",
+        "postTypes": [
+          "page"
+        ]
+      },
+      {
+        "name": "specialty-page",
+        "title": "Specialty Page",
+        "postTypes": [
+          "page"
+        ]
+      },
+      {
+        "name": "location-access-page",
+        "title": "Location and Access Page",
+        "postTypes": [
+          "page"
+        ]
+      },
+      {
+        "name": "article-hub",
+        "title": "Article Hub",
+        "postTypes": [
+          "page"
+        ]
+      },
+      {
+        "name": "article-page",
+        "title": "Article Page",
+        "postTypes": [
+          "page"
+        ]
+      },
+      {
+        "name": "faq-hub",
+        "title": "FAQ Hub",
+        "postTypes": [
+          "page"
+        ]
+      },
+      {
+        "name": "faq-page",
+        "title": "FAQ Page",
+        "postTypes": [
+          "page"
+        ]
+      },
+      {
+        "name": "trust-page",
+        "title": "Trust and Support Page",
+        "postTypes": [
+          "page"
+        ]
+      },
+      {
+        "name": "legal-utility-page",
+        "title": "Legal and Utility Page",
+        "postTypes": [
+          "page"
+        ]
+      }
+    ],
+    "templateParts": [
+      {
+        "name": "header",
+        "title": "Consistent Site Header",
+        "area": "header"
+      },
+      {
+        "name": "footer",
+        "title": "Consistent Site Footer",
+        "area": "footer"
+      }
+    ]
+  },
+  "pageAssignments": [
+    {
+      "path": "/",
+      "sourceWordPressId": 4,
+      "sourceTitle": "Mental Health Clinic in Louisville, KY",
+      "templateFamily": "home",
+      "pageType": "Homepage",
+      "assignedTemplateId": "home",
+      "assignedTemplateFile": "templates/front-page.html",
+      "reviewStatus": "needs-homepage-title-decision",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/adolescent-counseling/",
+      "sourceWordPressId": 6,
+      "sourceTitle": "Teen Therapy in Louisville, KY",
+      "templateFamily": "specialty",
+      "pageType": "Audience/concern page",
+      "assignedTemplateId": "specialty",
+      "assignedTemplateFile": "templates/specialty-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "specialty-child",
+      "serviceMenuDepth": 2,
+      "serviceMenuParent": "/child-counseling/",
+      "serviceMenuLabel": "Adolescent Counseling",
+      "serviceMenuSubmittedLabel": "Adolescent Counseling",
+      "serviceMenuChildren": [],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/adult-counseling/",
+      "sourceWordPressId": 7,
+      "sourceTitle": "Adult Counseling in Louisville, KY",
+      "templateFamily": "specialty",
+      "pageType": "Service",
+      "assignedTemplateId": "specialty",
+      "assignedTemplateFile": "templates/specialty-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "specialty-child",
+      "serviceMenuDepth": 2,
+      "serviceMenuParent": "/individual-counseling/",
+      "serviceMenuLabel": "Adult Counseling",
+      "serviceMenuSubmittedLabel": "Adult Counseling",
+      "serviceMenuChildren": [],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/anxiety-depression-therapy/",
+      "sourceWordPressId": 8,
+      "sourceTitle": "Anxiety and Depression Therapy in Louisville, KY",
+      "templateFamily": "specialty",
+      "pageType": "Concern page",
+      "assignedTemplateId": "specialty",
+      "assignedTemplateFile": "templates/specialty-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "specialty-child",
+      "serviceMenuDepth": 2,
+      "serviceMenuParent": "/individual-counseling/",
+      "serviceMenuLabel": "Anxiety and Depression Therapy",
+      "serviceMenuSubmittedLabel": "Anxiety and Depression Therapy",
+      "serviceMenuChildren": [],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/articles/",
+      "sourceWordPressId": 9,
+      "sourceTitle": "Mental Health Articles from Louisville Mental Health Group",
+      "templateFamily": "article",
+      "pageType": "Article hub",
+      "assignedTemplateId": "article-hub",
+      "assignedTemplateFile": "templates/article-hub.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/articles/family-therapy-vs-individual-therapy/",
+      "sourceWordPressId": 10,
+      "sourceTitle": "Family Therapy vs. Individual Therapy | Which Fits?",
+      "templateFamily": "article",
+      "pageType": "Article",
+      "assignedTemplateId": "article",
+      "assignedTemplateFile": "templates/article-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/articles/guide-to-individual-therapy/",
+      "sourceWordPressId": 11,
+      "sourceTitle": "Guide to Individual Therapy | What to Expect",
+      "templateFamily": "article",
+      "pageType": "Article",
+      "assignedTemplateId": "article",
+      "assignedTemplateFile": "templates/article-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/",
+      "sourceWordPressId": 12,
+      "sourceTitle": "How to Talk to Someone About Therapy",
+      "templateFamily": "article",
+      "pageType": "Article",
+      "assignedTemplateId": "article",
+      "assignedTemplateFile": "templates/article-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/articles/top-5-signs-its-time-to-seek-therapy/",
+      "sourceWordPressId": 13,
+      "sourceTitle": "When to Seek Therapy | 5 Signs Support May Help",
+      "templateFamily": "article",
+      "pageType": "Article",
+      "assignedTemplateId": "article",
+      "assignedTemplateFile": "templates/article-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/articles/what-to-expect-when-starting-therapy/",
+      "sourceWordPressId": 14,
+      "sourceTitle": "What to Expect When Starting Therapy",
+      "templateFamily": "article",
+      "pageType": "Article",
+      "assignedTemplateId": "article",
+      "assignedTemplateFile": "templates/article-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/attachment-therapy/",
+      "sourceWordPressId": 15,
+      "sourceTitle": "Attachment Therapy in Louisville, KY",
+      "templateFamily": "specialty",
+      "pageType": "Service",
+      "assignedTemplateId": "specialty",
+      "assignedTemplateFile": "templates/specialty-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "specialty-child",
+      "serviceMenuDepth": 2,
+      "serviceMenuParent": "/family-therapy/",
+      "serviceMenuLabel": "Attachment Therapy",
+      "serviceMenuSubmittedLabel": "Attachment Therapy",
+      "serviceMenuChildren": [],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/bullitt-county-ky/",
+      "sourceWordPressId": 16,
+      "sourceTitle": "Mental Health Services in Bullitt County, KY",
+      "templateFamily": "location-access",
+      "pageType": "Service area",
+      "assignedTemplateId": "location-access",
+      "assignedTemplateFile": "templates/location-access-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/careers/",
+      "sourceWordPressId": 17,
+      "sourceTitle": "Mental Health Careers in Louisville, KY",
+      "templateFamily": "trust",
+      "pageType": "Careers page",
+      "assignedTemplateId": "trust",
+      "assignedTemplateFile": "templates/trust-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/case-management/",
+      "sourceWordPressId": 18,
+      "sourceTitle": "Targeted Case Management in Louisville, KY",
+      "templateFamily": "specialty",
+      "pageType": "Community-service page",
+      "assignedTemplateId": "specialty",
+      "assignedTemplateFile": "templates/specialty-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "specialty-child",
+      "serviceMenuDepth": 2,
+      "serviceMenuParent": "/community-based-services/",
+      "serviceMenuLabel": "Case Management",
+      "serviceMenuSubmittedLabel": "Case Management",
+      "serviceMenuChildren": [],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/child-behavioral-intervention/",
+      "sourceWordPressId": 19,
+      "sourceTitle": "Child Behavioral Therapy in Louisville, KY",
+      "templateFamily": "specialty",
+      "pageType": "Service",
+      "assignedTemplateId": "specialty",
+      "assignedTemplateFile": "templates/specialty-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "specialty-child",
+      "serviceMenuDepth": 2,
+      "serviceMenuParent": "/child-counseling/",
+      "serviceMenuLabel": "Child Behavioral Intervention",
+      "serviceMenuSubmittedLabel": "Child Behavioral Intervention",
+      "serviceMenuChildren": [],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/child-counseling/",
+      "sourceWordPressId": 20,
+      "sourceTitle": "Child Therapy in Louisville, KY",
+      "originalSourceTitle": "Child Counseling in Louisville, KY",
+      "titleCorrection": "User confirmed visible title should be renamed from Child Counseling to Child Therapy.",
+      "templateFamily": "service",
+      "pageType": "Broad service category",
+      "assignedTemplateId": "service",
+      "assignedTemplateFile": "templates/service-page.html",
+      "reviewStatus": "reviewed-with-revision",
+      "metadataStatus": "revise-title",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "core-service",
+      "serviceMenuDepth": 1,
+      "serviceMenuParent": null,
+      "serviceMenuLabel": "Child Therapy",
+      "serviceMenuSubmittedLabel": "Child Counseling",
+      "serviceMenuChildren": [
+        "/adolescent-counseling/",
+        "/play-therapy/",
+        "/child-behavioral-intervention/"
+      ],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/co-parenting/",
+      "sourceWordPressId": 21,
+      "sourceTitle": "Co-Parenting Services in Louisville, KY",
+      "templateFamily": "specialty",
+      "pageType": "Court-service page",
+      "assignedTemplateId": "specialty",
+      "assignedTemplateFile": "templates/specialty-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "specialty-child",
+      "serviceMenuDepth": 2,
+      "serviceMenuParent": "/court-ordered/",
+      "serviceMenuLabel": "Co-Parenting",
+      "serviceMenuSubmittedLabel": "Co-Parenting",
+      "serviceMenuChildren": [],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/community-based-services/",
+      "sourceWordPressId": 22,
+      "sourceTitle": "Community-Based Mental Health Services in Louisville, KY",
+      "templateFamily": "service",
+      "pageType": "Broad service category",
+      "assignedTemplateId": "service",
+      "assignedTemplateFile": "templates/service-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "core-service",
+      "serviceMenuDepth": 1,
+      "serviceMenuParent": null,
+      "serviceMenuLabel": "Community Based Services",
+      "serviceMenuSubmittedLabel": "Community Based Services",
+      "serviceMenuChildren": [
+        "/case-management/",
+        "/community-support/"
+      ],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/community-support/",
+      "sourceWordPressId": 23,
+      "sourceTitle": "Community Support Services in Louisville, KY",
+      "templateFamily": "specialty",
+      "pageType": "Community-service page",
+      "assignedTemplateId": "specialty",
+      "assignedTemplateFile": "templates/specialty-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "specialty-child",
+      "serviceMenuDepth": 2,
+      "serviceMenuParent": "/community-based-services/",
+      "serviceMenuLabel": "Community Support",
+      "serviceMenuSubmittedLabel": "Community Support",
+      "serviceMenuChildren": [],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/compliance/",
+      "sourceWordPressId": 24,
+      "sourceTitle": "Mental Health Compliance in Louisville, KY",
+      "templateFamily": "legal-utility",
+      "pageType": "Utility/compliance",
+      "assignedTemplateId": "legal-utility",
+      "assignedTemplateFile": "templates/legal-utility-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/contact-us/",
+      "sourceWordPressId": 25,
+      "sourceTitle": "Contact Louisville Mental Health Group",
+      "templateFamily": "trust",
+      "pageType": "Contact page",
+      "assignedTemplateId": "trust",
+      "assignedTemplateFile": "templates/trust-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/couples-conflict-resolution/",
+      "sourceWordPressId": 26,
+      "sourceTitle": "Couples Conflict Resolution in Louisville, KY",
+      "templateFamily": "specialty",
+      "pageType": "Concern page",
+      "assignedTemplateId": "specialty",
+      "assignedTemplateFile": "templates/specialty-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "specialty-child",
+      "serviceMenuDepth": 2,
+      "serviceMenuParent": "/couples-counseling/",
+      "serviceMenuLabel": "Couples Conflict Resolution",
+      "serviceMenuSubmittedLabel": "Couples Conflict Resolution",
+      "serviceMenuChildren": [],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/couples-counseling/",
+      "sourceWordPressId": 27,
+      "sourceTitle": "Couples Counseling in Louisville, KY",
+      "templateFamily": "service",
+      "pageType": "Broad service category",
+      "assignedTemplateId": "service",
+      "assignedTemplateFile": "templates/service-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "core-service",
+      "serviceMenuDepth": 1,
+      "serviceMenuParent": null,
+      "serviceMenuLabel": "Couples Counseling",
+      "serviceMenuSubmittedLabel": "Couples Counseling",
+      "serviceMenuChildren": [
+        "/couples-conflict-resolution/",
+        "/relationship-counseling/"
+      ],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/court-ordered/",
+      "sourceWordPressId": 28,
+      "sourceTitle": "Court-Ordered Services in Louisville, KY",
+      "templateFamily": "service",
+      "pageType": "Broad service category",
+      "assignedTemplateId": "service",
+      "assignedTemplateFile": "templates/service-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "core-service",
+      "serviceMenuDepth": 1,
+      "serviceMenuParent": null,
+      "serviceMenuLabel": "Court Ordered Services",
+      "serviceMenuSubmittedLabel": "Court Ordered Services",
+      "serviceMenuChildren": [
+        "/co-parenting/",
+        "/family-reunification/"
+      ],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/emdr-therapy/",
+      "sourceWordPressId": 29,
+      "sourceTitle": "EMDR Therapy in Louisville, KY",
+      "templateFamily": "specialty",
+      "pageType": "Specialty/modality",
+      "assignedTemplateId": "specialty",
+      "assignedTemplateFile": "templates/specialty-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "specialty-child",
+      "serviceMenuDepth": 2,
+      "serviceMenuParent": "/trauma-therapy/",
+      "serviceMenuLabel": "EMDR Therapy",
+      "serviceMenuSubmittedLabel": "EMDR Therapy",
+      "serviceMenuChildren": [],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/family-reunification/",
+      "sourceWordPressId": 30,
+      "sourceTitle": "Family Reunification Services in Louisville, KY",
+      "templateFamily": "specialty",
+      "pageType": "Court-service page",
+      "assignedTemplateId": "specialty",
+      "assignedTemplateFile": "templates/specialty-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "specialty-child",
+      "serviceMenuDepth": 2,
+      "serviceMenuParent": "/court-ordered/",
+      "serviceMenuLabel": "Family Reunification",
+      "serviceMenuSubmittedLabel": "Family Reunification",
+      "serviceMenuChildren": [],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/family-therapy/",
+      "sourceWordPressId": 31,
+      "sourceTitle": "Family Therapy in Louisville, KY",
+      "templateFamily": "service",
+      "pageType": "Broad service category",
+      "assignedTemplateId": "service",
+      "assignedTemplateFile": "templates/service-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "core-service",
+      "serviceMenuDepth": 1,
+      "serviceMenuParent": null,
+      "serviceMenuLabel": "Family Therapy",
+      "serviceMenuSubmittedLabel": "Family Therapy",
+      "serviceMenuChildren": [
+        "/attachment-therapy/",
+        "/parenting-support/"
+      ],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/faq/",
+      "sourceWordPressId": 32,
+      "sourceTitle": "Mental Health Services FAQ in Louisville, KY",
+      "templateFamily": "faq",
+      "pageType": "FAQ hub",
+      "assignedTemplateId": "faq-hub",
+      "assignedTemplateFile": "templates/faq-hub.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/faq/about-lmhg/",
+      "sourceWordPressId": 33,
+      "sourceTitle": "About Louisville Mental Health Group | Therapy and Support",
+      "templateFamily": "faq",
+      "pageType": "FAQ/support",
+      "assignedTemplateId": "faq",
+      "assignedTemplateFile": "templates/faq-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/faq/cost/",
+      "sourceWordPressId": 34,
+      "sourceTitle": "Therapy Cost in Louisville, KY",
+      "templateFamily": "faq",
+      "pageType": "FAQ/support",
+      "assignedTemplateId": "faq",
+      "assignedTemplateFile": "templates/faq-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/faq/our-approach/",
+      "sourceWordPressId": 35,
+      "sourceTitle": "Louisville Mental Health Group Approach",
+      "templateFamily": "faq",
+      "pageType": "FAQ/support",
+      "assignedTemplateId": "faq",
+      "assignedTemplateFile": "templates/faq-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/group-therapy/",
+      "sourceWordPressId": 36,
+      "sourceTitle": "Group Therapy in Louisville, KY",
+      "templateFamily": "service",
+      "pageType": "Broad service category",
+      "assignedTemplateId": "service",
+      "assignedTemplateFile": "templates/service-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "core-service",
+      "serviceMenuDepth": 1,
+      "serviceMenuParent": null,
+      "serviceMenuLabel": "Group Therapy",
+      "serviceMenuSubmittedLabel": "Group Therapy",
+      "serviceMenuChildren": [],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/individual-counseling/",
+      "sourceWordPressId": 37,
+      "sourceTitle": "Individual Therapy in Louisville, KY",
+      "templateFamily": "service",
+      "pageType": "Broad service category",
+      "assignedTemplateId": "service",
+      "assignedTemplateFile": "templates/service-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "core-service",
+      "serviceMenuDepth": 1,
+      "serviceMenuParent": null,
+      "serviceMenuLabel": "Individual Counseling",
+      "serviceMenuSubmittedLabel": "Individual Counseling",
+      "serviceMenuChildren": [
+        "/adult-counseling/",
+        "/anxiety-depression-therapy/"
+      ],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/insurance/",
+      "sourceWordPressId": 38,
+      "sourceTitle": "Medicaid Mental Health Services in Louisville, KY",
+      "templateFamily": "trust",
+      "pageType": "Access/support page",
+      "assignedTemplateId": "trust",
+      "assignedTemplateFile": "templates/trust-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/jefferson-county-ky/",
+      "sourceWordPressId": 39,
+      "sourceTitle": "Mental Health Services in Jefferson County, KY",
+      "templateFamily": "location-access",
+      "pageType": "Service area",
+      "assignedTemplateId": "location-access",
+      "assignedTemplateFile": "templates/location-access-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/locations/",
+      "sourceWordPressId": 40,
+      "sourceTitle": "Mental Health Services Near Louisville, KY",
+      "templateFamily": "location-access",
+      "pageType": "Locations hub",
+      "assignedTemplateId": "location-access",
+      "assignedTemplateFile": "templates/location-access-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/locations/community/",
+      "sourceWordPressId": 41,
+      "sourceTitle": "Community-Based Mental Health Care in Louisville, KY",
+      "templateFamily": "location-access",
+      "pageType": "Care setting",
+      "assignedTemplateId": "location-access",
+      "assignedTemplateFile": "templates/location-access-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/locations/in-home/",
+      "sourceWordPressId": 42,
+      "sourceTitle": "In-Home Mental Health Services in Louisville, KY",
+      "templateFamily": "location-access",
+      "pageType": "Care setting",
+      "assignedTemplateId": "location-access",
+      "assignedTemplateFile": "templates/location-access-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/locations/in-person/",
+      "sourceWordPressId": 43,
+      "sourceTitle": "In-Person Counseling in Louisville, KY",
+      "templateFamily": "location-access",
+      "pageType": "Care setting",
+      "assignedTemplateId": "location-access",
+      "assignedTemplateFile": "templates/location-access-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/locations/online/",
+      "sourceWordPressId": 44,
+      "sourceTitle": "Online Therapy in Kentucky",
+      "templateFamily": "location-access",
+      "pageType": "Care setting",
+      "assignedTemplateId": "location-access",
+      "assignedTemplateFile": "templates/location-access-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/locations/school/",
+      "sourceWordPressId": 45,
+      "sourceTitle": "School-Based Mental Health Support in Louisville, KY",
+      "templateFamily": "location-access",
+      "pageType": "Care setting",
+      "assignedTemplateId": "location-access",
+      "assignedTemplateFile": "templates/location-access-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/louisville-ky/",
+      "sourceWordPressId": 46,
+      "sourceTitle": "Louisville Mental Health Services and Counseling",
+      "templateFamily": "location-access",
+      "pageType": "Service area",
+      "assignedTemplateId": "location-access",
+      "assignedTemplateFile": "templates/location-access-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/meet-the-team/",
+      "sourceWordPressId": 47,
+      "sourceTitle": "Mental Health Providers in Louisville, KY",
+      "templateFamily": "trust",
+      "pageType": "Team hub",
+      "assignedTemplateId": "trust",
+      "assignedTemplateFile": "templates/trust-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/not-found/",
+      "sourceWordPressId": 5,
+      "sourceTitle": "Page Not Found",
+      "templateFamily": "not-found",
+      "pageType": "Not Found",
+      "assignedTemplateId": "not-found",
+      "assignedTemplateFile": "templates/404.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "missing-from-lmhg-metadata",
+      "pageTypeSchemaStatus": "needs-classification",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/oldham-county-ky/",
+      "sourceWordPressId": 48,
+      "sourceTitle": "Mental Health Services in Oldham County, KY",
+      "templateFamily": "location-access",
+      "pageType": "Service area",
+      "assignedTemplateId": "location-access",
+      "assignedTemplateFile": "templates/location-access-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/parenting-support/",
+      "sourceWordPressId": 49,
+      "sourceTitle": "Parenting Support in Louisville, KY",
+      "templateFamily": "specialty",
+      "pageType": "Concern page",
+      "assignedTemplateId": "specialty",
+      "assignedTemplateFile": "templates/specialty-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "specialty-child",
+      "serviceMenuDepth": 2,
+      "serviceMenuParent": "/family-therapy/",
+      "serviceMenuLabel": "Parenting Support",
+      "serviceMenuSubmittedLabel": "Parenting Support",
+      "serviceMenuChildren": [],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/play-therapy/",
+      "sourceWordPressId": 50,
+      "sourceTitle": "Play Therapy in Louisville, KY",
+      "templateFamily": "specialty",
+      "pageType": "Service",
+      "assignedTemplateId": "specialty",
+      "assignedTemplateFile": "templates/specialty-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "specialty-child",
+      "serviceMenuDepth": 2,
+      "serviceMenuParent": "/child-counseling/",
+      "serviceMenuLabel": "Play Therapy",
+      "serviceMenuSubmittedLabel": "Play Therapy",
+      "serviceMenuChildren": [],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/privacy-policy/",
+      "sourceWordPressId": 3,
+      "sourceTitle": "Privacy Policy for Louisville Mental Health Group",
+      "templateFamily": "legal-utility",
+      "pageType": "Utility/legal",
+      "assignedTemplateId": "legal-utility",
+      "assignedTemplateFile": "templates/legal-utility-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/relationship-counseling/",
+      "sourceWordPressId": 52,
+      "sourceTitle": "Relationship Counseling in Louisville, KY",
+      "templateFamily": "specialty",
+      "pageType": "Service",
+      "assignedTemplateId": "specialty",
+      "assignedTemplateFile": "templates/specialty-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "specialty-child",
+      "serviceMenuDepth": 2,
+      "serviceMenuParent": "/couples-counseling/",
+      "serviceMenuLabel": "Relationship Counseling",
+      "serviceMenuSubmittedLabel": "Relationship Counseling",
+      "serviceMenuChildren": [],
+      "relationshipStatus": "user-confirmed-service-menu"
+    },
+    {
+      "path": "/reviews/",
+      "sourceWordPressId": 53,
+      "sourceTitle": "Louisville Mental Health Group Reviews | Client Feedback",
+      "templateFamily": "trust",
+      "pageType": "Trust page",
+      "assignedTemplateId": "trust",
+      "assignedTemplateFile": "templates/trust-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/sample-page/",
+      "sourceWordPressId": 2,
+      "sourceTitle": "Sample Page",
+      "templateFamily": "needs-classification",
+      "pageType": "Needs Classification",
+      "assignedTemplateId": "needs-classification",
+      "assignedTemplateFile": "templates/page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "missing-from-lmhg-metadata",
+      "pageTypeSchemaStatus": "needs-classification",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/services/",
+      "sourceWordPressId": 54,
+      "sourceTitle": "Mental Health Services in Louisville, KY",
+      "templateFamily": "service",
+      "pageType": "Primary hub",
+      "assignedTemplateId": "services-hub",
+      "assignedTemplateFile": "templates/services-hub.html",
+      "reviewStatus": "reviewed-confirmed-service-hub",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/specialties/",
+      "sourceWordPressId": 55,
+      "sourceTitle": "Mental Health Specialties in Louisville, KY",
+      "templateFamily": "specialty",
+      "pageType": "Specialties hub",
+      "assignedTemplateId": "specialties-hub",
+      "assignedTemplateFile": "templates/specialties-hub.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/terms-of-use/",
+      "sourceWordPressId": 56,
+      "sourceTitle": "Terms of Use for Louisville Mental Health Group",
+      "templateFamily": "legal-utility",
+      "pageType": "Utility/legal",
+      "assignedTemplateId": "legal-utility",
+      "assignedTemplateFile": "templates/legal-utility-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/therapy-in-your-home/",
+      "sourceWordPressId": 57,
+      "sourceTitle": "In-Home Therapy in Louisville, KY",
+      "templateFamily": "specialty",
+      "pageType": "Community/in-home service",
+      "assignedTemplateId": "specialty",
+      "assignedTemplateFile": "templates/specialty-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write"
+    },
+    {
+      "path": "/trauma-therapy/",
+      "sourceWordPressId": 58,
+      "sourceTitle": "Trauma Therapy in Louisville, KY",
+      "templateFamily": "service",
+      "pageType": "Broad service category",
+      "assignedTemplateId": "service",
+      "assignedTemplateFile": "templates/service-page.html",
+      "reviewStatus": "unreviewed",
+      "metadataStatus": "candidate-clean",
+      "pageTypeSchemaStatus": "candidate-mostly-clean",
+      "designStatus": "requires-user-design-transplant-decision",
+      "implementationStatus": "template-planned-no-wordpress-write",
+      "serviceMenuRole": "core-service",
+      "serviceMenuDepth": 1,
+      "serviceMenuParent": null,
+      "serviceMenuLabel": "Trauma Therapy",
+      "serviceMenuSubmittedLabel": "Trauma Therapy",
+      "serviceMenuChildren": [
+        "/emdr-therapy/"
+      ],
+      "relationshipStatus": "user-confirmed-service-menu"
+    }
+  ],
+  "openDecisions": [
+    {
+      "id": "homepage-title",
+      "question": "Confirm final homepage visible title: current source is Mental Health Clinic in Louisville, KY; services hub source is Mental Health Services in Louisville, KY."
+    },
+    {
+      "id": "article-content-model",
+      "question": "Decide whether article routes remain WordPress Pages with the article-page custom template or become Posts using single.html."
+    },
+    {
+      "id": "trust-page-variants",
+      "question": "Decide whether Contact, Team, Careers, Reviews, and Insurance use one trust template with different patterns or separate templates."
+    },
+    {
+      "id": "sample-page",
+      "question": "Decide whether /sample-page/ is discarded or assigned a real template category."
+    }
+  ],
+  "updatedAt": "2026-06-30T14:42:37.414Z",
+  "serviceNavigationPlan": {
+    "status": "planned-no-wordpress-writes",
+    "generatedAt": "2026-06-30T13:44:30.501Z",
+    "scope": "services nested menu only",
+    "files": [
+      ".wp-gutenberg-designer/navigation/services-nested-menu.json",
+      ".wp-gutenberg-designer/navigation/services-nested-menu.md"
+    ],
+    "implementationTarget": "parts/header.html Navigation block when approved",
+    "rootItem": {
+      "path": "/services/",
+      "menuLabel": "Services",
+      "sourceTitle": "Mental Health Services in Louisville, KY"
+    },
+    "coreServiceCount": 8,
+    "specialtyChildCount": 14
+  },
+  "sitewideNavigationPlan": {
+    "status": "planned-no-wordpress-writes",
+    "generatedAt": "2026-06-30T14:42:37.414Z",
+    "files": [
+      ".wp-gutenberg-designer/navigation/sitewide-navigation-plan.json",
+      ".wp-gutenberg-designer/navigation/sitewide-navigation-plan.md"
+    ],
+    "headerTarget": "parts/header.html",
+    "footerTarget": "parts/footer.html",
+    "breadcrumbsTarget": "Gutenberg-native patterns in page templates/content",
+    "cta": {
+      "label": "Reach Out",
+      "href": "https://intakeq.com/new/g91Z8x/bjxuno"
+    },
+    "topLevelHeaderCount": 7
+  }
+}

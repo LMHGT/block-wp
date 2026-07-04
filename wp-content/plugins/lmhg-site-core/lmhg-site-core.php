@@ -22,8 +22,13 @@ require_once __DIR__ . '/includes/importer.php';
 require_once __DIR__ . '/includes/editable-blocks.php';
 require_once __DIR__ . '/includes/redirects.php';
 require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/accessibility.php';
+require_once __DIR__ . '/includes/surface-controls.php';
 require_once __DIR__ . '/includes/rendering.php';
+require_once __DIR__ . '/includes/reviews.php';
 require_once __DIR__ . '/includes/taxonomies.php';
+require_once __DIR__ . '/includes/content-relationships.php';
+require_once __DIR__ . '/includes/page-class-design.php';
 
 add_filter( 'pre_option_home', 'lmhg_site_core_tailnet_url_for_serve' );
 add_filter( 'pre_option_siteurl', 'lmhg_site_core_tailnet_url_for_serve' );

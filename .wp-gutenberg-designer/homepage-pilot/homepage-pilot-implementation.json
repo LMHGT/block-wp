@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-06-30T16:32:04.062Z",
+  "liveUrl": "http://100.70.222.25:8093/",
+  "sourceText": "Public 8092 homepage inventory plus lmhg metadata row.",
+  "structure": [
+    "hero",
+    "how-to-start process panel",
+    "service category list",
+    "closing CTA"
+  ],
+  "assets": [
+    {
+      "filename": "individual-counseling-card-icon-transparent.webp",
+      "changed": true,
+      "bytes": 34206
+    },
+    {
+      "filename": "child-counseling-card-icon-transparent.webp",
+      "changed": true,
+      "bytes": 30626
+    },
+    {
+      "filename": "family-therapy-card-icon-transparent.webp",
+      "changed": true,
+      "bytes": 26276
+    },
+    {
+      "filename": "couples-counseling-card-icon-transparent.webp",
+      "changed": true,
+      "bytes": 23908
+    },
+    {
+      "filename": "court-ordered-card-icon-transparent.webp",
+      "changed": true,
+      "bytes": 29844
+    },
+    {
+      "filename": "community-based-services-card-icon-transparent.webp",
+      "changed": true,
+      "bytes": 22568
+    },
+    {
+      "filename": "group-therapy-card-icon-transparent.webp",
+      "changed": true,
+      "bytes": 29972
+    },
+    {
+      "filename": "trauma-therapy-card-icon-transparent.webp",
+      "changed": true,
+      "bytes": 18858
+    }
+  ],
+  "notes": [
+    "No Astro code or old template markup imported.",
+    "Service icons copied as static self-contained media assets from the public 8092 WordPress uploads path.",
+    "Visible homepage title remains Mental Health Clinic in Louisville, KY pending later title decision."
+  ]
+}

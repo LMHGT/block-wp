@@ -95,12 +95,21 @@ Tyler explicitly changes the scope.
 
 ## Current Proof Surface
 
-The current public-preview source of truth remains Astro `origin/staging` plus
-Cloudflare Pages staging:
+This file records the June 27 starting provenance. As of 2026-07-03, the active
+WordPress source-of-truth surface for this repository is:
+
+- `http://100.70.222.25:8093`
+- Runtime root: `/srv/storage/services/wordpress 2026`
+- Mounted WordPress root: `/srv/storage/services/wordpress 2026/wordpress`
+- Active theme: `wp-content/themes/wordpress-2026`
+- Active plugin: `wp-content/plugins/lmhg-site-core`
+
+Astro `origin/staging` plus Cloudflare Pages staging remain read-only reference
+surfaces:
 
 - `https://staging.website-production-26u.pages.dev/`
 
-WordPress output in this repository targets a Codex-managed cloud WordPress
-runtime until a later cutover gate explicitly changes that status. Local
-WordPress, local Docker, Tailscale Serve, and RackNerd are not accepted proof
-surfaces for the corrected transition workflow.
+Approved Astro intake for this phase is limited to Core30 documentation and
+redirect lists staged under `data/lmhg/astro-reference`. WordPress core,
+`wp-config.php`, the Playground SQLite database, `node_modules`, and generated
+runtime logs remain outside git.

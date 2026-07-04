@@ -1,0 +1,295 @@
+{
+  "project": {
+    "name": "WordPress 2026",
+    "slug": "wordpress-2026",
+    "description": "Fresh full-site WordPress build on the Dell remote for Gutenberg-first planning and implementation. Existing Astro and prior block-theme work are reference-only; content may be extracted as plain-text page inventory, but no source code, templates, theme files, or old block markup should be imported."
+  },
+  "wordpress": {
+    "projectType": "full site",
+    "developmentMode": "remote WordPress",
+    "localRuntime": "WordPress Playground CLI",
+    "runtimeConnection": "HTTP REST plus project-local Playground CLI scripts",
+    "runtimeRoot": "/srv/storage/services/wordpress 2026/wordpress",
+    "runtimeUrl": "http://100.70.222.25:8093",
+    "wordpressVersion": "latest",
+    "phpVersion": "8.3",
+    "database": "SQLite via WordPress Playground default integration",
+    "docker": false,
+    "writeScope": [
+      "/srv/storage/services/wordpress 2026",
+      "/srv/storage/services/wordpress-2026 symlink",
+      "/home/tyler/.config/systemd/user/wordpress-2026.service"
+    ],
+    "safetyLimits": [
+      "No Docker runtime for this instance.",
+      "Do not write credentials into repo files.",
+      "Keep Codex plugin state project-local under .wp-gutenberg-designer/.",
+      "Use extracted data as plain-text page inventory only.",
+      "Do not import source code, Astro code, theme templates, block markup, or old plugin implementation artifacts.",
+      "Create or import WordPress pages only after the page inventory is reviewed and approved."
+    ]
+  },
+  "outputs": {
+    "type": "site",
+    "themeSlug": "wordpress-2026",
+    "textDomain": "wordpress-2026"
+  },
+  "github": {
+    "mode": "local-only",
+    "remote": null
+  },
+  "visualSystem": {
+    "mode": "quick",
+    "confidence": "provisional",
+    "intent": "Clean Gutenberg-native foundation; final brand and page system to be planned with wp-gutenberg-designer before implementation.",
+    "tokens": {
+      "approvedColors": [
+        "#1f4f46",
+        "#ffffff",
+        "#17211f"
+      ]
+    }
+  },
+  "brandAssets": {
+    "logo": {
+      "available": false
+    },
+    "colors": {
+      "available": false,
+      "notes": "Use provisional tokens until user provides brand direction."
+    },
+    "fonts": {
+      "available": false
+    },
+    "brandGuide": {
+      "available": false
+    },
+    "existingWebsite": {
+      "available": false
+    }
+  },
+  "wordpressPlugins": {
+    "required": [],
+    "optional": [],
+    "suggested": [
+      "SEO plugin, caching/performance plugin, backup/export strategy after hosting target is confirmed"
+    ],
+    "forbidden": [
+      "Docker-only runtime dependencies for this instance"
+    ]
+  },
+  "codexPlugins": {
+    "required": [
+      "wp-gutenberg-designer@personal"
+    ],
+    "optional": [],
+    "suggested": [
+      "browser/editor testing after content or theme work begins"
+    ]
+  },
+  "qualityGates": {
+    "runtime": [
+      "npm run verify returns ok against http://100.70.222.25:8093",
+      "WordPress core version is readable from wordpress/wp-includes/version.php",
+      "No docker compose file or Dockerfile is required for boot"
+    ],
+    "gutenberg": [
+      "Prefer core blocks, theme.json, templates, template parts, and patterns before custom blocks",
+      "Run editor compatibility checks before publishing generated block markup"
+    ],
+    "performance": {
+      "seo": "Crawlable text, one H1 per page type, image alt intent required",
+      "accessibility": "Logical headings and no nested interactive controls",
+      "target": "Keep custom CSS small and token-based until design system is confirmed"
+    }
+  },
+  "contentIntake": {
+    "source": "existing WordPress instance",
+    "sourceUrl": "http://100.70.222.25:8092/",
+    "method": "public WordPress REST API page extraction",
+    "pageCount": 56,
+    "files": [
+      ".wp-gutenberg-designer/content-intake/source-wordpress-8092-pages.json",
+      ".wp-gutenberg-designer/content-intake/source-wordpress-8092-pages.csv",
+      ".wp-gutenberg-designer/content-intake/source-wordpress-8092-pages.md"
+    ],
+    "boundaries": [
+      "Use extracted data as plain-text page inventory only.",
+      "Do not import source code, Astro code, theme templates, block markup, or old plugin implementation artifacts.",
+      "Create or import WordPress pages only after the page inventory is reviewed and approved."
+    ],
+    "generatedAt": "2026-06-30T11:49:24.841Z",
+    "approvedForPagePlan": true,
+    "pagePlanFiles": [
+      ".wp-gutenberg-designer/page-plan/public-56-page-plan.json",
+      ".wp-gutenberg-designer/page-plan/public-56-page-plan.csv",
+      ".wp-gutenberg-designer/page-plan/public-56-page-plan.md"
+    ],
+    "sourcePolicy": ".wp-gutenberg-designer/content-intake/source-policy.json"
+  },
+  "referenceSources": {
+    "lmhgPersonalPlugin": {
+      "plugin": "lmhg@personal",
+      "status": "planning-imported-no-wordpress-writes",
+      "confirmationRequiredBeforeSurfaceChanges": true,
+      "importedDatasets": [
+        {
+          "id": "page-topology-relationships",
+          "defaultStatus": "review-needed",
+          "importedAs": "primary parent candidates, related-child candidates, template-family review queues"
+        },
+        {
+          "id": "seo-metadata-schema",
+          "defaultStatus": "candidate-clean",
+          "importedAs": "title, meta description, primary/secondary keywords, phrase headings, schema vocabulary, copy brief fields"
+        },
+        {
+          "id": "page-type-field-contracts",
+          "defaultStatus": "candidate-mostly-clean",
+          "importedAs": "templateFamily, page type, schema type, visible vs hidden field rules"
+        },
+        {
+          "id": "brand-design-gutenberg-adaptation",
+          "defaultStatus": "requires-user-design-transplant-decision",
+          "importedAs": "voice, palette, card/hero/CTA constraints, Gutenberg Basics adaptation notes"
+        }
+      ],
+      "files": [
+        ".wp-gutenberg-designer/lmhg-reference-import/lmhg-reference-import.json",
+        ".wp-gutenberg-designer/lmhg-reference-import/lmhg-reference-page-review-matrix.csv",
+        ".wp-gutenberg-designer/lmhg-reference-import/lmhg-reference-review-plan.md",
+        ".wp-gutenberg-designer/lmhg-reference-import/lmhg-reference-dataset-policy.json"
+      ],
+      "gates": [
+        "User must classify fields/pages as clean or dirty before implementation.",
+        "User must approve each page-type Gutenberg Basics implementation pass.",
+        "No WordPress page creation, metadata write, template edit, or surface change without explicit approval.",
+        "No Astro, Starwind, CSS, visual asset, theme template, or block markup import."
+      ]
+    }
+  },
+  "gutenbergTemplateMap": {
+    "status": "planned-no-wordpress-writes",
+    "generatedAt": "2026-06-30T13:35:49.551Z",
+    "files": [
+      ".wp-gutenberg-designer/gutenberg-template-map/gutenberg-template-map.json",
+      ".wp-gutenberg-designer/gutenberg-template-map/gutenberg-template-map.md"
+    ],
+    "sharedTemplateParts": [
+      "parts/header.html",
+      "parts/footer.html"
+    ],
+    "requiredFallback": "templates/index.html",
+    "categoriesCarriedForward": [
+      {
+        "id": "home",
+        "targetTemplateFile": "templates/front-page.html",
+        "assignedPageCount": 1
+      },
+      {
+        "id": "services-hub",
+        "targetTemplateFile": "templates/services-hub.html",
+        "assignedPageCount": 1
+      },
+      {
+        "id": "service",
+        "targetTemplateFile": "templates/service-page.html",
+        "assignedPageCount": 8
+      },
+      {
+        "id": "specialties-hub",
+        "targetTemplateFile": "templates/specialties-hub.html",
+        "assignedPageCount": 1
+      },
+      {
+        "id": "specialty",
+        "targetTemplateFile": "templates/specialty-page.html",
+        "assignedPageCount": 15
+      },
+      {
+        "id": "location-access",
+        "targetTemplateFile": "templates/location-access-page.html",
+        "assignedPageCount": 10
+      },
+      {
+        "id": "article-hub",
+        "targetTemplateFile": "templates/article-hub.html",
+        "assignedPageCount": 1
+      },
+      {
+        "id": "article",
+        "targetTemplateFile": "templates/article-page.html",
+        "assignedPageCount": 5
+      },
+      {
+        "id": "faq-hub",
+        "targetTemplateFile": "templates/faq-hub.html",
+        "assignedPageCount": 1
+      },
+      {
+        "id": "faq",
+        "targetTemplateFile": "templates/faq-page.html",
+        "assignedPageCount": 3
+      },
+      {
+        "id": "trust",
+        "targetTemplateFile": "templates/trust-page.html",
+        "assignedPageCount": 5
+      },
+      {
+        "id": "legal-utility",
+        "targetTemplateFile": "templates/legal-utility-page.html",
+        "assignedPageCount": 3
+      },
+      {
+        "id": "not-found",
+        "targetTemplateFile": "templates/404.html",
+        "assignedPageCount": 1
+      },
+      {
+        "id": "needs-classification",
+        "targetTemplateFile": "templates/page.html",
+        "assignedPageCount": 1
+      }
+    ]
+  },
+  "updatedAt": "2026-06-30T14:42:37.414Z",
+  "serviceNavigationPlan": {
+    "status": "planned-no-wordpress-writes",
+    "generatedAt": "2026-06-30T13:44:30.501Z",
+    "scope": "services nested menu only",
+    "files": [
+      ".wp-gutenberg-designer/navigation/services-nested-menu.json",
+      ".wp-gutenberg-designer/navigation/services-nested-menu.md"
+    ],
+    "rootItem": "/services/",
+    "coreServiceCount": 8,
+    "specialtyChildCount": 14,
+    "guardrail": "Planning artifact only; no WordPress navigation, page-parent, template, or visible surface change until user approves implementation."
+  },
+  "sitewideNavigationPlan": {
+    "status": "planned-no-wordpress-writes",
+    "generatedAt": "2026-06-30T14:42:37.414Z",
+    "files": [
+      ".wp-gutenberg-designer/navigation/sitewide-navigation-plan.json",
+      ".wp-gutenberg-designer/navigation/sitewide-navigation-plan.md"
+    ],
+    "headerTarget": "parts/header.html",
+    "footerTarget": "parts/footer.html",
+    "breadcrumbsTarget": "Gutenberg-native patterns generated from approved relationships",
+    "topLevelHeaderItems": [
+      "Home",
+      "Services",
+      "Specialties",
+      "Team",
+      "Locations",
+      "FAQ",
+      "Contact"
+    ],
+    "cta": {
+      "label": "Reach Out",
+      "href": "https://intakeq.com/new/g91Z8x/bjxuno"
+    },
+    "guardrail": "Planning artifact only; no WordPress navigation, template, page, or visible surface change until user approves implementation."
+  }
+}

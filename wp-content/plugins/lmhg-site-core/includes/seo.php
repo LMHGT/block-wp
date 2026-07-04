@@ -14,7 +14,6 @@ add_filter( 'pre_get_document_title', 'lmhg_site_core_document_title' );
 add_filter( 'wp_robots', 'lmhg_site_core_filter_robots' );
 add_filter( 'wp_headers', 'lmhg_site_core_filter_development_robots_headers' );
 add_action( 'send_headers', 'lmhg_site_core_send_development_robots_header' );
-add_action( 'wp_head', 'lmhg_site_core_output_development_robots_meta', 1 );
 add_action( 'wp_head', 'lmhg_site_core_output_canonical', 4 );
 add_action( 'wp_head', 'lmhg_site_core_output_meta_description', 5 );
 add_action( 'wp_head', 'lmhg_site_core_output_json_ld', 20 );
@@ -34,7 +33,9 @@ function lmhg_site_core_document_title( string $title ): string {
 	}
 
 	$seo_title = trim( (string) get_post_meta( $post_id, '_lmhg_seo_title', true ) );
-	return '' !== $seo_title ? $seo_title : $title;
+	$title = '' !== $seo_title ? $seo_title : $title;
+
+	return lmhg_site_core_normalize_core30_seo_copy( $title );
 }
 
 /**
@@ -126,17 +127,80 @@ function lmhg_site_core_should_suppress_indexing(): bool {
  * Outputs the canonical URL from imported source metadata.
  */
 function lmhg_site_core_output_canonical(): void {
-	$post_id = lmhg_site_core_imported_post_id();
-	if ( 0 === $post_id ) {
+	if ( is_admin() || is_feed() || is_robots() || is_404() ) {
 		return;
 	}
 
-	$canonical = lmhg_site_core_imported_canonical_url( $post_id );
+	$canonical = lmhg_site_core_current_canonical_url();
 	if ( '' === $canonical ) {
 		return;
 	}
 
 	printf( '<link rel="canonical" href="%s" />' . "\n", esc_url( $canonical ) );
+}
+
+/**
+ * Gets the canonical URL for the current public request.
+ *
+ * @return string
+ */
+function lmhg_site_core_current_canonical_url(): string {
+	$post_id = lmhg_site_core_imported_post_id();
+	if ( 0 !== $post_id ) {
+		$canonical = lmhg_site_core_imported_canonical_url( $post_id );
+		if ( '' !== $canonical ) {
+			return lmhg_site_core_normalize_canonical_to_home( $canonical );
+		}
+	}
+
+	if ( is_singular() ) {
+		$queried_id = (int) get_queried_object_id();
+		if ( $queried_id > 0 ) {
+			$permalink = get_permalink( $queried_id );
+			return is_string( $permalink ) ? $permalink : '';
+		}
+	}
+
+	if ( is_front_page() ) {
+		return home_url( '/' );
+	}
+
+	$request_uri = sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ?? '/' ) );
+	$path = (string) wp_parse_url( $request_uri, PHP_URL_PATH );
+	if ( '' === $path ) {
+		return '';
+	}
+
+	return home_url( '/' === $path ? '/' : trailingslashit( ltrim( $path, '/' ) ) );
+}
+
+/**
+ * Keeps imported canonical paths on the current proof runtime host.
+ *
+ * @param string $canonical Stored canonical URL.
+ * @return string
+ */
+function lmhg_site_core_normalize_canonical_to_home( string $canonical ): string {
+	$path = (string) wp_parse_url( $canonical, PHP_URL_PATH );
+	if ( '' === $path ) {
+		return $canonical;
+	}
+
+	return home_url( '/' === $path ? '/' : trailingslashit( ltrim( $path, '/' ) ) );
+}
+
+/**
+ * Normalizes Core30 wording that should not position case management as targeted case management.
+ *
+ * @param string $value SEO copy.
+ * @return string
+ */
+function lmhg_site_core_normalize_core30_seo_copy( string $value ): string {
+	return str_replace(
+		array( 'Targeted Case Management', 'Targeted case management', 'targeted case management' ),
+		array( 'Case Management', 'Case management', 'case management' ),
+		$value
+	);
 }
 
 /**
@@ -157,6 +221,7 @@ function lmhg_site_core_output_meta_description(): void {
 			return;
 		}
 
+		$description = lmhg_site_core_normalize_core30_seo_copy( $description );
 		printf( '<meta name="description" content="%s" />' . "\n", esc_attr( $description ) );
 		return;
 	}
@@ -169,7 +234,7 @@ function lmhg_site_core_output_meta_description(): void {
 		}
 	}
 
-	$description = wp_html_excerpt( wp_strip_all_tags( $description ), 155, '...' );
+	$description = lmhg_site_core_normalize_core30_seo_copy( wp_html_excerpt( wp_strip_all_tags( $description ), 155, '...' ) );
 	if ( '' === trim( $description ) ) {
 		return;
 	}
@@ -204,7 +269,7 @@ function lmhg_site_core_output_json_ld(): void {
 	} else {
 		$schema_type = trim( (string) get_post_meta( $post_id, '_lmhg_schema_type', true ) );
 		$schema_type = '' !== $schema_type ? $schema_type : ( is_front_page() ? 'WebPage' : 'Article' );
-		$headline    = wp_strip_all_tags( get_the_title( $post_id ) );
+		$headline    = lmhg_site_core_normalize_core30_seo_copy( wp_strip_all_tags( get_the_title( $post_id ) ) );
 		$canonical   = lmhg_site_core_imported_canonical_url( $post_id );
 		$route       = lmhg_site_core_route_manifest_entry( $post_id );
 

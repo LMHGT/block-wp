@@ -1,0 +1,150 @@
+# Netlify Redirects
+# Updated: 2026-06-03
+
+# ============================================
+# SERVICE PAGE RENAMES (CORE 30)
+# ============================================
+# Slashless canonicalization for current service pages
+/family-therapy /family-therapy/ 301
+/group-therapy /group-therapy/ 301
+/trauma-therapy /trauma-therapy/ 301
+/play-therapy /play-therapy/ 301
+/community-support /community-support/ 301
+/community-based-services /community-based-services/ 301
+/case-management /case-management/ 301
+/co-parenting /co-parenting/ 301
+/court-ordered /court-ordered/ 301
+
+# Legacy therapy-entry pages -> current category/service structure
+/individual-therapy /individual-counseling/ 301
+/individual-therapy/ /individual-counseling/ 301
+/family-counseling /family-therapy/ 301
+/family-counseling/ /family-therapy/ 301
+/child-therapy /child-counseling/ 301
+/child-therapy/ /child-counseling/ 301
+/couples-therapy /couples-counseling/ 301
+/couples-therapy/ /couples-counseling/ 301
+/anxiety-treatment /anxiety-depression-therapy/ 301
+/anxiety-treatment/ /anxiety-depression-therapy/ 301
+/depression-treatment /anxiety-depression-therapy/ 301
+/depression-treatment/ /anxiety-depression-therapy/ 301
+/trauma-treatment /trauma-therapy/ 301
+/trauma-treatment/ /trauma-therapy/ 301
+/private-counseling /attachment-therapy/ 301
+/private-counseling/ /attachment-therapy/ 301
+/community-support-associates /community-support/ 301
+/community-support-associates/ /community-support/ 301
+/coparenting-services /co-parenting/ 301
+/coparenting-services/ /co-parenting/ 301
+/co-parenting-services /co-parenting/ 301
+/co-parenting-services/ /co-parenting/ 301
+
+/family-court /court-ordered/ 301
+/family-court/ /court-ordered/ 301
+/family-court-services /court-ordered/ 301
+/family-court-services/ /court-ordered/ 301
+/court-ordered-evaluations /court-ordered/ 301
+/court-ordered-evaluations/ /court-ordered/ 301
+/court-ordered-treatment /court-ordered/ 301
+/court-ordered-treatment/ /court-ordered/ 301
+/family-rebuilding /family-therapy/ 301
+/family-rebuilding/ /family-therapy/ 301
+/trauma-focused-emdr /emdr-therapy/ 301
+/trauma-focused-emdr/ /emdr-therapy/ 301
+/emdr-for-ptsd /emdr-therapy/ 301
+/emdr-for-ptsd/ /emdr-therapy/ 301
+/emdr-for-anxiety /emdr-therapy/ 301
+/emdr-for-anxiety/ /emdr-therapy/ 301
+
+# ============================================
+# LOCATION PAGES
+# ============================================
+# Trailing slash redirects for kept pages
+/locations /locations/ 301
+/locations/in-person /locations/in-person/ 301
+/locations/community /locations/community/ 301
+/locations/in-home /locations/in-home/ 301
+/locations/online /locations/online/ 301
+/locations/school /locations/school/ 301
+/louisville-ky /louisville-ky/ 301
+
+# Legacy care setting URLs -> canonical location structure
+/locations/in-office /locations/in-person/ 301
+/locations/in-office/ /locations/in-person/ 301
+/locations/in-the-community /locations/community/ 301
+/locations/in-the-community/ /locations/community/ 301
+/locations/in-your-home /locations/in-home/ 301
+/locations/in-your-home/ /locations/in-home/ 301
+/locations/office /locations/in-person/ 301
+/locations/office/ /locations/in-person/ 301
+/locations/home /locations/in-home/ 301
+/locations/home/ /locations/in-home/ 301
+/locations/telehealth /locations/online/ 301
+/locations/telehealth/ /locations/online/ 301
+
+# Legacy city/county location pages -> current service area pages
+/jefferson-county-ky /jefferson-county-ky/ 301
+/bullitt-county-ky /bullitt-county-ky/ 301
+/oldham-county-ky /oldham-county-ky/ 301
+/clarksville-in /locations/ 301
+/clarksville-in/ /locations/ 301
+/clarksville-ky /locations/ 301
+/clarksville-ky/ /locations/ 301
+/jeffersonville-in /locations/ 301
+/jeffersonville-in/ /locations/ 301
+/new-albany-in /locations/ 301
+/new-albany-in/ /locations/ 301
+/jeffersontown-ky /jefferson-county-ky/ 301
+/jeffersontown-ky/ /jefferson-county-ky/ 301
+/shively-ky /jefferson-county-ky/ 301
+/shively-ky/ /jefferson-county-ky/ 301
+/prospect-ky /oldham-county-ky/ 301
+/prospect-ky/ /oldham-county-ky/ 301
+/jeffersonville-ky /louisville-ky/ 301
+/jeffersonville-ky/ /louisville-ky/ 301
+/springhurst-ky /louisville-ky/ 301
+/springhurst-ky/ /louisville-ky/ 301
+/crestwood-ky /louisville-ky/ 301
+/crestwood-ky/ /louisville-ky/ 301
+/taylorsville-ky /louisville-ky/ 301
+/taylorsville-ky/ /louisville-ky/ 301
+/bardstown-ky /locations/ 301
+/bardstown-ky/ /locations/ 301
+/la-grange-ky /louisville-ky/ 301
+/la-grange-ky/ /louisville-ky/ 301
+
+# ============================================
+# OTHER PAGE RENAMES
+# ============================================
+/meet-the-team /meet-the-team/ 301
+/reviews /reviews/ 301
+/contact-us /contact-us/ 301
+
+# Careers page moved
+/we-are-hiring /careers/ 301
+/we-are-hiring/ /careers/ 301
+
+# Content migration
+/what-we-do /services/ 301
+/what-we-do/ /services/ 301
+/blogs /articles/ 301
+/blogs/ /articles/ 301
+/how-to-talk-to-your-loved-ones-about-going-to-therapy /articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/ 301
+/how-to-talk-to-your-loved-ones-about-going-to-therapy/ /articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/ 301
+/family-therapy-vs-individual-therapy /articles/family-therapy-vs-individual-therapy/ 301
+/family-therapy-vs-individual-therapy/ /articles/family-therapy-vs-individual-therapy/ 301
+/top-5-signs-its-time-to-seek-therapy /articles/top-5-signs-its-time-to-seek-therapy/ 301
+/top-5-signs-its-time-to-seek-therapy/ /articles/top-5-signs-its-time-to-seek-therapy/ 301
+/guide-to-individual-therapy /articles/guide-to-individual-therapy/ 301
+/guide-to-individual-therapy/ /articles/guide-to-individual-therapy/ 301
+
+# Our Services -> Services hub
+/our-services /services/ 301
+/our-services/ /services/ 301
+
+# ============================================
+# LEGACY REDIRECTS (from old site)
+# ============================================
+/about /meet-the-team/ 301
+/blog / 301
+/career /careers/ 301
