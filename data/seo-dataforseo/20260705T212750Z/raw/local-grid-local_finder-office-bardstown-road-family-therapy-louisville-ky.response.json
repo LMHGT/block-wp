@@ -1,0 +1,216 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "1.7542 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-7af0315ae9b5",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "1.6599 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "local_finder",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "local_finder",
+        "keyword": "family therapy Louisville KY",
+        "location_coordinate": "38.1880877,-85.6379469,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid local_finder office-bardstown-road family therapy Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "family therapy Louisville KY",
+          "type": "local_finder",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=family+therapy+Louisville+KY&oq=family+therapy+Louisville+KY&hl=en&gl=US&tbm=lcl&fll=38.1880877%2C-85.6379469&fspn=0.0028376065869404137%2C0.006474852561950684&fz=18&sll=38.1880877%2C-85.6379469&sspn=0.0028376065869404137%2C0.006474852561950684&sz=18",
+          "datetime": "2026-07-05 21:36:27 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "local_pack"
+          ],
+          "se_results_count": 0,
+          "items_count": 7,
+          "items": [
+            {
+              "type": "local_pack",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]",
+              "title": "Louisville Counseling Associates",
+              "description": "4229 Bardstown Rd #102 · (502) 495-1888 \n",
+              "domain": null,
+              "phone": "(502) 495-1888",
+              "booking_url": null,
+              "url": null,
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 1,
+                "rating_max": 5
+              },
+              "cid": "17820421987806657233",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]",
+              "title": "Louisville Mental Health Group",
+              "description": "4229 Bardstown Rd Ste 310 · (502) 416-1416 \nClosed · Opens 8 AM Mon \n\"He provided guidance, a safe space and direction to my nephew.\" \n",
+              "domain": "louisvillementalhealth.org",
+              "phone": "(502) 416-1416",
+              "booking_url": null,
+              "url": "https://louisvillementalhealth.org/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.4,
+                "votes_count": 19,
+                "rating_max": 5
+              },
+              "cid": "2768315829466915400",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[6]",
+              "title": "The InnerView",
+              "description": "15+ years in business · 4229 Bardstown Rd #311 · (502) 499-8010 \nClosed · Opens 12:30 PM Mon \n",
+              "domain": "counselinglouisvilleky.com",
+              "phone": "(502) 499-8010",
+              "booking_url": null,
+              "url": "https://counselinglouisvilleky.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 3.8,
+                "votes_count": 8,
+                "rating_max": 5
+              },
+              "cid": "13476317339948307855",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[8]",
+              "title": "Tyler Horn, LCSW",
+              "description": "4229 Bardstown Rd Suite 310 · (502) 416-1416 \nClosed · Opens 9 AM Mon \n",
+              "domain": "louisvillementalhealth.org",
+              "phone": "(502) 416-1416",
+              "booking_url": null,
+              "url": "https://louisvillementalhealth.org/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 5,
+                "rating_max": 5
+              },
+              "cid": "10074355657333415292",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 5,
+              "rank_absolute": 5,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[10]",
+              "title": "1st Priority Healthcare, LLC",
+              "description": "4229 Bardstown Rd Ste 201 · (502) 286-6565 \nClosed · Opens 8 AM Mon \n\"Also, they got me my own therapist and it has really helped.\" \n",
+              "domain": "www.1stpriorityhealthcare.com",
+              "phone": "(502) 286-6565",
+              "booking_url": null,
+              "url": "http://www.1stpriorityhealthcare.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 3.5,
+                "votes_count": 8,
+                "rating_max": 5
+              },
+              "cid": "5814388627300367504",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 6,
+              "rank_absolute": 6,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[12]",
+              "title": "Bardstown Road Physical Therapy Group",
+              "description": "4233 Bardstown Rd #100C · (502) 493-3800 \nClosed · Opens 7 AM Mon \n\"The staff was very knowledgeable about the appropriate therapy needed.\" \n",
+              "domain": "www.physicaltherapygroupinc.com",
+              "phone": "(502) 493-3800",
+              "booking_url": null,
+              "url": "http://www.physicaltherapygroupinc.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.9,
+                "votes_count": 81,
+                "rating_max": 5
+              },
+              "cid": "17942862270547205962",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 7,
+              "rank_absolute": 7,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[14]",
+              "title": "Thomas L. Haffner, LMFT, LLC",
+              "description": "No reviews · Marriage or relationship counselor \n\n",
+              "domain": "www.haffnertherapy.com",
+              "phone": "(502) 296-6706",
+              "booking_url": null,
+              "url": "http://www.haffnertherapy.com/",
+              "is_paid": false,
+              "rating": null,
+              "cid": "17924884313301513905",
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

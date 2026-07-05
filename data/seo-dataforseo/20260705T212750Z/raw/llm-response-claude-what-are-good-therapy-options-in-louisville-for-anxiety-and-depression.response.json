@@ -1,0 +1,289 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "22.5362 sec.",
+  "cost": 0.08296,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060038-9766-0612-0000-f38513c3f486",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "22.5071 sec.",
+      "cost": 0.08296,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "claude",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "claude",
+        "user_prompt": "What are good therapy options in Louisville for anxiety and depression?",
+        "model_name": "claude-sonnet-4-6",
+        "web_search": true,
+        "max_output_tokens": 1024,
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response claude What are good therapy options in Louisville for anxiety and depression?"
+      },
+      "result": [
+        {
+          "model_name": "claude-sonnet-4-6",
+          "input_tokens": 18470,
+          "output_tokens": 1130,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.08236,
+          "datetime": "2026-07-06 00:38:56 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Great news — there are several strong therapy options in Louisville for anxiety and depression, ranging from specialized clinics to large counseling networks. Here's a breakdown:\n\n---\n\n## 🧠 Therapy Options in Louisville, KY for Anxiety & Depression\n\n---\n\n### 1. 🏆 **KY CARDS (Kentucky Center for Anxiety and Related Disorders)**\n🌐 [kycards.com](https://kycards.com)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "KY CARDS provides specialized treatment for anxiety, OCD, and related disorders.",
+                  "annotations": [
+                    {
+                      "title": "Anxiety and OCD Treatment in Kentucky | KY Cards",
+                      "url": "https://kycards.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Their clinicians use Cognitive Behavioral Therapy (CBT) and Exposure Therapy — proven, structured approaches that help you retrain anxious thoughts and behaviors.",
+                  "annotations": [
+                    {
+                      "title": "Anxiety and OCD Treatment in Kentucky | KY Cards",
+                      "url": "https://kycards.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Therapy is focused, time-limited, and results-driven — most clients complete treatment in about 8 to 20 weeks.",
+                  "annotations": [
+                    {
+                      "title": "Anxiety and OCD Treatment in Kentucky | KY Cards",
+                      "url": "https://kycards.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Their team also works with children and teens.",
+                  "annotations": [
+                    {
+                      "title": "Anxiety and OCD Treatment in Kentucky | KY Cards",
+                      "url": "https://kycards.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 2. 🏥 **Grace Psychological Services**\n🌐 [louisvillegracepsychological.com](https://louisvillegracepsychological.com/anxiety-therapy-treatment/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Grace Psychological Services uses Cognitive Behavioral Therapy (CBT), the gold standard for treating anxiety, and provides personalized, evidence-based support tailored to your unique needs.",
+                  "annotations": [
+                    {
+                      "title": "Anxiety Therapy Louisville, KY | Grace Psychological Services",
+                      "url": "https://louisvillegracepsychological.com/anxiety-therapy-treatment/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "As an evidence-based practice committed to Measurement-Based Care, they utilize gold-standard clinical instruments such as the PHQ-9, GAD-7, and BDI-II (Beck Depression Inventory).",
+                  "annotations": [
+                    {
+                      "title": "Anxiety Therapy Louisville, KY | Grace Psychological Services",
+                      "url": "https://louisvillegracepsychological.com/anxiety-therapy-treatment/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They offer face-to-face appointments in Louisville (Middletown area) as well as anxiety therapy online via a HIPAA-compliant telehealth platform.",
+                  "annotations": [
+                    {
+                      "title": "Anxiety Therapy Louisville, KY | Grace Psychological Services",
+                      "url": "https://louisvillegracepsychological.com/anxiety-therapy-treatment/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 3. 🏢 **Kentucky Mental Health Care (KMHC)**\n🌐 [kentuckymentalhealth.com](https://kentuckymentalhealth.com)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "KMHC's psychiatrists are renowned for their individualized care and treat severe depression, anxiety disorders, PTSD, bipolar disorders, and more.",
+                  "annotations": [
+                    {
+                      "title": "Kentucky Mental Health Care – Psychiatry | Therapy | Addiction Treatment",
+                      "url": "https://kentuckymentalhealth.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They also offer Intensive Outpatient Programs (IOPs) in Louisville, designed for those experiencing a greater level of need.",
+                  "annotations": [
+                    {
+                      "title": "Kentucky Mental Health Care – Psychiatry | Therapy | Addiction Treatment",
+                      "url": "https://kentuckymentalhealth.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "IOPs meet online and in-person three times per week for three hours each session, while still allowing you to participate in your normal daily life.",
+                  "annotations": [
+                    {
+                      "title": "Kentucky Mental Health Care – Psychiatry | Therapy | Addiction Treatment",
+                      "url": "https://kentuckymentalhealth.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " You can reach them at **(502) 233-3030**.\n\n---\n\n### 4. 🌿 **Louisville Health & Healing**\n🌐 [louisvillehealthandhealing.com](https://www.louisvillehealthandhealing.com)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They offer EMDR, IFS, and expressive techniques, with appointments available within 7 days.",
+                  "annotations": [
+                    {
+                      "title": "Private Therapy Louisville KY | Louisville Health & Healing",
+                      "url": "https://www.louisvillehealthandhealing.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They provide individual therapy for adults navigating anxiety, trauma, burnout, and life transitions.",
+                  "annotations": [
+                    {
+                      "title": "Private Therapy Louisville KY | Louisville Health & Healing",
+                      "url": "https://www.louisvillehealthandhealing.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They also offer Ketamine Assisted Psychotherapy for treatment-resistant depression.",
+                  "annotations": [
+                    {
+                      "title": "Private Therapy Louisville KY | Louisville Health & Healing",
+                      "url": "https://www.louisvillehealthandhealing.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Hours are Monday–Friday, 8:00 a.m. – 8:00 p.m.",
+                  "annotations": [
+                    {
+                      "title": "Private Therapy Louisville KY | Louisville Health & Healing",
+                      "url": "https://www.louisvillehealthandhealing.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 5. 📋 **Kentucky Counseling Center (KCC)**\n🌐 [kentuckycounselingcenter.com](https://kentuckycounselingcenter.com)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Kentucky Counseling Center offers online mental health services such as counseling, psychiatry, and targeted case management, and their large network of providers allows them to schedule appointments quickly — in as little as the same week.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Counseling and Psychiatry | Kentucky Counseling Center",
+                      "url": "https://kentuckycounselingcenter.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "therapy anxiety depression Louisville Kentucky 2025",
+            "best therapists counselors anxiety depression Louisville KY"
+          ]
+        }
+      ]
+    }
+  ]
+}

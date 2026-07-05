@@ -1,0 +1,13 @@
+{
+  "name": "serp-ai-mode-expanded-Recommend non-hospital mental health counseling options in Louisville, KY.",
+  "path": "/v3/serp/google/ai_mode/live/advanced",
+  "body": [
+    {
+      "keyword": "Recommend non-hospital mental health counseling options in Louisville, KY.",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "tag": "lmhg ai mode expanded Recommend non-hospital mental health counseling options in Louisville, KY."
+    }
+  ]
+}

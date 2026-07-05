@@ -1,0 +1,311 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "3.9363 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060041-9766-0139-0000-dfb1e6e19861",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "3.8543 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "Recommend non-hospital mental health counseling options in Louisville, KY.",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode expanded Recommend non-hospital mental health counseling options in Louisville, KY.",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Recommend non-hospital mental health counseling options in Louisville, KY.",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=Recommend%20non-hospital%20mental%20health%20counseling%20options%20in%20Louisville%2C%20KY.&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:41:14 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[1]/div[1]/div[3]",
+              "markdown": "Several non-hospital, community-based mental health counseling options are available in Louisville, KY, offering private practice, community health, and specialized care.[[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n\n**Community Health & Non-Profit Clinics** \n\n- Park DuValle Community Health Center : Provides comprehensive behavioral health services to the community.\n- Collective Care Center at Spalding University : Offers counseling services, often staffed by licensed professionals and advanced students.\n- Seven Counties Services : A major provider for mental health and addiction, offering 24/7 crisis lines and outpatient counseling.\n- NAMI Louisville : Offers support groups and educational resources for individuals and families dealing with mental health conditions.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://pdchc.org/behavioral/)[[3]](https://miresource.com/therapists/schizophrenia/louisville)[[4]](https://sevencounties.org/about/locations/)[[5]](https://www.facebook.com/kychfs/posts/kentuckians-with-serious-mental-illness-smi-arent-limited-to-a-hospital-to-get-m/1488315123339699/)\n\n**Private Practice & Specialized Counseling** \n\n- Olive Tree Counseling : Located on Taylorsville Rd, offering professional, compassionate counseling services (LPCC, NCC).\n- Jim Walker, LCSW : Provides telehealth and in-person family or couples counseling and psychotherapy, located on Brownsboro Park Blvd.\n- CompServ Health Resources Inc.: Offers individual and group therapy options, including Cognitive Behavioral Therapy (CBT) in downtown Louisville.\n- The Black Counseling & Consulting Collective : Provides specialized counseling services.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://m.yelp.com/search?find_desc=Behavioral+Health&find_loc=Louisville%2C+KY)[[3]](https://jimwalker.fullslate.com/services/704)[[4]](https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy)\n\n**Specialized Resources** \n\n- Mental Health Lou Wellness Hub : A local directory to find mental health resources, wellness activities, and providers in Louisville.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://www.mentalhealthlou.com/about)\n\nFor immediate, non-hospital support, you can call or text the **988 Suicide & Crisis Lifeline** or text \"LOU\" to 741-741 to reach the Crisis Text Line.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n\nWould you like me to find providers that specialize in a particular area, such as **anxiety**, **depression**, **couples counseling** , or to find someone who **accepts specific insurance**?",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Several non-hospital, community-based mental health counseling options are available in Louisville, KY, offering private practice, community health, and specialized care.",
+                  "markdown": "Several non-hospital, community-based mental health counseling options are available in Louisville, KY, offering private practice, community health, and specialized care.[[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Community Health & Non-Profit Clinics",
+                  "markdown": "**Community Health & Non-Profit Clinics**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Park DuValle Community Health Center : Provides comprehensive behavioral health services to the community. Park DuValle Community Health Center Collective Care Center at Spalding University : Offers counseling services, often staffed by licensed professionals and advanced students. Collective Care Center at Spalding University Seven Counties Services : A major provider for mental health and addiction, offering 24/7 crisis lines and outpatient counseling. Seven Counties Services NAMI Louisville : Offers support groups and educational resources for individuals and families dealing with mental health conditions. NAMI Louisville",
+                  "markdown": "- Park DuValle Community Health Center : Provides comprehensive behavioral health services to the community.\n- Collective Care Center at Spalding University : Offers counseling services, often staffed by licensed professionals and advanced students.\n- Seven Counties Services : A major provider for mental health and addiction, offering 24/7 crisis lines and outpatient counseling.\n- NAMI Louisville : Offers support groups and educational resources for individuals and families dealing with mental health conditions.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://pdchc.org/behavioral/)[[3]](https://miresource.com/therapists/schizophrenia/louisville)[[4]](https://sevencounties.org/about/locations/)[[5]](https://www.facebook.com/kychfs/posts/kentuckians-with-serious-mental-illness-smi-arent-limited-to-a-hospital-to-get-m/1488315123339699/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Park DuValle Community Health Center",
+                      "domain": "pdchc.org",
+                      "url": "https://pdchc.org/behavioral/",
+                      "title": "Behavioral Health",
+                      "text": "Behavioral Health Your mental health matters at Park DuValle! Our behavioral health services provide support for a range of mental..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "MiResource",
+                      "domain": "miresource.com",
+                      "url": "https://miresource.com/therapists/schizophrenia/louisville",
+                      "title": "Schizophrenia Therapists in Louisville, KY",
+                      "text": "Centerstone Kentucky (Seven Counties Services) provides CSC/early psychosis services, ACT, case management, and mobile crisis supp..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Seven Counties Services",
+                      "domain": "sevencounties.org",
+                      "url": "https://sevencounties.org/about/locations/",
+                      "title": "Seven Counties Services Locations | Find a Center Near You",
+                      "text": "Seven Counties Services is dedicated to providing compassionate and accessible mental health, addiction recovery, and developmenta..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Facebook",
+                      "domain": "www.facebook.com",
+                      "url": "https://www.facebook.com/kychfs/posts/kentuckians-with-serious-mental-illness-smi-arent-limited-to-a-hospital-to-get-m/1488315123339699/",
+                      "title": "Kentuckians with serious mental illness (SMI) aren't limited to a hospital to get mental health support. With 1915(i) RISE, services come to you — in your home and your community. 1915(i) RISE can help you: • Stay in your home safely. • Build daily living skills. • Get help from a case manager. • Set and reach your goals. Everything is built around you and your choices, and if you’re on Medicaid, it’s available at no cost. To get started, call 502-564-9189 or visit https://www.chfs.ky.gov/agencies/dbhdid/Pages/1915iriseinitiative.aspx to get started.",
+                      "text": "I am starting with… 💙 Seven Counties Services (Centerstone Kentucky) What It Is: Seven Counties Services is Louisville's main com..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Private Practice & Specialized Counseling",
+                  "markdown": "**Private Practice & Specialized Counseling**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Olive Tree Counseling : Located on Taylorsville Rd, offering professional, compassionate counseling services (LPCC, NCC). Olive Tree Counseling Jim Walker, LCSW : Provides telehealth and in-person family or couples counseling and psychotherapy, located on Brownsboro Park Blvd. Jim Walker, LCSW CompServ Health Resources Inc. : Offers individual and group therapy options, including Cognitive Behavioral Therapy (CBT) in downtown Louisville. CompServ Health Resources Inc. The Black Counseling & Consulting Collective : Provides specialized counseling services. The Black Counseling & Consulting Collective",
+                  "markdown": "- Olive Tree Counseling : Located on Taylorsville Rd, offering professional, compassionate counseling services (LPCC, NCC).\n- Jim Walker, LCSW : Provides telehealth and in-person family or couples counseling and psychotherapy, located on Brownsboro Park Blvd.\n- CompServ Health Resources Inc.: Offers individual and group therapy options, including Cognitive Behavioral Therapy (CBT) in downtown Louisville.\n- The Black Counseling & Consulting Collective : Provides specialized counseling services.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://m.yelp.com/search?find_desc=Behavioral+Health&find_loc=Louisville%2C+KY)[[3]](https://jimwalker.fullslate.com/services/704)[[4]](https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Yelp",
+                      "domain": "m.yelp.com",
+                      "url": "https://m.yelp.com/search?find_desc=Behavioral+Health&find_loc=Louisville%2C+KY",
+                      "title": "TOP 10 BEST Behavioral Health in Louisville, KY - Yelp",
+                      "text": "Olive Tree Counseling. 5.0 (1 review) Counseling & Mental Health. 0.6 mi. This is a placeholder. 2815 Taylorsville Rd, Ste 303 Lou..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "fullslate.com",
+                      "domain": "jimwalker.fullslate.com",
+                      "url": "https://jimwalker.fullslate.com/services/704",
+                      "title": "Telehealth- Family Or Couples Counseling/Psychotherapy",
+                      "text": "May be completed by telephone or online video chat"
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "compservhealth.com",
+                      "domain": "www.compservhealth.com",
+                      "url": "https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy",
+                      "title": "Psychotherapy",
+                      "text": "CompSer Health Resources Inc. offers both individual and group therapy options, including Cognitive Behavioral Therapy (CBT). Meet..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Specialized Resources",
+                  "markdown": "**Specialized Resources**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Mental Health Lou Wellness Hub : A local directory to find mental health resources, wellness activities, and providers in Louisville. Mental Health Lou Wellness Hub",
+                  "markdown": "- Mental Health Lou Wellness Hub : A local directory to find mental health resources, wellness activities, and providers in Louisville.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://www.mentalhealthlou.com/about)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Mental Health Lou",
+                      "domain": "www.mentalhealthlou.com",
+                      "url": "https://www.mentalhealthlou.com/about",
+                      "title": "Free Mental Wellness Resources & Events in Louisville — Mental Health Lou – Louisville, KY",
+                      "text": "In response, Mental Health Lou ( Mental Health Lou and You ) evolved into a wellness hub—a central resource designed to connect in..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "For immediate, non-hospital support, you can call or text the 988 Suicide & Crisis Lifeline or text \"LOU\" to 741-741 to reach the Crisis Text Line. LouisvilleKY.gov",
+                  "markdown": "For immediate, non-hospital support, you can call or text the **988 Suicide & Crisis Lifeline** or text \"LOU\" to 741-741 to reach the Crisis Text Line.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "LouisvilleKY.gov",
+                  "domain": "louisvilleky.gov",
+                  "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                  "title": "Community Mental Health Services - LouisvilleKY.gov",
+                  "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Yelp",
+                  "domain": "m.yelp.com",
+                  "url": "https://m.yelp.com/search?find_desc=Behavioral+Health&find_loc=Louisville%2C+KY",
+                  "title": "TOP 10 BEST Behavioral Health in Louisville, KY - Yelp",
+                  "text": "Olive Tree Counseling. 5.0 (1 review) Counseling & Mental Health. 0.6 mi. This is a placeholder. 2815 Taylorsville Rd, Ste 303 Lou..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "fullslate.com",
+                  "domain": "jimwalker.fullslate.com",
+                  "url": "https://jimwalker.fullslate.com/services/704",
+                  "title": "Telehealth- Family Or Couples Counseling/Psychotherapy",
+                  "text": "May be completed by telephone or online video chat"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "compservhealth.com",
+                  "domain": "www.compservhealth.com",
+                  "url": "https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy",
+                  "title": "Psychotherapy",
+                  "text": "CompSer Health Resources Inc. offers both individual and group therapy options, including Cognitive Behavioral Therapy (CBT). Meet..."
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

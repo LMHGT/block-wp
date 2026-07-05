@@ -1,0 +1,106 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.4516 sec.",
+  "cost": 0.0358083,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-139e8fc5be69",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.4215 sec.",
+      "cost": 0.0358083,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "gemini",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "gemini",
+        "user_prompt": "Where can someone get mental health case management in Louisville, KY?",
+        "model_name": "gemini-2.5-flash-lite",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response gemini Where can someone get mental health case management in Louisville, KY?",
+        "web_search": true,
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gemini-2.5-flash-lite",
+          "input_tokens": 115,
+          "output_tokens": 492,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.0352083,
+          "datetime": "2026-07-06 00:32:17 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "In Louisville, KY, several organizations offer mental health case management services. These services can help individuals navigate complex systems, connect with resources, and develop personalized support plans.\n\nHere are some providers:\n\n*   **Kentucky Mental Heath Care** offers case management for Medicaid clients and those with various commercial insurances. You can reach them at (502) 233-3030.\n*   **Louisville Mental Health Group** provides case management as part of their multidisciplinary approach to mental health services.\n*   **Peaceful Solutions Counseling Inc.** offers Targeted Case Management (TCM) specifically for Medicaid clients. They have two locations: 5454 New Cut Rd, Suite 3, and 1450 Gardiner Ln, Suite H.\n*   **Best Life Mental Health Services, LLC** also provides Targeted Case Management, assisting with psychiatric evaluations, medication management, crisis intervention plans, and connecting clients with community resources. You can contact them at (502) 333-9466.\n*   **Family Health Centers** offers case management as part of their counseling services, which can help with a range of mental health concerns, substance use issues, and more. They have multiple locations throughout Louisville. You can call (502) 772-8370 to make an appointment.\n*   **Seven Counties Services** provides case management to help individuals understand their challenges, access resources, and manage daily life. They offer services for adult and child mental health, substance use, and developmental disabilities. You can reach them at (502) 589-1100.\n*   **Mental Health Lou** focuses on breaking down barriers to care and reducing stigma through education and programs, particularly in underserved neighborhoods.\n*   **Norton Behavioral Medicine** offers integrated care that includes collaboration with primary care providers and access to therapy and medication management.\n*   **Hagan Health** provides psychiatric care and emphasizes a collaborative approach to treatment.\n\nIf you are experiencing a mental health crisis, you can text LOU to 741741 for the Crisis Text Line or call the 988 Suicide and Crisis Lifeline.",
+                  "annotations": [
+                    {
+                      "title": "kentuckymentalhealth.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsSulUULZl5Pem4U5rWSoooGkiMFl8HeQef1AGWuegxUfOYqpchTZZkCamb7yQcrUaGy3kt5k6AU6mS4jn3EqhexSgxzQUgZWM47HKoWdhtsw2OcUfh4rmtPCVbv296K-uIglktImwyEjJP09PhzfmMB6tmQZBeps4LhtXS_i8y6U="
+                    },
+                    {
+                      "title": "louisvillementalhealth.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSu8-AXaYbipQZKPptHvANuPc3G1E1qoRoyUEwpzq3TYCHtEKvxg97VgJfPgKdNqsjBXm1HG-wHDK_dSgQ5gkmmdH2efMC4fEbZPIbF33nSvSF5-9kuX_hYu37FVg="
+                    },
+                    {
+                      "title": "peacefulsc.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHmm7OKvKS8Dxec_t3iV_s0bpfKJ9zP_PmWANTdnbwq6mU3_imtzZ5aXQl8jExLV8yD0dIGKkVfPXnce2qHPud4dPVgB9-v3FJVxeNSed5TNuPhMYQdnWhLUQXBvNEKmn9qYQGCHIAods="
+                    },
+                    {
+                      "title": "bestlifelouisville.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqnGnT4j9JF04LUfvAWFOUKumkIbtsGa89MGTOiN4yvRGQlotJhQkXOU01Wm0c3MPvD3jf_SjChcPfHYi0JY521XscL4SecUw4yCO9wRjtkmw8ImhHRTuupVsdCv3Z-ao90kD37VlWtLuYoeHC"
+                    },
+                    {
+                      "title": "fhclouisville.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0QTkjkAcRJHwrCNajmwiTP0x9A_ceNEdAhbEYNnW_V5fZZRV1oPsnBY1Xs99Njszirf0BCG5-yymzwniUUKLd8imTZo2FcZqclwqHXHBtlBxpKEAGvI_GiO4HqBXEdVg3eLSZ_vnD5c95X99t9ZPB3bWPjIczWqP7V48N"
+                    },
+                    {
+                      "title": "sevencounties.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENFBW-tsmqKHKXrD21o4LXXpPDMhSy67E0kUYPM2I-QvXeVFwZPzyh-f7EJB_uigJOfQ8TblQL8mL3iST8DjyEjQBr4M3h54SQsbH4hpo4mWqqVn1Ymv1mMX2ZxYMug4f2YTPO6e1ZStezqWA4ThymlBSFcLk62PpYRYk="
+                    },
+                    {
+                      "title": "mentalhealthlou.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHy2ct-hKZxsBmeF34NrbIyxZ1p7RHo8iPn927SdCFmePUG0_xzAjHk-2fYNrjqng6Nt-hkHEUxvJ387eRW_fO0Zzg78Cidf-k3bvd9Tq81aH7ToQptJKsovZU="
+                    },
+                    {
+                      "title": "nortonhealthcare.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmVgaZdFUxS4PIcfvvLGamZBk3K9DGUUbxiKMKQCIbsZdyyrWiXJU70JYBq9hU6lKLqYZ60UX4mPRq0ghMLWxZe2rDZVDAUlPWJCL0yLyEnyTIdpoQURJpFtCVzMJrPM_FYZnEsjj5hXgbJwpk3Y6SZYqiWT0-VhdCmq7bLQ90Al6hpTrxQHGM2Js="
+                    },
+                    {
+                      "title": "haganhealth.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7Pj_EgOxry_ZAagzaUtdvbka9oW2ZVjMng3SxXTZAjMsVFvsLJ3_p5aNeTKCzexjCvPdQq9pl1LG_sS0M7P9TkMrZKa3Os34lv8bQ7H5_K2cK"
+                    },
+                    {
+                      "title": "louisvilleky.gov",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWdDJndL97OSoCfP92gW46c-svGyS_NEU6ttr387PbVCmadTPmNo_JAJPKoLrtclglOWE7oyzjPOHtfpnLvqKvCjAhcgMnn3IfQVYZC1BzYXPUWWctrKxsw_J7g69IRsE5iJGrR5PypQDwvpfegXbfk8h4GFla8pSNo9kMG6bzcUgD96yGXn_kYqUFS63L"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "mental health case management Louisville KY",
+            "case management services Louisville KY mental health",
+            "Louisville mental health resources"
+          ]
+        }
+      ]
+    }
+  ]
+}

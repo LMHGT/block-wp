@@ -1,0 +1,1626 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "1.7504 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-92e655b35bbc",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "1.6661 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "maps",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "maps",
+        "keyword": "therapist Louisville KY",
+        "location_coordinate": "38.2526647,-85.7584557,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid maps downtown-louisville therapist Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "therapist Louisville KY",
+          "type": "maps",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://google.com/maps/search/therapist+Louisville+KY/@38.2526647,-85.7584557,17z?hl=en&gl=US&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-07-05 21:36:31 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "maps_search"
+          ],
+          "se_results_count": 0,
+          "items_count": 20,
+          "items": [
+            {
+              "type": "maps_search",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "domain": null,
+              "title": "Downtown Counseling Associates",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "239 S 5th St #915, Louisville, KY 40202",
+              "address": "239 S 5th St #915, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "239 S 5th St #915",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJpwdDRKVyaYgRDKmHcDjN9EE",
+              "phone": "+1502-584-7216",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Z17rUuQIEUkXQiwVpU67Cg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=115.239105&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Counselor",
+              "additional_categories": null,
+              "category_ids": [
+                "counselor"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972a5444307a7:0x41f4cd387087a90c",
+              "cid": "4752649149072517388",
+              "latitude": 38.2542359,
+              "longitude": -85.75836579999999,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "domain": null,
+              "title": "Steps Behavioral Care",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/102317323200621355903",
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "312 S 4th St Ste700, Louisville, KY 40202",
+              "address": "312 S 4th St Ste700, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "312 S 4th St Ste700",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJzQEVNghzaYgRQ9d9GppuVRg",
+              "phone": "+1786-447-6341",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=wSnhHHeSlbvBieV76voG0A&cb_client=search.gws-prod.gps&w=408&h=240&yaw=276.2876&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Applied behavior analysis therapist",
+              "additional_categories": null,
+              "category_ids": [
+                "applied_behavior_analysis_therapist"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 13,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 13,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 13,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 13,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 13,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x88697308361501cd:0x18556e9a1a7dd743",
+              "cid": "1753429238079149891",
+              "latitude": 38.2535124,
+              "longitude": -85.7575232,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "domain": "improveddynamicsaba.com",
+              "title": "Improved Dynamics ABA - Louisville, KY",
+              "original_title": null,
+              "url": "https://improveddynamicsaba.com/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/112812802146216157578",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 8,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 8
+              },
+              "snippet": "312 S 4th St, Louisville, KY 40202",
+              "address": "312 S 4th St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "312 S 4th St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ_flADFpzaYgR9NQQGjyzxkY",
+              "phone": "+1571-400-2860",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=wSnhHHeSlbvBieV76voG0A&cb_client=search.gws-prod.gps&w=408&h=240&yaw=276.2876&pitch=0&thumbfov=100",
+              "total_photos": 6,
+              "category": "Mental health service",
+              "additional_categories": null,
+              "category_ids": [
+                "mental_health_service"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x8869735a0c40f9fd:0x46c6b33c1a10d4f4",
+              "cid": "5099960698760385780",
+              "latitude": 38.2535124,
+              "longitude": -85.7575232,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"Overall, a fantastic choice for anyone seeking ABA services.!!\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "domain": "uoflhealth.org",
+              "title": "Anam Mukhtar, OTD, OTR/L",
+              "original_title": null,
+              "url": "https://uoflhealth.org/provider/anam-mukhtar-occupational-therapy/?utm_source=GMBSocialClimb&utm_medium=AnamMukhtar%2COTD%2COTR%2FL",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/112576679831456904911",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 1,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 1
+              },
+              "snippet": "225 Abraham Flexner Way Ste 760, Louisville, KY 40202",
+              "address": "225 Abraham Flexner Way Ste 760, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "225 Abraham Flexner Way Ste 760",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJNcpixaRzaYgRISwEOlpjz4g",
+              "phone": "+1502-561-4295",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEW-6fcAY5xN8lQjCln2yJrxlmb8tnSy1KzJasKq9jd2OHk-_r2Q1O761y9-86CSmCOPTWnzbUE2mKHVjZwJT368FcIfxh6N2fws01FAaaouQsiXsoxXaTiTafeHpkgTUdgv0W5RBdQUD_0=w408-h408-k-no",
+              "total_photos": 2,
+              "category": "Occupational therapist",
+              "additional_categories": null,
+              "category_ids": [
+                "occupational_therapist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886973a4c562ca35:0x88cf635a3a042c21",
+              "cid": "9858207348508863521",
+              "latitude": 38.249991699999995,
+              "longitude": -85.7505613,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 5,
+              "rank_absolute": 5,
+              "domain": "louisville.woodhousespas.com",
+              "title": "Woodhouse Spa - Downtown Louisville",
+              "original_title": null,
+              "url": "https://louisville.woodhousespas.com/?utm_source=google&utm_medium=yext",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/108982241276064855735",
+              "book_online_url": "https://na1.meevo.com/CustomerPortal/onlinebooking?tenantId=200426&LocationId=203695&meevo_channel=GoogleBookNow&utm_source=GMB&utm_medium=booknow&utm_campaign=meevo_onlinebooking&rwg_token=AE37R_h9WKZ_Ww7Hg0RVqxYaOaZHSHQYw1Tno7XFkwmS0xsaP6eftUH43LuWYbs3FWKSJ66IoKyJG1obKM9SD6oA1YOUJt95jw%3D%3D",
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.9,
+                "votes_count": 306,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 4,
+                "2": 1,
+                "3": 1,
+                "4": 3,
+                "5": 297
+              },
+              "snippet": "100 S 4th St, Louisville, KY 40202",
+              "address": "100 S 4th St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "100 S 4th St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJXd4FzM9zaYgR7I40-KUl2ss",
+              "phone": "+1502-699-5200",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGsGhMT1NFfV4SJh6nHFldAnLoSIJdjcP5RLLjZItdRVNMNozQROIXIzgQA8jOmXUTyyRAclx-nVqMivhJ1gj0dz1XRHECuvVm-vXmNZZ1VfRviWVI8RsUE80NnvUO_cpdnWCyKZHF5Kklh=w408-h465-k-no",
+              "total_photos": 149,
+              "category": "Day spa",
+              "additional_categories": [
+                "Gift shop",
+                "Hair removal service",
+                "Massage spa",
+                "Massage therapist",
+                "Nail salon",
+                "Spa",
+                "Waxing hair removal service"
+              ],
+              "category_ids": [
+                "day_spa",
+                "gift_shop",
+                "hair_removal_service",
+                "massage_spa",
+                "massage_therapist",
+                "nail_salon",
+                "spa",
+                "waxing_hair_removal_service"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "open"
+              },
+              "feature_id": "0x886973cfcc05de5d:0xcbda25a5f8348eec",
+              "cid": "14689094529386319596",
+              "latitude": 38.256334599999995,
+              "longitude": -85.75729729999999,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"I came in pain and left feeling loose and relaxed.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 6,
+              "rank_absolute": 6,
+              "domain": "www.kleinertkutz.com",
+              "title": "Amber Lewis, OT",
+              "original_title": null,
+              "url": "http://www.kleinertkutz.com/",
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 1,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 1
+              },
+              "snippet": "225 Abraham Flexner Way, Louisville, KY 40202",
+              "address": "225 Abraham Flexner Way, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "225 Abraham Flexner Way",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJU4KmS7dyaYgR7T8C5bCoia4",
+              "phone": "+1502-561-4263",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=7CRDwzzMIg0mecp2-d4Dvw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=18.27329&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Occupational therapist",
+              "additional_categories": null,
+              "category_ids": [
+                "occupational_therapist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972b74ba68253:0xae89a8b0e5023fed",
+              "cid": "12576768912118661101",
+              "latitude": 38.249407999999995,
+              "longitude": -85.7507342,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 7,
+              "rank_absolute": 7,
+              "domain": "uoflhealth.org",
+              "title": "Mandy Schum, PT, DPT",
+              "original_title": null,
+              "url": "https://uoflhealth.org/provider/mandy-schum-physical-therapy/?utm_source=GMBSocialClimb&utm_medium=MandySchum%2CPT%2CDPT",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/106629846901134390782",
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "204 E Market St Ste 103, Louisville, KY 40202",
+              "address": "204 E Market St Ste 103, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "204 E Market St Ste 103",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJL6cVZd5zaYgRXVM5aRdOT0g",
+              "phone": "+1502-815-7900",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHVYye1b8D4NLUdM1p9M60SCedJMP0nq6Sl9VfG4xMmA7tn8w3rNFj3d1OxMI0J94vpxNeqsygDl0OMqEh4Sb0aItZseMhFmRFimesO-HoNfF34Fj41pCcNSgdu0grW8JHgpQaLqKdn-Ng=w408-h408-k-no",
+              "total_photos": 2,
+              "category": "Physical therapist",
+              "additional_categories": null,
+              "category_ids": [
+                "physiotherapist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886973de6515a72f:0x484f4e176939535d",
+              "cid": "5210469156347532125",
+              "latitude": 38.254109799999995,
+              "longitude": -85.7494906,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 8,
+              "rank_absolute": 8,
+              "domain": "uoflhealth.org",
+              "title": "Ashlee Erlandson, PT, DPT, ATC",
+              "original_title": null,
+              "url": "https://uoflhealth.org/provider/ashlee-erlandson-physical-therapist/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/118040567634229337019",
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "204 E Market St Ste 3A, Louisville, KY 40202",
+              "address": "204 E Market St Ste 3A, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "204 E Market St Ste 3A",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJac_8wOpzaYgRCMY7w-5qm4Y",
+              "phone": "+1502-588-4340",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFoLhkiCQ2dElFTCTC1N1zfYgqnEFc33ymV2IMGa2CRoBQGDP-H6KyTO6EYpFvI31rXU-ttSK6xxQ4yYJ9QbBJNqx4lg8-gbvLERZeQyGBhAZuqIvGUJcLjCd907uM4o8VLuPU3zhsFEXk=w408-h408-k-no",
+              "total_photos": 2,
+              "category": "Physical therapist",
+              "additional_categories": null,
+              "category_ids": [
+                "physiotherapist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886973eac0fccf69:0x869b6aeec33bc608",
+              "cid": "9699463796182730248",
+              "latitude": 38.254109799999995,
+              "longitude": -85.7494906,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 9,
+              "rank_absolute": 9,
+              "domain": "uoflhealth.org",
+              "title": "UofL Health – Frazier Rehabilitation Institute",
+              "original_title": null,
+              "url": "https://uoflhealth.org/locations/frazier-rehabilitation-institute/?utm_source=GMBSocialClimb&utm_medium=UofLHealth%E2%80%93FrazierRehabilitationInstitute",
+              "contact_url": "https://uoflphysicians.com/request-an-appointment/",
+              "contributor_url": "https://maps.google.com/maps/contrib/110675453112312109984",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 3.6,
+                "votes_count": 97,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 25,
+                "2": 5,
+                "3": 4,
+                "4": 8,
+                "5": 55
+              },
+              "snippet": "220 Abraham Flexner Way, Louisville, KY 40202",
+              "address": "220 Abraham Flexner Way, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "220 Abraham Flexner Way",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJDUlfc7dyaYgRWBDTDdmcvSY",
+              "phone": "+1502-582-7400",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFn86OPZC4xyJXVzUpHku6pZsMybRj8YO8g0AUNc2H-Wlqwf-CdBq2TorEYG4Y1psi2tOrT74xiIbbnWKrQT80y3YFyxUlsT5QuCsVtFzI3qdr5yO62Wf-Nyl7GdZxVoQh-fTRKOvNAI3c=w420-h240-k-no",
+              "total_photos": 24,
+              "category": "Rehabilitation center",
+              "additional_categories": null,
+              "category_ids": [
+                "rehabilitation_center"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "open"
+              },
+              "feature_id": "0x886972b7735f490d:0x26bd9cd90dd31058",
+              "cid": "2791559800093347928",
+              "latitude": 38.249080299999996,
+              "longitude": -85.75042839999999,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"He was was sent to Frazier Rehab to relearn how to talk, walk and think.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 10,
+              "rank_absolute": 10,
+              "domain": null,
+              "title": "Sheila L. Kelly, LMT, Myofascial Release Therapist",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/111364000016972782369",
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "#130, 40207, S Sherrin Ave #119, Louisville, KY 40207",
+              "address": "#130, 40207, S Sherrin Ave #119, Louisville, KY 40207",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "#130, 40207, S Sherrin Ave #119",
+                "city": "Louisville",
+                "zip": "40207",
+                "region": "KY",
+                "country_code": "US"
+              },
+              "place_id": "ChIJafbNQqJzaYgRJ2DpjMEc1TQ",
+              "phone": "+1502-741-4453",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=8vfGjkE_FpYvn2TDyE2X2Q&cb_client=search.gws-prod.gps&w=408&h=240&yaw=217.3927&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Sports massage therapist",
+              "additional_categories": null,
+              "category_ids": [
+                "sports_massage_therapist"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 20,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 20,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 20,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 20,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 20,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886973a242cdf669:0x34d51cc18ce96027",
+              "cid": "3806980677629992999",
+              "latitude": 38.252702899999996,
+              "longitude": -85.758363,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 11,
+              "rank_absolute": 11,
+              "domain": "uoflhealth.org",
+              "title": "UofL Physicians – Physical Medicine & Rehabilitation",
+              "original_title": null,
+              "url": "https://uoflhealth.org/locations/uofl-physicians-pmr/?utm_source=GMBSocialClimb&utm_medium=UofLPhysicians%E2%80%93PhysicalMedicine%26Rehabilitation",
+              "contact_url": "https://uoflphysicians.com/request-an-appointment/",
+              "contributor_url": "https://maps.google.com/maps/contrib/103882368429042620908",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.8,
+                "votes_count": 106,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 3,
+                "2": 0,
+                "3": 3,
+                "4": 2,
+                "5": 98
+              },
+              "snippet": "225 Abraham Flexner Way Ste 505, Louisville, KY 40202",
+              "address": "225 Abraham Flexner Way Ste 505, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "225 Abraham Flexner Way Ste 505",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJnUCoT9NzaYgR_3E_ERPu_6w",
+              "phone": "+1502-588-2160",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=zHhKN_cZ0NYhswsBmhlRMg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=110.74542&pitch=0&thumbfov=100",
+              "total_photos": 3,
+              "category": "Medical clinic",
+              "additional_categories": null,
+              "category_ids": [
+                "medical_clinic"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886973d34fa8409d:0xacffee13113f71ff",
+              "cid": "12465944059245982207",
+              "latitude": 38.24999,
+              "longitude": -85.7505619,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"She was so nice and took her time to listen and really truly cares.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 12,
+              "rank_absolute": 12,
+              "domain": "uoflhealth.org",
+              "title": "Paige Werner, PT, DPT",
+              "original_title": null,
+              "url": "https://uoflhealth.org/provider/paige-werner-physical-therapy/?utm_source=GMBSocialClimb&utm_medium=PaigeWerner%2CPT%2CDPT",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/108495210189252509332",
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "204 E Market St Ste 103, Louisville, KY 40202",
+              "address": "204 E Market St Ste 103, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "204 E Market St Ste 103",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJA3a7VJFzaYgRJ5rUUES-8Ec",
+              "phone": "+1502-815-7900",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFdwMVVy4ixQSC6EmrJe_yuJupSzakRNAfmvN9-4cb1yXSOnen7goev1hxul_zzvLU61h5UR3E15SeECcJ8zTYEfugwZr9ehQR5oiSXz4_KUAjpbBod2X5XFleJOU3vcw7c2j9K5CQRkI8=w408-h408-k-no",
+              "total_photos": 2,
+              "category": "Physical therapist",
+              "additional_categories": null,
+              "category_ids": [
+                "physiotherapist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x8869739154bb7603:0x47f0be4450d49a27",
+              "cid": "5183852371726604839",
+              "latitude": 38.254109799999995,
+              "longitude": -85.7494906,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 13,
+              "rank_absolute": 13,
+              "domain": "www.kleinertkutz.com",
+              "title": "Holly D. Habeeb, MS",
+              "original_title": null,
+              "url": "http://www.kleinertkutz.com/",
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "225 Abraham Flexner Way, Louisville, KY 40202",
+              "address": "225 Abraham Flexner Way, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "225 Abraham Flexner Way",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJU4KmS7dyaYgRQk70aq6ER5o",
+              "phone": "+1502-561-4263",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Yn5AFv4JFJ462M-fJa97NA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=54.851135&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Physical therapist",
+              "additional_categories": null,
+              "category_ids": [
+                "physiotherapist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972b74ba68253:0x9a4784ae6af44e42",
+              "cid": "11117000089840930370",
+              "latitude": 38.2495435,
+              "longitude": -85.7507547,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 14,
+              "rank_absolute": 14,
+              "domain": null,
+              "title": "Selena M. Mcgill, CHT",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "225 Abraham Flexner Way, Louisville, KY 40202",
+              "address": "225 Abraham Flexner Way, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "225 Abraham Flexner Way",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJK4KmS7dyaYgRnqUpNw-4_9c",
+              "phone": "+1502-562-0398",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=fBi0C3_liET9IFGD3nlR2w&cb_client=search.gws-prod.gps&w=408&h=240&yaw=199.41353&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Occupational therapist",
+              "additional_categories": [
+                "Physical therapist"
+              ],
+              "category_ids": [
+                "occupational_therapist",
+                "physiotherapist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972b74ba6822b:0xd7ffb80f3729a59e",
+              "cid": "15564361212705219998",
+              "latitude": 38.249259599999995,
+              "longitude": -85.75139569999999,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 15,
+              "rank_absolute": 15,
+              "domain": "kpadocs.com",
+              "title": "Flaspoehler Stephanie A",
+              "original_title": null,
+              "url": "http://kpadocs.com/",
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "100 E Market St #2, Louisville, KY 40202",
+              "address": "100 E Market St #2, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "100 E Market St #2",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ3Tum57tyaYgRybQog0VjqrQ",
+              "phone": "+1502-587-8000",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=l37l8ZJkdoQe0Ohqap86AA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=61.08398&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Physical therapist",
+              "additional_categories": null,
+              "category_ids": [
+                "physiotherapist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972bbe7a63bdd:0xb4aa63458328b4c9",
+              "cid": "13018326823072216265",
+              "latitude": 38.254425499999996,
+              "longitude": -85.75163069999999,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 16,
+              "rank_absolute": 16,
+              "domain": "www.kleinertkutz.com",
+              "title": "Robert Roberts, PT",
+              "original_title": null,
+              "url": "http://www.kleinertkutz.com/",
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 1,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 1
+              },
+              "snippet": "225 Abraham Flexner Way, Louisville, KY 40202",
+              "address": "225 Abraham Flexner Way, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "225 Abraham Flexner Way",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJU4KmS7dyaYgRk5dqXYQNx58",
+              "phone": "+1502-561-4263",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Yn5AFv4JFJ462M-fJa97NA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=54.851135&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Physical therapist",
+              "additional_categories": null,
+              "category_ids": [
+                "physiotherapist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972b74ba68253:0x9fc70d845d6a9793",
+              "cid": "11513185834550073235",
+              "latitude": 38.2495435,
+              "longitude": -85.7507547,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 17,
+              "rank_absolute": 17,
+              "domain": null,
+              "title": "BB Massage & Spa",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/117748650726620625542",
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "555 S 4th St, Louisville, KY 40202",
+              "address": "555 S 4th St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "555 S 4th St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJwWn1jxNzaYgRGqQh-OsdwUA",
+              "phone": "+1804-274-9300",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Z-z0b2siIoE0CnER_WrSlQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=69.87827&pitch=0&thumbfov=100",
+              "total_photos": 5,
+              "category": "Massage therapist",
+              "additional_categories": null,
+              "category_ids": [
+                "massage_therapist"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "open"
+              },
+              "feature_id": "0x886973138ff569c1:0x40c11debf821a41a",
+              "cid": "4666043588250018842",
+              "latitude": 38.2494896,
+              "longitude": -85.7572118,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 18,
+              "rank_absolute": 18,
+              "domain": "uoflhealth.org",
+              "title": "Julie Thornton, OTR/L",
+              "original_title": null,
+              "url": "https://uoflhealth.org/provider/julie-thornton-hand-therapist/?utm_source=GMBSocialClimb&utm_medium=JulieThornton%2COTR%2FL",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/116332640382135332031",
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "225 Abraham Flexner Way Suite 760, Louisville, KY 40202",
+              "address": "225 Abraham Flexner Way Suite 760, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "225 Abraham Flexner Way Suite 760",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJdz8_jKdzaYgRiO_5pT4IzwY",
+              "phone": "+1502-561-4200",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGr2oHZS6xVLyNwaItA4gFq7t1pva4s0tZ7O7zsk0s7EJIhndJnXzW2GUp-3WvaWchyFeNLJiRs8vN_tNaedNzYKuCJ-b3cZnUdog9C6Q0vBS6NJs8SrTWRs211gkXYadQ9VM725341kbg=w408-h408-k-no",
+              "total_photos": 2,
+              "category": "Occupational therapist",
+              "additional_categories": null,
+              "category_ids": [
+                "occupational_therapist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886973a78c3f3f77:0x6cf083ea5f9ef88",
+              "cid": "490619949572288392",
+              "latitude": 38.2499915,
+              "longitude": -85.75056149999999,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 19,
+              "rank_absolute": 19,
+              "domain": "uoflhealth.org",
+              "title": "Meredith Bosley, MS, OTR/L",
+              "original_title": null,
+              "url": "https://uoflhealth.org/provider/meredith-bosley-hand-therapist/?utm_source=GMBSocialClimb&utm_medium=MeredithBosley%2CMS%2COTR%2FL",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/106857797809999825897",
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "225 Abraham Flexner Way Ste 760, Louisville, KY 40202",
+              "address": "225 Abraham Flexner Way Ste 760, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "225 Abraham Flexner Way Ste 760",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJpWQUmr9zaYgRbaezctJrR70",
+              "phone": "+1502-561-4295",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=zHhKN_cZ0NYhswsBmhlRMg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=110.659355&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Occupational therapist",
+              "additional_categories": null,
+              "category_ids": [
+                "occupational_therapist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886973bf9a1464a5:0xbd476bd272b3a76d",
+              "cid": "13638988548126517101",
+              "latitude": 38.2499909,
+              "longitude": -85.7505614,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 20,
+              "rank_absolute": 20,
+              "domain": "www.omnihotels.com",
+              "title": "Mokara Salon & Spa",
+              "original_title": null,
+              "url": "https://www.omnihotels.com/hotels/louisville/spa?utm_source=gmblisting&utm_medium=organic",
+              "contact_url": "https://omnispaexperiences.com/#/en-US/omnilouisville/spa",
+              "contributor_url": "https://maps.google.com/maps/contrib/107256649994564343765",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.5,
+                "votes_count": 156,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 12,
+                "2": 6,
+                "3": 5,
+                "4": 9,
+                "5": 124
+              },
+              "snippet": "400 S 2nd St, Louisville, KY 40202",
+              "address": "400 S 2nd St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "400 S 2nd St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ1wKf8rpyaYgRWpg27k7oL6E",
+              "phone": "+1502-625-1585",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGAZUXxU_ybcw0uNtYOdi_IZc-4nhjnmaf29_So8s1cau87xHMZmttCMkoSTzI4rtgd5PxPCnMZbCIEilbme2yBdt6WOVugps7QqVUP4abivu5oK-9e04N7BgJka1obZhxYcsnAWg=w408-h544-k-no",
+              "total_photos": 69,
+              "category": "Spa",
+              "additional_categories": [
+                "Massage therapist"
+              ],
+              "category_ids": [
+                "spa",
+                "massage_therapist"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886972baf29f02d7:0xa12fe84eee36985a",
+              "cid": "11614757389713447002",
+              "latitude": 38.2518449,
+              "longitude": -85.7546449,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"My massage was done by Truth & she gave me the best massage of my life!\""
+                }
+              ],
+              "is_directory_item": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

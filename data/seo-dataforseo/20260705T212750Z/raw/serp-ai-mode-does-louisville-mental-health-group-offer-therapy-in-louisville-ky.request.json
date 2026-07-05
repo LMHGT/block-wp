@@ -1,0 +1,15 @@
+{
+  "name": "serp-ai-mode-Does Louisville Mental Health Group offer therapy in Louisville KY?",
+  "method": "POST",
+  "path": "/v3/serp/google/ai_mode/live/advanced",
+  "body": [
+    {
+      "keyword": "Does Louisville Mental Health Group offer therapy in Louisville KY?",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "tag": "lmhg ai mode Does Louisville Mental Health Group offer therapy in Louisville KY?"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:18.587168+00:00"
+}

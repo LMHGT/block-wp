@@ -1,0 +1,18 @@
+[
+  {
+    "task": "onpage-default-ua-summary",
+    "crawl_progress": "finished",
+    "pages_crawled": 0,
+    "extended_crawl_status": "forbidden_http_header",
+    "total_pages": 0,
+    "gateway": "168.119.141.170"
+  },
+  {
+    "task": "onpage-browser-ua-summary",
+    "crawl_progress": "finished",
+    "pages_crawled": 0,
+    "extended_crawl_status": "forbidden_http_header",
+    "total_pages": 0,
+    "gateway": "168.119.141.170"
+  }
+]

@@ -1,0 +1,443 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "7.5899 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060041-9766-0139-0000-750786717b02",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "7.4864 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "What is community-based mental health care, and who provides it in Louisville?",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode expanded What is community-based mental health care, and who provides it in Louisville?",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "What is community-based mental health care, and who provides it in Louisville?",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=What%20is%20community-based%20mental%20health%20care%2C%20and%20who%20provides%20it%20in%20Louisville%3F&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:41:15 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[1]/div[1]/div[3]",
+              "markdown": "Community-based mental health care `brings mental health services directly into the environments where people live, work, and connect` . Instead of relying solely on institutional psychiatric hospitals, it focuses on outpatient treatments, crisis intervention, peer support, and rehabilitation within the local community. This evidence-based model prioritizes accessibility, long-term recovery, and integrated care for vulnerable populations.[](https://www.who.int/news-room/commentaries/detail/from-isolation-to-inclusion---community-based-mental-health-care) [[1]](https://www.who.int/news-room/commentaries/detail/from-isolation-to-inclusion---community-based-mental-health-care)[[2]](https://publichealth.tulane.edu/blog/what-is-community-mental-health/)[[3]](https://findhelpnow.org/ky/facilities/UHVibGljRmFjaWxpdHlOb2RlOjMwNTA=)[[4]](https://www.facebook.com/TonyAmandaMetcalfe/)[[5]](https://csgjusticecenter.org/resources/funding/opportunities/community-mental-health-services-block-grant/)\n\nSeveral major organizations and clinics provide this care in Louisville:\n\nKey Providers in Louisville\n\n- **[Seven Counties Services](https://sevencounties.org/):** Serving as Kentucky's leading Community Mental Health Center (CMHC), this organization operates several Certified Community Behavioral Health Clinic (CCBHC) locations across Jefferson County. They provide comprehensive services for behavioral health and substance use, regardless of insurance status.[](https://sevencounties.org/) [[1]](https://sevencounties.org/)[[2]](https://findhelpnow.org/ky/facilities/UHVibGljRmFjaWxpdHlOb2RlOjMwNTA=)\n- **[UofL Health - Peace Hospital](https://uoflhealth.org/services/mental-and-behavioral-health/):** One of the largest private psychiatric facilities in the country, it provides both inpatient stabilization and extensive outpatient community programs, including no-charge assessments.[](https://uoflhealth.org/services/mental-and-behavioral-health/) [[1]](https://uoflhealth.org/services/mental-and-behavioral-health/)[[2]](https://uoflhealth.org/articles/helping-the-public-access-behavioral-health-treatment/)[[3]](https://uoflhealth.org/services/mental-and-behavioral-health/adult-outpatient-services/)[[4]](https://startyourrecovery.org/facility/uofl-health-peace-hospital-louisville-ky)[[5]](https://uoflhealth.org/services/mental-and-behavioral-health/substance-abuse/)\n- **[Park DuValle Community Health Center](https://www.pdchc.org/):** A Federally Qualified Health Center (FQHC) that provides integrated behavioral health alongside primary care services, located primarily in the West End of Louisville.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://www.mightycause.com/organization/Park-Duvalle-Community-Health-Center)[[3]](https://recruiting.paylocity.com/recruiting/jobs/Details/3654403/Park-DuValle-Community-Health-Centers/Peer-Support-Specialist)[[4]](https://www.courier-journal.com/story/news/local/2025/05/28/park-duvalle-community-health-centers-to-build-community-food-center/83472262007/)\n- **Collective Care Center at Spalding University:** Offers affordable therapy and assessment services to the broader Louisville community, provided by graduate-level students under expert clinical supervision.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n- **Louisville Recovery Community Connection:** Provides community-based peer support, mentorship, and recovery resources for individuals struggling with substance use.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://www.findhelp.org/housing/help-find-housing--lexington-ky)[[3]](https://startyourrecovery.org/treatment/rehab-centers/kentucky/lyndon)\n\nCrisis Resources & Support Hubs\n\n- **[Mental Health Lou Wellness Hub](https://www.mentalhealthlou.com/):** A local initiative aimed at connecting residents to local wellness resources, training, and mental health advocacy groups.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://www.mentalhealthlou.com/about)[[3]](https://louisvilleky.gov/government/american-rescue-plan/public-health-contingencies)\n- **Seven Counties Crisis Lines:** They operate 24/7 localized support:\n\t- Adult Crisis Line: **(502) 589-4313** \n\t- Child Crisis Line: **(502) 589-8070** [](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://www.giveforgoodlouisville.org/organization/Citizens-Of-Louisville-Organized-And-United-Together)[[3]](https://sevencounties.org/crisis/)\n- **988 Suicide and Crisis Lifeline:** Simply call or text **988** for immediate, free, and confidential support, 24/7.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://vahemophilia.org/community-resources/mental-health/)[[3]](https://www.mywoc.org/suicide-intervention-prevention-resources/)[[4]](https://www.contactsyracuse.org/contact-community-services-celebrates-two-year-anniversary-of-988-suicide-crisis-lifeline/)[[5]](https://www.facebook.com/msudenverhealthinstitute/)\n\nWould you like to explore **insurance-based options**, **specialized trauma therapy** , or **substance use recovery programs** available in the Louisville area?",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Community-based mental health care brings mental health services directly into the environments where people live, work, and connect. Instead of relying solely on institutional psychiatric hospitals, it focuses on outpatient treatments, crisis intervention, peer support, and rehabilitation within the local community. This evidence-based model prioritizes accessibility, long-term recovery, and integrated care for vulnerable populations. World Health Organization (WHO) +1",
+                  "markdown": "Community-based mental health care `brings mental health services directly into the environments where people live, work, and connect` . Instead of relying solely on institutional psychiatric hospitals, it focuses on outpatient treatments, crisis intervention, peer support, and rehabilitation within the local community. This evidence-based model prioritizes accessibility, long-term recovery, and integrated care for vulnerable populations.[](https://www.who.int/news-room/commentaries/detail/from-isolation-to-inclusion---community-based-mental-health-care) [[1]](https://www.who.int/news-room/commentaries/detail/from-isolation-to-inclusion---community-based-mental-health-care)[[2]](https://publichealth.tulane.edu/blog/what-is-community-mental-health/)[[3]](https://findhelpnow.org/ky/facilities/UHVibGljRmFjaWxpdHlOb2RlOjMwNTA=)[[4]](https://www.facebook.com/TonyAmandaMetcalfe/)[[5]](https://csgjusticecenter.org/resources/funding/opportunities/community-mental-health-services-block-grant/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "World Health Organization (WHO)",
+                      "domain": "www.who.int",
+                      "url": "https://www.who.int/news-room/commentaries/detail/from-isolation-to-inclusion---community-based-mental-health-care",
+                      "title": "From isolation to inclusion: community-based mental health care",
+                      "text": "Community-based mental health care brings services closer to where people live, work, study and connect. It reduces isolation and ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Tulane University",
+                      "domain": "publichealth.tulane.edu",
+                      "url": "https://publichealth.tulane.edu/blog/what-is-community-mental-health/",
+                      "title": "What Is Community Mental Health? - Tulane University",
+                      "text": "People experiencing mental health crises — ranging from substance misuse to schizophrenia — need support. In the United States, 1 ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Find Help Now",
+                      "domain": "findhelpnow.org",
+                      "url": "https://findhelpnow.org/ky/facilities/UHVibGljRmFjaWxpdHlOb2RlOjMwNTA=",
+                      "title": "Seven Counties Services - Child & Family West Office",
+                      "text": "Favorite Facility. Louisville, KY. Louisville, KY. This Location Is A Certified Community Behavioral Health Clinic! Our Certified ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Facebook",
+                      "domain": "www.facebook.com",
+                      "url": "https://www.facebook.com/TonyAmandaMetcalfe/",
+                      "title": "Lighthouse Sober Solutions | Elizabethtown KY",
+                      "text": "￼Lighthouse is a program that provides community- based psychiatric rehabilitation and recovery services for individuals with ment..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "CSG Justice Center",
+                      "domain": "csgjusticecenter.org",
+                      "url": "https://csgjusticecenter.org/resources/funding/opportunities/community-mental-health-services-block-grant/",
+                      "title": "Community Mental Health Services Block Grant - CSG Justice Center",
+                      "text": "Flexible funding for community-based programs, such as community-based mental health centers, psychosocial rehabilitation programs..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Several major organizations and clinics provide this care in Louisville:",
+                  "markdown": "Several major organizations and clinics provide this care in Louisville:",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": "Key Providers in Louisville",
+                  "text": "Seven Counties Services : Serving as Kentucky's leading Community Mental Health Center (CMHC), this organization operates several Certified Community Behavioral Health Clinic (CCBHC) locations across Jefferson County. They provide comprehensive services for behavioral health and substance use, regardless of insurance status. UofL Health - Peace Hospital : One of the largest private psychiatric facilities in the country, it provides both inpatient stabilization and extensive outpatient community programs, including no-charge assessments. Park DuValle Community Health Center : A Federally Qualified Health Center (FQHC) that provides integrated behavioral health alongside primary care services, located primarily in the West End of Louisville. Collective Care Center at Spalding University: Offers affordable therapy and assessment services to the broader Louisville community, provided by graduate-level students under expert clinical supervision. Louisville Recovery Community Connection : Provides community-based peer support, mentorship, and recovery resources for individuals struggling with substance use. Louisville Recovery Community Connection",
+                  "markdown": "- **[Seven Counties Services](https://sevencounties.org/):** Serving as Kentucky's leading Community Mental Health Center (CMHC), this organization operates several Certified Community Behavioral Health Clinic (CCBHC) locations across Jefferson County. They provide comprehensive services for behavioral health and substance use, regardless of insurance status.[](https://sevencounties.org/) [[1]](https://sevencounties.org/)[[2]](https://findhelpnow.org/ky/facilities/UHVibGljRmFjaWxpdHlOb2RlOjMwNTA=)\n- **[UofL Health - Peace Hospital](https://uoflhealth.org/services/mental-and-behavioral-health/):** One of the largest private psychiatric facilities in the country, it provides both inpatient stabilization and extensive outpatient community programs, including no-charge assessments.[](https://uoflhealth.org/services/mental-and-behavioral-health/) [[1]](https://uoflhealth.org/services/mental-and-behavioral-health/)[[2]](https://uoflhealth.org/articles/helping-the-public-access-behavioral-health-treatment/)[[3]](https://uoflhealth.org/services/mental-and-behavioral-health/adult-outpatient-services/)[[4]](https://startyourrecovery.org/facility/uofl-health-peace-hospital-louisville-ky)[[5]](https://uoflhealth.org/services/mental-and-behavioral-health/substance-abuse/)\n- **[Park DuValle Community Health Center](https://www.pdchc.org/):** A Federally Qualified Health Center (FQHC) that provides integrated behavioral health alongside primary care services, located primarily in the West End of Louisville.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://www.mightycause.com/organization/Park-Duvalle-Community-Health-Center)[[3]](https://recruiting.paylocity.com/recruiting/jobs/Details/3654403/Park-DuValle-Community-Health-Centers/Peer-Support-Specialist)[[4]](https://www.courier-journal.com/story/news/local/2025/05/28/park-duvalle-community-health-centers-to-build-community-food-center/83472262007/)\n- **Collective Care Center at Spalding University:** Offers affordable therapy and assessment services to the broader Louisville community, provided by graduate-level students under expert clinical supervision.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n- **Louisville Recovery Community Connection:** Provides community-based peer support, mentorship, and recovery resources for individuals struggling with substance use.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://www.findhelp.org/housing/help-find-housing--lexington-ky)[[3]](https://startyourrecovery.org/treatment/rehab-centers/kentucky/lyndon)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Seven Counties Services",
+                      "description": null,
+                      "url": "https://sevencounties.org/",
+                      "domain": "sevencounties.org"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "UofL Health - Peace Hospital",
+                      "description": null,
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/",
+                      "domain": "uoflhealth.org"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Park DuValle Community Health Center",
+                      "description": null,
+                      "url": "https://www.pdchc.org/",
+                      "domain": "www.pdchc.org"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Seven Counties Services",
+                      "domain": "sevencounties.org",
+                      "url": "https://sevencounties.org/",
+                      "title": "Seven Counties Services | Mental Health, Addiction Recovery ...",
+                      "text": "Your Journey, Our Passion! As Kentucky's leading Community Mental Health Center and behavioral health services provider, Seven Cou..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Find Help Now",
+                      "domain": "findhelpnow.org",
+                      "url": "https://findhelpnow.org/ky/facilities/UHVibGljRmFjaWxpdHlOb2RlOjMwNTA=",
+                      "title": "Seven Counties Services - Child & Family West Office",
+                      "text": "Favorite Facility. Louisville, KY. Louisville, KY. This Location Is A Certified Community Behavioral Health Clinic! Our Certified ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "UofL Health",
+                      "domain": "uoflhealth.org",
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/",
+                      "title": "Mental and Behavioral Health | Louisville KY - UofL Health",
+                      "text": "We're Here to Help. If you or someone you love is experiencing symptoms of depression, please contact Peace Hospital for a no-char..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "UofL Health",
+                      "domain": "uoflhealth.org",
+                      "url": "https://uoflhealth.org/articles/helping-the-public-access-behavioral-health-treatment/",
+                      "title": "Helping the Public Access Behavioral Health Treatment | Louisville KY",
+                      "text": "Peace Hospital offers no-charge, level of care assessments for individuals who are in crisis at Peace Hospital or any UofL Health ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "UofL Health",
+                      "domain": "uoflhealth.org",
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/adult-outpatient-services/",
+                      "title": "Mental and Behavioral Health Adult Outpatient Services | Louisville KY",
+                      "text": "Outpatient Services Outpatient programs addressing psychiatric and/or substance use disorders are provided by UofL Health and are ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Start Your Recovery",
+                      "domain": "startyourrecovery.org",
+                      "url": "https://startyourrecovery.org/facility/uofl-health-peace-hospital-louisville-ky",
+                      "title": "UofL Health: Reviews, Insurance & Photos (Louisville, KY)",
+                      "text": "Overview Located on a secure, wooded campus in Louisville, Kentucky, UofL Health – Peace Hospital is one of the largest psychiatri..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "UofL Health",
+                      "domain": "uoflhealth.org",
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/substance-abuse/",
+                      "title": "Substance Abuse | Louisville KY",
+                      "text": "Therapist and Case Management At Peace Hospital ( UofL Health – Peace Hospital ) , every patient is assigned to a therapist and ca..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Mightycause",
+                      "domain": "www.mightycause.com",
+                      "url": "https://www.mightycause.com/organization/Park-Duvalle-Community-Health-Center",
+                      "title": "Park DuValle Community Health Center Inc.",
+                      "text": "Park DuValle Community Health Centers is deeply committed to improving health, wellness, and the quality of life in the communitie..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Paylocity",
+                      "domain": "recruiting.paylocity.com",
+                      "url": "https://recruiting.paylocity.com/recruiting/jobs/Details/3654403/Park-DuValle-Community-Health-Centers/Peer-Support-Specialist",
+                      "title": "Park DuValle Community Health Centers - Peer Support Specialist",
+                      "text": "Park DuValle Community Health Centers Join our dedicated team at a Federally Qualified Health Center (FQHC ( Federally Qualified H..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "The Courier-Journal",
+                      "domain": "www.courier-journal.com",
+                      "url": "https://www.courier-journal.com/story/news/local/2025/05/28/park-duvalle-community-health-centers-to-build-community-food-center/83472262007/",
+                      "title": "Park DuValle Community Health Centers to build Community Food Center",
+                      "text": "New community food center to open in Louisville's West End this fall. Here's where Park DuValle Community Health Centers is develo..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "FindHelp.org",
+                      "domain": "www.findhelp.org",
+                      "url": "https://www.findhelp.org/housing/help-find-housing--lexington-ky",
+                      "title": "help find housing programs in Lexington, ky | findhelp.org",
+                      "text": "Eligibility: This program helps people in or seeking recovery from substance use disorder or chaotic substance use. Description: O..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Start Your Recovery",
+                      "domain": "startyourrecovery.org",
+                      "url": "https://startyourrecovery.org/treatment/rehab-centers/kentucky/lyndon",
+                      "title": "2026’s Top Rehab Centers near Lyndon, KY (4 Free) - Drug & Alcohol",
+                      "text": "They ( Addiction Recovery Care (ARC) - Louisville Counseling Center ) offer outpatient counseling, medication-assisted treatment, ..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": "Crisis Resources & Support Hubs",
+                  "text": "Mental Health Lou Wellness Hub : A local initiative aimed at connecting residents to local wellness resources, training, and mental health advocacy groups. Seven Counties Crisis Lines: They operate 24/7 localized support: Adult Crisis Line: (502) 589-4313 Child Crisis Line: (502) 589-8070 988 Suicide and Crisis Lifeline: Simply call or text 988 for immediate, free, and confidential support, 24/7.",
+                  "markdown": "- **[Mental Health Lou Wellness Hub](https://www.mentalhealthlou.com/):** A local initiative aimed at connecting residents to local wellness resources, training, and mental health advocacy groups.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://www.mentalhealthlou.com/about)[[3]](https://louisvilleky.gov/government/american-rescue-plan/public-health-contingencies)\n- **Seven Counties Crisis Lines:** They operate 24/7 localized support:\n\t- Adult Crisis Line: **(502) 589-4313** \n\t- Child Crisis Line: **(502) 589-8070** [](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://www.giveforgoodlouisville.org/organization/Citizens-Of-Louisville-Organized-And-United-Together)[[3]](https://sevencounties.org/crisis/)\n- **988 Suicide and Crisis Lifeline:** Simply call or text **988** for immediate, free, and confidential support, 24/7.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://vahemophilia.org/community-resources/mental-health/)[[3]](https://www.mywoc.org/suicide-intervention-prevention-resources/)[[4]](https://www.contactsyracuse.org/contact-community-services-celebrates-two-year-anniversary-of-988-suicide-crisis-lifeline/)[[5]](https://www.facebook.com/msudenverhealthinstitute/)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Mental Health Lou Wellness Hub",
+                      "description": null,
+                      "url": "https://www.mentalhealthlou.com/",
+                      "domain": "www.mentalhealthlou.com"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Mental Health Lou",
+                      "domain": "www.mentalhealthlou.com",
+                      "url": "https://www.mentalhealthlou.com/about",
+                      "title": "Free Mental Wellness Resources & Events in Louisville — Mental Health Lou – Louisville, KY",
+                      "text": "In response, Mental Health Lou ( Mental Health Lou and You ) evolved into a wellness hub—a central resource designed to connect in..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/american-rescue-plan/public-health-contingencies",
+                      "title": "Public Health Contingencies",
+                      "text": "Visit Mental Health Lou: Your Community Wellness Hub or Seven Counties to connect with local mental health resources."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Give for Good Louisville",
+                      "domain": "www.giveforgoodlouisville.org",
+                      "url": "https://www.giveforgoodlouisville.org/organization/Citizens-Of-Louisville-Organized-And-United-Together",
+                      "title": "CLOUT",
+                      "text": "We are working with Seven Counties and Metro Council to establish a 24/7 mental health crisis drop-in center."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Seven Counties Services",
+                      "domain": "sevencounties.org",
+                      "url": "https://sevencounties.org/crisis/",
+                      "title": "Seven Counties Services Crisis Support",
+                      "text": "At Seven Counties Services, we offer a 24-Hour Mobile Crisis Team to bring help and hope wherever it's needed, whether that is at ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Virginia Hemophilia Foundation",
+                      "domain": "vahemophilia.org",
+                      "url": "https://vahemophilia.org/community-resources/mental-health/",
+                      "title": "Mental Health | Virginia Bleeding Disorders Foundation",
+                      "text": "988 SUICIDE & CRISIS LIFELINE Free and confidential support for people in distress. Prevention and crisis resources are available ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "WoMen of Connections Ministry",
+                      "domain": "www.mywoc.org",
+                      "url": "https://www.mywoc.org/suicide-intervention-prevention-resources/",
+                      "title": "Suicide Intervention/Prevention Resources – WoMen of Connections Ministry",
+                      "text": "Comments: Free, confidential support for individuals in crisis or concerned about someone else. Call or text 988 for immediate ass..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Contact Community Services",
+                      "domain": "www.contactsyracuse.org",
+                      "url": "https://www.contactsyracuse.org/contact-community-services-celebrates-two-year-anniversary-of-988-suicide-crisis-lifeline/",
+                      "title": "Contact Community Services Celebrates Two-Year Anniversary of 988 Suicide & Crisis Lifeline",
+                      "text": "Operating 24/7, this lifeline connects callers to trained crisis counselors who provide compassionate care and critical resources."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Facebook",
+                      "domain": "www.facebook.com",
+                      "url": "https://www.facebook.com/msudenverhealthinstitute/",
+                      "title": "MSU Denver Gina and Frank Day Health Institute | Denver CO",
+                      "text": "You are not alone. Need support? Call or text 988 to reach the Suicide & Crisis Lifeline—available 24/7, free, and confidential. #"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "LouisvilleKY.gov",
+                  "domain": "louisvilleky.gov",
+                  "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                  "title": "Community Mental Health Services - LouisvilleKY.gov",
+                  "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Seven Counties Services",
+                  "domain": "sevencounties.org",
+                  "url": "https://sevencounties.org/",
+                  "title": "Seven Counties Services | Mental Health, Addiction Recovery ...",
+                  "text": "Your Journey, Our Passion! As Kentucky's leading Community Mental Health Center and behavioral health services provider, Seven Cou..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Find Help Now",
+                  "domain": "findhelpnow.org",
+                  "url": "https://findhelpnow.org/ky/facilities/UHVibGljRmFjaWxpdHlOb2RlOjMwNTA=",
+                  "title": "Seven Counties Services - Child & Family West Office",
+                  "text": "Favorite Facility. Louisville, KY. Louisville, KY. This Location Is A Certified Community Behavioral Health Clinic! Our Certified ..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "UofL Health",
+                  "domain": "uoflhealth.org",
+                  "url": "https://uoflhealth.org/services/mental-and-behavioral-health/",
+                  "title": "Mental and Behavioral Health | Louisville KY - UofL Health",
+                  "text": "We're Here to Help. If you or someone you love is experiencing symptoms of depression, please contact Peace Hospital for a no-char..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "World Health Organization (WHO)",
+                  "domain": "www.who.int",
+                  "url": "https://www.who.int/news-room/commentaries/detail/from-isolation-to-inclusion---community-based-mental-health-care",
+                  "title": "From isolation to inclusion: community-based mental health care",
+                  "text": "Community-based mental health care brings services closer to where people live, work, study and connect. It reduces isolation and ..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Tulane University",
+                  "domain": "publichealth.tulane.edu",
+                  "url": "https://publichealth.tulane.edu/blog/what-is-community-mental-health/",
+                  "title": "What Is Community Mental Health? - Tulane University",
+                  "text": "People experiencing mental health crises — ranging from substance misuse to schizophrenia — need support. In the United States, 1 ..."
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

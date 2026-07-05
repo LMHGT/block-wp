@@ -1,0 +1,140 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "15.3432 sec.",
+  "cost": 0.0234921,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060031-9766-0612-0000-d3f27fb738ac",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "15.3328 sec.",
+      "cost": 0.0234921,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "chat_gpt",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "chat_gpt",
+        "user_prompt": "Which Louisville providers help teens with anxiety, depression, or trauma?",
+        "model_name": "gpt-5.4-nano",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response chat_gpt Which Louisville providers help teens with anxiety, depression, or trauma?",
+        "web_search": true,
+        "web_search_country_iso_code": "US",
+        "web_search_city": "Louisville",
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gpt-5.4-nano-2026-03-17",
+          "input_tokens": 8948,
+          "output_tokens": 882,
+          "reasoning_tokens": 339,
+          "web_search": true,
+          "money_spent": 0.0228921,
+          "datetime": "2026-07-06 00:32:00 +00:00",
+          "items": [
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Searching for mental health providers**\n\nI need to use web.run to find local mental health providers because it's essential to have accurate information. I’m thinking about listing organizations like Norton Children's, UofL Physicians Psychiatry, Centerstone, Seven Counties, and Youth Villages, all based in Kentucky. Also, should I consider Jewish affiliations? I guess I’ll just search and see what results come up for this specific criterion in the area!"
+                }
+              ]
+            },
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Searching for authoritative sources**\n\nI need to find more authoritative sources for each provider by checking their official websites. Specifically, I should look into Centerstone and Seven Counties. I'll search for \"Centerstone KY outpatient youth mental health\" to gather the right information. Also, I want to include Youth Villages in my search. Let's make sure to have reliable data for these youth mental health services!"
+                }
+              ]
+            },
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Organizing mental health resources**\n\nI've hit the tool limit, so I’ll stick to existing sources and my general knowledge without making unsourced claims. I need to list the providers: UofL Health psychiatry, Norton 990, Havenpoint, Life’s Journey, Renew, Northstar, Stepstone, Apricus, Brock Family, Sacred Journey, Anchor of Hope, and HAHTC. Centerstone may not be ideal. I’ll make sure to include guidance on calling and checking age and insurance, plus mention crisis resources like 988. Let's answer with bullet points on what they offer."
+                }
+              ]
+            },
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here are some **Louisville-area providers** that advertise services for **teens** dealing with **anxiety, depression, and/or trauma** (individual therapy, sometimes with EMDR/TF-CBT/CBT, and/or psychiatry/med management). I’d still recommend calling to confirm **age range** and **insurance/availability**.\n\n## Counseling / therapy (teens + trauma/anxiety/depression)\n- **Northstar Counseling Center (Louisville)** – Offers counseling for depression, anxiety, and “effects of traumatic experience.” ([northstarcounselingcenter.com](https://northstarcounselingcenter.com/?utm_source=openai))  \n- **Havenpoint Counseling (Louisville)** – States it provides child/adolescent therapy and includes trauma-focused approaches (also references CBT). ([havenpointcounseling.com](https://www.havenpointcounseling.com/?utm_source=openai))  \n- **Life’s Journey Counseling (Louisville)** – Lists multiple modalities including **DBT, EMDR, and Trauma-Focused CBT (TF-CBT)**. ([lifesjourneyky.com](https://www.lifesjourneyky.com/?utm_source=openai))  \n- **Renew Counseling Services (Louisville)** – States it’s **EMDR-trained** and focuses on **trauma-focused/EMDR** work. ([renewcounselingservices.org](https://www.renewcounselingservices.org/?utm_source=openai))  \n- **Apricus Counseling (Louisville)** – Lists **EMDR** and **trauma-informed therapy** among its therapy options. ([apricuscounseling.org](https://apricuscounseling.org/therapy?utm_source=openai))  \n- **Brock Family Therapy Center (Louisville)** – Describes clinicians trained in **CBT, EMDR**, and having specialists for **trauma, anxiety, and depression**. ([brockfamilytherapycenter.com](https://www.brockfamilytherapycenter.com/about-brock-family-therapy-center?utm_source=openai))  \n- **StepStone Family & Youth Services (Kentucky; Louisville service listed)** – Lists services including **trauma & PTSD**. ([stepstoneyouth.com](https://www.stepstoneyouth.com/kentucky-family-therapy/?utm_source=openai))  \n- **Anchor of Hope Counseling (Louisville)** – Specifically calls out help for youth/teens with **anxiety** and **depression**. ([anchorofhopelouisville.com](https://anchorofhopelouisville.com/?utm_source=openai))  \n- **Home Away from Home Therapeutic Center (HAHTC) (Louisville)** – States it’s **trauma-informed** and references **TF-CBT**. ([shaquilla-cooper.clientsecure.me](https://shaquilla-cooper.clientsecure.me/?utm_source=openai))  \n- **Sacred Journey Counseling (Louisville)** – Notes EMDR training and work with “complex trauma” (verify teen fit/availability). ([sacredjourneycounseling.com](https://www.sacredjourneycounseling.com/?utm_source=openai))  \n\n## Medical care / psychiatry (evaluation + medication when needed)\n- **UofL Health – Psychiatry (Louisville)** – UofL Health lists child/adolescent psychiatry and areas including **anxiety**",
+                  "annotations": [
+                    {
+                      "title": "Northstar Counseling Center",
+                      "url": "https://northstarcounselingcenter.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Havenpoint Counseling: Expert Mental Health Therapists in Louisville, KY – Individual, Child, Adolescent, and Couples Therapy",
+                      "url": "https://www.havenpointcounseling.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Schedule an appointment at Life's Journey Counseling",
+                      "url": "https://www.lifesjourneyky.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Renew Counseling Services | Online Therapy | Louisville, KY",
+                      "url": "https://www.renewcounselingservices.org/?utm_source=openai"
+                    },
+                    {
+                      "title": "Therapy • Apricus Counseling",
+                      "url": "https://apricuscounseling.org/therapy?utm_source=openai"
+                    },
+                    {
+                      "title": "About Brock Family Therapy Center",
+                      "url": "https://www.brockfamilytherapycenter.com/about-brock-family-therapy-center?utm_source=openai"
+                    },
+                    {
+                      "title": "StepStone Family Therapy - StepStone Family & Youth Services",
+                      "url": "https://www.stepstoneyouth.com/kentucky-family-therapy/?utm_source=openai"
+                    },
+                    {
+                      "title": "Anchor of Hope Counseling | Therapy Help | Louisville KY 40223",
+                      "url": "https://anchorofhopelouisville.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Home Away from Home Therapeutic Center (HAHTC), LLC - Behavioral health therapy in Louisville, KY",
+                      "url": "https://shaquilla-cooper.clientsecure.me/?utm_source=openai"
+                    },
+                    {
+                      "title": "Amber Stewart - Counseling",
+                      "url": "https://www.sacredjourneycounseling.com/?utm_source=openai"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "Louisville KY teen counseling anxiety depression trauma provider Centerstone Seven Counties",
+            "Norton Children's hospital Louisville adolescent psychiatry anxiety depression",
+            "UofL psychiatry outpatient child adolescent Louisville depression anxiety therapy",
+            "Louisville KY trauma therapy youth provider Trauma-focused CBT",
+            "Centerstone Louisville KY outpatient mental health youth",
+            "Youth Villages Kentucky Louisville behavioral health outpatient",
+            "Seven Counties Services Louisville adolescent mental health therapy renamed Centerstone",
+            "Norton Children's behavioral and mental health child and adolescent psychiatry 2 to 21"
+          ]
+        }
+      ]
+    }
+  ]
+}

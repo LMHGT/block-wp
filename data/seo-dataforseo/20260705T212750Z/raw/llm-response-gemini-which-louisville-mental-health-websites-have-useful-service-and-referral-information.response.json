@@ -1,0 +1,110 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "6.0689 sec.",
+  "cost": 0.0358778,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-6dbef77358ca",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "6.0578 sec.",
+      "cost": 0.0358778,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "gemini",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "gemini",
+        "user_prompt": "Which Louisville mental health websites have useful service and referral information?",
+        "model_name": "gemini-2.5-flash-lite",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response gemini Which Louisville mental health websites have useful service and referral informa",
+        "web_search": true,
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gemini-2.5-flash-lite",
+          "input_tokens": 110,
+          "output_tokens": 667,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.0352778,
+          "datetime": "2026-07-06 00:32:27 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here are some Louisville mental health websites that offer useful service and referral information:\n\n*   **Seven Counties Services:** This organization provides 24/7 crisis lines for both adults and children. They also offer community-based treatment and support services for individuals with behavioral health needs, including mental health disorders, substance use disorders, and developmental disabilities. They are committed to working with community partners and offer a referral form on their website.\n*   **NAMI Louisville:** The National Alliance on Mental Illness (NAMI) offers free assistance with mental health issues. You can call their crisis line or text \"NAMI\" to 741741. Their website provides additional resources and information on mental health services in the state, including hotlines, support groups, and treatment centers.\n*   **Mental Health Lou:** This non-profit organization focuses on breaking down barriers to care and reducing stigma through education and programs, with an emphasis on underserved neighborhoods. They offer workshops, practical mental health education, and community connections. They also partner with businesses to support workplace wellness.\n*   **LouisvilleKY.gov (Community Mental Health Services):** The city's official website provides a wealth of resources, including links to brochures on mental health services, medical and mental health resources, and Spanish-language mental health services. They also list important crisis lines such as Kentucky's 988 Suicide and Crisis Lifeline, the National Suicide Prevention Lifeline, and the Crisis Text Line (text LOU to 741741).\n*   **The Brook Hospitals:** With two locations in Louisville, The Brook Hospitals offer inpatient, partial hospitalization, and intensive outpatient care for seniors, adults, adolescents, and children. They have been providing mental health and substance use treatment since 1985.\n*   **LifeStance Health:** This clinic offers a full range of mental health services, including psychiatrists, therapists, and psychologists. They provide in-person and online appointments for a variety of conditions and accept many insurance plans.\n*   **Norton Behavioral Medicine:** This service offers coordinated mental health care that is integrated with your primary care provider. They treat common mental health concerns and can connect you with longer-term behavioral health providers in the community when needed. They offer both telehealth and in-person visits.\n*   **Mandala House:** This outpatient mental health center serves clients over 14 years old and offers individual, group, relationship, and family therapy. They have a multidisciplinary team and also offer telehealth services across Kentucky.\n*   **Hagan Health:** Hagan Health provides personalized psychiatric care for adults dealing with conditions like depression, anxiety, ADHD, and trauma. They emphasize collaboration and offer telehealth services for Kentucky residents.\n*   **Louisville Mental Health Group:** This private practice offers a broad spectrum of mental health services, including individual and family therapy, group therapy, case management, and reunification services, delivered by a multidisciplinary team.\n\nFor immediate crisis support, you can also reach out to the **Mental Health Hotline** at **866-903-3787**.",
+                  "annotations": [
+                    {
+                      "title": "mentalhealthhotline.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYf4f06dNbDbC_nFqD15oGzJOmsmDjtHU7dfnUXjnG31MJvb4qXpSQgwFepc3C_Kv7QBegaoZVpVoPCEPqvZKrKwm3rXGuQvfoYgIDPbFl5kf4lYxrmRi-NGP8pYAdkAr3Y4zuFydMp_7mVivTHA=="
+                    },
+                    {
+                      "title": "sevencounties.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHntWhtfCdxaNsg8-i22blxJNQcSVa6NU87Ouwi_eKzsi5jM3usrljPQ9eTgLGhFGfQ5cd1CWZPrGt2Sp1TlmrfdJUof-_JSxr5ViZE49qaYm8haa2H2GvQXIsZ3dwQLTcII4Wzs3jUUcoZ"
+                    },
+                    {
+                      "title": "mentalhealthlou.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFdXFs9eJRyl4hkcHJZBnqQEAs3A8aHnL9NstsZ_O6n-6Lcpz0azfWRhWT80g3PYPjbxidt7jZSv-zYBUbPCDL7mYpAk2Y-azmY8AFkS2XTmtKoVQg9RqHRqQ="
+                    },
+                    {
+                      "title": "louisvilleky.gov",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHflZ__lE2xMprCLoFxUhAD_gEv4uwEOp6uA7NM9QqXVTB2opXFE_X2-VaHY-9jlfmpsMD_7v8gVHc35zSwWl3om4hrcpbppq8WZLp08dX-8sof0EKJ3_z0ADgMQH0pC4PE4639B5lyL53Yuuyna3_FIi_0IrlehgoHJaJP6LQjA2AeZebEPORaM4mr7Otb"
+                    },
+                    {
+                      "title": "thebrookhospitals.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3FVO0Nbi-wYJarV7evRgAMv3UMIzpTRRxH6vclVp-3216vdAZ59PbFRLTphLM2Ivu_oXIjPlVabLQIMAJEm0jTIn8i2LWrBE9gbliAZ5An5-4CjQFH_OE"
+                    },
+                    {
+                      "title": "lifestance.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMcBl4oO-4xN12MAeA-oOuF9rmSXQpSAfDbEUlSNDJ9ECtOAxN4OhTY-Bj0M2L3eTVB7lHmKmYLehthPnij_1LHCSpJ6Q4vDHRIWPqem0sfkhQgcXyq-YVBAM_W-WZBDZhPD76yOxBSivOlVoKt7WSW8YOcbEyU3QLaCvwg5bB"
+                    },
+                    {
+                      "title": "nortonhealthcare.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHW-U398qk4D_oyHg2NFhv2I3AXIOuA1ss4h4bKFtqYizjzPjJKpl325y4iGpjNb-UOYGQdl-rrexdkRfZ170rs4A9Y5UJjmRYS8dsiJqvAA8KMbjoBTTlQC6jgppdr-Zsg_KhlSvTyGtXki-Y_pkCVE0qXBBaYeADOjQ7wlLhslKs="
+                    },
+                    {
+                      "title": "nortonhealthcare.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFg-RD2yem4Vlm_UDFH8RtcbgwOue93falwTi86U0_JfOww7NN_YD92-ZT0noDubchv7tRuFlOpm9UR6Xlu0fi_bsNVznR1DgYO7N9BmLkqYZokmFI5wsazzCDdojmLr-L5elmDWw_4_Md47AxIJycLht9DKTKnvCBoIxDuYa_j9-fxvSKf-5NuRHI="
+                    },
+                    {
+                      "title": "mandalalouisville.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDgQabD_4S4ysDxOwB7brAkRHZOJMWQ0r41vt_s9eQKdheadGouMMCc1ioSozKnWvOiokCE5ksXtgvcpd2RhWQp6LxigHEkE1W-PuYQPdMXrOo0SCUrEHr"
+                    },
+                    {
+                      "title": "haganhealth.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHU9nN6SyIh8-NPjuvvg3WWw12AxUJt7QAgAnNgKkPUUYOTi5ycs5JxvNKGkkUsFrvAsNvvCf5ZobNf81BLH7emQeOgQcdSvnMur9J1nKZqYT2e"
+                    },
+                    {
+                      "title": "louisvillementalhealth.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0bc9s2ivn8BHrrH5K7JtyPQzDVlIONms478Se8j35MY88l2sJHcqDa-627u-iz9IjdtVBpsTW8ejXPFoxcbSg4vdvy2clY1VDzTZ01psf-dlRY9O08_T3btt_h6w="
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "Louisville mental health resources",
+            "Louisville mental health services",
+            "Louisville mental health referrals"
+          ]
+        }
+      ]
+    }
+  ]
+}

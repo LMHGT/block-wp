@@ -1,0 +1,12 @@
+{
+  "name": "business-google-questions-and-answers-cid",
+  "path": "/v3/business_data/google/questions_and_answers/live",
+  "body": [
+    {
+      "keyword": "cid:2768315829466915400",
+      "location_code": 1017825,
+      "language_code": "en",
+      "tag": "lmhg gbp qanda cid"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.8494 sec.",
+  "cost": 0.006306,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060031-9766-0612-0000-21aca2c869c5",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.8383 sec.",
+      "cost": 0.006306,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "perplexity",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "perplexity",
+        "user_prompt": "Find a Louisville therapist who accepts Medicaid.",
+        "model_name": "sonar",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response perplexity Find a Louisville therapist who accepts Medicaid.",
+        "max_output_tokens": 700
+      },
+      "result": [
+        {
+          "model_name": "sonar",
+          "input_tokens": 33,
+          "output_tokens": 673,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.005706,
+          "datetime": "2026-07-06 00:32:02 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here are several **Louisville therapists and clinics** that accept **Medicaid** and are currently welcoming new clients:\n\n### 1. **Kentucky Counseling Center (KCC) – Louisville**\n- **Accepts:** Medicaid, Anthem, Passport, Molina, Aetna, Humana, United, Cigna, and more  \n- **Services:** Counseling, psychiatry, medication management, case management  \n- **Wait Time:** No long wait times  \n- **Phone:** Call to request an appointment online  \n- **Website:** [kentuckycounselingcenter.com](https://kentuckycounselingcenter.com/kentucky-counseling-center/louisville/) [5]\n\n### 2. **Louisville Mental Health Group**\n- **Accepts:** All Medicaid plans (Passport, WellCare, Aetna Better Health, Anthem, Cigna, etc.)  \n- **Services:** Individual, child/adolescent, teen group, disordered eating group therapy  \n- **Status:** Welcoming new clients of all ages  \n- **Founded:** 2016 by Stacey Mattingly-Neal, Tyler Horn, Kim Sullivan  \n- **Website:** [louisvillementalhealth.org](https://louisvillementalhealth.org) [6]\n\n### 3. **Norton Behavioral Medicine (Telehealth)**\n- **Accepts:** Medicaid, Medicare, most commercial insurance  \n- **Services:** Therapists, psychologists, psychiatrists, addiction specialists  \n- **Format:** Secure telehealth for KY and Indiana residents  \n- **Website:** [nortonhealthcare.com](https://nortonhealthcare.com/services-and-conditions/behavioral-health/specialists/) [7]\n\n### 4. **Individual Therapists via Psychology Today (Medicaid Category)**\n- **Alisha Blais**, LCSW – Online only; accepts Aetna Better Health, Passport Molina, UHC Community Plan, WellCare [1]  \n- **Danni E. Lee**, LCSW – In-network with KY Medicaid and all major insurances [1]  \n- **Daniel**, LPCA – Takes Medicaid, Anthem BCBS, private pay [1]  \n- **Rev. Maria Cristal Encarnación**, MAMFT – Part of group accepting Medicaid plans [1]  \n- **A. R. Ward**, LCADC – Part of group practice accepting Medicaid [1]  \n- **Website:** [psychologytoday.com](https://www.psychologytoday.com/us/therapists/ky/louisville?category=medicaid) [1]\n\n### 5. **Lifestance Health** (Community Report)\n- **Reported to accept Medicaid** and still accepting new patients  \n- **Source:** Reddit user in Louisville [4]  \n- **Note:** Verify directly with the clinic before scheduling\n\n---\n\n💡 **Important Tip:** Before starting therapy, **verify your Medicaid coverage** for behavioral health by calling the customer service number on your insurance card. Some plans may not cover outpatient therapy [2].\n\nFor the fastest access, consider starting with **Kentucky Counseling Center** or **Louisville Mental Health Group**, both noted for **no long wait times** and **broad Medicaid acceptance** [5][6].",
+                  "annotations": [
+                    {
+                      "title": "Medicaid Therapists in Louisville, KY - Psychology Today",
+                      "url": "https://www.psychologytoday.com/us/therapists/ky/louisville?category=medicaid"
+                    },
+                    {
+                      "title": "Medicaid Therapists in Louisville, KY | Mental Health Match",
+                      "url": "https://mentalhealthmatch.com/browse-therapists/kentucky/louisville/medicaid"
+                    },
+                    {
+                      "title": "Louisville, KY, Medicaid Therapists",
+                      "url": "https://therapist.com/us/kentucky/louisville/?category=medicaid"
+                    },
+                    {
+                      "title": "Therapist who accept Medicaid : r/Louisville - Reddit",
+                      "url": "https://www.reddit.com/r/Louisville/comments/1ir9vtq/therapist_who_accept_medicaid/"
+                    },
+                    {
+                      "title": "Louisville Therapist: Expert Psychiatrist & Counselors | KCC",
+                      "url": "https://kentuckycounselingcenter.com/kentucky-counseling-center/louisville/"
+                    },
+                    {
+                      "title": "Louisville Mental Health Group: Mental Health Clinic In Louisville",
+                      "url": "https://louisvillementalhealth.org"
+                    },
+                    {
+                      "title": "Telehealth Psychiatrists and Behavioral Health Specialists",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/specialists/"
+                    },
+                    {
+                      "title": "Medicaid Therapists in Louisville, Colorado - Zencare",
+                      "url": "https://zencare.co/us/colorado/louisville/therapists/insurance/medicaid"
+                    },
+                    {
+                      "title": "Louisville Health & Healing: Private Therapy Louisville KY",
+                      "url": "https://www.louisvillehealthandhealing.com"
+                    },
+                    {
+                      "title": "Find Therapists in Louisville, Ohio - Psych Hub",
+                      "url": "https://psychhub.com/us/ohio/louisville"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "onpage-default-ua-non_indexable",
+  "path": "/v3/on_page/non_indexable",
+  "body": [
+    {
+      "id": "07060026-9766-0216-0000-a89e78b481c1",
+      "limit": 50
+    }
+  ]
+}

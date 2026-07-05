@@ -1,0 +1,213 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "21.4751 sec.",
+  "cost": 0.073198,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060038-9766-0612-0000-190bac2a1b31",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "21.4222 sec.",
+      "cost": 0.073198,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "claude",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "claude",
+        "user_prompt": "Find a Louisville therapist who accepts Medicaid.",
+        "model_name": "claude-sonnet-4-6",
+        "web_search": true,
+        "max_output_tokens": 1024,
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response claude Find a Louisville therapist who accepts Medicaid."
+      },
+      "result": [
+        {
+          "model_name": "claude-sonnet-4-6",
+          "input_tokens": 15876,
+          "output_tokens": 998,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.072598,
+          "datetime": "2026-07-06 00:38:55 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here are some great options for finding a Louisville therapist who accepts Medicaid:\n\n---\n\n### 🏥 Local Louisville Providers\n\n**1. Kentucky Counseling Center**\n🌐 [kentuckycounselingcenter.com](https://kentuckycounselingcenter.com)\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Kentucky Counseling Center accepts many major insurance plans including Medicaid, Medicare, and commercial insurance providers.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Counseling and Psychiatry | Kentucky Counseling Center",
+                      "url": "https://kentuckycounselingcenter.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Most clients are able to schedule their first appointment and see a provider the same week, and they have one of the largest networks of dedicated mental health professionals in the state.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Counseling and Psychiatry | Kentucky Counseling Center",
+                      "url": "https://kentuckycounselingcenter.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Telehealth therapy is available for individuals, couples, teens, and families throughout Kentucky.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Counseling and Psychiatry | Kentucky Counseling Center",
+                      "url": "https://kentuckycounselingcenter.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n**2. Mindful Mending**\n🌐 Listed on [Psychology Today – Louisville Medicaid Therapists](https://www.psychologytoday.com/us/therapists/ky/louisville?category=medicaid)\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They accept Passport Medicaid, UHC Medicaid, and UHC commercial plans, and are currently accepting new clients. Their compassionate team of therapists supports children, teens, and adults through life's challenges.",
+                  "annotations": [
+                    {
+                      "title": "Find Medicaid Therapists and Psychologists in Louisville, KY - Psychology Today",
+                      "url": "https://www.psychologytoday.com/us/therapists/ky/louisville?category=medicaid"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n**3. Best Life Mental Health Services, LLC**\n🌐 [bestlifelouisville.com](https://www.bestlifelouisville.com/pricing/)\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Making mental health services accessible to the community's most vulnerable members is a priority at Best Life Louisville, and Targeted Case Management is provided through Medicaid insurance plans.",
+                  "annotations": [
+                    {
+                      "title": "Pricing - Best Life Mental Health Services, LLC",
+                      "url": "https://www.bestlifelouisville.com/pricing/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They accept commercial insurance and all Medicaid plans.",
+                  "annotations": [
+                    {
+                      "title": "Pricing - Best Life Mental Health Services, LLC",
+                      "url": "https://www.bestlifelouisville.com/pricing/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 🔍 Therapist Search Directories (Louisville-Specific)\n\nUse these to browse and filter by Medicaid acceptance:\n\n- **Psychology Today** – [Find Medicaid Therapists in Louisville, KY](https://www.psychologytoday.com/us/therapists/ky/louisville?category=medicaid)\n- **Mental Health Match** – [Medicaid Therapists in Louisville](https://mentalhealthmatch.com/browse-therapists/kentucky/louisville/medicaid) — ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "specializes in matching people to therapists who accept or are in-network with Medicaid and can help you find an experienced therapist or counselor who best meets your needs.",
+                  "annotations": [
+                    {
+                      "title": "Medicaid Therapists in Louisville, KY | Mental Health Match",
+                      "url": "https://mentalhealthmatch.com/browse-therapists/kentucky/louisville/medicaid"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n- **Zencare** – [Louisville Medicaid Therapists](https://zencare.co/us/kentucky/louisville/louisville-jefferson-county/therapists/insurance/medicaid) — ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "lets you visit therapist profiles, watch an introductory video, and book a free initial call to find a good fit.",
+                  "annotations": [
+                    {
+                      "title": "Medicaid Therapists in Louisville-Jefferson County — Zencare",
+                      "url": "https://zencare.co/us/kentucky/louisville/louisville-jefferson-county/therapists/insurance/medicaid"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n- **ZocDoc** – [Louisville Medicaid Psychiatrists](https://www.zocdoc.com/psychiatrists/louisville-249776pm/medicaid-358m)\n\n---\n\n### 💡 Tips Before You Book\n- ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Before starting therapy, verify your outpatient Medicaid therapy coverage, as not all plans cover behavioral health therapy. Call the customer service number on your insurance card to find out what your plan covers.",
+                  "annotations": [
+                    {
+                      "title": "Medicaid Therapists in Louisville, KY | Mental Health Match",
+                      "url": "https://mentalhealthmatch.com/browse-therapists/kentucky/louisville/medicaid"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n- ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "When you see a therapist who is in-network with Medicaid, you'll typically pay only a copay, which ranges from $0–$75 per session.",
+                  "annotations": [
+                    {
+                      "title": "Medicaid Therapists in Louisville-Jefferson County — Zencare",
+                      "url": "https://zencare.co/us/kentucky/louisville/louisville-jefferson-county/therapists/insurance/medicaid"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\nWould you like help narrowing down by specialty, location in Louisville, or telehealth vs. in-person options?",
+                  "annotations": null
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "Louisville Kentucky therapist accepts Medicaid 2025"
+          ]
+        }
+      ]
+    }
+  ]
+}

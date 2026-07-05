@@ -1,0 +1,16 @@
+{
+  "name": "serp-local-finder-child therapy Louisville KY",
+  "method": "POST",
+  "path": "/v3/serp/google/local_finder/live/advanced",
+  "body": [
+    {
+      "keyword": "child therapy Louisville KY",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "depth": 20,
+      "tag": "lmhg local finder child therapy Louisville KY"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:07.410512+00:00"
+}

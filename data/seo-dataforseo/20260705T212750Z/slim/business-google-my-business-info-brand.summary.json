@@ -1,0 +1,16 @@
+{
+  "name": "business-google-my-business-info-brand",
+  "path": "/v3/business_data/google/my_business_info/live",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "cost": 0.0054,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "result_counts": [
+    1
+  ],
+  "task_statuses": [
+    20000
+  ],
+  "elapsed_seconds": 5.064
+}

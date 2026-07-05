@@ -1,0 +1,72 @@
+{
+  "title": "Louisville Mental Health Group",
+  "description": "Louisville Mental Health Group provides comprehensive mental health services including counseling, trauma treatment, EMDR, and case management for adults, children, and families throughout Jefferson County and surrounding areas. Our experienced team offers both in-office and in-home therapy, working within a community wrap-around model that extends care to schools, courts, and wherever our clients need support. We specialize in child behavioral intervention, family therapy, couples counseling, and trauma-informed care. With both male and female providers offering diverse expertise, we accept most commercial insurance and Medicaid plans. Our flexible scheduling typically allows new clients to begin treatment within seven days.",
+  "category": "Mental health clinic",
+  "category_ids": [
+    "mental_health_clinic",
+    "counselor",
+    "family_counselor",
+    "mental_health_service",
+    "social_worker"
+  ],
+  "additional_categories": [
+    "Counselor",
+    "Family counselor",
+    "Mental health service",
+    "Social worker"
+  ],
+  "cid": "2768315829466915400",
+  "place_id": "ChIJmfG18wgLaYgRSGJ3aZQIayY",
+  "address": "4229 Bardstown Rd Ste 310, Louisville, KY 40218",
+  "phone": "+1502-416-1416",
+  "url": "https://louisvillementalhealth.org/",
+  "domain": "louisvillementalhealth.org",
+  "total_photos": 3,
+  "is_claimed": true,
+  "questions_and_answers_count": null,
+  "latitude": 38.1880877,
+  "longitude": -85.6379469,
+  "work_hours": null,
+  "rating": {
+    "rating_type": "Max5",
+    "value": 4.4,
+    "votes_count": 19,
+    "rating_max": null
+  },
+  "rating_distribution": {
+    "1": 1,
+    "2": 2,
+    "3": 0,
+    "4": 1,
+    "5": 15
+  },
+  "q_and_a_items": [
+    {
+      "type": "google_business_question_item",
+      "rank_group": 1,
+      "rank_absolute": 1,
+      "question_id": "8@1:CAESGUNWX0NtdXZobmdPZVl4ak5HdHRBQWZQeHc|",
+      "url": "https://www.google.com/maps/place/data=!4m5!3m4!1s0x0:0x266b089469776248!10e4!18m1!1s8%401%3ACAESGUNWX0NtdXZobmdPZVl4ak5HdHRBQWZQeHc%7C?hl=en&gl=US&gws_rd=cr&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+      "profile_image_url": "https://lh3.googleusercontent.com/a-/ALV-UjWdcVHCU46Rbv9nuiIS2PMn70tqY8MMqFBW45rpyCXMjG9rrDAnnA=s120-c-rp-mo-ba12-br100",
+      "profile_url": "https://www.google.com/maps/contrib/101002899358007850140?hl=en-US",
+      "profile_name": "Whitney Parker",
+      "question_text": "Do they do individual sessions with a 4 yrs old",
+      "original_question_text": null,
+      "time_ago": "3 years ago",
+      "timestamp": "2023-07-05 21:39:26 +00:00",
+      "items": [
+        {
+          "type": "google_business_answer_element",
+          "answer_id": "8@1:CAESGUNWX0JtOEx4cElQai0xak5HNk1BQWh5Y3c|",
+          "profile_image_url": "https://maps.gstatic.com/tactile/placeqa/merchant_2x.png",
+          "profile_url": null,
+          "profile_name": "Louisville Mental Health Group",
+          "answer_text": "Thanks for asking, we have seen four year old's before. Usually the younger the child, the more family is involved in sessions, but every situation is unique. Feel free to reach out with any further questions.",
+          "original_answer_text": null,
+          "time_ago": "3 years ago",
+          "timestamp": "2023-07-05 21:39:26 +00:00"
+        }
+      ]
+    }
+  ]
+}

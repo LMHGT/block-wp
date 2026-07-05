@@ -1,0 +1,112 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "6.0120 sec.",
+  "cost": 0.0358161,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-e259deac2858",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "5.9994 sec.",
+      "cost": 0.0358161,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "gemini",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "gemini",
+        "user_prompt": "Which Louisville providers help teens with anxiety, depression, or trauma?",
+        "model_name": "gemini-2.5-flash-lite",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response gemini Which Louisville providers help teens with anxiety, depression, or trauma?",
+        "web_search": true,
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gemini-2.5-flash-lite",
+          "input_tokens": 137,
+          "output_tokens": 506,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.0352161,
+          "datetime": "2026-07-06 00:32:21 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Several Louisville providers offer specialized care for teens dealing with anxiety, depression, or trauma. Here are some options:\n\n*   **Grace Psychological Services:** This practice offers in-person and online therapy for adolescents aged 13-17, focusing on anxiety, depression, and trauma. They utilize evidence-based methods like Cognitive Behavioral Therapy (CBT), Dialectical Behavior Therapy (DBT), and Trauma-Focused Cognitive Behavioral Therapy (TF-CBT).\n*   **The Morton Center:** Serving teens aged 12-17, The Morton Center provides services for substance use and co-occurring mental health concerns like anxiety, depression, and trauma. They offer individual and family therapy, as well as an Adolescent Recovery Program.\n*   **Columbus Behavioral Center:** This center provides residential and outpatient treatment for youth ages 8-18, utilizing therapies such as Trauma-Focused Cognitive Behavioral Therapy and Dialectical Behavioral Therapy.\n*   **LifeStance Health:** LifeStance Health has multiple locations in Louisville offering child and adolescent therapy and psychiatry services. They address a wide range of issues including anxiety, depression, and trauma.\n*   **Best Life Mental Health Services, LLC:** This practice offers therapy for children and teens to help with trauma, anxiety, and depression, using a variety of techniques including play therapy and talk therapy.\n*   **Creative Family Counseling:** This practice specializes in therapy for teens and their families, offering interventions for trauma, depression, and anxiety. They also utilize animal-assisted therapies and have therapists trained in TF-CBT and EMDR.\n*   **Heartwood Therapy Place:** This organization offers individual and family counseling for teens and adults, with a focus on trauma. They utilize therapies such as EMDR and address conditions like anxiety and depression.\n*   **University of Louisville School of Medicine - Child and Adolescent Psychiatry and Psychology:** This academic department is involved in research and training, preparing professionals to deliver evidence-based care for youth mental health.\n\nFor a broader search for child and adolescent psychiatrists and therapists in the Louisville area, you can also check resources like Psychology Today and Mental Health Match. These platforms allow you to filter by specialty, insurance, and availability.",
+                  "annotations": [
+                    {
+                      "title": "louisvillegracepsychological.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHCM139vjnqwF1hO60QO3XS7fRAzl2_3I1PGN5tLqkMMVhnxB-SowElzFd_ZU-2ck5kow_NnKC86Uh28gvtNu801IodqnRHlEIvrhYRQlU-t_COxpVJLUv9GrW5hmMa1SFBHJX6_87u5l2O-KIxaNPWBpRnMapK9qeBWcO"
+                    },
+                    {
+                      "title": "themortoncenter.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELNkJ8BNptHMTESuo-Qudw6Q8UHFZbL9Mor9Plet47qBByRuA05ma0MEqV3PiC4oCuherwBQ86aghgyHrFvD2uTq8BA4p8J7mqJQ8fEzFsIg26H5Bv4sjK-h8LVAkGkrGNfA=="
+                    },
+                    {
+                      "title": "columbusbehavioral.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxL8CRPdxiH-_bTXN6BQU-R92L_lmItA83FyAphqfXNvamT2KmQtwKMR0atGeI2xrQJUUmBG9_qYP43wb6ijYXwxqguyv_KSrfzahGrzL4TtcsAMr6-9QUQzpujXTIwzjq89W39G2erCCDaCM-iYI7yHT2GNrEDZTeFdG1yr2HbdwIEQy9Uc4Ihw=="
+                    },
+                    {
+                      "title": "lifestance.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEukiT66f-vx76QnaB6qk4nGtFct42WeTifiVXwYb8Sdex7GqVXUN-DH-4qBn4n_AfudcKt9D-rwpqJZ7Kccl2kIM2vBCe-pXxyzYMRcXqac34qHEv6O02kRrlRa7AChZ9kN2-ZqaEKL9x8Ju5PVO15xtlNquisJ4jLRN9RwMSDT949"
+                    },
+                    {
+                      "title": "lifestance.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7OWwi0evv4i2hjSDGVf-7qnMRv0a4vzUTcRkD4ttBtu6Oo1ljVES835Spjf-mctVIeaUnnv6aeTyUwjR44K54FW1rUTZGpzPEg-mvbwrEgAcOjJkgaQ0u3-faF7fm4v7p4bX2AjzU0WylareyR62h9obZ_utt-xNSsNF54qnEBKmxoxpBEDFYgQ=="
+                    },
+                    {
+                      "title": "bestlifelouisville.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPIOpc2b5C6ZqRBbs0sDMm3_3gLJSeq50Cn2NaR1VoVgK-9rzCO-Lao4owxp96UuBG_MlvD3QmLC2TYhiTcwjY-Ct7kdaSYCz5o0w209SBlJEEkYd0RLNyXIz6L9PH8zbIICkT0Mnub54KWW7c1mVrV6RCAkypSY6W"
+                    },
+                    {
+                      "title": "creativefamilycounseling.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEU5VjViPe25zKwEuaT4yHUoN2jE7_duMW80ceKdRslDgC8kIhpBJQovwCw1EHy5a6lZ_Jw1osjERIlCl64oNtca0rfLMwiallTtPsRI_ix6aGwugmBb4K4xynZ4-l3pc8WXJNJCIQRVICsemvO4a2Okpo="
+                    },
+                    {
+                      "title": "heartwoodtherapyplace.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0px17IEOewoyLn2TNAtHR3t5aiYLPlfek59XCpBYpLOQ3IKpcLPqgLczzkFsJ26aM7uL0OpxpezfqXavJCw_cZxSpyv2VFN56cxp0ew_z0kLgbCssWA8JDqVEtTI="
+                    },
+                    {
+                      "title": "louisville.edu",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElHnA11GxHVcsb27Ik5Hh53y8vlQXGGFQLx7nQoW7ygFI9LZOs1e7epGsMEmY69agns1GyNS4PCxR5T4WXYRCg9e88IKnEpAD8mS60BUJoWZhkfDTRsWnQehBYWpBJbxFsSFKjn6RMk_j88rIZV9AAK6GIDkc6iQ-feXpKokEz5A1QYOuLDY_jaB5bbvEs9na7BN2rmsWz-gdoM1hvFbnHZsnRF7XR6sFrKSsOOAvUk0BtnDe8Sb0X_Crx8R946g=="
+                    },
+                    {
+                      "title": "psychologytoday.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSxk5RIyVAd5TKk47qsukhNzskv8PvUohezO8DlHA47nrJzXpRY95yGtya0EY3ARIy5j3wArYCKXxObQ4db_qn88oyGIFYDgGZBc8604OTpD6DZ4kPzk6Ab771NAFQgifccUTRwjReWa1_lsPtKYl2UQdzTb1_5RqmAGZ_Ue8fgnVwCVNEhpMfQGVPJTjQlp0x1IkrciZlhZNFp5DgQQ=="
+                    },
+                    {
+                      "title": "mentalhealthmatch.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQr0ZEscQh6GhB-qgP6mqOifLjK-aAsEprX6b2EWzvZiyVGWNPf8EMOmFb9giO_PO7zBZv67Gk7EVzDbb9Pkwp_uALC9v1g1sU5oToVf9oWiGqLfuB9KU8-sietT7fUJhY4UNp3e5JC5B8ChTb-SknjnPz1f9seJHoYMvpeiwiPT2YjrmG4qOvzFi7cz2Ceo3i"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "Louisville providers for teens anxiety depression trauma",
+            "Louisville adolescent mental health services",
+            "Therapists in Louisville specializing in teen trauma",
+            "Louisville child and adolescent psychiatrists",
+            "Trauma-informed therapy Louisville teens"
+          ]
+        }
+      ]
+    }
+  ]
+}

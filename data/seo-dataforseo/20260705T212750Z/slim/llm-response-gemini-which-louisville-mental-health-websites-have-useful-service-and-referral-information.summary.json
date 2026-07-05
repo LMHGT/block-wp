@@ -1,0 +1,19 @@
+{
+  "name": "llm-response-gemini-Which Louisville mental health websites have useful service and referral information?",
+  "path": "/v3/ai_optimization/gemini/llm_responses/live",
+  "platform": "gemini",
+  "model": "gemini-2.5-flash-lite",
+  "prompt": "Which Louisville mental health websites have useful service and referral information?",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "cost": 0.0358778,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "result_counts": [
+    1
+  ],
+  "task_statuses": [
+    20000
+  ],
+  "elapsed_seconds": 6.631
+}

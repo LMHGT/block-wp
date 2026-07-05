@@ -1,0 +1,15 @@
+{
+  "name": "serp-ai-mode-expanded-Who offers in-home therapy or community-based mental health support in Louisville?",
+  "path": "/v3/serp/google/ai_mode/live/advanced",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "result_counts": [
+    1
+  ],
+  "task_statuses": [
+    20000
+  ]
+}

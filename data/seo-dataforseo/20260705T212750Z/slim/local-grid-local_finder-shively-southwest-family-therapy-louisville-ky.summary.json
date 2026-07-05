@@ -1,0 +1,19 @@
+{
+  "name": "local-grid-local_finder-shively-southwest-family therapy Louisville KY",
+  "path": "/v3/serp/google/local_finder/live/advanced",
+  "surface": "local_finder",
+  "point_name": "shively-southwest",
+  "coordinate": "38.2001000,-85.8227000,5000",
+  "keyword": "family therapy Louisville KY",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "result_counts": [
+    1
+  ],
+  "task_statuses": [
+    40102
+  ]
+}

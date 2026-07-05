@@ -1,0 +1,111 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "17.9506 sec.",
+  "cost": 0.02315905,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060031-9766-0612-0000-f13443543418",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "17.9225 sec.",
+      "cost": 0.02315905,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "chat_gpt",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "chat_gpt",
+        "user_prompt": "Find a Louisville therapist who accepts Medicaid.",
+        "model_name": "gpt-5.4-nano",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response chat_gpt Find a Louisville therapist who accepts Medicaid.",
+        "web_search": true,
+        "web_search_country_iso_code": "US",
+        "web_search_city": "Louisville",
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gpt-5.4-nano-2026-03-17",
+          "input_tokens": 8939,
+          "output_tokens": 617,
+          "reasoning_tokens": 292,
+          "web_search": true,
+          "money_spent": 0.02255905,
+          "datetime": "2026-07-06 00:31:51 +00:00",
+          "items": [
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Searching for therapists**\n\nI think I should use the web tool to find therapists in Louisville who accept Medicaid. It’s important to make sure I’m finding the right options for the user. Maybe I can provide some choices, but first I’ll need to perform the search. It’s a straightforward task, and I’m curious to see what results come up. Let’s get that search going!"
+                }
+              ]
+            },
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Finding Medicaid options**\n\nI need to gather 3-5 options for services that accept Medicaid. First, I'll mention Seven Counties Services, Solace Life Change, Omni Resource Services, Perfect Unity Behavioral Health, Trifecta Medical Group TMGmentalhealth, and Phoenix Preferred Care. It's important to confirm that these services offer therapy, not just psychiatry. I should also ask the user for their preferences and consider checking details quickly from reliable sources. Let's make this as helpful as possible!"
+                }
+              ]
+            },
+            {
+              "type": "reasoning",
+              "sections": null
+            },
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here are several **Louisville-area therapy/behavioral health providers that indicate they accept Kentucky Medicaid**—start with these and **call to confirm they’re taking new Medicaid patients** (availability changes):\n\n1) **Seven Counties Services – Child & Family West Office (Jefferson County)**  \n   *Louisville, KY 40211*  \n   They note they operate as a **Certified Community Behavioral Health Clinic (CCBHC)** and list **Medicaid** among accepted coverage. ([sevencounties.org](https://sevencounties.org/about/locations/child-family-west-office-jefferson-county/?utm_source=openai))\n\n2) **Omni Resource Services**  \n   Louisville, KY 40203 (clinic address on site)  \n   They state they provide behavioral health/therapy and **serve patients with Medicaid**. ([omniresourcesservices.org](https://www.omniresourcesservices.org/?utm_source=openai))\n\n3) **Perfect Unity Behavioral Health (Community Behavioral Health Clinic)**  \n   3500 Cane Run Road, Louisville, KY  \n   Lists that they **accept Medicaid** (and other insurance plans). ([mentalhealthus.org](https://www.mentalhealthus.org/facility/perfect-unity-behavioral-health?utm_source=openai))\n\n4) **Solace Life Change Wellness Center**  \n   (Louisville, KY)  \n   Their site states they **accept Medicaid** (and select other insurance). ([solacelifechange.com](https://solacelifechange.com/?utm_source=openai))\n\n5) **Trifecta Medical Group – TMG Mental Health**  \n   13050 Magisterial Drive, Suite 100, Louisville, KY 40223  \n   Their mental health page lists **KY Medicaid** among accepted insurance. ([trifectamedicalgroup.com](https://www.trifectamedicalgroup.com/tmgmentalhealth?utm_source=openai))\n\nIf you tell me **(1) your ZIP code**, **(2) adult vs. teen/child**, and **(3) what you want help with** (anxiety, depression, trauma/PTSD, substance use, etc.), I can narrow this to the most relevant 2–3 options and suggest what to ask when you call.",
+                  "annotations": [
+                    {
+                      "title": "Child & Family West Office | SCS Jefferson County",
+                      "url": "https://sevencounties.org/about/locations/child-family-west-office-jefferson-county/?utm_source=openai"
+                    },
+                    {
+                      "title": "Home | Omniresources.org",
+                      "url": "https://www.omniresourcesservices.org/?utm_source=openai"
+                    },
+                    {
+                      "title": "Perfect Unity Behavioral Health in Louisville, Kentucky | Mental Health US",
+                      "url": "https://www.mentalhealthus.org/facility/perfect-unity-behavioral-health?utm_source=openai"
+                    },
+                    {
+                      "title": "Solace Life Change | Solace Life Change",
+                      "url": "https://solacelifechange.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "About - Trifecta Medical Group - Louisville, KY Medical Group — Trifecta",
+                      "url": "https://www.trifectamedicalgroup.com/tmgmentalhealth?utm_source=openai"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "Louisville KY therapist accepts Medicaid",
+            "behavioral health clinic accepts Medicaid Louisville KY therapy",
+            "Kentuckiana therapist Medicaid accepted",
+            "Metro Louisville mental health Medicaid therapy"
+          ]
+        }
+      ]
+    }
+  ]
+}

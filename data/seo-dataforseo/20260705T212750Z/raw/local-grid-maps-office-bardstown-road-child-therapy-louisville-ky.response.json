@@ -1,0 +1,389 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "1.0208 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-d1f7d7f50097",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.9325 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "maps",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "maps",
+        "keyword": "child therapy Louisville KY",
+        "location_coordinate": "38.1880877,-85.6379469,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid maps office-bardstown-road child therapy Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "child therapy Louisville KY",
+          "type": "maps",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://google.com/maps/search/child+therapy+Louisville+KY/@38.1880877,-85.6379469,17z?hl=en&gl=US&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-07-05 21:36:27 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "maps_search"
+          ],
+          "se_results_count": 0,
+          "items_count": 3,
+          "items": [
+            {
+              "type": "maps_search",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "domain": "louisvillementalhealth.org",
+              "title": "Tyler Horn, LCSW",
+              "original_title": null,
+              "url": "https://louisvillementalhealth.org/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/115333971469400606130",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 5,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 5
+              },
+              "snippet": "4229 Bardstown Rd Suite 310, Louisville, KY 40218",
+              "address": "4229 Bardstown Rd Suite 310, Louisville, KY 40218",
+              "address_info": {
+                "borough": null,
+                "address": "4229 Bardstown Rd Suite 310",
+                "city": "Louisville",
+                "zip": "40218",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJh9nSrFYKaYgRfB1OGBhNz4s",
+              "phone": "+1502-416-1416",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFO_vUTbLWnhVpCcDJdEXWwP-NnTMrOYCa5tx7lYfOnp15MzPeX9jyoZJxYOfh8wF72zPqzKfsUyDsrR0tYiM1TnFdI23EToU0ZgZqYU50QcsiKtfbGPsEo93Y2QqQpbm9Ul_5O=w408-h272-k-no",
+              "total_photos": 2,
+              "category": "Mental health clinic",
+              "additional_categories": [
+                "Family counselor",
+                "Social worker"
+              ],
+              "category_ids": [
+                "mental_health_clinic",
+                "family_counselor",
+                "social_worker"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x88690a56acd2d987:0x8bcf4d18184e1d7c",
+              "cid": "10074355657333415292",
+              "latitude": 38.1880877,
+              "longitude": -85.6379469,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"He is the only one that has made my son feel safe enough to open up to him.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "domain": null,
+              "title": "Louisville Counseling Associates",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 1,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 1
+              },
+              "snippet": "4229 Bardstown Rd #102, Louisville, KY 40218",
+              "address": "4229 Bardstown Rd #102, Louisville, KY 40218",
+              "address_info": {
+                "borough": null,
+                "address": "4229 Bardstown Rd #102",
+                "city": "Louisville",
+                "zip": "40218",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJh9nSrFYKaYgR0brGmmHbTvc",
+              "phone": "+1502-495-1888",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=jjP4iyGkgNruunl1V4Piqg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=150.71053&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Counselor",
+              "additional_categories": null,
+              "category_ids": [
+                "counselor"
+              ],
+              "work_hours": null,
+              "feature_id": "0x88690a56acd2d987:0xf74edb619ac6bad1",
+              "cid": "17820421987806657233",
+              "latitude": 38.1881318,
+              "longitude": -85.6380179,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "domain": "louisvillementalhealth.org",
+              "title": "Louisville Mental Health Group",
+              "original_title": null,
+              "url": "https://louisvillementalhealth.org/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/108023962124029526389",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.4,
+                "votes_count": 19,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 1,
+                "2": 2,
+                "3": 0,
+                "4": 1,
+                "5": 15
+              },
+              "snippet": "4229 Bardstown Rd Ste 310, Louisville, KY 40218",
+              "address": "4229 Bardstown Rd Ste 310, Louisville, KY 40218",
+              "address_info": {
+                "borough": null,
+                "address": "4229 Bardstown Rd Ste 310",
+                "city": "Louisville",
+                "zip": "40218",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJmfG18wgLaYgRSGJ3aZQIayY",
+              "phone": "+1502-416-1416",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEAz1u-uCCgSYMrlS-nMaldB2zAs9t5vBDgHKu9DPVm_98GiaXnOEy_Y1GCSvE7o8rVlXO4lw8z93ubF9-IxNewyuudrKxXx-w73mg03l9u9y4Sh1wbs1pQ81yYbPI5hTKvaHWz=w408-h544-k-no",
+              "total_photos": 3,
+              "category": "Mental health service",
+              "additional_categories": [
+                "Counselor",
+                "Family counselor",
+                "Mental health clinic",
+                "Social worker"
+              ],
+              "category_ids": [
+                "mental_health_service",
+                "counselor",
+                "family_counselor",
+                "mental_health_clinic",
+                "social_worker"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 21,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 21,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 21,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 21,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 21,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x88690b08f3b5f199:0x266b089469776248",
+              "cid": "2768315829466915400",
+              "latitude": 38.1880877,
+              "longitude": -85.6379469,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"Kim is passionate about helping kids, and it shows in everything she does.\""
+                }
+              ],
+              "is_directory_item": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

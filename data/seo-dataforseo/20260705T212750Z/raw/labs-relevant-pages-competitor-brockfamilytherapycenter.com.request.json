@@ -1,0 +1,13 @@
+{
+  "name": "labs-relevant-pages-competitor-brockfamilytherapycenter.com",
+  "path": "/v3/dataforseo_labs/google/relevant_pages/live",
+  "body": [
+    {
+      "target": "brockfamilytherapycenter.com",
+      "location_code": 2840,
+      "language_code": "en",
+      "limit": 20,
+      "tag": "lmhg competitor pages brockfamilytherapycenter.com"
+    }
+  ]
+}

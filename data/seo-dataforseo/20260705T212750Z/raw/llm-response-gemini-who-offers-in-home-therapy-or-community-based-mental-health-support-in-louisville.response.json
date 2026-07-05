@@ -1,0 +1,118 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.1933 sec.",
+  "cost": 0.0358726,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-e0b7549d4e6d",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.1826 sec.",
+      "cost": 0.0358726,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "gemini",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "gemini",
+        "user_prompt": "Who offers in-home therapy or community-based mental health support in Louisville?",
+        "model_name": "gemini-2.5-flash-lite",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response gemini Who offers in-home therapy or community-based mental health support in Louisvill",
+        "web_search": true,
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gemini-2.5-flash-lite",
+          "input_tokens": 122,
+          "output_tokens": 651,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.0352726,
+          "datetime": "2026-07-06 00:32:15 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "There are several providers in Louisville, KY, offering in-home therapy and community-based mental health support.\n\n**For In-Home Therapy:**\n\n*   **StepStone Family & Youth Services** offers an Intensive In-Home Treatment Program for children and adolescents aged 5-18. Their services are provided in the youth's home and community setting and are reimbursed by Medicaid.\n*   **Haven Family Counseling** provides intensive in-home therapy and case management for children, adolescents, adults, and families. They also offer telehealth options.\n*   **Norton Home Health** provides a range of in-home health care services, including support for recovery and managing chronic conditions. They offer an on-call health care champion and assistance with managing conditions and medications.\n*   **Baptist Health Home Care** offers therapy and rehabilitation services in the home, including physical, occupational, and speech-language pathology. These services can help individuals regain functional skills after illness, surgery, or due to developmental conditions.\n*   **Holsman Physical Therapy** provides mobile physical and occupational therapy services throughout the Greater Louisville area, bringing rehabilitation directly to your home.\n\n**For Community-Based Mental Health Support:**\n\n*   **Seven Counties Services** is Kentucky's leading Community Mental Health Center, offering a wide range of services including mental health, addiction recovery, and developmental services. They focus on community-based care tailored to individual needs. They also offer specific programs like Assertive Community Treatment (ACT), which provides services in the client's home, workplace, or community for individuals with severe mental illnesses.\n*   **Bridgehaven Mental Health Services** provides community-based psychiatric rehabilitation and recovery services, education, and support to adults living with mental illness.\n*   **Louisville Metro Government** offers various resources, including Deflection Services/Crisis Call Diversion for mental health-related calls to 911 or the non-emergency police line. They also provide access to the 988 Lifeline for crisis support.\n*   **Mental Health Lou** aims to break down barriers to care through education and community programs, focusing on underserved neighborhoods. They offer workshops and connect individuals with resources.\n*   **The Brook Hospitals** in Louisville offer various levels of care, including inpatient, partial hospitalization, and intensive outpatient programs for seniors, adults, adolescents, and children. They also provide outpatient assessments.\n*   **LifeStance Health** is a mental health clinic with psychiatrists, therapists, and psychologists offering in-person and online appointments for a wide range of conditions.\n\nFor immediate crisis support, you can call or text **988** or chat online at **988lifeline.org**. If you are experiencing a mental/behavioral health crisis and wish to contact Deflection Services, you can dial **911** and explicitly request deflection response, or dial the LMPD non-emergency number at **502-574-7111, option 5**.",
+                  "annotations": [
+                    {
+                      "title": "stepstoneyouth.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESdY3eZDFXK2cxui9CMUwNeEJGP1KrXRiMfut2L2vhm3zid46KJqwF3LkBhgoA5nMyjdh9N1bKetfbjHc8NBRW9Rsz1I1IVRYJ5fRdnI_cCapA1EKRXGKzRSmsMTroS00iWycgphybFW6yG1MLqCxYOqzuOg7NJSjf_Xjz"
+                    },
+                    {
+                      "title": "boysandgirlshaven.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQoOxQqz1BObkmY9kAA034zjDzT7ByGqDG5WXZaUxYxnGGFxklSajr1MYZ6bz-6sv7psfV5Z2TXtLYLDzwIAmbegf2FjkH-4NvYPxjFjeoq6QgIFjzmDSwSgJXyq-lKvfChm3P23hnQZVLR-3EJM1kupUi3S4hrPvMhQ=="
+                    },
+                    {
+                      "title": "nortonhealthcare.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3zbONQSpJgw5gX_rgBZOtPqJiDaTiOd4u3VYspLscOU_VCtL-6ccrabM0w0kDRbptRMWrvhv4S43Tb15q6jSoJ_CzrjJOhl7VK_4pwbvOezwUui5EN31kFJa32r-dIVlEsvZJOqteIF-7oQWWZBUP_mu3F8fziea3e3P-WGiuHI0="
+                    },
+                    {
+                      "title": "baptisthealth.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQZ5d-bBhbzp0SmO4UH5rNgYubTCdbduyeauZcrelrhgVHMGxa-AhgreaUP1K6IaAZy1TIbFaFobfjXcTf8Ze_JHd7xqvnGnrtT1QfQbtlxGAflx0omi04DNlvAQDBP4ikvj99zFKHTxFxuJVDFzQKu128jDkBx12PIvjBr9gGS9Ce2IHBrFO58zW1W4L-wxm4bErPNmEbcWAUUKle"
+                    },
+                    {
+                      "title": "holsmanpt.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQkl-2PZJdRO90ycfKskN3cHxfMOUTAwTdUOh7iJUsV_NxBdykK9feikSUAT5E-IvNSa_jvdeenrp_ARTbhcXt5FiJcPY7seyhoTsJfBM9f6SrM9B74He75sx9s12GXnqRQcI-W62sQ_XEE2sdyuTr6s9k0W_aWXh_QmcyzgHTat7JikW7I8us9l-U-s9RYD-6wRzY49I1qdakESxtg-BhKRm4qZGgrTPobGJukGJnMzvL4mfFvVMAn7XgJAIy7bno"
+                    },
+                    {
+                      "title": "sevencounties.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGV0-qcjxiUf3q2l-bU7zZeVjiUeh0y_8wGlVcbgeHCPUVgfKgA_CzmMcsCXhbeQ-1LjDsStJanknCXa9Wf-_9BfJbLdKMcrV4j9zU0HV4kl5HQQWKQ"
+                    },
+                    {
+                      "title": "sevencounties.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVlexsWZOhEEReDXWiknttKu3LoioV0awrT3N6zfPGaR2U7R88s2OoUY8KTQ31EQ9j3wT9KRYrqh5DF-BxJ0_-09roeWAjGdEDCmeh3wvhrI4MSEWdi6So5Wt73XpwIVMcSsFPTzUVv8UJAjHXUwsTswEcGQH8ZHaznNXIFcDxXaphP4jSXLcWRHrja4yY8w8="
+                    },
+                    {
+                      "title": "bridgehaven.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWP7G7AEwW-c0XOZmm7AVWUdxHpfjpHZhW6SMDEY9BVQCZ95FTZwpcXyzXf7lxr8zfogHQIaixTiXWv30onR1pdciHNTUuT1E7eMnA3-agqduGLrDcHfk="
+                    },
+                    {
+                      "title": "louisvilleky.gov",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWZ1SNm115sx-4ImgAf_1YRxfi9ySGp_ar2Ul7i9fE_inzIB7KYOQxH39Y19U6X-yWlEGwncLvruhfAfyGj5lS9LNMhJNrcbJjYmcLV6ti5IMaTzKslPtDGKljauHpFhNsSsj5WiB0aTJlwtgXh29GgHCkZFGk3vHN8kCL-n4UP5mg_18VU1pho2TL0gXL7g=="
+                    },
+                    {
+                      "title": "mentalhealthlou.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxe5Bbup43LYG5Xk8syr0JaDa7yxks13h9epkXkSy78qvQcSlKvzlaSV3Z9qk9-C8vqaSMwkoVEWo6a7OyYvpG1d8-UNUwhYUCVKO7vSIl-QL3XDP8xlwJWgAv"
+                    },
+                    {
+                      "title": "thebrookhospitals.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERnuWYFnLjp3O0XHrw-UKn2BRfrfT1WEuN8iKrioTJvuB_pRKqBrgK9WQUhyofZoavcqUNuKxiOVpGoIkjCP1DfBUHfzPLvIvf_dSTyFIi1wk3Lp1_Y05TWg=="
+                    },
+                    {
+                      "title": "thebrookhospitals.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYPlxEP-EUXzfjq8cJaj2NcnxmpVL_H2dUFiMzrAbnffuXETez5kD7-wrXXO8TLHOVS297SbJQe-r9J71Rd7k1HrZBcnppIeC7NZBZx7H07-mrlRIXyXE0i_aIoDU_DNHB_w=="
+                    },
+                    {
+                      "title": "lifestance.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGae6OZW2BTCq988p-2kGbu9fqb785RyAmVXzxt1rlpUQWozImZDG1lnpKcUrThzKNFZGwP1pWZdlpvu-7xOXMvcEeopcXNUa3xHqlRR6MhAPVK6bunhZiP_8Eph3vEvAd3T3LUDFR8cv2pKDA_A-Mawh9kmkb9iQ0hLJfqL5PLkA=="
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "in-home therapy Louisville KY",
+            "community-based mental health support Louisville KY",
+            "Louisville mental health services"
+          ]
+        }
+      ]
+    }
+  ]
+}

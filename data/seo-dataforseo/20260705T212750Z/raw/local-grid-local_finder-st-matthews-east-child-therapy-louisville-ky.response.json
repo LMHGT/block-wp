@@ -1,0 +1,152 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.9496 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-b72a164b60bc",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.8386 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "local_finder",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "local_finder",
+        "keyword": "child therapy Louisville KY",
+        "location_coordinate": "38.2525000,-85.6497000,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid local_finder st-matthews-east child therapy Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "child therapy Louisville KY",
+          "type": "local_finder",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=child+therapy+Louisville+KY&oq=child+therapy+Louisville+KY&hl=en&gl=US&tbm=lcl&fll=38.2525%2C-85.6497&fspn=0.0028350955412714688%2C0.006474852561950684&fz=18&sll=38.2525%2C-85.6497&sspn=0.0028350955412714688%2C0.006474852561950684&sz=18",
+          "datetime": "2026-07-05 21:36:38 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "local_pack"
+          ],
+          "se_results_count": 0,
+          "items_count": 4,
+          "items": [
+            {
+              "type": "local_pack",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]",
+              "title": "Derby City Counseling",
+              "description": "119 S Sherrin Ave Ste 230 · (502) 701-2171 \nClosed · Opens 10 AM Mon \n\"comfortable.\" \n",
+              "domain": "derbycitycounseling.com",
+              "phone": "(502) 701-2171",
+              "booking_url": null,
+              "url": "http://derbycitycounseling.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 12,
+                "rating_max": 5
+              },
+              "cid": "13494564945055058624",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]",
+              "title": "Mindive Louisville",
+              "description": "119 S Sherrin Ave Ste 240 · (502) 509-6002 \nClosed · Opens 9 AM Mon \n\"My child has really benefitted from their work with Willis.\" \n",
+              "domain": "mindivetherapy.com",
+              "phone": "(502) 509-6002",
+              "booking_url": null,
+              "url": "https://mindivetherapy.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 6,
+                "rating_max": 5
+              },
+              "cid": "14864696548445856057",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[6]",
+              "title": "Chris Davis, MSSW, LMFT",
+              "description": "119 S Sherrin Ave Ste 240 · (502) 509-6002 \nClosed · Opens 8:15 AM Mon \n\"Highly recommended!\" \n",
+              "domain": "mindivetherapy.com",
+              "phone": "(502) 509-6002",
+              "booking_url": null,
+              "url": "http://mindivetherapy.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 3,
+                "rating_max": 5
+              },
+              "cid": "17205182146927484071",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[8]",
+              "title": "Renew Counseling and EMDR",
+              "description": "Closed · Opens 9 AM Mon \n\"Alante Gaines is a wonderful therapist.\" \n",
+              "domain": "renewcounselingservices.org",
+              "phone": "(502) 653-7211",
+              "booking_url": null,
+              "url": "https://renewcounselingservices.org/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 3,
+                "votes_count": 4,
+                "rating_max": 5
+              },
+              "cid": "13629655638732558043",
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

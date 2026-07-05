@@ -1,0 +1,14 @@
+{
+  "name": "llm-response-claude-What is community-based mental health care, and who provides it in Louisville?",
+  "path": "/v3/ai_optimization/claude/llm_responses/live",
+  "body": [
+    {
+      "user_prompt": "What is community-based mental health care, and who provides it in Louisville?",
+      "model_name": "claude-sonnet-4-6",
+      "web_search": true,
+      "max_output_tokens": 1024,
+      "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+      "tag": "lmhg llm response claude What is community-based mental health care, and who provides it in Louisville?"
+    }
+  ]
+}

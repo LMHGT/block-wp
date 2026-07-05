@@ -1,0 +1,323 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "3.6126 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060041-9766-0139-0000-5213e96d7477",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "3.5427 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "Find a Louisville therapist who accepts Medicaid.",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode expanded Find a Louisville therapist who accepts Medicaid.",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Find a Louisville therapist who accepts Medicaid.",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=Find%20a%20Louisville%20therapist%20who%20accepts%20Medicaid.&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:41:06 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[1]/div[1]/div[3]",
+              "markdown": "Several therapists and counseling services in Louisville, KY, accept Medicaid. According to [Psychology Today's Medicaid therapist directory](https://www.psychologytoday.com/us/therapists/ky/louisville?category=medicaid) , some providers include:[[1]](https://zencare.co/us/kentucky/louisville/louisville-jefferson-county/therapists/insurance/medicaid)[[2]](https://paid.care/guides/medicaid-therapists-accessing-quality-mental-health-care)\n\n- **Mindive** \n- **Lifestrings Mental Health and Well-Being, LLC** \n- **Haven Family Counseling** \n- **Bridge the Gap Addiction and Mental Health Service** \n- **Blue Moon Therapy** \n- **Counseling Unlimited & Virtual Visits** [[1]](https://www.psychologytoday.com/us/therapists/ky/louisville?category=medicaid)[[2]](https://www.psychologytoday.com/us/therapists/haven-family-counseling-louisville-ky/763897)[[3]](https://www.psychologytoday.com/us/therapists/blue-moon-therapy-louisville-ky/813431)\n\nOther options, including in-person and online, include:\n\n- **Tyler Horn, MSSW, LCSW** (Louisville) – Specializes in parental support, according to Therapist.com.\n- **Meredith Cundiff, LPCC** (Louisville) – Licensed Professional Counselor, via Therapist.com.\n- **Zencare** lists online therapists who accept Medicaid and serve the [Louisville-Jefferson County area](https://zencare.co/us/kentucky/louisville/louisville-jefferson-county/therapists/insurance/medicaid).[[1]](https://therapist.com/clinician/meredith-cundiff-113953/)[[2]](https://zencare.co/us/kentucky/louisville/louisville-jefferson-county/therapists/insurance/medicaid)\n\n**Key Tips for Using Medicaid:** \n\n- **Verify Coverage:** Contact your managed care plan to confirm coverage, as networks can vary [as noted on Mental Health Match](https://mentalhealthmatch.com/browse-therapists/kentucky/louisville/medicaid).\n- **Check Availability:** Always ask if the therapist is currently accepting new Medicaid patients when you call.[[1]](https://manhattanmentalhealthcounseling.com/does-medicaid-cover-therapy/)[[2]](https://joingroups.com/how-to-find-an-online-suboxone-doctor-or-clinic-that-accepts-medicaid/)[[3]](https://mentalhealthmatch.com/browse-therapists/kentucky/louisville/medicaid)\n\nWould you like me to look for therapists who specialize in a **specific area** (such as trauma, anxiety, or addiction) or who offer **in-person sessions**?",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Several therapists and counseling services in Louisville, KY, accept Medicaid. According to Psychology Today's Medicaid therapist directory, some providers include:",
+                  "markdown": "Several therapists and counseling services in Louisville, KY, accept Medicaid. According to [Psychology Today's Medicaid therapist directory](https://www.psychologytoday.com/us/therapists/ky/louisville?category=medicaid) , some providers include:[[1]](https://zencare.co/us/kentucky/louisville/louisville-jefferson-county/therapists/insurance/medicaid)[[2]](https://paid.care/guides/medicaid-therapists-accessing-quality-mental-health-care)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Psychology Today's Medicaid therapist directory",
+                      "description": null,
+                      "url": "https://www.psychologytoday.com/us/therapists/ky/louisville?category=medicaid",
+                      "domain": "www.psychologytoday.com"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Zencare",
+                      "domain": "zencare.co",
+                      "url": "https://zencare.co/us/kentucky/louisville/louisville-jefferson-county/therapists/insurance/medicaid",
+                      "title": "Medicaid Therapists in Louisville-Jefferson County - Zencare",
+                      "text": "Find vetted therapists in Kentucky who are in-network with Medicaid below. Visit their profiles to watch an introductory video and..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Paid.Care",
+                      "domain": "paid.care",
+                      "url": "https://paid.care/guides/medicaid-therapists-accessing-quality-mental-health-care",
+                      "title": "Medicaid Therapists: Accessing Quality Mental Health Care — Paid.Care",
+                      "text": "Online directories and platforms can also be helpful resources in finding Medicaid therapists. Websites like Psychology Today and ..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Mindive Lifestrings Mental Health and Well-Being, LLC Haven Family Counseling Bridge the Gap Addiction and Mental Health Service Blue Moon Therapy Counseling Unlimited & Virtual Visits",
+                  "markdown": "- **Mindive** \n- **Lifestrings Mental Health and Well-Being, LLC** \n- **Haven Family Counseling** \n- **Bridge the Gap Addiction and Mental Health Service** \n- **Blue Moon Therapy** \n- **Counseling Unlimited & Virtual Visits** [[1]](https://www.psychologytoday.com/us/therapists/ky/louisville?category=medicaid)[[2]](https://www.psychologytoday.com/us/therapists/haven-family-counseling-louisville-ky/763897)[[3]](https://www.psychologytoday.com/us/therapists/blue-moon-therapy-louisville-ky/813431)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Psychology Today",
+                      "domain": "www.psychologytoday.com",
+                      "url": "https://www.psychologytoday.com/us/therapists/ky/louisville?category=medicaid",
+                      "title": "Medicaid Therapists in Louisville, KY - Psychology Today",
+                      "text": "* Mindive. * Lifestrings Mental Health and Well-Being, LLC. * Hannah Richardson. * Haven Family Counseling. * Twyna Bell. * Emily ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Psychology Today",
+                      "domain": "www.psychologytoday.com",
+                      "url": "https://www.psychologytoday.com/us/therapists/haven-family-counseling-louisville-ky/763897",
+                      "title": "Haven Family Counseling, Louisville, KY, 40218",
+                      "text": "Qualifications Haven Family Counseling has served the Louisville community for more than 20 years. Our team has a wide range of ex..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Psychology Today",
+                      "domain": "www.psychologytoday.com",
+                      "url": "https://www.psychologytoday.com/us/therapists/blue-moon-therapy-louisville-ky/813431",
+                      "title": "Blue Moon Therapy, Clinical Social Work/Therapist, Louisville, KY, 40204",
+                      "text": "Katelyn D Mensing - Blue Moon Therapy, Clinical Social Work/Therapist, Louisville, KY, 40204, (502) 383-4027, We, Blue Moon Therap..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Other options, including in-person and online, include:",
+                  "markdown": "Other options, including in-person and online, include:",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Tyler Horn, MSSW, LCSW (Louisville) – Specializes in parental support, according to Therapist.com. according to Therapist.com Meredith Cundiff, LPCC (Louisville) – Licensed Professional Counselor, via Therapist.com. via Therapist.com Zencare lists online therapists who accept Medicaid and serve the Louisville-Jefferson County area.",
+                  "markdown": "- **Tyler Horn, MSSW, LCSW** (Louisville) – Specializes in parental support, according to Therapist.com.\n- **Meredith Cundiff, LPCC** (Louisville) – Licensed Professional Counselor, via Therapist.com.\n- **Zencare** lists online therapists who accept Medicaid and serve the [Louisville-Jefferson County area](https://zencare.co/us/kentucky/louisville/louisville-jefferson-county/therapists/insurance/medicaid).[[1]](https://therapist.com/clinician/meredith-cundiff-113953/)[[2]](https://zencare.co/us/kentucky/louisville/louisville-jefferson-county/therapists/insurance/medicaid)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Louisville-Jefferson County area",
+                      "description": null,
+                      "url": "https://zencare.co/us/kentucky/louisville/louisville-jefferson-county/therapists/insurance/medicaid",
+                      "domain": "zencare.co"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "therapist.com",
+                      "domain": "therapist.com",
+                      "url": "https://therapist.com/clinician/meredith-cundiff-113953/",
+                      "title": "Meredith Cundiff, LPCC provides in-person and online therapy",
+                      "text": "Louisville, KY therapist Meredith Cundiff, Licensed Professional Counselor, provides therapy online and in-person therapy services..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Key Tips for Using Medicaid:",
+                  "markdown": "**Key Tips for Using Medicaid:**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Verify Coverage: Contact your managed care plan to confirm coverage, as networks can vary as noted on Mental Health Match. Check Availability: Always ask if the therapist is currently accepting new Medicaid patients when you call.",
+                  "markdown": "- **Verify Coverage:** Contact your managed care plan to confirm coverage, as networks can vary [as noted on Mental Health Match](https://mentalhealthmatch.com/browse-therapists/kentucky/louisville/medicaid).\n- **Check Availability:** Always ask if the therapist is currently accepting new Medicaid patients when you call.[[1]](https://manhattanmentalhealthcounseling.com/does-medicaid-cover-therapy/)[[2]](https://joingroups.com/how-to-find-an-online-suboxone-doctor-or-clinic-that-accepts-medicaid/)[[3]](https://mentalhealthmatch.com/browse-therapists/kentucky/louisville/medicaid)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "as noted on Mental Health Match",
+                      "description": null,
+                      "url": "https://mentalhealthmatch.com/browse-therapists/kentucky/louisville/medicaid",
+                      "domain": "mentalhealthmatch.com"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Manhattan Mental Health Counseling",
+                      "domain": "manhattanmentalhealthcounseling.com",
+                      "url": "https://manhattanmentalhealthcounseling.com/does-medicaid-cover-therapy/",
+                      "title": "Does Medicaid Cover Therapy? | MMHC",
+                      "text": "In New York, Medicaid Managed Care Plan strives to keep therapy accessible and affordable, but it's always wise to check with your..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Groups Recover Together",
+                      "domain": "joingroups.com",
+                      "url": "https://joingroups.com/how-to-find-an-online-suboxone-doctor-or-clinic-that-accepts-medicaid/",
+                      "title": "How To Find an Online Suboxone Provider That Accepts Medicaid",
+                      "text": "Try to find out what providers are in-network and whether other services like counseling are covered. Some states include case man..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Mental Health Match",
+                      "domain": "mentalhealthmatch.com",
+                      "url": "https://mentalhealthmatch.com/browse-therapists/kentucky/louisville/medicaid",
+                      "title": "Medicaid Therapists in Louisville, KY | Mental Health Match",
+                      "text": "How to Verify Your Medicaid Benefits. To verify Medicaid mental health coverage: Contact your state Medicaid office or managed car..."
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Zencare",
+                  "domain": "zencare.co",
+                  "url": "https://zencare.co/us/kentucky/louisville/louisville-jefferson-county/therapists/insurance/medicaid",
+                  "title": "Medicaid Therapists in Louisville-Jefferson County - Zencare",
+                  "text": "Find vetted therapists in Kentucky who are in-network with Medicaid below. Visit their profiles to watch an introductory video and..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Paid.Care",
+                  "domain": "paid.care",
+                  "url": "https://paid.care/guides/medicaid-therapists-accessing-quality-mental-health-care",
+                  "title": "Medicaid Therapists: Accessing Quality Mental Health Care — Paid.Care",
+                  "text": "Online directories and platforms can also be helpful resources in finding Medicaid therapists. Websites like Psychology Today and ..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Psychology Today",
+                  "domain": "www.psychologytoday.com",
+                  "url": "https://www.psychologytoday.com/us/therapists/ky/louisville?category=medicaid",
+                  "title": "Medicaid Therapists in Louisville, KY - Psychology Today",
+                  "text": "* Mindive. * Lifestrings Mental Health and Well-Being, LLC. * Hannah Richardson. * Haven Family Counseling. * Twyna Bell. * Emily ..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Psychology Today",
+                  "domain": "www.psychologytoday.com",
+                  "url": "https://www.psychologytoday.com/us/therapists/haven-family-counseling-louisville-ky/763897",
+                  "title": "Haven Family Counseling, Louisville, KY, 40218",
+                  "text": "Qualifications Haven Family Counseling has served the Louisville community for more than 20 years. Our team has a wide range of ex..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Psychology Today",
+                  "domain": "www.psychologytoday.com",
+                  "url": "https://www.psychologytoday.com/us/therapists/blue-moon-therapy-louisville-ky/813431",
+                  "title": "Blue Moon Therapy, Clinical Social Work/Therapist, Louisville, KY, 40204",
+                  "text": "Katelyn D Mensing - Blue Moon Therapy, Clinical Social Work/Therapist, Louisville, KY, 40204, (502) 383-4027, We, Blue Moon Therap..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "therapist.com",
+                  "domain": "therapist.com",
+                  "url": "https://therapist.com/clinician/meredith-cundiff-113953/",
+                  "title": "Meredith Cundiff, LPCC provides in-person and online therapy",
+                  "text": "Louisville, KY therapist Meredith Cundiff, Licensed Professional Counselor, provides therapy online and in-person therapy services..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Manhattan Mental Health Counseling",
+                  "domain": "manhattanmentalhealthcounseling.com",
+                  "url": "https://manhattanmentalhealthcounseling.com/does-medicaid-cover-therapy/",
+                  "title": "Does Medicaid Cover Therapy? | MMHC",
+                  "text": "In New York, Medicaid Managed Care Plan strives to keep therapy accessible and affordable, but it's always wise to check with your..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Groups Recover Together",
+                  "domain": "joingroups.com",
+                  "url": "https://joingroups.com/how-to-find-an-online-suboxone-doctor-or-clinic-that-accepts-medicaid/",
+                  "title": "How To Find an Online Suboxone Provider That Accepts Medicaid",
+                  "text": "Try to find out what providers are in-network and whether other services like counseling are covered. Some states include case man..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Mental Health Match",
+                  "domain": "mentalhealthmatch.com",
+                  "url": "https://mentalhealthmatch.com/browse-therapists/kentucky/louisville/medicaid",
+                  "title": "Medicaid Therapists in Louisville, KY | Mental Health Match",
+                  "text": "How to Verify Your Medicaid Benefits. To verify Medicaid mental health coverage: Contact your state Medicaid office or managed car..."
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

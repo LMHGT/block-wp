@@ -1,0 +1,123 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "12.4705 sec.",
+  "cost": 0.02326705,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060031-9766-0612-0000-8e0edbfc0670",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "12.4316 sec.",
+      "cost": 0.02326705,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "chat_gpt",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "chat_gpt",
+        "user_prompt": "Who offers family therapy and care coordination in Louisville?",
+        "model_name": "gpt-5.4-nano",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response chat_gpt Who offers family therapy and care coordination in Louisville?",
+        "web_search": true,
+        "web_search_country_iso_code": "US",
+        "web_search_city": "Louisville",
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gpt-5.4-nano-2026-03-17",
+          "input_tokens": 9004,
+          "output_tokens": 693,
+          "reasoning_tokens": 237,
+          "web_search": true,
+          "money_spent": 0.02266705,
+          "datetime": "2026-07-06 00:32:01 +00:00",
+          "items": [
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Searching for local providers**\n\nI need to use my web capabilities to look up local providers. I'll initiate a search to find the relevant information. It's important to ensure that I’m accessing accurate sources to provide the best details for the user. I'll focus on gathering data that can help the user make informed decisions about local services. Let's see what I can find out there!"
+                }
+              ]
+            },
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Searching for therapy resources**\n\nI need to compile a list that includes options for family therapy and care coordination. I’ll focus on those that explicitly mention case management as well. The user didn’t request contact information, but I'll gather names and website citations anyway. Some options I’m considering are Bluegrass Counseling Associates, Step By Step Family Services, and several others. I’ll check a couple of these to confirm their care coordination services."
+                }
+              ]
+            },
+            {
+              "type": "reasoning",
+              "sections": null
+            },
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here are several Louisville-area providers that offer **family therapy** and also include **care coordination / case management–type support** (or explicitly coordinate services):\n\n- **Bluegrass Counseling Associates (Louisville)** – Lists a “collaborative case management process” that includes **family assessment & planning, care coordination, and advocacy**, alongside therapy supports. ([bcalouisville.com](https://www.bcalouisville.com/?utm_source=openai))  \n- **Step By Step Family Services (Louisville)** – Provides **mental/behavioral health therapy** and **targeted case management**, including “coordination of services.” ([stepbystepfamilyservices.org](https://stepbystepfamilyservices.org/?utm_source=openai))  \n- **One’s Journey Through Life (Louisville)** – Offers **therapy plus case management**, describing “therapy, case management, and daily essentials” working together and providing coordinated practical support. ([onesjourneythroughlife.org](https://onesjourneythroughlife.org/?utm_source=openai))  \n- **StepStone Family & Youth Services (Louisville)** – Family/youth services model that works with a treatment team including **therapists, case managers, and social workers**. ([stepstoneyouth.com](https://www.stepstoneyouth.com/location/stepstone-family-and-youth-services-louisville-kentucky/?utm_source=openai))  \n- **Solace Life Change (Louisville)** – Describes **coordinated care** plus **individual and family therapy**, including support for community stability and care coordination elements. ([solacelifechange.com](https://solacelifechange.com/?utm_source=openai))  \n- **Kilgore Samaritan Counseling Center (Louisville)** – Lists **Family Therapy** among its services. (If you also need explicit care coordination/case management, call to confirm how they handle coordination for your situation.) ([kilgorecounseling.org](https://kilgorecounseling.org/services/?utm_source=openai))  \n- **Couples Care Center (Louisville)** – Offers **family therapy** (also couples/individual). If you specifically need care coordination, ask whether they provide case management or can coordinate with other providers. ([couplescarecenter.org](https://www.couplescarecenter.org/?utm_source=openai))  \n- **Steere Family Therapy (Louisville)** – Provides **individual child and family therapy** (ask about care coordination/case management if that’s required for your case plan). ([louisvillefamilytherapy.com](https://louisvillefamilytherapy.com/?utm_source=openai))  \n\nIf you tell me **(1)** your neighborhood/zip (or how far you’ll travel), **(2)** the age of the child/young adult (if applicable), and **(3)** whether you need coordination for something specific (school, DCF/DCBS, foster care, Medicaid/waiver, housing, substance use, etc.), I can narrow this to the best 2–4 fits to call first.",
+                  "annotations": [
+                    {
+                      "title": "Bluegrass Counseling Associates – Louisville, KY",
+                      "url": "https://www.bcalouisville.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Step By Step Family Services - Mental Health, Case Management",
+                      "url": "https://stepbystepfamilyservices.org/?utm_source=openai"
+                    },
+                    {
+                      "title": "Integrated Therapy and Case Management - One's Journey Through Life Louisville, KY",
+                      "url": "https://onesjourneythroughlife.org/?utm_source=openai"
+                    },
+                    {
+                      "title": "StepStone Family and Youth Services | Louisville, Kentucky",
+                      "url": "https://www.stepstoneyouth.com/location/stepstone-family-and-youth-services-louisville-kentucky/?utm_source=openai"
+                    },
+                    {
+                      "title": "Solace Life Change | Solace Life Change",
+                      "url": "https://solacelifechange.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Services - Kilgore Samaritan Counseling Center",
+                      "url": "https://kilgorecounseling.org/services/?utm_source=openai"
+                    },
+                    {
+                      "title": "Home: Family Therapy | Couples Therapy | Louisville, KY 40243Couples Counseling",
+                      "url": "https://www.couplescarecenter.org/?utm_source=openai"
+                    },
+                    {
+                      "title": "Welcome to Steere Family Therapy | Louisville Family Therapy - Steere Family Therapy",
+                      "url": "https://louisvillefamilytherapy.com/?utm_source=openai"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "Louisville KY family therapy care coordination",
+            "community mental health Louisville KY family therapy care coordination case management",
+            "Frazier Rehab? family therapy care coordination Louisville",
+            "Kentucky Family Resource Youth Services Louisville case management family therapy"
+          ]
+        }
+      ]
+    }
+  ]
+}

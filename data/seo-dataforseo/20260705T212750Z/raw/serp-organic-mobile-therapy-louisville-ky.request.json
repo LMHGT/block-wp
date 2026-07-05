@@ -1,0 +1,16 @@
+{
+  "name": "serp-organic-mobile-therapy Louisville KY",
+  "method": "POST",
+  "path": "/v3/serp/google/organic/live/advanced",
+  "body": [
+    {
+      "keyword": "therapy Louisville KY",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "mobile",
+      "depth": 10,
+      "tag": "lmhg organic mobile therapy Louisville KY"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:01.415809+00:00"
+}

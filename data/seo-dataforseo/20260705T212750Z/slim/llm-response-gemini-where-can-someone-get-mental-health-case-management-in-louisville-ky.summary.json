@@ -1,0 +1,19 @@
+{
+  "name": "llm-response-gemini-Where can someone get mental health case management in Louisville, KY?",
+  "path": "/v3/ai_optimization/gemini/llm_responses/live",
+  "platform": "gemini",
+  "model": "gemini-2.5-flash-lite",
+  "prompt": "Where can someone get mental health case management in Louisville, KY?",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "cost": 0.0358083,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "result_counts": [
+    1
+  ],
+  "task_statuses": [
+    20000
+  ],
+  "elapsed_seconds": 5.046
+}

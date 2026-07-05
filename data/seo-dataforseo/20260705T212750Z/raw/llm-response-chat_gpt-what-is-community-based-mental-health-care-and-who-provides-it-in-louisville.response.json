@@ -1,0 +1,123 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "13.7347 sec.",
+  "cost": 0.0233925,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060031-9766-0612-0000-8350e2a88f41",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "13.7049 sec.",
+      "cost": 0.0233925,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "chat_gpt",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "chat_gpt",
+        "user_prompt": "What is community-based mental health care, and who provides it in Louisville?",
+        "model_name": "gpt-5.4-nano",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response chat_gpt What is community-based mental health care, and who provides it in Louisville?",
+        "web_search": true,
+        "web_search_country_iso_code": "US",
+        "web_search_city": "Louisville",
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gpt-5.4-nano-2026-03-17",
+          "input_tokens": 8975,
+          "output_tokens": 798,
+          "reasoning_tokens": 265,
+          "web_search": true,
+          "money_spent": 0.0227925,
+          "datetime": "2026-07-06 00:32:03 +00:00",
+          "items": [
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Searching for local providers**\n\nI need to use the web tool to run a search for local providers. It should help me gather the information I need. I'll focus on ensuring that I define the parameters clearly while browsing. This could really streamline my process. I wonder if I should specify certain services or areas to narrow down the results. Let’s see what I can find and gather useful details to work with!"
+                }
+              ]
+            },
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Looking for mental health resources**\n\nI need to compile a more authoritative list of community mental health centers in Kentucky, specifically mentioning Seven Counties Services and Bridgehaven. It makes sense to also check the city page for additional resources. I plan to open both the city page and the Seven Counties PDF to confirm the details and ensure I'm providing accurate information for anyone who needs support. I want to make sure I get this right!"
+                }
+              ]
+            },
+            {
+              "type": "reasoning",
+              "sections": null
+            },
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "### What “community-based mental health care” means\nIn Louisville (and generally across the U.S.), **community-based mental health care** refers to **mental health services delivered in the community rather than through long-term inpatient hospital stays**. It often includes:\n- **Outpatient therapy** (individual, group, family)\n- **Psychiatry / medication management**\n- **Crisis response and supports**\n- **Case management / care coordination**\n- **Rehabilitation and recovery supports** (help with daily functioning, support services, referrals)\n- Services that aim to help people **live, work, and get support in their own neighborhoods**\n\nLouisville Metro explicitly groups these kinds of supports under “community mental health services.” ([louisvilleky.gov](https://louisvilleky.gov/government/health-wellness/community-mental-health-services?utm_source=openai))\n\n---\n\n### Who provides it in Louisville?\nA number of organizations provide community-based mental health care, including the following (not an exhaustive list):\n\n1) **Seven Counties Services (Community Mental Health Center)**\n- Provides outpatient mental health and substance-use services in the Louisville area. ([resources.hdiuky.org](https://resources.hdiuky.org/resource/seven-counties-services-inc-community-mental-health-center/?utm_source=openai))\n\n2) **Bridgehaven Mental Health Services**\n- Provides community-based psychiatric rehabilitation and recovery services and related supports in Louisville. ([bridgehaven.org](https://www.bridgehaven.org/contact/?utm_source=openai))\n\n3) **City/Metro-coordinated community resources**\n- Louisville’s “Community Mental Health Services” page points people to local crisis/deflection and other community supports (including specific local contacts listed on the page). ([louisvilleky.gov](https://louisvilleky.gov/government/health-wellness/community-mental-health-services?utm_source=openai))\n\n4) **Hospital/health-system outpatient behavioral health programs**\n- **UofL Health** offers outpatient behavioral health services (and tele-behavioral health options). ([uoflhealth.org](https://uoflhealth.org/services/mental-and-behavioral-health/adult-outpatient-services/?utm_source=openai))  \n- **Norton Healthcare** provides outpatient behavioral health care as part of its behavioral health services in the Louisville area. ([nortonhealthcare.com](https://nortonhealthcare.com/services-and-conditions/behavioral-health/?utm_source=openai))\n\n5) **Other outpatient/community behavioral health providers**\nExamples include:\n- **Solace Life Change** (outpatient behavioral health & substance-use treatment program in Louisville). ([solacelifechange.com](https://solacelifechange.com/?utm_source=openai))  \n- **Creative Spirits Behavioral Health** (describes itself as providing community-based mental health care in Louisville). ([creativespiritsonline.com](https://www.creativespiritsonline.com/?utm_source=openai))  \n\n---\n\nIf you tell me **what kind of help you need** (therapy vs. psychiatry/meds, crisis support, adult vs. teen/child, insurance/self-pay, and your neighborhood), I can narrow this to the most relevant Louisville options.",
+                  "annotations": [
+                    {
+                      "title": "Community Mental Health Services | LouisvilleKY.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services?utm_source=openai"
+                    },
+                    {
+                      "title": "KDR - Seven Counties Services, Inc. – Community Mental Health Center",
+                      "url": "https://resources.hdiuky.org/resource/seven-counties-services-inc-community-mental-health-center/?utm_source=openai"
+                    },
+                    {
+                      "title": "Contact - Bridgehaven Mental Health Services",
+                      "url": "https://www.bridgehaven.org/contact/?utm_source=openai"
+                    },
+                    {
+                      "title": "Community Mental Health Services | LouisvilleKY.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services?utm_source=openai"
+                    },
+                    {
+                      "title": "Mental and Behavioral Health Adult Outpatient Services | Louisville KY | UofL Health",
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/adult-outpatient-services/?utm_source=openai"
+                    },
+                    {
+                      "title": "Kentucky and Indiana Mental Health Care | Norton Healthcare Louisville, Ky.",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/?utm_source=openai"
+                    },
+                    {
+                      "title": "Solace Life Change | Solace Life Change",
+                      "url": "https://solacelifechange.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Mental Health Services | Kentucky | Creative Spirits Behavioral Health",
+                      "url": "https://www.creativespiritsonline.com/?utm_source=openai"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "Louisville KY community mental health services providers Jefferson County",
+            "Behavioral Health Louisville outpatient community mental health provider",
+            "Kentucky community mental health centers Louisville contact",
+            "Norton Healthcare behavioral health outpatient counseling Louisville"
+          ]
+        }
+      ]
+    }
+  ]
+}

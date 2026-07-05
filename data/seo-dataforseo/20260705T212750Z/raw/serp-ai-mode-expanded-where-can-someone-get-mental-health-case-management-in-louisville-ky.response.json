@@ -1,0 +1,260 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "3.7136 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060041-9766-0139-0000-c0da34c9bf79",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "3.4001 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "Where can someone get mental health case management in Louisville, KY?",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode expanded Where can someone get mental health case management in Louisville, KY?",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Where can someone get mental health case management in Louisville, KY?",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=Where%20can%20someone%20get%20mental%20health%20case%20management%20in%20Louisville%2C%20KY%3F&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:41:07 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[1]/div[1]/div[3]",
+              "markdown": "Mental health case management in Louisville, KY, is available through several specialized organizations and providers. These services help coordinate care, provide community support, and connect individuals with necessary resources.[[1]](https://missionconnectionhealthcare.com/mental-health/legal-rights/role-of-case-managers-in-virtual-mental-health-care/)[[2]](https://www.circlecasemanagement.com/news/article/case-manager-stress-and-anxiety)[[3]](https://www.rhscares.com/cbrs-case-management)[[4]](https://www.evergreentreatment.org/patients/services/integrated-care-management/)[[5]](https://cpcintegratedhealth.org/community-programs/)\n\nHere are some options for mental health case management in Louisville:\n\n- **Best Life Louisville:** Offers **Targeted Case Management** (TCM) with a focus on comprehensive and holistic care. Case managers meet regularly with clients to assess needs and collaborate with in-house therapists and nurse practitioners.\n\t- **Dupont Office:** 4010 Dupont Circle, Suite 130, Louisville, KY 40207.\n\t- **Baxter Office:** 1017 Baxter Avenue, Louisville, KY 40204.\n\t- **Contact:** (502) 333-9466.\n- **CompServ Health Resources Inc.:** Provides therapeutic services, including psychotherapy and behavioral health services, often used in conjunction with case management.\n\t- **Location:** 101 N 7th St, Downtown, Louisville, KY.\n\t- **Contact:** (888) 751-3730.\n- **Better You Behavioral Health Services:** Provides mental health services focused on issues like depression and behavioral health care.\n\t- **Location:** Downtown, Louisville, KY.\n\t- **Contact:** (502) 653-5800.\n- **Strickland Cox And Associates Primary Care Center:** Offers mental health assessments and primary care services, which can include case management or referrals for complex needs.\n\t- **Location:** 1448 S 15th St, Park Hill, Louisville, KY.\n\t- **Contact:** (502) 290-3050.[](https://www.bestlifelouisville.com/case-management/) [[1]](https://www.bestlifelouisville.com/case-management/)[[2]](https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy)[[3]](https://www.zocdoc.com/practice/better-you-behavioral-health-services-146494?LocIdent=355819&utm_source=reservewithgoogle&utm_medium=seosynd&utm_campaign=hai&entity_id=pt_Wu4m1OvawUC2yowE0ILv_Q-lo_X6B0qk02o0e0XbhXgmgwQQ-entity)[[4]](https://www.tebra.com/care/practice/strickland-cox-associates-primary-care-center-208096?lid=3163400381)[[5]](https://www.bestlifelouisville.com/contact/)\n\nFor personalized mental health services, you can also contact **Jim Walker, LCSW** for therapy, located at 6006 Brownsboro Park Blvd.[[1]](https://jimwalker.fullslate.com/services/1)\n\nIf you can tell me a bit more about the **specific needs** (e.g., adult, child, insurance type), I can help you narrow down which of these providers is the best fit.",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Mental health case management in Louisville, KY, is available through several specialized organizations and providers. These services help coordinate care, provide community support, and connect individuals with necessary resources.",
+                  "markdown": "Mental health case management in Louisville, KY, is available through several specialized organizations and providers. These services help coordinate care, provide community support, and connect individuals with necessary resources.[[1]](https://missionconnectionhealthcare.com/mental-health/legal-rights/role-of-case-managers-in-virtual-mental-health-care/)[[2]](https://www.circlecasemanagement.com/news/article/case-manager-stress-and-anxiety)[[3]](https://www.rhscares.com/cbrs-case-management)[[4]](https://www.evergreentreatment.org/patients/services/integrated-care-management/)[[5]](https://cpcintegratedhealth.org/community-programs/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Mission Connection Healthcare",
+                      "domain": "missionconnectionhealthcare.com",
+                      "url": "https://missionconnectionhealthcare.com/mental-health/legal-rights/role-of-case-managers-in-virtual-mental-health-care/",
+                      "title": "Virtual Case Manager Role In Mental Health Care",
+                      "text": "Case managers can be found in many different places, including mental health offices, outpatient clinics, and mental health care s..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Circle Case Management",
+                      "domain": "www.circlecasemanagement.com",
+                      "url": "https://www.circlecasemanagement.com/news/article/case-manager-stress-and-anxiety",
+                      "title": "Can a Case Manager Help with a Client's Stress and Anxiety?",
+                      "text": "Case managers have access to a wide range of resources and can provide referrals to other professionals or organisations that spec..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Rehabilitative Health Services",
+                      "domain": "www.rhscares.com",
+                      "url": "https://www.rhscares.com/cbrs-case-management",
+                      "title": "CBRS & Case Management",
+                      "text": "Case Management is a service offered to assist clients with a mental health diagnosis. Case Managers help with gathering informati..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Evergreen Treatment Services",
+                      "domain": "www.evergreentreatment.org",
+                      "url": "https://www.evergreentreatment.org/patients/services/integrated-care-management/",
+                      "title": "Integrated Care Management",
+                      "text": "We provide care coordination and supportive services to clients. We listen to our clients and work to ensure that their needs are ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "CPC Integrated Health",
+                      "domain": "cpcintegratedhealth.org",
+                      "url": "https://cpcintegratedhealth.org/community-programs/",
+                      "title": "Community Programs – CPC Integrated Health",
+                      "text": "Community Programs We offer a variety of programs that work directly in our communities to help people in need of mental health, s..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Here are some options for mental health case management in Louisville:",
+                  "markdown": "Here are some options for mental health case management in Louisville:",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Best Life Louisville : Offers Targeted Case Management (TCM) with a focus on comprehensive and holistic care. Case managers meet regularly with clients to assess needs and collaborate with in-house therapists and nurse practitioners. Best Life Louisville Dupont Office: 4010 Dupont Circle, Suite 130, Louisville, KY 40207. Baxter Office: 1017 Baxter Avenue, Louisville, KY 40204. Contact: (502) 333-9466. CompServ Health Resources Inc. : Provides therapeutic services, including psychotherapy and behavioral health services, often used in conjunction with case management. CompServ Health Resources Inc. Location: 101 N 7th St, Downtown, Louisville, KY. Contact: (888) 751-3730. Better You Behavioral Health Services : Provides mental health services focused on issues like depression and behavioral health care. Better You Behavioral Health Services Location: Downtown, Louisville, KY. Contact: (502) 653-5800. Strickland Cox And Associates Primary Care Center : Offers mental health assessments and primary care services, which can include case management or referrals for complex needs. Strickland Cox And Associates Primary Care Center Location: 1448 S 15th St, Park Hill, Louisville, KY. Contact: (502) 290-3050.",
+                  "markdown": "- **Best Life Louisville:** Offers **Targeted Case Management** (TCM) with a focus on comprehensive and holistic care. Case managers meet regularly with clients to assess needs and collaborate with in-house therapists and nurse practitioners.\n\t- **Dupont Office:** 4010 Dupont Circle, Suite 130, Louisville, KY 40207.\n\t- **Baxter Office:** 1017 Baxter Avenue, Louisville, KY 40204.\n\t- **Contact:** (502) 333-9466.\n- **CompServ Health Resources Inc.:** Provides therapeutic services, including psychotherapy and behavioral health services, often used in conjunction with case management.\n\t- **Location:** 101 N 7th St, Downtown, Louisville, KY.\n\t- **Contact:** (888) 751-3730.\n- **Better You Behavioral Health Services:** Provides mental health services focused on issues like depression and behavioral health care.\n\t- **Location:** Downtown, Louisville, KY.\n\t- **Contact:** (502) 653-5800.\n- **Strickland Cox And Associates Primary Care Center:** Offers mental health assessments and primary care services, which can include case management or referrals for complex needs.\n\t- **Location:** 1448 S 15th St, Park Hill, Louisville, KY.\n\t- **Contact:** (502) 290-3050.[](https://www.bestlifelouisville.com/case-management/) [[1]](https://www.bestlifelouisville.com/case-management/)[[2]](https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy)[[3]](https://www.zocdoc.com/practice/better-you-behavioral-health-services-146494?LocIdent=355819&utm_source=reservewithgoogle&utm_medium=seosynd&utm_campaign=hai&entity_id=pt_Wu4m1OvawUC2yowE0ILv_Q-lo_X6B0qk02o0e0XbhXgmgwQQ-entity)[[4]](https://www.tebra.com/care/practice/strickland-cox-associates-primary-care-center-208096?lid=3163400381)[[5]](https://www.bestlifelouisville.com/contact/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Best Life Mental Health Services, LLC",
+                      "domain": "www.bestlifelouisville.com",
+                      "url": "https://www.bestlifelouisville.com/case-management/",
+                      "title": "Targeted Case Management",
+                      "text": "The role of your Best Life's case manager is to help you make sure your or your loved one's needs are met. You will meet with your..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "compservhealth.com",
+                      "domain": "www.compservhealth.com",
+                      "url": "https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy",
+                      "title": "Psychotherapy",
+                      "text": "CompSer Health Resources Inc. offers both individual and group therapy options, including Cognitive Behavioral Therapy (CBT). Meet..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "zocdoc.com",
+                      "domain": "www.zocdoc.com",
+                      "url": "https://www.zocdoc.com/practice/better-you-behavioral-health-services-146494?LocIdent=355819&utm_source=reservewithgoogle&utm_medium=seosynd&utm_campaign=hai&entity_id=pt_Wu4m1OvawUC2yowE0ILv_Q-lo_X6B0qk02o0e0XbhXgmgwQQ-entity",
+                      "title": "Depression",
+                      "text": "Service at \"Better You Behavioral Health Services\""
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "tebra.com",
+                      "domain": "www.tebra.com",
+                      "url": "https://www.tebra.com/care/practice/strickland-cox-associates-primary-care-center-208096?lid=3163400381",
+                      "title": "Mental Health Assessments",
+                      "text": "Service at \"Strickland Cox And Associates Primary Care Center\""
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Best Life Mental Health Services, LLC",
+                      "domain": "www.bestlifelouisville.com",
+                      "url": "https://www.bestlifelouisville.com/contact/",
+                      "title": "Contact",
+                      "text": "New Office Locations: 1017 Baxter Avenue, Louisville, KY 40204 4010 Dupont Circle, Suite 130 Louisville, KY 40207"
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "For personalized mental health services, you can also contact Jim Walker, LCSW for therapy, located at 6006 Brownsboro Park Blvd.",
+                  "markdown": "For personalized mental health services, you can also contact **Jim Walker, LCSW** for therapy, located at 6006 Brownsboro Park Blvd.[[1]](https://jimwalker.fullslate.com/services/1)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "fullslate.com",
+                      "domain": "jimwalker.fullslate.com",
+                      "url": "https://jimwalker.fullslate.com/services/1",
+                      "title": "In Office- Initial Intake",
+                      "text": "Service at \"Jim Walker, LCSW\" for 150 USD (1 hour)"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Best Life Mental Health Services, LLC",
+                  "domain": "www.bestlifelouisville.com",
+                  "url": "https://www.bestlifelouisville.com/case-management/",
+                  "title": "Targeted Case Management",
+                  "text": "The role of your Best Life's case manager is to help you make sure your or your loved one's needs are met. You will meet with your..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "compservhealth.com",
+                  "domain": "www.compservhealth.com",
+                  "url": "https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy",
+                  "title": "Psychotherapy",
+                  "text": "CompSer Health Resources Inc. offers both individual and group therapy options, including Cognitive Behavioral Therapy (CBT). Meet..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "zocdoc.com",
+                  "domain": "www.zocdoc.com",
+                  "url": "https://www.zocdoc.com/practice/better-you-behavioral-health-services-146494?LocIdent=355819&utm_source=reservewithgoogle&utm_medium=seosynd&utm_campaign=hai&entity_id=pt_Wu4m1OvawUC2yowE0ILv_Q-lo_X6B0qk02o0e0XbhXgmgwQQ-entity",
+                  "title": "Depression",
+                  "text": "Service at \"Better You Behavioral Health Services\""
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "tebra.com",
+                  "domain": "www.tebra.com",
+                  "url": "https://www.tebra.com/care/practice/strickland-cox-associates-primary-care-center-208096?lid=3163400381",
+                  "title": "Mental Health Assessments",
+                  "text": "Service at \"Strickland Cox And Associates Primary Care Center\""
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "fullslate.com",
+                  "domain": "jimwalker.fullslate.com",
+                  "url": "https://jimwalker.fullslate.com/services/1",
+                  "title": "In Office- Initial Intake",
+                  "text": "Service at \"Jim Walker, LCSW\" for 150 USD (1 hour)"
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

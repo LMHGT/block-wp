@@ -1,0 +1,10 @@
+{
+  "name": "onpage-browser-ua-pages",
+  "path": "/v3/on_page/pages",
+  "body": [
+    {
+      "id": "07060031-9766-0216-0000-756e3a0a4fe0",
+      "limit": 50
+    }
+  ]
+}

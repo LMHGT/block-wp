@@ -1,0 +1,131 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "2.5161 sec.",
+  "cost": 0.101,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060039-9766-0638-0000-6368a36b3deb",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "2.5037 sec.",
+      "cost": 0.101,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "llm_mentions",
+        "top_pages",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "top_pages",
+        "target": [
+          {
+            "keyword": "therapy Louisville KY",
+            "search_filter": "include",
+            "search_scope": [
+              "any"
+            ],
+            "match_type": "word_match"
+          },
+          {
+            "keyword": "therapist Louisville KY",
+            "search_filter": "include",
+            "search_scope": [
+              "any"
+            ],
+            "match_type": "word_match"
+          },
+          {
+            "keyword": "counseling Louisville KY",
+            "search_filter": "include",
+            "search_scope": [
+              "any"
+            ],
+            "match_type": "word_match"
+          },
+          {
+            "keyword": "mental health services Louisville KY",
+            "search_filter": "include",
+            "search_scope": [
+              "any"
+            ],
+            "match_type": "word_match"
+          },
+          {
+            "keyword": "family therapy Louisville KY",
+            "search_filter": "include",
+            "search_scope": [
+              "any"
+            ],
+            "match_type": "word_match"
+          },
+          {
+            "keyword": "child therapy Louisville KY",
+            "search_filter": "include",
+            "search_scope": [
+              "any"
+            ],
+            "match_type": "word_match"
+          },
+          {
+            "keyword": "case management Louisville KY",
+            "search_filter": "include",
+            "search_scope": [
+              "any"
+            ],
+            "match_type": "word_match"
+          },
+          {
+            "keyword": "group therapy Louisville KY",
+            "search_filter": "include",
+            "search_scope": [
+              "any"
+            ],
+            "match_type": "word_match"
+          },
+          {
+            "keyword": "community based mental health services Louisville KY",
+            "search_filter": "include",
+            "search_scope": [
+              "any"
+            ],
+            "match_type": "word_match"
+          },
+          {
+            "keyword": "in home therapy Louisville KY",
+            "search_filter": "include",
+            "search_scope": [
+              "any"
+            ],
+            "match_type": "word_match"
+          }
+        ],
+        "platform": "chat_gpt",
+        "location_code": 2840,
+        "language_code": "en",
+        "limit": 50,
+        "tag": "lmhg topical top_pages chat_gpt"
+      },
+      "result": [
+        {
+          "total": {
+            "location": null,
+            "language": null,
+            "platform": null,
+            "sources_domain": null,
+            "search_results_domain": null,
+            "brand_entities_title": null,
+            "brand_entities_category": null
+          },
+          "items": null
+        }
+      ]
+    }
+  ]
+}

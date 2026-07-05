@@ -1,0 +1,97 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "3.9708 sec.",
+  "cost": 0.006116,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-c3238a315a1e",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "3.9581 sec.",
+      "cost": 0.006116,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "perplexity",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "perplexity",
+        "user_prompt": "Who offers in-home therapy or community-based mental health support in Louisville?",
+        "model_name": "sonar",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response perplexity Who offers in-home therapy or community-based mental health support in Louisvill",
+        "max_output_tokens": 700
+      },
+      "result": [
+        {
+          "model_name": "sonar",
+          "input_tokens": 39,
+          "output_tokens": 477,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.005516,
+          "datetime": "2026-07-06 00:32:05 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "In Louisville, **April ABA Therapy**, **LifeStance Health**, **Haven Family Counseling (Boys & Girls Haven)**, and **OMNI Louisville** offer in-home therapy or community-based mental health support for individuals and families.\n\n### Key Providers of In-Home & Community-Based Mental Health Support\n\n| Provider | Services Offered | Target Population | Notes |\n|----------|------------------|-------------------|-------|\n| **April ABA Therapy** [1] | In-home ABA therapy (Autism-focused behavior treatment) | Children with autism, whole family | Family-focused, evidence-based, at-home care |\n| **LifeStance Health** [2] | In-person and telehealth therapy (CBT, DBT, etc.) | Adults, children, adolescents, couples, families | 35+ therapists, 9 local offices, accepts in-network insurance |\n| **Haven Family Counseling (Boys & Girls Haven)** [3] | Intensive in-home therapy + case management; outpatient & telehealth | Children, adolescents, adults, families | Nonprofit, 70+ years serving KY, affordable & flexible |\n| **OMNI Louisville** [5] | Community-based mental health (in homes, parks, community centers); FITT & Family Preservation Services | Foster families, families at risk of out-of-home placement | Hands-on therapist + case manager model; serves in-home |\n| **StepStone Family & Youth Services** [8] | Intensive In-Home Program (ages 5–18) | Youth in community-based family systems | Medicaid-reimbursed, least-restrictive setting |\n\n### Additional Notes\n- **Baptist Health** [4] and **Holsman PT** [7] offer *in-home physical/occupational therapy*, not mental health support.\n- **Mandala House** [6] provides outpatient and telehealth therapy but does not explicitly offer in-home or community-based services.\n- Most in-home mental health services require a **physician referral** or are **Medicaid-reimbursed**.\n\nFor immediate access, contact **April ABA** for autism-specific care, **Haven Family Counseling** for family-based crisis support, or **OMNI Louisville** for foster and high-risk family services. All offer flexible scheduling and telehealth options.",
+                  "annotations": [
+                    {
+                      "title": "At-Home ABA Therapy In Louisville/Jefferson County, Kentucky",
+                      "url": "https://www.aprilaba.com/areas-we-serve/louisville-jefferson-county"
+                    },
+                    {
+                      "title": "Find Therapists In Louisville, Kentucky - LifeStance Health",
+                      "url": "https://lifestance.com/provider/therapist/ky/louisville/"
+                    },
+                    {
+                      "title": "Haven Family Counseling",
+                      "url": "https://boysandgirlshaven.org/programs/haven-family-counseling/"
+                    },
+                    {
+                      "title": "In-Home Physical Therapy - Baptist Health",
+                      "url": "https://www.baptisthealth.com/care-services/services/home-care/services/therapy-and-rehabilitation/inhome-physical-therapy"
+                    },
+                    {
+                      "title": "Adoption, Foster Care & Mental Health Services | Louisville, KY",
+                      "url": "https://theomnifamily.com/locations/kentucky/louisville/"
+                    },
+                    {
+                      "title": "Mandala House",
+                      "url": "https://mandalalouisville.com"
+                    },
+                    {
+                      "title": "Mobile Physical & Occupational Therapy in Jeffersonville, IN",
+                      "url": "https://www.holsmanpt.com/Services/Mobile-Physical-Occupational-Therapy-in-Jeffersonville-IN-Holsman-PT/a~9772--c~487451/article.html"
+                    },
+                    {
+                      "title": "In-Home - StepStone Family & Youth Services",
+                      "url": "https://www.stepstoneyouth.com/family-and-youth-services/in-home/"
+                    },
+                    {
+                      "title": "TOP 10 BEST In Home Physical Therapy in Louisville, KY - Yelp",
+                      "url": "https://www.yelp.com/search?find_desc=In+Home+Physical+Therapy&find_loc=Louisville%2C+KY"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "labs-competitors-domain",
+  "method": "POST",
+  "path": "/v3/dataforseo_labs/google/competitors_domain/live",
+  "body": [
+    {
+      "target": "louisvillementalhealth.org",
+      "location_code": 2840,
+      "language_code": "en",
+      "limit": 50,
+      "tag": "lmhg competitors domain"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:25.027533+00:00"
+}

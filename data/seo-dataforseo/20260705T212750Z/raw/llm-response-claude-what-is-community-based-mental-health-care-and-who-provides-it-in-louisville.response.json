@@ -1,0 +1,219 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "33.7558 sec.",
+  "cost": 0.179086,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060038-9766-0612-0000-b4b2d95fff04",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "33.6945 sec.",
+      "cost": 0.179086,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "claude",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "claude",
+        "user_prompt": "What is community-based mental health care, and who provides it in Louisville?",
+        "model_name": "claude-sonnet-4-6",
+        "web_search": true,
+        "max_output_tokens": 1024,
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response claude What is community-based mental health care, and who provides it in Louisville?"
+      },
+      "result": [
+        {
+          "model_name": "claude-sonnet-4-6",
+          "input_tokens": 48852,
+          "output_tokens": 1462,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.178486,
+          "datetime": "2026-07-06 00:39:32 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Let me search for the Louisville-specific providers now.",
+                  "annotations": null
+                }
+              ]
+            },
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "I'll share what I found on the definition and then search for local Louisville providers.",
+                  "annotations": null
+                }
+              ]
+            },
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "I'll provide the definition now and search for local providers in the next turn.",
+                  "annotations": null
+                }
+              ]
+            },
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "I apologize — I've hit my search limit for this turn. Let me share what I found and supplement with what I know about Louisville providers.\n\n---\n\n## What Is Community-Based Mental Health Care?\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Community mental health is defined as a system of care that promotes mental health by addressing the needs of a local population through accessible and acceptable services, emphasizing **evidence-based and recovery-oriented practices within community settings** rather than institutional environments.",
+                  "annotations": [
+                    {
+                      "title": "Community Mental Health - an overview | ScienceDirect Topics",
+                      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/community-mental-health"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\nMore specifically, ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "community-based services are decentralized healthcare approaches that focus on improving mental health, functioning, and quality of life through **non-custodial care**, thereby enhancing access, equity, and social inclusion when adequately resourced.",
+                  "annotations": [
+                    {
+                      "title": "Community-Based Service - an overview | ScienceDirect Topics",
+                      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/community-based-service"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Community-based mental health care brings services closer to where people **live, work, study, and connect** — reducing isolation and supporting recovery in everyday environments.",
+                  "annotations": [
+                    {
+                      "title": "From isolation to inclusion: community-based mental health care",
+                      "url": "https://www.who.int/news-room/commentaries/detail/from-isolation-to-inclusion---community-based-mental-health-care"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "A community-based approach seeks to view mental illness not as an isolated issue that each public health sector must deal with alone, but as a **multifaceted problem that requires multifaceted solutions.**",
+                  "annotations": [
+                    {
+                      "title": "What is a Community-Based Approach to Mental Health Care? - Julota",
+                      "url": "https://www.julota.com/news/what-is-a-community-based-approach-to-mental-health-care/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n### What Services Does It Include?\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Community mental health care includes provision of **crisis support, protected housing, and sheltered employment** in addition to management of disorders to address the multiple needs of individuals.",
+                  "annotations": [
+                    {
+                      "title": "Community-Based Service - an overview | ScienceDirect Topics",
+                      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/community-based-service"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Common services include **outpatient care** — the most common form — where patients attend therapy and counseling sessions at a clinic or community center and meet with a professional counselor or therapist.",
+                  "annotations": [
+                    {
+                      "title": "What Is Community-Based Treatment for Mental Illness?",
+                      "url": "https://www.healthworkscollective.com/what-is-community-based-treatment-for-mental-illness/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n### Why Does It Matter?\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Community-based services can lead to early intervention and limit the stigma of treatment. They can also improve functional outcomes and quality of life for individuals with chronic mental disorders, and are cost-effective and respectful of human rights.",
+                  "annotations": [
+                    {
+                      "title": "Community-Based Service - an overview | ScienceDirect Topics",
+                      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/community-based-service"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "It is not just a compassionate alternative to institution-based care — it is the **evidence-based model** for expanding access to care, advancing rights, and improving health and social outcomes.",
+                  "annotations": [
+                    {
+                      "title": "From isolation to inclusion: community-based mental health care",
+                      "url": "https://www.who.int/news-room/commentaries/detail/from-isolation-to-inclusion---community-based-mental-health-care"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n## Who Provides It in Louisville, KY?\n\nLouisville has a strong network of community-based mental health providers. Here are the key local organizations:\n\n1. **Seven Counties Services** — One of Kentucky's largest community mental health centers, offering outpatient therapy, crisis services, substance use treatment, and psychiatric care across Jefferson County and surrounding areas. 🌐 [sevencounties.org](https://www.sevencounties.org)\n\n2. **Centerstone** — A national nonprofit with a strong Louisville presence, providing mental health and substance use services including outpatient counseling, crisis intervention, and integrated care. 🌐 [centerstone.org](https://www.centerstone.org)\n\n3. **NAMI Louisville (National Alliance on Mental Illness)** — Offers peer support groups, education programs, and advocacy for individuals and families affected by mental illness. 🌐 [namilouisville.org](https://www.namilouisville.org)\n\n4. **Louisville Metro Department of Public Health & Wellness** — Coordinates behavioral health services and crisis response for Jefferson County residents. 🌐 [louisvilleky.gov](https://louisvilleky.gov/government/public-health-wellness)\n\n5. **Volunteers of America Mid-States** — Provides community-based mental health and substance use recovery services in Louisville. 🌐 [voamid.org](https://www.voamid.org)\n\n6. **Crisis Line & Mobile Crisis Unit (502-589-4313)** — A 24/7 crisis line operated in partnership with Seven Counties Services for Louisville-area residents in acute mental health crisis.\n\n---\n\n> 💡 **Tip:** If you're in Louisville and unsure where to start, calling **211** (Kentucky's social services helpline) can connect you to the right community mental health resource based on your specific needs, insurance, and location.\n\nWould you like more details on any of these providers, such as services for a specific age group, condition, or insurance type?",
+                  "annotations": null
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "community-based mental health care definition",
+            "community-based mental health care providers Louisville Kentucky",
+            "community mental health providers Louisville Kentucky 2024",
+            "Louisville Kentucky community mental health centers organizations",
+            "Louisville Kentucky community mental health centers organizations",
+            "Louisville Kentucky community mental health centers organizations",
+            "Louisville Kentucky community mental health providers Seven Counties Centerstone NAMI"
+          ]
+        }
+      ]
+    }
+  ]
+}

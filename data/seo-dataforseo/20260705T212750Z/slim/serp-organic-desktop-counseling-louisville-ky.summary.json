@@ -1,0 +1,16 @@
+{
+  "name": "serp-organic-desktop-counseling Louisville KY",
+  "path": "/v3/serp/google/organic/live/advanced",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "cost": 0.0035,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "result_counts": [
+    1
+  ],
+  "task_statuses": [
+    20000
+  ],
+  "elapsed_seconds": 2.474
+}

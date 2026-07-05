@@ -1,0 +1,64 @@
+{
+  "run_id": "20260705T212750Z",
+  "run_dir": "/Users/tyler-lcsw/projects/lmhg-blockwp/data/seo-dataforseo/20260705T212750Z",
+  "known_spend_usd": 4.281544,
+  "hard_cap_usd": 35.0,
+  "checkpoint_usd": 25.0,
+  "call_count": 290,
+  "errors": [],
+  "raw_dir": "/Users/tyler-lcsw/projects/lmhg-blockwp/data/seo-dataforseo/20260705T212750Z/raw",
+  "slim_dir": "/Users/tyler-lcsw/projects/lmhg-blockwp/data/seo-dataforseo/20260705T212750Z/slim",
+  "last_update": "added Louisville city/DMA volume checks",
+  "browser_ua_onpage_task_id": "07060031-9766-0216-0000-756e3a0a4fe0",
+  "llm_response_wave": {
+    "platforms": [
+      "chat_gpt",
+      "perplexity",
+      "gemini"
+    ],
+    "prompts": 12,
+    "calls": 36
+  },
+  "local_grid_wave": {
+    "points": [
+      "office-bardstown-road",
+      "downtown-louisville",
+      "st-matthews-east",
+      "jeffersontown",
+      "shively-southwest"
+    ],
+    "keywords": [
+      "therapy Louisville KY",
+      "therapist Louisville KY",
+      "counseling Louisville KY",
+      "mental health services Louisville KY",
+      "family therapy Louisville KY",
+      "child therapy Louisville KY",
+      "case management Louisville KY",
+      "group therapy Louisville KY",
+      "community based mental health services Louisville KY",
+      "in home therapy Louisville KY"
+    ],
+    "calls": 100
+  },
+  "deep_wave": {
+    "calls": 41,
+    "competitors": [
+      "kentuckycounselingcenter.com",
+      "bridgemindbody.com",
+      "sevencounties.org",
+      "lifestance.com",
+      "lctps.org",
+      "bestlifelouisville.com",
+      "creativefamilycounseling.org",
+      "brockfamilytherapycenter.com",
+      "wellspringky.org",
+      "bridgehaven.org"
+    ],
+    "claude_prompts": 12
+  },
+  "depth100_ai_expansion": {
+    "organic_calls": 32,
+    "ai_mode_calls": 9
+  }
+}

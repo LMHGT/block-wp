@@ -1,0 +1,122 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "5.2468 sec.",
+  "cost": 0.0358904,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-b93cdc560feb",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "5.2362 sec.",
+      "cost": 0.0358904,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "gemini",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "gemini",
+        "user_prompt": "Recommend non-hospital mental health counseling options in Louisville, KY.",
+        "model_name": "gemini-2.5-flash-lite",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response gemini Recommend non-hospital mental health counseling options in Louisville, KY.",
+        "web_search": true,
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gemini-2.5-flash-lite",
+          "input_tokens": 116,
+          "output_tokens": 697,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.0352904,
+          "datetime": "2026-07-06 00:32:25 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "For non-hospital mental health counseling options in Louisville, KY, you have several reputable providers to consider:\n\n**Therapy Centers and Practices:**\n\n*   **Apricus Counseling:** Offers a range of specialties including trauma, abuse, and communication issues, with several licensed therapists on staff.\n*   **Michael A. RoBards, LCSW:** Provides individual, couples, and child/adolescent therapy, with both in-person and telehealth options available.\n*   **LifeStance Health:** Features a large network of therapists (around 35) offering various therapeutic approaches like CBT and DBT, with both in-person and telehealth services.\n*   **New Hope Counseling:** Specializes in issues such as trauma, anxiety, and life transitions, aiming for accessible care.\n*   **Mandala House:** An outpatient mental health center serving clients over 14, with a multidisciplinary team and telehealth services across Kentucky.\n*   **Heartwood Therapy Place:** A woman-owned organization focusing on individual and family counseling, including trauma-focused therapy like EMDR.\n*   **Kentucky Counseling Center:** As Kentucky's largest counseling center, they offer therapy, psychiatry, and case management in Louisville and across the state, with a focus on affordability.\n*   **Anchor of Hope Counseling:** Provides counseling for individuals, couples, families, and children, utilizing evidence-based modalities and offering telehealth.\n*   **Acadia Counseling:** Offers compassionate therapy for various concerns, with in-person offices in Louisville and telehealth options.\n*   **Innovative Family Therapy:** Focuses on a systems approach to help individuals, couples, and families, with both in-person and teletherapy available.\n\n**Affordable and Community-Based Options:**\n\n*   **University of Louisville Relationship Solutions Clinic:** Offers low-cost services provided by graduate students under licensed supervision.\n*   **Spalding University's Center for Behavioral Health (CBH):** Provides mental health services and is a training clinic for doctoral students.\n*   **University of Louisville Depression Center:** Operates a psychology clinic staffed by supervised doctoral students.\n*   **Jewish Family & Career Services:** A non-profit organization offering comprehensive human services and counseling.\n*   **Seven Counties Services Inc.:** Provides individualized treatment for mental health disorders and serious mental illness.\n*   **Best Life Mental Health Services, LLC:** Offers low-cost, self-pay sessions through supervised graduate-level counseling students, using a sliding scale method.\n*   **Family Health Centers:** Provides counseling services integrated with medical care for various mental health concerns, including anxiety, depression, and substance abuse, with multiple locations in Louisville.\n\n**Crisis and Support Lines:**\n\n*   **Kentucky's 988 Suicide and Crisis Lifeline:** You can call or text 988 or chat online for immediate support.\n*   **Crisis Text Line:** Text LOU to 741741 for confidential crisis support.\n\nWhen choosing a provider, consider factors like their specialties, therapeutic approaches, insurance acceptance, and whether they offer in-person or telehealth appointments. Many of these providers offer free initial consultations or can help you determine the best fit for your needs.",
+                  "annotations": [
+                    {
+                      "title": "apricuscounseling.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsNrkQ9IX1LiLuHtt70E17PgFD-pD15pjZCu4ccr-iOnrr0Sf5QM7f5LQdM7cOVqjAcnpJMNu97abxRelyGBbdGsvCA3iQkUCz--W8JSy2LCqcX2HQMGSJCdzxaTo="
+                    },
+                    {
+                      "title": "michaelarobards.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDoNDBnAE_b6cMtpOMPSfut5UHAR_q8j8FRt6T1JoObSw2BuA4OXsJR17KSupKQQz4V-9_dCmidzk-JJLjZq0IYj6gaQ93aTjx0agHHnpJLKkPoObLrFacgEoL"
+                    },
+                    {
+                      "title": "lifestance.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwZXp7gatClQ9j5Sl2n0AnYIT5V1Qj5CQtSwhRrOngP0TKpBeP-bGWhxzRlG13g6nUf5ZHRDldQU8LLvDqMKgcE07Z6VSnFAhQWtFER0Y_LczY1rTYW50MmJo9ps8zzZbnw3rZFpQhLLRONgPjjUMfOxNw"
+                    },
+                    {
+                      "title": "newhopecounselingsite.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-uDI1aajPeYkwbXt6Bu6mB_BqgSoLSAP3zO3wyR7CpJg8Sfb9rRzclAFa3jQ68OWKGZFGcdGX7rudVmMe32p3rwK7jGrTHrI1TA8OpeJQA7ynKHH9cD09CaXsGts="
+                    },
+                    {
+                      "title": "mandalalouisville.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGb1pftfCZNHZeDTqCV-nP9R0LLfWd4sws8VK3mRlZB5Sm3fEKvMK8o1lHEO3g88pjCPRvT7UATaAo1i4z_m0FFVR5IlHzNwGnrhqy9M4mzLY9uQ2iw2_hFg=="
+                    },
+                    {
+                      "title": "heartwoodtherapyplace.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRxRGnLBGySvttHTBW3RjPOKkILYpyCxupL5C-o8siGb_5yKR-hx7mKVqMkuBRHdN23jNULN_2RervxvR1ulPVlqLF2nGuw8ezMFvZH_zN4a3AA1pS6-8XlwKI8nQ="
+                    },
+                    {
+                      "title": "kentuckycounselingcenter.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmtUre8jSC-BMa_C8BAm-pbrTUp7YCgrxLNLWOyQTXIvZES8CC4zQdmORllCzsB0qjO-70kL0v5skpNHyBTmAafEjNJ3Tx4pfGN0I15HDeXHtvkZM2qfeL6KprjkDoyDI="
+                    },
+                    {
+                      "title": "anchorofhopelouisville.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFO94aeOkG-euiwJAUN-y2NKC3AiZJV2hN3hTc5wvkaORQtfCwZTXDbx2uwOhCz_O0vP-f0KOh0F4-AoUfDDSg5Jjd7ZuJwVxWjZfi768CCUBXuHRzaXCnNkHJNVsknY_bJsA6TMfM="
+                    },
+                    {
+                      "title": "acadiacounseling.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvi-WrksZ_M7sKGtbr0mssKRZNkqoyox7ys5kNFhfDIg_KPtiroBqSENLEc-GbClZrAoX5jOOpVvQo_igshKGE_Y-CrouPlaPbPjERytn4MW3bEfG8WP0Z"
+                    },
+                    {
+                      "title": "innovativefamilytherapy.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-12zNnn8th1I0tWwGGPFLtpFEr4XqoN1vxHz0eHlTdkbAIlQR-WWhdj5fywdO0bbofCEKf4FhXwhzIWYix1ADozSC2XfN4o_Vzf1_5RHlHJjsX03KENxuFN2hZ4ZTUA=="
+                    },
+                    {
+                      "title": "opencounseling.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcYcfR3jLd2kBaTlQX6DgHheqGxgYHGhtqILOUVWJwHD3vLKfiw9zqzcCvb9xHEdd8i8v3OmRer53wqlSwJzkgDJj8WgKwHfE6Rq4OEGXSbI7pBtliYc7GLT2LAbtfzw51HqGZvfPoGJLo26v_"
+                    },
+                    {
+                      "title": "bestlifelouisville.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGhWqWCKfcWmT7kt82kTesuBki7ujuW97bKQFytscfWhCqiacjQd7B00JOcP2ct5AxNTyD88g4pwuZuOaynfWsqzKsr9WV42auo2M-473rMJIrSCfxPT9uIgxJ2ROMy7TpDpYmSTsKCRJdczwN-nFJoTfQB4O9VA=="
+                    },
+                    {
+                      "title": "fhclouisville.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAK30Sk5lx5gHxrxLcHbtu_9n4jZbE9qqkvpOvUTF7MCU_39dsil8EW5KsUATmTvnkU-9zNAvYBupqOZ5NyKvyaaqNCHzAm6Wf-lESuyBdnRE-INmjkLR016uAidDwMKkX1Qk8oOVHtxYpRlHN2FY6lcZ46xqBUTpDToUEZA=="
+                    },
+                    {
+                      "title": "louisvilleky.gov",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFm_WRahiMUWHT18zoO-KOwr-K5gsxhbh28hn6WlQGQ9ZLEWG9Hv4mHl1DHd4VDBO_5VyFdSKKjjnzMDiq0TFMLYzcAYi6NnV6WE_4C_NnQPNqDlXmCl4cmO1at-Qkx1W-FK3urJItQ7f-114QRoJmFntpiXC_kOJU5b2ZLA6qvFFXxPAAGmUQTbVxbk6oPFg=="
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "non-hospital mental health counseling Louisville KY",
+            "affordable mental health counseling Louisville KY",
+            "therapists Louisville KY"
+          ]
+        }
+      ]
+    }
+  ]
+}

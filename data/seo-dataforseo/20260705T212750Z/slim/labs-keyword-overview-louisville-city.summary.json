@@ -1,0 +1,15 @@
+{
+  "name": "labs-keyword-overview-louisville-city",
+  "path": "/v3/dataforseo_labs/google/keyword_overview/live",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "cost": 0.0,
+  "tasks_count": 1,
+  "tasks_error": 1,
+  "result_counts": [
+    0
+  ],
+  "task_statuses": [
+    40501
+  ]
+}

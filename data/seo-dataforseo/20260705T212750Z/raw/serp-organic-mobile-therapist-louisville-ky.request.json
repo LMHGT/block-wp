@@ -1,0 +1,16 @@
+{
+  "name": "serp-organic-mobile-therapist Louisville KY",
+  "method": "POST",
+  "path": "/v3/serp/google/organic/live/advanced",
+  "body": [
+    {
+      "keyword": "therapist Louisville KY",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "mobile",
+      "depth": 10,
+      "tag": "lmhg organic mobile therapist Louisville KY"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:01.796679+00:00"
+}

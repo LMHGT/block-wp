@@ -1,0 +1,18 @@
+{
+  "name": "onpage-task-post-browser-ua-sitemap-only",
+  "path": "/v3/on_page/task_post",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "cost": 0.0135,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "result_counts": [
+    0
+  ],
+  "task_statuses": [
+    20100
+  ],
+  "task_ids": [
+    "07060031-9766-0216-0000-756e3a0a4fe0"
+  ]
+}

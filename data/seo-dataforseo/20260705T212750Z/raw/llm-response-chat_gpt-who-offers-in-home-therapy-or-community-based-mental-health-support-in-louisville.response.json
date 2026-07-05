@@ -1,0 +1,117 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "9.2758 sec.",
+  "cost": 0.0235364,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060031-9766-0612-0000-c420fbdf249c",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "9.2645 sec.",
+      "cost": 0.0235364,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "chat_gpt",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "chat_gpt",
+        "user_prompt": "Who offers in-home therapy or community-based mental health support in Louisville?",
+        "model_name": "gpt-5.4-nano",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response chat_gpt Who offers in-home therapy or community-based mental health support in Louisvill",
+        "web_search": true,
+        "web_search_country_iso_code": "US",
+        "web_search_city": "Louisville",
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gpt-5.4-nano-2026-03-17",
+          "input_tokens": 8932,
+          "output_tokens": 920,
+          "reasoning_tokens": 287,
+          "web_search": true,
+          "money_spent": 0.0229364,
+          "datetime": "2026-07-06 00:31:42 +00:00",
+          "items": [
+            {
+              "type": "reasoning",
+              "sections": null
+            },
+            {
+              "type": "reasoning",
+              "sections": null
+            },
+            {
+              "type": "reasoning",
+              "sections": null
+            },
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here are some Louisville-area organizations that offer **in-home / home-based therapy** and/or **community-based mental health support** (case management, wraparound services, etc.)—the right fit depends a lot on **age (youth vs. adult)**, **severity**, and **insurance/eligibility**.\n\n## In-home / home-based services\n- **KVC Kentucky (in-home behavioral health & family support)**\n  - Home- and community-based mental/behavioral health services (often for youth/families).\n  - ([kentucky.kvc.org](https://kentucky.kvc.org/?utm_source=openai))\n\n- **StepStone Family & Youth Services – Intensive In-Home Program (youth)**\n  - Intensive in-home care for children/adolescents (ages **5–18**) when mental/behavioral/emotional illness is causing significant impairment and risk of out-of-home placement.\n  - ([stepstoneyouth.com](https://www.stepstoneyouth.com/family-and-youth-services/in-home/?utm_source=openai))\n\n## Community-based mental health support (case management, outpatient supports, connection to services)\n- **Wellspring (case management + housing + behavioral health supports)**\n  - Community supports such as **case management** and **housing** alongside behavioral health needs.\n  - ([wellspringky.org](https://wellspringky.org/what-we-do/?utm_source=openai))\n\n- **Louisville Mental Health Group – Case Management**\n  - Focuses on connecting people to **community resources** (housing, employment, medical care, transportation, etc.).\n  - ([louisvillementalhealth.org](https://louisvillementalhealth.org/case-management/?utm_source=openai))\n\n- **Creative Spirits Behavioral Health (community-based services)**\n  - Provides mental health care described as **community-based services** (listed Louisville area).\n  - ([creativespiritsonline.com](https://www.creativespiritsonline.com/?utm_source=openai))\n\n- **Kilgore Samaritan Counseling Center (services for adults + community education/outreach)**\n  - Offers counseling and community-oriented services in the Louisville area.\n  - ([kilgorecounseling.org](https://kilgorecounseling.org/services/?utm_source=openai))\n\n- **One’s Journey Through Life, LLC (therapy + social support; adults/families)**\n  - Therapy agency providing integrated support for adults/families dealing with mental health and related stressors.\n  - ([onesjourneythroughlife.org](https://onesjourneythroughlife.org/?utm_source=openai))\n\n- **Norton Healthcare – Behavioral Health (connection to community providers)**\n  - Norton can help connect patients to longer-term community providers after an initial level of care.\n  - ([nortonhealthcare.com](https://nortonhealthcare.com/services-and-conditions/behavioral-health/?utm_source=openai))\n\n- **LouisvilleKY.gov – Community Mental Health Services (directory-style resource)**\n  - City resource page pointing people toward community mental health help.\n  - ([louisvilleky.gov](https://louisvilleky.gov/government/health-wellness/community-mental-health-services?utm_source=openai))\n\n## Quick questions so I can narrow it to the best 3 options for you\n1) Is this for **a child/youth (under 18)** or **an adult**?  \n2) Are you looking specifically for **therapy in the home**, or is **community-based case management + outpatient** okay?  \n3) Do you have **insurance**",
+                  "annotations": [
+                    {
+                      "title": "KVC Kentucky - In-Home Behavioral Health, Family Support & More",
+                      "url": "https://kentucky.kvc.org/?utm_source=openai"
+                    },
+                    {
+                      "title": "In-Home | StepStone Family & Youth Services",
+                      "url": "https://www.stepstoneyouth.com/family-and-youth-services/in-home/?utm_source=openai"
+                    },
+                    {
+                      "title": "Wellspring Mental Health Services in Louisville | Wellspring",
+                      "url": "https://wellspringky.org/what-we-do/?utm_source=openai"
+                    },
+                    {
+                      "title": "Case Management | Louisville Mental Health Group",
+                      "url": "https://louisvillementalhealth.org/case-management/?utm_source=openai"
+                    },
+                    {
+                      "title": "Mental Health Services | Kentucky | Creative Spirits Behavioral Health",
+                      "url": "https://www.creativespiritsonline.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Services - Kilgore Samaritan Counseling Center",
+                      "url": "https://kilgorecounseling.org/services/?utm_source=openai"
+                    },
+                    {
+                      "title": "Integrated Therapy and Case Management - One's Journey Through Life Louisville, KY",
+                      "url": "https://onesjourneythroughlife.org/?utm_source=openai"
+                    },
+                    {
+                      "title": "Kentucky and Indiana Mental Health Care | Norton Healthcare Louisville, Ky.",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/?utm_source=openai"
+                    },
+                    {
+                      "title": "Community Mental Health Services | LouisvilleKY.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services?utm_source=openai"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "in-home mental health therapy Louisville KY community based services",
+            "Kentucky in-home mental health services Louisville therapeutic home-based program",
+            "Louisville outpatient mental health clinic case management community mental health services",
+            "Norton Healthcare behavioral health community support Louisville in-home"
+          ]
+        }
+      ]
+    }
+  ]
+}

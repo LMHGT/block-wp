@@ -1,0 +1,449 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.2058 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060028-9766-0139-0000-9497ad2ab9ad",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.1169 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "What local counseling options are available in Louisville KY?",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode What local counseling options are available in Louisville KY?",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "What local counseling options are available in Louisville KY?",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=What%20local%20counseling%20options%20are%20available%20in%20Louisville%20KY%3F&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:28:24 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[1]/div[1]/div[3]",
+              "markdown": "Louisville, KY offers a range of local counseling options covering individual therapy, family therapy, and specialized counseling services.[[1]](https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy)[[2]](https://counselingnow.com/ky-local-counseling/top-counseling-in-louisville/)[[3]](https://louisvillerecoverycenter.com/mental-health/)\n\n**Individual and Specialized Counseling** \n\n- **CompServ Health Resources Inc. (Downtown):** Offers individual and group therapy, including Cognitive Behavioral Therapy (CBT).\n- **Latoya Hall, LPCC (Original Highlands):** Psychotherapist offering specialized therapy sessions.\n- **[Catherine Eleson](https://www.psychologytoday.com/us/therapists/catherine-eleson-louisville-ky/316277) (Louisville, 40213):** Licensed Professional Clinical Counselor specializing in self-worth, relationships, and life choices.[[1]](https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy)[[2]](https://www.zocdoc.com/professional/latoya-hall-lpcc-431532?LocIdent=351547&utm_source=reservewithgoogle&utm_medium=seosynd&utm_campaign=hai&entity_id=pr_jLj6ZWUZbki_TjnpRADXYx-lo_LNwrZ_IsUUS3Ix_ED8eI-Q-entity)[[3]](https://www.psychologytoday.com/us/therapists/catherine-eleson-louisville-ky/316277)\n\n**Family and Couples Counseling** \n\n![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-9497ad2ab9ad:8)\nCreative Family Counseling 3.9 (14)  \nMarriage or relationship counselor  \nClosed 8134 New La Grange Rd #102  \nA local practice focusing on family-based therapy.[[1]](https://creativefamilycounseling.org/louisville-ky-campus/)[[2]](https://dragonflymentalwellness.com/resource-guide/)[[3]](https://www.siumed.org/treatment/family-therapy.html)\n\n![](https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=av7BdQ-W1bHlMgQm-CCxog&cb_client=search.gws-prod.gps&yaw=38.667984&pitch=0&thumbfov=100&w=82&h=82)\nJim Walker, LCSW 5.0 (4)  \nMental health service  \nClosed 6006 Brownsboro Park Blvd Ste A  \nSpecializes in in-office, phone, or online video therapy for families and couples, costing around 125 USD.[[1]](https://jimwalker.fullslate.com/services/6)[[2]](https://www.psychologytoday.com/us/therapists/live-proud-lgbt-mental-health-svcs-louisville-ky/143009)[[3]](https://www.regain.us/advice/couples-therapy/how-can-online-couples-therapy-offer-relationship-support/)\n\n![](https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=1dIJspW4Dit2S2iG8FCknA&cb_client=search.gws-prod.gps&yaw=229.01343&pitch=0&thumbfov=100&w=82&h=82)\nCrystal Whittaker, LMFT Psychotherapist  \n8139 New La Grange Rd  \nLicensed marriage and family therapist for children, adults, and couples.[[1]](https://www.psychologytoday.com/us/therapists/advanced-solutions-counseling-and-consulting-richmond-ky/82564)[[2]](https://www.highlandparktherapy.com/blog/how-to-find-the-best-therapists-in-los-angeles)[[3]](https://www.talkwithmarilyn.com/curriculum-vitae)\n\n![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-9497ad2ab9ad:9)\nRoBards Counseling & Consulting, Inc.Marriage or relationship counselor  \nClosed 2815 Taylorsville Rd Unit 101  \nOffers in-person, 50-minute marriage or relationship counseling sessions.[[1]](https://app.squareup.com/appointments/book/utfyz4199o429i/LPQCJMZ045EAK/start?service_id=GMNV6JG6PNV5QOTZAVR7GSQ3&variation_id=KIVJWN7UH3OCYJCUPWISOPTV)[[2]](https://jrnycounseling.com/individual-therapy/)[[3]](https://www.thecenterforhealthyfamilies.com/services)[[4]](https://www.pivotalcounseling.com/family-counseling-loveland-co)[[5]](https://alpenglowcc.org/services)\n\n**Family Support Services** \n\n- **[Kentucky Comprehensive Family Services (KCFS)](https://www.chfs.ky.gov/):** Provides comprehensive family-based services, including individual and family therapy, case management, and 24/7 crisis support.[[1]](https://kulimacare.org/)\n\nTo help you find the best match, are you looking for **in-person** or **telehealth** sessions, and is this for **an individual**, **couple** , or **family**?",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Louisville, KY offers a range of local counseling options covering individual therapy, family therapy, and specialized counseling services.",
+                  "markdown": "Louisville, KY offers a range of local counseling options covering individual therapy, family therapy, and specialized counseling services.[[1]](https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy)[[2]](https://counselingnow.com/ky-local-counseling/top-counseling-in-louisville/)[[3]](https://louisvillerecoverycenter.com/mental-health/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "compservhealth.com",
+                      "domain": "www.compservhealth.com",
+                      "url": "https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy",
+                      "title": "Psychotherapy",
+                      "text": "CompSer Health Resources Inc. offers both individual and group therapy options, including Cognitive Behavioral Therapy (CBT). Meet..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Counseling Now",
+                      "domain": "counselingnow.com",
+                      "url": "https://counselingnow.com/ky-local-counseling/top-counseling-in-louisville/",
+                      "title": "Top Counseling in Louisville: Your Guide to Finding the Right Therapist",
+                      "text": "Counseling Now Louisville's commitment to mental health is evident in the broad range of services available. These services span f..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Louisville Recovery Center",
+                      "domain": "louisvillerecoverycenter.com",
+                      "url": "https://louisvillerecoverycenter.com/mental-health/",
+                      "title": "Kentucky Mental Health Care at Louisville Recovery Center",
+                      "text": "Types of Mental Health Facilities in Louisville, KY Counseling Centers: Counseling centers offer a range of services, including in..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Individual and Specialized Counseling",
+                  "markdown": "**Individual and Specialized Counseling**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "CompServ Health Resources Inc. (Downtown): Offers individual and group therapy, including Cognitive Behavioral Therapy (CBT). CompServ Health Resources Inc. CompServ Health Resources Inc. Latoya Hall, LPCC (Original Highlands): Psychotherapist offering specialized therapy sessions. Latoya Hall, LPCC Latoya Hall, LPCC Catherine Eleson (Louisville, 40213): Licensed Professional Clinical Counselor specializing in self-worth, relationships, and life choices. Catherine Eleson",
+                  "markdown": "- **CompServ Health Resources Inc. (Downtown):** Offers individual and group therapy, including Cognitive Behavioral Therapy (CBT).\n- **Latoya Hall, LPCC (Original Highlands):** Psychotherapist offering specialized therapy sessions.\n- **[Catherine Eleson](https://www.psychologytoday.com/us/therapists/catherine-eleson-louisville-ky/316277) (Louisville, 40213):** Licensed Professional Clinical Counselor specializing in self-worth, relationships, and life choices.[[1]](https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy)[[2]](https://www.zocdoc.com/professional/latoya-hall-lpcc-431532?LocIdent=351547&utm_source=reservewithgoogle&utm_medium=seosynd&utm_campaign=hai&entity_id=pr_jLj6ZWUZbki_TjnpRADXYx-lo_LNwrZ_IsUUS3Ix_ED8eI-Q-entity)[[3]](https://www.psychologytoday.com/us/therapists/catherine-eleson-louisville-ky/316277)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Catherine Eleson",
+                      "description": null,
+                      "url": "https://www.psychologytoday.com/us/therapists/catherine-eleson-louisville-ky/316277",
+                      "domain": "www.psychologytoday.com"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "compservhealth.com",
+                      "domain": "www.compservhealth.com",
+                      "url": "https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy",
+                      "title": "Psychotherapy",
+                      "text": "CompSer Health Resources Inc. offers both individual and group therapy options, including Cognitive Behavioral Therapy (CBT). Meet..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "zocdoc.com",
+                      "domain": "www.zocdoc.com",
+                      "url": "https://www.zocdoc.com/professional/latoya-hall-lpcc-431532?LocIdent=351547&utm_source=reservewithgoogle&utm_medium=seosynd&utm_campaign=hai&entity_id=pr_jLj6ZWUZbki_TjnpRADXYx-lo_LNwrZ_IsUUS3Ix_ED8eI-Q-entity",
+                      "title": "Therapy",
+                      "text": "Service at \"Latoya Hall, LPCC\" (15 minutes)"
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Psychology Today",
+                      "domain": "www.psychologytoday.com",
+                      "url": "https://www.psychologytoday.com/us/therapists/catherine-eleson-louisville-ky/316277",
+                      "title": "Catherine Eleson, Licensed Professional Clinical Counselor, Louisville, KY, 40213",
+                      "text": "Catherine Eleson, Licensed Professional Clinical Counselor, Louisville, KY, 40213, If you are motivated to understand the consciou..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Family and Couples Counseling",
+                  "markdown": "**Family and Couples Counseling**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Creative Family Counseling 3.9 (14) Marriage or relationship counselor Closed 8134 New La Grange Rd #102 A local practice focusing on family-based therapy.",
+                  "markdown": "![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-9497ad2ab9ad:4)\nCreative Family Counseling 3.9 (14)  \nMarriage or relationship counselor  \nClosed 8134 New La Grange Rd #102  \nA local practice focusing on family-based therapy.[[1]](https://creativefamilycounseling.org/louisville-ky-campus/)[[2]](https://dragonflymentalwellness.com/resource-guide/)[[3]](https://www.siumed.org/treatment/family-therapy.html)",
+                  "links": null,
+                  "images": [
+                    {
+                      "type": "images_element",
+                      "alt": null,
+                      "url": null,
+                      "image_url": "https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-9497ad2ab9ad:5"
+                    }
+                  ],
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Creative Family Counseling",
+                      "domain": "creativefamilycounseling.org",
+                      "url": "https://creativefamilycounseling.org/louisville-ky-campus/",
+                      "title": "Visit Our Louisville, KY Campus",
+                      "text": "In addition to the wide variety of services offered at Creative Family Counseling ( Creative Family Counseling, LLC ) , the Louisv..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Dragonfly Mental Wellness Foundation",
+                      "domain": "dragonflymentalwellness.com",
+                      "url": "https://dragonflymentalwellness.com/resource-guide/",
+                      "title": "Mental Health Resource Guide by Dragonfly Mental Wellness Foundation",
+                      "text": "Services are based on the belief that the best place to resolve family problems is within the family's unit and community. The Vil..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "SIU HealthCare",
+                      "domain": "www.siumed.org",
+                      "url": "https://www.siumed.org/treatment/family-therapy.html",
+                      "title": "Family Therapy",
+                      "text": "Family therapy is a subspecialty of psychiatry/psychotherapy that focuses on improving and maintaining healthy relationships withi..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Jim Walker, LCSW 5.0 (4) Mental health service Closed 6006 Brownsboro Park Blvd Ste A Specializes in in-office, phone, or online video therapy for families and couples, costing around 125 USD.",
+                  "markdown": "![](https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=av7BdQ-W1bHlMgQm-CCxog&cb_client=search.gws-prod.gps&yaw=38.667984&pitch=0&thumbfov=100&w=82&h=82)\nJim Walker, LCSW 5.0 (4)  \nMental health service  \nClosed 6006 Brownsboro Park Blvd Ste A  \nSpecializes in in-office, phone, or online video therapy for families and couples, costing around 125 USD.[[1]](https://jimwalker.fullslate.com/services/6)[[2]](https://www.psychologytoday.com/us/therapists/live-proud-lgbt-mental-health-svcs-louisville-ky/143009)[[3]](https://www.regain.us/advice/couples-therapy/how-can-online-couples-therapy-offer-relationship-support/)",
+                  "links": null,
+                  "images": [
+                    {
+                      "type": "images_element",
+                      "alt": null,
+                      "url": null,
+                      "image_url": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=av7BdQ-W1bHlMgQm-CCxog&cb_client=search.gws-prod.gps&yaw=38.667984&pitch=0&thumbfov=100&w=82&h=82"
+                    }
+                  ],
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "fullslate.com",
+                      "domain": "jimwalker.fullslate.com",
+                      "url": "https://jimwalker.fullslate.com/services/6",
+                      "title": "In Office-Family Or Couples Counseling/Psychotherapy",
+                      "text": "May be completed by telephone or online video chat"
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Psychology Today",
+                      "domain": "www.psychologytoday.com",
+                      "url": "https://www.psychologytoday.com/us/therapists/live-proud-lgbt-mental-health-svcs-louisville-ky/143009",
+                      "title": "Live Proud LGBT Mental Health Svcs, Clinical Social Work/Therapist, Louisville, KY, 40207",
+                      "text": "Jim Walker - Live Proud LGBT Mental Health Svcs, Clinical Social Work/Therapist, Louisville, KY, 40207, (502) 494-6631, Are you a ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Regain - Relationship Therapy",
+                      "domain": "www.regain.us",
+                      "url": "https://www.regain.us/advice/couples-therapy/how-can-online-couples-therapy-offer-relationship-support/",
+                      "title": "Online Couples Therapy And Relationship Support",
+                      "text": "A couples therapist often has the official title of “ licensed marriage and family therapist,” which indicates that they have spec..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Crystal Whittaker, LMFT Psychotherapist 8139 New La Grange Rd Licensed marriage and family therapist for children, adults, and couples.",
+                  "markdown": "![](https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=1dIJspW4Dit2S2iG8FCknA&cb_client=search.gws-prod.gps&yaw=229.01343&pitch=0&thumbfov=100&w=82&h=82)\nCrystal Whittaker, LMFT Psychotherapist  \n8139 New La Grange Rd  \nLicensed marriage and family therapist for children, adults, and couples.[[1]](https://www.psychologytoday.com/us/therapists/advanced-solutions-counseling-and-consulting-richmond-ky/82564)[[2]](https://www.highlandparktherapy.com/blog/how-to-find-the-best-therapists-in-los-angeles)[[3]](https://www.talkwithmarilyn.com/curriculum-vitae)",
+                  "links": null,
+                  "images": [
+                    {
+                      "type": "images_element",
+                      "alt": null,
+                      "url": null,
+                      "image_url": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=1dIJspW4Dit2S2iG8FCknA&cb_client=search.gws-prod.gps&yaw=229.01343&pitch=0&thumbfov=100&w=82&h=82"
+                    }
+                  ],
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Psychology Today",
+                      "domain": "www.psychologytoday.com",
+                      "url": "https://www.psychologytoday.com/us/therapists/advanced-solutions-counseling-and-consulting-richmond-ky/82564",
+                      "title": "Advanced Solutions Counseling and Consulting, Marriage & Family Therapist, Richmond, KY, 40475",
+                      "text": "Marriage & Family Therapist, RPT-S, LPCC-S, LMFT (she, her) Ilene Bosscher, MA, MDiv is a Licensed Marriage and Family Therapist a..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Highland Park Holistic Therapy",
+                      "domain": "www.highlandparktherapy.com",
+                      "url": "https://www.highlandparktherapy.com/blog/how-to-find-the-best-therapists-in-los-angeles",
+                      "title": "How To Find The Best Therapist In Los Angeles | Tips From A Therapist — Highland Park Holistic Therapy",
+                      "text": "Some therapists are also specifically trained to provide counseling for families and couples. If this is an area that you need sup..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "www.talkwithmarilyn.com",
+                      "domain": "www.talkwithmarilyn.com",
+                      "url": "https://www.talkwithmarilyn.com/curriculum-vitae",
+                      "title": "About Marilyn",
+                      "text": "I am a Licensed Marriage Family Therapist (LMFT). Marriage Family Therapists are Masters-level clinicians with extensive education..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "RoBards Counseling & Consulting, Inc. Marriage or relationship counselor Closed 2815 Taylorsville Rd Unit 101 Offers in-person, 50-minute marriage or relationship counseling sessions.",
+                  "markdown": "![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-9497ad2ab9ad:6)\nRoBards Counseling & Consulting, Inc.Marriage or relationship counselor  \nClosed 2815 Taylorsville Rd Unit 101  \nOffers in-person, 50-minute marriage or relationship counseling sessions.[[1]](https://app.squareup.com/appointments/book/utfyz4199o429i/LPQCJMZ045EAK/start?service_id=GMNV6JG6PNV5QOTZAVR7GSQ3&variation_id=KIVJWN7UH3OCYJCUPWISOPTV)[[2]](https://jrnycounseling.com/individual-therapy/)[[3]](https://www.thecenterforhealthyfamilies.com/services)[[4]](https://www.pivotalcounseling.com/family-counseling-loveland-co)[[5]](https://alpenglowcc.org/services)",
+                  "links": null,
+                  "images": [
+                    {
+                      "type": "images_element",
+                      "alt": null,
+                      "url": null,
+                      "image_url": "https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-9497ad2ab9ad:7"
+                    }
+                  ],
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "squareup.com",
+                      "domain": "app.squareup.com",
+                      "url": "https://app.squareup.com/appointments/book/utfyz4199o429i/LPQCJMZ045EAK/start?service_id=GMNV6JG6PNV5QOTZAVR7GSQ3&variation_id=KIVJWN7UH3OCYJCUPWISOPTV",
+                      "title": "Follow Up Appointment (In Person)",
+                      "text": "Select Book below to view available appointment times.   New clients, please register as a new client before proceeding."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "JRNY Counseling",
+                      "domain": "jrnycounseling.com",
+                      "url": "https://jrnycounseling.com/individual-therapy/",
+                      "title": "Individual Mental Health Therapy Services | Noblesville, IN | 46060",
+                      "text": "Therapy sessions include individual sessions, relationship counseling, and family sessions. These are 50-minute sessions and are o..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "www.thecenterforhealthyfamilies.com",
+                      "domain": "www.thecenterforhealthyfamilies.com",
+                      "url": "https://www.thecenterforhealthyfamilies.com/services",
+                      "title": "Services We Provide",
+                      "text": "Services The Center for Healthy Families provides couples and marital counseling, family therapy, and individual therapy to a dive..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Pivotal Counseling, LLC",
+                      "domain": "www.pivotalcounseling.com",
+                      "url": "https://www.pivotalcounseling.com/family-counseling-loveland-co",
+                      "title": "Family Counseling Loveland, CO | Pivotal Counseling, LLC for Families and Children Pivotal Counseling, LLC — Greeley, Fort Collins, Colorado",
+                      "text": "In-Person Consultations If you like meeting face-to-face, we have in-person consultations at our Greeley and Fort Collins location..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "alpenglowcc.org",
+                      "domain": "alpenglowcc.org",
+                      "url": "https://alpenglowcc.org/services",
+                      "title": "Services",
+                      "text": "50-minute group and/or relationship systems (sometimes referenced as “couples” or \"family\") counseling services."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Family Support Services",
+                  "markdown": "**Family Support Services**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Kentucky Comprehensive Family Services (KCFS) : Provides comprehensive family-based services, including individual and family therapy, case management, and 24/7 crisis support. Kentucky Comprehensive Family Services (KCFS)",
+                  "markdown": "- **[Kentucky Comprehensive Family Services (KCFS)](https://www.chfs.ky.gov/):** Provides comprehensive family-based services, including individual and family therapy, case management, and 24/7 crisis support.[[1]](https://kulimacare.org/)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Kentucky Comprehensive Family Services (KCFS)",
+                      "description": null,
+                      "url": "https://www.chfs.ky.gov/",
+                      "domain": "www.chfs.ky.gov"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Kulima Care Family Services",
+                      "domain": "kulimacare.org",
+                      "url": "https://kulimacare.org/",
+                      "title": "Kulima Care Family Services - Bringing Wholeness To Families - Kulima Care Family Services",
+                      "text": "KCFS is in Louisville, KY, where we provide various family-based support, including case management, clinical services like indivi..."
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "compservhealth.com",
+                  "domain": "www.compservhealth.com",
+                  "url": "https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy",
+                  "title": "Psychotherapy",
+                  "text": "CompSer Health Resources Inc. offers both individual and group therapy options, including Cognitive Behavioral Therapy (CBT). Meet..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "zocdoc.com",
+                  "domain": "www.zocdoc.com",
+                  "url": "https://www.zocdoc.com/professional/latoya-hall-lpcc-431532?LocIdent=351547&utm_source=reservewithgoogle&utm_medium=seosynd&utm_campaign=hai&entity_id=pr_jLj6ZWUZbki_TjnpRADXYx-lo_LNwrZ_IsUUS3Ix_ED8eI-Q-entity",
+                  "title": "Therapy",
+                  "text": "Service at \"Latoya Hall, LPCC\" (15 minutes)"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "fullslate.com",
+                  "domain": "jimwalker.fullslate.com",
+                  "url": "https://jimwalker.fullslate.com/services/6",
+                  "title": "In Office-Family Or Couples Counseling/Psychotherapy",
+                  "text": "May be completed by telephone or online video chat"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "squareup.com",
+                  "domain": "app.squareup.com",
+                  "url": "https://app.squareup.com/appointments/book/utfyz4199o429i/LPQCJMZ045EAK/start?service_id=GMNV6JG6PNV5QOTZAVR7GSQ3&variation_id=KIVJWN7UH3OCYJCUPWISOPTV",
+                  "title": "Follow Up Appointment (In Person)",
+                  "text": "Select Book below to view available appointment times.   New clients, please register as a new client before proceeding."
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

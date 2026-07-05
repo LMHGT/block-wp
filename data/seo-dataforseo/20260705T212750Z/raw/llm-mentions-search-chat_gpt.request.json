@@ -1,0 +1,33 @@
+{
+  "name": "llm-mentions-search-chat_gpt",
+  "method": "POST",
+  "path": "/v3/ai_optimization/llm_mentions/search/live",
+  "body": [
+    {
+      "target": [
+        {
+          "domain": "louisvillementalhealth.org",
+          "search_filter": "include",
+          "search_scope": [
+            "any"
+          ],
+          "include_subdomains": true
+        },
+        {
+          "keyword": "Louisville Mental Health Group",
+          "search_filter": "include",
+          "search_scope": [
+            "any"
+          ],
+          "match_type": "partial_match"
+        }
+      ],
+      "platform": "chat_gpt",
+      "location_code": 2840,
+      "language_code": "en",
+      "limit": 25,
+      "tag": "lmhg llm mentions search chat_gpt"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:28.579887+00:00"
+}

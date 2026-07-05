@@ -1,0 +1,14 @@
+{
+  "name": "business-google-my-business-info-brand",
+  "method": "POST",
+  "path": "/v3/business_data/google/my_business_info/live",
+  "body": [
+    {
+      "keyword": "Louisville Mental Health Group",
+      "location_code": 1017825,
+      "language_code": "en",
+      "tag": "lmhg google business profile brand"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:25.664454+00:00"
+}

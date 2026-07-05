@@ -1,0 +1,14 @@
+{
+  "name": "local-grid-maps-shively-southwest-child therapy Louisville KY",
+  "path": "/v3/serp/google/maps/live/advanced",
+  "body": [
+    {
+      "keyword": "child therapy Louisville KY",
+      "location_coordinate": "38.2001000,-85.8227000,5000",
+      "language_code": "en",
+      "device": "desktop",
+      "depth": 20,
+      "tag": "lmhg grid maps shively-southwest child therapy Louisville KY"
+    }
+  ]
+}

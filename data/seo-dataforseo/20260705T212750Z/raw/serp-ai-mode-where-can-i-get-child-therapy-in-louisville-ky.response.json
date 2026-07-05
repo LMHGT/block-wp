@@ -1,0 +1,344 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "5.4052 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060028-9766-0139-0000-bdb58d10d678",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "5.3285 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "Where can I get child therapy in Louisville KY?",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode Where can I get child therapy in Louisville KY?",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Where can I get child therapy in Louisville KY?",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=Where%20can%20I%20get%20child%20therapy%20in%20Louisville%20KY%3F&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:28:27 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[1]/div[1]/div[3]",
+              "markdown": "Several practices in Louisville, KY, offer child and adolescent therapy services, including specialized pediatric care, family counseling, and behavioral health centers.[[1]](https://columbusbehavioral.com/mental-health-treatment-in-louisville-kentucky/)[[2]](https://fccwellbeing.com/clinic-locations/colorado/louisville-clinic/)[[3]](https://www.healthgrades.com/adolescent-psychiatry-pediatric-psychiatry-directory/ky-kentucky/louisville)\n\n**Child Therapy Providers in Louisville, KY** \n\n![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-bdb58d10d678:20)\nNorton Children’s Behavioral and Mental Health 3.2 (9)  \nPsychologist  \nClosed 200 E Chestnut St  \nProvides clinical child and adolescent psychology at 200 East Chestnut Street, Louisville, KY, and specialized pediatric psychology through their Autism Center located at 2933 Breckenridge Lane, Suite 101.\n\n![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-bdb58d10d678:21)\nWright Psychology & Counseling 4.3 (12)  \nChild psychologist  \nClosed 4201 Springhurst Blvd STE 203  \nOffers neuropsychological assessments and therapy for children, teens, and young adults, focusing on developmental and learning concerns.\n\n![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-bdb58d10d678:22)\nCreative Family Counseling 3.9 (14)  \nMarriage or relationship counselor  \nClosed 8134 New La Grange Rd #102  \nProvides child therapy, including creative and play-based approaches, with locations in Louisville (8134 New La Grange Rd) and Prospect (12945 W U.S. Hwy 42).\n\n![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-bdb58d10d678:23)\nInnovative Family Therapy 4.5 (16)  \nMarriage or relationship counselor  \nClosed 13121 Eastpoint Park Blvd suite f  \nSpecializes in child and family therapy services.\n\n![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-bdb58d10d678:24)\nMeridian Behavioral Health Services 3.9 (149)  \nMental health service  \nClosed 4010 Dupont Cir #419  \nOffers support for children struggling with anxiety, behavioral challenges, or life transitions, with a Louisville office reachable at 502-409-6993.[](https://creativefamilycounseling.org/therapy-for-kids/) [[1]](https://creativefamilycounseling.org/therapy-for-kids/)[[2]](https://providers.nortonchildrens.com/specialty/Pediatric%20Psychology/near/Louisville%2C%20KY?page=1)[[3]](https://www.wrightchildpsychology.com/)[[4]](https://innovativefamilytherapy.com/louisville-child-therapist/)[[5]](https://meridianbhservices.com/therapy-for-kids/)\n\nThese providers specialize in addressing emotional wellness, resilience, and behavioral challenges in children.[[1]](https://www.riversidehealthcare.org/services/behavioral-health/child-and-adolescent-services)[[2]](https://entunebh.com/child-adolescent-therapy/)[[3]](https://recovery.com/childrens-wisconsin-new-berlin-psychiatry-and-behavioral-medicine-new-berlin/)[[4]](https://www.bhsva.net/childrens-mental-health/)\n\nTo help you find the best match, could you tell me a little more about what you're looking for?\n\n- Are you looking for help with a specific concern (e.g., anxiety, behavior, autism, ADHD)?\n- What is the age of the child?\n- Do you prefer a certain location in Louisville or perhaps virtual appointments?",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Several practices in Louisville, KY, offer child and adolescent therapy services, including specialized pediatric care, family counseling, and behavioral health centers.",
+                  "markdown": "Several practices in Louisville, KY, offer child and adolescent therapy services, including specialized pediatric care, family counseling, and behavioral health centers.[[1]](https://columbusbehavioral.com/mental-health-treatment-in-louisville-kentucky/)[[2]](https://fccwellbeing.com/clinic-locations/colorado/louisville-clinic/)[[3]](https://www.healthgrades.com/adolescent-psychiatry-pediatric-psychiatry-directory/ky-kentucky/louisville)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Columbus Behavioral Center",
+                      "domain": "columbusbehavioral.com",
+                      "url": "https://columbusbehavioral.com/mental-health-treatment-in-louisville-kentucky/",
+                      "title": "Child & Adolescent Psychiatric Treatment | Louisville, KY",
+                      "text": "Child and Adolescent Psychiatric Treatment in Louisville, KY Columbus Behavioral Center for Children and Adolescents is a resident..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Family Care Center",
+                      "domain": "fccwellbeing.com",
+                      "url": "https://fccwellbeing.com/clinic-locations/colorado/louisville-clinic/",
+                      "title": "Family Care Center Louisville, CO Therapy & Psychiatry",
+                      "text": "At Family Care Center in Louisville, we specialize in evidence-based mental health therapy and counseling services tailored to you..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Healthgrades",
+                      "domain": "www.healthgrades.com",
+                      "url": "https://www.healthgrades.com/adolescent-psychiatry-pediatric-psychiatry-directory/ky-kentucky/louisville",
+                      "title": "20 Best Child Psychiatrists Near Louisville, KY",
+                      "text": "There are 49 specialists practicing Child & Adolescent Psychiatry in Louisville, KY with an overall average rating of 3.9 stars. T..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Child Therapy Providers in Louisville, KY",
+                  "markdown": "**Child Therapy Providers in Louisville, KY**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Norton Children’s Behavioral and Mental Health 3.2 (9) Psychologist Closed 200 E Chestnut St Provides clinical child and adolescent psychology at 200 East Chestnut Street, Louisville, KY, and specialized pediatric psychology through their Autism Center located at 2933 Breckenridge Lane, Suite 101.",
+                  "markdown": "![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-bdb58d10d678:10)\nNorton Children’s Behavioral and Mental Health 3.2 (9)  \nPsychologist  \nClosed 200 E Chestnut St  \nProvides clinical child and adolescent psychology at 200 East Chestnut Street, Louisville, KY, and specialized pediatric psychology through their Autism Center located at 2933 Breckenridge Lane, Suite 101.",
+                  "links": null,
+                  "images": [
+                    {
+                      "type": "images_element",
+                      "alt": null,
+                      "url": null,
+                      "image_url": "https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-bdb58d10d678:11"
+                    }
+                  ],
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Wright Psychology & Counseling 4.3 (12) Child psychologist Closed 4201 Springhurst Blvd STE 203 Offers neuropsychological assessments and therapy for children, teens, and young adults, focusing on developmental and learning concerns.",
+                  "markdown": "![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-bdb58d10d678:12)\nWright Psychology & Counseling 4.3 (12)  \nChild psychologist  \nClosed 4201 Springhurst Blvd STE 203  \nOffers neuropsychological assessments and therapy for children, teens, and young adults, focusing on developmental and learning concerns.",
+                  "links": null,
+                  "images": [
+                    {
+                      "type": "images_element",
+                      "alt": null,
+                      "url": null,
+                      "image_url": "https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-bdb58d10d678:13"
+                    }
+                  ],
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Creative Family Counseling 3.9 (14) Marriage or relationship counselor Closed 8134 New La Grange Rd #102 Provides child therapy, including creative and play-based approaches, with locations in Louisville (8134 New La Grange Rd) and Prospect (12945 W U.S. Hwy 42).",
+                  "markdown": "![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-bdb58d10d678:14)\nCreative Family Counseling 3.9 (14)  \nMarriage or relationship counselor  \nClosed 8134 New La Grange Rd #102  \nProvides child therapy, including creative and play-based approaches, with locations in Louisville (8134 New La Grange Rd) and Prospect (12945 W U.S. Hwy 42).",
+                  "links": null,
+                  "images": [
+                    {
+                      "type": "images_element",
+                      "alt": null,
+                      "url": null,
+                      "image_url": "https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-bdb58d10d678:15"
+                    }
+                  ],
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Innovative Family Therapy 4.5 (16) Marriage or relationship counselor Closed 13121 Eastpoint Park Blvd suite f Specializes in child and family therapy services.",
+                  "markdown": "![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-bdb58d10d678:16)\nInnovative Family Therapy 4.5 (16)  \nMarriage or relationship counselor  \nClosed 13121 Eastpoint Park Blvd suite f  \nSpecializes in child and family therapy services.",
+                  "links": null,
+                  "images": [
+                    {
+                      "type": "images_element",
+                      "alt": null,
+                      "url": null,
+                      "image_url": "https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-bdb58d10d678:17"
+                    }
+                  ],
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Meridian Behavioral Health Services 3.9 (149) Mental health service Closed 4010 Dupont Cir #419 Offers support for children struggling with anxiety, behavioral challenges, or life transitions, with a Louisville office reachable at 502-409-6993. Creative Family Counseling +4",
+                  "markdown": "![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-bdb58d10d678:18)\nMeridian Behavioral Health Services 3.9 (149)  \nMental health service  \nClosed 4010 Dupont Cir #419  \nOffers support for children struggling with anxiety, behavioral challenges, or life transitions, with a Louisville office reachable at 502-409-6993.[](https://creativefamilycounseling.org/therapy-for-kids/) [[1]](https://creativefamilycounseling.org/therapy-for-kids/)[[2]](https://providers.nortonchildrens.com/specialty/Pediatric%20Psychology/near/Louisville%2C%20KY?page=1)[[3]](https://www.wrightchildpsychology.com/)[[4]](https://innovativefamilytherapy.com/louisville-child-therapist/)[[5]](https://meridianbhservices.com/therapy-for-kids/)",
+                  "links": null,
+                  "images": [
+                    {
+                      "type": "images_element",
+                      "alt": null,
+                      "url": null,
+                      "image_url": "https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-bdb58d10d678:19"
+                    }
+                  ],
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Creative Family Counseling",
+                      "domain": "creativefamilycounseling.org",
+                      "url": "https://creativefamilycounseling.org/therapy-for-kids/",
+                      "title": "Therapy for Kids, Child Therapist, Creative Family Counseling ...",
+                      "text": "LOUISVILLE. 8134 New La Grange Rd # 102, PROSPECT. 12945 W U.S. Hwy 42,"
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Norton Children's",
+                      "domain": "providers.nortonchildrens.com",
+                      "url": "https://providers.nortonchildrens.com/specialty/Pediatric%20Psychology/near/Louisville%2C%20KY?page=1",
+                      "title": "Pediatric Psychology in Louisville, KY - Norton Children's",
+                      "text": "Clinical Child and Adolescent Psychology. Norton Children's Behavioral and Mental Health. 200 East Chestnut StreetLouisville, KY 4..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "The Wright Psychology & Learning Center",
+                      "domain": "www.wrightchildpsychology.com",
+                      "url": "https://www.wrightchildpsychology.com/",
+                      "title": "Child Psychologist Louisville, KY | Counseling Louisville, KY",
+                      "text": "Welcome to Wright Psychology & Counseling. If you're concerned about your child's development or learning, you've come to the righ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Innovative Family Therapy",
+                      "domain": "innovativefamilytherapy.com",
+                      "url": "https://innovativefamilytherapy.com/louisville-child-therapist/",
+                      "title": "Child Therapist Louisville, KY - Innovative Family Therapy",
+                      "text": "Get In Touch. (502) 612-9129."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Meridian Behavioral Health",
+                      "domain": "meridianbhservices.com",
+                      "url": "https://meridianbhservices.com/therapy-for-kids/",
+                      "title": "Therapy for Kids | Child Therapist in Louisville",
+                      "text": "Whether your child is struggling with anxiety, coping with a major life transition, or experiencing behavioral challenges, therapy..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "These providers specialize in addressing emotional wellness, resilience, and behavioral challenges in children.",
+                  "markdown": "These providers specialize in addressing emotional wellness, resilience, and behavioral challenges in children.[[1]](https://www.riversidehealthcare.org/services/behavioral-health/child-and-adolescent-services)[[2]](https://entunebh.com/child-adolescent-therapy/)[[3]](https://recovery.com/childrens-wisconsin-new-berlin-psychiatry-and-behavioral-medicine-new-berlin/)[[4]](https://www.bhsva.net/childrens-mental-health/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Riverside Healthcare",
+                      "domain": "www.riversidehealthcare.org",
+                      "url": "https://www.riversidehealthcare.org/services/behavioral-health/child-and-adolescent-services",
+                      "title": "Pediatric Mental Health",
+                      "text": "Child & Adolescent Behavioral Health Services Specialized care for children and teens facing emotional and behavioral challenges, ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Entune Behavioral Health",
+                      "domain": "entunebh.com",
+                      "url": "https://entunebh.com/child-adolescent-therapy/",
+                      "title": "Child & Adolescent Therapy",
+                      "text": "Meet Our Child and Adolescent Therapy Team Our dedicated team of licensed therapists specializes in supporting children and adoles..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Recovery.com",
+                      "domain": "recovery.com",
+                      "url": "https://recovery.com/childrens-wisconsin-new-berlin-psychiatry-and-behavioral-medicine-new-berlin/",
+                      "title": "New Berlin Clinic - Children's Wisconsin: Treatment Options, Amenities & Photos (New Berlin, Wisconsin)",
+                      "text": "This pediatric center provides behavioral health services that address the emotional and mental well-being of children and adolesc..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Behavioral Health Services of Virginia",
+                      "domain": "www.bhsva.net",
+                      "url": "https://www.bhsva.net/childrens-mental-health/",
+                      "title": "Children's Mental Health Services at BHSVA in Virginia",
+                      "text": "Our children's mental health therapy services for children and teens centers on providing compassionate, individualized care that ..."
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Creative Family Counseling",
+                  "domain": "creativefamilycounseling.org",
+                  "url": "https://creativefamilycounseling.org/therapy-for-kids/",
+                  "title": "Therapy for Kids, Child Therapist, Creative Family Counseling ...",
+                  "text": "LOUISVILLE. 8134 New La Grange Rd # 102, PROSPECT. 12945 W U.S. Hwy 42,"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "The Wright Psychology & Learning Center",
+                  "domain": "www.wrightchildpsychology.com",
+                  "url": "https://www.wrightchildpsychology.com/",
+                  "title": "Child Psychologist Louisville, KY | Counseling Louisville, KY",
+                  "text": "Welcome to Wright Psychology & Counseling. If you're concerned about your child's development or learning, you've come to the righ..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Norton Children's",
+                  "domain": "providers.nortonchildrens.com",
+                  "url": "https://providers.nortonchildrens.com/specialty/Pediatric%20Psychology/near/Louisville%2C%20KY?page=1",
+                  "title": "Pediatric Psychology in Louisville, KY - Norton Children's",
+                  "text": "Clinical Child and Adolescent Psychology. Norton Children's Behavioral and Mental Health. 200 East Chestnut StreetLouisville, KY 4..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Innovative Family Therapy",
+                  "domain": "innovativefamilytherapy.com",
+                  "url": "https://innovativefamilytherapy.com/louisville-child-therapist/",
+                  "title": "Child Therapist Louisville, KY - Innovative Family Therapy",
+                  "text": "Get In Touch. (502) 612-9129."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Meridian Behavioral Health",
+                  "domain": "meridianbhservices.com",
+                  "url": "https://meridianbhservices.com/therapy-for-kids/",
+                  "title": "Therapy for Kids | Child Therapist in Louisville",
+                  "text": "Whether your child is struggling with anxiety, coping with a major life transition, or experiencing behavioral challenges, therapy..."
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

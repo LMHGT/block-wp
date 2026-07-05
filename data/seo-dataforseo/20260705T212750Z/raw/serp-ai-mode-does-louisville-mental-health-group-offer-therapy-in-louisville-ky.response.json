@@ -1,0 +1,176 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "3.5958 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060028-9766-0139-0000-18aac665998e",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "3.5360 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "Does Louisville Mental Health Group offer therapy in Louisville KY?",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode Does Louisville Mental Health Group offer therapy in Louisville KY?",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Does Louisville Mental Health Group offer therapy in Louisville KY?",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=Does%20Louisville%20Mental%20Health%20Group%20offer%20therapy%20in%20Louisville%20KY%3F&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:28:22 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[1]/div[1]/div[3]",
+              "markdown": "`Yes, Louisville Mental Health Group offers therapy in Louisville, KY.` [[1]](https://louisvilleaddictioncenter.com/services/louisville-mental-health/)[[2]](https://www.psychologytoday.com/us/therapists/louisville-mental-health-group-louisville-ky/1309075)\n\n- **Services:** They offer a variety of services, including individual therapy, group therapy, and in-office therapy sessions, with Denise Myers, M.Ed. LPP , and Jim Walker, LCSW , according to local listings.\n- **Specialties:** They address issues such as anxiety, ADHD, low self-esteem, depression, and adjustment difficulties.\n- **Location:** They have a physical office in Louisville, Kentucky.[[1]](https://app.squareup.com/appointments/book/eb9c5ddf-fbb9-40ae-8d73-967aad8c9082/NB6KRWR5H44BZ/start?service_id=5NHEWSNEQSS6BKWMP52YM76F&variation_id=XK5C5ZLR3STU22UFBV2L24QX)[[2]](https://jimwalker.fullslate.com/services/5)[[3]](https://paintedgroverecovery.com/therapy-programs/group-therapy/)[[4]](https://louisvillegracepsychological.com/)[[5]](https://www.flourishlouisville.com/)\n\nWould you like me to find out if they **accept your insurance**?",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Yes, Louisville Mental Health Group offers therapy in Louisville, KY.",
+                  "markdown": "`Yes, Louisville Mental Health Group offers therapy in Louisville, KY.` [[1]](https://louisvilleaddictioncenter.com/services/louisville-mental-health/)[[2]](https://www.psychologytoday.com/us/therapists/louisville-mental-health-group-louisville-ky/1309075)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Louisville Addiction Center",
+                      "domain": "louisvilleaddictioncenter.com",
+                      "url": "https://louisvilleaddictioncenter.com/services/louisville-mental-health/",
+                      "title": "Louisville, KY Mental Health Services",
+                      "text": "To match treatment intensity to each client's needs, our mental health services in Louisville, KY ( Commonwealth of Kentucky ) , a..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Psychology Today",
+                      "domain": "www.psychologytoday.com",
+                      "url": "https://www.psychologytoday.com/us/therapists/louisville-mental-health-group-louisville-ky/1309075",
+                      "title": "Louisville Mental Health Group, Clinical Social Work/Therapist, Louisville, KY, 40218",
+                      "text": "Kimberly Marie Sullivan - Louisville Mental Health Group, Clinical Social Work/Therapist, Louisville, KY, 40218, (502) 334-1090, A..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Services: They offer a variety of services, including individual therapy, group therapy, and in-office therapy sessions, with Denise Myers, M.Ed. LPP, and Jim Walker, LCSW, according to local listings. Denise Myers, M.Ed. LPP Jim Walker, LCSW Specialties: They address issues such as anxiety, ADHD, low self-esteem, depression, and adjustment difficulties. Location: They have a physical office in Louisville, Kentucky.",
+                  "markdown": "- **Services:** They offer a variety of services, including individual therapy, group therapy, and in-office therapy sessions, with Denise Myers, M.Ed. LPP , and Jim Walker, LCSW , according to local listings.\n- **Specialties:** They address issues such as anxiety, ADHD, low self-esteem, depression, and adjustment difficulties.\n- **Location:** They have a physical office in Louisville, Kentucky.[[1]](https://app.squareup.com/appointments/book/eb9c5ddf-fbb9-40ae-8d73-967aad8c9082/NB6KRWR5H44BZ/start?service_id=5NHEWSNEQSS6BKWMP52YM76F&variation_id=XK5C5ZLR3STU22UFBV2L24QX)[[2]](https://jimwalker.fullslate.com/services/5)[[3]](https://paintedgroverecovery.com/therapy-programs/group-therapy/)[[4]](https://louisvillegracepsychological.com/)[[5]](https://www.flourishlouisville.com/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "squareup.com",
+                      "domain": "app.squareup.com",
+                      "url": "https://app.squareup.com/appointments/book/eb9c5ddf-fbb9-40ae-8d73-967aad8c9082/NB6KRWR5H44BZ/start?service_id=5NHEWSNEQSS6BKWMP52YM76F&variation_id=XK5C5ZLR3STU22UFBV2L24QX",
+                      "title": "Individual Therapy Session (In-Office Therapy Session (75-Minutes))",
+                      "text": "Denise Myers. M.Ed. LPP works with individuals (ages 12 through mid-adulthood) experiencing a wide range of issues, including anxi..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "fullslate.com",
+                      "domain": "jimwalker.fullslate.com",
+                      "url": "https://jimwalker.fullslate.com/services/5",
+                      "title": "In Office- Individual Counseling/Psychotherapy",
+                      "text": "Service at \"Jim Walker, LCSW\" for 100 USD (1 hour)"
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Painted Grove Recovery",
+                      "domain": "paintedgroverecovery.com",
+                      "url": "https://paintedgroverecovery.com/therapy-programs/group-therapy/",
+                      "title": "Group Therapy | Addiction Therapy Programs in Louisville",
+                      "text": "Group therapy sessions are offered in person at our Louisville, Kentucky, recovery center and are integrated into daily programmin..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Grace Psychological Services",
+                      "domain": "louisvillegracepsychological.com",
+                      "url": "https://louisvillegracepsychological.com/",
+                      "title": "Grace Psychological Services: Best Therapists in Louisville",
+                      "text": "Individual Therapy Personalized one-on-one therapy in Louisville focused on emotional healing, personal growth, and mental wellnes..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Flourish Louisville",
+                      "domain": "www.flourishlouisville.com",
+                      "url": "https://www.flourishlouisville.com/",
+                      "title": "Flourish Louisville: Louisville Therapy Services | Louisville, KY",
+                      "text": "COVID update: We offer options for in-office or online, video sessions. Contact us for details. A boutique counseling practice pro..."
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "squareup.com",
+                  "domain": "app.squareup.com",
+                  "url": "https://app.squareup.com/appointments/book/eb9c5ddf-fbb9-40ae-8d73-967aad8c9082/NB6KRWR5H44BZ/start?service_id=5NHEWSNEQSS6BKWMP52YM76F&variation_id=XK5C5ZLR3STU22UFBV2L24QX",
+                  "title": "Individual Therapy Session (In-Office Therapy Session (75-Minutes))",
+                  "text": "Denise Myers. M.Ed. LPP works with individuals (ages 12 through mid-adulthood) experiencing a wide range of issues, including anxi..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "fullslate.com",
+                  "domain": "jimwalker.fullslate.com",
+                  "url": "https://jimwalker.fullslate.com/services/5",
+                  "title": "In Office- Individual Counseling/Psychotherapy",
+                  "text": "Service at \"Jim Walker, LCSW\" for 100 USD (1 hour)"
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

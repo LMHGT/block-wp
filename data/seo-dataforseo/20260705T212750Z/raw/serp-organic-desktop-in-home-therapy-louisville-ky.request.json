@@ -1,0 +1,16 @@
+{
+  "name": "serp-organic-desktop-in home therapy Louisville KY",
+  "method": "POST",
+  "path": "/v3/serp/google/organic/live/advanced",
+  "body": [
+    {
+      "keyword": "in home therapy Louisville KY",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "depth": 20,
+      "tag": "lmhg organic desktop in home therapy Louisville KY"
+    }
+  ],
+  "started_at": "2026-07-05T21:27:56.879818+00:00"
+}

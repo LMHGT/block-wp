@@ -1,0 +1,436 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "10.2147 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060028-9766-0139-0000-73303f4ea6a6",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "10.1378 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "Where can I find individual therapy in Louisville Kentucky?",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode Where can I find individual therapy in Louisville Kentucky?",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Where can I find individual therapy in Louisville Kentucky?",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=Where%20can%20I%20find%20individual%20therapy%20in%20Louisville%20Kentucky%3F&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:28:28 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[2]/div[1]/div[3]",
+              "markdown": "Finding individual therapy in Louisville, KY, is accessible through local counseling centers, telehealth networks, and professional directories. Depending on your insurance coverage, location, and specific mental health needs, you can easily connect with a licensed professional who fits your requirements.[[1]](https://kentuckycounselingcenter.com/kentucky-counseling-center/louisville/)[[2]](https://www.goodtherapy.org/therapists/ky/louisville)[[3]](https://louisvillerecoverycenter.com/mental-health/)[[4]](https://www.betterhelp.com/)[[5]](https://www.hopequre.com/service)\n\nLeading resources and local options for individual therapy include:\n\n1. Local Therapy Centers in Louisville\n\n![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-73303f4ea6a6:8)\nEvolved Counseling 4.6 (67)  \nMental health service  \nClosed 1122 S Shelby St  \nLocated on S Shelby St, this center offers highly detailed, individualized mental health services and therapy.[[1]](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhJeE9UZzROSE5rGAo)[[2]](https://evolvecounselingnoco.com/teletherapy/)[[3]](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhJeE9UZzROSE5rGAo)\n\n![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-73303f4ea6a6:9)\nLouisville Center for Therapy and Personal Sustainability (LCTPS)5.0 (20)  \nMental health service  \nOpen 1974 Douglass Blvd  \nLocated on Douglass Blvd, they provide a range of therapeutic and wellness services tailored to the community.[[1]](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdvemFEbDROekI1GAo)[[2]](https://www.instagram.com/louisvillecenterfortherapy/)[[3]](https://www.lctps.org/music-therapy-internship)[[4]](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdvemFEbDROekI1GAo)[[5]](https://kentuckycounselingcenter.com/kentucky-counseling-center/louisville/)\n\n2. Search Directories to Filter by Insurance/Specialty\n\n- **Psychology Today Therapist Finder:** This is the most popular tool to find a therapist in the Louisville area. You can filter practitioners by ZIP code, your specific health insurance, the issues you want to address (e.g., anxiety, trauma), and the type of therapy you need. You can browse available local professionals using the [Psychology Today Louisville Directory](https://www.psychologytoday.com/us/therapists/ky/louisville).[[1]](https://www.succeedsocially.com/findtherapistforteen)[[2]](https://www.tivoligardenscounseling.com/blog/how-to-choose-a-therapist)[[3]](https://www.everydayhealth.com/emotional-health/how-to-find-a-therapist-whos-right-for-you/)[[4]](https://locationindependenttherapists.com/find-a-therapist/)[[5]](https://www.psychologytoday.com/us/treatment-rehab/ky/louisville)\n- **Mental Health America of Kentucky:** This local chapter can help point you toward community mental health centers, low-cost or sliding-scale options, and regional support groups. You can explore their resources directly at [Mental Health America of KY](https://mhaky.org/).[[1]](https://hollymaddy.com/links)[[2]](https://www.goodrx.com/health-topic/mental-health/therapy-without-insurance?srsltid=AfmBOoqfv-vuOZV8d4rxnaasTOrHoivlwOzqyMgekGbJOlu3Yhq865YU)[[3]](https://www.betterhelp.com/mental-health/disorders-conditions/psychotherapy/)[[4]](https://www.hamiltoncenter.org/educational/post-traumatic-stress-disorder/)\n\n3. Telehealth Options\n\nIf you prefer remote sessions or want access to a wider variety of specialized therapists, platforms like [BetterHelp](https://www.betterhelp.com/) and [Talkspace](https://www.talkspace.com/) connect you with licensed professionals entirely online.[[1]](https://www.choosingtherapy.com/what-kind-of-therapy-do-i-need/)\n\n4. Direct Insurance Portals\n\nYour first step should always be to check your health insurance provider’s website (e.g., Anthem Blue Cross Blue Shield, Humana, Aetna) to find an in-network therapist. Using your insurer's official directory ensures that you are connected with a mental health provider whose services are covered by your plan.[[1]](https://www.betterhelp.com/advice/therapy/accessing-therapy-providers/)[[2]](https://mydenvertherapy.com/therapists-in-denver-who-accept-insurance/)[[3]](https://panahicounseling.com/blogs/how-to-find-a-therapist-8-simple-steps-to-make-your-search-process-easier/)[[4]](https://www.scbh.com/therapies/individual-therapy/)\n\nIf you tell me **what specific issues you want to address** and **who your health insurance provider is** , I can help narrow down the best local clinics or online platforms for you.",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Finding individual therapy in Louisville, KY, is accessible through local counseling centers, telehealth networks, and professional directories. Depending on your insurance coverage, location, and specific mental health needs, you can easily connect with a licensed professional who fits your requirements.",
+                  "markdown": "Finding individual therapy in Louisville, KY, is accessible through local counseling centers, telehealth networks, and professional directories. Depending on your insurance coverage, location, and specific mental health needs, you can easily connect with a licensed professional who fits your requirements.[[1]](https://kentuckycounselingcenter.com/kentucky-counseling-center/louisville/)[[2]](https://www.goodtherapy.org/therapists/ky/louisville)[[3]](https://louisvillerecoverycenter.com/mental-health/)[[4]](https://www.betterhelp.com/)[[5]](https://www.hopequre.com/service)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Kentucky Counseling Center",
+                      "domain": "kentuckycounselingcenter.com",
+                      "url": "https://kentuckycounselingcenter.com/kentucky-counseling-center/louisville/",
+                      "title": "Louisville Therapist: Expert Psychiatrist & Counselors | KCC",
+                      "text": "Telehealth is Available at Louisville Therapist. In-Person Options Below Throughout the state of Kentucky, we offer a wide scope o..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "GoodTherapy.org",
+                      "domain": "www.goodtherapy.org",
+                      "url": "https://www.goodtherapy.org/therapists/ky/louisville",
+                      "title": "Find a Therapist in Louisville, KY",
+                      "text": "Our comprehensive directory makes it easy to search for Louisville therapists who meet your specific needs. You can filter by spec..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Louisville Recovery Center",
+                      "domain": "louisvillerecoverycenter.com",
+                      "url": "https://louisvillerecoverycenter.com/mental-health/",
+                      "title": "Kentucky Mental Health Care at Louisville Recovery Center",
+                      "text": "Types of Mental Health Facilities in Louisville, KY Counseling Centers: Counseling centers offer a range of services, including in..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "BetterHelp",
+                      "domain": "www.betterhelp.com",
+                      "url": "https://www.betterhelp.com/",
+                      "title": "BetterHelp | Professional Therapy With A Licensed Therapist",
+                      "text": "Get matched to the best therapist for you Answer a few questions to find a licensed therapist who fits your needs and preferences ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "HopeQure",
+                      "domain": "www.hopequre.com",
+                      "url": "https://www.hopequre.com/service",
+                      "title": "Effective Mental Health Counselling Services at HopeQure",
+                      "text": "Find a qualified mental health therapist who matches your needs and preferences by answering a few questions. Access the broadest ..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Leading resources and local options for individual therapy include:",
+                  "markdown": "Leading resources and local options for individual therapy include:",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": "1. Local Therapy Centers in Louisville",
+                  "text": "Evolved Counseling 4.6 (67) Mental health service Closed 1122 S Shelby St Located on S Shelby St, this center offers highly detailed, individualized mental health services and therapy.",
+                  "markdown": "![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-73303f4ea6a6:4)\nEvolved Counseling 4.6 (67)  \nMental health service  \nClosed 1122 S Shelby St  \nLocated on S Shelby St, this center offers highly detailed, individualized mental health services and therapy.[[1]](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhJeE9UZzROSE5rGAo)[[2]](https://evolvecounselingnoco.com/teletherapy/)[[3]](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhJeE9UZzROSE5rGAo)",
+                  "links": null,
+                  "images": [
+                    {
+                      "type": "images_element",
+                      "alt": null,
+                      "url": null,
+                      "image_url": "https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-73303f4ea6a6:5"
+                    }
+                  ],
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Google",
+                      "domain": "www.google.com",
+                      "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhJeE9UZzROSE5rGAo",
+                      "title": "Evolved Counseling",
+                      "text": "Life isn’t easy. Sometimes, even the strongest people amongst us need a little help to work through some of life’s more challengin..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "evolvecounselingnoco.com",
+                      "domain": "evolvecounselingnoco.com",
+                      "url": "https://evolvecounselingnoco.com/teletherapy/",
+                      "title": "Teletherapy",
+                      "text": "If you're interested in learning more or want to schedule a teletherapy appointment with Evolve Counseling Services, please contac..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Louisville Center for Therapy and Personal Sustainability (LCTPS) 5.0 (20) Mental health service Open 1974 Douglass Blvd Located on Douglass Blvd, they provide a range of therapeutic and wellness services tailored to the community.",
+                  "markdown": "![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-73303f4ea6a6:6)\nLouisville Center for Therapy and Personal Sustainability (LCTPS)5.0 (20)  \nMental health service  \nOpen 1974 Douglass Blvd  \nLocated on Douglass Blvd, they provide a range of therapeutic and wellness services tailored to the community.[[1]](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdvemFEbDROekI1GAo)[[2]](https://www.instagram.com/louisvillecenterfortherapy/)[[3]](https://www.lctps.org/music-therapy-internship)[[4]](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdvemFEbDROekI1GAo)[[5]](https://kentuckycounselingcenter.com/kentucky-counseling-center/louisville/)",
+                  "links": null,
+                  "images": [
+                    {
+                      "type": "images_element",
+                      "alt": null,
+                      "url": null,
+                      "image_url": "https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-73303f4ea6a6:7"
+                    }
+                  ],
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Google",
+                      "domain": "www.google.com",
+                      "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdvemFEbDROekI1GAo",
+                      "title": "Louisville Center for Therapy and Personal Sustainability",
+                      "text": "The Louisville Center for Therapy and Personal Sustainability aims to provide therapeutic, educational, and resource-based service..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Instagram",
+                      "domain": "www.instagram.com",
+                      "url": "https://www.instagram.com/louisvillecenterfortherapy/",
+                      "title": "LCTPS - Therapy and Wellness (@louisvillecenterfortherapy) · Louisville, KY",
+                      "text": "Louisville Center for Therapy and Personal Sustainability, LLC Community-based practice specializing in Music Therapy in Louisvill..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Louisville Center for Therapy and Personal Sustainability",
+                      "domain": "www.lctps.org",
+                      "url": "https://www.lctps.org/music-therapy-internship",
+                      "title": "Music Therapy Internship Application",
+                      "text": "The Louisville Center for Therapy and Personal Sustainability (LCTPS) is a private practice that provides community-based music th..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Kentucky Counseling Center",
+                      "domain": "kentuckycounselingcenter.com",
+                      "url": "https://kentuckycounselingcenter.com/kentucky-counseling-center/louisville/",
+                      "title": "Louisville Therapist: Expert Psychiatrist & Counselors | KCC",
+                      "text": "We offer a wide scope of mental health services for residents in the Louisville area. From counseling of different mental health i..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": "2. Search Directories to Filter by Insurance/Specialty",
+                  "text": "Psychology Today Therapist Finder: This is the most popular tool to find a therapist in the Louisville area. You can filter practitioners by ZIP code, your specific health insurance, the issues you want to address (e.g., anxiety, trauma), and the type of therapy you need. You can browse available local professionals using the Psychology Today Louisville Directory. Mental Health America of Kentucky: This local chapter can help point you toward community mental health centers, low-cost or sliding-scale options, and regional support groups. You can explore their resources directly at Mental Health America of KY.",
+                  "markdown": "- **Psychology Today Therapist Finder:** This is the most popular tool to find a therapist in the Louisville area. You can filter practitioners by ZIP code, your specific health insurance, the issues you want to address (e.g., anxiety, trauma), and the type of therapy you need. You can browse available local professionals using the [Psychology Today Louisville Directory](https://www.psychologytoday.com/us/therapists/ky/louisville).[[1]](https://www.succeedsocially.com/findtherapistforteen)[[2]](https://www.tivoligardenscounseling.com/blog/how-to-choose-a-therapist)[[3]](https://www.everydayhealth.com/emotional-health/how-to-find-a-therapist-whos-right-for-you/)[[4]](https://locationindependenttherapists.com/find-a-therapist/)[[5]](https://www.psychologytoday.com/us/treatment-rehab/ky/louisville)\n- **Mental Health America of Kentucky:** This local chapter can help point you toward community mental health centers, low-cost or sliding-scale options, and regional support groups. You can explore their resources directly at [Mental Health America of KY](https://mhaky.org/).[[1]](https://hollymaddy.com/links)[[2]](https://www.goodrx.com/health-topic/mental-health/therapy-without-insurance?srsltid=AfmBOoqfv-vuOZV8d4rxnaasTOrHoivlwOzqyMgekGbJOlu3Yhq865YU)[[3]](https://www.betterhelp.com/mental-health/disorders-conditions/psychotherapy/)[[4]](https://www.hamiltoncenter.org/educational/post-traumatic-stress-disorder/)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Psychology Today Louisville Directory",
+                      "description": null,
+                      "url": "https://www.psychologytoday.com/us/therapists/ky/louisville",
+                      "domain": "www.psychologytoday.com"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Mental Health America of KY",
+                      "description": null,
+                      "url": "https://mhaky.org/",
+                      "domain": "mhaky.org"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Succeed Socially.com",
+                      "domain": "www.succeedsocially.com",
+                      "url": "https://www.succeedsocially.com/findtherapistforteen",
+                      "title": "How To Find A Therapist To Help Your Teenager With Their Social Skills Or Social Anxiety | www.succeedsocially.com",
+                      "text": "Psychology Today currently has the biggest, most-widely used therapist directory. If you do a search for local counselors it will ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "www.tivoligardenscounseling.com",
+                      "domain": "www.tivoligardenscounseling.com",
+                      "url": "https://www.tivoligardenscounseling.com/blog/how-to-choose-a-therapist",
+                      "title": "How To Choose A Therapist | Brief vs Depth Therapy & Private Pay vs Insurance | Therapy Lexington KY",
+                      "text": "If you look at the search tools, you can filter therapists by specialties, approaches, gender, faith, ages they work with, insuran..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Everyday Health",
+                      "domain": "www.everydayhealth.com",
+                      "url": "https://www.everydayhealth.com/emotional-health/how-to-find-a-therapist-whos-right-for-you/",
+                      "title": "How to Find a Therapist Who’s Right for You",
+                      "text": "With these tools, you can sort through therapists based on your ZIP code or city or state, and filter based on other parameters, s..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Location Independent Therapists",
+                      "domain": "locationindependenttherapists.com",
+                      "url": "https://locationindependenttherapists.com/find-a-therapist/",
+                      "title": "Find a therapist",
+                      "text": "You can browse through to find a therapist to support your needs, and filter b y specialty, language, method (e.g. chat or video),"
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Psychology Today",
+                      "domain": "www.psychologytoday.com",
+                      "url": "https://www.psychologytoday.com/us/treatment-rehab/ky/louisville",
+                      "title": "Treatment Centers and Rehab in Louisville, KY",
+                      "text": "How can I find a treatment center in Louisville? The Psychology Today Directory has customizable search options that show potentia..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Holly Maddy, LLC",
+                      "domain": "hollymaddy.com",
+                      "url": "https://hollymaddy.com/links",
+                      "title": "Links",
+                      "text": "Mental Health America of Northern Kentucky and Southwest Ohio offers a link to local support groups in our area."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "GoodRx",
+                      "domain": "www.goodrx.com",
+                      "url": "https://www.goodrx.com/health-topic/mental-health/therapy-without-insurance?srsltid=AfmBOoqfv-vuOZV8d4rxnaasTOrHoivlwOzqyMgekGbJOlu3Yhq865YU",
+                      "title": "How Much Does Therapy Cost Without Insurance?",
+                      "text": "You can also try contacting Mental Health America to access affordable community mental health services. Use the affiliate locator..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "BetterHelp",
+                      "domain": "www.betterhelp.com",
+                      "url": "https://www.betterhelp.com/mental-health/disorders-conditions/psychotherapy/",
+                      "title": "Psychotherapy",
+                      "text": "In addition to searching for psychotherapists, you might also consider searching for community mental health services. For example..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Hamilton Center",
+                      "domain": "www.hamiltoncenter.org",
+                      "url": "https://www.hamiltoncenter.org/educational/post-traumatic-stress-disorder/",
+                      "title": "Post-Traumatic Stress Disorder",
+                      "text": "Through counseling, you can get the help you and your family needs to cope and support each other. For a referral to local service..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": "3. Telehealth Options",
+                  "text": "If you prefer remote sessions or want access to a wider variety of specialized therapists, platforms like BetterHelp and Talkspace connect you with licensed professionals entirely online.",
+                  "markdown": "If you prefer remote sessions or want access to a wider variety of specialized therapists, platforms like [BetterHelp](https://www.betterhelp.com/) and [Talkspace](https://www.talkspace.com/) connect you with licensed professionals entirely online.[[1]](https://www.choosingtherapy.com/what-kind-of-therapy-do-i-need/)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "BetterHelp",
+                      "description": null,
+                      "url": "https://www.betterhelp.com/",
+                      "domain": "www.betterhelp.com"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Talkspace",
+                      "description": null,
+                      "url": "https://www.talkspace.com/",
+                      "domain": "www.talkspace.com"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "ChoosingTherapy.com",
+                      "domain": "www.choosingtherapy.com",
+                      "url": "https://www.choosingtherapy.com/what-kind-of-therapy-do-i-need/",
+                      "title": "How to Figure Out What Type of Therapy You Need",
+                      "text": "Alternatively, online therapy services like BetterHelp or Talkspace allow you to browse therapists by specialty, schedule sessions..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": "4. Direct Insurance Portals",
+                  "text": "Your first step should always be to check your health insurance provider’s website (e.g., Anthem Blue Cross Blue Shield, Humana, Aetna) to find an in-network therapist. Using your insurer's official directory ensures that you are connected with a mental health provider whose services are covered by your plan.",
+                  "markdown": "Your first step should always be to check your health insurance provider’s website (e.g., Anthem Blue Cross Blue Shield, Humana, Aetna) to find an in-network therapist. Using your insurer's official directory ensures that you are connected with a mental health provider whose services are covered by your plan.[[1]](https://www.betterhelp.com/advice/therapy/accessing-therapy-providers/)[[2]](https://mydenvertherapy.com/therapists-in-denver-who-accept-insurance/)[[3]](https://panahicounseling.com/blogs/how-to-find-a-therapist-8-simple-steps-to-make-your-search-process-easier/)[[4]](https://www.scbh.com/therapies/individual-therapy/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "BetterHelp",
+                      "domain": "www.betterhelp.com",
+                      "url": "https://www.betterhelp.com/advice/therapy/accessing-therapy-providers/",
+                      "title": "How To Find Therapy Providers For Mental Health Care And Support",
+                      "text": "Then, you may start by checking your insurance provider's website for a list of in-network therapy providers and licensed therapis..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "My Denver Therapy",
+                      "domain": "mydenvertherapy.com",
+                      "url": "https://mydenvertherapy.com/therapists-in-denver-who-accept-insurance/",
+                      "title": "Therapists in Denver Who Accept Insurance | Find Help Now",
+                      "text": "Therapists in Denver who accept Aetna insurance If you have Aetna insurance, try searching for a therapist on Zencare or Psycholog..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Panahi Counseling",
+                      "domain": "panahicounseling.com",
+                      "url": "https://panahicounseling.com/blogs/how-to-find-a-therapist-8-simple-steps-to-make-your-search-process-easier/",
+                      "title": "How to Find a Therapist: Tips for Overcoming the Overwhelming Search",
+                      "text": "Your insurance provider's website is another great place to check. If you're using health insurance, it's crucial to verify that t..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "South Coast Behavioral Health",
+                      "domain": "www.scbh.com",
+                      "url": "https://www.scbh.com/therapies/individual-therapy/",
+                      "title": "Individual Therapy",
+                      "text": "Insurance Provider — If you have health insurance, the first place to look is your insurance provider's directory. This will list ..."
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhJeE9UZzROSE5rGAo",
+                  "title": "Evolved Counseling",
+                  "text": "Life isn’t easy. Sometimes, even the strongest people amongst us need a little help to work through some of life’s more challengin..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdvemFEbDROekI1GAo",
+                  "title": "Louisville Center for Therapy and Personal Sustainability",
+                  "text": "The Louisville Center for Therapy and Personal Sustainability aims to provide therapeutic, educational, and resource-based service..."
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

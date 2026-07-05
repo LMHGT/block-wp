@@ -1,0 +1,67 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "7.9625 sec.",
+  "cost": 0.00277515,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060031-9766-0612-0000-1bee06d12bb1",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "7.9526 sec.",
+      "cost": 0.00277515,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "chat_gpt",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "chat_gpt",
+        "user_prompt": "What should I ask before choosing a therapist in Louisville?",
+        "model_name": "gpt-5.4-nano",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response chat_gpt What should I ask before choosing a therapist in Louisville?",
+        "web_search": true,
+        "web_search_country_iso_code": "US",
+        "web_search_city": "Louisville",
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gpt-5.4-nano-2026-03-17",
+          "input_tokens": 4482,
+          "output_tokens": 1023,
+          "reasoning_tokens": 20,
+          "web_search": false,
+          "money_spent": 0.00217515,
+          "datetime": "2026-07-06 00:31:51 +00:00",
+          "items": [
+            {
+              "type": "reasoning",
+              "sections": null
+            },
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here are strong, practical questions to ask **before** choosing a therapist in **Louisville**—grouped so you can quickly compare options and avoid surprises.\n\n## 1) Fit & approach\n- **“What type of therapy do you practice (e.g., CBT, DBT, ACT, EMDR, psychodynamic)?”**\n- **“How do you typically structure sessions—what does a first few sessions usually look like?”**\n- **“How do you tailor treatment to someone like me / my goals?”**\n- **“Do you use evidence-based approaches for my specific concerns?”** (You can name: anxiety, trauma/PTSD, OCD, depression, couples issues, ADHD, etc.)\n- **“What’s your approach to homework or skills practice (if any)?”**\n\n## 2) Experience with your specific needs\n- **“How much experience do you have treating my main issue?”**\n- **“Have you worked with people with similar backgrounds or situations to mine?”**\n- **“Do you have experience with the level of care I might need?”**  \n  (e.g., individual therapy vs. intensive outpatient vs. trauma-focused treatment)\n\n## 3) Collaboration & expectations\n- **“What would success look like, and how will we measure progress?”**\n- **“How do you handle treatment plan updates if things aren’t improving?”**\n- **“What’s your policy if I feel I need a different approach or a referral?”**\n- **“How often do you recommend adjustments—after a few sessions, a month, etc.?”**\n\n## 4) Practical logistics (these matter more than people expect)\n- **“What are your session days/times, and how consistent are they?”**\n- **“How do you handle cancellations and rescheduling?”**\n- **“Do you offer telehealth in addition to in-person?”** (Many Louisville therapists do, and it can help consistency.)\n- **“Are you currently accepting new clients, and what’s your typical wait time?”**\n- **“What’s your process for the first appointment—intake forms, paperwork, assessments?”**\n\n## 5) Cost, insurance, and billing clarity\n- **“Do you take my insurance? If so, which plans?”**\n- **“What will I typically pay out of pocket per session?”**\n- **“Do you provide a superbill (for out-of-network reimbursement)?”**\n- **“What’s your cancellation fee policy, and does it apply to my plan?”**\n- **“Do you offer sliding-scale rates or payment plans?”** (If cost is a concern.)\n\n## 6) Safety, boundaries, and emergencies\n- **“What’s your policy if I’m in crisis between sessions?”**\n- **“If I’m having thoughts of harming myself or someone else, what should I do and who do I contact?”**\n- **“What boundaries do you have around contact (text/email/phone)?”**\n- **“Do you have a preferred local crisis resource you recommend in Louisville?”**\n\n*(A good therapist will answer clearly and calmly.)*\n\n## 7) Credentials & supervision\n- **“What are your credentials and license (LPC, LCSW, LMFT, psychologist, etc.)?”**\n- **“Do you provide supervision/training for interns, and if so, how is that handled?”**\n\n## 8) Communication & “therapeutic style”\n- **“How do you respond when I’m stuck, not sure what I feel, or go quiet?”**\n- **“Do you tend to be more directive (skills, structure) or more exploratory (reflective, insight-focused)?”**\n- **“How do you balance empathy with pushing for change?”**  \n\n## 9) Chemistry check (important)\nAfter you meet them (or during the first session), ask yourself:\n- Do you feel **respected** and **safe**?\n- Do they explain things in a way that feels **clear**?\n- Do they seem genuinely interested in **your goals**, not just a method?\n\nYou can also directly ask:\n- **“Can we review goals and adjust the plan if we’re not on track?”**\n\n---\n\n### Quick tip: bring a “short script”\nIf you want, you can literally say:\n> “I’m looking for help with ___, my goals are ___, I prefer ___ style (or I’m open). I want to understand your approach, your experience with this, how progress is measured, your fees/insurance, and what you do if I need help urgently.”\n\n---\n\nIf you tell me **what you’re seeking help with** (anxiety, trauma, couples, ADHD, etc.) and whether you prefer **in-person vs telehealth** and **insurance vs private pay**, I can suggest a tailored question list and even help you screen therapists based on the answers.",
+                  "annotations": null
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": null
+        }
+      ]
+    }
+  ]
+}

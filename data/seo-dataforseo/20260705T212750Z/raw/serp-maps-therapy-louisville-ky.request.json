@@ -1,0 +1,15 @@
+{
+  "name": "serp-maps-therapy Louisville KY",
+  "method": "POST",
+  "path": "/v3/serp/google/maps/live/advanced",
+  "body": [
+    {
+      "keyword": "therapy Louisville KY",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "tag": "lmhg maps therapy Louisville KY"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:11.576631+00:00"
+}

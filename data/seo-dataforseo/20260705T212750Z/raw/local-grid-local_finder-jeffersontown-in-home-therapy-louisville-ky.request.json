@@ -1,0 +1,14 @@
+{
+  "name": "local-grid-local_finder-jeffersontown-in home therapy Louisville KY",
+  "path": "/v3/serp/google/local_finder/live/advanced",
+  "body": [
+    {
+      "keyword": "in home therapy Louisville KY",
+      "location_coordinate": "38.1942000,-85.5644000,5000",
+      "language_code": "en",
+      "device": "desktop",
+      "depth": 20,
+      "tag": "lmhg grid local_finder jeffersontown in home therapy Louisville KY"
+    }
+  ]
+}

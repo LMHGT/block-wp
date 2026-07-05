@@ -1,0 +1,2680 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.2445 sec.",
+  "cost": 0.01356,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060039-9766-0381-0000-e08e0d90e876",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.2349 sec.",
+      "cost": 0.01356,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "dataforseo_labs",
+        "google",
+        "ranked_keywords",
+        "live"
+      ],
+      "data": {
+        "api": "dataforseo_labs",
+        "function": "ranked_keywords",
+        "se_type": "google",
+        "target": "lctps.org",
+        "location_code": 2840,
+        "language_code": "en",
+        "limit": 50,
+        "tag": "lmhg competitor ranked lctps.org"
+      },
+      "result": [
+        {
+          "se_type": "google",
+          "target": "lctps.org",
+          "location_code": 2840,
+          "language_code": "en",
+          "total_count": 13,
+          "items_count": 13,
+          "metrics": {
+            "organic": {
+              "pos_1": 0,
+              "pos_2_3": 0,
+              "pos_4_10": 0,
+              "pos_11_20": 0,
+              "pos_21_30": 1,
+              "pos_31_40": 4,
+              "pos_41_50": 2,
+              "pos_51_60": 3,
+              "pos_61_70": 1,
+              "pos_71_80": 2,
+              "pos_81_90": 0,
+              "pos_91_100": 0,
+              "etv": 1.4304799810051918,
+              "count": 13,
+              "estimated_paid_traffic_cost": 8.372929811477661,
+              "is_new": 6,
+              "is_up": 4,
+              "is_down": 3,
+              "is_lost": 0,
+              "clickstream_etv": null,
+              "clickstream_gender_distribution": null,
+              "clickstream_age_distribution": null
+            },
+            "paid": {
+              "pos_1": 0,
+              "pos_2_3": 0,
+              "pos_4_10": 0,
+              "pos_11_20": 0,
+              "pos_21_30": 0,
+              "pos_31_40": 0,
+              "pos_41_50": 0,
+              "pos_51_60": 0,
+              "pos_61_70": 0,
+              "pos_71_80": 0,
+              "pos_81_90": 0,
+              "pos_91_100": 0,
+              "etv": 0,
+              "count": 0,
+              "estimated_paid_traffic_cost": 0,
+              "is_new": 0,
+              "is_up": 0,
+              "is_down": 0,
+              "is_lost": 0,
+              "clickstream_etv": null,
+              "clickstream_gender_distribution": null,
+              "clickstream_age_distribution": null
+            },
+            "featured_snippet": null,
+            "local_pack": null,
+            "ai_overview_reference": null
+          },
+          "metrics_absolute": null,
+          "items": [
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "lgbtq louisville",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-06-15 16:23:20 +00:00",
+                  "competition": 0.029999999329447746,
+                  "competition_level": "LOW",
+                  "cpc": 1.600000023841858,
+                  "search_volume": 50,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10002,
+                    10028,
+                    10226
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 5,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 50
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": -29,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 22,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=lgbtq%20louisville&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "organic",
+                    "people_also_ask",
+                    "video",
+                    "related_searches",
+                    "images"
+                  ],
+                  "se_results_count": 126,
+                  "last_updated_time": "2026-06-03 02:25:46 +00:00",
+                  "previous_updated_time": "2026-04-11 09:45:52 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 163.39999389648438,
+                  "dofollow": 108.30000305175781,
+                  "referring_pages": 149.60000610351562,
+                  "referring_domains": 111.30000305175781,
+                  "referring_main_domains": 104.30000305175781,
+                  "rank": 138,
+                  "main_domain_rank": 321.1000061035156,
+                  "last_updated_time": "2026-06-03 02:27:08 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "navigational",
+                  "foreign_intent": [
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-28 19:41:36 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "se_type": "google",
+                "serp_item": {
+                  "se_type": "google",
+                  "type": "organic",
+                  "rank_group": 22,
+                  "rank_absolute": 27,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]",
+                  "domain": "www.lctps.org",
+                  "title": "Queer Mental Health Resources",
+                  "url": "https://www.lctps.org/queermentalhealth",
+                  "breadcrumb": "https://www.lctps.org › queermentalhealth",
+                  "website_name": "Louisville Center for Therapy and Personal Sustainability",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Resources for and related to supporting the mental health and wellness of Queer folks in Louisville Metro and Surrounding Areas. Read more",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": [
+                    "Louisville"
+                  ],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "lctps.org",
+                  "relative_url": "/queermentalhealth",
+                  "etv": 0.10999999940395355,
+                  "estimated_paid_traffic_cost": 0.17599999904632568,
+                  "clickstream_etv": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": 40,
+                    "is_new": false,
+                    "is_up": true,
+                    "is_down": false
+                  },
+                  "backlinks_info": {
+                    "referring_domains": 1,
+                    "referring_main_domains": 1,
+                    "referring_pages": 5,
+                    "dofollow": 5,
+                    "backlinks": 5,
+                    "time_update": "2026-06-02 07:39:40 +00:00"
+                  },
+                  "rank_info": {
+                    "page_rank": 31,
+                    "main_domain_rank": 46
+                  }
+                },
+                "check_url": "https://www.google.com/search?q=lgbtq%20louisville&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                "serp_item_types": [
+                  "ai_overview",
+                  "organic",
+                  "people_also_ask",
+                  "video",
+                  "related_searches",
+                  "images"
+                ],
+                "se_results_count": 126,
+                "keyword_difficulty": 22,
+                "is_lost": false,
+                "last_updated_time": "2026-06-03 02:25:46 +00:00",
+                "previous_updated_time": "2026-04-11 09:45:52 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "louisville art therapy",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-06-14 05:42:18 +00:00",
+                  "competition": 0.41999998688697815,
+                  "competition_level": "MEDIUM",
+                  "cpc": 3.3399999141693115,
+                  "search_volume": 50,
+                  "low_top_of_page_bid": 1.5899999141693115,
+                  "high_top_of_page_bid": 6.889999866485596,
+                  "categories": [
+                    10013,
+                    13388,
+                    13595
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 5,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 40
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -29,
+                    "quarterly": -29,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "art therapy louisville",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=louisville%20art%20therapy&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "local_pack",
+                    "related_searches"
+                  ],
+                  "se_results_count": 7290000,
+                  "last_updated_time": "2026-05-09 11:02:41 +00:00",
+                  "previous_updated_time": "2026-01-26 01:53:07 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 6.300000190734863,
+                  "dofollow": 3.9000000953674316,
+                  "referring_pages": 6,
+                  "referring_domains": 5.199999809265137,
+                  "referring_main_domains": 4.900000095367432,
+                  "rank": 10.100000381469727,
+                  "main_domain_rank": 231.60000610351562,
+                  "last_updated_time": "2026-05-09 11:02:41 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": [
+                    "navigational",
+                    "commercial"
+                  ],
+                  "last_updated_time": "2026-04-28 23:40:35 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "se_type": "google",
+                "serp_item": {
+                  "se_type": "google",
+                  "type": "organic",
+                  "rank_group": 32,
+                  "rank_absolute": 38,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]",
+                  "domain": "www.lctps.org",
+                  "title": "Louisville Center for Therapy and Personal Sustainability: Home",
+                  "url": "https://www.lctps.org/",
+                  "breadcrumb": "https://www.lctps.org",
+                  "website_name": "Louisville Center for Therapy and Personal Sustainability",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Our mission at LCTPS, put simply, is to bolster Louisville therapy and wellness resources by providing a diverse array of wellness, educational, and therapeutic ... Read more",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": [
+                    "bolster Louisville therapy and wellness resources"
+                  ],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "lctps.org",
+                  "relative_url": "/",
+                  "etv": 0.10499999672174454,
+                  "estimated_paid_traffic_cost": 0.3506999909877777,
+                  "clickstream_etv": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": 41,
+                    "is_new": false,
+                    "is_up": true,
+                    "is_down": false
+                  },
+                  "backlinks_info": {
+                    "referring_domains": 5,
+                    "referring_main_domains": 5,
+                    "referring_pages": 16,
+                    "dofollow": 10,
+                    "backlinks": 21,
+                    "time_update": "2026-06-21 01:11:03 +00:00"
+                  },
+                  "rank_info": {
+                    "page_rank": 67,
+                    "main_domain_rank": 24
+                  }
+                },
+                "check_url": "https://www.google.com/search?q=louisville%20art%20therapy&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                "serp_item_types": [
+                  "organic",
+                  "local_pack",
+                  "related_searches"
+                ],
+                "se_results_count": 7290000,
+                "keyword_difficulty": 0,
+                "is_lost": false,
+                "last_updated_time": "2026-05-09 11:02:41 +00:00",
+                "previous_updated_time": "2026-01-26 01:53:07 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "louisville expressive therapies",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-06-15 09:06:34 +00:00",
+                  "competition": 0.03999999910593033,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 70,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10011,
+                    10091,
+                    10518
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 5,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 70
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -44,
+                    "quarterly": -44,
+                    "yearly": -29
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=louisville%20expressive%20therapies&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "people_also_ask",
+                    "related_searches",
+                    "google_reviews",
+                    "knowledge_graph"
+                  ],
+                  "se_results_count": 81,
+                  "last_updated_time": "2026-05-30 20:54:43 +00:00",
+                  "previous_updated_time": "2026-04-08 13:22:14 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 6.400000095367432,
+                  "dofollow": 3.9000000953674316,
+                  "referring_pages": 6.099999904632568,
+                  "referring_domains": 5.300000190734863,
+                  "referring_main_domains": 5,
+                  "rank": 17.5,
+                  "main_domain_rank": 514.5999755859375,
+                  "last_updated_time": "2026-05-30 20:55:28 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "navigational",
+                  "foreign_intent": [
+                    "informational",
+                    "commercial"
+                  ],
+                  "last_updated_time": "2026-04-28 21:02:31 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "se_type": "google",
+                "serp_item": {
+                  "se_type": "google",
+                  "type": "organic",
+                  "rank_group": 32,
+                  "rank_absolute": 36,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]",
+                  "domain": "www.lctps.org",
+                  "title": "Louisville Center for Therapy and Personal Sustainability: Home",
+                  "url": "https://www.lctps.org/",
+                  "breadcrumb": "https://www.lctps.org",
+                  "website_name": "Louisville Center for Therapy and Personal Sustainability",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Our mission at LCTPS, put simply, is to bolster Louisville therapy and wellness resources by providing a diverse array of wellness, educational, and therapeutic ... Read more",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": [
+                    "bolster Louisville therapy and wellness resources"
+                  ],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "lctps.org",
+                  "relative_url": "/",
+                  "etv": 0.1469999998807907,
+                  "estimated_paid_traffic_cost": null,
+                  "clickstream_etv": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": 47,
+                    "is_new": false,
+                    "is_up": true,
+                    "is_down": false
+                  },
+                  "backlinks_info": {
+                    "referring_domains": 5,
+                    "referring_main_domains": 5,
+                    "referring_pages": 16,
+                    "dofollow": 10,
+                    "backlinks": 21,
+                    "time_update": "2026-06-21 01:11:03 +00:00"
+                  },
+                  "rank_info": {
+                    "page_rank": 67,
+                    "main_domain_rank": 27
+                  }
+                },
+                "check_url": "https://www.google.com/search?q=louisville%20expressive%20therapies&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                "serp_item_types": [
+                  "organic",
+                  "people_also_ask",
+                  "related_searches",
+                  "google_reviews",
+                  "knowledge_graph"
+                ],
+                "se_results_count": 81,
+                "keyword_difficulty": 0,
+                "is_lost": false,
+                "last_updated_time": "2026-05-30 20:54:43 +00:00",
+                "previous_updated_time": "2026-04-08 13:22:14 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "art therapy louisville ky",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-06-14 12:25:03 +00:00",
+                  "competition": 0.41999998688697815,
+                  "competition_level": "MEDIUM",
+                  "cpc": 3.3399999141693115,
+                  "search_volume": 50,
+                  "low_top_of_page_bid": 1.5899999141693115,
+                  "high_top_of_page_bid": 6.889999866485596,
+                  "categories": [
+                    10011,
+                    10091,
+                    10518
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 5,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 40
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -29,
+                    "quarterly": -29,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "art therapist louisville ky",
+                  "synonym_clustering_algorithm": "keyword_metrics",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=art%20therapy%20louisville%20ky&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "local_pack",
+                    "organic"
+                  ],
+                  "se_results_count": 132,
+                  "last_updated_time": "2026-06-06 02:08:12 +00:00",
+                  "previous_updated_time": "2025-11-22 17:41:32 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 6.400000095367432,
+                  "dofollow": 3.700000047683716,
+                  "referring_pages": 6.099999904632568,
+                  "referring_domains": 5.300000190734863,
+                  "referring_main_domains": 5,
+                  "rank": 10.100000381469727,
+                  "main_domain_rank": 255.60000610351562,
+                  "last_updated_time": "2026-06-06 02:09:06 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "commercial",
+                  "foreign_intent": [
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-29 04:50:47 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "se_type": "google",
+                "serp_item": {
+                  "se_type": "google",
+                  "type": "organic",
+                  "rank_group": 38,
+                  "rank_absolute": 41,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[9]/div[1]/div[1]",
+                  "domain": "www.lctps.org",
+                  "title": "Louisville Center for Therapy and Personal Sustainability: Home",
+                  "url": "https://www.lctps.org/",
+                  "breadcrumb": "https://www.lctps.org",
+                  "website_name": "Louisville Center for Therapy and Personal Sustainability",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Our mission at LCTPS, put simply, is to bolster Louisville therapy and wellness resources by providing a diverse array of wellness, educational, and therapeutic ... Read more",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": [
+                    "bolster Louisville therapy and wellness resources"
+                  ],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "lctps.org",
+                  "relative_url": "/",
+                  "etv": 0.10499999672174454,
+                  "estimated_paid_traffic_cost": 0.3506999909877777,
+                  "clickstream_etv": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": 34,
+                    "is_new": false,
+                    "is_up": false,
+                    "is_down": true
+                  },
+                  "backlinks_info": {
+                    "referring_domains": 5,
+                    "referring_main_domains": 5,
+                    "referring_pages": 16,
+                    "dofollow": 10,
+                    "backlinks": 21,
+                    "time_update": "2026-06-21 01:11:03 +00:00"
+                  },
+                  "rank_info": {
+                    "page_rank": 85,
+                    "main_domain_rank": 46
+                  }
+                },
+                "check_url": "https://www.google.com/search?q=art%20therapy%20louisville%20ky&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                "serp_item_types": [
+                  "local_pack",
+                  "organic"
+                ],
+                "se_results_count": 132,
+                "keyword_difficulty": 0,
+                "is_lost": false,
+                "last_updated_time": "2026-06-06 02:08:12 +00:00",
+                "previous_updated_time": "2025-11-22 17:41:32 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "art therapist louisville ky",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-06-12 17:38:29 +00:00",
+                  "competition": 0.41999998688697815,
+                  "competition_level": "MEDIUM",
+                  "cpc": 3.3399999141693115,
+                  "search_volume": 50,
+                  "low_top_of_page_bid": 1.5899999141693115,
+                  "high_top_of_page_bid": 6.889999866485596,
+                  "categories": [
+                    10011,
+                    10091,
+                    10518
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 5,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 40
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -29,
+                    "quarterly": -29,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "keyword_metrics",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=art%20therapist%20louisville%20ky&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "related_searches",
+                    "google_reviews",
+                    "knowledge_graph"
+                  ],
+                  "se_results_count": 1810000,
+                  "last_updated_time": "2026-05-10 11:30:13 +00:00",
+                  "previous_updated_time": "2026-03-26 14:02:55 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 6.5,
+                  "dofollow": 4.099999904632568,
+                  "referring_pages": 6.199999809265137,
+                  "referring_domains": 5.400000095367432,
+                  "referring_main_domains": 5.099999904632568,
+                  "rank": 13.300000190734863,
+                  "main_domain_rank": 223.3000030517578,
+                  "last_updated_time": "2026-05-10 11:30:13 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "commercial",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 05:00:05 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "se_type": "google",
+                "serp_item": {
+                  "se_type": "google",
+                  "type": "organic",
+                  "rank_group": 40,
+                  "rank_absolute": 43,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]",
+                  "domain": "www.lctps.org",
+                  "title": "Louisville Center for Therapy and Personal Sustainability: Home",
+                  "url": "https://www.lctps.org/",
+                  "breadcrumb": "https://www.lctps.org",
+                  "website_name": "Louisville Center for Therapy and Personal Sustainability",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "We here at LCTPS wish to help you in the process of creating lasting and meaningful change in your life. Through the use of various therapeutic methods and ... Read more",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": [
+                    "creating lasting and meaningful change in your life"
+                  ],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "lctps.org",
+                  "relative_url": "/",
+                  "etv": 0.10499999672174454,
+                  "estimated_paid_traffic_cost": 0.3506999909877777,
+                  "clickstream_etv": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": 41,
+                    "is_new": false,
+                    "is_up": false,
+                    "is_down": true
+                  },
+                  "backlinks_info": {
+                    "referring_domains": 5,
+                    "referring_main_domains": 5,
+                    "referring_pages": 16,
+                    "dofollow": 10,
+                    "backlinks": 21,
+                    "time_update": "2026-06-21 01:11:03 +00:00"
+                  },
+                  "rank_info": {
+                    "page_rank": 67,
+                    "main_domain_rank": 24
+                  }
+                },
+                "check_url": "https://www.google.com/search?q=art%20therapist%20louisville%20ky&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                "serp_item_types": [
+                  "organic",
+                  "related_searches",
+                  "google_reviews",
+                  "knowledge_graph"
+                ],
+                "se_results_count": 1810000,
+                "keyword_difficulty": 0,
+                "is_lost": false,
+                "last_updated_time": "2026-05-10 11:30:13 +00:00",
+                "previous_updated_time": "2026-03-26 14:02:55 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "art therapy louisville",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-06-14 06:53:58 +00:00",
+                  "competition": 0.41999998688697815,
+                  "competition_level": "MEDIUM",
+                  "cpc": 3.3399999141693115,
+                  "search_volume": 50,
+                  "low_top_of_page_bid": 1.5899999141693115,
+                  "high_top_of_page_bid": 6.889999866485596,
+                  "categories": [
+                    10011,
+                    10091,
+                    10518
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 5,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 40
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -29,
+                    "quarterly": -29,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=art%20therapy%20louisville&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "local_pack",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 137,
+                  "last_updated_time": "2026-06-06 02:12:37 +00:00",
+                  "previous_updated_time": "2026-04-12 18:46:52 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 6.400000095367432,
+                  "dofollow": 3.700000047683716,
+                  "referring_pages": 6.099999904632568,
+                  "referring_domains": 5.300000190734863,
+                  "referring_main_domains": 5,
+                  "rank": 10.100000381469727,
+                  "main_domain_rank": 255.60000610351562,
+                  "last_updated_time": "2026-06-06 02:14:21 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "commercial",
+                  "foreign_intent": [
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-29 02:10:15 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "se_type": "google",
+                "serp_item": {
+                  "se_type": "google",
+                  "type": "organic",
+                  "rank_group": 43,
+                  "rank_absolute": 51,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]",
+                  "domain": "www.lctps.org",
+                  "title": "Louisville Center for Therapy and Personal Sustainability: Home",
+                  "url": "https://www.lctps.org/",
+                  "breadcrumb": "https://www.lctps.org",
+                  "website_name": "Louisville Center for Therapy and Personal Sustainability",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Images and descriptions of the Louisville Center for Therapy and Personal Sustainability or LCTPS therapy services, music therapy, individual therapy, ...",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": [
+                    "Louisville",
+                    "Therapy",
+                    "therapy"
+                  ],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "lctps.org",
+                  "relative_url": "/",
+                  "etv": 0.10499999672174454,
+                  "estimated_paid_traffic_cost": 0.3506999909877777,
+                  "clickstream_etv": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": 44,
+                    "is_new": false,
+                    "is_up": false,
+                    "is_down": true
+                  },
+                  "backlinks_info": {
+                    "referring_domains": 5,
+                    "referring_main_domains": 5,
+                    "referring_pages": 16,
+                    "dofollow": 10,
+                    "backlinks": 21,
+                    "time_update": "2026-06-21 01:11:03 +00:00"
+                  },
+                  "rank_info": {
+                    "page_rank": 85,
+                    "main_domain_rank": 46
+                  }
+                },
+                "check_url": "https://www.google.com/search?q=art%20therapy%20louisville&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                "serp_item_types": [
+                  "ai_overview",
+                  "local_pack",
+                  "organic",
+                  "related_searches"
+                ],
+                "se_results_count": 137,
+                "keyword_difficulty": 0,
+                "is_lost": false,
+                "last_updated_time": "2026-06-06 02:12:37 +00:00",
+                "previous_updated_time": "2026-04-12 18:46:52 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "lyg louisville",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-06-17 10:29:17 +00:00",
+                  "competition": 0.009999999776482582,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 20,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10008
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 5,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 30
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -33,
+                    "quarterly": 0,
+                    "yearly": -50
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=lyg%20louisville&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "paid",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 111,
+                  "last_updated_time": "2026-06-15 21:47:25 +00:00",
+                  "previous_updated_time": "2026-03-02 04:53:54 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 50.400001525878906,
+                  "dofollow": 45.400001525878906,
+                  "referring_pages": 47.599998474121094,
+                  "referring_domains": 30.600000381469727,
+                  "referring_main_domains": 29.600000381469727,
+                  "rank": 44.400001525878906,
+                  "main_domain_rank": 502.29998779296875,
+                  "last_updated_time": "2026-06-15 21:47:29 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "navigational",
+                  "foreign_intent": [
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-29 17:15:01 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "se_type": "google",
+                "serp_item": {
+                  "se_type": "google",
+                  "type": "organic",
+                  "rank_group": 43,
+                  "rank_absolute": 48,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[6]/div[1]/div[1]",
+                  "domain": "www.lctps.org",
+                  "title": "Queer Mental Health Resources",
+                  "url": "https://www.lctps.org/queermentalhealth",
+                  "breadcrumb": "https://www.lctps.org › queermentalhealth",
+                  "website_name": "Louisville Center for Therapy and Personal Sustainability",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "LCTPS (Louisville, KY) has a team of music therapists that offer therapy that specializes in incorporating music into the therapeutic process. Read more",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": [
+                    "Louisville"
+                  ],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "lctps.org",
+                  "relative_url": "/queermentalhealth",
+                  "etv": 0.039480000734329224,
+                  "estimated_paid_traffic_cost": null,
+                  "clickstream_etv": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": null,
+                    "is_new": true,
+                    "is_up": false,
+                    "is_down": false
+                  },
+                  "backlinks_info": {
+                    "referring_domains": 1,
+                    "referring_main_domains": 1,
+                    "referring_pages": 5,
+                    "dofollow": 5,
+                    "backlinks": 5,
+                    "time_update": "2026-06-21 02:15:05 +00:00"
+                  },
+                  "rank_info": {
+                    "page_rank": 31,
+                    "main_domain_rank": 46
+                  }
+                },
+                "check_url": "https://www.google.com/search?q=lyg%20louisville&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                "serp_item_types": [
+                  "paid",
+                  "organic",
+                  "related_searches"
+                ],
+                "se_results_count": 111,
+                "keyword_difficulty": 0,
+                "is_lost": false,
+                "last_updated_time": "2026-06-15 21:47:25 +00:00",
+                "previous_updated_time": "2026-03-02 04:53:54 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "louisville counseling center",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-06-13 15:52:27 +00:00",
+                  "competition": 0.49000000953674316,
+                  "competition_level": "MEDIUM",
+                  "cpc": 7.440000057220459,
+                  "search_volume": 30,
+                  "low_top_of_page_bid": 1.559999942779541,
+                  "high_top_of_page_bid": 8.960000038146973,
+                  "categories": [
+                    10011,
+                    10085,
+                    10449
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 5,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 20
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": -60,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 11,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=louisville%20counseling%20center&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "local_pack",
+                    "organic",
+                    "people_also_ask"
+                  ],
+                  "se_results_count": 113,
+                  "last_updated_time": "2026-06-15 23:28:47 +00:00",
+                  "previous_updated_time": null
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 45.79999923706055,
+                  "dofollow": 28,
+                  "referring_pages": 44.20000076293945,
+                  "referring_domains": 31.799999237060547,
+                  "referring_main_domains": 29.299999237060547,
+                  "rank": 129.89999389648438,
+                  "main_domain_rank": 275,
+                  "last_updated_time": "2026-06-15 23:28:52 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "navigational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 17:18:29 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "se_type": "google",
+                "serp_item": {
+                  "se_type": "google",
+                  "type": "organic",
+                  "rank_group": 52,
+                  "rank_absolute": 56,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]",
+                  "domain": "www.lctps.org",
+                  "title": "Louisville Center for Therapy and Personal Sustainability: Home",
+                  "url": "https://www.lctps.org/",
+                  "breadcrumb": "https://www.lctps.org",
+                  "website_name": "Louisville Center for Therapy and Personal Sustainability",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Our mission at LCTPS, put simply, is to bolster Louisville therapy and wellness resources by providing a diverse array of wellness, educational, and ... Read more",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": [
+                    "Louisville therapy"
+                  ],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "lctps.org",
+                  "relative_url": "/",
+                  "etv": 0.06300000101327896,
+                  "estimated_paid_traffic_cost": 0.4687199890613556,
+                  "clickstream_etv": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": null,
+                    "is_new": true,
+                    "is_up": false,
+                    "is_down": false
+                  },
+                  "backlinks_info": {
+                    "referring_domains": 5,
+                    "referring_main_domains": 5,
+                    "referring_pages": 16,
+                    "dofollow": 10,
+                    "backlinks": 21,
+                    "time_update": "2026-06-21 01:11:03 +00:00"
+                  },
+                  "rank_info": {
+                    "page_rank": 85,
+                    "main_domain_rank": 46
+                  }
+                },
+                "check_url": "https://www.google.com/search?q=louisville%20counseling%20center&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                "serp_item_types": [
+                  "local_pack",
+                  "organic",
+                  "people_also_ask"
+                ],
+                "se_results_count": 113,
+                "keyword_difficulty": 11,
+                "is_lost": false,
+                "last_updated_time": "2026-06-15 23:28:47 +00:00",
+                "previous_updated_time": null
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "music city prep louisville",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-06-18 13:38:58 +00:00",
+                  "competition": 0.1899999976158142,
+                  "competition_level": "LOW",
+                  "cpc": 13.899999618530273,
+                  "search_volume": 30,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10008
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 5,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 20
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": -50,
+                    "yearly": -80
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 1,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=music%20city%20prep%20louisville&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "related_searches",
+                    "google_reviews",
+                    "knowledge_graph"
+                  ],
+                  "se_results_count": 107,
+                  "last_updated_time": "2026-06-15 11:30:03 +00:00",
+                  "previous_updated_time": "2026-04-14 06:56:31 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 42.099998474121094,
+                  "dofollow": 36.5,
+                  "referring_pages": 40.20000076293945,
+                  "referring_domains": 13.399999618530273,
+                  "referring_main_domains": 13,
+                  "rank": 61.20000076293945,
+                  "main_domain_rank": 493.8999938964844,
+                  "last_updated_time": "2026-06-15 11:30:08 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 18:59:48 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "se_type": "google",
+                "serp_item": {
+                  "se_type": "google",
+                  "type": "organic",
+                  "rank_group": 53,
+                  "rank_absolute": 58,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]",
+                  "domain": "www.lctps.org",
+                  "title": "Louisville Center for Therapy and Personal Sustainability: Home",
+                  "url": "https://www.lctps.org/",
+                  "breadcrumb": "https://www.lctps.org",
+                  "website_name": "Louisville Center for Therapy and Personal Sustainability",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Images and descriptions of the Louisville Center for Therapy and Personal Sustainability or LCTPS therapy services, music therapy, individual therapy, ...",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": [
+                    "Louisville",
+                    "music"
+                  ],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "lctps.org",
+                  "relative_url": "/",
+                  "etv": 0.06300000101327896,
+                  "estimated_paid_traffic_cost": 0.8756999969482422,
+                  "clickstream_etv": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": null,
+                    "is_new": true,
+                    "is_up": false,
+                    "is_down": false
+                  },
+                  "backlinks_info": {
+                    "referring_domains": 5,
+                    "referring_main_domains": 5,
+                    "referring_pages": 16,
+                    "dofollow": 10,
+                    "backlinks": 21,
+                    "time_update": "2026-06-21 01:11:03 +00:00"
+                  },
+                  "rank_info": {
+                    "page_rank": 85,
+                    "main_domain_rank": 46
+                  }
+                },
+                "check_url": "https://www.google.com/search?q=music%20city%20prep%20louisville&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                "serp_item_types": [
+                  "organic",
+                  "related_searches",
+                  "google_reviews",
+                  "knowledge_graph"
+                ],
+                "se_results_count": 107,
+                "keyword_difficulty": 1,
+                "is_lost": false,
+                "last_updated_time": "2026-06-15 11:30:03 +00:00",
+                "previous_updated_time": "2026-04-14 06:56:31 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "counseling services louisville ky",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-06-15 03:33:36 +00:00",
+                  "competition": 0.7699999809265137,
+                  "competition_level": "HIGH",
+                  "cpc": 10.539999961853027,
+                  "search_volume": 90,
+                  "low_top_of_page_bid": 1.940000057220459,
+                  "high_top_of_page_bid": 7.170000076293945,
+                  "categories": [
+                    10011,
+                    10085,
+                    10449
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 5,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 170
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -50,
+                    "quarterly": 0,
+                    "yearly": -80
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=counseling%20services%20louisville%20ky&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "local_pack",
+                    "organic",
+                    "people_also_ask",
+                    "related_searches"
+                  ],
+                  "se_results_count": 111,
+                  "last_updated_time": "2026-05-29 13:22:44 +00:00",
+                  "previous_updated_time": "2026-04-07 05:05:54 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 22.200000762939453,
+                  "dofollow": 15.300000190734863,
+                  "referring_pages": 20.899999618530273,
+                  "referring_domains": 12.699999809265137,
+                  "referring_main_domains": 10.600000381469727,
+                  "rank": 86.19999694824219,
+                  "main_domain_rank": 204.3000030517578,
+                  "last_updated_time": "2026-05-29 13:24:36 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "navigational",
+                  "foreign_intent": [
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-27 12:06:00 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "se_type": "google",
+                "serp_item": {
+                  "se_type": "google",
+                  "type": "organic",
+                  "rank_group": 59,
+                  "rank_absolute": 68,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]",
+                  "domain": "www.lctps.org",
+                  "title": "Louisville Center for Therapy and Personal Sustainability: Home",
+                  "url": "https://www.lctps.org/",
+                  "breadcrumb": "https://www.lctps.org",
+                  "website_name": "Louisville Center for Therapy and Personal Sustainability",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "... services, music therapy, individual therapy, group therapy, behavioral health, counseling, counselor, and community-based therapy are listed here.",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": [
+                    "services",
+                    "counseling"
+                  ],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "lctps.org",
+                  "relative_url": "/",
+                  "etv": 0.1889999955892563,
+                  "estimated_paid_traffic_cost": 1.9920599460601807,
+                  "clickstream_etv": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": 70,
+                    "is_new": false,
+                    "is_up": true,
+                    "is_down": false
+                  },
+                  "backlinks_info": {
+                    "referring_domains": 5,
+                    "referring_main_domains": 5,
+                    "referring_pages": 16,
+                    "dofollow": 10,
+                    "backlinks": 21,
+                    "time_update": "2026-06-21 01:11:03 +00:00"
+                  },
+                  "rank_info": {
+                    "page_rank": 67,
+                    "main_domain_rank": 27
+                  }
+                },
+                "check_url": "https://www.google.com/search?q=counseling%20services%20louisville%20ky&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                "serp_item_types": [
+                  "local_pack",
+                  "organic",
+                  "people_also_ask",
+                  "related_searches"
+                ],
+                "se_results_count": 111,
+                "keyword_difficulty": 0,
+                "is_lost": false,
+                "last_updated_time": "2026-05-29 13:22:44 +00:00",
+                "previous_updated_time": "2026-04-07 05:05:54 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "level up louisville",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-06-18 17:16:38 +00:00",
+                  "competition": 0.029999999329447746,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 30,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10008
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 5,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 50
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -33,
+                    "quarterly": -50,
+                    "yearly": -90
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=level%20up%20louisville&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "people_also_ask",
+                    "related_searches",
+                    "knowledge_graph",
+                    "google_reviews"
+                  ],
+                  "se_results_count": 108,
+                  "last_updated_time": "2026-06-03 02:15:18 +00:00",
+                  "previous_updated_time": "2026-04-11 09:50:20 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 0.8999999761581421,
+                  "dofollow": 0.8999999761581421,
+                  "referring_pages": 0.8999999761581421,
+                  "referring_domains": 0.4000000059604645,
+                  "referring_main_domains": 0.30000001192092896,
+                  "rank": 19.799999237060547,
+                  "main_domain_rank": 448.70001220703125,
+                  "last_updated_time": "2026-06-03 02:17:06 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": [
+                    "navigational"
+                  ],
+                  "last_updated_time": "2026-04-28 19:53:59 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "se_type": "google",
+                "serp_item": {
+                  "se_type": "google",
+                  "type": "organic",
+                  "rank_group": 66,
+                  "rank_absolute": 73,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]",
+                  "domain": "www.lctps.org",
+                  "title": "Louisville Center for Therapy and Personal Sustainability: Home",
+                  "url": "https://www.lctps.org/",
+                  "breadcrumb": "https://www.lctps.org",
+                  "website_name": "Louisville Center for Therapy and Personal Sustainability",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Images and descriptions of the Louisville Center for Therapy and Personal Sustainability or LCTPS therapy services, music therapy, individual therapy, ...",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": [
+                    "Louisville"
+                  ],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "lctps.org",
+                  "relative_url": "/",
+                  "etv": 0.06300000101327896,
+                  "estimated_paid_traffic_cost": null,
+                  "clickstream_etv": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": null,
+                    "is_new": true,
+                    "is_up": false,
+                    "is_down": false
+                  },
+                  "backlinks_info": {
+                    "referring_domains": 5,
+                    "referring_main_domains": 5,
+                    "referring_pages": 16,
+                    "dofollow": 10,
+                    "backlinks": 21,
+                    "time_update": "2026-06-21 01:11:03 +00:00"
+                  },
+                  "rank_info": {
+                    "page_rank": 67,
+                    "main_domain_rank": 46
+                  }
+                },
+                "check_url": "https://www.google.com/search?q=level%20up%20louisville&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                "serp_item_types": [
+                  "organic",
+                  "people_also_ask",
+                  "related_searches",
+                  "knowledge_graph",
+                  "google_reviews"
+                ],
+                "se_results_count": 108,
+                "keyword_difficulty": 0,
+                "is_lost": false,
+                "last_updated_time": "2026-06-03 02:15:18 +00:00",
+                "previous_updated_time": "2026-04-11 09:50:20 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "kentucky counseling center louisville ky",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-06-18 04:12:32 +00:00",
+                  "competition": 0.5400000214576721,
+                  "competition_level": "MEDIUM",
+                  "cpc": 3.2200000286102295,
+                  "search_volume": 70,
+                  "low_top_of_page_bid": 1.559999942779541,
+                  "high_top_of_page_bid": 6.170000076293945,
+                  "categories": [
+                    10011,
+                    10085,
+                    10462,
+                    11673
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 5,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 70
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -29,
+                    "quarterly": -44,
+                    "yearly": -55
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 9,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=kentucky%20counseling%20center%20louisville%20ky&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "local_pack",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 123,
+                  "last_updated_time": "2026-05-29 00:02:11 +00:00",
+                  "previous_updated_time": "2026-04-06 19:09:36 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 275.70001220703125,
+                  "dofollow": 264.70001220703125,
+                  "referring_pages": 273.6000061035156,
+                  "referring_domains": 24.299999237060547,
+                  "referring_main_domains": 22.600000381469727,
+                  "rank": 98.69999694824219,
+                  "main_domain_rank": 471.79998779296875,
+                  "last_updated_time": "2026-05-29 00:02:11 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "navigational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-28 12:04:23 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "se_type": "google",
+                "serp_item": {
+                  "se_type": "google",
+                  "type": "organic",
+                  "rank_group": 77,
+                  "rank_absolute": 88,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]",
+                  "domain": "www.lctps.org",
+                  "title": "Queer Mental Health Resources",
+                  "url": "https://www.lctps.org/queermentalhealth",
+                  "breadcrumb": "https://www.lctps.org › queermentalhealth",
+                  "website_name": "Louisville Center for Therapy and Personal Sustainability",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "With Queer Affirming Staff: Louisville Center for Therapy (Louisville, KY) · Bridge Counseling ... Read more",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": [
+                    "Center",
+                    "Louisville",
+                    "KY",
+                    "Counseling"
+                  ],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "lctps.org",
+                  "relative_url": "/queermentalhealth",
+                  "etv": 0.1469999998807907,
+                  "estimated_paid_traffic_cost": 0.4733400046825409,
+                  "clickstream_etv": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": null,
+                    "is_new": true,
+                    "is_up": false,
+                    "is_down": false
+                  },
+                  "backlinks_info": {
+                    "referring_domains": 1,
+                    "referring_main_domains": 1,
+                    "referring_pages": 5,
+                    "dofollow": 5,
+                    "backlinks": 5,
+                    "time_update": "2026-06-21 02:15:05 +00:00"
+                  },
+                  "rank_info": {
+                    "page_rank": 31,
+                    "main_domain_rank": 27
+                  }
+                },
+                "check_url": "https://www.google.com/search?q=kentucky%20counseling%20center%20louisville%20ky&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                "serp_item_types": [
+                  "local_pack",
+                  "organic",
+                  "related_searches"
+                ],
+                "se_results_count": 123,
+                "keyword_difficulty": 9,
+                "is_lost": false,
+                "last_updated_time": "2026-05-29 00:02:11 +00:00",
+                "previous_updated_time": "2026-04-06 19:09:36 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "centerstone louisville ky",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-06-15 00:20:42 +00:00",
+                  "competition": 0.4000000059604645,
+                  "competition_level": "MEDIUM",
+                  "cpc": 15.789999961853027,
+                  "search_volume": 90,
+                  "low_top_of_page_bid": 2.7200000286102295,
+                  "high_top_of_page_bid": 12.479999542236328,
+                  "categories": [
+                    10011,
+                    10085,
+                    10462,
+                    11673
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 5,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 140
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 29,
+                    "quarterly": 0,
+                    "yearly": -47
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 7,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=centerstone%20louisville%20ky&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "people_also_ask",
+                    "google_reviews",
+                    "knowledge_graph"
+                  ],
+                  "se_results_count": 20300,
+                  "last_updated_time": "2026-05-05 20:11:45 +00:00",
+                  "previous_updated_time": "2026-03-23 13:22:34 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 1142.5999755859375,
+                  "dofollow": 761.7999877929688,
+                  "referring_pages": 1042.300048828125,
+                  "referring_domains": 139.6999969482422,
+                  "referring_main_domains": 127.19999694824219,
+                  "rank": 90.0999984741211,
+                  "main_domain_rank": 469.1000061035156,
+                  "last_updated_time": "2026-05-05 20:12:46 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "navigational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-27 09:29:41 +00:00"
+                }
+              },
+              "ranked_serp_element": {
+                "se_type": "google",
+                "serp_item": {
+                  "se_type": "google",
+                  "type": "organic",
+                  "rank_group": 80,
+                  "rank_absolute": 81,
+                  "position": "left",
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]",
+                  "domain": "www.lctps.org",
+                  "title": "Louisville Center for Therapy and Personal Sustainability: Home",
+                  "url": "https://www.lctps.org/",
+                  "breadcrumb": "https://www.lctps.org",
+                  "website_name": "Louisville Center for Therapy and Personal Sustainability",
+                  "is_image": false,
+                  "is_video": false,
+                  "is_featured_snippet": false,
+                  "is_malicious": false,
+                  "description": "Images and descriptions of the Louisville Center for Therapy and Personal Sustainability or LCTPS therapy services, music therapy, individual therapy, ...",
+                  "pre_snippet": null,
+                  "extended_snippet": null,
+                  "amp_version": false,
+                  "rating": null,
+                  "highlighted": [
+                    "Louisville"
+                  ],
+                  "links": null,
+                  "about_this_result": null,
+                  "main_domain": "lctps.org",
+                  "relative_url": "/",
+                  "etv": 0.1889999955892563,
+                  "estimated_paid_traffic_cost": 2.9843099117279053,
+                  "clickstream_etv": null,
+                  "rank_changes": {
+                    "previous_rank_absolute": null,
+                    "is_new": true,
+                    "is_up": false,
+                    "is_down": false
+                  },
+                  "backlinks_info": {
+                    "referring_domains": 5,
+                    "referring_main_domains": 5,
+                    "referring_pages": 16,
+                    "dofollow": 10,
+                    "backlinks": 21,
+                    "time_update": "2026-06-21 01:11:03 +00:00"
+                  },
+                  "rank_info": {
+                    "page_rank": 67,
+                    "main_domain_rank": 24
+                  }
+                },
+                "check_url": "https://www.google.com/search?q=centerstone%20louisville%20ky&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                "serp_item_types": [
+                  "organic",
+                  "people_also_ask",
+                  "google_reviews",
+                  "knowledge_graph"
+                ],
+                "se_results_count": 20300,
+                "keyword_difficulty": 7,
+                "is_lost": false,
+                "last_updated_time": "2026-05-05 20:11:45 +00:00",
+                "previous_updated_time": "2026-03-23 13:22:34 +00:00"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

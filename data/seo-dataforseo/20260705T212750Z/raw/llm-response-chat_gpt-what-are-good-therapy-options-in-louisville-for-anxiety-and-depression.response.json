@@ -1,0 +1,128 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "11.8093 sec.",
+  "cost": 0.02352165,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060031-9766-0612-0000-0d9177fa84b5",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "11.7496 sec.",
+      "cost": 0.02352165,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "chat_gpt",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "chat_gpt",
+        "user_prompt": "What are good therapy options in Louisville for anxiety and depression?",
+        "model_name": "gpt-5.4-nano",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response chat_gpt What are good therapy options in Louisville for anxiety and depression?",
+        "web_search": true,
+        "web_search_country_iso_code": "US",
+        "web_search_city": "Louisville",
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gpt-5.4-nano-2026-03-17",
+          "input_tokens": 8852,
+          "output_tokens": 921,
+          "reasoning_tokens": 331,
+          "web_search": true,
+          "money_spent": 0.02292165,
+          "datetime": "2026-07-06 00:31:45 +00:00",
+          "items": [
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Searching for local mental health options**\n\nI'm planning to use the web.run tool to find local providers for mental health services and current options. I’m thinking about including different types of support like cognitive behavioral therapy, medication psychiatry, counseling centers, sliding scale services, and crisis support. It seems important to provide a variety of options for whoever might need them. I’ll get started on that and look for the best results!"
+                }
+              ]
+            },
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Gathering sources**\n\nI need to find more sources, like CCBHC Seven Counties. I'm wondering if Louisville behavioral health urgent care is actually located in Kentucky. I'll check the Seven Counties page and look into Wellspring too. It's a good idea to quickly access key sources to gather the right information! Let's see what I can find!"
+                }
+              ]
+            },
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Gathering crisis resource options**\n\nI’m unable to access more web content right now, so I’ll craft my answer using existing sources. I want to provide options in different categories and recommend contacting mental health providers. It’s important to include crisis resources like Wellspring and SCS Seven Counties, as well as mentioning the 988 crisis line. I'll ensure that if I provide a list, they have brief descriptions with citations, being careful to avoid unsourced claims. I'll draw from sources like Peaceful Solutions and various local mental health services."
+                }
+              ]
+            },
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here are some **good therapy options in Louisville** to consider for **anxiety and depression**, including places that offer **counseling, crisis/urgent support, and (when needed) medication management**.\n\n## 1) Community mental health / crisis stabilization (good if symptoms feel unmanageable)\n- **Wellspring – Crisis Stabilization (24/7)**: Focuses on helping people stabilize during acute mental health symptoms (including severe depression). ([wellspringky.org](https://wellspringky.org/what-we-do/crisis-stabilization/?utm_source=openai))  \n- **Seven Counties Services – Jefferson County (CCBHC site; supports people regardless of insurance/residence)**: Their Child & Family West office notes crisis mental health services and 24-hour mobile crisis / emergency crisis intervention / crisis stabilization. ([sevencounties.org](https://sevencounties.org/about/locations/child-family-west-office-jefferson-county/?utm_source=openai))  \n\n## 2) Counseling centers (including for students)\n- **University of Louisville Counseling Center** (for currently enrolled UofL students): Offers short-term individual/group/couples counseling and addresses concerns like **anxiety and depression**. ([student.louisville.edu](https://student.louisville.edu/counseling/resources/counseling-appointments?utm_source=openai))  \n\n## 3) Therapy practices (individual therapy; some offer sliding scale)\n- **Peaceful Solutions KY**: Offers therapy for anxiety & depression (in Louisville and/or online). ([info.peacefulsc.com](https://info.peacefulsc.com/?utm_source=openai))  \n- **Barbara Motley** (Louisville): Notes work focused on depression/anxiety and also indicates a **sliding scale** option. ([barbaramotley.com](https://www.barbaramotley.com/?utm_source=openai))  \n\n## 4) Evidence-based depression treatment resources\n- **University of Louisville Depression Center – Computer-assisted CBT**: If you’re interested in CBT skills-building, they describe a computer-assisted CBT option that can complement other treatment. ([louisville.edu](https://louisville.edu/depression/treatment/computer-assisted-therapy?utm_source=openai))  \n\n## 5) When you also need psychiatric medication management\n- **Smither Psychiatry (Louisville; telehealth available when appropriate)**: A psychiatry option that highlights treatment for anxiety/depression and medication management. ([smitherpsychiatry.com](https://smitherpsychiatry.com/?utm_source=openai))  \n\n## 6) Other outpatient counseling options\n- **Life’s Journey Counseling**: Offers therapy for children and families (including for anxiety/depression). ([lifesjourneyky.com](https://www.lifesjourneyky.com/?utm_source=openai))  \n\n---\n\n## Quick questions so I can narrow this to the best fit\n1) Are you looking for **individual therapy** or **group** (or both)?\n2) Do you need **sliding-scale/low-cost** options?\n3) Are you an **UofL student** (so I can point you to the right pathway)?\n4) Is this mostly **anxiety**, mostly **depression**, or both—and how severe (e.g., work/school impairment, panic attacks, etc.)?\n\nIf you tell me those, I’ll suggest a short “top 3” shortlist to start with in Louisville. Also, if you’re",
+                  "annotations": [
+                    {
+                      "title": "Mental Crisis Services | Wellspring",
+                      "url": "https://wellspringky.org/what-we-do/crisis-stabilization/?utm_source=openai"
+                    },
+                    {
+                      "title": "Child & Family West Office | SCS Jefferson County",
+                      "url": "https://sevencounties.org/about/locations/child-family-west-office-jefferson-county/?utm_source=openai"
+                    },
+                    {
+                      "title": "Appointments and Services | Student Services",
+                      "url": "https://student.louisville.edu/counseling/resources/counseling-appointments?utm_source=openai"
+                    },
+                    {
+                      "title": "Therapy for Anxiety & Depression | Peaceful Solutions KY",
+                      "url": "https://info.peacefulsc.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Home | Barbara Motley",
+                      "url": "https://www.barbaramotley.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Computer-assisted Therapy — Depression Center",
+                      "url": "https://louisville.edu/depression/treatment/computer-assisted-therapy?utm_source=openai"
+                    },
+                    {
+                      "title": "Psychiatric Care Louisville KY | Morgan Smither, PMHNP | Smither Psychiatry",
+                      "url": "https://smitherpsychiatry.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Schedule an appointment at Life's Journey Counseling",
+                      "url": "https://www.lifesjourneyky.com/?utm_source=openai"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "Louisville KY therapy anxiety depression sliding scale",
+            "University of Louisville counseling center anxiety depression",
+            "KIPDA mental health center Louisville sliding scale therapy",
+            "Behavioral health urgent walk-in Louisville KY crisis stabilization"
+          ]
+        }
+      ]
+    }
+  ]
+}

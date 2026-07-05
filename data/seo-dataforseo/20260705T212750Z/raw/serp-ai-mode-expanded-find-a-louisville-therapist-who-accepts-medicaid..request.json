@@ -1,0 +1,13 @@
+{
+  "name": "serp-ai-mode-expanded-Find a Louisville therapist who accepts Medicaid.",
+  "path": "/v3/serp/google/ai_mode/live/advanced",
+  "body": [
+    {
+      "keyword": "Find a Louisville therapist who accepts Medicaid.",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "tag": "lmhg ai mode expanded Find a Louisville therapist who accepts Medicaid."
+    }
+  ]
+}

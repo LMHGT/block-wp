@@ -1,0 +1,33 @@
+{
+  "name": "llm-mentions-search-google",
+  "method": "POST",
+  "path": "/v3/ai_optimization/llm_mentions/search/live",
+  "body": [
+    {
+      "target": [
+        {
+          "domain": "louisvillementalhealth.org",
+          "search_filter": "include",
+          "search_scope": [
+            "any"
+          ],
+          "include_subdomains": true
+        },
+        {
+          "keyword": "Louisville Mental Health Group",
+          "search_filter": "include",
+          "search_scope": [
+            "any"
+          ],
+          "match_type": "partial_match"
+        }
+      ],
+      "platform": "google",
+      "location_code": 2840,
+      "language_code": "en",
+      "limit": 25,
+      "tag": "lmhg llm mentions search google"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:27.733842+00:00"
+}

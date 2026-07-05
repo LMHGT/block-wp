@@ -1,0 +1,13 @@
+{
+  "name": "labs-ranked-keywords-competitor-kentuckycounselingcenter.com",
+  "path": "/v3/dataforseo_labs/google/ranked_keywords/live",
+  "body": [
+    {
+      "target": "kentuckycounselingcenter.com",
+      "location_code": 2840,
+      "language_code": "en",
+      "limit": 50,
+      "tag": "lmhg competitor ranked kentuckycounselingcenter.com"
+    }
+  ]
+}

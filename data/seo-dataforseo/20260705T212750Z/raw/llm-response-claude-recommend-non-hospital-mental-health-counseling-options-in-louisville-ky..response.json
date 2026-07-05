@@ -1,0 +1,278 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "24.8533 sec.",
+  "cost": 0.068998,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060038-9766-0612-0000-e0b6f7dba57b",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "24.8400 sec.",
+      "cost": 0.068998,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "claude",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "claude",
+        "user_prompt": "Recommend non-hospital mental health counseling options in Louisville, KY.",
+        "model_name": "claude-sonnet-4-6",
+        "web_search": true,
+        "max_output_tokens": 1024,
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response claude Recommend non-hospital mental health counseling options in Louisville, KY."
+      },
+      "result": [
+        {
+          "model_name": "claude-sonnet-4-6",
+          "input_tokens": 13791,
+          "output_tokens": 1135,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.068398,
+          "datetime": "2026-07-06 00:39:24 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here is a roundup of **non-hospital mental health counseling options in Louisville, KY**:\n\n---\n\n## 🧠 Non-Hospital Mental Health Counseling in Louisville, KY\n\n---\n\n### 1. 🏢 Kentucky Counseling Center (KCC)\n📍 1169 Eastern Pkwy #3328, Louisville Highlands, KY 40217\n🌐 [kentuckycounselingcenter.com](https://kentuckycounselingcenter.com)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Kentucky Counseling Center is one of the largest mental health providers in Kentucky, with licensed therapists and psychiatric providers offering in-person counseling and statewide telehealth services for adults, teens, and children.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Counseling and Psychiatry | Kentucky Counseling Center",
+                      "url": "https://kentuckycounselingcenter.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Services include one-on-one counseling, cognitive-behavioral therapy, couples counseling, and other evidence-based treatments.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Counseling and Psychiatry | Kentucky Counseling Center",
+                      "url": "https://kentuckycounselingcenter.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Same-week therapy appointments are available, and most clients are able to see a provider the same week they schedule!",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Counseling and Psychiatry | Kentucky Counseling Center",
+                      "url": "https://kentuckycounselingcenter.com/"
+                    },
+                    {
+                      "title": "Mental Health Counseling and Psychiatry | Kentucky Counseling Center",
+                      "url": "https://kentuckycounselingcenter.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They accept most major health insurances, Medicaid, and offer convenient payment plans.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Counseling and Psychiatry | Kentucky Counseling Center",
+                      "url": "https://kentuckycounselingcenter.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 2. 🏡 Mandala House\n📍 633 Baxter Avenue, Louisville, KY (Highlands neighborhood)\n🌐 [mandalalouisville.com](https://mandalalouisville.com)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Mandala House is an outpatient mental health center providing services for individuals, groups, relationships, and families, serving clients over the age of 14 in the greater Louisville area.",
+                  "annotations": [
+                    {
+                      "title": "Mandala House",
+                      "url": "https://mandalalouisville.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Their staff includes psychologists, social workers, counselors, and marriage and family therapists.",
+                  "annotations": [
+                    {
+                      "title": "Mandala House",
+                      "url": "https://mandalalouisville.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Mandala House offers access to informed, affirming, and culturally-responsive psychotherapy, with a multidisciplinary center that allows for efficient service delivery and intentional collaboration among providers.",
+                  "annotations": [
+                    {
+                      "title": "Mandala House",
+                      "url": "https://mandalalouisville.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 3. 🏥 Norton Behavioral Medicine (Outpatient)\n🌐 [nortonhealthcare.com](https://nortonhealthcare.com/services-and-conditions/behavioral-health/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Norton Behavioral Medicine offers outpatient mental health care coordinated with your primary care doctor or specialist, with therapists, psychologists, psychiatrists, addiction medicine specialists, and licensed clinical social workers as part of your care team.",
+                  "annotations": [
+                    {
+                      "title": "Kentucky and Indiana Mental Health Care | Norton Healthcare Louisville, Ky.",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They treat conditions including depression, anxiety, PTSD, substance use disorder, and eating disorders.",
+                  "annotations": [
+                    {
+                      "title": "Kentucky and Indiana Mental Health Care | Norton Healthcare Louisville, Ky.",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Convenient and secure telehealth visits are available, as well as in-person visits at select Norton Healthcare locations.",
+                  "annotations": [
+                    {
+                      "title": "Kentucky and Indiana Mental Health Care | Norton Healthcare Louisville, Ky.",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They accept Medicaid, Medicare, and most commercial insurance plans.",
+                  "annotations": [
+                    {
+                      "title": "Kentucky and Indiana Mental Health Care | Norton Healthcare Louisville, Ky.",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 4. 🌿 Cultivate BHE – Louisville\n🌐 [cultivatebhe.com](https://cultivatebhe.com/locations/kentucky/louisville-ky-mental-health/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "In Louisville, KY, Cultivate BHE's counseling and psychotherapy services are designed to help individuals, couples, and families overcome challenges, with licensed therapists providing personalized care for anxiety, depression, trauma, stress, and relationship issues.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Therapy in Louisville (Mental Health), KY | Autism Treatment - Cultivate BHE",
+                      "url": "https://cultivatebhe.com/locations/kentucky/louisville-ky-mental-health/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Their telehealth options make it easy to access professional care from anywhere in Kentucky, connecting you with licensed therapists for individual, family, or couples counseling through a secure platform.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Therapy in Louisville (Mental Health), KY | Autism Treatment - Cultivate BHE",
+                      "url": "https://cultivatebhe.com/locations/kentucky/louisville-ky-mental-health/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They also offer Targeted Case Management (TCM) to assist Medicaid-eligible recipients with severe mental illness, substance use disorder, or chronic complex health conditions.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Therapy in Louisville (Mental Health), KY | Autism Treatment - Cultivate BHE",
+                      "url": "https://cultivatebhe.com/locations/kentucky/louisville-ky-mental-health/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 5. 🏘️ Family Health Centers\n📍 2",
+                  "annotations": null
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "non-hospital mental health counseling Louisville KY",
+            "outpatient mental health therapy clinics Louisville Kentucky 2025"
+          ]
+        }
+      ]
+    }
+  ]
+}

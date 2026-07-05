@@ -1,0 +1,88 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.5352 sec.",
+  "cost": 0.024288,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060028-9766-0461-0000-c6e0fffd792f",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.5267 sec.",
+      "cost": 0.024288,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "backlinks",
+        "competitors",
+        "live"
+      ],
+      "data": {
+        "api": "backlinks",
+        "function": "competitors",
+        "target": "louisvillementalhealth.org",
+        "limit": 50,
+        "tag": "lmhg backlinks competitors"
+      },
+      "result": [
+        {
+          "total_count": 8,
+          "items_count": 8,
+          "items": [
+            {
+              "type": "backlinks_competitors",
+              "target": "cri.it",
+              "rank": 2,
+              "intersections": 10
+            },
+            {
+              "type": "backlinks_competitors",
+              "target": "thryv.com",
+              "rank": 65,
+              "intersections": 7
+            },
+            {
+              "type": "backlinks_competitors",
+              "target": "yellowpages.com",
+              "rank": 17,
+              "intersections": 5
+            },
+            {
+              "type": "backlinks_competitors",
+              "target": "automattic.com",
+              "rank": 23,
+              "intersections": 1
+            },
+            {
+              "type": "backlinks_competitors",
+              "target": "inspirydemos.com",
+              "rank": 7,
+              "intersections": 1
+            },
+            {
+              "type": "backlinks_competitors",
+              "target": "privathera.com",
+              "rank": 51,
+              "intersections": 1
+            },
+            {
+              "type": "backlinks_competitors",
+              "target": "slspecialist.lk",
+              "rank": 23,
+              "intersections": 1
+            },
+            {
+              "type": "backlinks_competitors",
+              "target": "creativethemes.com",
+              "rank": 23,
+              "intersections": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

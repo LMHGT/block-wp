@@ -1,0 +1,360 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.5856 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060041-9766-0139-0000-d47b63102bf1",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.5354 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "Which Louisville providers help teens with anxiety, depression, or trauma?",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode expanded Which Louisville providers help teens with anxiety, depression, or trauma?",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Which Louisville providers help teens with anxiety, depression, or trauma?",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=Which%20Louisville%20providers%20help%20teens%20with%20anxiety%2C%20depression%2C%20or%20trauma%3F&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:41:11 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[4]/div[1]/div[1]/div[1]/div[3]",
+              "markdown": "Several providers in Louisville offer specialized care for teens dealing with anxiety, depression, or trauma. These include hospitals with dedicated adolescent units, specialized psychology practices, and outpatient behavioral health services.[[1]](https://recovery.com/louisville/adolescents/)[[2]](https://www.turningwinds.com/adolescent-treatment-programs-for-teens-in-louisville-ky-that-take-insurance/)[[3]](https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/)\n\nHere are key providers found in Louisville, KY:\n\n- **[UofL Health – Peace Hospital](https://uoflhealth.org/services/mental-and-behavioral-health/):** Offers mental and behavioral health services for children and adolescents, including a no-charge assessment for depression symptoms, psychiatric services, and therapy.[](https://uoflhealth.org/services/mental-and-behavioral-health/) [[1]](https://uoflhealth.org/services/mental-and-behavioral-health/)\n- **The Brook Hospital – KMI:** Provides a [structured Adolescent Psychiatric Inpatient Program](https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/) for teens aged 13–17, focusing on depression, anxiety, trauma, and mood disorders, featuring 24-hour care, psychiatric evaluation, and crisis stabilization.[](https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/) [[1]](https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/)\n- **[Norton Healthcare Behavioral Medicine Services](https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/):** Treats common teen mental health issues like anxiety, depression, and PTSD through a team of therapists, psychologists, and psychiatrists.[](https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/) [[1]](https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/)\n- **[Louisville Grace Psychological Services](https://louisvillegracepsychological.com/child-therapist-louisville-ky/):** Provides child therapy and psychology for anxiety, depression, and trauma using evidence-based practices like Cognitive Behavioral Therapy (CBT) and Exposure and Response Prevention (ERP).[](https://louisvillegracepsychological.com/child-therapist-louisville-ky/) [[1]](https://louisvillegracepsychological.com/child-therapist-louisville-ky/)[[2]](https://louisvillegracepsychological.com/teen-therapy-louisville/)[[3]](https://louisvillegracepsychological.com/erp-therapy-ocd-louisville/)[[4]](https://louisvillegracepsychological.com/complex-ptsd-understanding-the-nuances-of-chronic-trauma/)\n- **[Psychology Today Directory](https://www.psychologytoday.com/us/psychiatrists/ky/louisville?category=adolescents-teenagers-14-to-19):** Lists numerous private practice psychiatrists in Louisville specializing in adolescent medication management for ADHD, anxiety, and depression.[](https://www.psychologytoday.com/us/psychiatrists/ky/louisville?category=adolescents-teenagers-14-to-19) [[1]](https://www.psychologytoday.com/us/psychiatrists/ky/louisville?category=adolescents-teenagers-14-to-19)[[2]](https://www.psychologytoday.com/us/psychiatrists/co/louisville)\n\n**Key Treatment Approaches Offered in Louisville:** \n\n- **Inpatient Programs:** For severe, immediate crises (e.g., The Brook).\n- **Outpatient Therapy/Medication Management:** For ongoing care (e.g., Norton Healthcare, private practitioners).\n- **Trauma/Anxiety Specific:** CBT, play therapy, and ERP are frequently used by local child psychologists.[](https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/) [[1]](https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/)[[2]](https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/)[[3]](https://louisvillegracepsychological.com/child-therapist-louisville-ky/)[[4]](https://missionprephealthcare.com/blog/virginia-adolescent-mental-health-facilities-options-how-to-choose-the-right-one/)[[5]](https://basepointacademy.com/locations/dallas/balch-springs/)\n\nWould you like me to find which of these providers accept **Medicaid** , or perhaps focus on finding a provider for **specific, in-person therapy** rather than medication management?",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Several providers in Louisville offer specialized care for teens dealing with anxiety, depression, or trauma. These include hospitals with dedicated adolescent units, specialized psychology practices, and outpatient behavioral health services.",
+                  "markdown": "Several providers in Louisville offer specialized care for teens dealing with anxiety, depression, or trauma. These include hospitals with dedicated adolescent units, specialized psychology practices, and outpatient behavioral health services.[[1]](https://recovery.com/louisville/adolescents/)[[2]](https://www.turningwinds.com/adolescent-treatment-programs-for-teens-in-louisville-ky-that-take-insurance/)[[3]](https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Recovery.com",
+                      "domain": "recovery.com",
+                      "url": "https://recovery.com/louisville/adolescents/",
+                      "title": "33 Best Louisville Adolescents Rehab Centers (with Pricing)",
+                      "text": "Our research team evaluated the 33 best treatment centers for adolescents in Louisville, KY. Here you can find rehab centers treat..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Turning Winds",
+                      "domain": "www.turningwinds.com",
+                      "url": "https://www.turningwinds.com/adolescent-treatment-programs-for-teens-in-louisville-ky-that-take-insurance/",
+                      "title": "Teen Treatment Covered by Healthcare Insurance - Louisville, KY",
+                      "text": "Coincidentally, the best treatment programs in Louisville, KY will be able to get big portions of your teen's treatment covered, i..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "The Brook Hospitals",
+                      "domain": "thebrookhospitals.com",
+                      "url": "https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/",
+                      "title": "Teen Inpatient Psychiatric Louisville KY - The Brook Hospitals",
+                      "text": "Teen Inpatient Psychiatric Louisville KY | The Brook Hospitals. Adolescent Psychiatric InpatienteSkyCityDEVRK2026-03-18T14:40:11+0..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Here are key providers found in Louisville, KY:",
+                  "markdown": "Here are key providers found in Louisville, KY:",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "UofL Health – Peace Hospital : Offers mental and behavioral health services for children and adolescents, including a no-charge assessment for depression symptoms, psychiatric services, and therapy. UofL Health – Peace Hospital : mental and behavioral health services The Brook Hospital – KMI: Provides a structured Adolescent Psychiatric Inpatient Program for teens aged 13–17, focusing on depression, anxiety, trauma, and mood disorders, featuring 24-hour care, psychiatric evaluation, and crisis stabilization. Norton Healthcare Behavioral Medicine Services : Treats common teen mental health issues like anxiety, depression, and PTSD through a team of therapists, psychologists, and psychiatrists. Louisville Grace Psychological Services : Provides child therapy and psychology for anxiety, depression, and trauma using evidence-based practices like Cognitive Behavioral Therapy (CBT) and Exposure and Response Prevention (ERP). Psychology Today Directory : Lists numerous private practice psychiatrists in Louisville specializing in adolescent medication management for ADHD, anxiety, and depression.",
+                  "markdown": "- **[UofL Health – Peace Hospital](https://uoflhealth.org/services/mental-and-behavioral-health/):** Offers mental and behavioral health services for children and adolescents, including a no-charge assessment for depression symptoms, psychiatric services, and therapy.[](https://uoflhealth.org/services/mental-and-behavioral-health/) [[1]](https://uoflhealth.org/services/mental-and-behavioral-health/)\n- **The Brook Hospital – KMI:** Provides a [structured Adolescent Psychiatric Inpatient Program](https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/) for teens aged 13–17, focusing on depression, anxiety, trauma, and mood disorders, featuring 24-hour care, psychiatric evaluation, and crisis stabilization.[](https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/) [[1]](https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/)\n- **[Norton Healthcare Behavioral Medicine Services](https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/):** Treats common teen mental health issues like anxiety, depression, and PTSD through a team of therapists, psychologists, and psychiatrists.[](https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/) [[1]](https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/)\n- **[Louisville Grace Psychological Services](https://louisvillegracepsychological.com/child-therapist-louisville-ky/):** Provides child therapy and psychology for anxiety, depression, and trauma using evidence-based practices like Cognitive Behavioral Therapy (CBT) and Exposure and Response Prevention (ERP).[](https://louisvillegracepsychological.com/child-therapist-louisville-ky/) [[1]](https://louisvillegracepsychological.com/child-therapist-louisville-ky/)[[2]](https://louisvillegracepsychological.com/teen-therapy-louisville/)[[3]](https://louisvillegracepsychological.com/erp-therapy-ocd-louisville/)[[4]](https://louisvillegracepsychological.com/complex-ptsd-understanding-the-nuances-of-chronic-trauma/)\n- **[Psychology Today Directory](https://www.psychologytoday.com/us/psychiatrists/ky/louisville?category=adolescents-teenagers-14-to-19):** Lists numerous private practice psychiatrists in Louisville specializing in adolescent medication management for ADHD, anxiety, and depression.[](https://www.psychologytoday.com/us/psychiatrists/ky/louisville?category=adolescents-teenagers-14-to-19) [[1]](https://www.psychologytoday.com/us/psychiatrists/ky/louisville?category=adolescents-teenagers-14-to-19)[[2]](https://www.psychologytoday.com/us/psychiatrists/co/louisville)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "UofL Health – Peace Hospital",
+                      "description": null,
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/",
+                      "domain": "uoflhealth.org"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "structured Adolescent Psychiatric Inpatient Program",
+                      "description": null,
+                      "url": "https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/",
+                      "domain": "thebrookhospitals.com"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Norton Healthcare Behavioral Medicine Services",
+                      "description": null,
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/",
+                      "domain": "nortonhealthcare.com"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Louisville Grace Psychological Services",
+                      "description": null,
+                      "url": "https://louisvillegracepsychological.com/child-therapist-louisville-ky/",
+                      "domain": "louisvillegracepsychological.com"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Psychology Today Directory",
+                      "description": null,
+                      "url": "https://www.psychologytoday.com/us/psychiatrists/ky/louisville?category=adolescents-teenagers-14-to-19",
+                      "domain": "www.psychologytoday.com"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "UofL Health",
+                      "domain": "uoflhealth.org",
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/",
+                      "title": "Mental and Behavioral Health | Louisville KY",
+                      "text": "We're Here to Help. If you or someone you love is experiencing symptoms of depression, please contact Peace Hospital for a no-char..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "The Brook Hospitals",
+                      "domain": "thebrookhospitals.com",
+                      "url": "https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/",
+                      "title": "Teen Inpatient Psychiatric Louisville KY - The Brook Hospitals",
+                      "text": "Teen Inpatient Psychiatric Louisville KY | The Brook Hospitals. Adolescent Psychiatric InpatienteSkyCityDEVRK2026-03-18T14:40:11+0..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Norton Healthcare",
+                      "domain": "nortonhealthcare.com",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/",
+                      "title": "Behavioral Medicine Services | Norton Healthcare Louisville, Ky.",
+                      "text": "Our fully integrated team of therapists, psychologists, psychiatrists, addiction medicine specialists and licensed clinical social..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Grace Psychological Services",
+                      "domain": "louisvillegracepsychological.com",
+                      "url": "https://louisvillegracepsychological.com/child-therapist-louisville-ky/",
+                      "title": "Child Therapist and Psychologists in Louisville, KY",
+                      "text": "Anxiety: Affecting 7.1% of children, anxiety can cause excessive worry or fear of school. Our kid therapists use CBT and play ther..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Grace Psychological Services",
+                      "domain": "louisvillegracepsychological.com",
+                      "url": "https://louisvillegracepsychological.com/teen-therapy-louisville/",
+                      "title": "Teen Therapy in Louisville, KY | Expert Counseling for Teens",
+                      "text": "At Grace Psychological Services, our dedicated teen therapists and psychologists in Louisville, KY, empower adolescents aged 13–17..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "louisvillegracepsychological.com",
+                      "domain": "louisvillegracepsychological.com",
+                      "url": "https://louisvillegracepsychological.com/erp-therapy-ocd-louisville/",
+                      "title": "ERP Therapy for OCD in Louisville | Expert OCD Treatment",
+                      "text": "Schedule with a Louisville ERP Therapist At Grace Psychological Services, we believe you deserve to live free from the grip of OCD..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "louisvillegracepsychological.com",
+                      "domain": "louisvillegracepsychological.com",
+                      "url": "https://louisvillegracepsychological.com/complex-ptsd-understanding-the-nuances-of-chronic-trauma/",
+                      "title": "PTSD and Trauma Therapy in Louisville, Kentucky",
+                      "text": "At Grace Psychological Services in Louisville, KY, we offer an opportunity to express your challenges, establish goals, and make p..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Psychology Today",
+                      "domain": "www.psychologytoday.com",
+                      "url": "https://www.psychologytoday.com/us/psychiatrists/ky/louisville?category=adolescents-teenagers-14-to-19",
+                      "title": "Find Teen Psychiatrists in Louisville, KY - Psychology Today",
+                      "text": "She prioritizes shared decision-making and works closely with patients and families to ensure they feel informed and supported thr..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Psychology Today",
+                      "domain": "www.psychologytoday.com",
+                      "url": "https://www.psychologytoday.com/us/psychiatrists/co/louisville",
+                      "title": "Psychiatrists and Psychiatric Nurses in Louisville, CO",
+                      "text": "How can I find a psychiatrist in Louisville? The Psychology Today Directory enables users to search specifically for psychiatrists..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Key Treatment Approaches Offered in Louisville:",
+                  "markdown": "**Key Treatment Approaches Offered in Louisville:**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Inpatient Programs: For severe, immediate crises (e.g., The Brook). Outpatient Therapy/Medication Management: For ongoing care (e.g., Norton Healthcare, private practitioners). Trauma/Anxiety Specific: CBT, play therapy, and ERP are frequently used by local child psychologists.",
+                  "markdown": "- **Inpatient Programs:** For severe, immediate crises (e.g., The Brook).\n- **Outpatient Therapy/Medication Management:** For ongoing care (e.g., Norton Healthcare, private practitioners).\n- **Trauma/Anxiety Specific:** CBT, play therapy, and ERP are frequently used by local child psychologists.[](https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/) [[1]](https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/)[[2]](https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/)[[3]](https://louisvillegracepsychological.com/child-therapist-louisville-ky/)[[4]](https://missionprephealthcare.com/blog/virginia-adolescent-mental-health-facilities-options-how-to-choose-the-right-one/)[[5]](https://basepointacademy.com/locations/dallas/balch-springs/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "The Brook Hospitals",
+                      "domain": "thebrookhospitals.com",
+                      "url": "https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/",
+                      "title": "Teen Inpatient Psychiatric Louisville KY - The Brook Hospitals",
+                      "text": "Teen Inpatient Psychiatric Louisville KY | The Brook Hospitals. Adolescent Psychiatric InpatienteSkyCityDEVRK2026-03-18T14:40:11+0..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Norton Healthcare",
+                      "domain": "nortonhealthcare.com",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/",
+                      "title": "Behavioral Medicine Services | Norton Healthcare Louisville, Ky.",
+                      "text": "Our fully integrated team of therapists, psychologists, psychiatrists, addiction medicine specialists and licensed clinical social..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Grace Psychological Services",
+                      "domain": "louisvillegracepsychological.com",
+                      "url": "https://louisvillegracepsychological.com/child-therapist-louisville-ky/",
+                      "title": "Child Therapist and Psychologists in Louisville, KY",
+                      "text": "Anxiety: Affecting 7.1% of children, anxiety can cause excessive worry or fear of school. Our kid therapists use CBT and play ther..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Mission Prep Healthcare",
+                      "domain": "missionprephealthcare.com",
+                      "url": "https://missionprephealthcare.com/blog/virginia-adolescent-mental-health-facilities-options-how-to-choose-the-right-one/",
+                      "title": "Adolescent Residential Treatment Centers in Virginia: Guide",
+                      "text": "Inpatient Treatment Centers Inpatient treatment represents the highest level of care for adolescents experiencing acute mental hea..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "BasePoint Academy",
+                      "domain": "basepointacademy.com",
+                      "url": "https://basepointacademy.com/locations/dallas/balch-springs/",
+                      "title": "Teen Mental Health Treatment Programs Near Balch Springs, Texas",
+                      "text": "Outpatient teen mental health services involve evidence-based treatment for mental health disorders like anxiety, depression, PTSD..."
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "UofL Health",
+                  "domain": "uoflhealth.org",
+                  "url": "https://uoflhealth.org/services/mental-and-behavioral-health/",
+                  "title": "Mental and Behavioral Health | Louisville KY",
+                  "text": "We're Here to Help. If you or someone you love is experiencing symptoms of depression, please contact Peace Hospital for a no-char..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "The Brook Hospitals",
+                  "domain": "thebrookhospitals.com",
+                  "url": "https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/",
+                  "title": "Teen Inpatient Psychiatric Louisville KY - The Brook Hospitals",
+                  "text": "Teen Inpatient Psychiatric Louisville KY | The Brook Hospitals. Adolescent Psychiatric InpatienteSkyCityDEVRK2026-03-18T14:40:11+0..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Norton Healthcare",
+                  "domain": "nortonhealthcare.com",
+                  "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/",
+                  "title": "Behavioral Medicine Services | Norton Healthcare Louisville, Ky.",
+                  "text": "Our fully integrated team of therapists, psychologists, psychiatrists, addiction medicine specialists and licensed clinical social..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Psychology Today",
+                  "domain": "www.psychologytoday.com",
+                  "url": "https://www.psychologytoday.com/us/psychiatrists/ky/louisville?category=adolescents-teenagers-14-to-19",
+                  "title": "Find Teen Psychiatrists in Louisville, KY - Psychology Today",
+                  "text": "She prioritizes shared decision-making and works closely with patients and families to ensure they feel informed and supported thr..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Grace Psychological Services",
+                  "domain": "louisvillegracepsychological.com",
+                  "url": "https://louisvillegracepsychological.com/child-therapist-louisville-ky/",
+                  "title": "Child Therapist and Psychologists in Louisville, KY",
+                  "text": "Anxiety: Affecting 7.1% of children, anxiety can cause excessive worry or fear of school. Our kid therapists use CBT and play ther..."
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

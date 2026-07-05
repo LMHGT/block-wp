@@ -1,0 +1,227 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "24.7149 sec.",
+  "cost": 0.071863,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060038-9766-0612-0000-4f043bb734dc",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "24.7074 sec.",
+      "cost": 0.071863,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "claude",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "claude",
+        "user_prompt": "Where can someone get mental health case management in Louisville, KY?",
+        "model_name": "claude-sonnet-4-6",
+        "web_search": true,
+        "max_output_tokens": 1024,
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response claude Where can someone get mental health case management in Louisville, KY?"
+      },
+      "result": [
+        {
+          "model_name": "claude-sonnet-4-6",
+          "input_tokens": 15001,
+          "output_tokens": 1084,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.071263,
+          "datetime": "2026-07-06 00:38:58 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here is a rundown of local providers offering **mental health case management** in Louisville, KY:\n\n---\n\n### 1. 🏥 Louisville Mental Health Group\n**Website:** [louisvillementalhealth.org/case-management](https://louisvillementalhealth.org/case-management/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Their case management services go beyond traditional therapy to help you access essential resources and achieve stability. They assist with housing, employment, medical care, transportation, and other community-based services, and their case managers act as advocates and coordinators.",
+                  "annotations": [
+                    {
+                      "title": "Case Management – Louisville Mental Health Group",
+                      "url": "https://louisvillementalhealth.org/case-management/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They accept most commercial insurances, all Medicaid plans, and private pay.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Clinic In Louisville | Louisville Mental Health Group",
+                      "url": "https://louisvillementalhealth.org/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 2. 🏥 Step By Step Family Services\n**Address:** 2900 W Broadway St, Suite 015, Louisville, KY 40211\n**Website:** [stepbystepfamilyservices.org](https://stepbystepfamilyservices.org/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Home and community-based targeted case management services consist of comprehensive, individualized, and strength-based behavioral treatment plans based upon collaborative assessed needs of the client and family.",
+                  "annotations": [
+                    {
+                      "title": "Step By Step Family Services - Mental Health, Case Management",
+                      "url": "https://stepbystepfamilyservices.org/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Services may be covered in full or in part by health insurance, Medicaid, or an Employee Assistance Plan (EAP), with a private pay fee schedule for the uninsured based on income.",
+                  "annotations": [
+                    {
+                      "title": "Step By Step Family Services - Mental Health, Case Management",
+                      "url": "https://stepbystepfamilyservices.org/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 3. 🏥 Best Life Mental Health Services, LLC\n**Website:** [bestlifelouisville.com/case-management](https://www.bestlifelouisville.com/case-management/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "The purpose of case management for mental health is to make it easier for a person or family to determine what services are available to them and how to take advantage of them — and at Best Life Louisville, a Targeted Case Manager will help you find and use those resources.",
+                  "annotations": [
+                    {
+                      "title": "Targeted Case Management - Best Life Mental Health Services, LLC",
+                      "url": "https://www.bestlifelouisville.com/case-management/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "This includes finding and connecting with community support associates, therapeutic groups, and occupational therapy, as well as accessing community services including health and dental care, housing assistance, and SNAP benefits.",
+                  "annotations": [
+                    {
+                      "title": "Targeted Case Management - Best Life Mental Health Services, LLC",
+                      "url": "https://www.bestlifelouisville.com/case-management/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 4. 🏥 Kentucky Counseling Center (KCC)\n**Website:** [kentuckycounselingcenter.com](https://kentuckycounselingcenter.com/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Kentucky's largest counseling center serves Louisville, Lexington, and the entire state with therapy, psychiatry, and case management.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Counseling and Psychiatry | Kentucky Counseling Center",
+                      "url": "https://kentuckycounselingcenter.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Case managers are mental health professionals trained to connect you with financial, educational, employment, and health resources within your community — though you must have a qualifying diagnosis and Medicaid benefits for program eligibility.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Counseling and Psychiatry | Kentucky Counseling Center",
+                      "url": "https://kentuckycounselingcenter.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 5. 🏥 Family Health Centers\n**Multiple Locations** (Portland Ave, E Broadway, Southside Dr, Fairdale, Taylor Blvd, Muhammad Ali Blvd, W Market St)\n**Website:** [fhclouisville.org](https://www.fhclouisville.org/health_services/counseling-services/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Family Health Centers offers case management as part of their counseling services, with counselors working with you and your medical provider to evaluate your mental health needs and develop a plan of action.",
+                  "annotations": [
+                    {
+                      "title": "Counseling Services - Family Health Centers",
+                      "url": "https://www.fhclouisville.org/health_services/counseling-services/"
+                    },
+                    {
+                      "title": "Counseling Services - Family Health Centers",
+                      "url": "https://www.fhclouisville.org/health_services/counseling-services/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 6. 🏥 Kentucky Mental Health Care\n**Website:** [kentuckymentalhealth.com](https://kentuckymentalhealth.com/kentucky-case-management/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Case managers coordinate communication between therapists, doctors, social workers, legal counselors, and others to make sure medical, social, and therapeutic needs are met — with services available both in-person and remotely.",
+                  "annotations": [
+                    {
+                      "title": "Case management – Kentucky Mental Health Care",
+                      "url": "https://kentuckymentalhealth.com/kentucky-case-management/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 7. 🏥 Baptist Health Louisville – Behavioral Health\n**Address:** 4000 Kresge Way, Louisville, KY 40207\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Baptist Health Louisville's Behavioral Health",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Facilities in Louisville, KY | MentalHealthFacilities.net",
+                      "url": "https://www.mentalhealthfacilities.net/clinics/kentucky/louisville.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "mental health case management Louisville KY"
+          ]
+        }
+      ]
+    }
+  ]
+}

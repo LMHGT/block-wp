@@ -1,0 +1,492 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.7208 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-fb4e12aa6094",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.6306 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "maps",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "maps",
+        "keyword": "case management Louisville KY",
+        "location_coordinate": "38.2526647,-85.7584557,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid maps downtown-louisville case management Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "case management Louisville KY",
+          "type": "maps",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://google.com/maps/search/case+management+Louisville+KY/@38.2526647,-85.7584557,17z?hl=en&gl=US&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-07-05 21:36:33 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "maps_search"
+          ],
+          "se_results_count": 0,
+          "items_count": 4,
+          "items": [
+            {
+              "type": "maps_search",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "domain": "www.cchamerica.com",
+              "title": "Credit Clearing House-America",
+              "original_title": null,
+              "url": "http://www.cchamerica.com/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/114404868920651524245",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 1.6,
+                "votes_count": 40,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 34,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 6
+              },
+              "snippet": "120 E Market St, Louisville, KY 40202",
+              "address": "120 E Market St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "120 E Market St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJAZGUXLtyaYgR2Gs21LqjHYs",
+              "phone": "+1502-583-1666",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=09LHyipclA1z_7a9LZoXvg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=172.30252&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Credit reporting agency",
+              "additional_categories": [
+                "Store"
+              ],
+              "category_ids": [
+                "credit_reporting_agency",
+                "store"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886972bb5c949101:0x8b1da3bad4366bd8",
+              "cid": "10024348368416173016",
+              "latitude": 38.2543243,
+              "longitude": -85.75103899999999,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "domain": "www.voamid.org",
+              "title": "VOA | Volunteers of America Mid-States",
+              "original_title": null,
+              "url": "https://www.voamid.org/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/108693375733787862405",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.2,
+                "votes_count": 31,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 5,
+                "2": 1,
+                "3": 0,
+                "4": 1,
+                "5": 24
+              },
+              "snippet": "570 S 4th St, Louisville, KY 40202",
+              "address": "570 S 4th St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "570 S 4th St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJH2Lhvq9yaYgR4wwQA__n-tc",
+              "phone": "+1502-636-0771",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGA76k1cJNQvHxx0Q4I26uDRmufd-n1GkSyVH2iSRJwUwhjV4tilO5SzIqo-0zM9oIJp2dSOvu9yXvtFLKwM9CwmX0j_QelecQmHWcbGBmtZBq6IV34SOSlMondwBAiiFdY3T7z=w408-h270-k-no",
+              "total_photos": 12,
+              "category": "Non-profit organization",
+              "additional_categories": null,
+              "category_ids": [
+                "non_profit_organization"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886972afbee1621f:0xd7fae7ff03100ce3",
+              "cid": "15563006544786230499",
+              "latitude": 38.2491823,
+              "longitude": -85.7579902,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"They show that they really care and are here to help you!\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "domain": null,
+              "title": "Crisis & Information Center",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 2,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 2
+              },
+              "snippet": "101 W Muhammad Ali Blvd, Louisville, KY 40202",
+              "address": "101 W Muhammad Ali Blvd, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "101 W Muhammad Ali Blvd",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ04vKdrpyaYgRV4XytQW5wNc",
+              "phone": "+1502-589-4313",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=DF91g7_d7S8PAsX5-HbMig&cb_client=search.gws-prod.gps&w=408&h=240&yaw=9.697236&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "County government office",
+              "additional_categories": null,
+              "category_ids": [
+                "county_government_office"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972ba76ca8bd3:0xd7c0b905b5f28557",
+              "cid": "15546629347861497175",
+              "latitude": 38.2508546,
+              "longitude": -85.7529934,
+              "is_claimed": false,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"Thank you 🙏 for having this free service super helpful\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "domain": "louisvilleky.gov",
+              "title": "Codes & Regulations",
+              "original_title": null,
+              "url": "http://louisvilleky.gov/",
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 3.1,
+                "votes_count": 16,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 7,
+                "2": 0,
+                "3": 0,
+                "4": 2,
+                "5": 7
+              },
+              "snippet": "444 S 5th St Ste 200, Louisville, KY 40202",
+              "address": "444 S 5th St Ste 200, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "444 S 5th St Ste 200",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJIemcmKVyaYgRf61jSt9UFLQ",
+              "phone": "+1502-574-2508",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=_Asn5GY6fFEoC3WNQvKMHg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=276.6646&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "City government office",
+              "additional_categories": null,
+              "category_ids": [
+                "city_government_office"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886972a5989ce921:0xb41454df4a63ad7f",
+              "cid": "12976089744363728255",
+              "latitude": 38.2520351,
+              "longitude": -85.759417,
+              "is_claimed": false,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"These people are wonderful.\""
+                }
+              ],
+              "is_directory_item": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

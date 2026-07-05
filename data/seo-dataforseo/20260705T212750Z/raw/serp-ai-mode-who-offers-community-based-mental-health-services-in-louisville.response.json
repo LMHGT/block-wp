@@ -1,0 +1,357 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "6.4638 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060028-9766-0139-0000-2ddef7f87862",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "6.3738 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "Who offers community based mental health services in Louisville?",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode Who offers community based mental health services in Louisville?",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Who offers community based mental health services in Louisville?",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=Who%20offers%20community%20based%20mental%20health%20services%20in%20Louisville%3F&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:28:25 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[2]/div[1]/div[3]",
+              "markdown": "Several organizations offer community-based mental health services in Louisville, KY, ranging from comprehensive community health centers to specialized providers and support organizations.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n\n**Key Community Mental Health Providers in Louisville** \n\n- **[Seven Counties Services](https://sevencounties.org/)** : As Kentucky's leading Community Mental Health Center (CMHC), they provide services for mental health, addiction recovery, and developmental disabilities throughout the Louisville metro area.[](https://sevencounties.org/) [[1]](https://sevencounties.org/)\n- **[UofL Health – Peace Hospital](https://uoflhealth.org/services/mental-and-behavioral-health/)** : Offers comprehensive behavioral health services, including adult outpatient care, partial hospitalization programs (PHP), and specialized inpatient services for children and adolescents.[](https://uoflhealth.org/services/mental-and-behavioral-health/) [[1]](https://uoflhealth.org/services/mental-and-behavioral-health/)\n- **[Park DuValle Community Health Center](https://pdchc.org/)** : Offers comprehensive medical and mental health services.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://pdchc.org/adult-health/)[[3]](https://pdchc.org/behavioral/)\n- **[CompSer Health Resources Inc](https://www.compservhealth.com/)** : Provides individual and group therapy, including Cognitive Behavioral Therapy (CBT).[[1]](https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy)[[2]](https://uoflhealth.org/services/mental-and-behavioral-health/)\n- **Spalding University Collective Care Center** : Provides community-based counseling services.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n\n**Specialized & Support Services** \n\n- **[Mental Health Lou Wellness Hub](https://mentalhealthlou.com/)** : A central hub for finding local mental health resources.\n- **[NAMI Louisville](https://namilouisville.org/)** : Provides support groups, education, and advocacy for individuals and families affected by mental illness.\n- **Louisville Recovery Community Connection** : Offers support for addiction recovery.\n- **The Black Counseling & Consulting Collective** : Provides counseling services.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://www.mentalhealthlou.com/about)[[3]](https://1si.org/nonprofit-spotlight-nami-louisville/)[[4]](https://namilouisville.org/programs-%26-classes)[[5]](https://www.instagram.com/namilouisville/)\n\n**Crisis & Urgent Care Services** \n\n- **[988 Suicide & Crisis Lifeline](https://988lifeline.org/)** : Dial 988 for immediate mental health crisis support.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n- **Seven Counties 24/7 Crisis Lines**:\n\t- Adult Crisis Line: 502-589-4313\n\t- Child Crisis Line: 502-589-8070\n\t- Addiction Help Line: 502-583-3951[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n- **[Crisis Text Line](https://www.crisistextline.org/)** : Text \"LOU\" to 741-741.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n\nFor a full directory of resources, you can also consult the [Metro United Way's Community Resource Directory](https://www.metrounitedway.org/).[[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n\nWould you like information on **specialized services** (e.g., child, addiction, or LGBTQ+ support) or **information on insurance coverage** for these providers?",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Several organizations offer community-based mental health services in Louisville, KY, ranging from comprehensive community health centers to specialized providers and support organizations. LouisvilleKY.gov",
+                  "markdown": "Several organizations offer community-based mental health services in Louisville, KY, ranging from comprehensive community health centers to specialized providers and support organizations.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": "Key Community Mental Health Providers in Louisville",
+                  "text": "Seven Counties Services : As Kentucky's leading Community Mental Health Center (CMHC), they provide services for mental health, addiction recovery, and developmental disabilities throughout the Louisville metro area. UofL Health – Peace Hospital : Offers comprehensive behavioral health services, including adult outpatient care, partial hospitalization programs (PHP), and specialized inpatient services for children and adolescents. Park DuValle Community Health Center : Offers comprehensive medical and mental health services. CompSer Health Resources Inc : Provides individual and group therapy, including Cognitive Behavioral Therapy (CBT). Spalding University Collective Care Center : Provides community-based counseling services. Spalding University Collective Care Center",
+                  "markdown": "- **[Seven Counties Services](https://sevencounties.org/)** : As Kentucky's leading Community Mental Health Center (CMHC), they provide services for mental health, addiction recovery, and developmental disabilities throughout the Louisville metro area.[](https://sevencounties.org/) [[1]](https://sevencounties.org/)\n- **[UofL Health – Peace Hospital](https://uoflhealth.org/services/mental-and-behavioral-health/)** : Offers comprehensive behavioral health services, including adult outpatient care, partial hospitalization programs (PHP), and specialized inpatient services for children and adolescents.[](https://uoflhealth.org/services/mental-and-behavioral-health/) [[1]](https://uoflhealth.org/services/mental-and-behavioral-health/)\n- **[Park DuValle Community Health Center](https://pdchc.org/)** : Offers comprehensive medical and mental health services.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://pdchc.org/adult-health/)[[3]](https://pdchc.org/behavioral/)\n- **[CompSer Health Resources Inc](https://www.compservhealth.com/)** : Provides individual and group therapy, including Cognitive Behavioral Therapy (CBT).[[1]](https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy)[[2]](https://uoflhealth.org/services/mental-and-behavioral-health/)\n- **Spalding University Collective Care Center** : Provides community-based counseling services.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Seven Counties Services",
+                      "description": null,
+                      "url": "https://sevencounties.org/",
+                      "domain": "sevencounties.org"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "UofL Health – Peace Hospital",
+                      "description": null,
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/",
+                      "domain": "uoflhealth.org"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Park DuValle Community Health Center",
+                      "description": null,
+                      "url": "https://pdchc.org/",
+                      "domain": "pdchc.org"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "CompSer Health Resources Inc",
+                      "description": null,
+                      "url": "https://www.compservhealth.com/",
+                      "domain": "www.compservhealth.com"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Seven Counties Services",
+                      "domain": "sevencounties.org",
+                      "url": "https://sevencounties.org/",
+                      "title": "Seven Counties Services | Mental Health, Addiction Recovery ...",
+                      "text": "As Kentucky's leading Community Mental Health Center and behavioral health services provider, Seven Counties Services proudly serv..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "UofL Health",
+                      "domain": "uoflhealth.org",
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/",
+                      "title": "Mental and Behavioral Health | Louisville KY",
+                      "text": "Behavioral Health. Emergency Psychiatric Services. Acute Crisis Stabilization. Medical Behavioral Health. Substance Abuse. Addicti..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Park DuValle Community Health Center",
+                      "domain": "pdchc.org",
+                      "url": "https://pdchc.org/adult-health/",
+                      "title": "Adult Health",
+                      "text": "Adult Health Your complete health matters at Park DuValle! At Park DuValle Community Health Center ( Park DuValle Community Health..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Park DuValle Community Health Center",
+                      "domain": "pdchc.org",
+                      "url": "https://pdchc.org/behavioral/",
+                      "title": "Behavioral Health",
+                      "text": "Behavioral Health Your mental health matters at Park DuValle! Our behavioral health services provide support for a range of mental..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "compservhealth.com",
+                      "domain": "www.compservhealth.com",
+                      "url": "https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy",
+                      "title": "Psychotherapy",
+                      "text": "CompSer Health Resources Inc. offers both individual and group therapy options, including Cognitive Behavioral Therapy (CBT). Meet..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": "Specialized & Support Services",
+                  "text": "Mental Health Lou Wellness Hub : A central hub for finding local mental health resources. NAMI Louisville : Provides support groups, education, and advocacy for individuals and families affected by mental illness. Louisville Recovery Community Connection : Offers support for addiction recovery. Louisville Recovery Community Connection The Black Counseling & Consulting Collective : Provides counseling services. The Black Counseling & Consulting Collective",
+                  "markdown": "- **[Mental Health Lou Wellness Hub](https://mentalhealthlou.com/)** : A central hub for finding local mental health resources.\n- **[NAMI Louisville](https://namilouisville.org/)** : Provides support groups, education, and advocacy for individuals and families affected by mental illness.\n- **Louisville Recovery Community Connection** : Offers support for addiction recovery.\n- **The Black Counseling & Consulting Collective** : Provides counseling services.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://www.mentalhealthlou.com/about)[[3]](https://1si.org/nonprofit-spotlight-nami-louisville/)[[4]](https://namilouisville.org/programs-%26-classes)[[5]](https://www.instagram.com/namilouisville/)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Mental Health Lou Wellness Hub",
+                      "description": null,
+                      "url": "https://mentalhealthlou.com/",
+                      "domain": "mentalhealthlou.com"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "NAMI Louisville",
+                      "description": null,
+                      "url": "https://namilouisville.org/",
+                      "domain": "namilouisville.org"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Mental Health Lou",
+                      "domain": "www.mentalhealthlou.com",
+                      "url": "https://www.mentalhealthlou.com/about",
+                      "title": "Free Mental Wellness Resources & Events in Louisville — Mental Health Lou – Louisville, KY",
+                      "text": "In response, Mental Health Lou ( Mental Health Lou and You ) evolved into a wellness hub—a central resource designed to connect in..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "1SI",
+                      "domain": "1si.org",
+                      "url": "https://1si.org/nonprofit-spotlight-nami-louisville/",
+                      "title": "Nonprofit Spotlight | NAMI Louisville - 1SI",
+                      "text": "NAMI Louisville 708 Magazine St., Suite 144 Louisville, KY 40208 PH: 502- 588-2008 namilouisville.org Our Mission: To strengthen f..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "NAMI Louisville",
+                      "domain": "namilouisville.org",
+                      "url": "https://namilouisville.org/programs-%26-classes",
+                      "title": "Programs & Classes",
+                      "text": "Explore NAMI Louisville's mental health programs offering educational resources and support for individuals and families affected ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Instagram",
+                      "domain": "www.instagram.com",
+                      "url": "https://www.instagram.com/namilouisville/",
+                      "title": "NAMI Louisville (@namilouisville) · Louisville, KY",
+                      "text": "NAMI Louisville's mission is to strengthen families and individuals affected by mental illness through education, support, and adv..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": "Crisis & Urgent Care Services",
+                  "text": "988 Suicide & Crisis Lifeline : Dial 988 for immediate mental health crisis support. Seven Counties 24/7 Crisis Lines : Seven Counties 24/7 Crisis Lines Adult Crisis Line: 502-589-4313 Child Crisis Line: 502-589-8070 Addiction Help Line: 502-583-3951 Crisis Text Line : Text \"LOU\" to 741-741.",
+                  "markdown": "- **[988 Suicide & Crisis Lifeline](https://988lifeline.org/)** : Dial 988 for immediate mental health crisis support.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n- **Seven Counties 24/7 Crisis Lines**:\n\t- Adult Crisis Line: 502-589-4313\n\t- Child Crisis Line: 502-589-8070\n\t- Addiction Help Line: 502-583-3951[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n- **[Crisis Text Line](https://www.crisistextline.org/)** : Text \"LOU\" to 741-741.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "988 Suicide & Crisis Lifeline",
+                      "description": null,
+                      "url": "https://988lifeline.org/",
+                      "domain": "988lifeline.org"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Crisis Text Line",
+                      "description": null,
+                      "url": "https://www.crisistextline.org/",
+                      "domain": "www.crisistextline.org"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "For a full directory of resources, you can also consult the Metro United Way's Community Resource Directory.",
+                  "markdown": "For a full directory of resources, you can also consult the [Metro United Way's Community Resource Directory](https://www.metrounitedway.org/).[[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Metro United Way's Community Resource Directory",
+                      "description": null,
+                      "url": "https://www.metrounitedway.org/",
+                      "domain": "www.metrounitedway.org"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "LouisvilleKY.gov",
+                  "domain": "louisvilleky.gov",
+                  "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                  "title": "Community Mental Health Services - LouisvilleKY.gov",
+                  "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Seven Counties Services",
+                  "domain": "sevencounties.org",
+                  "url": "https://sevencounties.org/",
+                  "title": "Seven Counties Services | Mental Health, Addiction Recovery ...",
+                  "text": "As Kentucky's leading Community Mental Health Center and behavioral health services provider, Seven Counties Services proudly serv..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "UofL Health",
+                  "domain": "uoflhealth.org",
+                  "url": "https://uoflhealth.org/services/mental-and-behavioral-health/",
+                  "title": "Mental and Behavioral Health | Louisville KY",
+                  "text": "Behavioral Health. Emergency Psychiatric Services. Acute Crisis Stabilization. Medical Behavioral Health. Substance Abuse. Addicti..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "compservhealth.com",
+                  "domain": "www.compservhealth.com",
+                  "url": "https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy",
+                  "title": "Psychotherapy",
+                  "text": "CompSer Health Resources Inc. offers both individual and group therapy options, including Cognitive Behavioral Therapy (CBT). Meet..."
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

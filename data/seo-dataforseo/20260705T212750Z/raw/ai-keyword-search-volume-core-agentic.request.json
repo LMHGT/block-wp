@@ -1,0 +1,42 @@
+{
+  "name": "ai-keyword-search-volume-core-agentic",
+  "method": "POST",
+  "path": "/v3/ai_optimization/ai_keyword_data/keywords_search_volume/live",
+  "body": [
+    {
+      "keywords": [
+        "who provides therapy in Louisville KY",
+        "best therapist for anxiety in Louisville KY",
+        "where to find family therapy in Louisville KY",
+        "find child therapy near me Louisville",
+        "mental health services for families in Louisville",
+        "who offers case management in Louisville KY",
+        "community based mental health services near me",
+        "in home therapy Louisville KY",
+        "local counseling practice Louisville Kentucky",
+        "therapy provider accepting new clients Louisville",
+        "Louisville Mental Health Group",
+        "louisvillementalhealth.org",
+        "mental health services Louisville KY",
+        "therapy Louisville KY",
+        "therapist Louisville KY",
+        "counseling Louisville KY",
+        "individual therapy Louisville KY",
+        "family therapy Louisville KY",
+        "child therapy Louisville KY",
+        "group therapy Louisville KY",
+        "case management Louisville KY",
+        "mental health case management Louisville KY",
+        "community based mental health services Louisville KY",
+        "trauma therapy Louisville KY",
+        "anxiety therapy Louisville KY",
+        "depression therapy Louisville KY",
+        "play therapy Louisville KY"
+      ],
+      "location_code": 2840,
+      "language_code": "en",
+      "tag": "lmhg ai keyword search volume core agentic"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:25.664136+00:00"
+}

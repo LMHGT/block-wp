@@ -1,0 +1,57 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "2.0519 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-acde5ba8c714",
+      "status_code": 40102,
+      "status_message": "No Search Results.",
+      "time": "1.9442 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "local_finder",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "local_finder",
+        "keyword": "group therapy Louisville KY",
+        "location_coordinate": "38.2001000,-85.8227000,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid local_finder shively-southwest group therapy Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "group therapy Louisville KY",
+          "type": "local_finder",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=group+therapy+Louisville+KY&oq=group+therapy+Louisville+KY&hl=en&gl=US&tbm=lcl&fll=38.2001%2C-85.8227&fspn=0.002837138572023505%2C0.006474852561950684&fz=18&sll=38.2001%2C-85.8227&sspn=0.002837138572023505%2C0.006474852561950684&sz=18",
+          "datetime": "2026-07-05 21:37:00 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": null,
+          "se_results_count": 0,
+          "items_count": 0,
+          "items": null
+        }
+      ]
+    }
+  ]
+}

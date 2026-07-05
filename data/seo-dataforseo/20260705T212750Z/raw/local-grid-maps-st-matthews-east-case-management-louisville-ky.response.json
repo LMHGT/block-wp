@@ -1,0 +1,216 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.8789 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-b62e9effe330",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.7961 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "maps",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "maps",
+        "keyword": "case management Louisville KY",
+        "location_coordinate": "38.2525000,-85.6497000,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid maps st-matthews-east case management Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "case management Louisville KY",
+          "type": "maps",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://google.com/maps/search/case+management+Louisville+KY/@38.2525,-85.6497,17z?hl=en&gl=US&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-07-05 21:36:39 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "maps_search"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "maps_search",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "domain": "www.homeinstead.com",
+              "title": "Home Instead",
+              "original_title": null,
+              "url": "https://www.homeinstead.com/home-care/usa/ky/louisville/269/?utm_source=google&utm_medium=organic&utm_campaign=google_organic_businesslisting_y",
+              "contact_url": "https://www.homeinstead.com/home-care/usa/ky/louisville/269/",
+              "contributor_url": "https://maps.google.com/maps/contrib/115573050824317978138",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.4,
+                "votes_count": 54,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 6,
+                "2": 2,
+                "3": 0,
+                "4": 5,
+                "5": 41
+              },
+              "snippet": "105 S Sherrin Ave, Louisville, KY 40207",
+              "address": "105 S Sherrin Ave, Louisville, KY 40207",
+              "address_info": {
+                "borough": null,
+                "address": "105 S Sherrin Ave",
+                "city": "Louisville",
+                "zip": "40207",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJv-eWjQugaYgRJtUji8WoMgQ",
+              "phone": "+1502-996-5574",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHlNRohP9yqu-C1GNC0MsrYmCY-8fI4Zbxd-CCubJFVInbqiuGncU3wxiCiHcXndzs9l8TPxBl0lIhl9xXWFp7sfw0pDN2eyyAD1BGCk8v4zDq1F8Y5z2RmybJP3vYLDMGIJVRdSglmvrHJ=w408-h314-k-no",
+              "total_photos": 30,
+              "category": "Home health care service",
+              "additional_categories": [
+                "Home help",
+                "Home help service agency",
+                "Hospice",
+                "Aged care"
+              ],
+              "category_ids": [
+                "home_health_care_service",
+                "home_help",
+                "home_help_service_agency",
+                "hospice",
+                "senior_citizens_care_service"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "open"
+              },
+              "feature_id": "0x8869a00b8d96e7bf:0x432a8c58b23d526",
+              "cid": "302489691383649574",
+              "latitude": 38.252040799999996,
+              "longitude": -85.6487748,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"The office staff are very accommodating for the schedule that you choose\""
+                }
+              ],
+              "is_directory_item": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

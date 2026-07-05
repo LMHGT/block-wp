@@ -1,0 +1,232 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "3.6359 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060028-9766-0139-0000-694403777d32",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "3.5714 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "Which Louisville mental health providers offer case management?",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode Which Louisville mental health providers offer case management?",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Which Louisville mental health providers offer case management?",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=Which%20Louisville%20mental%20health%20providers%20offer%20case%20management%3F&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:28:21 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[1]/div[1]/div[3]",
+              "markdown": "Several mental health providers in Louisville offer case management services to assist with coordinating care, accessing resources, and developing treatment plans.[[1]](https://www.bestlifelouisville.com/case-management/)[[2]](https://www.indeed.com/q-case-manager-l-louisville,-ky-jobs.html)\n\n- **[Seven Counties Services](https://sevencounties.org/resources/blog/what-is-case-management/):** Offers comprehensive case management for children, adults, and families, including services for mental health, substance use, and intellectual/developmental disabilities.[](https://sevencounties.org/resources/blog/what-is-case-management/) [[1]](https://sevencounties.org/resources/blog/what-is-case-management/)\n- **[Best Life Counseling & Wellness](https://www.bestlifelouisville.com/case-management/):** Provides Targeted Case Management (TCM) in Louisville, focusing on holistic care, including collaboration with in-house therapists and nurse practitioners.[](https://www.bestlifelouisville.com/case-management/) [[1]](https://www.bestlifelouisville.com/case-management/)\n- **[Kentucky Mental Health Care](https://kentuckymentalhealth.com/kentucky-case-management/):** Offers both in-person and remote case management services to help patients navigate and coordinate care.[](https://kentuckymentalhealth.com/kentucky-case-management/) [[1]](https://kentuckymentalhealth.com/kentucky-case-management/)\n- **[Neighborhood Place](https://www.findhelp.org/care/case-management--louisville-ky):** Provides community-based case management services aimed at helping individuals and families address various needs.[](https://www.findhelp.org/care/case-management--louisville-ky) [[1]](https://www.findhelp.org/care/case-management--louisville-ky)\n- **LifeSpring Health Systems:** Offers case management services, including Assertive Community Treatment (ACT) teams, with locations in the nearby Jeffersonville area.[](https://www.indeed.com/q-case-manager-l-louisville,-ky-jobs.html) [[1]](https://www.indeed.com/q-case-manager-l-louisville,-ky-jobs.html)\n\nTo help you find the best fit, are you looking for **adult or child services** , and do you have a preference for **in-person or telehealth** case management?",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Several mental health providers in Louisville offer case management services to assist with coordinating care, accessing resources, and developing treatment plans.",
+                  "markdown": "Several mental health providers in Louisville offer case management services to assist with coordinating care, accessing resources, and developing treatment plans.[[1]](https://www.bestlifelouisville.com/case-management/)[[2]](https://www.indeed.com/q-case-manager-l-louisville,-ky-jobs.html)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Best Life Mental Health Services, LLC",
+                      "domain": "www.bestlifelouisville.com",
+                      "url": "https://www.bestlifelouisville.com/case-management/",
+                      "title": "Targeted Case Management",
+                      "text": "The role of your Best Life's case manager is to help you make sure your or your loved one's needs are met. You will meet with your..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Indeed",
+                      "domain": "www.indeed.com",
+                      "url": "https://www.indeed.com/q-case-manager-l-louisville,-ky-jobs.html",
+                      "title": "Case Manager jobs in Louisville, KY - Indeed",
+                      "text": "Skip past carousel. Clinical Manager (BCBA) Easily apply. Cultivate Behavioral Health & Education. Louisville, KY 40203. $88,000 -"
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Seven Counties Services : Offers comprehensive case management for children, adults, and families, including services for mental health, substance use, and intellectual/developmental disabilities. Best Life Counseling & Wellness : Provides Targeted Case Management (TCM) in Louisville, focusing on holistic care, including collaboration with in-house therapists and nurse practitioners. Kentucky Mental Health Care : Offers both in-person and remote case management services to help patients navigate and coordinate care. Neighborhood Place : Provides community-based case management services aimed at helping individuals and families address various needs. LifeSpring Health Systems : Offers case management services, including Assertive Community Treatment (ACT) teams, with locations in the nearby Jeffersonville area. LifeSpring Health Systems",
+                  "markdown": "- **[Seven Counties Services](https://sevencounties.org/resources/blog/what-is-case-management/):** Offers comprehensive case management for children, adults, and families, including services for mental health, substance use, and intellectual/developmental disabilities.[](https://sevencounties.org/resources/blog/what-is-case-management/) [[1]](https://sevencounties.org/resources/blog/what-is-case-management/)\n- **[Best Life Counseling & Wellness](https://www.bestlifelouisville.com/case-management/):** Provides Targeted Case Management (TCM) in Louisville, focusing on holistic care, including collaboration with in-house therapists and nurse practitioners.[](https://www.bestlifelouisville.com/case-management/) [[1]](https://www.bestlifelouisville.com/case-management/)\n- **[Kentucky Mental Health Care](https://kentuckymentalhealth.com/kentucky-case-management/):** Offers both in-person and remote case management services to help patients navigate and coordinate care.[](https://kentuckymentalhealth.com/kentucky-case-management/) [[1]](https://kentuckymentalhealth.com/kentucky-case-management/)\n- **[Neighborhood Place](https://www.findhelp.org/care/case-management--louisville-ky):** Provides community-based case management services aimed at helping individuals and families address various needs.[](https://www.findhelp.org/care/case-management--louisville-ky) [[1]](https://www.findhelp.org/care/case-management--louisville-ky)\n- **LifeSpring Health Systems:** Offers case management services, including Assertive Community Treatment (ACT) teams, with locations in the nearby Jeffersonville area.[](https://www.indeed.com/q-case-manager-l-louisville,-ky-jobs.html) [[1]](https://www.indeed.com/q-case-manager-l-louisville,-ky-jobs.html)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Seven Counties Services",
+                      "description": null,
+                      "url": "https://sevencounties.org/resources/blog/what-is-case-management/",
+                      "domain": "sevencounties.org"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Best Life Counseling & Wellness",
+                      "description": null,
+                      "url": "https://www.bestlifelouisville.com/case-management/",
+                      "domain": "www.bestlifelouisville.com"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Kentucky Mental Health Care",
+                      "description": null,
+                      "url": "https://kentuckymentalhealth.com/kentucky-case-management/",
+                      "domain": "kentuckymentalhealth.com"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Neighborhood Place",
+                      "description": null,
+                      "url": "https://www.findhelp.org/care/case-management--louisville-ky",
+                      "domain": "www.findhelp.org"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Seven Counties Services",
+                      "domain": "sevencounties.org",
+                      "url": "https://sevencounties.org/resources/blog/what-is-case-management/",
+                      "title": "What is Case Management? - Seven Counties Services",
+                      "text": "At Seven Counties Services, case managers are available to help you with each of our services. This includes adult and child menta..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Best Life Mental Health Services, LLC",
+                      "domain": "www.bestlifelouisville.com",
+                      "url": "https://www.bestlifelouisville.com/case-management/",
+                      "title": "Targeted Case Management",
+                      "text": "The role of your Best Life's case manager is to help you make sure your or your loved one's needs are met. You will meet with your..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Kentucky Mental Health Care",
+                      "domain": "kentuckymentalhealth.com",
+                      "url": "https://kentuckymentalhealth.com/kentucky-case-management/",
+                      "title": "Case management – Kentucky Mental Health Care",
+                      "text": "Why choose Kentucky Mental Health Care? Kentucky Mental Health care provides in-person and remote case management services consult..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "FindHelp.org",
+                      "domain": "www.findhelp.org",
+                      "url": "https://www.findhelp.org/care/case-management--louisville-ky",
+                      "title": "case management programs in Louisville, ky - FindHelp.org",
+                      "text": "Neighborhood Place provides case management services to individuals in a coordinated, streamlined, and efficient manor. Case manag..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Indeed",
+                      "domain": "www.indeed.com",
+                      "url": "https://www.indeed.com/q-case-manager-l-louisville,-ky-jobs.html",
+                      "title": "Case Manager jobs in Louisville, KY - Indeed",
+                      "text": "Skip past carousel. Clinical Manager (BCBA) Easily apply. Cultivate Behavioral Health & Education. Louisville, KY 40203. $88,000 -"
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Indeed",
+                  "domain": "www.indeed.com",
+                  "url": "https://www.indeed.com/q-case-manager-l-louisville,-ky-jobs.html",
+                  "title": "Case Manager jobs in Louisville, KY - Indeed",
+                  "text": "Skip past carousel. Clinical Manager (BCBA) Easily apply. Cultivate Behavioral Health & Education. Louisville, KY 40203. $88,000 -"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Kentucky Mental Health Care",
+                  "domain": "kentuckymentalhealth.com",
+                  "url": "https://kentuckymentalhealth.com/kentucky-case-management/",
+                  "title": "Case management – Kentucky Mental Health Care",
+                  "text": "Why choose Kentucky Mental Health Care? Kentucky Mental Health care provides in-person and remote case management services consult..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Seven Counties Services",
+                  "domain": "sevencounties.org",
+                  "url": "https://sevencounties.org/resources/blog/what-is-case-management/",
+                  "title": "What is Case Management? - Seven Counties Services",
+                  "text": "At Seven Counties Services, case managers are available to help you with each of our services. This includes adult and child menta..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "FindHelp.org",
+                  "domain": "www.findhelp.org",
+                  "url": "https://www.findhelp.org/care/case-management--louisville-ky",
+                  "title": "case management programs in Louisville, ky - FindHelp.org",
+                  "text": "Neighborhood Place provides case management services to individuals in a coordinated, streamlined, and efficient manor. Case manag..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Best Life Mental Health Services, LLC",
+                  "domain": "www.bestlifelouisville.com",
+                  "url": "https://www.bestlifelouisville.com/case-management/",
+                  "title": "Targeted Case Management",
+                  "text": "The role of your Best Life's case manager is to help you make sure your or your loved one's needs are met. You will meet with your..."
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

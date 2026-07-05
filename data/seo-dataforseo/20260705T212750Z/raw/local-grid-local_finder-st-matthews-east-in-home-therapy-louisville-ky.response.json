@@ -1,0 +1,170 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "1.8515 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-f8be6e07f1dc",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "1.7560 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "local_finder",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "local_finder",
+        "keyword": "in home therapy Louisville KY",
+        "location_coordinate": "38.2525000,-85.6497000,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid local_finder st-matthews-east in home therapy Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "in home therapy Louisville KY",
+          "type": "local_finder",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=in+home+therapy+Louisville+KY&oq=in+home+therapy+Louisville+KY&hl=en&gl=US&tbm=lcl&fll=38.2525%2C-85.6497&fspn=0.0028350955412714688%2C0.006474852561950684&fz=18&sll=38.2525%2C-85.6497&sspn=0.0028350955412714688%2C0.006474852561950684&sz=18",
+          "datetime": "2026-07-05 21:36:41 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "local_pack"
+          ],
+          "se_results_count": 0,
+          "items_count": 5,
+          "items": [
+            {
+              "type": "local_pack",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]",
+              "title": "Derby City Counseling",
+              "description": "119 S Sherrin Ave Ste 230 · (502) 701-2171 \nClosed · Opens 10 AM Mon \n\"comfortable.\" \n",
+              "domain": "derbycitycounseling.com",
+              "phone": "(502) 701-2171",
+              "booking_url": null,
+              "url": "http://derbycitycounseling.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 12,
+                "rating_max": 5
+              },
+              "cid": "13494564945055058624",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]",
+              "title": "Inner Piece Therapeutic Services",
+              "description": "No reviews · Mental health service \n119 S Sherrin Ave Ste 230 · (502) 252-1096 \nClosed · Opens 9 AM Mon \n",
+              "domain": "www.therapyden.com",
+              "phone": "(502) 252-1096",
+              "booking_url": null,
+              "url": "https://www.therapyden.com/therapist/cassey-laforge-louisville-ky",
+              "is_paid": false,
+              "rating": null,
+              "cid": "9954895306375315748",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[6]",
+              "title": "RevitaLife MD",
+              "description": "4050 Shelbyville Rd · (502) 272-4801 \nClosed · Opens 10 AM Mon \n\"The type/variety of treatments offered and the cost are unbeatable.\" \n",
+              "domain": "www.revitalifemd.com",
+              "phone": "(502) 272-4801",
+              "booking_url": "https://www.mindbodyonline.com/explore/locations/revitalifemd?rwg_token=AE37R_gFCyUYHB-xNpj3sjdkSF0K43ersItylvBscJBjqVgehRIjU25dxHz9zs0yzjSng5YY3FGuHRJNMxF7kNvTwMxm8n8E6A%3D%3D&source=cat",
+              "url": "https://www.revitalifemd.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-website",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.9,
+                "votes_count": 432,
+                "rating_max": 5
+              },
+              "cid": "15644064227047442882",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[8]",
+              "title": "Mbodi - Mindful Bodywork & Massage",
+              "description": "10+ years in business · 121 S Sherrin Ave \n\"Magical space, magical therapist (Molly).\" \n",
+              "domain": "mbodilouisville.com",
+              "phone": null,
+              "booking_url": "https://www.vagaro.com/googlemap/U2FsdGVkX18862FPLe1sJpg0SLyAgZtJwHDHk4AARcM=/services?rwg_token=AE37R_jq7XcoVdDdB2y8tmjjVzUXsN456Kl_zCDf1FfSqtnuH3Kmf3nVVG70ybsfjazBX11BXseCGbAKnEmYKpPLFxCl1uJbsg%3D%3D&source=cat",
+              "url": "http://mbodilouisville.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 95,
+                "rating_max": 5
+              },
+              "cid": "9475838673788530051",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 5,
+              "rank_absolute": 5,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[10]",
+              "title": "The Jiu-Jitsu Therapist",
+              "description": "121 S Sherrin Ave · (502) 314-8987 \nClosed · Opens 9:30 AM Wed \n\"Highly recommend using his services.\" \n",
+              "domain": null,
+              "phone": "(502) 314-8987",
+              "booking_url": null,
+              "url": null,
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 8,
+                "rating_max": 5
+              },
+              "cid": "15267635979848565481",
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

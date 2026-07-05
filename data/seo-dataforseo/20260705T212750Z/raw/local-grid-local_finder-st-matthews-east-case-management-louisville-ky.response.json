@@ -1,0 +1,83 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "1.8270 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-2b73955596d1",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "1.7416 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "local_finder",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "local_finder",
+        "keyword": "case management Louisville KY",
+        "location_coordinate": "38.2525000,-85.6497000,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid local_finder st-matthews-east case management Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "case management Louisville KY",
+          "type": "local_finder",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=case+management+Louisville+KY&oq=case+management+Louisville+KY&hl=en&gl=US&tbm=lcl&fll=38.2525%2C-85.6497&fspn=0.0028350955412714688%2C0.006474852561950684&fz=18&sll=38.2525%2C-85.6497&sspn=0.0028350955412714688%2C0.006474852561950684&sz=18",
+          "datetime": "2026-07-05 21:36:40 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "local_pack"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "local_pack",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]",
+              "title": "Home Instead",
+              "description": "Louisville, KY · (502) 996-5574 \nOpen 24 hours \n\"Great staff and team\" \n",
+              "domain": "www.homeinstead.com",
+              "phone": "(502) 996-5574",
+              "booking_url": null,
+              "url": "https://www.homeinstead.com/home-care/usa/ky/louisville/269/?utm_source=google&utm_medium=organic&utm_campaign=google_organic_businesslisting_y",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.4,
+                "votes_count": 54,
+                "rating_max": 5
+              },
+              "cid": "302489691383649574",
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

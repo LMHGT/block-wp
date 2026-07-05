@@ -1,0 +1,199 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "22.9612 sec.",
+  "cost": 0.078088,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060038-9766-0612-0000-45a478993fc1",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "22.9505 sec.",
+      "cost": 0.078088,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "claude",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "claude",
+        "user_prompt": "Compare local outpatient mental health providers in Louisville.",
+        "model_name": "claude-sonnet-4-6",
+        "web_search": true,
+        "max_output_tokens": 1024,
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response claude Compare local outpatient mental health providers in Louisville."
+      },
+      "result": [
+        {
+          "model_name": "claude-sonnet-4-6",
+          "input_tokens": 16821,
+          "output_tokens": 1135,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.077488,
+          "datetime": "2026-07-06 00:38:57 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here is a comparison of the leading **local outpatient mental health providers in Louisville, KY**:\n\n---\n\n## 🧠 Louisville Outpatient Mental Health Providers Comparison\n\n---\n\n### 1. 🏥 UofL Health – Depression Center (Psychiatry)\n**📍** 401 E. Chestnut St., Suite 610, Louisville, KY 40202\n**📞** (502) 588-4450\n**🔗** [uoflhealth.org](https://uoflhealth.org/locations/uofl-physicians-psychiatry-depression-center/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "UofL Depression Center offers adult outpatient psychiatric services, with 23+ UofL physicians in psychiatry. Specialty areas include depression, addiction medicine/psychiatry, women's mental health/reproductive psychiatry, emergency psychiatry, and psychedelic psychopharmacology.",
+                  "annotations": [
+                    {
+                      "title": "Psychiatry | Louisville KY | UofL Depression Center | Chestnut Street Outpatient Center | UofL Health",
+                      "url": "https://uoflhealth.org/locations/uofl-physicians-psychiatry-depression-center/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n**Best for:** Complex psychiatric needs, specialist access, academic medicine\n**Insurance:** Accepts most major plans\n\n---\n\n### 2. 🏥 Norton Behavioral Medicine\n**📍** Multiple Louisville locations + telehealth\n**🔗** [nortonhealthcare.com](https://nortonhealthcare.com/services-and-conditions/behavioral-health/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Norton Behavioral Medicine offers outpatient mental health care coordinated with your Norton Healthcare primary care doctor or specialist. Therapists, psychologists, psychiatrists, addiction medicine specialists, and licensed clinical social workers work as part of your care team.",
+                  "annotations": [
+                    {
+                      "title": "Kentucky and Indiana Mental Health Care | Norton Healthcare Louisville, Ky.",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Their team treats depression, anxiety, PTSD, substance use disorder, and eating disorders.",
+                  "annotations": [
+                    {
+                      "title": "Kentucky and Indiana Mental Health Care | Norton Healthcare Louisville, Ky.",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Convenient and secure telehealth visits are available for patients in Kentucky and Indiana, with in-person visits at select Norton Healthcare locations.",
+                  "annotations": [
+                    {
+                      "title": "Kentucky and Indiana Mental Health Care | Norton Healthcare Louisville, Ky.",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They accept Medicaid, Medicare, and most commercial insurance plans.",
+                  "annotations": [
+                    {
+                      "title": "Kentucky and Indiana Mental Health Care | Norton Healthcare Louisville, Ky.",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n**Best for:** Integrated primary care + mental health, coordinated care teams\n**Insurance:** Medicaid, Medicare, most commercial plans\n\n---\n\n### 3. 🏥 Centerstone (Multiple Louisville Locations)\n**📍** East: 4710 Champions Trace Ln, Ste 102 | South: 2105 Crums Ln | Southwest: 9702 Stonestreet Rd\n**🔗** [mentalhealthclinics.org](https://www.mentalhealthclinics.org/clinics/kentucky/louisville.html)\n\nCenterstone operates several outpatient sites across Louisville. ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Centerstone Center One East offers dialectical behavior therapy (DBT), trauma therapy, and behavior modification to adults, seniors 65+, and young adults.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Facilities in Louisville, KY",
+                      "url": "https://www.mentalhealthclinics.org/clinics/kentucky/louisville.html"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Centerstone Center One South provides behavior modification, integrated dual diagnosis treatment, and CBT to adults, young adults, and seniors; it also supports people with serious mental illness and those requiring dual diagnosis treatment, plus illness management, education services, and suicide prevention services.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Facilities in Louisville, KY",
+                      "url": "https://www.mentalhealthclinics.org/clinics/kentucky/louisville.html"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n**Best for:** Dual diagnosis, DBT, trauma, serious mental illness, seniors\n**Insurance:** Accepts Medicaid and sliding-scale options\n\n---\n\n### 4. 🏥 Kentucky Mental Health Care (KMHC)\n**📍** 5115 South 3rd Street, Louisville, KY\n**📞** (502) 233-3030\n**🔗** [kentuckymentalhealth.com](https://kentuckymentalhealth.com/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "KMHC is a multi-specialty group, substance use treatment provider, and AODE (Approved Online Drug Education) with offices in Louisville, KY and telehealth resources throughout the state.",
+                  "annotations": [
+                    {
+                      "title": "Kentucky Mental Health Care – Psychiatry | Therapy | Addiction Treatment",
+                      "url": "https://kentuckymentalhealth.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They offer Intensive Outpatient Programs (IOPs) in Louisville and throughout Kentucky, with therapists addressing a multitude of mental health issues and personality disorders — both online and in-person.",
+                  "annotations": [
+                    {
+                      "title": "Kentucky Mental Health Care – Psychiatry | Therapy | Addiction Treatment",
+                      "url": "https://kentuckymentalhealth.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "outpatient mental health providers Louisville Kentucky 2025",
+            "best mental health clinics Louisville KY outpatient therapy"
+          ]
+        }
+      ]
+    }
+  ]
+}

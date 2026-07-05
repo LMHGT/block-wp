@@ -1,0 +1,216 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "1.7878 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060028-9766-0139-0000-f35accc75427",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "1.6775 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "local_finder",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "local_finder",
+        "keyword": "case management Louisville KY",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg local finder case management Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "case management Louisville KY",
+          "type": "local_finder",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=case+management+Louisville+KY&oq=case+management+Louisville+KY&hl=en&gl=US&tbm=lcl&fll=38.2526647%2C-85.7584557&fspn=0.725782813701489%2C1.657562255859375&fz=10&sll=38.2526647%2C-85.7584557&sspn=0.725782813701489%2C1.657562255859375&sz=10&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:28:11 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "local_pack"
+          ],
+          "se_results_count": 0,
+          "items_count": 7,
+          "items": [
+            {
+              "type": "local_pack",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]",
+              "title": "Alliance Community Services (formerly Kentucky Case Management, LLC)",
+              "description": "3435 Stony Spring Cir · (502) 409-9141 \nClosed · Opens 8 AM Mon \n",
+              "domain": "kycasemanagement.com",
+              "phone": "(502) 409-9141",
+              "booking_url": null,
+              "url": "http://kycasemanagement.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 3,
+                "rating_max": 5
+              },
+              "cid": "6719215764817123362",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]",
+              "title": "Blue Sky Case Management",
+              "description": "7301 Fegenbush Ln · (502) 354-3348 \n\"My son Jeffrey's case manager Laura Frick is awesome.\" \n",
+              "domain": "www.blueskyky.com",
+              "phone": "(502) 354-3348",
+              "booking_url": null,
+              "url": "https://www.blueskyky.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 3,
+                "rating_max": 5
+              },
+              "cid": "9200458081215618139",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[6]",
+              "title": "Aspire Case Management",
+              "description": "Closed · Opens 9 AM Mon \n\"Great case management agency with a responsive owner!\" \n",
+              "domain": "aspireky.com",
+              "phone": "(502) 592-9957",
+              "booking_url": null,
+              "url": "http://aspireky.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 3,
+                "votes_count": 6,
+                "rating_max": 5
+              },
+              "cid": "5656923320207377370",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[8]",
+              "title": "Tatyanas Case Management LLC",
+              "description": "3042 Breckenridge Ln · (502) 618-3417 \nClosed · Opens 8:30 AM Mon \n\"I had an exceptional experience with Tatyana’s Case Management .\" \n",
+              "domain": "www.tatyanacasemanagement.com",
+              "phone": "(502) 618-3417",
+              "booking_url": null,
+              "url": "http://www.tatyanacasemanagement.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 3,
+                "rating_max": 5
+              },
+              "cid": "7400712812169008651",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 5,
+              "rank_absolute": 5,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[10]",
+              "title": "ABI Case Management",
+              "description": "3101 Breckenridge Ln · (502) 384-1110 \n",
+              "domain": "www.abicm.org",
+              "phone": "(502) 384-1110",
+              "booking_url": null,
+              "url": "http://www.abicm.org/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 1,
+                "rating_max": 5
+              },
+              "cid": "10744449843397128326",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 6,
+              "rank_absolute": 6,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[12]",
+              "title": "Day Spring",
+              "description": "3430 Day Spring Ct · (502) 636-5990 \nOpen 24 hours \n",
+              "domain": "www.dayspringky.org",
+              "phone": "(502) 636-5990",
+              "booking_url": null,
+              "url": "http://www.dayspringky.org/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4,
+                "votes_count": 29,
+                "rating_max": 5
+              },
+              "cid": "10311590222637868041",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 7,
+              "rank_absolute": 7,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[14]",
+              "title": "Louisville Independent Case",
+              "description": "No reviews · Physical therapy clinic \n8919 Stone Green Way · (502) 452-9089 \n",
+              "domain": null,
+              "phone": "(502) 452-9089",
+              "booking_url": null,
+              "url": null,
+              "is_paid": false,
+              "rating": null,
+              "cid": "12592868379972753842",
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

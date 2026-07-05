@@ -1,0 +1,16 @@
+{
+  "name": "serp-organic-desktop-individual therapy Louisville KY",
+  "method": "POST",
+  "path": "/v3/serp/google/organic/live/advanced",
+  "body": [
+    {
+      "keyword": "individual therapy Louisville KY",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "depth": 20,
+      "tag": "lmhg organic desktop individual therapy Louisville KY"
+    }
+  ],
+  "started_at": "2026-07-05T21:27:51.397687+00:00"
+}

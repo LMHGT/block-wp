@@ -1,0 +1,15 @@
+{
+  "name": "serp-ai-mode-Where can I find individual therapy in Louisville Kentucky?",
+  "method": "POST",
+  "path": "/v3/serp/google/ai_mode/live/advanced",
+  "body": [
+    {
+      "keyword": "Where can I find individual therapy in Louisville Kentucky?",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "tag": "lmhg ai mode Where can I find individual therapy in Louisville Kentucky?"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:17.449386+00:00"
+}

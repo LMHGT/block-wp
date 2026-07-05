@@ -1,0 +1,19 @@
+{
+  "name": "llm-response-chat_gpt-Recommend non-hospital mental health counseling options in Louisville, KY.",
+  "path": "/v3/ai_optimization/chat_gpt/llm_responses/live",
+  "platform": "chat_gpt",
+  "model": "gpt-5.4-nano",
+  "prompt": "Recommend non-hospital mental health counseling options in Louisville, KY.",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "cost": 0.0133531,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "result_counts": [
+    1
+  ],
+  "task_statuses": [
+    20000
+  ],
+  "elapsed_seconds": 15.82
+}

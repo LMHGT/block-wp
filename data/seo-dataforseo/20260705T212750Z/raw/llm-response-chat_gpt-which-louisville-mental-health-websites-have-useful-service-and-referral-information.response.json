@@ -1,0 +1,127 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "12.2246 sec.",
+  "cost": 0.0234901,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060031-9766-0612-0000-4c93a0b9338a",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "12.1606 sec.",
+      "cost": 0.0234901,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "chat_gpt",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "chat_gpt",
+        "user_prompt": "Which Louisville mental health websites have useful service and referral information?",
+        "model_name": "gpt-5.4-nano",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response chat_gpt Which Louisville mental health websites have useful service and referral informa",
+        "web_search": true,
+        "web_search_country_iso_code": "US",
+        "web_search_city": "Louisville",
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gpt-5.4-nano-2026-03-17",
+          "input_tokens": 9038,
+          "output_tokens": 866,
+          "reasoning_tokens": 310,
+          "web_search": true,
+          "money_spent": 0.0228901,
+          "datetime": "2026-07-06 00:32:03 +00:00",
+          "items": [
+            {
+              "type": "reasoning",
+              "sections": null
+            },
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Searching referral directories**\n\nI'm looking for more referral directories in Louisville, like Gilda's Club referral and the Deflection Hub. I'll check the LouisvilleKY page and consider adding the CHFS crisis page as well. I think about searching for the Peace Hospital crisis line but maybe that's not necessary. Adding Seven Counties sounds good, too. I just need to keep it brief, so I'll open the relevant website for more details."
+                }
+              ]
+            },
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Gathering mental health resources**\n\nI can't access more web sources, so I need to rely on existing ones. I'll compile a list of mental health services such as LouisvilleKY.gov for community support, 988.ky.gov for crisis intervention, CHFS for crisis prevention, and providers like New Vista, Wellspring, and Seven Counties from HDI. I should also mention Abibehavioral, Solace Life Change, and Astra Behavioral. It's important to include details about crisis lines, mobile crisis responses, and referrals while crafting this response."
+                }
+              ]
+            },
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here are Louisville-area mental health websites that include **practical service/referral info** (hotlines, “how to get help,” and/or how to connect people to local services):\n\n1) **LouisvilleKY.gov – Community Mental Health Services (Metro Louisville)**\n   - Central Louisville guide with crisis/deflection guidance and links to local resources (including 988 references and other crisis options).\n   - ([louisvilleky.gov](https://louisvilleky.gov/government/health-wellness/community-mental-health-services?utm_source=openai))\n\n2) **Kentucky 988 (statewide) – “Call 988 | KY Suicide, Mental Health & Substance Abuse Lifeline”**\n   - Tells you how 988 routes crisis calls in Kentucky and what kind of crises it covers; helpful as the first step for referral to appropriate local care.\n   - ([988.ky.gov](https://988.ky.gov/?utm_source=openai))\n\n3) **Kentucky CHFS (Cabinet for Health & Family Services) – Crisis Prevention & Response System**\n   - Explains Kentucky’s crisis system and how you can access crisis support (including CMHC crisis hotlines and mobile crisis teams, with “find a walk-in location” guidance).\n   - ([chfs.ky.gov](https://www.chfs.ky.gov/agencies/dbhdid/Pages/crisis.aspx?utm_source=openai))\n\n4) **New Vista – Make a Referral**\n   - Regional provider page that includes how to get started / referral pathways, plus service overview.\n   - ([newvista.org](https://newvista.org/?utm_source=openai))\n\n5) **Wellspring Mental Health (Louisville) – Contact / crisis line info**\n   - Louisville-focused contact page with crisis line details (useful for direct referral and immediate support).\n   - ([wellspringky.org](https://wellspringky.org/contact-us/?utm_source=openai))\n\n6) **Seven Counties Services (Community Mental Health Center) – crisis + intake info**\n   - Resource listing that includes their crisis phone lines and the organization’s role in the Louisville region.\n   - ([resources.hdiuky.org](https://resources.hdiuky.org/resource/seven-counties-services-inc-community-mental-health-center/?utm_source=openai))\n\n7) **Abi Behavioral Health (Louisville) – Contact page (includes crisis/information line)**\n   - Includes phone contact and a “crisis and information” line plus referral-related info.\n   - ([abibehavioralhealth.com](https://www.abibehavioralhealth.com/contact-us/?utm_source=openai))\n\n8) **Solace Life Change – “Make a Referral / Get Started”**\n   - Outpatient behavioral health/substance use treatment provider page with referral entry point.\n   - ([solacelifechange.com](https://solacelifechange.com/?utm_source=openai))\n\n9) **Astra Behavioral Health – Louisville services page**\n   - Louisville location/services page (often useful for finding the right program and how to connect).\n   - ([astrabh.com](https://www.astrabh.com/louisville?utm_source=openai))\n\nIf you tell me what you need (e.g., **adult vs youth**, **crisis vs routine therapy**, **insurance/self-pay**, and **substance use vs anxiety/depression vs psychosis**), I can narrow this to the 3–5 most relevant sites and what to do on each one.",
+                  "annotations": [
+                    {
+                      "title": "Community Mental Health Services | LouisvilleKY.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services?utm_source=openai"
+                    },
+                    {
+                      "title": "Call 988 | KY Suicide, Mental Health, & Substance Abuse Lifeline",
+                      "url": "https://988.ky.gov/?utm_source=openai"
+                    },
+                    {
+                      "title": "Crisis Prevention & Response System - Cabinet for Health and Family Services",
+                      "url": "https://www.chfs.ky.gov/agencies/dbhdid/Pages/crisis.aspx?utm_source=openai"
+                    },
+                    {
+                      "title": "New Vista: Mental Health & Substance Use Services",
+                      "url": "https://newvista.org/?utm_source=openai"
+                    },
+                    {
+                      "title": "Contact Wellspring Mental Health in Louisville | Wellspring",
+                      "url": "https://wellspringky.org/contact-us/?utm_source=openai"
+                    },
+                    {
+                      "title": "KDR - Seven Counties Services, Inc. – Community Mental Health Center",
+                      "url": "https://resources.hdiuky.org/resource/seven-counties-services-inc-community-mental-health-center/?utm_source=openai"
+                    },
+                    {
+                      "title": "Contact Us – Abi Behavioral Health",
+                      "url": "https://www.abibehavioralhealth.com/contact-us/?utm_source=openai"
+                    },
+                    {
+                      "title": "Solace Life Change | Solace Life Change",
+                      "url": "https://solacelifechange.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Louisville Behavioral Health Services | Astra Behavioral Health",
+                      "url": "https://www.astrabh.com/louisville?utm_source=openai"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "Louisville Kentucky mental health crisis hotline referral services website Metro Louisville behavioral health",
+            "Louisville KY mental health resources referral information website Jefferson County behavioral health crisis",
+            "Behavioral Health Link Louisville KY find mental health services website",
+            "Kentucky mental health crisis line 988 Louisville referral website"
+          ]
+        }
+      ]
+    }
+  ]
+}

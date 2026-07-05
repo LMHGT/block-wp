@@ -1,0 +1,13 @@
+{
+  "name": "backlinks-summary-domain",
+  "method": "POST",
+  "path": "/v3/backlinks/summary/live",
+  "body": [
+    {
+      "target": "louisvillementalhealth.org",
+      "include_subdomains": true,
+      "tag": "lmhg backlinks summary"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:26.731400+00:00"
+}

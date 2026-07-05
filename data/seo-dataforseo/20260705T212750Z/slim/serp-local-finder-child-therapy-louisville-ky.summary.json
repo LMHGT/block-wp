@@ -1,0 +1,16 @@
+{
+  "name": "serp-local-finder-child therapy Louisville KY",
+  "path": "/v3/serp/google/local_finder/live/advanced",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "result_counts": [
+    1
+  ],
+  "task_statuses": [
+    20000
+  ],
+  "elapsed_seconds": 2.01
+}

@@ -1,0 +1,152 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "3.7396 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-051f5737fa53",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "3.6407 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "local_finder",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "local_finder",
+        "keyword": "group therapy Louisville KY",
+        "location_coordinate": "38.1880877,-85.6379469,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid local_finder office-bardstown-road group therapy Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "group therapy Louisville KY",
+          "type": "local_finder",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=group+therapy+Louisville+KY&oq=group+therapy+Louisville+KY&hl=en&gl=US&tbm=lcl&fll=38.1880877%2C-85.6379469&fspn=0.0028376065869404137%2C0.006474852561950684&fz=18&sll=38.1880877%2C-85.6379469&sspn=0.0028376065869404137%2C0.006474852561950684&sz=18",
+          "datetime": "2026-07-05 21:36:30 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "local_pack"
+          ],
+          "se_results_count": 0,
+          "items_count": 4,
+          "items": [
+            {
+              "type": "local_pack",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]",
+              "title": "Louisville Mental Health Group",
+              "description": "4229 Bardstown Rd Ste 310 · (502) 416-1416 \nClosed · Opens 8 AM Mon \nTheir website mentions group therapy \n",
+              "domain": "louisvillementalhealth.org",
+              "phone": "(502) 416-1416",
+              "booking_url": null,
+              "url": "https://louisvillementalhealth.org/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.4,
+                "votes_count": 19,
+                "rating_max": 5
+              },
+              "cid": "2768315829466915400",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]",
+              "title": "Tyler Horn, LCSW",
+              "description": "4229 Bardstown Rd Suite 310 · (502) 416-1416 \nClosed · Opens 9 AM Mon \n",
+              "domain": "louisvillementalhealth.org",
+              "phone": "(502) 416-1416",
+              "booking_url": null,
+              "url": "https://louisvillementalhealth.org/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 5,
+                "rating_max": 5
+              },
+              "cid": "10074355657333415292",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[6]",
+              "title": "Louisville Counseling Associates",
+              "description": "4229 Bardstown Rd #102 · (502) 495-1888 \n",
+              "domain": null,
+              "phone": "(502) 495-1888",
+              "booking_url": null,
+              "url": null,
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 1,
+                "rating_max": 5
+              },
+              "cid": "17820421987806657233",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[8]",
+              "title": "Bardstown Road Physical Therapy Group",
+              "description": "4233 Bardstown Rd #100C · (502) 493-3800 \nClosed · Opens 7 AM Mon \n",
+              "domain": "www.physicaltherapygroupinc.com",
+              "phone": "(502) 493-3800",
+              "booking_url": null,
+              "url": "http://www.physicaltherapygroupinc.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.9,
+                "votes_count": 81,
+                "rating_max": 5
+              },
+              "cid": "17942862270547205962",
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

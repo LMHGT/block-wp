@@ -1,0 +1,1853 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "2.1979 sec.",
+  "cost": 0.0127,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060028-9766-0619-0000-e4f4fef6176d",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "2.1856 sec.",
+      "cost": 0.0127,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "ai_keyword_data",
+        "keywords_search_volume",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "keywords_search_volume",
+        "keywords": [
+          "who provides therapy in Louisville KY",
+          "best therapist for anxiety in Louisville KY",
+          "where to find family therapy in Louisville KY",
+          "find child therapy near me Louisville",
+          "mental health services for families in Louisville",
+          "who offers case management in Louisville KY",
+          "community based mental health services near me",
+          "in home therapy Louisville KY",
+          "local counseling practice Louisville Kentucky",
+          "therapy provider accepting new clients Louisville",
+          "Louisville Mental Health Group",
+          "louisvillementalhealth.org",
+          "mental health services Louisville KY",
+          "therapy Louisville KY",
+          "therapist Louisville KY",
+          "counseling Louisville KY",
+          "individual therapy Louisville KY",
+          "family therapy Louisville KY",
+          "child therapy Louisville KY",
+          "group therapy Louisville KY",
+          "case management Louisville KY",
+          "mental health case management Louisville KY",
+          "community based mental health services Louisville KY",
+          "trauma therapy Louisville KY",
+          "anxiety therapy Louisville KY",
+          "depression therapy Louisville KY",
+          "play therapy Louisville KY"
+        ],
+        "location_code": 2840,
+        "language_code": "en",
+        "tag": "lmhg ai keyword search volume core agentic"
+      },
+      "result": [
+        {
+          "location_code": 2840,
+          "language_code": "en",
+          "items_count": 27,
+          "items": [
+            {
+              "keyword": "who provides therapy in louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "best therapist for anxiety in louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "where to find family therapy in louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "find child therapy near me louisville",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "mental health services for families in louisville",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 1
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 3
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 3
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 3
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 3
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 3
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 4
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 2
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 2
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 1
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "who offers case management in louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "community based mental health services near me",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "in home therapy louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "local counseling practice louisville kentucky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "therapy provider accepting new clients louisville",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "louisville mental health group",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "louisvillementalhealth.org",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "mental health services louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "therapy louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 1
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 1
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 1
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 3
+                }
+              ]
+            },
+            {
+              "keyword": "therapist louisville ky",
+              "ai_search_volume": 16,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 16
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 18
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 16
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 21
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 22
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 19
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 23
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 27
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 30
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 22
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 21
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 22
+                }
+              ]
+            },
+            {
+              "keyword": "counseling louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "individual therapy louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "family therapy louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "child therapy louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "group therapy louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "case management louisville ky",
+              "ai_search_volume": 1,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 1
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 1
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 1
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 1
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 1
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "mental health case management louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "community based mental health services louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "trauma therapy louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "anxiety therapy louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "depression therapy louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            },
+            {
+              "keyword": "play therapy louisville ky",
+              "ai_search_volume": 0,
+              "ai_monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 6,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 5,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "ai_search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "ai_search_volume": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

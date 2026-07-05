@@ -1,0 +1,15 @@
+{
+  "name": "serp-ai-mode-Which Louisville mental health providers offer case management?",
+  "method": "POST",
+  "path": "/v3/serp/google/ai_mode/live/advanced",
+  "body": [
+    {
+      "keyword": "Which Louisville mental health providers offer case management?",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "tag": "lmhg ai mode Which Louisville mental health providers offer case management?"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:17.662637+00:00"
+}

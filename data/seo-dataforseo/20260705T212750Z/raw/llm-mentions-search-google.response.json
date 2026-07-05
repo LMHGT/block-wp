@@ -1,0 +1,62 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "3.6102 sec.",
+  "cost": 0.1,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060028-9766-0634-0000-d8850e2345ea",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "3.5996 sec.",
+      "cost": 0.1,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "llm_mentions",
+        "search",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "search",
+        "target": [
+          {
+            "domain": "louisvillementalhealth.org",
+            "search_filter": "include",
+            "search_scope": [
+              "any"
+            ],
+            "include_subdomains": true
+          },
+          {
+            "keyword": "Louisville Mental Health Group",
+            "search_filter": "include",
+            "search_scope": [
+              "any"
+            ],
+            "match_type": "partial_match"
+          }
+        ],
+        "platform": "google",
+        "location_code": 2840,
+        "language_code": "en",
+        "limit": 25,
+        "tag": "lmhg llm mentions search google"
+      },
+      "result": [
+        {
+          "total_count": 0,
+          "current_offset": 0,
+          "search_after_token": "eyJDdXJyZW50T2Zmc2V0IjowLCJSYXdSZXF1ZXN0Ijp7InRhcmdldCI6W3sidHlwZSI6ImRvbWFpbiIsImRvbWFpbiI6ImxvdWlzdmlsbGVtZW50YWxoZWFsdGgub3JnIiwic2VhcmNoX3Njb3BlIjpbImFueSJdLCJzZWFyY2hfdHlwZSI6ImluY2x1ZGUiLCJpbmNsdWRlX3N1YmRvbWFpbnMiOnRydWV9LHsidHlwZSI6ImtleXdvcmQiLCJrZXl3b3JkIjoiTG91aXN2aWxsZSBNZW50YWwgSGVhbHRoIEdyb3VwIiwic2VhcmNoX3Njb3BlIjpbImFueSJdLCJzZWFyY2hfdHlwZSI6ImluY2x1ZGUiLCJlbnRyeV90eXBlIjoicGFydGlhbF9tYXRjaCJ9XSwicGxhdGZvcm0iOiJnb29nbGUiLCJsYW5ndWFnZSI6ImVuIiwibG9jYXRpb24iOjI4NDAsImxpbWl0IjoyNSwib2Zmc2V0IjowLCJvcmRlcl9ieSI6bnVsbCwic2VhcmNoX2FmdGVyX3Rva2VuIjpudWxsLCJhaWQiOjk3NjY4fSwiU2VhcmNoQWZ0ZXJEYXRhIjpudWxsfQ==",
+          "items_count": 0,
+          "items": null
+        }
+      ]
+    }
+  ]
+}

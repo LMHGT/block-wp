@@ -1,0 +1,147 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "15.9283 sec.",
+  "cost": 0.02349085,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060031-9766-0612-0000-c010895a04cf",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "15.8674 sec.",
+      "cost": 0.02349085,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "chat_gpt",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "chat_gpt",
+        "user_prompt": "Compare local outpatient mental health providers in Louisville.",
+        "model_name": "gpt-5.4-nano",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response chat_gpt Compare local outpatient mental health providers in Louisville.",
+        "web_search": true,
+        "web_search_country_iso_code": "US",
+        "web_search_city": "Louisville",
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gpt-5.4-nano-2026-03-17",
+          "input_tokens": 8898,
+          "output_tokens": 889,
+          "reasoning_tokens": 235,
+          "web_search": true,
+          "money_spent": 0.02289085,
+          "datetime": "2026-07-06 00:31:49 +00:00",
+          "items": [
+            {
+              "type": "reasoning",
+              "sections": null
+            },
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Searching for sources**\n\nI need to find more authoritative sources like Seven Counties, LifeStance, and Mandala House. My aim is to strengthen the information I'm gathering, so expanding my reference list is essential. It’s interesting to consider what each of these organizations can offer in terms of credibility and insight. I think searching specifically for these will help me get the reliable content I’m looking for. Let's see what I can find!"
+                }
+              ]
+            },
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Crafting a comparison**\n\nI need to compare available sources, but I’m limited by the tools here. I'll gather information from 5-7 providers like Norton, UofL Health Peace, Seven Counties, and some private practices like Smither Psychiatry, Positive Psychiatry, and others. I’ll establish clear criteria and ask for the user's preferences. I must ensure to get URLs instead of raw data for citations. Providing a table with questions will make this organized for the user!"
+                }
+              ]
+            },
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here’s a **local (Louisville-area) comparison of outpatient mental health providers** I can find quickly online, split into **health-systems / clinics** vs **independent practices / telehealth**, plus what each is best for.\n\n## Quick comparison (outpatient)\n\n| Provider | What they offer (outpatient) | Typical fit | Notes / how to start |\n|---|---|---|---|\n| **Norton Healthcare – Behavioral Medicine** ([nortonhealthcare.com](https://nortonhealthcare.com/services-and-conditions/behavioral-health/?utm_source=openai)) | Outpatient mental health care coordinated with your other Norton care | People who want integrated care through a large system | Good option if you already use Norton or want coordinated medical/mental-health |\n| **UofL Health – Mental & Behavioral Health (Adult Outpatient)** (incl. **Peace Hospital Adult Partial Hospitalization/PHP**) ([uoflhealth.org](https://uoflhealth.org/services/mental-and-behavioral-health/adult-outpatient-services/?utm_source=openai)) | Adult outpatient options; **PHP/IOP-style group therapy** and medication management (per the Peace Adult Outpatient Center info) | If you need structured outpatient treatment (groups several days/week) | Their listings include program structure and contact info ([uoflhealth.org](https://uoflhealth.org/services/mental-and-behavioral-health/adult-outpatient-services/?utm_source=openai)) |\n| **Seven Counties Services (Adult East – CCBHC)** ([mentalhealthus.org](https://www.mentalhealthus.org/facility/seven-counties-services-adult-east?utm_source=openai)) | Comprehensive outpatient care as a **CCBHC** model (mental health + substance use challenges) | If you want a community clinic model and help navigating access | One listing shows an outpatient location and notes the CCBHC status ([mentalhealthus.org](https://www.mentalhealthus.org/facility/seven-counties-services-adult-east?utm_source=openai)) |\n| **Smither Psychiatry (PMHNP)** ([smitherpsychiatry.com](https://smitherpsychiatry.com/?utm_source=openai)) | Psychiatry/med management and supportive therapy; also telehealth availability | If you mainly need medication management and practical therapy support | Mentions care in the Louisville Highlands area and telehealth ([smitherpsychiatry.com](https://smitherpsychiatry.com/?utm_source=openai)) |\n| **Positive Psychiatry of Louisville** ([positivepsychiatryoflouisville.com](https://www.positivepsychiatryoflouisville.com/?utm_source=openai)) | Outpatient psychiatry + psychotherapy; also mentions **ketamine infusion** | If you’re exploring comprehensive outpatient psychiatry and/or treatment-resistant depression options | Notes clinic setting in Lyndon and ketamine infusion offering ([positivepsychiatryoflouisville.com](https://www.positivepsychiatryoflouisville.com/?utm_source=openai)) |\n| **Schrodt Hall Psychiatric** ([schrodthallpsych.com](https://schrodthallpsych.com/?utm_source=openai)) | Psychiatric evaluation; psychotherapy approaches incl. CBT/psychodynamic; mentions EMDR | If you want therapy modalities like **EMDR** for trauma/anxiety | Their page highlights EMDR and therapy background ([schrodthallpsych.com](https://schrodthallpsych.com/?utm_source=openai)) |\n| **Modern Psychiatry (Louisville page)** ([mymodernpsychiatry.com](https://www.mymodernpsychiatry.com/louisville-ky?utm_source=openai)) | Psychiatry + psychotherapy (in-person & telehealth) and neuropsychological services | If you want a broader diagnostic/assessment toolbox + treatment | Their Louisville page describes available services ([mymodernpsychiatry.com](https://www.mymodernpsychiatry.com/louisville-ky?utm_source=openai)) |\n| **UpSing Psychiatry (telepsych)** ",
+                  "annotations": [
+                    {
+                      "title": "Kentucky and Indiana Mental Health Care | Norton Healthcare Louisville, Ky.",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/?utm_source=openai"
+                    },
+                    {
+                      "title": "Mental and Behavioral Health Adult Outpatient Services | Louisville KY | UofL Health",
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/adult-outpatient-services/?utm_source=openai"
+                    },
+                    {
+                      "title": "Mental and Behavioral Health Adult Outpatient Services | Louisville KY | UofL Health",
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/adult-outpatient-services/?utm_source=openai"
+                    },
+                    {
+                      "title": "Community Behavioral Health Center in Louisville, Kentucky | Seven Counties Services Adult East",
+                      "url": "https://www.mentalhealthus.org/facility/seven-counties-services-adult-east?utm_source=openai"
+                    },
+                    {
+                      "title": "Community Behavioral Health Center in Louisville, Kentucky | Seven Counties Services Adult East",
+                      "url": "https://www.mentalhealthus.org/facility/seven-counties-services-adult-east?utm_source=openai"
+                    },
+                    {
+                      "title": "Psychiatric Care Louisville KY | Morgan Smither, PMHNP | Smither Psychiatry",
+                      "url": "https://smitherpsychiatry.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Psychiatric Care Louisville KY | Morgan Smither, PMHNP | Smither Psychiatry",
+                      "url": "https://smitherpsychiatry.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Depression & Anxiety Treatment | Robert Stewart, MD | Psychiatrist | Louisville",
+                      "url": "https://www.positivepsychiatryoflouisville.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Depression & Anxiety Treatment | Robert Stewart, MD | Psychiatrist | Louisville",
+                      "url": "https://www.positivepsychiatryoflouisville.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Schrodt Hall Psychiatric | Psychiatrist in Louisville Kentucky, Psychiatry",
+                      "url": "https://schrodthallpsych.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Schrodt Hall Psychiatric | Psychiatrist in Louisville Kentucky, Psychiatry",
+                      "url": "https://schrodthallpsych.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Psychiatrist Louisville KY | Modern Psychiatry | In-Person & Telehealth",
+                      "url": "https://www.mymodernpsychiatry.com/louisville-ky?utm_source=openai"
+                    },
+                    {
+                      "title": "Psychiatrist Louisville KY | Modern Psychiatry | In-Person & Telehealth",
+                      "url": "https://www.mymodernpsychiatry.com/louisville-ky?utm_source=openai"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "Louisville KY outpatient mental health clinic providers therapy psychiatry adults",
+            "University of Louisville outpatient psychiatry clinic",
+            "PACE mental health Louisville outpatient",
+            "Behavioral Health outpatient services Louisville KY Norton Healthcare psychiatry outpatient",
+            "Seven Counties Services Louisville outpatient mental health Champions Trace Adult East address services",
+            "LifeStance Louisville KY psychiatry therapy locations",
+            "Mandala House counseling Louisville KY outpatient therapy",
+            "Kentucky Community and Technical College mental health counseling Louisville Psychological Services Center UofL Davidson Hall 210"
+          ]
+        }
+      ]
+    }
+  ]
+}

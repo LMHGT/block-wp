@@ -1,0 +1,13 @@
+{
+  "name": "serp-ai-mode-expanded-Who offers family therapy and care coordination in Louisville?",
+  "path": "/v3/serp/google/ai_mode/live/advanced",
+  "body": [
+    {
+      "keyword": "Who offers family therapy and care coordination in Louisville?",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "tag": "lmhg ai mode expanded Who offers family therapy and care coordination in Louisville?"
+    }
+  ]
+}

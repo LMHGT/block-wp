@@ -1,0 +1,14 @@
+{
+  "name": "local-grid-maps-downtown-louisville-family therapy Louisville KY",
+  "path": "/v3/serp/google/maps/live/advanced",
+  "body": [
+    {
+      "keyword": "family therapy Louisville KY",
+      "location_coordinate": "38.2526647,-85.7584557,5000",
+      "language_code": "en",
+      "device": "desktop",
+      "depth": 20,
+      "tag": "lmhg grid maps downtown-louisville family therapy Louisville KY"
+    }
+  ]
+}

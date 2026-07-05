@@ -1,0 +1,15 @@
+{
+  "name": "onpage-browser-ua-non_indexable",
+  "path": "/v3/on_page/non_indexable",
+  "cost": 0,
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "task_statuses": [
+    20000
+  ],
+  "result_counts": [
+    1
+  ]
+}

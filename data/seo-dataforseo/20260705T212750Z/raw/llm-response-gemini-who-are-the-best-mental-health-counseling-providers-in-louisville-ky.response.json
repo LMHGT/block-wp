@@ -1,0 +1,98 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "3.5304 sec.",
+  "cost": 0.0358234,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-56c4af3b8eba",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "3.4765 sec.",
+      "cost": 0.0358234,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "gemini",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "gemini",
+        "user_prompt": "Who are the best mental health counseling providers in Louisville, KY?",
+        "model_name": "gemini-2.5-flash-lite",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response gemini Who are the best mental health counseling providers in Louisville, KY?",
+        "web_search": true,
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gemini-2.5-flash-lite",
+          "input_tokens": 114,
+          "output_tokens": 530,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.0352234,
+          "datetime": "2026-07-06 00:32:14 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "When seeking mental health counseling in Louisville, KY, several providers are highly regarded for their comprehensive services and compassionate care. It's important to consider individual needs, insurance coverage, and the specific issues you wish to address when choosing a provider.\n\nHere are some of the top mental health counseling providers in Louisville:\n\n*   **Grace Psychological Services:** This practice offers comprehensive mental health care for individuals, couples, and families, with specialized services for anxiety, trauma, and relationships. They also provide psychological evaluations for conditions like ADHD and autism spectrum disorder. Online sessions are available for clients in 42 states.\n*   **New Hope Counseling:** New Hope Counseling has licensed therapists specializing in areas such as trauma, anxiety, life transitions, and dissociation. They aim to provide accessible care for all individuals.\n*   **Best Life Mental Health Services, LLC:** This group of therapists is trained to meet a variety of needs and emphasizes self-discovery, heightened self-awareness, and personal growth. They offer therapy services, case management, and psychiatric medication management.\n*   **Norton Behavioral Medicine:** As part of Norton Healthcare, Norton Behavioral Medicine offers outpatient mental health care coordinated with your existing Norton Healthcare providers. They provide services for common mental health concerns and can connect you with long-term behavioral health providers in the community. Telehealth and in-person visits are available.\n*   **The Brook Hospitals:** With two locations in Louisville, The Brook Hospitals provide inpatient, partial hospitalization, and intensive outpatient care for seniors, adults, adolescents, and children, focusing on mental health and substance use treatment since 1985.\n*   **Seven Counties Services:** This is Kentucky's leading Community Mental Health Center, serving individuals and families in several Kentucky counties. They offer a positive approach to services tailored to individual needs and also provide primary care services.\n*   **Michael A. RoBards, LCSW:** This therapist has a 5.0 rating on Google reviews and offers individual, couples, child & teen, and family therapy. He provides services both in-person at Bowman Field and via telehealth across Kentucky.\n\nFor crisis situations, you can call or text **988** to reach the Suicide & Crisis Lifeline, or text **LOU to 741741** for the Crisis Text Line. You can also explore resources like the **Mental Health Lou Wellness Hub** and **Park DuValle Community Health Center**.",
+                  "annotations": [
+                    {
+                      "title": "louisvillegracepsychological.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEvgCv8lJ7KVYSqLDNiCAeCnwhDeyiYopseOmX54ngYf8nfYXSJx4Lnl8QHh1KImwPGqR7_XfMQEtep5lEhnRl-5dvB8UzdDLn46rNT80toti21rcj2abWn1_kRddrE7VKh5Zxr"
+                    },
+                    {
+                      "title": "newhopecounselingsite.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyntV74oPIjE6sUutfyJRjjTOm4-Ol-gCZZhGpud53v9iIQXpJxkbsmJvukmtb-W-nT9WzZMqddWkMDeQYPARUZqAvX9y0SyRMfLVU3GDqanzhUQw5TNk0Mus11cY="
+                    },
+                    {
+                      "title": "bestlifelouisville.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7I4Zcv50DHfoBroJBt35CCanVSRecfwfS6675Dlf02zBj5isJNOQsaXphsZkzvamyT6NdumbG9tPJm7tp9EBeX57-1RXbTYkYddtlcULjr5gh0-1jUpcW79IuZhdd"
+                    },
+                    {
+                      "title": "nortonhealthcare.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXj1hFFAoJ9-to1K1u2_BG0IbMUMM2FMNiQu7pVU6dJT1Ts3Q2tDov2sm_Ef4ohYWXYfxGZle1JYiMbqly9SNoKOP_cXXrHRvIjMWtW-hs2GOoaT9whBAU5RjyAFt8DUdAJ7lXC5pg8MMjbrygDsmuWjiZWGCGZPaNV9g4sftjq4lv"
+                    },
+                    {
+                      "title": "thebrookhospitals.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8XTEnckoGJPgt-rFCeTQ2KH3JKL_h7u_xEZ-naqvKsEX4FeMkoOfFTxb6B_cdxPejq7DY8a9Tlok2L5dZXa-xU-LHBjGcpqDtLRnmB4VitT-t-92b0D4bww=="
+                    },
+                    {
+                      "title": "sevencounties.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5khde6XdYX4QoSCsHfjYSY-__Ug5V3X29p-CT1Wu7scPAIZMgz2O85A1niJN5bjAISCJDP-0OhHdpf04dytk2hQSXX6dZvb11KHDxSUTepjYMRl51"
+                    },
+                    {
+                      "title": "michaelarobards.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQNHSGFeE0fbPQxInjEp3ynXM7YNwgoFuzydyNQbCVsRqLs00pM_XkiJnPo77gXNz1_z8HyEiuwzJ-LS9vE5_PkVD-Jhyx2eREw73IAiZ8vX3kCoWGDPYspBGN"
+                    },
+                    {
+                      "title": "louisvilleky.gov",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXW33Avpjeiz7hPO70UD7DKAzPsMgM-b8auglFuoQWp20p3VAdp2PxrSPEK6X7zcuLrQ6FeyYiBMeRCG0T4s3Tw_dP9o3WAyxxKOv2eo57jvsxJCWpsrI_If9MmICooECgq0fX8hDgxKxdKd4xOKEsS8SIPiHhKIIjUdASBytdFCYZPfUnvgpe4SKMWLiX4g=="
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "best mental health counseling providers Louisville KY",
+            "top rated therapists Louisville KY",
+            "mental health services Louisville KY"
+          ]
+        }
+      ]
+    }
+  ]
+}

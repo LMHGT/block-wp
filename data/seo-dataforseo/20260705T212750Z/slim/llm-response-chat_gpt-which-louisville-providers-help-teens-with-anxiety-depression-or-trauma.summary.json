@@ -1,0 +1,19 @@
+{
+  "name": "llm-response-chat_gpt-Which Louisville providers help teens with anxiety, depression, or trauma?",
+  "path": "/v3/ai_optimization/chat_gpt/llm_responses/live",
+  "platform": "chat_gpt",
+  "model": "gpt-5.4-nano",
+  "prompt": "Which Louisville providers help teens with anxiety, depression, or trauma?",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "cost": 0.0234921,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "result_counts": [
+    1
+  ],
+  "task_statuses": [
+    20000
+  ],
+  "elapsed_seconds": 15.9
+}

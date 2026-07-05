@@ -1,0 +1,144 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "16.1974 sec.",
+  "cost": 0.0234791,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060031-9766-0612-0000-470cd0847881",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "16.1695 sec.",
+      "cost": 0.0234791,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "chat_gpt",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "chat_gpt",
+        "user_prompt": "Who are the best mental health counseling providers in Louisville, KY?",
+        "model_name": "gpt-5.4-nano",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response chat_gpt Who are the best mental health counseling providers in Louisville, KY?",
+        "web_search": true,
+        "web_search_country_iso_code": "US",
+        "web_search_city": "Louisville",
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gpt-5.4-nano-2026-03-17",
+          "input_tokens": 9008,
+          "output_tokens": 862,
+          "reasoning_tokens": 314,
+          "web_search": true,
+          "money_spent": 0.0228791,
+          "datetime": "2026-07-06 00:31:49 +00:00",
+          "items": [
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Searching for recommendations**\n\nI need to use the web.run function to get up-to-date information and recommendations. I'll make sure to include citations as well. It’s important to provide accurate and reliable sources, so I’ll focus on finding the best possible data. I might also consider structuring my results clearly, making them easy to read and understand for anyone looking for the information. Let’s get started on this search!"
+                }
+              ]
+            },
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Searching for counseling providers**\n\nI need to find reputable counseling providers, so I'll pick a range of specialties and remind the user to verify their insurance. I also want to include tips on how to find the best match for their needs. I might need to look for Kentucky statewide directories, like Psychology Today. I should search for both inpatient and outpatient services like LifeStance, but the user specifically asked for counseling providers, so I’ll focus on major clinics like Centerstone and Norton. Let's get searching!"
+                }
+              ]
+            },
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Gathering counseling resources**\n\nTool limit has been reached, so I’ll rely on gathered sources for my response. I need to cite each one and provide a list of practices, which includes Northstar, Renew, Havenpoint, Apricus, Mindive, Kilgore Samaritan, East Louisville Psychology Group, The Morton Center, Sims Counseling, Revolution in Counseling, and NAMI for non-counseling. I want to be careful since \"best\" is subjective. I should also ask about insurance needs and age while providing 8-10 options and including steps to choose along with crisis info. For crisis situations, 988 is a stable option."
+                }
+              ]
+            },
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "“Best” mental health counseling providers in Louisville really depends on what you need (age group, insurance, therapy style like EMDR/CBT, trauma vs couples vs medication management, etc.). Here are several well-regarded **local counseling practices and centers** in Louisville you can start with:\n\n### Louisville counseling practices (outpatient therapy)\n- **Renew Counseling Services (Louisville)** – large trauma-focused practice; states it’s EMDR-trained and a group with many clinicians. ([renewcounselingservices.org](https://www.renewcounselingservices.org/?utm_source=openai))  \n- **Northstar Counseling Center (Louisville)** – therapy for individuals/couples/children & families. ([northstarcounselingcenter.com](https://northstarcounselingcenter.com/?utm_source=openai))  \n- **Kilgore Samaritan Counseling Center (Louisville)** – long-standing center (nearly 40 years) offering services including trauma-focused therapy. ([kilgorecounseling.org](https://kilgorecounseling.org/services/?utm_source=openai))  \n- **Apricus Counseling (Louisville)** – practice offering individual, couples, family, adolescent services, plus psychological testing. ([apricuscounseling.org](https://www.apricuscounseling.org/?utm_source=openai))  \n- **Havenpoint Counseling (Louisville)** – individual/child/adolescent/couples therapy (their site emphasizes faith-based counseling options). ([havenpointcounseling.com](https://www.havenpointcounseling.com/?utm_source=openai))  \n- **Mindive Therapy (Louisville)** – counseling grounded in mindfulness (also lists coaching/consulting). ([mindivetherapy.com](https://mindivetherapy.com/?utm_source=openai))  \n- **East Louisville Psychology Group, PLLC** – outpatient clinical psychology practice for adults/adolescents. ([eastloupsychgroup.com](https://www.eastloupsychgroup.com/?utm_source=openai))  \n- **The Morton Center (Louisville)** – provides structured programming such as an adult intensive outpatient program using evidence-based practices (often helpful if you need more support than weekly therapy). ([themortoncenter.org](https://themortoncenter.org/adult/?utm_source=openai))  \n- **Sims Counseling & Consulting (Louisville)** – integrative/holistic counseling approach (their site presents as a sanctuary/holistic practice). ([simscounseling.org](https://www.simscounseling.org/?utm_source=openai))  \n- **The Revolution in Counseling (Louisville)** – counseling focused on substance addiction and mental health with an “innovative methods” positioning. ([revolutionincounseling.com](https://revolutionincounseling.com/?utm_source=openai))  \n  *(If substance-use treatment is relevant, this may be a better fit than general therapy.)*\n\n### Support/education resources (not therapy, but often helpful)\n- **NAMI Louisville** – family education, support, and advocacy for people affected by mental illness. ([namilouisville.org](https://namilouisville.org/about-us?utm_source=openai))  \n\n---\n\n## Quick way to pick the right one\nWhen you call/email, ask:\n1) **Are you taking new clients?**  \n2) **Do you take my insurance** (or what’s the self-pay rate)?  \n3) **Do you specialize in what I need**",
+                  "annotations": [
+                    {
+                      "title": "Renew Counseling Services | Online Therapy | Louisville, KY",
+                      "url": "https://www.renewcounselingservices.org/?utm_source=openai"
+                    },
+                    {
+                      "title": "Northstar Counseling Center",
+                      "url": "https://northstarcounselingcenter.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Services - Kilgore Samaritan Counseling Center",
+                      "url": "https://kilgorecounseling.org/services/?utm_source=openai"
+                    },
+                    {
+                      "title": "Apricus Counseling • Therapists in Louisville KY",
+                      "url": "https://www.apricuscounseling.org/?utm_source=openai"
+                    },
+                    {
+                      "title": "Havenpoint Counseling: Expert Mental Health Therapists in Louisville, KY – Individual, Child, Adolescent, and Couples Therapy",
+                      "url": "https://www.havenpointcounseling.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Mindive | Counseling | Coaching | Consulting | Louisville",
+                      "url": "https://mindivetherapy.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "East Louisville Psychology Group, PLLC",
+                      "url": "https://www.eastloupsychgroup.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Adult - The Morton Center",
+                      "url": "https://themortoncenter.org/adult/?utm_source=openai"
+                    },
+                    {
+                      "title": "Online & In-Person Therapist in Kentucky | Sims Counseling & Consulting",
+                      "url": "https://www.simscounseling.org/?utm_source=openai"
+                    },
+                    {
+                      "title": "David Tarullo | The Revolution in Counseling | Louisville, KY 40222",
+                      "url": "https://revolutionincounseling.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "About Us",
+                      "url": "https://namilouisville.org/about-us?utm_source=openai"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "best mental health counseling providers Louisville KY therapist group practice",
+            "Louisville Kentucky counseling center evidence-based therapy outpatient",
+            "NAMI Louisville Kentucky family support education mental health",
+            "Kynect therapy Louisville Medicaid mental health providers",
+            "Centerstone Louisville KY outpatient counseling therapy",
+            "Louisville Behavioral Health outpatient therapy counseling",
+            "LifeStance Louisville KY therapy",
+            "KentuckyOne Health behavioral health Louisville outpatient therapy"
+          ]
+        }
+      ]
+    }
+  ]
+}

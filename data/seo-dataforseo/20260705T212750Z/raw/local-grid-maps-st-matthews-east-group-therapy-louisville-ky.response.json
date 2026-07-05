@@ -1,0 +1,1426 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "1.4335 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-3cf37b108f4d",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "1.3485 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "maps",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "maps",
+        "keyword": "group therapy Louisville KY",
+        "location_coordinate": "38.2525000,-85.6497000,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid maps st-matthews-east group therapy Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "group therapy Louisville KY",
+          "type": "maps",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://google.com/maps/search/group+therapy+Louisville+KY/@38.2525,-85.6497,17z?hl=en&gl=US&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-07-05 21:36:40 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "maps_search"
+          ],
+          "se_results_count": 0,
+          "items_count": 11,
+          "items": [
+            {
+              "type": "maps_search",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "domain": "derbycitycounseling.com",
+              "title": "Derby City Counseling",
+              "original_title": null,
+              "url": "http://derbycitycounseling.com/",
+              "contact_url": "https://derbycitycounseling.clientsecure.me",
+              "contributor_url": "https://maps.google.com/maps/contrib/108480412241650582540",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 12,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 12
+              },
+              "snippet": "119 S Sherrin Ave Ste 230, Louisville, KY 40207",
+              "address": "119 S Sherrin Ave Ste 230, Louisville, KY 40207",
+              "address_info": {
+                "borough": null,
+                "address": "119 S Sherrin Ave Ste 230",
+                "city": "Louisville",
+                "zip": "40207",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ55Bxq4gLaYgRwApy_FFTRrs",
+              "phone": "+1502-701-2171",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHA3Wr51KeTuBj6B297Smdn5G9rqvMV67u62o6w1qCMDLVPH6GjxOQUKFDdU3pVmMk_YEiYkQ5btBcnE8J1ylt27sEED0a97g3-pxvlEWVor4WWhNxW1DpbDorK49LygQJO7AzU=w408-h255-k-no",
+              "total_photos": 6,
+              "category": "Mental health service",
+              "additional_categories": null,
+              "category_ids": [
+                "mental_health_service"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 13,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x88690b88ab7190e7:0xbb465351fc720ac0",
+              "cid": "13494564945055058624",
+              "latitude": 38.2514289,
+              "longitude": -85.6479679,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"comfortable.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "domain": "www.louisville-therapy.com",
+              "title": "Turning Leaf Counseling/ Rachel Murrell, LCSW",
+              "original_title": null,
+              "url": "http://www.louisville-therapy.com/",
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.5,
+                "votes_count": 8,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 7
+              },
+              "snippet": "130 Fairfax Ave #100a, Louisville, KY 40207",
+              "address": "130 Fairfax Ave #100a, Louisville, KY 40207",
+              "address_info": {
+                "borough": null,
+                "address": "130 Fairfax Ave #100a",
+                "city": "Louisville",
+                "zip": "40207",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ74O2kNt0aYgRdcHXcsH3-lQ",
+              "phone": "+1502-424-7017",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=BqP9hy3tF2Js-Qy4W5swmA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=228.01804&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Social worker",
+              "additional_categories": [
+                "Family counselor",
+                "Mental health service"
+              ],
+              "category_ids": [
+                "social_worker",
+                "family_counselor",
+                "mental_health_service"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886974db90b683ef:0x54faf7c172d7c175",
+              "cid": "6123479053591101813",
+              "latitude": 38.2510106,
+              "longitude": -85.650539,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "domain": "renewcounselingservices.org",
+              "title": "Renew Counseling, LLC",
+              "original_title": null,
+              "url": "https://renewcounselingservices.org/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/106768184412178151670",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.4,
+                "votes_count": 13,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 2,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 11
+              },
+              "snippet": "130 Fairfax Ave, Louisville, KY 40207",
+              "address": "130 Fairfax Ave, Louisville, KY 40207",
+              "address_info": {
+                "borough": null,
+                "address": "130 Fairfax Ave",
+                "city": "Louisville",
+                "zip": "40207",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ6cHE3tp0aYgR1BUITcWBjfk",
+              "phone": "+1502-653-7211",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=BqP9hy3tF2Js-Qy4W5swmA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=224.47282&pitch=0&thumbfov=100",
+              "total_photos": 5,
+              "category": "Counselor",
+              "additional_categories": null,
+              "category_ids": [
+                "counselor"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 20,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 14,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886974dadec4c1e9:0xf98d81c54d0815d4",
+              "cid": "17982171571561174484",
+              "latitude": 38.2510003,
+              "longitude": -85.65052039999999,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"Kyle is great and Naomi was super helpful in scheduling!\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "domain": null,
+              "title": "JWestTherapy",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "130 Fairfax Ave #100b, Louisville, KY 40207",
+              "address": "130 Fairfax Ave #100b, Louisville, KY 40207",
+              "address_info": {
+                "borough": null,
+                "address": "130 Fairfax Ave #100b",
+                "city": "Louisville",
+                "zip": "40207",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ3YdGl9t0aYgRPHmYgq4u-QM",
+              "phone": "+1502-785-7246",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=-PgC-O23TY4PSbNG7orWFg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=234.65977&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Mental health service",
+              "additional_categories": [
+                "Family counselor",
+                "Marriage or relationship counselor",
+                "Mediation service",
+                "Psychotherapist"
+              ],
+              "category_ids": [
+                "mental_health_service",
+                "family_counselor",
+                "marriage_counselor",
+                "mediation_service",
+                "psychotherapist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886974db974687dd:0x3f92eae8298793c",
+              "cid": "286311378364954940",
+              "latitude": 38.2509698,
+              "longitude": -85.6504892,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 5,
+              "rank_absolute": 5,
+              "domain": "eandbortho.com",
+              "title": "Ellis & Badenhausen Physical Therapy St. Matthews",
+              "original_title": null,
+              "url": "https://eandbortho.com/physical-therapy/?utm_source=GBP&utm_medium=PT_StMatthewsOffice",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/115154741127689925656",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 173,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 1,
+                "3": 0,
+                "4": 2,
+                "5": 170
+              },
+              "snippet": "145 Thierman Ln, Louisville, KY 40207",
+              "address": "145 Thierman Ln, Louisville, KY 40207",
+              "address_info": {
+                "borough": null,
+                "address": "145 Thierman Ln",
+                "city": "Louisville",
+                "zip": "40207",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJqRvMV9R1aYgRIu9jItzvi8E",
+              "phone": "+1502-242-8444",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHu3gEQ21oaBDKLsSUtqqakoI8U5tVR79kEyJPWAeerxGL6RdDs6y782CQXRcQycFYFtoTq96HAoFhRsLeJ65x_H8ZLln7Z2r3cVjP26bQxVa2UiLaDSERLfVZVE9aRIWSP3YLvOlFlZhZE=w408-h326-k-no",
+              "total_photos": 9,
+              "category": "Physical therapy clinic",
+              "additional_categories": [
+                "Physical therapist"
+              ],
+              "category_ids": [
+                "physiotherapy_center",
+                "physiotherapist"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 15,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886975d457cc1ba9:0xc18befdc2263ef22",
+              "cid": "13946504399831691042",
+              "latitude": 38.2543776,
+              "longitude": -85.6438936,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"After just one session I feel physically better than I have in 4 months.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 6,
+              "rank_absolute": 6,
+              "domain": "www.eandbortho.com",
+              "title": "Courtney Campbell, PT, DPT",
+              "original_title": null,
+              "url": "https://www.eandbortho.com/physical-therapists.html?utm_source=GMBSocialClimb&utm_medium=CourtneyCampbell,PT,DPT",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/113391041641206116219",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 37,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 37
+              },
+              "snippet": "145 Thierman Ln, Louisville, KY 40207",
+              "address": "145 Thierman Ln, Louisville, KY 40207",
+              "address_info": {
+                "borough": null,
+                "address": "145 Thierman Ln",
+                "city": "Louisville",
+                "zip": "40207",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJpxUC2QOnaYgRifXiEptTOTU",
+              "phone": "+1502-587-1236",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF2jLfW8rMXksEpTWjxPbNwFKibqOYFAURJ0GMv0LFHNPgHcknCF4xj8iXlkbSBvaFlDoaphxrmsiQiXiMIMC1Hg2kjMhRNFY38_iGX5wnrYifnmVM1g7qOwy75QJ-LwsgPMicC=w426-h240-k-no",
+              "total_photos": 3,
+              "category": "Physical therapist",
+              "additional_categories": null,
+              "category_ids": [
+                "physiotherapist"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x8869a703d90215a7:0x3539539b12e2f589",
+              "cid": "3835188483184588169",
+              "latitude": 38.2543776,
+              "longitude": -85.6438936,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"she really did make a huge difference in me getting so much better.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 7,
+              "rank_absolute": 7,
+              "domain": "www.revitalifemd.com",
+              "title": "RevitaLife MD",
+              "original_title": null,
+              "url": "https://www.revitalifemd.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-website",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/109261923403683701450",
+              "book_online_url": "https://www.mindbodyonline.com/explore/locations/revitalifemd?rwg_token=AE37R_hjxFjAPQGdfuqz45DpN-8SgNG321zSojVCWY4Ai1SSr316hGDNanFHS35fM7B-fWdcqoPxZ-MW_UhhctSC1xx6EqT5Ew%3D%3D",
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.9,
+                "votes_count": 432,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 5,
+                "2": 6,
+                "3": 1,
+                "4": 6,
+                "5": 414
+              },
+              "snippet": "4050 Shelbyville Rd, Louisville, KY 40207",
+              "address": "4050 Shelbyville Rd, Louisville, KY 40207",
+              "address_info": {
+                "borough": null,
+                "address": "4050 Shelbyville Rd",
+                "city": "Louisville",
+                "zip": "40207",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJR5GIz6t1aYgRwgmPWIfhGtk",
+              "phone": "+1502-272-4801",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEGviZEx71b-K_6xMiS1jCyVFQHHCAD8srMGery-ms3mIiTgxJosVGhpVTSSvWBGfrOfk3lFp81dGAK62LFWgkNTrpAB1-6ZwJg219jLOXJUhZotRvpMDFlyMmKXU8b6POQAIpG1YYSo_SI=w408-h510-k-no",
+              "total_photos": 211,
+              "category": "Medical clinic",
+              "additional_categories": [
+                "Doctor",
+                "Skin care clinic",
+                "Weight loss service"
+              ],
+              "category_ids": [
+                "medical_clinic",
+                "doctor",
+                "skin_care_clinic",
+                "weight_loss_service"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886975abcf889147:0xd91ae187588f09c2",
+              "cid": "15644064227047442882",
+              "latitude": 38.2520963,
+              "longitude": -85.6487276,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"The type/variety of treatments offered and the cost are unbeatable.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 8,
+              "rank_absolute": 8,
+              "domain": "bellatoxboutique.com",
+              "title": "BellaTox Boutique",
+              "original_title": null,
+              "url": "https://bellatoxboutique.com/",
+              "contact_url": "https://book2.getweave.com/9cb18d03-ff10-4f6a-88b4-2840c7c71826/request-appointment?source=GOOGLE_BUSINESS_PROFILE",
+              "contributor_url": "https://maps.google.com/maps/contrib/114694960488403302006",
+              "book_online_url": "https://app.squareup.com/appointments/book/s30clfjm3nbdyr/13GKZE1AA0VT2/start?rwg_token=AE37R_hI-49AJJExxo6pykELVgKL_oj_9SOK3OrjB2wcW8Yjc-Z2Wm_D5Do7teWst9n61nKY9N61Sog_kFdqB9q68pUjssgvAA%3D%3D",
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.8,
+                "votes_count": 356,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 11,
+                "2": 4,
+                "3": 1,
+                "4": 2,
+                "5": 338
+              },
+              "snippet": "217 Breckenridge Ln, Louisville, KY 40207",
+              "address": "217 Breckenridge Ln, Louisville, KY 40207",
+              "address_info": {
+                "borough": null,
+                "address": "217 Breckenridge Ln",
+                "city": "Louisville",
+                "zip": "40207",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJB-ngm3FzaYgR-Dfak4xTf2c",
+              "phone": "+1502-432-5878",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFv82dxJqX1cwoFfxbk9SikjPKI5l0mXbqNZWFhqmBN-3yWWujzCngs5S4tO8DrN-apamAPjO2JeTIuBKSZZHPNMLvawM3e9_wPxzv1iw5KKSnTctBrLa7jgKaQbHqv-lQ7CTnQ=w408-h300-k-no",
+              "total_photos": 56,
+              "category": "Medical spa",
+              "additional_categories": null,
+              "category_ids": [
+                "medical_spa"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 15,
+                        "minute": 30
+                      }
+                    }
+                  ]
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886973719be0e907:0x677f538c93da37f8",
+              "cid": "7457771371189909496",
+              "latitude": 38.249578299999996,
+              "longitude": -85.65239,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"Lauren was super informative and well educated in her field.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 9,
+              "rank_absolute": 9,
+              "domain": "renewcounselingservices.org",
+              "title": "Renew Counseling and EMDR",
+              "original_title": null,
+              "url": "https://renewcounselingservices.org/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/114780627381064596166",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 3,
+                "votes_count": 4,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 2,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 2
+              },
+              "snippet": null,
+              "address": null,
+              "address_info": {
+                "borough": null,
+                "address": null,
+                "city": null,
+                "zip": null,
+                "region": null,
+                "country_code": null
+              },
+              "place_id": "ChIJk3y6HOl1aYgR286NJZdDJr0",
+              "phone": "+1502-653-7211",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHorJvfgzFZxsMpyEkMGTKvZEPSwDFSxrX9lIw6V_Gk5Qaw7zbZW5VX9y0ORT-yit9Ghk7WTduByJghEIP8h4L-o6wFsCja9f32lBw08Z8MNDeisUYB-1K-7GQmccBJI1iKHW25Ww=w427-h240-k-no",
+              "total_photos": 2,
+              "category": "Counselor",
+              "additional_categories": [
+                "Service establishment"
+              ],
+              "category_ids": [
+                "counselor",
+                "establishment_service"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886975e91cba7c93:0xbd264397258dcedb",
+              "cid": "13629655638732558043",
+              "latitude": 38.1887245,
+              "longitude": -85.6760015,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"Alante Gaines is a wonderful therapist.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 10,
+              "rank_absolute": 10,
+              "domain": "www.pilatesvillage.com",
+              "title": "Holly's Pilates Village",
+              "original_title": null,
+              "url": "https://www.pilatesvillage.com/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/117547634778963841964",
+              "book_online_url": "https://www.mindbodyonline.com/explore/locations/pilates-village?rwg_token=AE37R_jubj6vEhPm6Z7W-iknsax51NFvtQjrh6RRJ6gThbsLnWSiXgGT-ukjzbkdgxaUXe-AZ_z0gWUcq5bImc-cTjczVGW-Aw%3D%3D",
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 33,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 33
+              },
+              "snippet": "201 Meridian Ave, Louisville, KY 40207",
+              "address": "201 Meridian Ave, Louisville, KY 40207",
+              "address_info": {
+                "borough": null,
+                "address": "201 Meridian Ave",
+                "city": "Louisville",
+                "zip": "40207",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJAZwRHTV1aYgRPWbo8vokmEs",
+              "phone": "+1502-409-4200",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHM_z4UJZn0J2b9KEFAWOmo3yJmFXQ99Rabta7yN124YYpE23zgQvWwTs8aV8KJHvVH_GHndoj55-zTlJWANC2-wQw_rf8R_UGzTtaEueAV--6OpKI2LXRmG2k_1-0hakd_cFEwgw=w408-h306-k-no",
+              "total_photos": 77,
+              "category": "Pilates studio",
+              "additional_categories": [
+                "Yoga studio"
+              ],
+              "category_ids": [
+                "pilates_studio",
+                "yoga_studio"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 15,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886975351d119c01:0x4b9824faf2e8663d",
+              "cid": "5447144409540355645",
+              "latitude": 38.251214,
+              "longitude": -85.65170309999999,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"Private and group classes feel so personable and catered to me!\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 11,
+              "rank_absolute": 11,
+              "domain": "www.michellestillwagon.com",
+              "title": "Michelle Stillwagon LMFT, AASECT Certified Sex Therapist",
+              "original_title": null,
+              "url": "http://www.michellestillwagon.com/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/102711167132520251216",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.8,
+                "votes_count": 5,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 1,
+                "5": 4
+              },
+              "snippet": null,
+              "address": null,
+              "address_info": {
+                "borough": null,
+                "address": null,
+                "city": null,
+                "zip": null,
+                "region": null,
+                "country_code": null
+              },
+              "place_id": "ChIJSdl9Idt0aYgR1HyRMuLYuqM",
+              "phone": "+1502-417-9021",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFqT7LZ3zUrC_7rsqggPKd-_ZWsP0f5VaaItU2srtBBSv4p0CDECoI-kuzNpmpwSGGIje98eNED0yXgAJLfXSODv8rrlIPSTRtNizg4dAoNzhwijkfOGO96sjvSMSBneYzTS5DyrA=w408-h612-k-no",
+              "total_photos": 15,
+              "category": "Marriage or relationship counselor",
+              "additional_categories": [
+                "Counselor",
+                "Service establishment",
+                "Mental health service",
+                "Psychotherapist"
+              ],
+              "category_ids": [
+                "marriage_counselor",
+                "counselor",
+                "establishment_service",
+                "mental_health_service",
+                "psychotherapist"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 12,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 12,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 12,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": null,
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886974db217dd949:0xa3bad8e232917cd4",
+              "cid": "11797980639873039572",
+              "latitude": 36.6953514,
+              "longitude": -82.7788935,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

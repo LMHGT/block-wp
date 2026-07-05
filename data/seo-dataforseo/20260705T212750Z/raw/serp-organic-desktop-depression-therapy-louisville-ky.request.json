@@ -1,0 +1,16 @@
+{
+  "name": "serp-organic-desktop-depression therapy Louisville KY",
+  "method": "POST",
+  "path": "/v3/serp/google/organic/live/advanced",
+  "body": [
+    {
+      "keyword": "depression therapy Louisville KY",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "depth": 20,
+      "tag": "lmhg organic desktop depression therapy Louisville KY"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:00.176725+00:00"
+}

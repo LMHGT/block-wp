@@ -1,0 +1,13 @@
+{
+  "name": "llm-response-perplexity-Which Louisville mental health websites have useful service and referral information?",
+  "path": "/v3/ai_optimization/perplexity/llm_responses/live",
+  "body": [
+    {
+      "user_prompt": "Which Louisville mental health websites have useful service and referral information?",
+      "model_name": "sonar",
+      "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+      "tag": "lmhg llm response perplexity Which Louisville mental health websites have useful service and referral informa",
+      "max_output_tokens": 700
+    }
+  ]
+}

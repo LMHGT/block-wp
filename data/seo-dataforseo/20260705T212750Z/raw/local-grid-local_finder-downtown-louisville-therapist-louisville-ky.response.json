@@ -1,0 +1,142 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "1.3666 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-87b1a5496b44",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "1.2798 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "local_finder",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "local_finder",
+        "keyword": "therapist Louisville KY",
+        "location_coordinate": "38.2526647,-85.7584557,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid local_finder downtown-louisville therapist Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "therapist Louisville KY",
+          "type": "local_finder",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=therapist+Louisville+KY&oq=therapist+Louisville+KY&hl=en&gl=US&tbm=lcl&fll=38.2526647%2C-85.7584557&fspn=0.0028350891160214414%2C0.006474852561950684&fz=18&sll=38.2526647%2C-85.7584557&sspn=0.0028350891160214414%2C0.006474852561950684&sz=18",
+          "datetime": "2026-07-05 21:36:30 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "local_pack"
+          ],
+          "se_results_count": 0,
+          "items_count": 4,
+          "items": [
+            {
+              "type": "local_pack",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]",
+              "title": "Improved Dynamics ABA - Louisville, KY",
+              "description": "312 S 4th St · (571) 400-2860 \nClosed · Opens 7 AM Mon \n\"Overall, a fantastic choice for anyone seeking ABA services.!!\" \n",
+              "domain": "improveddynamicsaba.com",
+              "phone": "(571) 400-2860",
+              "booking_url": null,
+              "url": "https://improveddynamicsaba.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 8,
+                "rating_max": 5
+              },
+              "cid": "5099960698760385780",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]",
+              "title": "Steps Behavioral Care",
+              "description": "No reviews · Applied behavior analysis therapist \n312 S 4th St Ste700 · (786) 447-6341 \nClosed · Opens 9 AM Mon \n",
+              "domain": null,
+              "phone": "(786) 447-6341",
+              "booking_url": null,
+              "url": null,
+              "is_paid": false,
+              "rating": null,
+              "cid": "1753429238079149891",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[6]",
+              "title": "Cardinal Family Care",
+              "description": "312 S 4th St Ste 700 · (502) 804-5495 \nClosed · Opens 8 AM Mon \n\"Professional, kind, knowledgeable  of what exercises  benefit me the most.\" \n",
+              "domain": "www.cardinalfamilycare.com",
+              "phone": "(502) 804-5495",
+              "booking_url": null,
+              "url": "https://www.cardinalfamilycare.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.8,
+                "votes_count": 1300,
+                "rating_max": 5
+              },
+              "cid": "17887780695374312637",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[8]",
+              "title": "Sheila L. Kelly, LMT, Myofascial Release Therapist",
+              "description": "No reviews · Sports massage therapist \n#130, 40207, S Sherrin Ave #119 · (502) 741-4453 \nClosed · Opens 8 AM Mon \n",
+              "domain": null,
+              "phone": "(502) 741-4453",
+              "booking_url": null,
+              "url": null,
+              "is_paid": false,
+              "rating": null,
+              "cid": "3806980677629992999",
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

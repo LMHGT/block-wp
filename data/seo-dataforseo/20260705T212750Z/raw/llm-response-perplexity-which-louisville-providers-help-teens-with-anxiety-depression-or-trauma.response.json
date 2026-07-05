@@ -1,0 +1,101 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.7724 sec.",
+  "cost": 0.006308,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-13ecf2612e3c",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.7568 sec.",
+      "cost": 0.006308,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "perplexity",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "perplexity",
+        "user_prompt": "Which Louisville providers help teens with anxiety, depression, or trauma?",
+        "model_name": "sonar",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response perplexity Which Louisville providers help teens with anxiety, depression, or trauma?",
+        "max_output_tokens": 700
+      },
+      "result": [
+        {
+          "model_name": "sonar",
+          "input_tokens": 38,
+          "output_tokens": 670,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.005708,
+          "datetime": "2026-07-06 00:32:10 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Several Louisville providers specialize in helping teens (ages 12–17) with **anxiety**, **depression**, and **trauma**, offering both in-person and telehealth options:\n\n### **1. Grace Psychological Services**\n- **Focus:** Teen therapy for ages **13–17** using **CBT**, **DBT**, and **Trauma-Focused CBT (TF-CBT)**.\n- **Specialties:** Anxiety (31.9% of teens), depression (13.3% of teens), and trauma (80% symptom reduction in 12–16 sessions).\n- **Location:** In-person in **Louisville** (Lyndon, Prospect, Middletown) + online across **42 states**.\n- **Contact:** [louisvillegracepsychological.com/teen-therapy-louisville/](https://louisvillegracepsychological.com/teen-therapy-louisville/) [1]\n\n### **2. Creative Family Counseling**\n- **Focus:** Teens facing **low self-esteem**, **anxiety**, **depression**, **trauma**, and **suicidal ideation**.\n- **Specialties:** **TF-CBT**, **EMDR**, and **animal-assisted therapy** with therapy dogs.\n- **Location:** Campuses in **Prospect** and **Louisville** + online telehealth.\n- **Contact:** (502) 709-0410 | [creativefamilycounseling.org/therapy-for-teens/](https://creativefamilycounseling.org/therapy-for-teens/) [4]\n\n### **3. The Morton Center**\n- **Focus:** Adolescents **12–17** with **anxiety**, **depression**, **trauma**, and co-occurring **substance use**.\n- **Specialties:** Outpatient **Adolescent Recovery Program (ARP)** on Wednesdays (6:00–7:30 p.m.).\n- **Location:** Louisville (family-focused care).\n- **Contact:** [themortoncenter.org/adolescent/](https://themortoncenter.org/adolescent/) [2]\n\n### **4. Boys & Girls Haven (Haven Family Counseling)**\n- **Focus:** Children, adolescents, and families with **trauma/PTSD**, **anxiety**, **depression**, and **mood disorders**.\n- **Specialties:** Intensive in-home therapy + outpatient office in **Louisville** + telehealth.\n- **Contact:** [boysandgirlshaven.org/programs/haven-family-counseling/](https://boysandgirlshaven.org/programs/haven-family-counseling/) [5]\n\n### **5. Heartwood Therapy Place**\n- **Focus:** Teens and adults with **trauma**, **anxiety**, and **depression**.\n- **Specialties:** **EMDR**, woman-owned, accepts clients **with or without insurance**.\n- **Location:** Louisville + Southern Indiana; open Mon–Fri, 9 am–5 pm.\n- **Contact:** [heartwoodtherapyplace.com](https://heartwoodtherapyplace.com) [6]\n\n### **6. The Brook Hospitals (Teen Inpatient Program)**\n- **Focus:** Teens with severe **depression",
+                  "annotations": [
+                    {
+                      "title": "Teen Therapy in Louisville, KY | Expert Counseling for Teens",
+                      "url": "https://louisvillegracepsychological.com/teen-therapy-louisville/"
+                    },
+                    {
+                      "title": "Adolescent - The Morton Center",
+                      "url": "https://themortoncenter.org/adolescent/"
+                    },
+                    {
+                      "title": "Find Teen Psychiatrists in Louisville, KY - Psychology Today",
+                      "url": "https://www.psychologytoday.com/us/psychiatrists/ky/louisville?category=adolescents-teenagers-14-to-19"
+                    },
+                    {
+                      "title": "Therapy for Teens - Creative Family Counseling",
+                      "url": "https://creativefamilycounseling.org/therapy-for-teens/"
+                    },
+                    {
+                      "title": "Haven Family Counseling",
+                      "url": "https://boysandgirlshaven.org/programs/haven-family-counseling/"
+                    },
+                    {
+                      "title": "Heartwood Therapy Place | Strengthening Your Mental Health",
+                      "url": "https://heartwoodtherapyplace.com"
+                    },
+                    {
+                      "title": "Hagan Health: Mental Health Services Louisville KY",
+                      "url": "https://haganhealth.com"
+                    },
+                    {
+                      "title": "Mental and Behavioral Health | Louisville KY",
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/"
+                    },
+                    {
+                      "title": "Teen Inpatient Psychiatric Louisville KY - The Brook Hospitals",
+                      "url": "https://thebrookhospitals.com/programs/teens/psychiatric-inpatient/"
+                    },
+                    {
+                      "title": "Therapists for Teenagers (13-18) in Louisville, Kentucky - Zencare",
+                      "url": "https://zencare.co/us/kentucky/louisville/therapists/clientele/adolescents-teenagers"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": null
+        }
+      ]
+    }
+  ]
+}

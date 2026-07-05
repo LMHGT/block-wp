@@ -1,0 +1,16 @@
+{
+  "name": "serp-organic-desktop-case management Louisville KY",
+  "method": "POST",
+  "path": "/v3/serp/google/organic/live/advanced",
+  "body": [
+    {
+      "keyword": "case management Louisville KY",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "depth": 20,
+      "tag": "lmhg organic desktop case management Louisville KY"
+    }
+  ],
+  "started_at": "2026-07-05T21:27:55.784448+00:00"
+}
