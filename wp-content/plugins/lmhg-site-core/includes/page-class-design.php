@@ -10,6 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 add_filter( 'the_content', 'lmhg_site_core_render_page_class_design_sections', 28 );
+add_filter( 'render_block', 'lmhg_site_core_render_page_process_icon', 10, 2 );
+add_shortcode( 'lmhg_specialty_context', 'lmhg_site_core_specialty_context_shortcode' );
 
 /**
  * Adds conservative class-specific design sections without editing page bodies.
@@ -28,12 +30,16 @@ function lmhg_site_core_render_page_class_design_sections( string $content ): st
 	}
 
 	$template = lmhg_site_core_page_class_template_slug( $post );
+	if ( 'service-page' === $template && lmhg_site_core_page_content_owns_service_context( $post ) ) {
+		return $content;
+	}
+
 	$path     = lmhg_site_core_page_class_path( $post );
 	$section  = match ( $template ) {
 		'services-hub'         => lmhg_site_core_render_services_hub_design(),
-		'service-page'         => lmhg_site_core_render_service_page_design( $path ),
+		'service-page'         => '',
 		'specialties-hub'      => lmhg_site_core_render_specialties_hub_design(),
-		'specialty-page'       => lmhg_site_core_render_specialty_page_design( $path ),
+		'specialty-page'       => '',
 		'faq-hub'              => lmhg_site_core_render_faq_hub_design(),
 		'faq-page'             => lmhg_site_core_render_faq_page_design( $path ),
 		'article-hub'          => lmhg_site_core_render_article_hub_design(),
@@ -49,6 +55,106 @@ function lmhg_site_core_render_page_class_design_sections( string $content ): st
 	}
 
 	return lmhg_site_core_insert_before_page_cta( $content, $section );
+}
+
+/**
+ * Detects service pages whose Gutenberg content owns the service context.
+ *
+ * @param WP_Post $post Page post.
+ * @return bool
+ */
+function lmhg_site_core_page_content_owns_service_context( WP_Post $post ): bool {
+	$content = (string) $post->post_content;
+	return has_shortcode( $content, 'lmhg_service_specialties' );
+}
+
+/**
+ * Detects specialty pages whose Gutenberg content owns the specialty context.
+ *
+ * @param WP_Post $post Page post.
+ * @return bool
+ */
+function lmhg_site_core_page_content_owns_specialty_context( WP_Post $post ): bool {
+	$content = (string) $post->post_content;
+	return has_shortcode( $content, 'lmhg_specialty_context' );
+}
+
+/**
+ * Renders specialty-page parent and sibling context at an explicit content location.
+ *
+ * @param array<string,mixed>|string $atts Shortcode attributes.
+ * @return string
+ */
+function lmhg_site_core_specialty_context_shortcode( array|string $atts = array() ): string {
+	unset( $atts );
+
+	if ( is_admin() || ! is_singular( 'page' ) ) {
+		return '';
+	}
+
+	$post = get_post();
+	if ( ! $post instanceof WP_Post ) {
+		return '';
+	}
+
+	return lmhg_site_core_render_specialty_page_design( lmhg_site_core_page_class_path( $post ) );
+}
+
+/**
+ * Adds the selected icon at the top of service and specialty process sections.
+ *
+ * @param string $block_content Existing rendered block markup.
+ * @param array  $block Rendered block data.
+ * @return string
+ */
+function lmhg_site_core_render_page_process_icon( string $block_content, array $block ): string {
+	static $rendered_for_posts = array();
+
+	if ( is_admin() || ! is_singular( 'page' ) || ! in_the_loop() || ! is_main_query() ) {
+		return $block_content;
+	}
+
+	if ( 'core/group' !== ( $block['blockName'] ?? '' ) ) {
+		return $block_content;
+	}
+
+	$class_name = (string) ( $block['attrs']['className'] ?? '' );
+	$is_service_process   = str_contains( " {$class_name} ", ' wp2026-service-process ' );
+	$is_specialty_process = str_contains( " {$class_name} ", ' wp2026-specialty-process ' );
+	if ( ! $is_service_process && ! $is_specialty_process ) {
+		return $block_content;
+	}
+
+	$post = get_post();
+	if ( ! $post instanceof WP_Post ) {
+		return $block_content;
+	}
+
+	$template = lmhg_site_core_page_class_template_slug( $post );
+	if (
+		( 'service-page' !== $template && 'specialty-page' !== $template )
+		|| ( 'service-page' === $template && ! $is_service_process )
+		|| ( 'specialty-page' === $template && ! $is_specialty_process )
+	) {
+		return $block_content;
+	}
+
+	if ( isset( $rendered_for_posts[ $post->ID ] ) || ! function_exists( 'lmhg_site_core_page_process_icon_markup' ) ) {
+		return $block_content;
+	}
+
+	$icon = lmhg_site_core_page_process_icon_markup( $post );
+	if ( '' === $icon ) {
+		return $block_content;
+	}
+
+	if ( function_exists( 'lmhg_site_core_enqueue_relationship_assets' ) ) {
+		lmhg_site_core_enqueue_relationship_assets();
+	}
+
+	$rendered_for_posts[ $post->ID ] = true;
+
+	return preg_replace( '/(<div\s+class="[^"]*\b(?:wp2026-service-process|wp2026-specialty-process)\b[^"]*"[^>]*>)/i', '$1' . $icon, $block_content, 1 ) ?? $block_content;
 }
 
 /**
@@ -117,30 +223,6 @@ function lmhg_site_core_render_services_hub_design(): string {
 }
 
 /**
- * Renders broad service page enhancements.
- *
- * @param string $path Current path.
- * @return string
- */
-function lmhg_site_core_render_service_page_design( string $path ): string {
-	$family = lmhg_site_core_find_service_family( $path );
-	if ( empty( $family ) ) {
-		return '';
-	}
-
-	$children = ! empty( $family['children'] )
-		? lmhg_site_core_render_link_list( $family['children'], 'lmhg-page-class-link-list lmhg-page-class-link-list--chips' )
-		: '<p class="lmhg-page-class-note">This service family currently owns its own Core30 intent without direct child pages.</p>';
-
-	return sprintf(
-		'<section class="lmhg-page-class-guide lmhg-page-class-guide--service-page" aria-labelledby="lmhg-service-map-title"><p class="lmhg-page-class-eyebrow">Service family</p><h2 id="lmhg-service-map-title">%1$s pathway</h2><div class="lmhg-page-class-split"><div><p class="lmhg-page-class-lead">%2$s</p><p>Use this page to understand the broad service family, then compare the more specific pages that may fit the visitor&apos;s situation.</p></div><div class="lmhg-page-class-panel"><h3>Related options</h3>%3$s</div></div></section>',
-		esc_html( $family['title'] ),
-		esc_html( $family['description'] ),
-		$children
-	);
-}
-
-/**
  * Renders the specialties hub grouped by Core30 service family.
  *
  * @return string
@@ -191,12 +273,12 @@ function lmhg_site_core_render_specialty_page_design( string $path ): string {
 			esc_url( home_url( $parent['url'] ) ),
 			esc_html( $parent['title'] ),
 			esc_html( $parent['description'] ),
-			! empty( $siblings ) ? '<h4>Nearby options</h4>' . lmhg_site_core_render_link_list( $siblings, 'lmhg-page-class-link-list' ) : ''
+			! empty( $siblings ) ? '<h4>Related specialty pages</h4>' . lmhg_site_core_render_link_list( $siblings, 'lmhg-page-class-link-list' ) : ''
 		);
 	}
 
 	return sprintf(
-		'<section class="lmhg-page-class-guide lmhg-page-class-guide--specialty-page" aria-labelledby="lmhg-specialty-context-title"><p class="lmhg-page-class-eyebrow">Specific service context</p><h2 id="lmhg-specialty-context-title">Compare this option inside its broader care family.</h2><p class="lmhg-page-class-lead">A specialty page should answer one focused need while making its parent service context easy to understand.</p><div class="lmhg-page-class-grid">%s</div></section>',
+		'<section class="lmhg-page-class-guide lmhg-page-class-guide--specialty-page" aria-labelledby="lmhg-specialty-context-title"><h2 id="lmhg-specialty-context-title">How this specialty fits with broader care.</h2><p class="lmhg-page-class-lead">Use this page for the focused concern, then compare the broader service family if another starting point may fit better.</p><div class="lmhg-page-class-grid">%s</div></section>',
 		implode( '', $parent_cards )
 	);
 }
@@ -448,7 +530,6 @@ function lmhg_site_core_core30_service_families(): array {
 			'children'    => array(
 				array( 'title' => 'Case Management', 'url' => '/case-management/' ),
 				array( 'title' => 'Community Support', 'url' => '/community-support/' ),
-				array( 'title' => 'In-Home Therapy', 'url' => '/therapy-in-your-home/' ),
 			),
 		),
 		array(

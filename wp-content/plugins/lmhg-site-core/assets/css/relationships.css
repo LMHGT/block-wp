@@ -1,5 +1,39 @@
 .lmhg-relationship-section {
+	box-sizing: border-box;
+	margin-inline: auto;
 	margin-block: clamp(2rem, 5vw, 4rem);
+	max-width: 900px;
+	width: min(calc(100% - 36px), 900px);
+}
+
+.lmhg-relationship-section + .lmhg-relationship-section {
+	margin-block-start: clamp(2.4rem, 6vw, 4.8rem);
+}
+
+.page-template-service-page .lmhg-relationship-section {
+	max-width: 1180px;
+	width: 100%;
+}
+
+.page-template-specialty-page .lmhg-relationship-section.lmhg-related-pages {
+	max-width: 860px;
+	width: min(calc(100% - 36px), 860px);
+}
+
+.page-template-specialty-page .lmhg-relationship-section.lmhg-related-articles {
+	max-width: 1180px;
+	width: min(calc(100% - 36px), 1180px);
+}
+
+.page-template-specialty-page .lmhg-relationship-section.lmhg-faqs {
+	max-width: 860px;
+}
+
+@media (min-width: 1024px) {
+	.page-template-service-page .lmhg-relationship-section.lmhg-faqs {
+		max-width: 590px;
+		width: 50%;
+	}
 }
 
 .lmhg-relationship-section h2 {
@@ -8,10 +42,18 @@
 	line-height: 1.2;
 }
 
+.page-template-service-page .lmhg-relationship-section.lmhg-faqs > h2 {
+	margin-inline: auto;
+	text-align: left;
+	width: clamp(17.02rem, 30.95vw, 28.89rem);
+}
+
 .lmhg-relationship-section h3 {
 	margin: 0;
 	font-size: 1.05rem;
 	line-height: 1.25;
+	overflow-wrap: anywhere;
+	white-space: normal;
 }
 
 .lmhg-relationship-section p {
@@ -22,6 +64,19 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
 	gap: 1rem;
+}
+
+.lmhg-related-pages.lmhg-relationship-section--count-1 .lmhg-relationship-grid {
+	grid-template-columns: minmax(0, min(100%, 28rem));
+	justify-content: start;
+}
+
+.lmhg-related-pages.lmhg-relationship-section--count-2 .lmhg-relationship-grid {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.lmhg-related-pages.lmhg-relationship-section--count-3 .lmhg-relationship-grid {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .lmhg-relationship-card {
@@ -35,6 +90,33 @@
 	color: inherit;
 	text-decoration-thickness: 0.08em;
 	text-underline-offset: 0.18em;
+}
+
+.lmhg-page-process-icon,
+.lmhg-service-page-icon {
+	align-items: center;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto clamp(24px, 3.4vw, 42px);
+	width: clamp(88px, 9vw, 128px);
+}
+
+.lmhg-page-process-icon__image,
+.lmhg-service-page-icon__image {
+	display: block;
+	height: auto;
+	max-width: 100%;
+	object-fit: contain;
+	width: 100%;
+}
+
+@media (max-width: 680px) {
+	.lmhg-page-process-icon,
+	.lmhg-service-page-icon {
+		margin-bottom: 24px;
+		width: clamp(78px, 24vw, 96px);
+	}
 }
 
 .lmhg-faq-item {
@@ -96,4 +178,25 @@
 .lmhg-team-card__body p {
 	color: color-mix(in srgb, currentColor 72%, transparent);
 	font-size: 0.95rem;
+}
+
+@media (max-width: 1000px) {
+	.page-template-service-page .lmhg-relationship-section.lmhg-faqs > h2 {
+		width: clamp(12.38rem, 30.95vw, 20.64rem);
+	}
+}
+
+@media (max-width: 680px) {
+	.lmhg-related-pages.lmhg-relationship-section--count-2 .lmhg-relationship-grid,
+	.lmhg-related-pages.lmhg-relationship-section--count-3 .lmhg-relationship-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.page-template-service-page .lmhg-relationship-section {
+		width: min(calc(100% - 36px), 1180px);
+	}
+
+	.page-template-service-page .lmhg-relationship-section.lmhg-faqs > h2 {
+		width: clamp(14.96rem, 72.21vw, 20.64rem);
+	}
 }
