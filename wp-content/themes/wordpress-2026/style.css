@@ -584,17 +584,18 @@ footer.wp-block-template-part > hr {
   height: 78px;
   justify-content: center;
   margin: 0 auto 1.15rem !important;
+  overflow: hidden !important;
   width: 78px;
 }
 
 .wp2026-service-icon a {
   align-items: center;
   border-radius: inherit;
-  display: flex;
-  height: 100%;
+  display: flex !important;
+  height: 100% !important;
   justify-content: center;
   text-decoration: none;
-  width: 100%;
+  width: 100% !important;
 }
 
 .wp2026-service-icon a:focus-visible {
@@ -604,10 +605,13 @@ footer.wp-block-template-part > hr {
 
 .wp2026-service-icon img {
   display: block;
+  height: 52px !important;
   margin-inline: auto;
   max-height: 52px;
   max-width: 52px;
   object-fit: contain;
+  object-position: center;
+  width: 52px !important;
 }
 
 .wp2026-service-card-title {

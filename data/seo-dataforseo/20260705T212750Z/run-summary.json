@@ -1,14 +1,22 @@
 {
   "run_id": "20260705T212750Z",
   "run_dir": "/Users/tyler-lcsw/projects/lmhg-blockwp/data/seo-dataforseo/20260705T212750Z",
-  "known_spend_usd": 4.281544,
+  "known_spend_usd": 4.299044,
   "hard_cap_usd": 35.0,
   "checkpoint_usd": 25.0,
-  "call_count": 290,
+  "call_count": 295,
   "errors": [],
   "raw_dir": "/Users/tyler-lcsw/projects/lmhg-blockwp/data/seo-dataforseo/20260705T212750Z/raw",
   "slim_dir": "/Users/tyler-lcsw/projects/lmhg-blockwp/data/seo-dataforseo/20260705T212750Z/slim",
-  "last_update": "added Louisville city/DMA volume checks",
+  "last_update": "added launch on-page copy plan and five supplemental Louisville SERP checks",
+  "supplemental_onpage_launch_serp": {
+    "calls": 5,
+    "cost": 0.0175,
+    "location_code": 1017825,
+    "device": "desktop",
+    "depth": 20,
+    "ledger": "normalized/onpage-launch-serp-supplement.csv"
+  },
   "browser_ua_onpage_task_id": "07060031-9766-0216-0000-756e3a0a4fe0",
   "llm_response_wave": {
     "platforms": [

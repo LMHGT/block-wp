@@ -1,7 +1,27 @@
 # LMHG DataForSEO Louisville SEO and AI Visibility Baseline
 
 Run folder: `/Users/tyler-lcsw/projects/lmhg-blockwp/data/seo-dataforseo/20260705T212750Z`  
-Known DataForSEO spend: `$4.281544` across `290` logged paid/free result calls. This is below the `$25` checkpoint and `$35` working cap.
+Known DataForSEO spend: `$4.299044` across `295` tracked paid/free result calls, including five supplemental launch-copy SERP checks. This is below the `$25` checkpoint and `$35` working cap.
+
+## 2026-07-05 Launch On-Page Copy Supplement
+
+After the internal crawl gate was fixed for the WordPress 2026 development surface, I made a copy/FAQ pass against the current rendered site and the page-data export. The detailed launch plan now lives in:
+
+- `/Users/tyler-lcsw/projects/lmhg-blockwp/data/seo-dataforseo/20260705T212750Z/onpage-launch-copy-plan.md`
+- `/Users/tyler-lcsw/projects/lmhg-blockwp/data/seo-dataforseo/20260705T212750Z/normalized/onpage-launch-copy-actions.csv`
+- `/Users/tyler-lcsw/projects/lmhg-blockwp/data/seo-dataforseo/20260705T212750Z/normalized/onpage-launch-serp-supplement.csv`
+
+The short-term launch priorities are:
+
+1. Fix breadcrumb-polluted meta descriptions on service, specialty, location, FAQ, trust, and article pages.
+2. Verify that visible FAQ sections emit matching `FAQPage` JSON-LD, and only on pages where FAQ content is visible.
+3. Remove duplicate dated article/default post exposure from RSS feeds, or redirect feed-discoverable duplicates to canonical article routes.
+4. Regenerate production sitemap, canonical URLs, REST links, and `/llms.txt` so no Tailscale/internal hostnames appear after launch.
+5. Expand `/case-management/`, `/community-based-services/`, `/community-support/`, `/therapy-in-your-home/`, `/child-counseling/`, `/individual-counseling/`, `/anxiety-depression-therapy/`, `/family-therapy/`, and `/insurance/` with answer-first copy and page-specific FAQs.
+6. Add the real GBP-derived child-therapy FAQ about whether a four-year-old can receive services, with caregiver-involvement language.
+7. Strengthen internal links from homepage, services hub, specialties hub, insurance, cost FAQ, location pages, and articles to the canonical service owners.
+
+The supplement is intentionally on-page only. Backlinks, citations, GBP review work, and broader domain authority belong in medium- and long-term plans.
 
 ## What Was Run
 - SERP: organic top-20, organic depth-100 desktop/mobile, Local Finder, Maps, Google AI Mode, and local grid checks around Louisville.
@@ -11,7 +31,7 @@ Known DataForSEO spend: `$4.281544` across `290` logged paid/free result calls. 
 - Technical/link: OnPage crawl attempts, backlinks summary, backlinks detail, lost links, and referring domains.
 
 ## Executive Findings
-- DataForSEO OnPage is blocked before content crawl. Both default and browser-user-agent OnPage crawls ended with `forbidden_http_header`, `0` pages crawled, and the home URL reported non-indexable by HTTP header from gateway `168.119.141.170`. Local curl showed normal browsers and Googlebot get `200`, while an RSiteAuditor-like user agent gets `403`. Fix Cloudflare/security rules before using DataForSEO OnPage as the technical audit source.
+- The original DataForSEO OnPage crawl was blocked before content crawl. Both default and browser-user-agent OnPage crawls ended with `forbidden_http_header`, `0` pages crawled, and the home URL reported non-indexable by HTTP header from gateway `168.119.141.170`. The WordPress 2026 internal crawler gate has since been fixed for the Tailscale development surface and production hostnames, but a post-edit DataForSEO OnPage recrawl still needs to be run after the launch copy/schema changes.
 - AI answer visibility is weak. Direct LLM responses mentioned LMHG in `11/48` responses and cited the domain in `8/48`. Google AI Mode mentioned LMHG in `1/17` prompts and cited the domain in `0/17`.
 - The strongest organic asset is case management: LMHG ranked `#1` for `mental health case management Louisville KY` and `#3` for `case management Louisville KY` in live organic results. Preserve and expand this page rather than splitting it into a duplicate Targeted Case Management route.
 - The largest local keyword opportunities are `therapy Louisville KY`, `therapist Louisville KY`, and `counseling Louisville KY`. Observed city/DMA search volumes were 880/1300 for therapy and therapist, and 590/590 for counseling. LMHG is visible but not dominant for these head terms.

@@ -22,6 +22,8 @@ require_once __DIR__ . '/includes/importer.php';
 require_once __DIR__ . '/includes/editable-blocks.php';
 require_once __DIR__ . '/includes/redirects.php';
 require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/media-assets.php';
+require_once __DIR__ . '/includes/discovery.php';
 require_once __DIR__ . '/includes/accessibility.php';
 require_once __DIR__ . '/includes/surface-controls.php';
 require_once __DIR__ . '/includes/rendering.php';

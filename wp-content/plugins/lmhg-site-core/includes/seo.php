@@ -111,6 +111,11 @@ function lmhg_site_core_output_development_robots_meta(): void {
  * @return bool
  */
 function lmhg_site_core_should_suppress_indexing(): bool {
+	$suppress_indexing = getenv( 'LMHG_SUPPRESS_INDEXING' );
+	if ( '1' === $suppress_indexing || 'true' === strtolower( (string) $suppress_indexing ) ) {
+		return true;
+	}
+
 	if ( defined( 'LMHG_ALLOW_INDEXING' ) && LMHG_ALLOW_INDEXING ) {
 		return false;
 	}
@@ -120,7 +125,66 @@ function lmhg_site_core_should_suppress_indexing(): bool {
 		return false;
 	}
 
+	if ( lmhg_site_core_is_public_indexable_host() ) {
+		return false;
+	}
+
+	if ( lmhg_site_core_is_internal_crawl_surface() ) {
+		return false;
+	}
+
 	return true;
+}
+
+/**
+ * Allows the production domain to be crawlable without relying on host env flags.
+ *
+ * @return bool
+ */
+function lmhg_site_core_is_public_indexable_host(): bool {
+	$host = lmhg_site_core_request_host();
+
+	return in_array( $host, array( 'louisvillementalhealth.org', 'www.louisvillementalhealth.org' ), true );
+}
+
+/**
+ * Allows SEO analysis on private tailnet/local surfaces without exposing public hosts.
+ *
+ * @return bool
+ */
+function lmhg_site_core_is_internal_crawl_surface(): bool {
+	$host = lmhg_site_core_request_host();
+
+	if ( in_array( $host, array( 'localhost', '127.0.0.1', '::1' ), true ) || str_ends_with( $host, '.ts.net' ) ) {
+		return true;
+	}
+
+	if ( false === filter_var( $host, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4 ) ) {
+		return false;
+	}
+
+	$ip = ip2long( $host );
+	if ( false === $ip ) {
+		return false;
+	}
+
+	$tailnet_start = ip2long( '100.64.0.0' );
+	$tailnet_end   = ip2long( '100.127.255.255' );
+
+	return false !== $tailnet_start && false !== $tailnet_end && $ip >= $tailnet_start && $ip <= $tailnet_end;
+}
+
+/**
+ * Gets the normalized request host used for crawl-surface checks.
+ *
+ * @return string
+ */
+function lmhg_site_core_request_host(): string {
+	$request_host = isset( $_SERVER['HTTP_X_FORWARDED_HOST'] )
+		? sanitize_text_field( wp_unslash( $_SERVER['HTTP_X_FORWARDED_HOST'] ) )
+		: sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ?? '' ) );
+
+	return (string) preg_replace( '/:\d+$/', '', strtolower( $request_host ) );
 }
 
 /**
@@ -252,7 +316,8 @@ function lmhg_site_core_output_json_ld(): void {
 
 	$site_url = home_url( '/' );
 	$name     = get_bloginfo( 'name' );
-	$post_id  = lmhg_site_core_imported_post_id();
+	$imported_post_id = lmhg_site_core_imported_post_id();
+	$post_id  = 0 !== $imported_post_id || ! is_singular() ? $imported_post_id : (int) get_queried_object_id();
 
 	if ( 0 === $post_id ) {
 		$graph = array(
@@ -268,10 +333,10 @@ function lmhg_site_core_output_json_ld(): void {
 		);
 	} else {
 		$schema_type = trim( (string) get_post_meta( $post_id, '_lmhg_schema_type', true ) );
-		$schema_type = '' !== $schema_type ? $schema_type : ( is_front_page() ? 'WebPage' : 'Article' );
+		$schema_type = '' !== $schema_type ? $schema_type : ( is_singular( 'page' ) ? 'WebPage' : 'Article' );
 		$headline    = lmhg_site_core_normalize_core30_seo_copy( wp_strip_all_tags( get_the_title( $post_id ) ) );
-		$canonical   = lmhg_site_core_imported_canonical_url( $post_id );
-		$route       = lmhg_site_core_route_manifest_entry( $post_id );
+		$canonical   = 0 !== $imported_post_id ? lmhg_site_core_imported_canonical_url( $post_id ) : lmhg_site_core_current_canonical_url();
+		$route       = 0 !== $imported_post_id ? lmhg_site_core_route_manifest_entry( $post_id ) : array();
 
 		$page_graph = array(
 			'@context'     => 'https://schema.org',
@@ -293,13 +358,21 @@ function lmhg_site_core_output_json_ld(): void {
 			$graph_nodes[] = $breadcrumb;
 		}
 
-		$faq_items = lmhg_site_core_publishable_faq_items( $route );
+		$service = lmhg_site_core_core30_service_json_ld( $post_id, $headline, $canonical );
+		if ( ! empty( $service ) ) {
+			$graph_nodes[] = $service;
+		}
+
+		$faq_items = lmhg_site_core_json_ld_faq_items( $post_id, $route );
 		if ( empty( $faq_items ) && 1 === count( $graph_nodes ) ) {
 			$graph = $page_graph;
 		} else {
 			if ( ! empty( $faq_items ) ) {
+				$faq_url = '' !== $canonical ? $canonical : get_permalink( $post_id );
 				$graph_nodes[] = array(
+					'@id'        => trailingslashit( (string) $faq_url ) . '#faq',
 					'@type'      => 'FAQPage',
+					'url'        => $faq_url,
 					'mainEntity' => array_map(
 						static fn( array $item ): array => array(
 							'@type'          => 'Question',
@@ -325,6 +398,109 @@ function lmhg_site_core_output_json_ld(): void {
 		'<script type="application/ld+json">%s</script>' . "\n",
 		wp_json_encode( $graph, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE )
 	);
+}
+
+/**
+ * Builds a local service schema node for Core30 service and specialty pages.
+ *
+ * @param int    $post_id Post ID.
+ * @param string $headline Page headline.
+ * @param string $canonical Canonical URL.
+ * @return array<string,mixed>
+ */
+function lmhg_site_core_core30_service_json_ld( int $post_id, string $headline, string $canonical ): array {
+	$template = get_page_template_slug( $post_id );
+	if ( ! in_array( $template, array( 'service-page', 'specialty-page' ), true ) ) {
+		return array();
+	}
+
+	$url = '' !== $canonical ? $canonical : get_permalink( $post_id );
+	if ( ! is_string( $url ) || '' === $url ) {
+		return array();
+	}
+
+	return array(
+		'@type'       => 'Service',
+		'@id'         => trailingslashit( $url ) . '#service',
+		'name'        => $headline,
+		'serviceType' => $headline,
+		'url'         => $url,
+		'provider'    => lmhg_site_core_local_provider_json_ld(),
+		'areaServed'  => lmhg_site_core_louisville_area_served_json_ld(),
+	);
+}
+
+/**
+ * Builds the LMHG provider node used by local service schema.
+ *
+ * @return array<string,mixed>
+ */
+function lmhg_site_core_local_provider_json_ld(): array {
+	return array(
+		'@type'     => 'MedicalOrganization',
+		'@id'       => home_url( '/#organization' ),
+		'name'      => 'Louisville Mental Health Group',
+		'url'       => home_url( '/' ),
+		'telephone' => '+15024161416',
+		'address'   => array(
+			'@type'           => 'PostalAddress',
+			'streetAddress'   => '4229 Bardstown Rd, Suite 310',
+			'addressLocality' => 'Louisville',
+			'addressRegion'   => 'KY',
+			'postalCode'      => '40218',
+			'addressCountry'  => 'US',
+		),
+	);
+}
+
+/**
+ * Builds Louisville-area service coverage nodes.
+ *
+ * @return array<int,array<string,mixed>>
+ */
+function lmhg_site_core_louisville_area_served_json_ld(): array {
+	return array(
+		array(
+			'@type'   => 'City',
+			'name'    => 'Louisville',
+			'address' => array(
+				'@type'          => 'PostalAddress',
+				'addressRegion'  => 'KY',
+				'addressCountry' => 'US',
+			),
+		),
+		array(
+			'@type' => 'AdministrativeArea',
+			'name'  => 'Jefferson County, KY',
+		),
+	);
+}
+
+/**
+ * Gets FAQ items that are visible on the current rendered page.
+ *
+ * @param int                 $post_id Post ID.
+ * @param array<string,mixed> $route Route manifest entry.
+ * @return array<int,array{question:string,answer:string}>
+ */
+function lmhg_site_core_json_ld_faq_items( int $post_id, array $route ): array {
+	$uses_editable_blocks = function_exists( 'lmhg_site_core_has_editable_block_content' )
+		&& lmhg_site_core_has_editable_block_content( $post_id );
+
+	if ( $uses_editable_blocks ) {
+		return function_exists( 'lmhg_site_core_publishable_faq_items_for_page' )
+			? lmhg_site_core_publishable_faq_items_for_page( $post_id )
+			: array();
+	}
+
+	$route_items = lmhg_site_core_publishable_faq_items( $route );
+	if ( ! empty( $route_items ) ) {
+		return $route_items;
+	}
+
+	return function_exists( 'lmhg_site_core_publishable_faq_items_for_page' )
+		? lmhg_site_core_publishable_faq_items_for_page( $post_id )
+		: array();
 }
 
 /**

@@ -23,21 +23,31 @@ const LMHG_SITE_CORE_TEAM_LAST_META      = '_lmhg_team_last_name';
 const LMHG_SITE_CORE_TEAM_CREDENTIALS    = '_lmhg_team_credentials';
 const LMHG_SITE_CORE_TEAM_HEADSHOT_URL   = '_lmhg_team_headshot_url';
 const LMHG_SITE_CORE_SPECIALTY_FAQ_SEED_OPTION  = 'lmhg_specialty_placeholder_faq_seed_version';
-const LMHG_SITE_CORE_SPECIALTY_FAQ_SEED_VERSION = '2026-07-05-specialty-faq-placeholders-v1';
+const LMHG_SITE_CORE_SPECIALTY_FAQ_SEED_VERSION = '2026-07-05-specialty-faq-louisville-v3';
+const LMHG_SITE_CORE_SERVICE_FAQ_SEED_OPTION    = 'lmhg_service_faq_seed_version';
+const LMHG_SITE_CORE_SERVICE_FAQ_SEED_VERSION   = '2026-07-05-service-faq-louisville-v1';
+const LMHG_SITE_CORE_SEEDED_FAQ_ROLE_META       = '_lmhg_seeded_faq_role';
 const LMHG_SITE_CORE_SERVICE_SPECIALTY_SEED_OPTION  = 'lmhg_service_specialty_relationship_seed_version';
 const LMHG_SITE_CORE_SERVICE_SPECIALTY_SEED_VERSION = '2026-07-05-service-specialty-taxonomy-v1';
 const LMHG_SITE_CORE_RELATED_PAGE_TERM_SEED_OPTION  = 'lmhg_related_page_term_metadata_seed_version';
 const LMHG_SITE_CORE_RELATED_PAGE_TERM_SEED_VERSION = '2026-07-05-related-page-term-metadata-v1';
 const LMHG_SITE_CORE_IN_HOME_SPECIALTY_CLEANUP_OPTION  = 'lmhg_in_home_specialty_cleanup_version';
 const LMHG_SITE_CORE_IN_HOME_SPECIALTY_CLEANUP_VERSION = '2026-07-05-in-home-location-v1';
+const LMHG_SITE_CORE_IN_HOME_RELATED_TERMS_OPTION      = 'lmhg_in_home_related_terms_version';
+const LMHG_SITE_CORE_IN_HOME_RELATED_TERMS_VERSION     = '2026-07-05-in-home-related-terms-v1';
+const LMHG_SITE_CORE_GROUP_RELATED_TERMS_OPTION        = 'lmhg_group_therapy_related_terms_version';
+const LMHG_SITE_CORE_GROUP_RELATED_TERMS_VERSION       = '2026-07-05-group-therapy-related-terms-v1';
 
 add_action( 'init', 'lmhg_site_core_register_relationship_taxonomies', 8 );
 add_action( 'init', 'lmhg_site_core_register_relationship_post_types', 9 );
 add_action( 'init', 'lmhg_site_core_register_relationship_meta', 10 );
 add_action( 'init', 'lmhg_site_core_seed_related_page_terms', 28 );
 add_action( 'init', 'lmhg_site_core_seed_service_specialty_relationships', 29 );
-add_action( 'init', 'lmhg_site_core_seed_specialty_placeholder_faqs', 30 );
-add_action( 'init', 'lmhg_site_core_cleanup_in_home_specialty_classification', 31 );
+add_action( 'init', 'lmhg_site_core_seed_in_home_related_terms', 30 );
+add_action( 'init', 'lmhg_site_core_seed_group_therapy_related_terms', 30 );
+add_action( 'init', 'lmhg_site_core_seed_core30_service_faqs', 30 );
+add_action( 'init', 'lmhg_site_core_seed_specialty_placeholder_faqs', 31 );
+add_action( 'init', 'lmhg_site_core_cleanup_in_home_specialty_classification', 32 );
 add_action( 'add_meta_boxes', 'lmhg_site_core_add_relationship_meta_boxes' );
 add_action( 'save_post_post', 'lmhg_site_core_save_article_relationship_meta', 10, 2 );
 add_action( 'save_post_post', 'lmhg_site_core_save_article_card_description_meta', 10, 2 );
@@ -53,6 +63,7 @@ add_action( 'wp_enqueue_scripts', 'lmhg_site_core_register_relationship_assets' 
 add_filter( 'the_content', 'lmhg_site_core_append_relationship_sections', 30 );
 add_shortcode( 'lmhg_service_specialties', 'lmhg_site_core_service_specialties_shortcode' );
 add_shortcode( 'lmhg_faqs', 'lmhg_site_core_faqs_shortcode' );
+add_shortcode( 'lmhg_core30_template_faqs', 'lmhg_site_core_core30_template_faqs_shortcode' );
 add_shortcode( 'lmhg_faq_index', 'lmhg_site_core_faq_index_shortcode' );
 add_shortcode( 'lmhg_article_pages', 'lmhg_site_core_article_pages_shortcode' );
 add_shortcode( 'lmhg_related_pages', 'lmhg_site_core_related_pages_shortcode' );
@@ -394,6 +405,101 @@ function lmhg_site_core_service_specialty_relationship_seed_items(): array {
 }
 
 /**
+ * Assigns existing community-based relationship terms to the in-home service page.
+ */
+function lmhg_site_core_seed_in_home_related_terms(): void {
+	if (
+		LMHG_SITE_CORE_IN_HOME_RELATED_TERMS_VERSION === (string) get_option( LMHG_SITE_CORE_IN_HOME_RELATED_TERMS_OPTION, '' )
+		|| ! taxonomy_exists( LMHG_SITE_CORE_SPECIALTY_TAXONOMY )
+	) {
+		return;
+	}
+
+	$page = get_page_by_path( 'therapy-in-your-home', OBJECT, 'page' );
+	if ( ! $page instanceof WP_Post ) {
+		return;
+	}
+
+	$term_ids = array();
+	foreach ( lmhg_site_core_in_home_related_term_seed_items() as $slug => $label ) {
+		$term_id = lmhg_site_core_ensure_related_page_term( $slug, $label );
+		if ( $term_id <= 0 ) {
+			return;
+		}
+
+		$term_ids[] = $term_id;
+	}
+
+	$result = wp_set_object_terms( $page->ID, $term_ids, LMHG_SITE_CORE_SPECIALTY_TAXONOMY, true );
+	if ( is_wp_error( $result ) ) {
+		return;
+	}
+
+	update_option( LMHG_SITE_CORE_IN_HOME_RELATED_TERMS_OPTION, LMHG_SITE_CORE_IN_HOME_RELATED_TERMS_VERSION, false );
+}
+
+/**
+ * Returns related pages for the in-home service page shortcode surface.
+ *
+ * @return array<string,string>
+ */
+function lmhg_site_core_in_home_related_term_seed_items(): array {
+	return array(
+		'community-based-services' => 'Community-Based Services',
+		'case-management'          => 'Case Management',
+		'community-support'        => 'Community Support',
+	);
+}
+
+/**
+ * Assigns related service terms to the group therapy page.
+ */
+function lmhg_site_core_seed_group_therapy_related_terms(): void {
+	if (
+		LMHG_SITE_CORE_GROUP_RELATED_TERMS_VERSION === (string) get_option( LMHG_SITE_CORE_GROUP_RELATED_TERMS_OPTION, '' )
+		|| ! taxonomy_exists( LMHG_SITE_CORE_SPECIALTY_TAXONOMY )
+	) {
+		return;
+	}
+
+	$page = get_page_by_path( 'group-therapy', OBJECT, 'page' );
+	if ( ! $page instanceof WP_Post ) {
+		return;
+	}
+
+	$term_ids = array();
+	foreach ( lmhg_site_core_group_therapy_related_term_seed_items() as $slug => $label ) {
+		$term_id = lmhg_site_core_ensure_related_page_term( $slug, $label );
+		if ( $term_id <= 0 ) {
+			return;
+		}
+
+		$term_ids[] = $term_id;
+	}
+
+	$result = wp_set_object_terms( $page->ID, $term_ids, LMHG_SITE_CORE_SPECIALTY_TAXONOMY, true );
+	if ( is_wp_error( $result ) ) {
+		return;
+	}
+
+	update_option( LMHG_SITE_CORE_GROUP_RELATED_TERMS_OPTION, LMHG_SITE_CORE_GROUP_RELATED_TERMS_VERSION, false );
+}
+
+/**
+ * Returns related pages for the group therapy shortcode surface.
+ *
+ * @return array<string,string>
+ */
+function lmhg_site_core_group_therapy_related_term_seed_items(): array {
+	return array(
+		'individual-counseling' => 'Individual Counseling',
+		'child-counseling'      => 'Child Counseling',
+		'family-therapy'        => 'Family Therapy',
+		'trauma-therapy'        => 'Trauma Therapy',
+	);
+}
+
+/**
  * Ensures a specialty taxonomy term exists for a related page relationship.
  *
  * @param string $slug Term slug.
@@ -402,6 +508,92 @@ function lmhg_site_core_service_specialty_relationship_seed_items(): array {
  */
 function lmhg_site_core_ensure_service_specialty_term( string $slug, string $name ): int {
 	return lmhg_site_core_ensure_related_page_term( $slug, $name );
+}
+
+/**
+ * Seeds editable Louisville FAQ records for Core30 service-family pages.
+ */
+function lmhg_site_core_seed_core30_service_faqs(): void {
+	if (
+		LMHG_SITE_CORE_SERVICE_FAQ_SEED_VERSION === (string) get_option( LMHG_SITE_CORE_SERVICE_FAQ_SEED_OPTION, '' )
+		|| ! post_type_exists( LMHG_SITE_CORE_FAQ_POST_TYPE )
+		|| ! taxonomy_exists( LMHG_SITE_CORE_FAQ_SET_TAXONOMY )
+	) {
+		return;
+	}
+
+	$complete = true;
+
+	foreach ( lmhg_site_core_core30_service_faq_seed_items() as $page_slug => $label ) {
+		$page = get_page_by_path( $page_slug, OBJECT, 'page' );
+		if ( ! $page instanceof WP_Post ) {
+			$complete = false;
+			continue;
+		}
+
+		$term_id = lmhg_site_core_ensure_core30_faq_set( $page_slug, $label, 'Service FAQ set for the ' . $label . ' Core30 page.' );
+		if ( $term_id <= 0 ) {
+			$complete = false;
+			continue;
+		}
+
+		wp_set_object_terms( $page->ID, array( $term_id ), LMHG_SITE_CORE_FAQ_SET_TAXONOMY, true );
+
+		foreach ( lmhg_site_core_core30_service_faq_posts( $page_slug, $label ) as $faq ) {
+			$faq_id = lmhg_site_core_ensure_seeded_faq_post( $faq, $term_id );
+			if ( $faq_id <= 0 ) {
+				$complete = false;
+			}
+		}
+	}
+
+	if ( $complete ) {
+		update_option( LMHG_SITE_CORE_SERVICE_FAQ_SEED_OPTION, LMHG_SITE_CORE_SERVICE_FAQ_SEED_VERSION, false );
+	}
+}
+
+/**
+ * Returns Core30 service-family pages that need crawlable starter FAQ content.
+ *
+ * @return array<string,string>
+ */
+function lmhg_site_core_core30_service_faq_seed_items(): array {
+	return array(
+		'individual-counseling'    => 'Individual Counseling',
+		'child-counseling'         => 'Child Therapy',
+		'family-therapy'           => 'Family Therapy',
+		'couples-counseling'       => 'Couples Counseling',
+		'court-ordered'            => 'Court-Ordered Services',
+		'community-based-services' => 'Community-Based Mental Health Services',
+		'group-therapy'            => 'Group Therapy',
+		'trauma-therapy'           => 'Trauma Therapy',
+	);
+}
+
+/**
+ * Returns Louisville-ready starter FAQ posts for one Core30 service page.
+ *
+ * @param string $slug Service page slug.
+ * @param string $label Service display label.
+ * @return array<int,array{slug:string,title:string,content:string,order:int,role:string}>
+ */
+function lmhg_site_core_core30_service_faq_posts( string $slug, string $label ): array {
+	return array(
+		array(
+			'slug'    => 'service-' . $slug . '-faq-louisville',
+			'title'   => 'Does LMHG offer ' . $label . ' in Louisville, KY?',
+			'content' => 'Louisville Mental Health Group offers ' . $label . ' for Louisville-area clients and families when the service is a good fit. Availability can depend on provider capacity, insurance, care setting, and whether office-based, telehealth, in-home, school-based, or community-based support is appropriate.',
+			'order'   => 10,
+			'role'    => 'service-' . $slug . '-louisville',
+		),
+		array(
+			'slug'    => 'service-' . $slug . '-faq-fit',
+			'title'   => 'How do I know if ' . $label . ' is the right starting point?',
+			'content' => 'Start with what is happening now, who needs support, and any practical constraints such as schedule, location, insurance, transportation, or family involvement. The office can help compare ' . $label . ' with related LMHG services before scheduling.',
+			'order'   => 20,
+			'role'    => 'service-' . $slug . '-fit',
+		),
+	);
 }
 
 /**
@@ -467,17 +659,17 @@ function lmhg_site_core_specialty_placeholder_faq_seed_items(): array {
 		'parenting-support'             => 'Parenting Support',
 		'play-therapy'                  => 'Play Therapy',
 		'relationship-counseling'       => 'Relationship Counseling',
+		'therapy-in-your-home'          => 'In-Home Therapy',
 	);
 }
 
 /**
- * Removes the old In-Home specialty classification while leaving the location page intact.
+ * Removes the old In-Home specialty classification while leaving page FAQ data intact.
  */
 function lmhg_site_core_cleanup_in_home_specialty_classification(): void {
 	if (
 		LMHG_SITE_CORE_IN_HOME_SPECIALTY_CLEANUP_VERSION === (string) get_option( LMHG_SITE_CORE_IN_HOME_SPECIALTY_CLEANUP_OPTION, '' )
 		|| ! taxonomy_exists( LMHG_SITE_CORE_SPECIALTY_TAXONOMY )
-		|| ! taxonomy_exists( LMHG_SITE_CORE_FAQ_SET_TAXONOMY )
 	) {
 		return;
 	}
@@ -487,14 +679,6 @@ function lmhg_site_core_cleanup_in_home_specialty_classification(): void {
 	$specialty_term = get_term_by( 'slug', 'therapy-in-your-home', LMHG_SITE_CORE_SPECIALTY_TAXONOMY );
 	if ( $specialty_term instanceof WP_Term ) {
 		$deleted = wp_delete_term( (int) $specialty_term->term_id, LMHG_SITE_CORE_SPECIALTY_TAXONOMY );
-		if ( is_wp_error( $deleted ) || false === $deleted ) {
-			$complete = false;
-		}
-	}
-
-	$faq_term = get_term_by( 'slug', 'therapy-in-your-home', LMHG_SITE_CORE_FAQ_SET_TAXONOMY );
-	if ( $faq_term instanceof WP_Term ) {
-		$deleted = wp_delete_term( (int) $faq_term->term_id, LMHG_SITE_CORE_FAQ_SET_TAXONOMY );
 		if ( is_wp_error( $deleted ) || false === $deleted ) {
 			$complete = false;
 		}
@@ -513,8 +697,32 @@ function lmhg_site_core_cleanup_in_home_specialty_classification(): void {
  * @return int
  */
 function lmhg_site_core_ensure_specialty_faq_set( string $slug, string $name ): int {
+	return lmhg_site_core_ensure_core30_faq_set( $slug, $name, 'Starter FAQ set for the ' . $name . ' specialty page.' );
+}
+
+/**
+ * Ensures a Core30 FAQ set term exists.
+ *
+ * @param string $slug Term slug.
+ * @param string $name Term display name.
+ * @param string $description Optional starter description.
+ * @return int
+ */
+function lmhg_site_core_ensure_core30_faq_set( string $slug, string $name, string $description ): int {
 	$term = get_term_by( 'slug', $slug, LMHG_SITE_CORE_FAQ_SET_TAXONOMY );
 	if ( $term instanceof WP_Term ) {
+		if ( '' !== trim( $description ) && '' === trim( (string) $term->description ) ) {
+			$result = wp_update_term(
+				(int) $term->term_id,
+				LMHG_SITE_CORE_FAQ_SET_TAXONOMY,
+				array( 'description' => $description )
+			);
+
+			if ( is_wp_error( $result ) ) {
+				return 0;
+			}
+		}
+
 		return (int) $term->term_id;
 	}
 
@@ -523,7 +731,7 @@ function lmhg_site_core_ensure_specialty_faq_set( string $slug, string $name ): 
 		LMHG_SITE_CORE_FAQ_SET_TAXONOMY,
 		array(
 			'slug'        => $slug,
-			'description' => 'Starter FAQ set for the ' . $name . ' specialty page.',
+			'description' => $description,
 		)
 	);
 
@@ -539,21 +747,23 @@ function lmhg_site_core_ensure_specialty_faq_set( string $slug, string $name ): 
  *
  * @param string $slug Specialty page slug.
  * @param string $label Specialty display label.
- * @return array<int,array{slug:string,title:string,content:string,order:int}>
+ * @return array<int,array{slug:string,title:string,content:string,order:int,role:string}>
  */
 function lmhg_site_core_specialty_placeholder_faq_posts( string $slug, string $label ): array {
 	return array(
 		array(
 			'slug'    => 'specialty-' . $slug . '-faq-fit',
-			'title'   => 'Is ' . $label . ' the right starting point?',
-			'content' => 'Start with the main concern, who needs support, preferred care setting, and insurance questions. LMHG can help confirm whether ' . $label . ' or another service is the most practical first step.',
+			'title'   => 'Is ' . $label . ' available in Louisville, KY?',
+			'content' => 'Louisville Mental Health Group can help confirm whether ' . $label . ' fits the concern, age, care setting, insurance, and current provider availability. If another LMHG service is a better first step, the office can help route the request.',
 			'order'   => 10,
+			'role'    => 'specialty-' . $slug . '-louisville',
 		),
 		array(
 			'slug'    => 'specialty-' . $slug . '-faq-start',
 			'title'   => 'How do I get started with ' . $label . '?',
-			'content' => 'Use the intake form or call (502) 416-1416 with the concern, availability needs, insurance questions, and any preferences for office-based, telehealth, in-home, school-based, or community-based support.',
+			'content' => 'Use the intake form or call (502) 416-1416 with the main concern, who needs support, insurance questions, and any preferences for office-based, telehealth, in-home, school-based, or community-based care in the Louisville area.',
 			'order'   => 20,
+			'role'    => 'specialty-' . $slug . '-start',
 		),
 	);
 }
@@ -561,11 +771,22 @@ function lmhg_site_core_specialty_placeholder_faq_posts( string $slug, string $l
 /**
  * Ensures a specialty FAQ post exists and is assigned to its FAQ set.
  *
- * @param array{slug:string,title:string,content:string,order:int} $faq FAQ seed data.
- * @param int                                                     $term_id FAQ set term ID.
+ * @param array{slug:string,title:string,content:string,order:int,role:string} $faq FAQ seed data.
+ * @param int                                                                 $term_id FAQ set term ID.
  * @return int
  */
 function lmhg_site_core_ensure_specialty_faq_post( array $faq, int $term_id ): int {
+	return lmhg_site_core_ensure_seeded_faq_post( $faq, $term_id );
+}
+
+/**
+ * Ensures a seeded FAQ post exists, preserving non-starter editor-authored content.
+ *
+ * @param array{slug:string,title:string,content:string,order:int,role:string} $faq FAQ seed data.
+ * @param int                                                                 $term_id FAQ set term ID.
+ * @return int
+ */
+function lmhg_site_core_ensure_seeded_faq_post( array $faq, int $term_id ): int {
 	$existing = get_posts(
 		array(
 			'name'           => $faq['slug'],
@@ -585,7 +806,7 @@ function lmhg_site_core_ensure_specialty_faq_post( array $faq, int $term_id ): i
 					'post_status'  => 'publish',
 					'post_name'    => $faq['slug'],
 					'post_title'   => $faq['title'],
-					'post_excerpt' => 'Starter specialty FAQ placeholder for backend editing.',
+					'post_excerpt' => 'Starter Core30 FAQ seeded by LMHG Site Core; edit in LMHG FAQs when local copy needs to change.',
 					'post_content' => '<!-- wp:paragraph --><p>' . esc_html( $faq['content'] ) . '</p><!-- /wp:paragraph -->',
 					'menu_order'   => $faq['order'],
 				)
@@ -596,11 +817,47 @@ function lmhg_site_core_ensure_specialty_faq_post( array $faq, int $term_id ): i
 		if ( is_wp_error( $faq_id ) ) {
 			return 0;
 		}
+	} else {
+		$existing_post = get_post( $faq_id );
+		if ( $existing_post instanceof WP_Post && lmhg_site_core_should_refresh_seeded_faq_post( $existing_post ) ) {
+			wp_update_post(
+				wp_slash(
+					array(
+						'ID'           => $faq_id,
+						'post_title'   => $faq['title'],
+						'post_excerpt' => 'Starter Core30 FAQ seeded by LMHG Site Core; edit in LMHG FAQs when local copy needs to change.',
+						'post_content' => '<!-- wp:paragraph --><p>' . esc_html( $faq['content'] ) . '</p><!-- /wp:paragraph -->',
+						'menu_order'   => $faq['order'],
+					)
+				)
+			);
+		}
 	}
 
+	update_post_meta( (int) $faq_id, LMHG_SITE_CORE_SEEDED_FAQ_ROLE_META, sanitize_key( $faq['role'] ) );
 	wp_set_object_terms( (int) $faq_id, array( $term_id ), LMHG_SITE_CORE_FAQ_SET_TAXONOMY, true );
 
 	return (int) $faq_id;
+}
+
+/**
+ * Allows older generated placeholder FAQs to be refreshed to Louisville-ready copy.
+ *
+ * @param WP_Post $post FAQ post.
+ * @return bool
+ */
+function lmhg_site_core_should_refresh_seeded_faq_post( WP_Post $post ): bool {
+	$excerpt = trim( wp_strip_all_tags( (string) $post->post_excerpt ) );
+
+	return in_array(
+		$excerpt,
+		array(
+			'Starter specialty FAQ placeholder for backend editing.',
+			'Starter service FAQ placeholder for backend editing.',
+			'Starter Core30 FAQ seeded by LMHG Site Core; edit in LMHG FAQs when local copy needs to change.',
+		),
+		true
+	);
 }
 
 /**
@@ -1232,7 +1489,7 @@ function lmhg_site_core_request_needs_relationship_assets(): bool {
 		return false;
 	}
 
-	foreach ( array( 'lmhg_service_specialties', 'lmhg_faqs', 'lmhg_faq_index', 'lmhg_article_pages', 'lmhg_related_pages', 'lmhg_related_articles', 'lmhg_team' ) as $shortcode ) {
+	foreach ( array( 'lmhg_service_specialties', 'lmhg_faqs', 'lmhg_core30_template_faqs', 'lmhg_faq_index', 'lmhg_article_pages', 'lmhg_related_pages', 'lmhg_related_articles', 'lmhg_team' ) as $shortcode ) {
 		if ( has_shortcode( $post->post_content, $shortcode ) ) {
 			return true;
 		}
@@ -1267,11 +1524,13 @@ function lmhg_site_core_append_relationship_sections( string $content ): string 
 	$raw      = (string) $post->post_content;
 
 	if ( 'page' === $post->post_type ) {
+		$template_owns_core30_faqs = in_array( get_page_template_slug( $post ), array( 'service-page', 'specialty-page' ), true );
+
 		if ( ! has_shortcode( $raw, 'lmhg_service_specialties' ) && ! has_shortcode( $raw, 'lmhg_related_pages' ) && has_term( '', LMHG_SITE_CORE_SPECIALTY_TAXONOMY, $post ) ) {
 			$sections[] = lmhg_site_core_render_taxonomy_related_pages( $post->ID );
 		}
 
-		if ( ! has_shortcode( $raw, 'lmhg_faqs' ) && ! has_shortcode( $raw, 'lmhg_faq_index' ) && has_term( '', LMHG_SITE_CORE_FAQ_SET_TAXONOMY, $post ) ) {
+		if ( ! $template_owns_core30_faqs && ! has_shortcode( $raw, 'lmhg_faqs' ) && ! has_shortcode( $raw, 'lmhg_faq_index' ) && has_term( '', LMHG_SITE_CORE_FAQ_SET_TAXONOMY, $post ) ) {
 			$sections[] = lmhg_site_core_render_faqs_for_page( $post->ID );
 		}
 
@@ -1488,9 +1747,40 @@ function lmhg_site_core_related_page_term_icon_image( WP_Post $page ): string {
 
 			return is_string( $image ) ? $image : '';
 		}
+
+		$fallback = lmhg_site_core_specialty_icon_fallback_data( (string) $term->slug );
+		if ( ! empty( $fallback['src'] ) ) {
+			return sprintf(
+				'<img src="%1$s" alt="" class="lmhg-page-process-icon__image" decoding="async" loading="lazy" />',
+				esc_url( $fallback['src'] )
+			);
+		}
 	}
 
 	return '';
+}
+
+/**
+ * Provides packaged specialty icon filenames when a term-level media override is unavailable.
+ *
+ * @param string $slug Specialty page slug.
+ * @return array{src:string,alt:string}
+ */
+function lmhg_site_core_specialty_icon_fallback_data( string $slug ): array {
+	if ( ! function_exists( 'lmhg_site_core_icon_asset_definition' ) || ! function_exists( 'lmhg_site_core_media_asset_role_url' ) ) {
+		return array();
+	}
+
+	$asset = lmhg_site_core_icon_asset_definition( 'specialty-icon', $slug );
+	$src   = ! empty( $asset['role'] ) ? lmhg_site_core_media_asset_role_url( (string) $asset['role'] ) : '';
+	if ( '' === $src ) {
+		return array();
+	}
+
+	return array(
+		'src' => $src,
+		'alt' => (string) ( $asset['alt'] ?? '' ),
+	);
 }
 
 /**
@@ -1612,25 +1902,19 @@ function lmhg_site_core_home_service_icon_from_content( string $content, string 
  * @return array{src:string,alt:string}
  */
 function lmhg_site_core_home_service_icon_fallback_data( string $slug ): array {
-	$icons = array(
-		'individual-counseling'       => array( 'individual-counseling-card-icon-transparent.webp', 'Individual Counseling icon' ),
-		'child-counseling'            => array( 'child-counseling-card-icon-transparent.webp', 'Child Therapy icon' ),
-		'family-therapy'              => array( 'family-therapy-card-icon-transparent.webp', 'Family Therapy icon' ),
-		'couples-counseling'          => array( 'couples-counseling-card-icon-transparent.webp', 'Couples Counseling icon' ),
-		'court-ordered'               => array( 'court-ordered-card-icon-transparent.webp', 'Court Ordered Services icon' ),
-		'community-based-services'    => array( 'community-based-services-card-icon-transparent.webp', 'Community-Based Services icon' ),
-		'group-therapy'               => array( 'group-therapy-card-icon-transparent.webp', 'Group Therapy icon' ),
-		'trauma-therapy'              => array( 'trauma-therapy-card-icon-transparent.webp', 'Trauma Therapy icon' ),
-	);
-
-	if ( ! isset( $icons[ $slug ] ) ) {
+	if ( ! function_exists( 'lmhg_site_core_icon_asset_definition' ) || ! function_exists( 'lmhg_site_core_media_asset_role_url' ) ) {
 		return array();
 	}
 
-	$src = '/wp-content/uploads/2026/06/' . $icons[ $slug ][0];
+	$asset = lmhg_site_core_icon_asset_definition( 'service-icon', $slug );
+	$src   = ! empty( $asset['role'] ) ? lmhg_site_core_media_asset_role_url( (string) $asset['role'] ) : '';
+	if ( '' === $src ) {
+		return array();
+	}
+
 	return array(
 		'src' => $src,
-		'alt' => $icons[ $slug ][1],
+		'alt' => (string) ( $asset['alt'] ?? '' ),
 	);
 }
 
@@ -1722,6 +2006,43 @@ function lmhg_site_core_faqs_shortcode( array|string $atts = array() ): string {
 }
 
 /**
+ * Renders template-level Core30 FAQs only when page content does not already own them.
+ *
+ * @param array<string,mixed>|string $atts Shortcode attributes.
+ * @return string
+ */
+function lmhg_site_core_core30_template_faqs_shortcode( array|string $atts = array() ): string {
+	$atts = is_array( $atts ) ? $atts : array();
+	$atts = shortcode_atts(
+		array(
+			'heading' => 'Common Questions',
+		),
+		$atts,
+		'lmhg_core30_template_faqs'
+	);
+
+	if ( is_admin() || ! is_singular( 'page' ) ) {
+		return '';
+	}
+
+	$post = get_post();
+	if ( ! $post instanceof WP_Post ) {
+		return '';
+	}
+
+	if ( ! in_array( get_page_template_slug( $post ), array( 'service-page', 'specialty-page' ), true ) ) {
+		return '';
+	}
+
+	$raw = (string) $post->post_content;
+	if ( has_shortcode( $raw, 'lmhg_faqs' ) || has_shortcode( $raw, 'lmhg_faq_index' ) ) {
+		return '';
+	}
+
+	return lmhg_site_core_render_faqs( lmhg_site_core_faq_set_term_ids( '', $post->ID ), (string) $atts['heading'], -1 );
+}
+
+/**
  * Renders FAQ items assigned to a page.
  *
  * @param int $post_id Page ID.
@@ -1729,6 +2050,21 @@ function lmhg_site_core_faqs_shortcode( array|string $atts = array() ): string {
  */
 function lmhg_site_core_render_faqs_for_page( int $post_id ): string {
 	return lmhg_site_core_render_faqs( lmhg_site_core_faq_set_term_ids( '', $post_id ), 'Common questions', -1 );
+}
+
+/**
+ * Returns publishable FAQ question/answer pairs assigned to a page.
+ *
+ * @param int $post_id Page ID.
+ * @return array<int,array{question:string,answer:string}>
+ */
+function lmhg_site_core_publishable_faq_items_for_page( int $post_id ): array {
+	$term_ids = lmhg_site_core_faq_set_term_ids( '', $post_id );
+	if ( empty( $term_ids ) ) {
+		return array();
+	}
+
+	return lmhg_site_core_publishable_faq_items_from_posts( lmhg_site_core_query_faqs( $term_ids, -1 ) );
 }
 
 /**
@@ -1922,6 +2258,40 @@ function lmhg_site_core_render_faq_items( array $faqs ): string {
 	}
 
 	return implode( '', $items );
+}
+
+/**
+ * Converts FAQ posts into schema-safe question/answer pairs.
+ *
+ * @param WP_Post[] $faqs FAQ posts.
+ * @return array<int,array{question:string,answer:string}>
+ */
+function lmhg_site_core_publishable_faq_items_from_posts( array $faqs ): array {
+	$items = array();
+
+	foreach ( $faqs as $faq ) {
+		if ( ! $faq instanceof WP_Post ) {
+			continue;
+		}
+
+		$question = function_exists( 'lmhg_site_core_clean_faq_text' )
+			? lmhg_site_core_clean_faq_text( (string) get_the_title( $faq ) )
+			: trim( wp_strip_all_tags( (string) get_the_title( $faq ) ) );
+		$answer = function_exists( 'lmhg_site_core_clean_faq_text' )
+			? lmhg_site_core_clean_faq_text( lmhg_site_core_render_post_body( $faq ) )
+			: trim( wp_strip_all_tags( lmhg_site_core_render_post_body( $faq ) ) );
+
+		if ( '' === $question || '' === $answer ) {
+			continue;
+		}
+
+		$items[] = array(
+			'question' => $question,
+			'answer'   => $answer,
+		);
+	}
+
+	return $items;
 }
 
 /**
