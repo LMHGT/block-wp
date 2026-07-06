@@ -1,0 +1,385 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.4214 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060041-9766-0139-0000-5e918b155ae6",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.3386 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "Who offers in-home therapy or community-based mental health support in Louisville?",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode expanded Who offers in-home therapy or community-based mental health support in Louisvill",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Who offers in-home therapy or community-based mental health support in Louisville?",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=Who%20offers%20in-home%20therapy%20or%20community-based%20mental%20health%20support%20in%20Louisville%3F&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:41:07 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[4]/div[1]/div[1]/div[1]/div[3]",
+              "markdown": "Several organizations provide community-based, in-home, or specialized mental health support in Louisville, KY, focusing on accessible care, counseling, and specialized services.[[1]](https://counselingnow.com/ky-local-counseling/top-counseling-in-louisville/)[[2]](https://www.causeiq.com/directory/mental-health-group-homes-list/louisvillejefferson-county-ky-in-metro/)[[3]](https://kentuckycounselingcenter.com/psychiatrist-louisville-ky/)[[4]](https://robertalexandercenter.com/situational-depression-symptoms-and-treatment-in-louisville/)\n\n- **[Louisville Center for Therapy and Personal Sustainability (LCTPS)](http://www.lctps.org/):** Offers community-based music therapy to the Louisville Metro area, focusing on wellness and therapeutic services for individuals, including LGBTQ-affirming care.[[1]](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdvemFEbDROekI1GAo)[[2]](https://www.lctps.org/)[[3]](https://www.lctps.org/music-therapy-internship)\n- **[Wellspring](https://wellspringky.org/):** Provides community-based services, including Assertive Community Treatment (ACT), supported employment, and crisis services, often serving individuals in their own housing environment.[[1]](https://www.google.com/searchviewer/10?svid=CAwSGxIZCgNwdnESEkNnc3ZaeTh4ZEdaeWMyNTBaZxgK)[[2]](https://wellspringky.org/who-we-are-2/)[[3]](https://wellspringky.org/intensive-treatment-teams/)[[4]](https://wellspringky.org/supported-employment/)[[5]](https://www.wlky.com/article/louisville-mental-health-support-give-wellspring/65878546)\n- **[NAMI Louisville](http://www.namilouisville.org/):** Offers community-based education, support groups, and resources for individuals with mental illness and their families, aimed at reducing stigma.[[1]](https://www.google.com/searchviewer/10?svid=CAwSGxIZCgNwdnESEkNnc3ZaeTh4ZEdSc05uYzRhZxgK)[[2]](https://namilouisville.org/)[[3]](https://namilouisville.org/programs-%26-classes)[[4]](https://www.instagram.com/namilouisville/)[[5]](https://namilouisville.org/about-us)\n- **[CompServ Health Resources Inc.](https://www.compservhealth.com/):** Provides counseling and therapeutic services, including Cognitive Behavioral Therapy (CBT) and individual/group options.[[1]](https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy)\n- **[Louisville Mind and Wellness LLC](https://louisvillemindandwellness.com/):** Offers mental health services and family practice, located on Baxter Ave.[[1]](https://www.tebra.com/care/practice/louisville-mind-and-wellness-llc-650686?lid=490335590)\n\nThese providers focus on community-based support to enhance personal sustainability, crisis management, and accessibility to care.[[1]](https://bridgesupport.org/making-a-difference-community-link-workers/)[[2]](https://www.kidsfirstservices.com/first-insights/community-therapy-programs)[[3]](https://restaurabh.com/areas-we-serve/)\n\nWould you like to find services specifically for children, seniors, or a particular condition like addiction or trauma?",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Several organizations provide community-based, in-home, or specialized mental health support in Louisville, KY, focusing on accessible care, counseling, and specialized services.",
+                  "markdown": "Several organizations provide community-based, in-home, or specialized mental health support in Louisville, KY, focusing on accessible care, counseling, and specialized services.[[1]](https://counselingnow.com/ky-local-counseling/top-counseling-in-louisville/)[[2]](https://www.causeiq.com/directory/mental-health-group-homes-list/louisvillejefferson-county-ky-in-metro/)[[3]](https://kentuckycounselingcenter.com/psychiatrist-louisville-ky/)[[4]](https://robertalexandercenter.com/situational-depression-symptoms-and-treatment-in-louisville/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Counseling Now",
+                      "domain": "counselingnow.com",
+                      "url": "https://counselingnow.com/ky-local-counseling/top-counseling-in-louisville/",
+                      "title": "Top Counseling in Louisville: Your Guide to Finding the Right Therapist",
+                      "text": "Counseling Now Louisville's commitment to mental health is evident in the broad range of services available. These services span f..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Cause IQ",
+                      "domain": "www.causeiq.com",
+                      "url": "https://www.causeiq.com/directory/mental-health-group-homes-list/louisvillejefferson-county-ky-in-metro/",
+                      "title": "Louisville mental health group homes",
+                      "text": "Large organizations like Maryhurst, Wellspring / SFK, Serenity, Kaylyns House of Joy, and Specialized Housing earn the majority of..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Kentucky Counseling Center",
+                      "domain": "kentuckycounselingcenter.com",
+                      "url": "https://kentuckycounselingcenter.com/psychiatrist-louisville-ky/",
+                      "title": "Psychiatrist Louisville, KY: Comprehensive Mental Health Care for Every Need",
+                      "text": "In Louisville, Kentucky, individuals seeking expert mental health support have access to an array of psychiatric services designed..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Robert Alexander Center",
+                      "domain": "robertalexandercenter.com",
+                      "url": "https://robertalexandercenter.com/situational-depression-symptoms-and-treatment-in-louisville/",
+                      "title": "Situational Depression Symptoms & Treatment in Louisville | RAC",
+                      "text": "Louisville has numerous community resources dedicated to mental health. Organizations like the Louisville Depression Center and Se..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Louisville Center for Therapy and Personal Sustainability (LCTPS) : Offers community-based music therapy to the Louisville Metro area, focusing on wellness and therapeutic services for individuals, including LGBTQ-affirming care. Wellspring : Provides community-based services, including Assertive Community Treatment (ACT), supported employment, and crisis services, often serving individuals in their own housing environment. NAMI Louisville : Offers community-based education, support groups, and resources for individuals with mental illness and their families, aimed at reducing stigma. CompServ Health Resources Inc. : Provides counseling and therapeutic services, including Cognitive Behavioral Therapy (CBT) and individual/group options. Louisville Mind and Wellness LLC : Offers mental health services and family practice, located on Baxter Ave.",
+                  "markdown": "- **[Louisville Center for Therapy and Personal Sustainability (LCTPS)](http://www.lctps.org/):** Offers community-based music therapy to the Louisville Metro area, focusing on wellness and therapeutic services for individuals, including LGBTQ-affirming care.[[1]](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdvemFEbDROekI1GAo)[[2]](https://www.lctps.org/)[[3]](https://www.lctps.org/music-therapy-internship)\n- **[Wellspring](https://wellspringky.org/):** Provides community-based services, including Assertive Community Treatment (ACT), supported employment, and crisis services, often serving individuals in their own housing environment.[[1]](https://www.google.com/searchviewer/10?svid=CAwSGxIZCgNwdnESEkNnc3ZaeTh4ZEdaeWMyNTBaZxgK)[[2]](https://wellspringky.org/who-we-are-2/)[[3]](https://wellspringky.org/intensive-treatment-teams/)[[4]](https://wellspringky.org/supported-employment/)[[5]](https://www.wlky.com/article/louisville-mental-health-support-give-wellspring/65878546)\n- **[NAMI Louisville](http://www.namilouisville.org/):** Offers community-based education, support groups, and resources for individuals with mental illness and their families, aimed at reducing stigma.[[1]](https://www.google.com/searchviewer/10?svid=CAwSGxIZCgNwdnESEkNnc3ZaeTh4ZEdSc05uYzRhZxgK)[[2]](https://namilouisville.org/)[[3]](https://namilouisville.org/programs-%26-classes)[[4]](https://www.instagram.com/namilouisville/)[[5]](https://namilouisville.org/about-us)\n- **[CompServ Health Resources Inc.](https://www.compservhealth.com/):** Provides counseling and therapeutic services, including Cognitive Behavioral Therapy (CBT) and individual/group options.[[1]](https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy)\n- **[Louisville Mind and Wellness LLC](https://louisvillemindandwellness.com/):** Offers mental health services and family practice, located on Baxter Ave.[[1]](https://www.tebra.com/care/practice/louisville-mind-and-wellness-llc-650686?lid=490335590)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Louisville Center for Therapy and Personal Sustainability (LCTPS)",
+                      "description": null,
+                      "url": "http://www.lctps.org/",
+                      "domain": "www.lctps.org"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Wellspring",
+                      "description": null,
+                      "url": "https://wellspringky.org/",
+                      "domain": "wellspringky.org"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "NAMI Louisville",
+                      "description": null,
+                      "url": "http://www.namilouisville.org/",
+                      "domain": "www.namilouisville.org"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "CompServ Health Resources Inc.",
+                      "description": null,
+                      "url": "https://www.compservhealth.com/",
+                      "domain": "www.compservhealth.com"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Louisville Mind and Wellness LLC",
+                      "description": null,
+                      "url": "https://louisvillemindandwellness.com/",
+                      "domain": "louisvillemindandwellness.com"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Google",
+                      "domain": "www.google.com",
+                      "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdvemFEbDROekI1GAo",
+                      "title": "Louisville Center for Therapy and Personal Sustainability",
+                      "text": "The Louisville Center for Therapy and Personal Sustainability aims to provide therapeutic, educational, and resource-based service..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Louisville Center for Therapy and Personal Sustainability",
+                      "domain": "www.lctps.org",
+                      "url": "https://www.lctps.org/",
+                      "title": "Louisville Center for Therapy and Personal Sustainability: Home",
+                      "text": "Our mission at LCTPS, put simply, is to bolster Louisville therapy and wellness resources by providing a diverse array of wellness..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Louisville Center for Therapy and Personal Sustainability",
+                      "domain": "www.lctps.org",
+                      "url": "https://www.lctps.org/music-therapy-internship",
+                      "title": "Music Therapy Internship Application",
+                      "text": "The Louisville Center for Therapy and Personal Sustainability (LCTPS) is a private practice that provides community-based music th..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Google",
+                      "domain": "www.google.com",
+                      "url": "https://www.google.com/searchviewer/10?svid=CAwSGxIZCgNwdnESEkNnc3ZaeTh4ZEdaeWMyNTBaZxgK",
+                      "title": "Wellspring Crisis Unit",
+                      "text": null
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "wellspringky.org",
+                      "domain": "wellspringky.org",
+                      "url": "https://wellspringky.org/who-we-are-2/",
+                      "title": "Louisville Mental Rehab Services",
+                      "text": "Wellspring remains a leader in providing independent housing coupled with psychiatric rehabilitative services for those challenged..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "wellspringky.org",
+                      "domain": "wellspringky.org",
+                      "url": "https://wellspringky.org/intensive-treatment-teams/",
+                      "title": "Intensive Treatment Teams in Louisville",
+                      "text": "Assertive Community Treatment (ACT) Wellspring is transforming the lives of people who have been chronically homeless with a team ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "wellspringky.org",
+                      "domain": "wellspringky.org",
+                      "url": "https://wellspringky.org/supported-employment/",
+                      "title": "Supported Employment for the Mentally Ill in Louisville",
+                      "text": "Wellspring Works Supported Employment Program Wellspring offers a full-service approach to helping people with mental illness find..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "WLKY",
+                      "domain": "www.wlky.com",
+                      "url": "https://www.wlky.com/article/louisville-mental-health-support-give-wellspring/65878546",
+                      "title": "Wellspring celebrating 30 years in Louisville; how to give to their mental health mission",
+                      "text": "Wellspring celebrating 30 years in Louisville; how to give to their mental health mission Wellspring is celebrating 30 years of of..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Google",
+                      "domain": "www.google.com",
+                      "url": "https://www.google.com/searchviewer/10?svid=CAwSGxIZCgNwdnESEkNnc3ZaeTh4ZEdSc05uYzRhZxgK",
+                      "title": "NAMI Louisville",
+                      "text": "Our goal is to eradicate stigma and judgement of Mental Illness through Education, Support, and Advocacy in our local community."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "NAMI Louisville",
+                      "domain": "namilouisville.org",
+                      "url": "https://namilouisville.org/",
+                      "title": "Promoting Mental Health Awareness in Louisville",
+                      "text": "Join NAMI Louisville in raising mental health awareness, breaking down mental health stigma, and supporting those affected by ment..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "NAMI Louisville",
+                      "domain": "namilouisville.org",
+                      "url": "https://namilouisville.org/programs-%26-classes",
+                      "title": "Programs & Classes",
+                      "text": "Explore NAMI Louisville's mental health programs offering educational resources and support for individuals and families affected ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Instagram",
+                      "domain": "www.instagram.com",
+                      "url": "https://www.instagram.com/namilouisville/",
+                      "title": "NAMI Louisville (@namilouisville) · Louisville, KY",
+                      "text": "NAMI Louisville takes action to change the narrative of mental health by providing the community with accurate education, resource..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "NAMI Louisville",
+                      "domain": "namilouisville.org",
+                      "url": "https://namilouisville.org/about-us",
+                      "title": "About Us",
+                      "text": "NAMI Louisville advocates for mental health through education, support, and community engagement, aiming to reduce stigma and enha..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "compservhealth.com",
+                      "domain": "www.compservhealth.com",
+                      "url": "https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy",
+                      "title": "Psychotherapy",
+                      "text": "CompSer Health Resources Inc. offers both individual and group therapy options, including Cognitive Behavioral Therapy (CBT). Meet..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "tebra.com",
+                      "domain": "www.tebra.com",
+                      "url": "https://www.tebra.com/care/practice/louisville-mind-and-wellness-llc-650686?lid=490335590",
+                      "title": "Mental Health Services And Family Practice",
+                      "text": "Service at \"Louisville Mind and Wellness LLC\""
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "These providers focus on community-based support to enhance personal sustainability, crisis management, and accessibility to care.",
+                  "markdown": "These providers focus on community-based support to enhance personal sustainability, crisis management, and accessibility to care.[[1]](https://bridgesupport.org/making-a-difference-community-link-workers/)[[2]](https://www.kidsfirstservices.com/first-insights/community-therapy-programs)[[3]](https://restaurabh.com/areas-we-serve/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "bridgesupport",
+                      "domain": "bridgesupport.org",
+                      "url": "https://bridgesupport.org/making-a-difference-community-link-workers/",
+                      "title": "Making a Difference: Community Link Workers - bridgesupport",
+                      "text": "Community-based support is at the heart of what community link workers do. When it comes to mental health care, community-based su..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Kids First Services",
+                      "domain": "www.kidsfirstservices.com",
+                      "url": "https://www.kidsfirstservices.com/first-insights/community-therapy-programs",
+                      "title": "Community Therapy Programs - Kids First",
+                      "text": "They ( Community Mental Health Centers (CMHCs) ) provide services tailored to the needs of their ( Community Mental Health Centers..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "RestAura Behavioral Health",
+                      "domain": "restaurabh.com",
+                      "url": "https://restaurabh.com/areas-we-serve/",
+                      "title": "Areas We Serve in Atlanta | RestAura",
+                      "text": "Community-based mental health services near Atlanta encourage individuals to build local support systems that enrich and sustain l..."
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdvemFEbDROekI1GAo",
+                  "title": "Louisville Center for Therapy and Personal Sustainability",
+                  "text": "The Louisville Center for Therapy and Personal Sustainability aims to provide therapeutic, educational, and resource-based service..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSGxIZCgNwdnESEkNnc3ZaeTh4ZEdaeWMyNTBaZxgK",
+                  "title": "Wellspring Crisis Unit",
+                  "text": null
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSGxIZCgNwdnESEkNnc3ZaeTh4ZEdSc05uYzRhZxgK",
+                  "title": "NAMI Louisville",
+                  "text": "Our goal is to eradicate stigma and judgement of Mental Illness through Education, Support, and Advocacy in our local community."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "compservhealth.com",
+                  "domain": "www.compservhealth.com",
+                  "url": "https://www.compservhealth.com/booking-calendar/psychotherapy-1?utm_source=google&utm_medium=book_button&utm_campaign=Psychotherapy",
+                  "title": "Psychotherapy",
+                  "text": "CompSer Health Resources Inc. offers both individual and group therapy options, including Cognitive Behavioral Therapy (CBT). Meet..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "tebra.com",
+                  "domain": "www.tebra.com",
+                  "url": "https://www.tebra.com/care/practice/louisville-mind-and-wellness-llc-650686?lid=490335590",
+                  "title": "Mental Health Services And Family Practice",
+                  "text": "Service at \"Louisville Mind and Wellness LLC\""
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

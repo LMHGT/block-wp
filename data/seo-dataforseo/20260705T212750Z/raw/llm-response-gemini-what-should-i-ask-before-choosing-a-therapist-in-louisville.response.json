@@ -1,0 +1,148 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "5.3826 sec.",
+  "cost": 0.0358373,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-ddec11862d3e",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "5.3709 sec.",
+      "cost": 0.0358373,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "gemini",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "gemini",
+        "user_prompt": "What should I ask before choosing a therapist in Louisville?",
+        "model_name": "gemini-2.5-flash-lite",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response gemini What should I ask before choosing a therapist in Louisville?",
+        "web_search": true,
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gemini-2.5-flash-lite",
+          "input_tokens": 129,
+          "output_tokens": 561,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.0352373,
+          "datetime": "2026-07-06 00:32:20 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "When choosing a therapist in Louisville, it's important to ask questions that will help you find a good fit for your needs. Here are some key areas to consider and questions to ask:\n\n**Therapist's Experience and Approach:**\n\n*   **What is your experience with [your specific concern, e.g., anxiety, depression, trauma]?** Inquiring about their specialization can help you find someone with relevant expertise.\n*   **What type of therapy do you practice?** Louisville therapists utilize various techniques such as Cognitive Behavioral Therapy (CBT), Dialectical Behavior Therapy (DBT), and EMDR. Understanding their approach can help you see if it aligns with what you're looking for.\n*   **How do you measure progress in therapy?** This helps understand how they track your journey and success.\n*   **How do you understand my problem, and how do you expect therapy to help?** This question delves into their diagnostic understanding and treatment plan.\n\n**Logistics and Practicalities:**\n\n*   **What are your fees, and do you accept insurance?** Fees can vary, with some therapists charging per session and others offering sliding scales. For example, some sessions might range from $50 for a graduate intern to $150-$200 per session for individual therapy, with initial assessments potentially costing more. It's crucial to check if your insurance is accepted. Many Louisville therapists accept major insurance providers like Anthem, Aetna, BlueCross BlueShield, Cigna, and UnitedHealthcare.\n*   **What is your availability for sessions? Do you offer in-person, virtual, or both types of sessions?** Consider how this fits with your schedule and preferences.\n*   **What is your cancellation policy?** It's important to be aware of any fees for missed or late cancellations, which often require 24-48 hours' notice.\n\n**Therapist-Client Relationship:**\n\n*   **How do you handle confidentiality?** Understanding their policies ensures your privacy.\n*   **Do you offer an initial consultation?** This can be a good way to gauge compatibility before committing to therapy.\n*   **How do you respond when clients are unhappy or questioning of you?** This can reveal their approach to feedback and collaboration.\n\nBy asking these questions, you can gather the necessary information to make an informed decision and find a therapist in Louisville who is the best fit for your unique needs and goals.",
+                  "annotations": [
+                    {
+                      "title": "louisvillegracepsychological.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLDD1dbENEAS3ghJbJyj4xX73x9kwtyHHncR73cQ2lcCrGZyJ0YxzNir6YEycd4WGoshr-OU46qJl5nYkMAJ0TSoyJWnL1YNPRv3d-i6AinkB1l6JyPKldgLEU5Z1Mei2yRzlabf1lFEi_MVJk9ZHme91uF9Zl77KnfwNXVxtt1vifCDXHlk9L8sFBMQqQArylWWfNTQFX43Vn156rL-oVjA=="
+                    },
+                    {
+                      "title": "fullerlifecounseling.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFX7IMZZPPiInpbgg9JzLmmz1v6HmFcLNOs3CcH2WKZGGNKHdpr8nmiqh1prW9Nt3pC6F8Lp_cgfgOerba8BVWAyjXsdmTHsNNCZNcbDaUu5ZtX_uELDMmpcNnXJnDhZDmU2IW07Gb0L0PZodCYLcfjClVL7uuTVRTkjXyMrMWiSDo-38cgouBiiVV4zLmHK95Q99za5fzzCdj-PelBN3iNEg=="
+                    },
+                    {
+                      "title": "amazonaws.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKtpTr4P-n2-FWt2s1RuXL-5OvfhMAIS0j9wAe3VH2G2L-zLA0RMUTnfLKz6wKp9o2C3DVdDkq5XouKdc9J-3KxddiNjtwDW1cQkU-CmDVm46Iwb7w3PPNwE7BQPigvMJln2kHVRQzGlxI99Kcznz0rZmXGZGQ5XX7L8DQ9Sk-XL6dZaFPv42Rna2hJgaNiTQph8e_kHFv42sr-N9rr2gTPiACoUwm7wNFMsmHHy-TmQd_Cat959vFCC0YTPTQgEYXnSNiPPglCnitLg=="
+                    },
+                    {
+                      "title": "counselingnow.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJLXWbJ_EVIgi8i9mPZq4GdKt3tebRjGCqToXcIOF1hm5Tp1tzGT7j4r5XEQ9d1OGJNnvSkyeEfAU-eqCo6szOFzumKs3roeCpfkslOc15esFfa4lw2HySRT4JNe25eFkv2pcQz_8BKuHeJjSHZBH07amZp7n0Tsz55yj-e7dwPQD6rsJ-9g=="
+                    },
+                    {
+                      "title": "lifestance.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqsBB5PdFnzQ3WswKACKLby6AJeg_f-goN404-dJj5mizx_tcBqIOlU5leW_I3oKbLad_xzyZY1YgxOymP7gbLpOFQwJFEPWLfOpXDu6xtXtZ1WWP-tTD9wUtFOP7dIIXxhj3XRmCQkEPmtBb0sxMi0Scd"
+                    },
+                    {
+                      "title": "kywellnesscenter.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIs62euT5BoIOEinHx9O_tPRXoKQcVgKM_OtvBkZqFKuPqCwfO_KSANzeZYtAGKCni-x1l7Icw2GxEnzz_iw5BoM4zuBueZVPjg6IybfbheBCvsLebF2qSgCKIsdcQ2Q=="
+                    },
+                    {
+                      "title": "louisvillegracepsychological.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyMvykGUnwzsl6ig5U7VlK680Ubid67-cXBnURFzkOoMJPyGqzh7Vcfz1DD71AfRTDCN8x49gUktuOrkw3xlStkNB48i7TORDEmUzAhmEbwbX579P9tI9hIet-ZZCrVZD8i4gq"
+                    },
+                    {
+                      "title": "loupg.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMDw55WvID_Cqes1AkcHfifJVWV1xCcnqLa0EPe1FzeYKsoyO4LacHd33KXHpyzzynFtTLZEejCHBmKbt2IPOI4lbQPDK2eDcbQsVMLe-3bec73sI56HiPbhSOIt_WZkmyIClM3W6_ICX-80yB"
+                    },
+                    {
+                      "title": "matthewharrismft.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE06oqav39wCkgkHu7gtSXAJW9n7XnzolGxQhZ1itKWMQ0TIJ-gpT2GgXP4h_h57mIL6G0CM1mLT-7B2vV2hFwi8WEWVk71jL-VxnHnTZjvnW9-803Zo3-Q9Mffu3n3PCoRtQBq_Y1dP5QG7A=="
+                    },
+                    {
+                      "title": "sondermind.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDhDLwTkzcscfMXAjxAZdTeyRyHablp8zVubPUVMCQzIL-x2LGr4qxvJJ-5ugu-ekwKTwZUWTQfGleWWjbh1T0dDKlPSl_pbJPrWtNR-z-yXdS1alAs0o9omGEvUnMtmx86bP7VELb9waVO0UFyyfJX4ehRkNn3xCcW-JYx8L6As4GJ5AZ-cROJgHpSx2FbGpbR_eKWXAFoE50XM2HPmleQ6iFwLqzHnehUXnqt7ed"
+                    },
+                    {
+                      "title": "anchorofhopelouisville.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHejnQ6NhWd9Pfww5eFRgRaPCaz8kR2EvOJ-GguCpJqFqzhqV5E7yzytxRAGWGBaTXSY_L03Hzf3ev_Y7WaqtmSmWEU4zRtIr9dyD485ZCxFD4ApjO_-6LiLfrl2Wvbjq_1lYhkg77IyJKEu8Eb"
+                    },
+                    {
+                      "title": "revolutionincounseling.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEz1hrtPICJDaOF0ThmiMz4PqMyQBLJ0iuHTiZ-dCLRxhUzWeUgLLSTMaKen0MQ4zydXz9uyXo-6ywCkIkXyGTuZuvb_ETAcKhXV1zdJHjn9rnIrobeW-93hBF9VmBF6fe2KhUdAXCRrhuDhpXi0AKnd9o="
+                    },
+                    {
+                      "title": "marriageandfamilysolutions.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETtjATGMrO6KZtvXFlrHzRBLan1NL7DhmJtuOYBWOpSNb0Vl2vsaSzxkIwOchrPdDEtencPpSWhEHAyEbnpimvz2b56iSlugvmj4D66Ny9KkUC_cxRRni3bKDY01ax0GI8bkppojlmrSwD1-Q26xigQwg="
+                    },
+                    {
+                      "title": "bestlifelouisville.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrEcZ7fLBSlSY9vjffgX8sXVpbtZBhnBP1V4gHAzSsz70TPfqAi4JgEI6gsd5gm9v0hwPjydVUqqtgUX1_JcEsa0nplJ4WdLcfb_PkLauTMRyZMj1wCTRqxWyLz8Gr9Q3cSvmydBo="
+                    },
+                    {
+                      "title": "psychologytoday.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsKJr28PrNs5Ok2JGfvOv8IlJQ59nJEQZ1r4-gr-U1E5GGkRxfjq6I4J9J1Itb-4Z6tqL8IK0B8jDIuO3PYK-EqIRId8jGpHgliIJw0zvzyPfqoIyQhFEaFVi_RTRSdkbkFXcb0Q2EPZh-5s9s-qJxvd7TKJY_"
+                    },
+                    {
+                      "title": "psychologytoday.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDNgFfZp61jX_uRdYgd7zFl-3JYFpr5kt9XrXvpE6pXiUd4jKrB6M_UVkc5-jCLc2eEh2hrHQatAUjEQZ9vVJ0-0FArlmAtzvXS8CW6DPn1IocMsUU03n7oThPGolAa02y5rezN9MZIua8mmtO4ZE-vog6pMpoIM1EcuoFM_beOK7kqxpvJmJE_6plyu7TY2s9HplDoNJaqA=="
+                    },
+                    {
+                      "title": "lifestance.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHYjC9uLbHxlO1zNiZI9q9YHPzbyWAYVzolvpfJrNa85wlDzZw9S_rJTKXNSCJsGA_laEkuGz0lLJSzK5ueic54Ozxhzd2_QIpY7GAAyXue6XeZRN2rMa1BR0SLYKerw=="
+                    },
+                    {
+                      "title": "kentuckycounselingcenter.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWO-mBWRIRS321r0qRIk3Y9V3t_tHNg3b4dkKbpZN6HSF7PUdRiMKGYjtyrLRVhzrUw4BVP2Tc9EtSh3kS4jITrB4HzvEzUJIEUHPO49FeeeLK4As7yByUw-_1ss__mNGf8TLil_oA0J1nNq__k805VEUCHgAzanclpTFJhsvH4t5mUWL-Ew=="
+                    },
+                    {
+                      "title": "mentalhealthmatch.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1SYFsqPifbZ181oF-g_vjGJC9A9GtffVKlTIh6vLxW9dqCh5foaHfMLnFbZ91E0vdA0Jl6aYhTpDMQrS8X1GsZXOFkQ0gUnqvjoYnbk0NShn-zrmnkifZxUh-BCf1pWhYKmntsj1-MAA5ud01XgF9XbkuuPEYe00FwVla9rgQx08JQWMAyOjDwSENLwbbCz0Rzu3Byp0qVRHB5547pheLPBuym_n2Dvg="
+                    },
+                    {
+                      "title": "empathywell.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyibZF3r0k5fbUnOumTju7WQVssMeabJUAIlMop9sZFqnYSnYdsN0e8tRE4bKCoKcu6OuJD_2fh3sJSHRWabVeCOn0HNlcfdIx8Yoxsi7ISCRZeWoIJuM5yEej2NPfLA8T2fwBiSYWha0BOGGQi7EPGxt7PMM54ZunCe6s-LRujwVVQSwT2A=="
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "questions to ask before choosing a therapist Louisville KY",
+            "therapist directories Louisville KY",
+            "types of therapy Louisville KY",
+            "therapist fees Louisville KY",
+            "therapist insurance Louisville KY"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "serp-local-finder-community based mental health services Louisville KY",
+  "method": "POST",
+  "path": "/v3/serp/google/local_finder/live/advanced",
+  "body": [
+    {
+      "keyword": "community based mental health services Louisville KY",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "depth": 20,
+      "tag": "lmhg local finder community based mental health services Louisville KY"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:09.422901+00:00"
+}

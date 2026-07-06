@@ -1,0 +1,135 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "15.7327 sec.",
+  "cost": 0.02350875,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060031-9766-0612-0000-b8af97c1363d",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "15.7038 sec.",
+      "cost": 0.02350875,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "chat_gpt",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "chat_gpt",
+        "user_prompt": "Where can someone get mental health case management in Louisville, KY?",
+        "model_name": "gpt-5.4-nano",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response chat_gpt Where can someone get mental health case management in Louisville, KY?",
+        "web_search": true,
+        "web_search_country_iso_code": "US",
+        "web_search_city": "Louisville",
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gpt-5.4-nano-2026-03-17",
+          "input_tokens": 9025,
+          "output_tokens": 883,
+          "reasoning_tokens": 267,
+          "web_search": true,
+          "money_spent": 0.02290875,
+          "datetime": "2026-07-06 00:31:48 +00:00",
+          "items": [
+            {
+              "type": "reasoning",
+              "sections": null
+            },
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Searching for mental health options**\n\nI need to curate a list that includes options like CMHC, Seven Counties, and CenterStone for crisis resources. It could be helpful to find more sources that provide community mental health services, particularly looking into CenterStone's case management. Okay, so let's search specifically for CenterStone case management in Louisville to gather relevant information and make sure I have a comprehensive overview of the available support options."
+                }
+              ]
+            },
+            {
+              "type": "reasoning",
+              "sections": [
+                {
+                  "type": "summary_text",
+                  "text": "**Accessing mental health resources**\n\nI’ve hit a tool limit, so I need to use existing sources to craft my response. I’ll list agencies like Seven Counties Services Adult East from mentalhealthus.org and maybe point to the targeted case management PDF, even though that's a big list. I also need to guide users on deciding if they need a Medicaid waiver or community outpatient therapy. I'll ask for their age group, insurance, and urgency, and I could mention the 988 crisis line, which is common knowledge."
+                }
+              ]
+            },
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here are several places in **Louisville, KY** that offer **mental health case management** (help coordinating services like housing, benefits, treatment appointments, transportation, etc.). Availability can depend on insurance/eligibility (often Medicaid/waivers), so it’s worth calling to confirm what they can do for your situation.\n\n## Louisville providers that offer case management\n\n1) **Seven Counties Services (Adult East) – Community Behavioral Health Clinic (CCBHC)**\n- Includes **case management** as part of outpatient behavioral health care.  \n- Address listed: **4710 Champions Trace #102, Louisville, KY** ([mentalhealthus.org](https://www.mentalhealthus.org/facility/seven-counties-services-adult-east?utm_source=openai))\n\n2) **Louisville Mental Health Group – Case Management**\n- Case management to help connect people to practical supports (housing, employment, medical care, transportation, etc.).  \n- Address: **4229 Bardstown Rd, Suite 310, Louisville, KY 40218** ([louisvillementalhealth.org](https://louisvillementalhealth.org/case-management/?utm_source=openai))\n\n3) **Step By Step Family Services – Mental Health / Case Management**\n- States it provides **mental health** and **home/community-based targeted case management**.  \n- Address: **2900 W Broadway Street, Suite 015, Louisville, KY 40211** ([stepbystepfamilyservices.org](https://stepbystepfamilyservices.org/?utm_source=openai))\n\n4) **Best Life Mental Health Services, LLC – Targeted Case Management**\n- Provides **targeted case management** for mental health needs. ([bestlifelouisville.com](https://www.bestlifelouisville.com/case-management/?utm_source=openai))\n\n5) **Alliance Community Services – Case Management (Medicaid waiver-based)**\n- Describes itself as a **Medicaid waiver-based case management** agency (rebranded from “Kentucky Case Management” in 2022). ([allianceky.com](https://allianceky.com/?utm_source=openai))\n\n6) **Blue Sky Case Management – Medicaid waiver case management (IDD focus)**\n- If you’re looking for case management tied to Medicaid waiver supports for **children/adults with intellectual/developmental disabilities**, this is a relevant option.  \n- Address listed: **7301 Fegenbush Lane Suite 102C, Louisville, KY 40228** ([blueskyky.com](https://www.blueskyky.com/contact-us?utm_source=openai))\n\n7) **Other Louisville mental health agencies offering case management**\n- **One’s Journey Through Life** (therapy + case management) ([onesjourneythroughlife.org](https://onesjourneythroughlife.org/?utm_source=openai))  \n- **Turner Mental Health Counseling, Inc** (mentions counseling + case management) ([turnermentalhealth.com](https://www.turnermentalhealth.com/?utm_source=openai))  \n- **Solace Life Change Wellness Center** (behavioral health with an integrated outpatient approach) ([solacelifechange.com](https://solacelifechange.com/?utm_source=openai))  \n\n## If you need to match to the “right type” of case management\nKentucky uses different categories of “targeted case management.” The Kentucky DBHDID publishes an **approved provider list** (PDF) for targeted case management programs—useful if you’re trying to ensure eligibility/coverage. ([dbhdid.ky.gov](https://dbhdid.ky.gov/documents/dbh/tcm/approved.pdf?utm_source=openai))",
+                  "annotations": [
+                    {
+                      "title": "Community Behavioral Health Center in Louisville, Kentucky | Seven Counties Services Adult East",
+                      "url": "https://www.mentalhealthus.org/facility/seven-counties-services-adult-east?utm_source=openai"
+                    },
+                    {
+                      "title": "Case Management | Louisville Mental Health Group",
+                      "url": "https://louisvillementalhealth.org/case-management/?utm_source=openai"
+                    },
+                    {
+                      "title": "Step By Step Family Services - Mental Health, Case Management",
+                      "url": "https://stepbystepfamilyservices.org/?utm_source=openai"
+                    },
+                    {
+                      "title": "Targeted Case Management - Best Life Mental Health Services, LLC",
+                      "url": "https://www.bestlifelouisville.com/case-management/?utm_source=openai"
+                    },
+                    {
+                      "title": "Alliance Community Services | Serving Louisville, KY",
+                      "url": "https://allianceky.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Contact Us | Blue Sky Case Management",
+                      "url": "https://www.blueskyky.com/contact-us?utm_source=openai"
+                    },
+                    {
+                      "title": "Integrated Therapy and Case Management - One's Journey Through Life Louisville, KY",
+                      "url": "https://onesjourneythroughlife.org/?utm_source=openai"
+                    },
+                    {
+                      "title": "Home | Turner Mental Health Counseling, Inc",
+                      "url": "https://www.turnermentalhealth.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Solace Life Change | Solace Life Change",
+                      "url": "https://solacelifechange.com/?utm_source=openai"
+                    },
+                    {
+                      "title": "Kentucky Department for Behavioral Health, Developmental and Intellectual Disabilities (DBHDID)",
+                      "url": "https://dbhdid.ky.gov/documents/dbh/tcm/approved.pdf?utm_source=openai"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "Louisville KY mental health case management services",
+            "Behavioral Health case management Louisville KY Crisis stabilization case management",
+            "Jefferson County Kentucky Department for Behavioral Health developmental disabilities mental health case management Louisville",
+            "community mental health center Louisville KY case management",
+            "Centerstone Louisville KY case management",
+            "Seven Counties Services targeted case management mental health Louisville",
+            "Kentucky targeted case management Louisville mental health Medicaid waiver case management",
+            "Blue Sky Case Management targeted case management Louisville Medicaid waiver"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "5.4067 sec.",
+  "cost": 0.0358146,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-d42e847f2197",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "5.3864 sec.",
+      "cost": 0.0358146,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "gemini",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "gemini",
+        "user_prompt": "Who offers family therapy and care coordination in Louisville?",
+        "model_name": "gemini-2.5-flash-lite",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response gemini Who offers family therapy and care coordination in Louisville?",
+        "web_search": true,
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gemini-2.5-flash-lite",
+          "input_tokens": 114,
+          "output_tokens": 508,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.0352146,
+          "datetime": "2026-07-06 00:32:21 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "In Louisville, several providers offer family therapy and care coordination services. These include:\n\n**Mental Health and Therapy Centers:**\n\n*   **Mandala House:** Offers outpatient mental health services for individuals, groups, relationships, and families, serving clients over 14 years old. They provide telehealth services across Kentucky.\n*   **Brock Family Therapy Center:** Has multiple locations in Louisville and provides family and parent-child therapy, aiming to strengthen relationships and develop strategies for personal growth. They accept Medicare & Medicaid.\n*   **LifeStance Health:** Has multiple clinics in Louisville offering family therapy with a multidisciplinary team. They also provide telehealth sessions.\n*   **Creative Family Counseling:** Offers individual and family counseling, as well as parent support, with telehealth and online options available.\n*   **Groupworks:** Specializes in family counseling, helping families improve communication, build respect, and strengthen relationships.\n*   **Seven Counties Services, Inc.:** Their Child & Family Downtown office provides outpatient mental health and substance use services for children, youth, and their families. Therapists collaborate with other Seven Counties providers for services like service coordination, psychiatric evaluation, and medication management. Their Child & Family West Office also offers individualized outpatient treatment for families, including care coordination.\n\n**Community and Family Services:**\n\n*   **Omni Family of Services:** Provides community-based mental health services, including in-home services through their Family Intervention Treatment Team (FITT) and Family Preservation Services. They partner with families to build skills for the future and avoid out-of-home placement.\n*   **Home of the Innocents:** Offers therapeutic care to children and teens facing challenges such as abuse, neglect, and behavioral health diagnoses, as well as support for families with exceptional needs.\n*   **Boys & Girls Haven:** A foster care agency that provides counseling, support, and mental health services to young people who have experienced trauma. They also offer guidance to families navigating emotional/mental crises.\n\nFor crisis support, you can call or text 988 or chat 988lifeline.org. If you need to report child abuse or neglect, you can call 877-597-2331 or 800-752-6200.",
+                  "annotations": [
+                    {
+                      "title": "mandalalouisville.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-L030ZbOL1TeBoHOksLsaVrvifYfeNNGFkY5HqO9UF5WsdALZZReWNg1d05orqQyBKEE8N2b7kMBq2Tqv_H2a1Tegn3clydSjJGWIStLnvdKmLG9DztGP3A=="
+                    },
+                    {
+                      "title": "brockfamilytherapycenter.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZsgENmTZeMKFuhzQ3YWt2XL0NwR3nfv8Dhptu-Xxx2nrs97On21BGTzv4s7bdBpMrjMzJBz20s8pN8z957ai2oDYJRLpMX13qFNfa_hYa4TnHxYYKhDIRCyZzyhqUAfkOKn5V"
+                    },
+                    {
+                      "title": "lifestance.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2MK7xfFRnPRE2sf585E9EBvpBInMmdgWRSY0AUSMQPFHojFD4sH3qxfnabqnNNVcw8nHaldr8Pu8KiBlkvwQEyfLrJnuBySg_Uc3DzIfqUczlPRWsaIKBi0F1ElQywAuGKD7jHIfuGcaiTLYpXlurB2_kQ46b9uI="
+                    },
+                    {
+                      "title": "creativefamilycounseling.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGScBCdybRmYvr4nbx6H4IobpA3sYV1Ld99ZQ4U4PeS3-Gk_N0wc3mRIA8Md5W4BDj7UWI8hP737k3upLn15Tzw4hxaANfuy2cCt8DVLiYLSR2U2RTY7rNIGyVSxzXHrqY="
+                    },
+                    {
+                      "title": "groupworksky.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqMPEZoT5CZutC6gI0SMPKC8dYLFomnVlbMu4aKthUymo6WtT7t_5eiyPY-RgHPgmcH_UystioLly8lbcY_mF_j8wAw0TGIPOcJlqGCwkZlH2y9INANoUAnA5_ieObvgGAfuZulw=="
+                    },
+                    {
+                      "title": "icarol.info",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_SZSWr2BV_FLhG518pCVMLfpWReZxiqo8NMIgJiN1HVSJh1CpdDjzsmv-pKPkkXKCXgfHRuFjmDLpGG_phZf1e7gMndQPhMYkH6zKNnTm3vLONi71c_ielK6uEXtCA1RFFUW_Z5LwS7iYcEn08aOJjFnmKI2SLne3LogUNGB9sV4="
+                    },
+                    {
+                      "title": "sevencounties.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyjbqzthSsm3dGweuFqJKg_sVPsfWchqcwvNYZ_LoinQEhVz5607cOGYtADiGAKhkFI8Psi1cnwTVHzW3E1yhSi4I7iW6obhIlOGCWhnT4yRytHtM-yA6fJ_ZPC-nwLGw-zxIya8rFHQaUvVth-tvDcKZr_zBgFYphIAElx255j9xdvbO1-B9yTr1Rzfov4w=="
+                    },
+                    {
+                      "title": "theomnifamily.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeE9GU0mxnWKk-qa2bfHmwEXG5VbXaXegx6DZtDNwFdJjapwN5Jk1zoU3rfnK5y0acGAlGKD3q0MXxBuoqWpe5AeN8tODzsyBIREWSHMYCFYn-VuwXNqFhXjbGymRmofr6_iarmDDBQabFqp6PY7L33wlG"
+                    },
+                    {
+                      "title": "godaddysites.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFsrdJw2gS0xhHpj7SxxqX69DfOa4hcjCWFnELy-WZyjDRZfaZzDnST4z4W3HPrCkFnn3Xu6M-absSg97HVJhPSsdx7qEEqX5mDPfvMYpljSSywncZyz1cZ0cfEGGDXwono43nW2NFEFKZ"
+                    },
+                    {
+                      "title": "louisvilleky.gov",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWULVMZK06ixIM1otTQbM89_UHSTyTrn6AQ5023Jrh7SL5-x265UuYFZlpPrL5lwN_HCt6R8fbUK6jbCVEeM_fQAk5Wpcb-6Hxi74wRu2N7A0yMiRPOd80BvkGy-B6UHjW7QDUc4SciIzc6P9xSB2AQn2C2cYi-3gSAV7sggd8ypd_Jv6OmpkAjKOTE1-_ng=="
+                    },
+                    {
+                      "title": "ky.gov",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQP2wRYLlett6-411IwemMDPlOVnr8r2_jvCu7Z4kTqkcNBJpK45IkJGH9uqfJzPTMpS3Org5_SzKZWBr7I4rfsUXRRyjJXPOlSqpSLFi8QCIBHQek3N-2lsXgZ1EuiyBDmt5RXwHJXUKq2vXT7UaULdI3"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "family therapy and care coordination Louisville KY",
+            "mental health services Louisville KY family coordination",
+            "Louisville KY child and family services care coordination"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,389 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.0816 sec.",
+  "cost": 0.01524,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060028-9766-0541-0000-6ec697f66792",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.0726 sec.",
+      "cost": 0.01524,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "dataforseo_labs",
+        "google",
+        "search_intent",
+        "live"
+      ],
+      "data": {
+        "api": "dataforseo_labs",
+        "function": "search_intent",
+        "se_type": "google",
+        "keywords": [
+          "who provides therapy in Louisville KY",
+          "best therapist for anxiety in Louisville KY",
+          "where to find family therapy in Louisville KY",
+          "find child therapy near me Louisville",
+          "mental health services for families in Louisville",
+          "who offers case management in Louisville KY",
+          "community based mental health services near me",
+          "in home therapy Louisville KY",
+          "local counseling practice Louisville Kentucky",
+          "therapy provider accepting new clients Louisville",
+          "Louisville Mental Health Group",
+          "louisvillementalhealth.org",
+          "mental health services Louisville KY",
+          "therapy Louisville KY",
+          "therapist Louisville KY",
+          "counseling Louisville KY",
+          "individual therapy Louisville KY",
+          "family therapy Louisville KY",
+          "child therapy Louisville KY",
+          "group therapy Louisville KY",
+          "case management Louisville KY",
+          "mental health case management Louisville KY",
+          "community based mental health services Louisville KY",
+          "trauma therapy Louisville KY",
+          "anxiety therapy Louisville KY",
+          "depression therapy Louisville KY",
+          "play therapy Louisville KY"
+        ],
+        "language_code": "en",
+        "tag": "lmhg search intent core agentic"
+      },
+      "result": [
+        {
+          "language_code": "en",
+          "items_count": 27,
+          "items": [
+            {
+              "keyword": "who provides therapy in Louisville KY",
+              "keyword_intent": {
+                "label": "commercial",
+                "probability": 0.7022
+              },
+              "secondary_keyword_intents": null
+            },
+            {
+              "keyword": "best therapist for anxiety in Louisville KY",
+              "keyword_intent": {
+                "label": "commercial",
+                "probability": 0.6993
+              },
+              "secondary_keyword_intents": null
+            },
+            {
+              "keyword": "where to find family therapy in Louisville KY",
+              "keyword_intent": {
+                "label": "commercial",
+                "probability": 0.6837
+              },
+              "secondary_keyword_intents": null
+            },
+            {
+              "keyword": "find child therapy near me Louisville",
+              "keyword_intent": {
+                "label": "transactional",
+                "probability": 0.5943
+              },
+              "secondary_keyword_intents": [
+                {
+                  "label": "commercial",
+                  "probability": 0.38
+                }
+              ]
+            },
+            {
+              "keyword": "mental health services for families in Louisville",
+              "keyword_intent": {
+                "label": "commercial",
+                "probability": 0.6903
+              },
+              "secondary_keyword_intents": null
+            },
+            {
+              "keyword": "who offers case management in Louisville KY",
+              "keyword_intent": {
+                "label": "commercial",
+                "probability": 0.9529
+              },
+              "secondary_keyword_intents": null
+            },
+            {
+              "keyword": "community based mental health services near me",
+              "keyword_intent": {
+                "label": "commercial",
+                "probability": 0.803
+              },
+              "secondary_keyword_intents": null
+            },
+            {
+              "keyword": "in home therapy Louisville KY",
+              "keyword_intent": {
+                "label": "navigational",
+                "probability": 0.3794
+              },
+              "secondary_keyword_intents": [
+                {
+                  "label": "commercial",
+                  "probability": 0.3045
+                },
+                {
+                  "label": "informational",
+                  "probability": 0.2112
+                }
+              ]
+            },
+            {
+              "keyword": "local counseling practice Louisville Kentucky",
+              "keyword_intent": {
+                "label": "commercial",
+                "probability": 0.5861
+              },
+              "secondary_keyword_intents": null
+            },
+            {
+              "keyword": "therapy provider accepting new clients Louisville",
+              "keyword_intent": {
+                "label": "transactional",
+                "probability": 0.3734
+              },
+              "secondary_keyword_intents": [
+                {
+                  "label": "commercial",
+                  "probability": 0.3429
+                },
+                {
+                  "label": "navigational",
+                  "probability": 0.2149
+                }
+              ]
+            },
+            {
+              "keyword": "Louisville Mental Health Group",
+              "keyword_intent": {
+                "label": "navigational",
+                "probability": 0.7137
+              },
+              "secondary_keyword_intents": null
+            },
+            {
+              "keyword": "louisvillementalhealth.org",
+              "keyword_intent": {
+                "label": "navigational",
+                "probability": 0.5257
+              },
+              "secondary_keyword_intents": [
+                {
+                  "label": "informational",
+                  "probability": 0.3871
+                }
+              ]
+            },
+            {
+              "keyword": "mental health services Louisville KY",
+              "keyword_intent": {
+                "label": "commercial",
+                "probability": 0.5556
+              },
+              "secondary_keyword_intents": [
+                {
+                  "label": "informational",
+                  "probability": 0.3728
+                }
+              ]
+            },
+            {
+              "keyword": "therapy Louisville KY",
+              "keyword_intent": {
+                "label": "informational",
+                "probability": 0.4013
+              },
+              "secondary_keyword_intents": [
+                {
+                  "label": "navigational",
+                  "probability": 0.3048
+                },
+                {
+                  "label": "commercial",
+                  "probability": 0.2393
+                }
+              ]
+            },
+            {
+              "keyword": "therapist Louisville KY",
+              "keyword_intent": {
+                "label": "commercial",
+                "probability": 0.4341
+              },
+              "secondary_keyword_intents": [
+                {
+                  "label": "navigational",
+                  "probability": 0.3204
+                }
+              ]
+            },
+            {
+              "keyword": "counseling Louisville KY",
+              "keyword_intent": {
+                "label": "informational",
+                "probability": 0.3694
+              },
+              "secondary_keyword_intents": [
+                {
+                  "label": "navigational",
+                  "probability": 0.3388
+                },
+                {
+                  "label": "commercial",
+                  "probability": 0.2696
+                }
+              ]
+            },
+            {
+              "keyword": "individual therapy Louisville KY",
+              "keyword_intent": {
+                "label": "navigational",
+                "probability": 0.8044
+              },
+              "secondary_keyword_intents": null
+            },
+            {
+              "keyword": "family therapy Louisville KY",
+              "keyword_intent": {
+                "label": "informational",
+                "probability": 0.3566
+              },
+              "secondary_keyword_intents": [
+                {
+                  "label": "commercial",
+                  "probability": 0.3458
+                },
+                {
+                  "label": "navigational",
+                  "probability": 0.2757
+                }
+              ]
+            },
+            {
+              "keyword": "child therapy Louisville KY",
+              "keyword_intent": {
+                "label": "commercial",
+                "probability": 0.4976
+              },
+              "secondary_keyword_intents": [
+                {
+                  "label": "informational",
+                  "probability": 0.2535
+                }
+              ]
+            },
+            {
+              "keyword": "group therapy Louisville KY",
+              "keyword_intent": {
+                "label": "navigational",
+                "probability": 0.368
+              },
+              "secondary_keyword_intents": [
+                {
+                  "label": "commercial",
+                  "probability": 0.3166
+                },
+                {
+                  "label": "informational",
+                  "probability": 0.302
+                }
+              ]
+            },
+            {
+              "keyword": "case management Louisville KY",
+              "keyword_intent": {
+                "label": "commercial",
+                "probability": 0.7285
+              },
+              "secondary_keyword_intents": null
+            },
+            {
+              "keyword": "mental health case management Louisville KY",
+              "keyword_intent": {
+                "label": "commercial",
+                "probability": 0.6697
+              },
+              "secondary_keyword_intents": null
+            },
+            {
+              "keyword": "community based mental health services Louisville KY",
+              "keyword_intent": {
+                "label": "commercial",
+                "probability": 0.6105
+              },
+              "secondary_keyword_intents": [
+                {
+                  "label": "informational",
+                  "probability": 0.3376
+                }
+              ]
+            },
+            {
+              "keyword": "trauma therapy Louisville KY",
+              "keyword_intent": {
+                "label": "commercial",
+                "probability": 0.5906
+              },
+              "secondary_keyword_intents": [
+                {
+                  "label": "informational",
+                  "probability": 0.3406
+                }
+              ]
+            },
+            {
+              "keyword": "anxiety therapy Louisville KY",
+              "keyword_intent": {
+                "label": "commercial",
+                "probability": 0.5678
+              },
+              "secondary_keyword_intents": null
+            },
+            {
+              "keyword": "depression therapy Louisville KY",
+              "keyword_intent": {
+                "label": "commercial",
+                "probability": 0.5688
+              },
+              "secondary_keyword_intents": [
+                {
+                  "label": "informational",
+                  "probability": 0.3171
+                }
+              ]
+            },
+            {
+              "keyword": "play therapy Louisville KY",
+              "keyword_intent": {
+                "label": "navigational",
+                "probability": 0.3968
+              },
+              "secondary_keyword_intents": [
+                {
+                  "label": "commercial",
+                  "probability": 0.3367
+                },
+                {
+                  "label": "informational",
+                  "probability": 0.2373
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

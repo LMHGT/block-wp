@@ -1,0 +1,66 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "3.4439 sec.",
+  "cost": 0.101,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060028-9766-0635-0000-13829dd20874",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "3.4306 sec.",
+      "cost": 0.101,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "llm_mentions",
+        "aggregated_metrics",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "aggregated_metrics",
+        "target": [
+          {
+            "domain": "louisvillementalhealth.org",
+            "search_filter": "include",
+            "search_scope": [
+              "any"
+            ],
+            "include_subdomains": true
+          },
+          {
+            "keyword": "Louisville Mental Health Group",
+            "search_filter": "include",
+            "search_scope": [
+              "any"
+            ],
+            "match_type": "partial_match"
+          }
+        ],
+        "platform": "chat_gpt",
+        "location_code": 2840,
+        "language_code": "en",
+        "tag": "lmhg llm mentions aggregated chat_gpt"
+      },
+      "result": [
+        {
+          "total": {
+            "location": null,
+            "language": null,
+            "platform": null,
+            "sources_domain": null,
+            "search_results_domain": null,
+            "brand_entities_title": null,
+            "brand_entities_category": null
+          },
+          "items": null
+        }
+      ]
+    }
+  ]
+}

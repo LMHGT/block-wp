@@ -1,0 +1,308 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.6084 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060028-9766-0139-0000-c5c840dd455b",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.5114 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "Who provides mental health services in Louisville KY?",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode Who provides mental health services in Louisville KY?",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Who provides mental health services in Louisville KY?",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=Who%20provides%20mental%20health%20services%20in%20Louisville%20KY%3F&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:28:20 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[1]/div[1]/div[3]",
+              "markdown": "Several organizations and private practitioners provide mental health services in Louisville, KY, offering a range of care from crisis intervention to individual therapy.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://kentuckymentalhealth.com/)[[3]](https://louisvillegracepsychological.com/)[[4]](http://www.divorcerecoverylouisville.org/gethelp-crisis.html)\n\n**Key Community Mental Health Providers** \n\n- **Seven Counties Services** : Provides comprehensive behavioral health services, including 24/7 crisis lines for adults (502-589-4313), children (502-589-8070), and addiction help (502-583-3951).\n- **Park DuValle Community Health Center** : Offers community-based mental health services (502-774-4401).\n- **Spalding University Collective Care Center** : Provides mental health care services (502-792-7011).\n- **NAMI Louisville** : Offers support and resources for mental health (502-588-2008).\n- **Louisville Recovery Community Connection** : Focuses on addiction recovery support (502-717-8321).\n- **The Black Counseling & Consulting Collective** : Provides counseling services (502-414-4380).[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n\n**Private Practitioners and Specialized Centers** \n\n- **Louisville Mind and Wellness LLC** : Located on Baxter Ave, offering services from nurse practitioners.\n- **Jim Walker, LCSW** : Provides individual therapy and intake sessions.\n- **Dreamcloud Psychology & Educational Services, LLC** : Located on Springhurst Blvd, specializing in therapy for anxiety, ADHD, and mood disorders.\n- **Nicole Fletcher Griggs, APRN, PMHNP-BC** : Offers services specializing in depression treatment on Bishop Ln.[[1]](https://www.tebra.com/care/practice/louisville-mind-and-wellness-llc-650686?lid=490335590)[[2]](https://jimwalker.fullslate.com/services/1)[[3]](https://app.squareup.com/appointments/book/eb9c5ddf-fbb9-40ae-8d73-967aad8c9082/NB6KRWR5H44BZ/start?service_id=5NHEWSNEQSS6BKWMP52YM76F&variation_id=XK5C5ZLR3STU22UFBV2L24QX)[[4]](https://www.zocdoc.com/doctor/nicole-fletcher-griggs-aprn-pmhnp-bc-656210?LocIdent=355819&utm_source=reservewithgoogle&utm_medium=seosynd&utm_campaign=hai&entity_id=pr_jICN4JntfEWK_4P5dFaJtQ-lo_X6B0qk02o0e0XbhXgmgwQQ-entity)[[5]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n\nFor immediate, free, and confidential help, Kentucky's 988 Suicide & Crisis Lifeline is available.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://lightheartassociates.com/psychology-blog/5-mental-health-resources-available-in-seattle-wa/)[[3]](https://www.kysu.edu/student-affairs/health-services/support.php)[[4]](https://www.instagram.com/loumetrooss/)\n\nIf you can share whether you're looking for **therapy**, **psychiatry** , or **crisis support** , and if you'd prefer to **use insurance** , I can help you narrow down this list.",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Several organizations and private practitioners provide mental health services in Louisville, KY, offering a range of care from crisis intervention to individual therapy. LouisvilleKY.gov",
+                  "markdown": "Several organizations and private practitioners provide mental health services in Louisville, KY, offering a range of care from crisis intervention to individual therapy.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://kentuckymentalhealth.com/)[[3]](https://louisvillegracepsychological.com/)[[4]](http://www.divorcerecoverylouisville.org/gethelp-crisis.html)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Kentucky Mental Health Care",
+                      "domain": "kentuckymentalhealth.com",
+                      "url": "https://kentuckymentalhealth.com/",
+                      "title": "Kentucky Mental Health Care – Psychiatry | Therapy | Addiction Treatment",
+                      "text": "Psychiatrists in Louisville and Throughout Kentucky At Kentucky Mental Health Care, our highly-trained medical staff offers treatm..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Grace Psychological Services",
+                      "domain": "louisvillegracepsychological.com",
+                      "url": "https://louisvillegracepsychological.com/",
+                      "title": "Grace Psychological Services: Best Therapists in Louisville",
+                      "text": "Individual Therapy Personalized one-on-one therapy in Louisville focused on emotional healing, personal growth, and mental wellnes..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "www.divorcerecoverylouisville.org",
+                      "domain": "www.divorcerecoverylouisville.org",
+                      "url": "http://www.divorcerecoverylouisville.org/gethelp-crisis.html",
+                      "title": "Crisis Information from Divorce Recovery Louisville, a support group",
+                      "text": "Louisville Crisis Services 24-hour adult crisis line. Suicide, abuse, emergency mental health. Call or walk in 24/7. Provides emer..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Key Community Mental Health Providers",
+                  "markdown": "**Key Community Mental Health Providers**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Seven Counties Services : Provides comprehensive behavioral health services, including 24/7 crisis lines for adults (502-589-4313), children (502-589-8070), and addiction help (502-583-3951). Seven Counties Services Park DuValle Community Health Center : Offers community-based mental health services (502-774-4401). Park DuValle Community Health Center Spalding University Collective Care Center : Provides mental health care services (502-792-7011). Spalding University Collective Care Center NAMI Louisville : Offers support and resources for mental health (502-588-2008). NAMI Louisville Louisville Recovery Community Connection : Focuses on addiction recovery support (502-717-8321). Louisville Recovery Community Connection The Black Counseling & Consulting Collective : Provides counseling services (502-414-4380). The Black Counseling & Consulting Collective",
+                  "markdown": "- **Seven Counties Services** : Provides comprehensive behavioral health services, including 24/7 crisis lines for adults (502-589-4313), children (502-589-8070), and addiction help (502-583-3951).\n- **Park DuValle Community Health Center** : Offers community-based mental health services (502-774-4401).\n- **Spalding University Collective Care Center** : Provides mental health care services (502-792-7011).\n- **NAMI Louisville** : Offers support and resources for mental health (502-588-2008).\n- **Louisville Recovery Community Connection** : Focuses on addiction recovery support (502-717-8321).\n- **The Black Counseling & Consulting Collective** : Provides counseling services (502-414-4380).[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Private Practitioners and Specialized Centers",
+                  "markdown": "**Private Practitioners and Specialized Centers**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Louisville Mind and Wellness LLC : Located on Baxter Ave, offering services from nurse practitioners. Louisville Mind and Wellness LLC Jim Walker, LCSW : Provides individual therapy and intake sessions. Jim Walker, LCSW Dreamcloud Psychology & Educational Services, LLC : Located on Springhurst Blvd, specializing in therapy for anxiety, ADHD, and mood disorders. Dreamcloud Psychology & Educational Services, LLC Nicole Fletcher Griggs, APRN, PMHNP-BC : Offers services specializing in depression treatment on Bishop Ln. Nicole Fletcher Griggs, APRN, PMHNP-BC",
+                  "markdown": "- **Louisville Mind and Wellness LLC** : Located on Baxter Ave, offering services from nurse practitioners.\n- **Jim Walker, LCSW** : Provides individual therapy and intake sessions.\n- **Dreamcloud Psychology & Educational Services, LLC** : Located on Springhurst Blvd, specializing in therapy for anxiety, ADHD, and mood disorders.\n- **Nicole Fletcher Griggs, APRN, PMHNP-BC** : Offers services specializing in depression treatment on Bishop Ln.[[1]](https://www.tebra.com/care/practice/louisville-mind-and-wellness-llc-650686?lid=490335590)[[2]](https://jimwalker.fullslate.com/services/1)[[3]](https://app.squareup.com/appointments/book/eb9c5ddf-fbb9-40ae-8d73-967aad8c9082/NB6KRWR5H44BZ/start?service_id=5NHEWSNEQSS6BKWMP52YM76F&variation_id=XK5C5ZLR3STU22UFBV2L24QX)[[4]](https://www.zocdoc.com/doctor/nicole-fletcher-griggs-aprn-pmhnp-bc-656210?LocIdent=355819&utm_source=reservewithgoogle&utm_medium=seosynd&utm_campaign=hai&entity_id=pr_jICN4JntfEWK_4P5dFaJtQ-lo_X6B0qk02o0e0XbhXgmgwQQ-entity)[[5]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "tebra.com",
+                      "domain": "www.tebra.com",
+                      "url": "https://www.tebra.com/care/practice/louisville-mind-and-wellness-llc-650686?lid=490335590",
+                      "title": "Mental Health Services And Family Practice",
+                      "text": "Service at \"Louisville Mind and Wellness LLC\""
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "fullslate.com",
+                      "domain": "jimwalker.fullslate.com",
+                      "url": "https://jimwalker.fullslate.com/services/1",
+                      "title": "In Office- Initial Intake",
+                      "text": "Service at \"Jim Walker, LCSW\" for 150 USD (1 hour)"
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "squareup.com",
+                      "domain": "app.squareup.com",
+                      "url": "https://app.squareup.com/appointments/book/eb9c5ddf-fbb9-40ae-8d73-967aad8c9082/NB6KRWR5H44BZ/start?service_id=5NHEWSNEQSS6BKWMP52YM76F&variation_id=XK5C5ZLR3STU22UFBV2L24QX",
+                      "title": "Individual Therapy Session (In-Office Therapy Session (75-Minutes))",
+                      "text": "Denise Myers. M.Ed. LPP works with individuals (ages 12 through mid-adulthood) experiencing a wide range of issues, including anxi..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "zocdoc.com",
+                      "domain": "www.zocdoc.com",
+                      "url": "https://www.zocdoc.com/doctor/nicole-fletcher-griggs-aprn-pmhnp-bc-656210?LocIdent=355819&utm_source=reservewithgoogle&utm_medium=seosynd&utm_campaign=hai&entity_id=pr_jICN4JntfEWK_4P5dFaJtQ-lo_X6B0qk02o0e0XbhXgmgwQQ-entity",
+                      "title": "Depression",
+                      "text": "Service at \"Nicole Fletcher Griggs, APRN, PMHNP-BC\" (30 minutes)"
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "For immediate, free, and confidential help, Kentucky's 988 Suicide & Crisis Lifeline is available. LouisvilleKY.gov",
+                  "markdown": "For immediate, free, and confidential help, Kentucky's 988 Suicide & Crisis Lifeline is available.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://lightheartassociates.com/psychology-blog/5-mental-health-resources-available-in-seattle-wa/)[[3]](https://www.kysu.edu/student-affairs/health-services/support.php)[[4]](https://www.instagram.com/loumetrooss/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LightHeart Mental Health",
+                      "domain": "lightheartassociates.com",
+                      "url": "https://lightheartassociates.com/psychology-blog/5-mental-health-resources-available-in-seattle-wa/",
+                      "title": "5 Mental Health Resources Available in Seattle, WA",
+                      "text": "2. Call the King County Crisis Lifeline Call or text 988: The Suicide & Crisis Lifeline provides free, confidential support 24/7. ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Kentucky State University",
+                      "domain": "www.kysu.edu",
+                      "url": "https://www.kysu.edu/student-affairs/health-services/support.php",
+                      "title": "Support",
+                      "text": "24/7 and Additional Support Resources TimelyCare (for Kentucky State University students) 988 Suicide and Crisis Lifeline New Vist..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Instagram",
+                      "domain": "www.instagram.com",
+                      "url": "https://www.instagram.com/loumetrooss/",
+                      "title": "Louisville Metro OSS (@loumetrooss) · Louisville, KY",
+                      "text": "If you're struggling, call, text, or chat 988 for free support anytime day or night. September is #suicidepreventionmonth, and we ..."
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "LouisvilleKY.gov",
+                  "domain": "louisvilleky.gov",
+                  "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                  "title": "Community Mental Health Services - LouisvilleKY.gov",
+                  "text": "Mental Health Services (brochure) Medical and mental health resources (brochure) Servicios de Salud Mental (brochure) Kentucky's 9..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "tebra.com",
+                  "domain": "www.tebra.com",
+                  "url": "https://www.tebra.com/care/practice/louisville-mind-and-wellness-llc-650686?lid=490335590",
+                  "title": "Mental Health Services And Family Practice",
+                  "text": "Service at \"Louisville Mind and Wellness LLC\""
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "fullslate.com",
+                  "domain": "jimwalker.fullslate.com",
+                  "url": "https://jimwalker.fullslate.com/services/1",
+                  "title": "In Office- Initial Intake",
+                  "text": "Service at \"Jim Walker, LCSW\" for 150 USD (1 hour)"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "squareup.com",
+                  "domain": "app.squareup.com",
+                  "url": "https://app.squareup.com/appointments/book/eb9c5ddf-fbb9-40ae-8d73-967aad8c9082/NB6KRWR5H44BZ/start?service_id=5NHEWSNEQSS6BKWMP52YM76F&variation_id=XK5C5ZLR3STU22UFBV2L24QX",
+                  "title": "Individual Therapy Session (In-Office Therapy Session (75-Minutes))",
+                  "text": "Denise Myers. M.Ed. LPP works with individuals (ages 12 through mid-adulthood) experiencing a wide range of issues, including anxi..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "zocdoc.com",
+                  "domain": "www.zocdoc.com",
+                  "url": "https://www.zocdoc.com/doctor/nicole-fletcher-griggs-aprn-pmhnp-bc-656210?LocIdent=355819&utm_source=reservewithgoogle&utm_medium=seosynd&utm_campaign=hai&entity_id=pr_jICN4JntfEWK_4P5dFaJtQ-lo_X6B0qk02o0e0XbhXgmgwQQ-entity",
+                  "title": "Depression",
+                  "text": "Service at \"Nicole Fletcher Griggs, APRN, PMHNP-BC\" (30 minutes)"
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "name": "llm-mentions-topic-top_domains-google",
+  "path": "/v3/ai_optimization/llm_mentions/top_domains/live",
+  "body": [
+    {
+      "target": [
+        {
+          "keyword": "therapy Louisville KY",
+          "search_filter": "include",
+          "search_scope": [
+            "any"
+          ],
+          "match_type": "word_match"
+        },
+        {
+          "keyword": "therapist Louisville KY",
+          "search_filter": "include",
+          "search_scope": [
+            "any"
+          ],
+          "match_type": "word_match"
+        },
+        {
+          "keyword": "counseling Louisville KY",
+          "search_filter": "include",
+          "search_scope": [
+            "any"
+          ],
+          "match_type": "word_match"
+        },
+        {
+          "keyword": "mental health services Louisville KY",
+          "search_filter": "include",
+          "search_scope": [
+            "any"
+          ],
+          "match_type": "word_match"
+        },
+        {
+          "keyword": "family therapy Louisville KY",
+          "search_filter": "include",
+          "search_scope": [
+            "any"
+          ],
+          "match_type": "word_match"
+        },
+        {
+          "keyword": "child therapy Louisville KY",
+          "search_filter": "include",
+          "search_scope": [
+            "any"
+          ],
+          "match_type": "word_match"
+        },
+        {
+          "keyword": "case management Louisville KY",
+          "search_filter": "include",
+          "search_scope": [
+            "any"
+          ],
+          "match_type": "word_match"
+        },
+        {
+          "keyword": "group therapy Louisville KY",
+          "search_filter": "include",
+          "search_scope": [
+            "any"
+          ],
+          "match_type": "word_match"
+        },
+        {
+          "keyword": "community based mental health services Louisville KY",
+          "search_filter": "include",
+          "search_scope": [
+            "any"
+          ],
+          "match_type": "word_match"
+        },
+        {
+          "keyword": "in home therapy Louisville KY",
+          "search_filter": "include",
+          "search_scope": [
+            "any"
+          ],
+          "match_type": "word_match"
+        }
+      ],
+      "platform": "google",
+      "location_code": 2840,
+      "language_code": "en",
+      "limit": 50,
+      "tag": "lmhg topical top_domains google"
+    }
+  ]
+}

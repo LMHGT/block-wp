@@ -1,0 +1,1752 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "1.1180 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-790d26d2d5d7",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "1.0243 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "maps",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "maps",
+        "keyword": "mental health services Louisville KY",
+        "location_coordinate": "38.2526647,-85.7584557,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid maps downtown-louisville mental health services Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "mental health services Louisville KY",
+          "type": "maps",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://google.com/maps/search/mental+health+services+Louisville+KY/@38.2526647,-85.7584557,17z?hl=en&gl=US&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-07-05 21:36:31 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "maps_search"
+          ],
+          "se_results_count": 0,
+          "items_count": 20,
+          "items": [
+            {
+              "type": "maps_search",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "domain": null,
+              "title": "Better You Behavioral Health Services",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": "https://www.zocdoc.com/practice/better-you-behavioral-health-services-146494?LocIdent=355819&utm_source=reservewithgoogle&utm_medium=seosynd&utm_campaign=hai&entity_id=pt_Wu4m1OvawUC2yowE0ILv_Q-lo_X6B0qk02o0e0XbhXgmgwQQ-entity&rwg_token=AE37R_gNs0OnrGz32qmrqLvxypwxW2lPEdzm4GElTaNNwnRPM5ondBWkMje1ivvxXiBLaaagXNyiP_i5T4clU5eStdMuunA1rw%3D%3D",
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 1,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 1
+              },
+              "snippet": "Louisville, KY 40202",
+              "address": "Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": null,
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJE1ESBQBzaYgRDEpKh6lMfac",
+              "phone": null,
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=04kybPt9ZVHm1yNkOn6AiQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=184.85272&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Mental health service",
+              "additional_categories": null,
+              "category_ids": [
+                "mental_health_service"
+              ],
+              "work_hours": null,
+              "feature_id": "0x8869730005125113:0xa77d4ca9874a4a0c",
+              "cid": "12068886867425774092",
+              "latitude": 38.2526647,
+              "longitude": -85.7584557,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "domain": null,
+              "title": "Steps Behavioral Care",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/102317323200621355903",
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "312 S 4th St Ste700, Louisville, KY 40202",
+              "address": "312 S 4th St Ste700, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "312 S 4th St Ste700",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJzQEVNghzaYgRQ9d9GppuVRg",
+              "phone": "+1786-447-6341",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=wSnhHHeSlbvBieV76voG0A&cb_client=search.gws-prod.gps&w=408&h=240&yaw=276.2876&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Applied behavior analysis therapist",
+              "additional_categories": null,
+              "category_ids": [
+                "applied_behavior_analysis_therapist"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 13,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 13,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 13,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 13,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 13,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x88697308361501cd:0x18556e9a1a7dd743",
+              "cid": "1753429238079149891",
+              "latitude": 38.2535124,
+              "longitude": -85.7575232,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "domain": "www.conscientiahealth.com",
+              "title": "Conscientia Health",
+              "original_title": null,
+              "url": "https://www.conscientiahealth.com/",
+              "contact_url": "https://conscientiahealth.com/booking-contact-form/",
+              "contributor_url": "https://maps.google.com/maps/contrib/117200704787070018550",
+              "book_online_url": "https://book.nimblr.ai/ConscientiaHealthKY?isFromGoogleReservation=true&rwg_token=AE37R_ifB9LRvbN9VT2viU-S-qCBLoJbBnuCoJPI-cD9zVy1493z4ekRY5Vx9HPUd1X9qg-KicyQrSX1bYtO6c5rCi39T31nBw%3D%3D",
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "312 S 4th St, Louisville, KY 40202",
+              "address": "312 S 4th St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "312 S 4th St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJA4-QWV1zaYgRKxDwC510ZG0",
+              "phone": "+1877-803-5342",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=wSnhHHeSlbvBieV76voG0A&cb_client=search.gws-prod.gps&w=408&h=240&yaw=276.2876&pitch=0&thumbfov=100",
+              "total_photos": 11,
+              "category": "Psychiatrist",
+              "additional_categories": [
+                "Mental health clinic",
+                "Mental health service",
+                "Nurse practitioner",
+                "Psychotherapist"
+              ],
+              "category_ids": [
+                "psychiatrist",
+                "mental_health_clinic",
+                "mental_health_service",
+                "nurse_practitioner",
+                "psychotherapist"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 22,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 22,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 22,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 22,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 22,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 22,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 22,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "open"
+              },
+              "feature_id": "0x8869735d59908f03:0x6d64749d0bf0102b",
+              "cid": "7882553465664180267",
+              "latitude": 38.2535124,
+              "longitude": -85.7575232,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "domain": null,
+              "title": "Old Louisville Counseling Center",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "408 S 4th St, Louisville, KY 40202",
+              "address": "408 S 4th St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "408 S 4th St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJUTCLNwBzaYgRipKSEksPsX4",
+              "phone": "+1502-233-4949",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=07j18MJoY08KsNlOe9Gi3g&cb_client=search.gws-prod.gps&w=408&h=240&yaw=276.40805&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Health counselor",
+              "additional_categories": null,
+              "category_ids": [
+                "health_counselor"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "open"
+              },
+              "feature_id": "0x88697300378b3051:0x7eb10f4b1292928a",
+              "cid": "9129094734765265546",
+              "latitude": 38.252607999999995,
+              "longitude": -85.75731739999999,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 5,
+              "rank_absolute": 5,
+              "domain": "improveddynamicsaba.com",
+              "title": "Improved Dynamics ABA - Louisville, KY",
+              "original_title": null,
+              "url": "https://improveddynamicsaba.com/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/112812802146216157578",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 8,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 8
+              },
+              "snippet": "312 S 4th St, Louisville, KY 40202",
+              "address": "312 S 4th St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "312 S 4th St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ_flADFpzaYgR9NQQGjyzxkY",
+              "phone": "+1571-400-2860",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=wSnhHHeSlbvBieV76voG0A&cb_client=search.gws-prod.gps&w=408&h=240&yaw=276.2876&pitch=0&thumbfov=100",
+              "total_photos": 6,
+              "category": "Mental health service",
+              "additional_categories": null,
+              "category_ids": [
+                "mental_health_service"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x8869735a0c40f9fd:0x46c6b33c1a10d4f4",
+              "cid": "5099960698760385780",
+              "latitude": 38.2535124,
+              "longitude": -85.7575232,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"Overall, a fantastic choice for anyone seeking ABA services.!!\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 6,
+              "rank_absolute": 6,
+              "domain": "uniteddrugsdetoxcenters.store",
+              "title": "Renew Wellness Center",
+              "original_title": null,
+              "url": "https://uniteddrugsdetoxcenters.store/",
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 9,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 9
+              },
+              "snippet": "112 E Main St, Louisville, KY 40202",
+              "address": "112 E Main St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "112 E Main St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJi56UjVpzaYgRKKYY-fQlFgk",
+              "phone": "+1502-516-7366",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFR6FUh1FYnZQ7TTOMbtPbokn18tkki4sf5kqMJqw1Wo6c0g7sS5YJ9_roZzqau2YxYIs9zQgfMtXlJylH6kuVacRipot-U04K7KQo4NEkx-Gh-Ow7W87CNf3zr5Lfovy8c_PP14d__eTtP=w408-h408-k-no",
+              "total_photos": 6,
+              "category": "Health counselor",
+              "additional_categories": null,
+              "category_ids": [
+                "health_counselor"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "open"
+              },
+              "feature_id": "0x8869735a8d949e8b:0x91625f4f918a628",
+              "cid": "654752529910375976",
+              "latitude": 38.2557876,
+              "longitude": -85.7510262,
+              "is_claimed": false,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"Safe, supportive, and effective—exactly what I needed.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 7,
+              "rank_absolute": 7,
+              "domain": "www.paxrecoverycenter.org",
+              "title": "Pax Recovery Center",
+              "original_title": null,
+              "url": "https://www.paxrecoverycenter.org/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/107056943947582422534",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.8,
+                "votes_count": 48,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 2,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 46
+              },
+              "snippet": "436 S 7th St #100, Louisville, KY 40203",
+              "address": "436 S 7th St #100, Louisville, KY 40203",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "436 S 7th St #100",
+                "city": "Louisville",
+                "zip": "40203",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJgf3oDVBzaYgRmzBUnrIFu-w",
+              "phone": "+1502-881-1742",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGUuD2IVJVYMHmPNvrFNoAFlbGIn2TcRYg9U5WqfIA1qwhmmwc2aoLYt98-gF3j7pTBssOulZnC-mOOqTNgIdTvOG7IXf06jTaXkDR78tDchTEarwgh6ZkZN_4aH-DR8IzsE_h3D-9ilqJs=w408-h412-k-no",
+              "total_photos": 6,
+              "category": "Addiction treatment center",
+              "additional_categories": null,
+              "category_ids": [
+                "addiction_treatment_center"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886973500de8fd81:0xecbb05b29e54309b",
+              "cid": "17058234278314520731",
+              "latitude": 38.2524649,
+              "longitude": -85.7626801,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"They include therapy, outpatient groups, and a safe place to get sober.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 8,
+              "rank_absolute": 8,
+              "domain": null,
+              "title": "Cecil Mike",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 1,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 1
+              },
+              "snippet": "121 S 7th St, Louisville, KY 40202",
+              "address": "121 S 7th St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "121 S 7th St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJAU2KVaFyaYgR8ewmHtr1bkE",
+              "phone": "+1502-583-0250",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=jcaggj602xdAFYmbE-n80Q&cb_client=search.gws-prod.gps&w=408&h=240&yaw=125.1428&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Psychologist",
+              "additional_categories": null,
+              "category_ids": [
+                "psychologist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972a1558a4d01:0x416ef5da1e26ecf1",
+              "cid": "4714976177061031153",
+              "latitude": 38.256268999999996,
+              "longitude": -85.76135699999999,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 9,
+              "rank_absolute": 9,
+              "domain": null,
+              "title": "Crisis & Information Center",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 2,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 2
+              },
+              "snippet": "101 W Muhammad Ali Blvd, Louisville, KY 40202",
+              "address": "101 W Muhammad Ali Blvd, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "101 W Muhammad Ali Blvd",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ04vKdrpyaYgRV4XytQW5wNc",
+              "phone": "+1502-589-4313",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=DF91g7_d7S8PAsX5-HbMig&cb_client=search.gws-prod.gps&w=408&h=240&yaw=9.697236&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "County government office",
+              "additional_categories": null,
+              "category_ids": [
+                "county_government_office"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972ba76ca8bd3:0xd7c0b905b5f28557",
+              "cid": "15546629347861497175",
+              "latitude": 38.2508546,
+              "longitude": -85.7529934,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 10,
+              "rank_absolute": 10,
+              "domain": null,
+              "title": "Brittainy Shaw",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 1,
+                "votes_count": 1,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0
+              },
+              "snippet": "312 S 4th St Ste 700, Louisville, KY 40202",
+              "address": "312 S 4th St Ste 700, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "312 S 4th St Ste 700",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJsbEM36RyaYgRdUHOchbpmRE",
+              "phone": "+1614-390-3387",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=zmtC15Nedwyk2R8fUdHZgQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=273.18527&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Psychologist",
+              "additional_categories": null,
+              "category_ids": [
+                "psychologist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972a4df0cb1b1:0x1199e91672ce4175",
+              "cid": "1268301052706177397",
+              "latitude": 38.253369,
+              "longitude": -85.7575093,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 11,
+              "rank_absolute": 11,
+              "domain": "www.kimberlylafollette.com",
+              "title": "Kimberly LaFollette, Psy.D.",
+              "original_title": null,
+              "url": "http://www.kimberlylafollette.com/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/112416236619514126614",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 1,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 1
+              },
+              "snippet": "312 S 4th St Ste 700, Louisville, KY 40202",
+              "address": "312 S 4th St Ste 700, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "312 S 4th St Ste 700",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJv0zkdXifaYgRvoEHWkcSVsA",
+              "phone": "+1502-541-1289",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEmhjXbjyvreIBueY7OMvkYO9-D8wYpil4kc3E6BUFnGtCeFP2CieiUFqZpxat6zERNHd7I6Ectmb1zloV5DZYBsHcIg7GlVWyGYMjMOTb_EDGjOlSsh-pgOA6T9IEWtBj5gAHM=w408-h272-k-no",
+              "total_photos": 2,
+              "category": "Psychologist",
+              "additional_categories": null,
+              "category_ids": [
+                "psychologist"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 14,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 14,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 14,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 14,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 14,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x88699f7875e44cbf:0xc05612475a0781be",
+              "cid": "13859285000941699518",
+              "latitude": 38.253369,
+              "longitude": -85.7575093,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"best psychologist in louisville, kindest soul in the world, 10/10 recommend\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 12,
+              "rank_absolute": 12,
+              "domain": null,
+              "title": "Sagacity Wellness Group",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "310 W Liberty St, Louisville, KY 40202",
+              "address": "310 W Liberty St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "310 W Liberty St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ5St71LpyaYgRwVM9zVQc-iU",
+              "phone": "+1502-802-6125",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=e6aHqfsOPEmVgxVi3nYZ3A&cb_client=search.gws-prod.gps&w=408&h=240&yaw=196.29153&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Psychotherapist",
+              "additional_categories": [
+                "Family counselor",
+                "Marriage or relationship counselor",
+                "Personal trainer"
+              ],
+              "category_ids": [
+                "psychotherapist",
+                "family_counselor",
+                "marriage_counselor",
+                "personal_trainer"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972bad47b2be5:0x25fa1c54cd3d53c1",
+              "cid": "2736530874127176641",
+              "latitude": 38.2527033,
+              "longitude": -85.7562105,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 13,
+              "rank_absolute": 13,
+              "domain": null,
+              "title": "Louisville Counseling Directory",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "101 W Main St, Louisville, KY 40202",
+              "address": "101 W Main St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "101 W Main St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJI-ZtG7xyaYgR9IWRnNMTBrk",
+              "phone": "+1502-357-0734",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=bhPPKFWM2NV_JXx0YhrAaQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=3.1281738&pitch=0&thumbfov=100",
+              "total_photos": 2,
+              "category": "Counselor",
+              "additional_categories": [
+                "Family counselor",
+                "Marriage or relationship counselor",
+                "Psychotherapist"
+              ],
+              "category_ids": [
+                "counselor",
+                "family_counselor",
+                "marriage_counselor",
+                "psychotherapist"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886972bc1b6de623:0xb90613d39c9185f4",
+              "cid": "13332365546462742004",
+              "latitude": 38.2564968,
+              "longitude": -85.751781,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 14,
+              "rank_absolute": 14,
+              "domain": "www.betteryoubhs.com",
+              "title": "Better You Behavioral Health Services",
+              "original_title": null,
+              "url": "https://www.betteryoubhs.com/",
+              "contact_url": "https://betteryoubhs.intakeq.com/booking",
+              "contributor_url": "https://maps.google.com/maps/contrib/109250716210257734586",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.4,
+                "votes_count": 7,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 6
+              },
+              "snippet": null,
+              "address": null,
+              "address_info": {
+                "borough": null,
+                "address": null,
+                "city": null,
+                "zip": null,
+                "region": null,
+                "country_code": null
+              },
+              "place_id": "ChIJH0Iuw-qRfgwRaMcgmHPOd_k",
+              "phone": "+1502-653-5800",
+              "main_image": null,
+              "total_photos": null,
+              "category": "Mental health service",
+              "additional_categories": [
+                "Service establishment"
+              ],
+              "category_ids": [
+                "mental_health_service",
+                "establishment_service"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 14,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 12,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0xc7e91eac32e421f:0xf977ce739820c768",
+              "cid": "17976063433541470056",
+              "latitude": 37.9660644,
+              "longitude": -85.2242514,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"I’ve been known to rack through them through my mental health journey.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 15,
+              "rank_absolute": 15,
+              "domain": null,
+              "title": "Tamara Roberts, PHD",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 1,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 1
+              },
+              "snippet": "101 W Muhammad Ali Blvd, Louisville, KY 40202",
+              "address": "101 W Muhammad Ali Blvd, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "101 W Muhammad Ali Blvd",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ04vKdrpyaYgRoDY58o1GyFQ",
+              "phone": "+1502-589-8600",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=65DwGFFd_C8BT-kUaJgcFQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=357.9564&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Psychologist",
+              "additional_categories": null,
+              "category_ids": [
+                "psychologist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972ba76ca8bd3:0x54c8468df23936a0",
+              "cid": "6109210469996246688",
+              "latitude": 38.2508651,
+              "longitude": -85.75293549999999,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 16,
+              "rank_absolute": 16,
+              "domain": null,
+              "title": "Vanburen Mulca Emily",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "421 S 2nd St, Louisville, KY 40202",
+              "address": "421 S 2nd St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "421 S 2nd St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJHeZz9bpyaYgRCqFoCXb3D9E",
+              "phone": "+1502-593-0445",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Alo9WU3Ep3qmX8i7rbdcng&cb_client=search.gws-prod.gps&w=408&h=240&yaw=187.7638&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Psychologist",
+              "additional_categories": null,
+              "category_ids": [
+                "psychologist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972baf573e61d:0xd10ff7760968a10a",
+              "cid": "15064531364913651978",
+              "latitude": 38.252000599999995,
+              "longitude": -85.7535834,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 17,
+              "rank_absolute": 17,
+              "domain": null,
+              "title": "Dr. Teri L Maynard",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "220 Abraham Flexner Way, Louisville, KY 40202",
+              "address": "220 Abraham Flexner Way, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "220 Abraham Flexner Way",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJOcy9OLdyaYgRJq7chBGpWwg",
+              "phone": "+1502-582-7484",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Vqz7-eJ_hMswalFpZ-gM2Q&cb_client=search.gws-prod.gps&w=408&h=240&yaw=188.67836&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Psychologist",
+              "additional_categories": null,
+              "category_ids": [
+                "psychologist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972b738bdcc39:0x85ba91184dcae26",
+              "cid": "602260867892686374",
+              "latitude": 38.2490206,
+              "longitude": -85.7503926,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 18,
+              "rank_absolute": 18,
+              "domain": null,
+              "title": "Geftos Patricia S",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "101 W Muhammad Ali Blvd, Louisville, KY 40202",
+              "address": "101 W Muhammad Ali Blvd, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "101 W Muhammad Ali Blvd",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJQUmhdrpyaYgRf-mDACjn0Iw",
+              "phone": null,
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=DF91g7_d7S8PAsX5-HbMig&cb_client=search.gws-prod.gps&w=408&h=240&yaw=9.697236&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Psychologist",
+              "additional_categories": null,
+              "category_ids": [
+                "psychologist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972ba76a14941:0x8cd0e7280083e97f",
+              "cid": "10146864119459080575",
+              "latitude": 38.2508546,
+              "longitude": -85.7529934,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 19,
+              "rank_absolute": 19,
+              "domain": "uoflhealth.org",
+              "title": "Amy Gonshak, Ph.D.",
+              "original_title": null,
+              "url": "https://uoflhealth.org/provider/amy-gonshak-rehabilitation-psychologist/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/106140298832293852901",
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "220 Abraham Flexner Way, Louisville, KY 40202",
+              "address": "220 Abraham Flexner Way, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "220 Abraham Flexner Way",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJB-NbhbpzaYgRVjvanjKei5U",
+              "phone": "+1502-582-7484",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Vqz7-eJ_hMswalFpZ-gM2Q&cb_client=search.gws-prod.gps&w=408&h=240&yaw=188.67836&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Psychologist",
+              "additional_categories": null,
+              "category_ids": [
+                "psychologist"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886973ba855be307:0x958b9e329eda3b56",
+              "cid": "10775880473664699222",
+              "latitude": 38.2490206,
+              "longitude": -85.7503926,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 20,
+              "rank_absolute": 20,
+              "domain": null,
+              "title": "Downtown Counseling Associates",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "239 S 5th St #915, Louisville, KY 40202",
+              "address": "239 S 5th St #915, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "239 S 5th St #915",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJpwdDRKVyaYgRDKmHcDjN9EE",
+              "phone": "+1502-584-7216",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Z17rUuQIEUkXQiwVpU67Cg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=115.239105&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Counselor",
+              "additional_categories": null,
+              "category_ids": [
+                "counselor"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972a5444307a7:0x41f4cd387087a90c",
+              "cid": "4752649149072517388",
+              "latitude": 38.2542359,
+              "longitude": -85.75836579999999,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

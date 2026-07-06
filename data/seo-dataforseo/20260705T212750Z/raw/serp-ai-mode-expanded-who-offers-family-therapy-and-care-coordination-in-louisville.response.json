@@ -1,0 +1,256 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "5.8429 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060041-9766-0139-0000-bf87acfb1064",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "5.7785 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "Who offers family therapy and care coordination in Louisville?",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode expanded Who offers family therapy and care coordination in Louisville?",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Who offers family therapy and care coordination in Louisville?",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=Who%20offers%20family%20therapy%20and%20care%20coordination%20in%20Louisville%3F&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:41:13 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[4]/div[1]/div[2]/div[1]/div[3]",
+              "markdown": "Several providers in Louisville offer family therapy and care coordination (case management) to support families with behavioral and emotional needs.[[1]](https://fccwellbeing.com/clinic-locations/colorado/louisville-clinic/)\n\n**Top Providers for Family Therapy and Care Coordination in Louisville:** \n\n- **[Haven Family Counseling](https://boysandgirlshaven.org/programs/haven-family-counseling/)** (part of Boys & Girls Haven) offers intensive in-home therapy, outpatient office counseling, and case management for families.\n- **[Creative Family Counseling](https://creativefamilycounseling.org/)** specializes in child, teen, and family counseling services in the Louisville area.\n- **[LifeStance Health](https://lifestance.com/services/family-therapy/ky/louisville/)** has multiple locations in Louisville (Executive Park and Eastpoint Parkway) providing family therapy.\n- **Jim Walker, LCSW** (Brownsboro Park Blvd) provides in-office or telehealth family/couples psychotherapy.[](https://creativefamilycounseling.org/) [[1]](https://creativefamilycounseling.org/)[[2]](https://boysandgirlshaven.org/programs/haven-family-counseling/)[[3]](https://lifestance.com/services/family-therapy/ky/louisville/)[[4]](https://jimwalker.fullslate.com/services/6)\n\n**Key Services & Support:** \n\n- **Intensive In-Home Therapy:** Available for families needing more focused care.\n- **Case Management:** Coordinated care planning to address complex needs.\n- **Telehealth Options:** Available for convenient, remote sessions.[](https://boysandgirlshaven.org/programs/haven-family-counseling/) [[1]](https://boysandgirlshaven.org/programs/haven-family-counseling/)[[2]](https://jimwalker.fullslate.com/services/6)[[3]](https://whiteglovehomecare.com/best-pediatric-case-management-agencies-in-new-york/)\n\nWould you like to explore **specific areas of specialization** (e.g., trauma-informed, addiction) or find providers that **accept a particular insurance**?",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Several providers in Louisville offer family therapy and care coordination (case management) to support families with behavioral and emotional needs.",
+                  "markdown": "Several providers in Louisville offer family therapy and care coordination (case management) to support families with behavioral and emotional needs.[[1]](https://fccwellbeing.com/clinic-locations/colorado/louisville-clinic/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Family Care Center",
+                      "domain": "fccwellbeing.com",
+                      "url": "https://fccwellbeing.com/clinic-locations/colorado/louisville-clinic/",
+                      "title": "Family Care Center Louisville, CO Therapy & Psychiatry",
+                      "text": "Therapy services in Louisville, CO Family Care Center offers comprehensive behavioral health services for children, teens, adults,"
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Top Providers for Family Therapy and Care Coordination in Louisville:",
+                  "markdown": "**Top Providers for Family Therapy and Care Coordination in Louisville:**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Haven Family Counseling (part of Boys & Girls Haven) offers intensive in-home therapy, outpatient office counseling, and case management for families. Creative Family Counseling specializes in child, teen, and family counseling services in the Louisville area. LifeStance Health has multiple locations in Louisville (Executive Park and Eastpoint Parkway) providing family therapy. Jim Walker, LCSW (Brownsboro Park Blvd) provides in-office or telehealth family/couples psychotherapy. Jim Walker, LCSW",
+                  "markdown": "- **[Haven Family Counseling](https://boysandgirlshaven.org/programs/haven-family-counseling/)** (part of Boys & Girls Haven) offers intensive in-home therapy, outpatient office counseling, and case management for families.\n- **[Creative Family Counseling](https://creativefamilycounseling.org/)** specializes in child, teen, and family counseling services in the Louisville area.\n- **[LifeStance Health](https://lifestance.com/services/family-therapy/ky/louisville/)** has multiple locations in Louisville (Executive Park and Eastpoint Parkway) providing family therapy.\n- **Jim Walker, LCSW** (Brownsboro Park Blvd) provides in-office or telehealth family/couples psychotherapy.[](https://creativefamilycounseling.org/) [[1]](https://creativefamilycounseling.org/)[[2]](https://boysandgirlshaven.org/programs/haven-family-counseling/)[[3]](https://lifestance.com/services/family-therapy/ky/louisville/)[[4]](https://jimwalker.fullslate.com/services/6)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Haven Family Counseling",
+                      "description": null,
+                      "url": "https://boysandgirlshaven.org/programs/haven-family-counseling/",
+                      "domain": "boysandgirlshaven.org"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Creative Family Counseling",
+                      "description": null,
+                      "url": "https://creativefamilycounseling.org/",
+                      "domain": "creativefamilycounseling.org"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "LifeStance Health",
+                      "description": null,
+                      "url": "https://lifestance.com/services/family-therapy/ky/louisville/",
+                      "domain": "lifestance.com"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Creative Family Counseling",
+                      "domain": "creativefamilycounseling.org",
+                      "url": "https://creativefamilycounseling.org/",
+                      "title": "Creative Family Counseling | Child, Teen & Family Therapists ...",
+                      "text": "Creative Family Counseling | Child, Teen & Family Therapists, Louisville."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Boys & Girls Haven",
+                      "domain": "boysandgirlshaven.org",
+                      "url": "https://boysandgirlshaven.org/programs/haven-family-counseling/",
+                      "title": "Haven Family Counseling",
+                      "text": "Mental Wellness Doesn't Wait. We specialize in addressing the behavioral and emotional needs of children, adolescents, adults, and..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LifeStance Health",
+                      "domain": "lifestance.com",
+                      "url": "https://lifestance.com/services/family-therapy/ky/louisville/",
+                      "title": "Find Family Therapy in Louisville, Kentucky - LifeStance Health",
+                      "text": "Mental Health Clinics that offer Family Therapy in Louisville, Kentucky * Louisville. 100 Executive Park, Suite 103. Louisville, K..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "fullslate.com",
+                      "domain": "jimwalker.fullslate.com",
+                      "url": "https://jimwalker.fullslate.com/services/6",
+                      "title": "In Office-Family Or Couples Counseling/Psychotherapy",
+                      "text": "May be completed by telephone or online video chat"
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Key Services & Support:",
+                  "markdown": "**Key Services & Support:**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Intensive In-Home Therapy: Available for families needing more focused care. Case Management: Coordinated care planning to address complex needs. Telehealth Options: Available for convenient, remote sessions.",
+                  "markdown": "- **Intensive In-Home Therapy:** Available for families needing more focused care.\n- **Case Management:** Coordinated care planning to address complex needs.\n- **Telehealth Options:** Available for convenient, remote sessions.[](https://boysandgirlshaven.org/programs/haven-family-counseling/) [[1]](https://boysandgirlshaven.org/programs/haven-family-counseling/)[[2]](https://jimwalker.fullslate.com/services/6)[[3]](https://whiteglovehomecare.com/best-pediatric-case-management-agencies-in-new-york/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Boys & Girls Haven",
+                      "domain": "boysandgirlshaven.org",
+                      "url": "https://boysandgirlshaven.org/programs/haven-family-counseling/",
+                      "title": "Haven Family Counseling",
+                      "text": "Mental Wellness Doesn't Wait. We specialize in addressing the behavioral and emotional needs of children, adolescents, adults, and..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "fullslate.com",
+                      "domain": "jimwalker.fullslate.com",
+                      "url": "https://jimwalker.fullslate.com/services/6",
+                      "title": "In Office-Family Or Couples Counseling/Psychotherapy",
+                      "text": "May be completed by telephone or online video chat"
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "White Glove Community Care",
+                      "domain": "whiteglovehomecare.com",
+                      "url": "https://whiteglovehomecare.com/best-pediatric-case-management-agencies-in-new-york/",
+                      "title": "Pediatric case management agencies in New York",
+                      "text": "In simple terms, case management is a structured, professional approach to organizing care. A nurse case manager or care coordinat..."
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Creative Family Counseling",
+                  "domain": "creativefamilycounseling.org",
+                  "url": "https://creativefamilycounseling.org/",
+                  "title": "Creative Family Counseling | Child, Teen & Family Therapists ...",
+                  "text": "Creative Family Counseling | Child, Teen & Family Therapists, Louisville."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Boys & Girls Haven",
+                  "domain": "boysandgirlshaven.org",
+                  "url": "https://boysandgirlshaven.org/programs/haven-family-counseling/",
+                  "title": "Haven Family Counseling",
+                  "text": "Mental Wellness Doesn't Wait. We specialize in addressing the behavioral and emotional needs of children, adolescents, adults, and..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "LifeStance Health",
+                  "domain": "lifestance.com",
+                  "url": "https://lifestance.com/services/family-therapy/ky/louisville/",
+                  "title": "Find Family Therapy in Louisville, Kentucky - LifeStance Health",
+                  "text": "Mental Health Clinics that offer Family Therapy in Louisville, Kentucky * Louisville. 100 Executive Park, Suite 103. Louisville, K..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "fullslate.com",
+                  "domain": "jimwalker.fullslate.com",
+                  "url": "https://jimwalker.fullslate.com/services/6",
+                  "title": "In Office-Family Or Couples Counseling/Psychotherapy",
+                  "text": "May be completed by telephone or online video chat"
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

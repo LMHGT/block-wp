@@ -1,0 +1,734 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "2.5720 sec.",
+  "cost": 0.09,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060029-9766-0367-0000-5d4ad7ddbc1b",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "2.5390 sec.",
+      "cost": 0.09,
+      "result_count": 22,
+      "path": [
+        "v3",
+        "keywords_data",
+        "google_ads",
+        "search_volume",
+        "live"
+      ],
+      "data": {
+        "api": "keywords_data",
+        "function": "search_volume",
+        "se": "google_ads",
+        "keywords": [
+          "mental health services Louisville KY",
+          "therapy Louisville KY",
+          "therapist Louisville KY",
+          "counseling Louisville KY",
+          "individual therapy Louisville KY",
+          "family therapy Louisville KY",
+          "child therapy Louisville KY",
+          "group therapy Louisville KY",
+          "case management Louisville KY",
+          "mental health case management Louisville KY",
+          "community based mental health services Louisville KY",
+          "in home therapy Louisville KY",
+          "trauma therapy Louisville KY",
+          "anxiety therapy Louisville KY",
+          "depression therapy Louisville KY",
+          "play therapy Louisville KY",
+          "Louisville Mental Health Group",
+          "behavioral health Louisville KY",
+          "outpatient mental health Louisville KY",
+          "Medicaid therapist Louisville KY",
+          "therapist that accepts Medicaid Louisville KY",
+          "therapy in your home Louisville KY"
+        ],
+        "location_code": 200529,
+        "language_code": "en",
+        "tag": "lmhg google ads search volume louisville dma"
+      },
+      "result": [
+        {
+          "keyword": "mental health services Louisville KY",
+          "spell": "mental health services louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "therapy Louisville KY",
+          "spell": "therapy louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": "HIGH",
+          "competition_index": 95,
+          "search_volume": 1300,
+          "low_top_of_page_bid": 7.63,
+          "high_top_of_page_bid": 32.04,
+          "cpc": 27.71,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 5,
+              "search_volume": 1000
+            },
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 1000
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 1000
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 1000
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 1600
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 1600
+            }
+          ]
+        },
+        {
+          "keyword": "therapist Louisville KY",
+          "spell": "therapist louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": "HIGH",
+          "competition_index": 95,
+          "search_volume": 1300,
+          "low_top_of_page_bid": 7.63,
+          "high_top_of_page_bid": 32.04,
+          "cpc": 27.71,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 5,
+              "search_volume": 1000
+            },
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 1000
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 1000
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 1000
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 1600
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 1600
+            }
+          ]
+        },
+        {
+          "keyword": "counseling Louisville KY",
+          "spell": "counseling louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": "HIGH",
+          "competition_index": 96,
+          "search_volume": 590,
+          "low_top_of_page_bid": 4.48,
+          "high_top_of_page_bid": 25.29,
+          "cpc": 14.96,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 5,
+              "search_volume": 110
+            },
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 110
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 590
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 1600
+            }
+          ]
+        },
+        {
+          "keyword": "individual therapy Louisville KY",
+          "spell": "individual therapy louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "family therapy Louisville KY",
+          "spell": "family therapy louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "child therapy Louisville KY",
+          "spell": "child therapy louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "group therapy Louisville KY",
+          "spell": "group therapy louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "case management Louisville KY",
+          "spell": "case management louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "mental health case management Louisville KY",
+          "spell": "mental health case management louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "community based mental health services Louisville KY",
+          "spell": "community based mental health services louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "in home therapy Louisville KY",
+          "spell": "in home therapy louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "trauma therapy Louisville KY",
+          "spell": "trauma therapy louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "anxiety therapy Louisville KY",
+          "spell": "anxiety therapy louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "depression therapy Louisville KY",
+          "spell": "depression therapy louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 7,
+          "search_volume": 50,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 5,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 20
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 0
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 140
+            }
+          ]
+        },
+        {
+          "keyword": "play therapy Louisville KY",
+          "spell": "play therapy louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Louisville Mental Health Group",
+          "spell": "louisville mental health group",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "behavioral health Louisville KY",
+          "spell": "behavioral health louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": "HIGH",
+          "competition_index": 77,
+          "search_volume": 140,
+          "low_top_of_page_bid": 4.2,
+          "high_top_of_page_bid": 16.34,
+          "cpc": 12.15,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 5,
+              "search_volume": 90
+            },
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 110
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 170
+            }
+          ]
+        },
+        {
+          "keyword": "outpatient mental health Louisville KY",
+          "spell": "outpatient mental health louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": "HIGH",
+          "competition_index": 76,
+          "search_volume": 20,
+          "low_top_of_page_bid": 4.95,
+          "high_top_of_page_bid": 31.3,
+          "cpc": 5.22,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 5,
+              "search_volume": 30
+            },
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 20
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 20
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 20
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 20
+            }
+          ]
+        },
+        {
+          "keyword": "Medicaid therapist Louisville KY",
+          "spell": "medicaid therapist louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "therapist that accepts Medicaid Louisville KY",
+          "spell": "therapist that accepts medicaid louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "therapy in your home Louisville KY",
+          "spell": "therapy in your home louisville ky",
+          "location_code": 200529,
+          "language_code": "en",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        }
+      ]
+    }
+  ]
+}

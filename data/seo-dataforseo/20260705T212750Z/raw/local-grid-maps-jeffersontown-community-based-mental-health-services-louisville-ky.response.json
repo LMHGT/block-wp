@@ -1,0 +1,185 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.9319 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-441d9682f2d2",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.8452 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "maps",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "maps",
+        "keyword": "community based mental health services Louisville KY",
+        "location_coordinate": "38.1942000,-85.5644000,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid maps jeffersontown community based mental health services Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "community based mental health services Louisville KY",
+          "type": "maps",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://google.com/maps/search/community+based+mental+health+services+Louisville+KY/@38.1942,-85.5644,17z?hl=en&gl=US&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-07-05 21:36:48 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "maps_search"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "maps_search",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "domain": "www.havenpointcounseling.com",
+              "title": "Havenpoint Counseling",
+              "original_title": null,
+              "url": "https://www.havenpointcounseling.com/",
+              "contact_url": "http://www.havenpointcounseling.com/",
+              "contributor_url": "https://maps.google.com/maps/contrib/117154514413057588645",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 6,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 6
+              },
+              "snippet": "3321 Ruckriegel Pkwy, Louisville, KY 40299",
+              "address": "3321 Ruckriegel Pkwy, Louisville, KY 40299",
+              "address_info": {
+                "borough": null,
+                "address": "3321 Ruckriegel Pkwy",
+                "city": "Louisville",
+                "zip": "40299",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJoYwmjS2haYgRlLMPBJDmxyU",
+              "phone": "+1502-208-6798",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=-NEaUz_hRUH1BjyaM5t_Lg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=111.10778&pitch=0&thumbfov=100",
+              "total_photos": 2,
+              "category": "Mental health service",
+              "additional_categories": null,
+              "category_ids": [
+                "mental_health_service"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 15,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x8869a12d8d268ca1:0x25c7e690040fb394",
+              "cid": "2722398005986571156",
+              "latitude": 38.1956874,
+              "longitude": -85.5562827,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"Two of my daughters and my wife see therapists here.\""
+                }
+              ],
+              "is_directory_item": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "local-grid-maps-office-bardstown-road-mental health services Louisville KY",
+  "path": "/v3/serp/google/maps/live/advanced",
+  "body": [
+    {
+      "keyword": "mental health services Louisville KY",
+      "location_coordinate": "38.1880877,-85.6379469,5000",
+      "language_code": "en",
+      "device": "desktop",
+      "depth": 20,
+      "tag": "lmhg grid maps office-bardstown-road mental health services Louisville KY"
+    }
+  ]
+}

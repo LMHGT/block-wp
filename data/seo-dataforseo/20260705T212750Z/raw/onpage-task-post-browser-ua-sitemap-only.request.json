@@ -1,0 +1,17 @@
+{
+  "name": "onpage-task-post-browser-ua-sitemap-only",
+  "path": "/v3/on_page/task_post",
+  "body": [
+    {
+      "target": "louisvillementalhealth.org",
+      "start_url": "https://louisvillementalhealth.org/",
+      "max_crawl_pages": 90,
+      "respect_sitemap": true,
+      "crawl_sitemap_only": true,
+      "custom_sitemap": "https://louisvillementalhealth.org/sitemap_index.xml",
+      "enable_javascript": false,
+      "custom_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "tag": "lmhg-louisville-browser-ua-sitemap-2026-07-05"
+    }
+  ]
+}

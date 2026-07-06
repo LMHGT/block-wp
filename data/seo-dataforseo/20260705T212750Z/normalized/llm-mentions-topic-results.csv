@@ -1,0 +1,5 @@
+source_file,row_type,domain,url,title,mentions,total_json
+llm-mentions-topic-top_domains-chat_gpt,empty,,,,,"{""location"": null, ""language"": null, ""platform"": null, ""sources_domain"": null, ""search_results_domain"": null, ""brand_entities_title"": null, ""brand_entities_category"": null}"
+llm-mentions-topic-top_pages-chat_gpt,empty,,,,,"{""location"": null, ""language"": null, ""platform"": null, ""sources_domain"": null, ""search_results_domain"": null, ""brand_entities_title"": null, ""brand_entities_category"": null}"
+llm-mentions-topic-top_domains-google,empty,,,,,"{""location"": null, ""language"": null, ""platform"": null, ""sources_domain"": null, ""search_results_domain"": null, ""brand_entities_title"": null, ""brand_entities_category"": null}"
+llm-mentions-topic-top_pages-google,empty,,,,,"{""location"": null, ""language"": null, ""platform"": null, ""sources_domain"": null, ""search_results_domain"": null, ""brand_entities_title"": null, ""brand_entities_category"": null}"

@@ -1,0 +1,83 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "3.0061 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-9b286dc47692",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "2.8918 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "local_finder",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "local_finder",
+        "keyword": "case management Louisville KY",
+        "location_coordinate": "38.2526647,-85.7584557,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid local_finder downtown-louisville case management Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "case management Louisville KY",
+          "type": "local_finder",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=case+management+Louisville+KY&oq=case+management+Louisville+KY&hl=en&gl=US&tbm=lcl&fll=38.2526647%2C-85.7584557&fspn=0.0028350891160214414%2C0.006474852561950684&fz=18&sll=38.2526647%2C-85.7584557&sspn=0.0028350891160214414%2C0.006474852561950684&sz=18",
+          "datetime": "2026-07-05 21:36:35 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "local_pack"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "local_pack",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]",
+              "title": "Codes & Regulations",
+              "description": "444 S 5th St Ste 200 · (502) 574-2508 \nClosed · Opens 8 AM Mon \n\"These people are wonderful.\" \n",
+              "domain": "louisvilleky.gov",
+              "phone": "(502) 574-2508",
+              "booking_url": null,
+              "url": "http://louisvilleky.gov/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 3.1,
+                "votes_count": 16,
+                "rating_max": 5
+              },
+              "cid": "12976089744363728255",
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "6.0281 sec.",
+  "cost": 0.006279,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-8a2d1188b4f4",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "6.0167 sec.",
+      "cost": 0.006279,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "perplexity",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "perplexity",
+        "user_prompt": "Recommend non-hospital mental health counseling options in Louisville, KY.",
+        "model_name": "sonar",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response perplexity Recommend non-hospital mental health counseling options in Louisville, KY.",
+        "max_output_tokens": 700
+      },
+      "result": [
+        {
+          "model_name": "sonar",
+          "input_tokens": 38,
+          "output_tokens": 641,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.005679,
+          "datetime": "2026-07-06 00:32:15 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "For non-hospital mental health counseling in Louisville, KY, top options include **Kentucky Counseling Center** (offering in-person and telehealth services for children and adults), **Louisville Mental Health Group** (a private practice at 4229 Bardstown Rd providing individual, family, and group therapy), and **Kentucky Mental Health Care** (located at 645 Roy Wilkins Ave with therapists and IOPs) [1][2][4].\n\nHere is a breakdown of recommended providers by service type:\n\n| Provider | Key Services | Location/Format | Notes |\n| :--- | :--- | :--- | :--- |\n| **Kentucky Counseling Center** | Counseling, psychiatry, medication management, IOPs, LGBTQ & family therapy | In-person (40217) & Telehealth (KCC Direct) | Affordable, compassionate, no long wait times [1] |\n| **Louisville Mental Health Group** | Individual/family therapy, group therapy, EMDR, case management, reunification | In-person (4229 Bardstown Rd, Suite 310) | Welcoming new clients; multidisciplinary team [2] |\n| **Kentucky Mental Health Care** | Therapy, counseling, child/addiction psychologists, IOPs | In-person (645 Roy Wilkins Ave) & Telehealth | Numerous clinicians; phone sessions available if no internet [4] |\n| **Norton Healthcare** | Therapists, psychologists, psychiatrists, addiction specialists | Virtual & In-person (select locations) | Integrated team treating depression, anxiety, PTSD, eating disorders [5] |\n| **Sage Mental Health** | Medication management, individual therapy for anxiety, ADHD, depression, PTSD | In-person & Telehealth | Welcomes all ages/backgrounds [8] |\n| **University of Louisville (UofL)** | Confidential psychiatric services, counseling, group therapy | In-person (HSC & Cardinal Station) | **Free** for enrolled students; voluntary access [6] |\n| **Acadia Counseling** | Mood/trauma therapy (depression, anxiety, dysphoria) | In-person (502-825-1375) | Opened 2019; serves adults, couples, teens [3] |\n| **Renew Counseling Services** | Art/Expressive Therapy, EMDR, 40+ professionals | 4 locations in Louisville/Oldham | Large group practice with diverse therapy options [3] |\n\n**Additional Resources:**\n*   **Support Groups:** Psychology Today lists local groups for OCD, anxiety, and substance abuse recovery in Louisville [3].\n*   **Immediate Care:** For urgent non-hospital mental health needs, **The Couch Immediate Mental Health Care** and **Access Behavioral Health** are highly reviewed options in the area [9].\n*   **Peace Hospital Assessment:** If you or someone you love has depression symptoms, Peace Hospital offers a no-charge assessment and treatment assistance [7].\n\nAll listed providers offer outpatient, community-based care distinct from inpatient hospitalization. For the most current availability, contact them directly via their listed phone numbers or websites.",
+                  "annotations": [
+                    {
+                      "title": "Louisville Therapist: Expert Psychiatrist & Counselors | KCC",
+                      "url": "https://kentuckycounselingcenter.com/kentucky-counseling-center/louisville/"
+                    },
+                    {
+                      "title": "Louisville Mental Health Group: Mental Health Clinic In Louisville",
+                      "url": "https://louisvillementalhealth.org"
+                    },
+                    {
+                      "title": "Support Groups in Louisville, KY - Psychology Today",
+                      "url": "https://www.psychologytoday.com/us/groups/ky/louisville"
+                    },
+                    {
+                      "title": "Kentucky Mental Health Care – Psychiatry | Therapy | Addiction ...",
+                      "url": "https://kentuckymentalhealth.com"
+                    },
+                    {
+                      "title": "Behavioral Medicine Services | Norton Healthcare Louisville, Ky.",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/"
+                    },
+                    {
+                      "title": "Mental Health Services",
+                      "url": "https://campushealth.louisville.edu/services/mental-health-services"
+                    },
+                    {
+                      "title": "Mental and Behavioral Health | Louisville KY",
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/"
+                    },
+                    {
+                      "title": "Sage Mental Health: Home",
+                      "url": "https://sagementalhealth.net"
+                    },
+                    {
+                      "title": "TOP 10 BEST Behavioral Health in Louisville, KY - Yelp",
+                      "url": "https://www.yelp.com/search?find_desc=Behavioral+Health&find_loc=Louisville%2C+KY"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": null
+        }
+      ]
+    }
+  ]
+}

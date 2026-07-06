@@ -1,0 +1,6 @@
+name,path,cost,status_code,status_message,result_counts,primary_observation
+supplemental-serp-organic-desktop-therapist-that-accepts-medicaid-louisville-ky,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1,"Directories and competitors win with explicit Medicaid/insurance language; LMHG not visible in top returned items."
+supplemental-serp-organic-desktop-in-home-therapy-louisville-ky,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1,"SERP is polluted by physical therapy/home health results; LMHG needs in-home mental health therapy disambiguation."
+supplemental-serp-organic-desktop-community-support-services-louisville-ky-mental-health,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1,"Government/resource/community providers dominate; LMHG needs a clear community support definition and provider statement."
+supplemental-serp-organic-desktop-child-therapist-louisville-ky,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1,"Competitors use child therapist, children and teens, play therapy, age ranges, caregiver involvement, and direct call language."
+supplemental-serp-organic-desktop-mental-health-case-management-medicaid-louisville-ky,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1,"LMHG appears, but competitors above it use explicit Medicaid and case-management language."

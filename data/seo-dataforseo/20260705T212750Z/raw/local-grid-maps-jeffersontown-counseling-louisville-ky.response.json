@@ -1,0 +1,770 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "1.9516 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-1869c3932d15",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "1.8599 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "maps",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "maps",
+        "keyword": "counseling Louisville KY",
+        "location_coordinate": "38.1942000,-85.5644000,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid maps jeffersontown counseling Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "counseling Louisville KY",
+          "type": "maps",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://google.com/maps/search/counseling+Louisville+KY/@38.1942,-85.5644,17z?hl=en&gl=US&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-07-05 21:36:43 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "maps_search"
+          ],
+          "se_results_count": 0,
+          "items_count": 6,
+          "items": [
+            {
+              "type": "maps_search",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "domain": "www.havenpointcounseling.com",
+              "title": "Havenpoint Counseling",
+              "original_title": null,
+              "url": "https://www.havenpointcounseling.com/",
+              "contact_url": "http://www.havenpointcounseling.com/",
+              "contributor_url": "https://maps.google.com/maps/contrib/117154514413057588645",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 6,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 6
+              },
+              "snippet": "3321 Ruckriegel Pkwy, Louisville, KY 40299",
+              "address": "3321 Ruckriegel Pkwy, Louisville, KY 40299",
+              "address_info": {
+                "borough": null,
+                "address": "3321 Ruckriegel Pkwy",
+                "city": "Louisville",
+                "zip": "40299",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJoYwmjS2haYgRlLMPBJDmxyU",
+              "phone": "+1502-208-6798",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=-NEaUz_hRUH1BjyaM5t_Lg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=111.10778&pitch=0&thumbfov=100",
+              "total_photos": 2,
+              "category": "Mental health service",
+              "additional_categories": null,
+              "category_ids": [
+                "mental_health_service"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 15,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x8869a12d8d268ca1:0x25c7e690040fb394",
+              "cid": "2722398005986571156",
+              "latitude": 38.1956874,
+              "longitude": -85.5562827,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"This is an amazing group of Godly women who truly care about helping others.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "domain": "www.baptisthealth.com",
+              "title": "Baptist Health Physical Therapy - Jeffersontown",
+              "original_title": null,
+              "url": "https://www.baptisthealth.com/locations/physical-therapy-jeffersontown?utm_source=google&utm_medium=organic&utm_content=gbp-website&utm_campaign=033-loc-gbp-listing",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/108819047563674282919",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 1,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 1
+              },
+              "snippet": "10216 Taylorsville Rd #950, Jeffersontown, KY 40299",
+              "address": "10216 Taylorsville Rd #950, Jeffersontown, KY 40299",
+              "address_info": {
+                "borough": null,
+                "address": "10216 Taylorsville Rd #950",
+                "city": "Jeffersontown",
+                "zip": "40299",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJA3FZtFagaYgR42l5pB-ZLWE",
+              "phone": "+1502-267-1799",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGai2vZFQ6iPmTVJ-2MRCgI9u7I6GPouaCjy8SZb7dJc8O-kzegQZ9YryalcMAj76eBmFcBpDTLN1SOzYilJnOvcMUfe44XiERhnrR2dtfLZGPvr-9zL68vbffngVV6fVJ9BJjy3lixKTwZ=w426-h240-k-no",
+              "total_photos": 7,
+              "category": "Physical therapy clinic",
+              "additional_categories": [
+                "Physical therapist"
+              ],
+              "category_ids": [
+                "physiotherapy_center",
+                "physiotherapist"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 6,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x8869a056b4597103:0x612d991fa47969e3",
+              "cid": "7002421356813445603",
+              "latitude": 38.1951974,
+              "longitude": -85.5675486,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"They cater your treatment to your needs and truly care to get you better.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "domain": "agapeofjesuschurch.jimdofree.com",
+              "title": "Agape of Jesus Independent Church",
+              "original_title": null,
+              "url": "https://agapeofjesuschurch.jimdofree.com/",
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 3.2,
+                "votes_count": 5,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 2,
+                "2": 0,
+                "3": 0,
+                "4": 1,
+                "5": 2
+              },
+              "snippet": "10609 Watterson Trail, Louisville, KY 40299",
+              "address": "10609 Watterson Trail, Louisville, KY 40299",
+              "address_info": {
+                "borough": null,
+                "address": "10609 Watterson Trail",
+                "city": "Louisville",
+                "zip": "40299",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ3yxlYlOgaYgRhlzdwxdqL2g",
+              "phone": "+1502-419-5605",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=0uD-dfJBxpUYbantGCINeg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=314.29825&pitch=0&thumbfov=100",
+              "total_photos": 2,
+              "category": "Church",
+              "additional_categories": [
+                "Christian church",
+                "Family counselor",
+                "Marriage or relationship counselor",
+                "Wedding chapel"
+              ],
+              "category_ids": [
+                "church",
+                "christian_church",
+                "family_counselor",
+                "marriage_counselor",
+                "wedding_chapel"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 9,
+                        "minute": 0
+                      }
+                    },
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 11,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x8869a05362652cdf:0x682f6a17c3dd5c86",
+              "cid": "7507335754152762502",
+              "latitude": 38.1960925,
+              "longitude": -85.5631336,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "domain": "www.specialistsmat.com",
+              "title": "Specialists Medication Assisted Treatment",
+              "original_title": null,
+              "url": "https://www.specialistsmat.com/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/106585177257151212475",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 3.7,
+                "votes_count": 14,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 4,
+                "2": 0,
+                "3": 0,
+                "4": 2,
+                "5": 8
+              },
+              "snippet": "3310 Ruckriegel Pkwy, Jeffersontown, KY 40299",
+              "address": "3310 Ruckriegel Pkwy, Jeffersontown, KY 40299",
+              "address_info": {
+                "borough": null,
+                "address": "3310 Ruckriegel Pkwy",
+                "city": "Jeffersontown",
+                "zip": "40299",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJwzJOTYCfaYgR0AzIrfxFYWs",
+              "phone": "+1502-212-0071",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHhEXOacNVE88AwTDav3XDm0Pz7IDzH7WTOiivuAGwKd7fwNBrnVzjLlPT1nWUXiCG1bZchDCJ3Amk92Hr8BFlMR9Y_dRGZoqPysBZV6AR6ifTRm20oKZEHdk6V0QmcUzfcgR5CJQ=w648-h240-k-no",
+              "total_photos": 12,
+              "category": "Addiction treatment center",
+              "additional_categories": [
+                "Medical group",
+                "Medical office"
+              ],
+              "category_ids": [
+                "addiction_treatment_center",
+                "medical_group",
+                "medical_office"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 11,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 12,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x88699f804d4e32c3:0x6b6145fcadc80cd0",
+              "cid": "7737542586348866768",
+              "latitude": 38.1960596,
+              "longitude": -85.5573534,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 5,
+              "rank_absolute": 5,
+              "domain": "www.adventureky.org",
+              "title": "Adventure Christian Church",
+              "original_title": null,
+              "url": "http://www.adventureky.org/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/101296585508244308052",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.8,
+                "votes_count": 26,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 2,
+                "5": 23
+              },
+              "snippet": "3321 Ruckriegel Pkwy, Louisville, KY 40299",
+              "address": "3321 Ruckriegel Pkwy, Louisville, KY 40299",
+              "address_info": {
+                "borough": null,
+                "address": "3321 Ruckriegel Pkwy",
+                "city": "Louisville",
+                "zip": "40299",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJjW1Z-auhaYgRe0y18pxtba0",
+              "phone": "+1502-240-6234",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF3cupYh72JPvRhlH_dqk6Z1kl63VL6Sz9_6YQgCoChM-r0O6sFBK1MmBrDchyQRKsqL1FMnN3YqHV1i0SA52mOCypVzkepkJ6Ke2015n0bQfjDQuby97HusUCmatuP--mHkNGtAzbapj3L=w426-h240-k-no",
+              "total_photos": 41,
+              "category": "Church",
+              "additional_categories": null,
+              "category_ids": [
+                "church"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": null,
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x8869a1abf9596d8d:0xad6d6d9cf2b54c7b",
+              "cid": "12496765061877288059",
+              "latitude": 38.195510999999996,
+              "longitude": -85.556438,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"and Brad is quite the speaker\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 6,
+              "rank_absolute": 6,
+              "domain": "www.tracywmarx.com",
+              "title": "Tracy W. Marx & Associates",
+              "original_title": null,
+              "url": "http://www.tracywmarx.com/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/110669052565564032354",
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": null,
+              "address": null,
+              "address_info": {
+                "borough": null,
+                "address": null,
+                "city": null,
+                "zip": null,
+                "region": null,
+                "country_code": null
+              },
+              "place_id": "ChIJNfoDVAChaYgROhkdpnpm8oc",
+              "phone": "+1502-709-9392",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEOTGofpOxzPyddiK9wFrnCUwtaNVtzwcCp9s0-P-GDrFyTSzx7-zJ2CTsGgj2-LUa161Emm9CEOQLKaru5pJjrImhkx9FV7-op7kF3MVs5dCMqNC7DoGRno0qhHrKZPMOdYrpCyA=w408-h306-k-no",
+              "total_photos": 5,
+              "category": "Life coach",
+              "additional_categories": [
+                "Service establishment"
+              ],
+              "category_ids": [
+                "life_coach",
+                "establishment_service"
+              ],
+              "work_hours": null,
+              "feature_id": "0x8869a1005403fa35:0x87f2667aa61d193a",
+              "cid": "9796004816443218234",
+              "latitude": 38.1887245,
+              "longitude": -85.6760015,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

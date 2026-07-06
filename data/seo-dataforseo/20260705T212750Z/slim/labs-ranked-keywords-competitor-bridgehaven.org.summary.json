@@ -1,0 +1,16 @@
+{
+  "name": "labs-ranked-keywords-competitor-bridgehaven.org",
+  "path": "/v3/dataforseo_labs/google/ranked_keywords/live",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "cost": 0.018,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "result_counts": [
+    1
+  ],
+  "task_statuses": [
+    20000
+  ],
+  "elapsed_seconds": 1.517
+}

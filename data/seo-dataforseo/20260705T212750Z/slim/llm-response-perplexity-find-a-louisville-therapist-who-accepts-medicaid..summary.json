@@ -1,0 +1,19 @@
+{
+  "name": "llm-response-perplexity-Find a Louisville therapist who accepts Medicaid.",
+  "path": "/v3/ai_optimization/perplexity/llm_responses/live",
+  "platform": "perplexity",
+  "model": "sonar",
+  "prompt": "Find a Louisville therapist who accepts Medicaid.",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "cost": 0.006306,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "result_counts": [
+    1
+  ],
+  "task_statuses": [
+    20000
+  ],
+  "elapsed_seconds": 5.399
+}

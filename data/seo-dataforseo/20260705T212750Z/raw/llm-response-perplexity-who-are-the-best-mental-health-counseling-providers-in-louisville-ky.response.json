@@ -1,0 +1,101 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "5.4421 sec.",
+  "cost": 0.006221,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060031-9766-0612-0000-27255bc7b286",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "5.4316 sec.",
+      "cost": 0.006221,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "perplexity",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "perplexity",
+        "user_prompt": "Who are the best mental health counseling providers in Louisville, KY?",
+        "model_name": "sonar",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response perplexity Who are the best mental health counseling providers in Louisville, KY?",
+        "max_output_tokens": 700
+      },
+      "result": [
+        {
+          "model_name": "sonar",
+          "input_tokens": 38,
+          "output_tokens": 583,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.005621,
+          "datetime": "2026-07-06 00:31:57 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "The best mental health counseling providers in Louisville, KY include **Grace Psychological Services**, **Northstar Counseling Center**, **Best Life Mental Health Services**, **Kentucky Counseling Center**, and **Bridge Counseling & Wellness**, with many residents also recommending **Norton Behavioral Medicine** for telehealth options.\n\n### Top Local Providers by Specialty and Accessibility\n\n| Provider | Key Strengths | Location/Notes |\n|----------|---------------|----------------|\n| **Grace Psychological Services** [1] | Comprehensive care for adults, children, teens, couples; specializes in anxiety, trauma, relationships, ADHD, autism, learning disabilities | Louisville, KY |\n| **Northstar Counseling Center** [2] | Individual, couple, child, and family counseling; offers morning, afternoon, evening sessions; open 6 days/week | St. Matthews (Sears Avenue) |\n| **Best Life Mental Health Services** [3] | Open and affirming practice; therapy for individuals, couples, families, children, adolescents; focuses on authentic living | Louisville, KY; Call (502) 333-9466 |\n| **Kentucky Counseling Center** [5] | Largest counseling center in Kentucky; offers in-person, telehealth, psychiatry, case management; multiple locations | Louisville Highlands (1169 Eastern Pkwy #3328) |\n| **Bridge Counseling & Wellness** [6][7] | Traditional talk therapy + alternative approaches (art, etc.); Spanish-speaking clinicians available; grant funding possible | Baxter Ave; Reddit users report strong PTSD/depression support |\n| **Norton Behavioral Medicine** [9] | Telehealth psychiatrists, therapists, psychologists, addiction specialists; serves Kentucky & Indiana | Telehealth-only |\n\n### Community-Recommended Options\n- **Mandala House** (Baxter Ave) – Mentioned by Reddit users as a strong option [7]\n- **Awen Health and Wellness** (Lyndon Lane, near Oxmoor Kia) – Counselor accepting new clients [7]\n- **Acadia Counseling** (St. Matthews) – Another local recommendation [7]\n- **The Mindfulness Center**, **Peaceful Solutions Counseling**, **Innovative Family Therapy** – Top-rated on Yelp [10]\n\n### Specialized Care Providers\n- **Eric Russ, PhD** (Psychology Today) [4] – Expert in trauma, depression, anxiety, PTSD, personality disorders\n- **Stephanie Pound, LPCC-S** [4] – Nonjudgmental, supportive space for meaningful change\n- **Louisville Behavioral Health Systems** [8] – Psychiatrists, nurse practitioners, therapists; uses NeuroStar treatment\n\nFor the most current availability and to verify provider credentials, consider checking **Psychology Today** [4], **Yelp** [10], or contacting providers directly. Many offer telehealth, evening sessions, and sliding-scale fees.",
+                  "annotations": [
+                    {
+                      "title": "Grace Psychological Services: Best Therapists in Louisville",
+                      "url": "https://louisvillegracepsychological.com"
+                    },
+                    {
+                      "title": "Northstar Counseling Center",
+                      "url": "https://northstarcounselingcenter.com"
+                    },
+                    {
+                      "title": "Best Life Mental Health Services, LLC | Therapy in Louisville, KY",
+                      "url": "https://www.bestlifelouisville.com"
+                    },
+                    {
+                      "title": "Find Therapists and Psychologists in Louisville, KY",
+                      "url": "https://www.psychologytoday.com/us/therapists/ky/louisville"
+                    },
+                    {
+                      "title": "Kentucky Counseling Center: Mental Health Counseling and ...",
+                      "url": "https://kentuckycounselingcenter.com"
+                    },
+                    {
+                      "title": "Bridge Counseling & Wellness | Counseling & Therapy Services",
+                      "url": "https://www.bridgemindbody.com"
+                    },
+                    {
+                      "title": "Therapist recommendations : r/Louisville - Reddit",
+                      "url": "https://www.reddit.com/r/Louisville/comments/1e6i5os/therapist_recommendations/"
+                    },
+                    {
+                      "title": "Louisville Behavioral Health Systems, PLLC | Get Back to Living Well",
+                      "url": "https://louisvillebehavioral.com"
+                    },
+                    {
+                      "title": "Telehealth Psychiatrists and Behavioral Health Specialists",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/specialists/"
+                    },
+                    {
+                      "title": "TOP 10 BEST Therapist in Louisville, KY - Updated 2026 - Yelp",
+                      "url": "https://www.yelp.com/search?find_desc=Therapist&find_loc=Louisville%2C+KY"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": null
+        }
+      ]
+    }
+  ]
+}

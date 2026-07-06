@@ -1,0 +1,101 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "2.9193 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-18fd6975e699",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "2.8348 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "local_finder",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "local_finder",
+        "keyword": "therapy Louisville KY",
+        "location_coordinate": "38.1942000,-85.5644000,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid local_finder jeffersontown therapy Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "therapy Louisville KY",
+          "type": "local_finder",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=therapy+Louisville+KY&oq=therapy+Louisville+KY&hl=en&gl=US&tbm=lcl&fll=38.1942%2C-85.5644&fspn=0.002837368459323812%2C0.006474852561950684&fz=18&sll=38.1942%2C-85.5644&sspn=0.002837368459323812%2C0.006474852561950684&sz=18",
+          "datetime": "2026-07-05 21:36:43 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "local_pack"
+          ],
+          "se_results_count": 0,
+          "items_count": 2,
+          "items": [
+            {
+              "type": "local_pack",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]",
+              "title": "Baptist Health Physical Therapy - Jeffersontown",
+              "description": "Jeffersontown, KY · (502) 267-1799 \nClosed · Opens 7:30 AM Mon \n",
+              "domain": "www.baptisthealth.com",
+              "phone": "(502) 267-1799",
+              "booking_url": null,
+              "url": "https://www.baptisthealth.com/locations/physical-therapy-jeffersontown?utm_source=google&utm_medium=organic&utm_content=gbp-website&utm_campaign=033-loc-gbp-listing",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 1,
+                "rating_max": 5
+              },
+              "cid": "7002421356813445603",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]",
+              "title": "Jewish Hospital Physical Therapy: Hockensmith David L MD",
+              "description": "No reviews · Doctor \nJeffersontown, KY · (502) 267-0209 \n",
+              "domain": null,
+              "phone": "(502) 267-0209",
+              "booking_url": null,
+              "url": null,
+              "is_paid": false,
+              "rating": null,
+              "cid": "18035399901717129434",
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

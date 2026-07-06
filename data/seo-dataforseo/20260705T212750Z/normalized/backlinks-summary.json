@@ -1,0 +1,76 @@
+{
+  "target": "louisvillementalhealth.org",
+  "first_seen": "2023-11-13 21:28:07 +00:00",
+  "lost_date": null,
+  "rank": 83,
+  "backlinks": 146,
+  "backlinks_spam_score": 35,
+  "crawled_pages": 2,
+  "info": {
+    "server": "cloudflare",
+    "cms": null,
+    "platform_type": null,
+    "ip_address": "104.21.86.208",
+    "country": null,
+    "is_ip": false,
+    "target_spam_score": 0
+  },
+  "internal_links_count": 0,
+  "external_links_count": 0,
+  "broken_backlinks": 95,
+  "broken_pages": 2,
+  "referring_domains": 74,
+  "referring_domains_nofollow": 40,
+  "referring_main_domains": 70,
+  "referring_main_domains_nofollow": 40,
+  "referring_ips": 49,
+  "referring_subnets": 48,
+  "referring_pages": 144,
+  "referring_pages_nofollow": 73,
+  "referring_links_tld": {
+    "com": 69,
+    "info": 15,
+    "org": 12,
+    "pro": 7,
+    "eu": 6,
+    "org.in": 4,
+    "shop": 3,
+    "link": 3,
+    "cv": 3,
+    "click": 3
+  },
+  "referring_links_types": {
+    "anchor": 143,
+    "redirect": 1
+  },
+  "referring_links_attributes": {
+    "nofollow": 73,
+    "noopener": 11,
+    "noreferrer": 1
+  },
+  "referring_links_platform_types": {
+    "blogs": 88,
+    "cms": 87,
+    "unknown": 52,
+    "organization": 14,
+    "news": 1
+  },
+  "referring_links_semantic_locations": {
+    "": 84,
+    "article": 49,
+    "main": 7,
+    "section": 4
+  },
+  "referring_links_countries": {
+    "": 85,
+    "WW": 30,
+    "US": 7,
+    "IN": 4,
+    "CV": 3,
+    "UA": 3,
+    "CO": 2,
+    "PL": 1,
+    "TR": 1,
+    "FR": 1
+  }
+}

@@ -1,0 +1,291 @@
+name,path,cost,status_code,status_message,result_counts
+onpage-task-post-via-mcp,/v3/on_page/task_post,0.0135,20100,Task Created via mcp,
+serp-organic-desktop-counseling Louisville KY,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1
+serp-organic-desktop-mental health services Louisville KY,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1
+serp-organic-desktop-therapist Louisville KY,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1
+serp-organic-desktop-therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1
+serp-organic-desktop-individual therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1
+serp-organic-desktop-child therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1
+serp-organic-desktop-case management Louisville KY,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1
+serp-organic-desktop-community based mental health services Louisville KY,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1
+serp-organic-desktop-group therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1
+serp-organic-desktop-family therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1
+serp-organic-desktop-in home therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1
+serp-organic-desktop-mental health case management Louisville KY,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1
+serp-organic-desktop-trauma therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1
+serp-organic-desktop-anxiety therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1
+serp-organic-mobile-therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.002,20000,Ok.,1
+serp-organic-desktop-play therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1
+serp-organic-mobile-mental health services Louisville KY,/v3/serp/google/organic/live/advanced,0.002,20000,Ok.,1
+serp-organic-mobile-individual therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.002,20000,Ok.,1
+serp-organic-desktop-depression therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0035,20000,Ok.,1
+serp-organic-mobile-counseling Louisville KY,/v3/serp/google/organic/live/advanced,0.002,20000,Ok.,1
+serp-organic-mobile-child therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.002,20000,Ok.,1
+serp-organic-mobile-family therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.002,20000,Ok.,1
+serp-local-finder-therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+serp-organic-mobile-therapist Louisville KY,/v3/serp/google/organic/live/advanced,0.002,20000,Ok.,1
+serp-local-finder-mental health services Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+serp-organic-mobile-group therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.002,20000,Ok.,1
+serp-local-finder-family therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+serp-local-finder-individual therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+serp-local-finder-child therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+serp-local-finder-counseling Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+serp-local-finder-group therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+serp-local-finder-case management Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+serp-local-finder-therapist Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+serp-local-finder-community based mental health services Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+serp-local-finder-mental health case management Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+serp-maps-mental health services Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+serp-maps-therapist Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+serp-local-finder-in home therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+serp-maps-therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+serp-maps-counseling Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+serp-maps-family therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+serp-maps-individual therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+serp-maps-child therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+serp-maps-group therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+serp-ai-mode-Who provides mental health services in Louisville KY?,/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1
+serp-ai-mode-Best therapy providers in Louisville KY for families and children,/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1
+serp-ai-mode-Which Louisville mental health providers offer case management?,/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1
+serp-ai-mode-Does Louisville Mental Health Group offer therapy in Louisville KY?,/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1
+labs-keyword-overview-core-agentic,/v3/dataforseo_labs/google/keyword_overview/live,0.01344,20000,Ok.,1
+labs-search-intent-core-agentic,/v3/dataforseo_labs/google/search_intent/live,0.01524,20000,Ok.,1
+labs-keyword-ideas-core,/v3/dataforseo_labs/google/keyword_ideas/live,0.036,20000,Ok.,1
+serp-ai-mode-What local counseling options are available in Louisville KY?,/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1
+labs-ranked-keywords-domain,/v3/dataforseo_labs/google/ranked_keywords/live,0.024,20000,Ok.,1
+serp-ai-mode-Who offers community based mental health services in Louisville?,/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1
+labs-competitors-domain,/v3/dataforseo_labs/google/competitors_domain/live,0.018,20000,Ok.,1
+backlinks-summary-domain,/v3/backlinks/summary/live,0.024036,20000,Ok.,1
+google-ads-search-volume-core-agentic,/v3/keywords_data/google_ads/search_volume/live,0.09,20000,Ok.,27
+serp-ai-mode-Where can I get child therapy in Louisville KY?,/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1
+serp-ai-mode-Where can I find individual therapy in Louisville Kentucky?,/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1
+backlinks-competitors-domain,/v3/backlinks/competitors/live,0.024288,20000,Ok.,1
+ai-keyword-search-volume-core-agentic,/v3/ai_optimization/ai_keyword_data/keywords_search_volume/live,0.0127,20000,Ok.,1
+business-google-my-business-info-brand,/v3/business_data/google/my_business_info/live,0.0054,20000,Ok.,1
+llm-mentions-aggregated-google,/v3/ai_optimization/llm_mentions/aggregated_metrics/live,0.101,20000,Ok.,1
+llm-mentions-search-google,/v3/ai_optimization/llm_mentions/search/live,0.1,20000,Ok.,1
+llm-mentions-aggregated-chat_gpt,/v3/ai_optimization/llm_mentions/aggregated_metrics/live,0.101,20000,Ok.,1
+llm-mentions-search-chat_gpt,/v3/ai_optimization/llm_mentions/search/live,0.1,20000,Ok.,1
+google-ads-search-volume-louisville-city,/v3/keywords_data/google_ads/search_volume/live,0.09,20000,Ok.,22
+google-ads-search-volume-louisville-dma,/v3/keywords_data/google_ads/search_volume/live,0.09,20000,Ok.,22
+labs-keyword-overview-louisville-city,/v3/dataforseo_labs/google/keyword_overview/live,0.0,20000,Ok.,0
+labs-keyword-overview-louisville-dma,/v3/dataforseo_labs/google/keyword_overview/live,0.0,20000,Ok.,0
+onpage-task-post-browser-ua-sitemap-only,/v3/on_page/task_post,0.0135,20100,Task Created.,0
+llm-response-chat_gpt-Who offers in-home therapy or community-based mental health support in Louisville?,/v3/ai_optimization/chat_gpt/llm_responses/live,0.0235364,20000,Ok.,1
+llm-response-chat_gpt-What are good therapy options in Louisville for anxiety and depression?,/v3/ai_optimization/chat_gpt/llm_responses/live,0.02352165,20000,Ok.,1
+"llm-response-chat_gpt-Where can someone get mental health case management in Louisville, KY?",/v3/ai_optimization/chat_gpt/llm_responses/live,0.02350875,20000,Ok.,1
+llm-response-chat_gpt-Compare local outpatient mental health providers in Louisville.,/v3/ai_optimization/chat_gpt/llm_responses/live,0.02349085,20000,Ok.,1
+"llm-response-chat_gpt-Who are the best mental health counseling providers in Louisville, KY?",/v3/ai_optimization/chat_gpt/llm_responses/live,0.0234791,20000,Ok.,1
+llm-response-chat_gpt-What should I ask before choosing a therapist in Louisville?,/v3/ai_optimization/chat_gpt/llm_responses/live,0.00277515,20000,Ok.,1
+llm-response-chat_gpt-Find a Louisville therapist who accepts Medicaid.,/v3/ai_optimization/chat_gpt/llm_responses/live,0.02315905,20000,Ok.,1
+"llm-response-perplexity-Who are the best mental health counseling providers in Louisville, KY?",/v3/ai_optimization/perplexity/llm_responses/live,0.006221,20000,Ok.,1
+"llm-response-chat_gpt-Which Louisville providers help teens with anxiety, depression, or trauma?",/v3/ai_optimization/chat_gpt/llm_responses/live,0.0234921,20000,Ok.,1
+llm-response-chat_gpt-Who offers family therapy and care coordination in Louisville?,/v3/ai_optimization/chat_gpt/llm_responses/live,0.02326705,20000,Ok.,1
+llm-response-perplexity-Find a Louisville therapist who accepts Medicaid.,/v3/ai_optimization/perplexity/llm_responses/live,0.006306,20000,Ok.,1
+"llm-response-chat_gpt-What is community-based mental health care, and who provides it in Louisville?",/v3/ai_optimization/chat_gpt/llm_responses/live,0.0233925,20000,Ok.,1
+llm-response-chat_gpt-Which Louisville mental health websites have useful service and referral information?,/v3/ai_optimization/chat_gpt/llm_responses/live,0.0234901,20000,Ok.,1
+"llm-response-chat_gpt-Recommend non-hospital mental health counseling options in Louisville, KY.",/v3/ai_optimization/chat_gpt/llm_responses/live,0.0133531,20000,Ok.,1
+llm-response-perplexity-Who offers in-home therapy or community-based mental health support in Louisville?,/v3/ai_optimization/perplexity/llm_responses/live,0.006116,20000,Ok.,1
+"llm-response-perplexity-Where can someone get mental health case management in Louisville, KY?",/v3/ai_optimization/perplexity/llm_responses/live,0.00619,20000,Ok.,1
+llm-response-perplexity-What are good therapy options in Louisville for anxiety and depression?,/v3/ai_optimization/perplexity/llm_responses/live,0.0063,20000,Ok.,1
+llm-response-perplexity-Compare local outpatient mental health providers in Louisville.,/v3/ai_optimization/perplexity/llm_responses/live,0.006286,20000,Ok.,1
+llm-response-perplexity-What should I ask before choosing a therapist in Louisville?,/v3/ai_optimization/perplexity/llm_responses/live,0.006291,20000,Ok.,1
+"llm-response-perplexity-Which Louisville providers help teens with anxiety, depression, or trauma?",/v3/ai_optimization/perplexity/llm_responses/live,0.006308,20000,Ok.,1
+llm-response-perplexity-Who offers family therapy and care coordination in Louisville?,/v3/ai_optimization/perplexity/llm_responses/live,0.006216,20000,Ok.,1
+"llm-response-perplexity-What is community-based mental health care, and who provides it in Louisville?",/v3/ai_optimization/perplexity/llm_responses/live,0.006096,20000,Ok.,1
+"llm-response-gemini-Who are the best mental health counseling providers in Louisville, KY?",/v3/ai_optimization/gemini/llm_responses/live,0.0358234,20000,Ok.,1
+llm-response-gemini-Find a Louisville therapist who accepts Medicaid.,/v3/ai_optimization/gemini/llm_responses/live,0.0357188,20000,Ok.,1
+llm-response-perplexity-Which Louisville mental health websites have useful service and referral information?,/v3/ai_optimization/perplexity/llm_responses/live,0.006234,20000,Ok.,1
+"llm-response-perplexity-Recommend non-hospital mental health counseling options in Louisville, KY.",/v3/ai_optimization/perplexity/llm_responses/live,0.006279,20000,Ok.,1
+llm-response-gemini-Who offers in-home therapy or community-based mental health support in Louisville?,/v3/ai_optimization/gemini/llm_responses/live,0.0358726,20000,Ok.,1
+"llm-response-gemini-Where can someone get mental health case management in Louisville, KY?",/v3/ai_optimization/gemini/llm_responses/live,0.0358083,20000,Ok.,1
+llm-response-gemini-What are good therapy options in Louisville for anxiety and depression?,/v3/ai_optimization/gemini/llm_responses/live,0.0358995,20000,Ok.,1
+"llm-response-gemini-What is community-based mental health care, and who provides it in Louisville?",/v3/ai_optimization/gemini/llm_responses/live,0.000709,20000,Ok.,1
+llm-response-gemini-What should I ask before choosing a therapist in Louisville?,/v3/ai_optimization/gemini/llm_responses/live,0.0358373,20000,Ok.,1
+llm-response-gemini-Compare local outpatient mental health providers in Louisville.,/v3/ai_optimization/gemini/llm_responses/live,0.0359429,20000,Ok.,1
+llm-response-gemini-Who offers family therapy and care coordination in Louisville?,/v3/ai_optimization/gemini/llm_responses/live,0.0358146,20000,Ok.,1
+"llm-response-gemini-Which Louisville providers help teens with anxiety, depression, or trauma?",/v3/ai_optimization/gemini/llm_responses/live,0.0358161,20000,Ok.,1
+"llm-response-gemini-Recommend non-hospital mental health counseling options in Louisville, KY.",/v3/ai_optimization/gemini/llm_responses/live,0.0358904,20000,Ok.,1
+llm-response-gemini-Which Louisville mental health websites have useful service and referral information?,/v3/ai_optimization/gemini/llm_responses/live,0.0358778,20000,Ok.,1
+local-grid-maps-office-bardstown-road-therapist Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-office-bardstown-road-counseling Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-office-bardstown-road-therapist Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-office-bardstown-road-therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-office-bardstown-road-therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-office-bardstown-road-counseling Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-office-bardstown-road-mental health services Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-office-bardstown-road-mental health services Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-office-bardstown-road-family therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-office-bardstown-road-case management Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-office-bardstown-road-child therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-office-bardstown-road-case management Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-office-bardstown-road-family therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-office-bardstown-road-group therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-office-bardstown-road-community based mental health services Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-office-bardstown-road-in home therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-office-bardstown-road-child therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-office-bardstown-road-in home therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-downtown-louisville-therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-office-bardstown-road-community based mental health services Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-downtown-louisville-therapist Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-office-bardstown-road-group therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-downtown-louisville-therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-downtown-louisville-therapist Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-downtown-louisville-counseling Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-downtown-louisville-mental health services Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-downtown-louisville-counseling Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-downtown-louisville-family therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-downtown-louisville-mental health services Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-downtown-louisville-case management Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-downtown-louisville-child therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-downtown-louisville-community based mental health services Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-downtown-louisville-family therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-downtown-louisville-group therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-downtown-louisville-child therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-downtown-louisville-community based mental health services Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-downtown-louisville-case management Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-downtown-louisville-group therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-downtown-louisville-in home therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-st-matthews-east-therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-downtown-louisville-in home therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-st-matthews-east-counseling Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-st-matthews-east-therapist Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-st-matthews-east-therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-st-matthews-east-counseling Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-st-matthews-east-therapist Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-st-matthews-east-child therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-st-matthews-east-family therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-st-matthews-east-mental health services Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-st-matthews-east-family therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-st-matthews-east-case management Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-st-matthews-east-child therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-st-matthews-east-case management Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-st-matthews-east-mental health services Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-st-matthews-east-community based mental health services Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-st-matthews-east-group therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-st-matthews-east-group therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-st-matthews-east-in home therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-st-matthews-east-in home therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-jeffersontown-counseling Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-jeffersontown-therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-jeffersontown-therapist Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-jeffersontown-therapist Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-jeffersontown-therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-jeffersontown-mental health services Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-st-matthews-east-community based mental health services Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-jeffersontown-counseling Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-jeffersontown-family therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-jeffersontown-child therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-jeffersontown-group therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-jeffersontown-mental health services Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-jeffersontown-group therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-jeffersontown-case management Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-jeffersontown-community based mental health services Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-jeffersontown-family therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-jeffersontown-in home therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-jeffersontown-case management Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-jeffersontown-child therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-shively-southwest-therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-jeffersontown-in home therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-shively-southwest-therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-shively-southwest-therapist Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-shively-southwest-counseling Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-jeffersontown-community based mental health services Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-shively-southwest-mental health services Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-shively-southwest-family therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-shively-southwest-therapist Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-shively-southwest-family therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-shively-southwest-mental health services Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-shively-southwest-group therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-shively-southwest-case management Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-shively-southwest-case management Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-shively-southwest-child therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-shively-southwest-counseling Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-shively-southwest-in home therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-shively-southwest-child therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-shively-southwest-community based mental health services Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-shively-southwest-community based mental health services Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-maps-shively-southwest-group therapy Louisville KY,/v3/serp/google/maps/live/advanced,0.002,20000,Ok.,1
+local-grid-local_finder-shively-southwest-in home therapy Louisville KY,/v3/serp/google/local_finder/live/advanced,0.002,20000,Ok.,1
+llm-response-claude-Find a Louisville therapist who accepts Medicaid.,/v3/ai_optimization/claude/llm_responses/live,0.073198,20000,Ok.,1
+llm-response-claude-What are good therapy options in Louisville for anxiety and depression?,/v3/ai_optimization/claude/llm_responses/live,0.08296,20000,Ok.,1
+llm-response-claude-Compare local outpatient mental health providers in Louisville.,/v3/ai_optimization/claude/llm_responses/live,0.078088,20000,Ok.,1
+llm-response-claude-Who offers in-home therapy or community-based mental health support in Louisville?,/v3/ai_optimization/claude/llm_responses/live,0.076687,20000,Ok.,1
+"llm-response-claude-Who are the best mental health counseling providers in Louisville, KY?",/v3/ai_optimization/claude/llm_responses/live,0.080317,20000,Ok.,1
+"llm-response-claude-Where can someone get mental health case management in Louisville, KY?",/v3/ai_optimization/claude/llm_responses/live,0.071863,20000,Ok.,1
+"llm-response-claude-Which Louisville providers help teens with anxiety, depression, or trauma?",/v3/ai_optimization/claude/llm_responses/live,0.081769,20000,Ok.,1
+llm-response-claude-What should I ask before choosing a therapist in Louisville?,/v3/ai_optimization/claude/llm_responses/live,0.076801,20000,Ok.,1
+llm-response-claude-Who offers family therapy and care coordination in Louisville?,/v3/ai_optimization/claude/llm_responses/live,0.070042,20000,Ok.,1
+llm-mentions-topic-top_domains-google,/v3/ai_optimization/llm_mentions/top_domains/live,0.101,20000,Ok.,1
+"llm-response-claude-Recommend non-hospital mental health counseling options in Louisville, KY.",/v3/ai_optimization/claude/llm_responses/live,0.068998,20000,Ok.,1
+llm-mentions-topic-top_pages-google,/v3/ai_optimization/llm_mentions/top_pages/live,0.101,20000,Ok.,1
+llm-response-claude-Which Louisville mental health websites have useful service and referral information?,/v3/ai_optimization/claude/llm_responses/live,0.073648,20000,Ok.,1
+llm-mentions-topic-top_domains-chat_gpt,/v3/ai_optimization/llm_mentions/top_domains/live,0.101,20000,Ok.,1
+llm-mentions-topic-top_pages-chat_gpt,/v3/ai_optimization/llm_mentions/top_pages/live,0.101,20000,Ok.,1
+backlinks-referring-domains-domain,/v3/backlinks/referring_domains/live,0.02652,20000,Ok.,1
+labs-serp-competitors-core,/v3/dataforseo_labs/google/serp_competitors/live,0.01872,20000,Ok.,1
+backlinks-lost-domain,/v3/backlinks/backlinks/live,0.024504,20000,Ok.,1
+backlinks-live-domain,/v3/backlinks/backlinks/live,0.0276,20000,Ok.,1
+business-google-questions-and-answers-cid,/v3/business_data/google/questions_and_answers/live,0.0054,20000,Ok.,1
+labs-relevant-pages-competitor-kentuckycounselingcenter.com,/v3/dataforseo_labs/google/relevant_pages/live,0.0144,20000,Ok.,1
+labs-relevant-pages-competitor-bridgemindbody.com,/v3/dataforseo_labs/google/relevant_pages/live,0.01392,20000,Ok.,1
+labs-ranked-keywords-competitor-bridgemindbody.com,/v3/dataforseo_labs/google/ranked_keywords/live,0.018,20000,Ok.,1
+labs-ranked-keywords-competitor-kentuckycounselingcenter.com,/v3/dataforseo_labs/google/ranked_keywords/live,0.018,20000,Ok.,1
+labs-relevant-pages-competitor-sevencounties.org,/v3/dataforseo_labs/google/relevant_pages/live,0.0144,20000,Ok.,1
+labs-relevant-pages-competitor-lifestance.com,/v3/dataforseo_labs/google/relevant_pages/live,0.0144,20000,Ok.,1
+labs-ranked-keywords-competitor-sevencounties.org,/v3/dataforseo_labs/google/ranked_keywords/live,0.018,20000,Ok.,1
+labs-ranked-keywords-competitor-lifestance.com,/v3/dataforseo_labs/google/ranked_keywords/live,0.018,20000,Ok.,1
+labs-relevant-pages-competitor-lctps.org,/v3/dataforseo_labs/google/relevant_pages/live,0.01236,20000,Ok.,1
+labs-ranked-keywords-competitor-lctps.org,/v3/dataforseo_labs/google/ranked_keywords/live,0.01356,20000,Ok.,1
+labs-relevant-pages-competitor-bestlifelouisville.com,/v3/dataforseo_labs/google/relevant_pages/live,0.0144,20000,Ok.,1
+labs-relevant-pages-competitor-creativefamilycounseling.org,/v3/dataforseo_labs/google/relevant_pages/live,0.0144,20000,Ok.,1
+labs-ranked-keywords-competitor-bestlifelouisville.com,/v3/dataforseo_labs/google/ranked_keywords/live,0.018,20000,Ok.,1
+labs-ranked-keywords-competitor-creativefamilycounseling.org,/v3/dataforseo_labs/google/ranked_keywords/live,0.018,20000,Ok.,1
+labs-ranked-keywords-competitor-brockfamilytherapycenter.com,/v3/dataforseo_labs/google/ranked_keywords/live,0.018,20000,Ok.,1
+labs-relevant-pages-competitor-brockfamilytherapycenter.com,/v3/dataforseo_labs/google/relevant_pages/live,0.01296,20000,Ok.,1
+labs-relevant-pages-competitor-wellspringky.org,/v3/dataforseo_labs/google/relevant_pages/live,0.0144,20000,Ok.,1
+labs-relevant-pages-competitor-bridgehaven.org,/v3/dataforseo_labs/google/relevant_pages/live,0.01272,20000,Ok.,1
+labs-ranked-keywords-competitor-wellspringky.org,/v3/dataforseo_labs/google/ranked_keywords/live,0.018,20000,Ok.,1
+labs-ranked-keywords-competitor-bridgehaven.org,/v3/dataforseo_labs/google/ranked_keywords/live,0.018,20000,Ok.,1
+"llm-response-claude-What is community-based mental health care, and who provides it in Louisville?",/v3/ai_optimization/claude/llm_responses/live,0.179086,20000,Ok.,1
+serp-organic-depth100-mobile-therapist Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-desktop-counseling Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-mobile-counseling Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-desktop-therapist Louisville KY,/v3/serp/google/organic/live/advanced,0.014,20000,Ok.,1
+serp-organic-depth100-mobile-therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-desktop-therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-mobile-mental health services Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-desktop-individual therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.014,20000,Ok.,1
+serp-organic-depth100-mobile-individual therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.014,20000,Ok.,1
+serp-organic-depth100-desktop-mental health services Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-mobile-family therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-desktop-group therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-mobile-child therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-desktop-child therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-desktop-family therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-desktop-mental health case management Louisville KY,/v3/serp/google/organic/live/advanced,0.0095,20000,Ok.,1
+serp-organic-depth100-desktop-case management Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-mobile-group therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-mobile-case management Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-mobile-mental health case management Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-mobile-trauma therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.005,20000,Ok.,1
+serp-organic-depth100-mobile-in home therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-desktop-community based mental health services Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-desktop-trauma therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-desktop-in home therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-mobile-community based mental health services Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-desktop-anxiety therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-desktop-depression therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-mobile-depression therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-mobile-anxiety therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-ai-mode-expanded-Find a Louisville therapist who accepts Medicaid.,/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1
+serp-ai-mode-expanded-Who offers in-home therapy or community-based mental health support in Louisville?,/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1
+"serp-ai-mode-expanded-Where can someone get mental health case management in Louisville, KY?",/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1
+serp-ai-mode-expanded-Compare local outpatient mental health providers in Louisville.,/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1
+"serp-ai-mode-expanded-Which Louisville providers help teens with anxiety, depression, or trauma?",/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1
+serp-ai-mode-expanded-Who offers family therapy and care coordination in Louisville?,/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1
+"serp-ai-mode-expanded-Recommend non-hospital mental health counseling options in Louisville, KY.",/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1
+"serp-ai-mode-expanded-What is community-based mental health care, and who provides it in Louisville?",/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1
+serp-organic-depth100-desktop-play therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-organic-depth100-mobile-play therapy Louisville KY,/v3/serp/google/organic/live/advanced,0.0155,20000,Ok.,1
+serp-ai-mode-expanded-Which Louisville mental health websites have useful service and referral information?,/v3/serp/google/ai_mode/live/advanced,0.004,20000,Ok.,1

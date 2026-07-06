@@ -1,0 +1,259 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "24.9762 sec.",
+  "cost": 0.073648,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060038-9766-0612-0000-afd2c970d0fc",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "24.9639 sec.",
+      "cost": 0.073648,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "claude",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "claude",
+        "user_prompt": "Which Louisville mental health websites have useful service and referral information?",
+        "model_name": "claude-sonnet-4-6",
+        "web_search": true,
+        "max_output_tokens": 1024,
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response claude Which Louisville mental health websites have useful service and referral informa"
+      },
+      "result": [
+        {
+          "model_name": "claude-sonnet-4-6",
+          "input_tokens": 15381,
+          "output_tokens": 1127,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.073048,
+          "datetime": "2026-07-06 00:39:24 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here is a roundup of Louisville mental health websites with useful service and referral information:\n\n---\n\n### 🏛️ 1. [LouisvilleKY.gov – Community Mental Health Services](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\nThe city's official portal is a great starting point. ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Metro United Way's Community Resource Directory can connect you to mental health and crisis intervention resources, or you can simply call **211**.",
+                  "annotations": [
+                    {
+                      "title": "Community Mental Health Services | LouisvilleKY.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "It also lists crisis resources like the **988 Suicide & Crisis Lifeline**, the **Crisis and Information Center Hotline** through Seven Counties Services (502-589-4313), and **Mobile Crisis Services** (all ages).",
+                  "annotations": [
+                    {
+                      "title": "Community Mental Health Services | LouisvilleKY.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " The page also includes grief support groups across the city.\n\n---\n\n### 🌐 2. [MentalHealthLou.com](https://mentalhealthlou.com)\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Mental Health Lou is Louisville's connection point to mental wellness resources, providing referrals for individuals seeking mental health services.",
+                  "annotations": [
+                    {
+                      "title": "Louisville expands initiatives to support mental health | LouisvilleKY.gov",
+                      "url": "https://louisvilleky.gov/news/louisville-expands-initiatives-support-mental-health"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "According to its director, \"the resource guide is home to not just local mental health providers, but it also offers referrals to services beneficial to mental health like yoga and acupuncture.\"",
+                  "annotations": [
+                    {
+                      "title": "Louisville expands initiatives to support mental health | LouisvilleKY.gov",
+                      "url": "https://louisvilleky.gov/news/louisville-expands-initiatives-support-mental-health"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " This is a city-backed initiative run through the Louisville Metro Department of Public Health and Wellness.\n\n---\n\n### 🤝 3. [NAMI Louisville – Counseling Resources](https://namilouisville.org/counseling-resources)\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "NAMI Louisville focuses on strengthening Louisville's families and individuals affected by mental illness and lists providers like Camberwell Counseling Services, which offers individual, couples, family, and group therapy with sliding-scale rates.",
+                  "annotations": [
+                    {
+                      "title": "NAMI Louisville",
+                      "url": "https://namilouisville.org/counseling-resources"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "The site also links to a resource guide for Black mental health practitioners",
+                  "annotations": [
+                    {
+                      "title": "NAMI Louisville",
+                      "url": "https://namilouisville.org/counseling-resources"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " and includes a broad directory of local counseling centers with addresses and phone numbers.\n\n---\n\n### 🏥 4. [The Brook Hospitals](https://thebrookhospitals.com)\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "The Brook Hospitals in Louisville have been providing quality mental health and substance use treatment since 1985.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Treatment | The Brook Hospitals | Louisville, KY",
+                      "url": "https://thebrookhospitals.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They have two locations in Louisville offering inpatient, partial hospitalization, and intensive outpatient levels of care for seniors, adults, adolescents, and children.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Treatment | The Brook Hospitals | Louisville, KY",
+                      "url": "https://thebrookhospitals.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "An Assessment and Referral specialist is available **24 hours a day, 7 days a week** at KMI (502-426-6380) or Dupont (502-896-0495).",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Services | The Brook Hospitals | Louisville, KY",
+                      "url": "https://thebrookhospitals.com/programs-services/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 💊 5. [Kentucky Mental Health Care (KMHC)](https://kentuckymentalhealth.com)\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "KMHC offers assistance for severe depression, PTSD, bipolar disorders, eating disorders, addictive behaviors, drug dependency, schizophrenia, grief, and anxiety disorders.",
+                  "annotations": [
+                    {
+                      "title": "Kentucky Mental Health Care – Psychiatry | Therapy | Addiction Treatment",
+                      "url": "https://kentuckymentalhealth.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They are a multi-specialty group and substance use treatment provider, serve Medicaid clients, accept various commercial insurances, and also offer private pay options.",
+                  "annotations": [
+                    {
+                      "title": "Kentucky Mental Health Care – Psychiatry | Therapy | Addiction Treatment",
+                      "url": "https://kentuckymentalhealth.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 🏫 6. [Kentucky Counseling Center (KCC)](https://kentuckycounselingcenter.com)\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "KCC offers in-person counseling and psychiatry services at multiple locations while also providing telehealth therapy throughout Kentucky, with patients in Louisville and surrounding communities able to visit offices or schedule online therapy.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Counseling and Psychiatry | Kentucky Counseling Center",
+                      "url": "https://kentuckycounselingcenter.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Their Louisville Highlands office also offers Targeted Case Management (TCM) services to help individuals find social services like financial assistance, transportation, and housing.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Counseling and Psychiatry | Kentucky Counseling Center",
+                      "url": "https://kentuckycounselingcenter.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 🎓 7. [UofL Health – Mental & Behavioral Health](https://uoflhealth.org/",
+                  "annotations": null
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "Louisville Kentucky mental health services referrals",
+            "Louisville KY mental health resources website"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,348 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "6.0163 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060028-9766-0139-0000-308653200f57",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "5.9238 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "Best therapy providers in Louisville KY for families and children",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode Best therapy providers in Louisville KY for families and children",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Best therapy providers in Louisville KY for families and children",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=Best%20therapy%20providers%20in%20Louisville%20KY%20for%20families%20and%20children&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:28:21 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[1]/div[1]/div[3]",
+              "markdown": "Based on local listings and reputation in Louisville, KY, several providers are highly regarded for child, adolescent, and family therapy. These providers offer services ranging from play therapy to specialized family counseling.[[1]](https://louisvillegracepsychological.com/child-therapist-louisville-ky/)[[2]](https://www.pivotalcounseling.com/family-counselors-greeley-co)[[3]](https://searhc.org/care-specialties/individual-family-therapy/)\n\n**Top Family & Child Therapy Providers in Louisville, KY** \n\n![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-308653200f57:4)\nGrace Psychological Services 5.0 (22)  \nMarriage or relationship counselor  \nClosed 12802 Townepark Way Ste 100  \nRecognized for child-centered therapy, offering expert care in CBT, TF-CBT, and play therapy for children and families. They are rated highly in the area, offering both in-person and online options.\n\n![](https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJEElTT51FCE19McDp8mj7aHbhJtWp--R9p0ezV2dOEU5P-Gf7ulTl6woZXafpiHWEVh5YVaZ-W0ctVk6tAj7N75U7BjUbOX8nrbHloF28l4fGcqf6gP83fqoEWwPzQHWKIcdz=s192-w192-h144-n-k-no)\nCreative Family Counseling 4.0 (4)  \nFamily counselor  \nClosed Prospect, KY  \nFeatures a team specializing in child, teen, and family counseling with locations in Louisville and Prospect.\n\nProvides comprehensive family therapy services, with multiple locations in Louisville (Executive Park and Eastpoint Parkway).\n\n![](https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=av7BdQ-W1bHlMgQm-CCxog&cb_client=search.gws-prod.gps&yaw=38.667984&pitch=0&thumbfov=100&w=82&h=82)\nJim Walker, LCSW 5.0 (4)  \nMental health service  \nClosed 6006 Brownsboro Park Blvd Ste A  \nOffers in-office and virtual family or couples psychotherapy.[](https://louisvillegracepsychological.com/child-therapist-louisville-ky/) [[1]](https://louisvillegracepsychological.com/child-therapist-louisville-ky/)[[2]](https://creativefamilycounseling.org/)[[3]](https://lifestance.com/services/family-therapy/ky/louisville/)[[4]](https://jimwalker.fullslate.com/services/6)[[5]](https://louisvillegracepsychological.com/marriage-counseling-louisville/)\n\n**Specialized Services Available** \n\n- **Play Therapy & Trauma Care**: Grace Psychological Services focuses heavily on evidence-based treatment for children facing behavioral or emotional challenges.\n- **Family Counseling**: Creative Family Counseling emphasizes strengthening family dynamics, particularly for children and teens.[](https://louisvillegracepsychological.com/child-therapist-louisville-ky/) [[1]](https://louisvillegracepsychological.com/child-therapist-louisville-ky/)[[2]](https://creativefamilycounseling.org/)[[3]](https://www.therapylab.com/blogs/how-family-counseling-can-strengthen-relationships)[[4]](https://ourchildrenourfuturefl.org/family-therapy-counseling-hollywood-fl/)\n\nFor a complete list of individual therapists specializing in children (ages 6-10), [Psychology Today's directory](https://www.psychologytoday.com/us/therapists/ky/louisville?category=children-6-to-10) features providers such as Haven Family Counseling, Innovative Family Therapy , and others.[](https://www.psychologytoday.com/us/therapists/ky/louisville?category=children-6-to-10) [[1]](https://www.psychologytoday.com/us/therapists/ky/louisville?category=children-6-to-10)\n\nTo help narrow down the best provider, could you let me know:\n\n- **What specific concerns** are you looking to address (e.g., anxiety, behavioral issues, family transition)?\n- **What is the age** of the child/children?\n- Do you prefer **in-person or telehealth** sessions?\n\nI can then give you a more tailored recommendation.",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Based on local listings and reputation in Louisville, KY, several providers are highly regarded for child, adolescent, and family therapy. These providers offer services ranging from play therapy to specialized family counseling.",
+                  "markdown": "Based on local listings and reputation in Louisville, KY, several providers are highly regarded for child, adolescent, and family therapy. These providers offer services ranging from play therapy to specialized family counseling.[[1]](https://louisvillegracepsychological.com/child-therapist-louisville-ky/)[[2]](https://www.pivotalcounseling.com/family-counselors-greeley-co)[[3]](https://searhc.org/care-specialties/individual-family-therapy/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Grace Psychological Services",
+                      "domain": "louisvillegracepsychological.com",
+                      "url": "https://louisvillegracepsychological.com/child-therapist-louisville-ky/",
+                      "title": "Child Therapist and Psychologists in Louisville, KY",
+                      "text": "Grace Psychological Services is Louisville's trusted choice for child therapy and child therapist services, offering: * Expertise:"
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Pivotal Counseling, LLC",
+                      "domain": "www.pivotalcounseling.com",
+                      "url": "https://www.pivotalcounseling.com/family-counselors-greeley-co",
+                      "title": "Family Counselors in Greeley, CO | Pivotal Counseling, LLC Pivotal Counseling, LLC — Greeley, Fort Collins, Colorado",
+                      "text": "Family Counseling Services We Provide We offer several types of family-focused therapy. Each service is designed to address differ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "SEARHC: SouthEast Alaska Regional Health Consortium",
+                      "domain": "searhc.org",
+                      "url": "https://searhc.org/care-specialties/individual-family-therapy/",
+                      "title": "Individual & Family Therapy",
+                      "text": "Yes. Our therapy services including family therapy, youth counseling, and play therapy are available depending on provider special..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Top Family & Child Therapy Providers in Louisville, KY",
+                  "markdown": "**Top Family & Child Therapy Providers in Louisville, KY**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Grace Psychological Services 5.0 (22) Marriage or relationship counselor Closed 12802 Townepark Way Ste 100 Recognized for child-centered therapy, offering expert care in CBT, TF-CBT, and play therapy for children and families. They are rated highly in the area, offering both in-person and online options.",
+                  "markdown": "![](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-308653200f57:2)\nGrace Psychological Services 5.0 (22)  \nMarriage or relationship counselor  \nClosed 12802 Townepark Way Ste 100  \nRecognized for child-centered therapy, offering expert care in CBT, TF-CBT, and play therapy for children and families. They are rated highly in the area, offering both in-person and online options.",
+                  "links": null,
+                  "images": [
+                    {
+                      "type": "images_element",
+                      "alt": null,
+                      "url": null,
+                      "image_url": "https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-308653200f57:3"
+                    }
+                  ],
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Creative Family Counseling 4.0 (4) Family counselor Closed Prospect, KY Features a team specializing in child, teen, and family counseling with locations in Louisville and Prospect.",
+                  "markdown": "![](https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJEElTT51FCE19McDp8mj7aHbhJtWp--R9p0ezV2dOEU5P-Gf7ulTl6woZXafpiHWEVh5YVaZ-W0ctVk6tAj7N75U7BjUbOX8nrbHloF28l4fGcqf6gP83fqoEWwPzQHWKIcdz=s192-w192-h144-n-k-no)\nCreative Family Counseling 4.0 (4)  \nFamily counselor  \nClosed Prospect, KY  \nFeatures a team specializing in child, teen, and family counseling with locations in Louisville and Prospect.",
+                  "links": null,
+                  "images": [
+                    {
+                      "type": "images_element",
+                      "alt": null,
+                      "url": null,
+                      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJEElTT51FCE19McDp8mj7aHbhJtWp--R9p0ezV2dOEU5P-Gf7ulTl6woZXafpiHWEVh5YVaZ-W0ctVk6tAj7N75U7BjUbOX8nrbHloF28l4fGcqf6gP83fqoEWwPzQHWKIcdz=s192-w192-h144-n-k-no"
+                    }
+                  ],
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Jim Walker, LCSW 5.0 (4) Mental health service Closed 6006 Brownsboro Park Blvd Ste A Offers in-office and virtual family or couples psychotherapy. Grace Psychological Services +3",
+                  "markdown": "![](https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=av7BdQ-W1bHlMgQm-CCxog&cb_client=search.gws-prod.gps&yaw=38.667984&pitch=0&thumbfov=100&w=82&h=82)\nJim Walker, LCSW 5.0 (4)  \nMental health service  \nClosed 6006 Brownsboro Park Blvd Ste A  \nOffers in-office and virtual family or couples psychotherapy.[](https://louisvillegracepsychological.com/child-therapist-louisville-ky/) [[1]](https://louisvillegracepsychological.com/child-therapist-louisville-ky/)[[2]](https://creativefamilycounseling.org/)[[3]](https://lifestance.com/services/family-therapy/ky/louisville/)[[4]](https://jimwalker.fullslate.com/services/6)[[5]](https://louisvillegracepsychological.com/marriage-counseling-louisville/)",
+                  "links": null,
+                  "images": [
+                    {
+                      "type": "images_element",
+                      "alt": null,
+                      "url": null,
+                      "image_url": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=av7BdQ-W1bHlMgQm-CCxog&cb_client=search.gws-prod.gps&yaw=38.667984&pitch=0&thumbfov=100&w=82&h=82"
+                    }
+                  ],
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Grace Psychological Services",
+                      "domain": "louisvillegracepsychological.com",
+                      "url": "https://louisvillegracepsychological.com/child-therapist-louisville-ky/",
+                      "title": "Child Therapist and Psychologists in Louisville, KY",
+                      "text": "Grace Psychological Services is Louisville's trusted choice for child therapy and child therapist services, offering: * Expertise:"
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Creative Family Counseling",
+                      "domain": "creativefamilycounseling.org",
+                      "url": "https://creativefamilycounseling.org/",
+                      "title": "Creative Family Counseling | Child, Teen & Family Therapists ...",
+                      "text": "LOUISVILLE CAMPUS. 8134 New La Grange Rd # 102, Louisville, KY 40222. PROSPECT CAMPUS. 12945 W U.S. Hwy 42, Prospect, KY 40059."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LifeStance Health",
+                      "domain": "lifestance.com",
+                      "url": "https://lifestance.com/services/family-therapy/ky/louisville/",
+                      "title": "Find Family Therapy in Louisville, Kentucky - LifeStance Health",
+                      "text": "Mental Health Clinics that offer Family Therapy in Louisville, Kentucky * Louisville. 100 Executive Park, Suite 103. Louisville, K..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "fullslate.com",
+                      "domain": "jimwalker.fullslate.com",
+                      "url": "https://jimwalker.fullslate.com/services/6",
+                      "title": "In Office-Family Or Couples Counseling/Psychotherapy",
+                      "text": "May be completed by telephone or online video chat"
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Grace Psychological Services",
+                      "domain": "louisvillegracepsychological.com",
+                      "url": "https://louisvillegracepsychological.com/marriage-counseling-louisville/",
+                      "title": "Find Help With Professional Louisville Marriage Counseling",
+                      "text": "Our Louisville marriage counselors at Grace Psychological Services work with couples to rebuild trust and reinforce commitment, en..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Specialized Services Available",
+                  "markdown": "**Specialized Services Available**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Play Therapy & Trauma Care : Grace Psychological Services focuses heavily on evidence-based treatment for children facing behavioral or emotional challenges. Grace Psychological Services Grace Psychological Services Grace Psychological Services Family Counseling : Creative Family Counseling emphasizes strengthening family dynamics, particularly for children and teens. Creative Family Counseling Creative Family Counseling Creative Family Counseling",
+                  "markdown": "- **Play Therapy & Trauma Care**: Grace Psychological Services focuses heavily on evidence-based treatment for children facing behavioral or emotional challenges.\n- **Family Counseling**: Creative Family Counseling emphasizes strengthening family dynamics, particularly for children and teens.[](https://louisvillegracepsychological.com/child-therapist-louisville-ky/) [[1]](https://louisvillegracepsychological.com/child-therapist-louisville-ky/)[[2]](https://creativefamilycounseling.org/)[[3]](https://www.therapylab.com/blogs/how-family-counseling-can-strengthen-relationships)[[4]](https://ourchildrenourfuturefl.org/family-therapy-counseling-hollywood-fl/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Grace Psychological Services",
+                      "domain": "louisvillegracepsychological.com",
+                      "url": "https://louisvillegracepsychological.com/child-therapist-louisville-ky/",
+                      "title": "Child Therapist and Psychologists in Louisville, KY",
+                      "text": "Grace Psychological Services is Louisville's trusted choice for child therapy and child therapist services, offering: * Expertise:"
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Creative Family Counseling",
+                      "domain": "creativefamilycounseling.org",
+                      "url": "https://creativefamilycounseling.org/",
+                      "title": "Creative Family Counseling | Child, Teen & Family Therapists ...",
+                      "text": "LOUISVILLE CAMPUS. 8134 New La Grange Rd # 102, Louisville, KY 40222. PROSPECT CAMPUS. 12945 W U.S. Hwy 42, Prospect, KY 40059."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Therapy Lab",
+                      "domain": "www.therapylab.com",
+                      "url": "https://www.therapylab.com/blogs/how-family-counseling-can-strengthen-relationships",
+                      "title": "How Family Counseling Can Strengthen Relationships",
+                      "text": "With a focus on improving family dynamics and helping each member of the family thrive, family counseling can transform relationsh..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Our Children Our Future, Inc.",
+                      "domain": "ourchildrenourfuturefl.org",
+                      "url": "https://ourchildrenourfuturefl.org/family-therapy-counseling-hollywood-fl/",
+                      "title": "Family Therapy & Counseling",
+                      "text": "Creating Healthier Family Dynamics Through Compassionate Counseling Helping Children & Adolescents Thrive in a Supportive Family E..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "features providers such as Haven Family Counseling, Innovative Family Therapy, and others",
+                  "markdown": "For a complete list of individual therapists specializing in children (ages 6-10), [Psychology Today's directory](https://www.psychologytoday.com/us/therapists/ky/louisville?category=children-6-to-10) features providers such as Haven Family Counseling, Innovative Family Therapy , and others.[](https://www.psychologytoday.com/us/therapists/ky/louisville?category=children-6-to-10) [[1]](https://www.psychologytoday.com/us/therapists/ky/louisville?category=children-6-to-10)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Psychology Today's directory",
+                      "description": null,
+                      "url": "https://www.psychologytoday.com/us/therapists/ky/louisville?category=children-6-to-10",
+                      "domain": "www.psychologytoday.com"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Psychology Today",
+                      "domain": "www.psychologytoday.com",
+                      "url": "https://www.psychologytoday.com/us/therapists/ky/louisville?category=children-6-to-10",
+                      "title": "Therapists for Children in Louisville, KY - Psychology Today",
+                      "text": "* Katy Adams. * Justin Romney. * Hannah Richardson. * Beth Lyons. * Tatiana Tomovic. * Twyna Bell. * Drew Davis. * Heather Patters..."
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Grace Psychological Services",
+                  "domain": "louisvillegracepsychological.com",
+                  "url": "https://louisvillegracepsychological.com/child-therapist-louisville-ky/",
+                  "title": "Child Therapist and Psychologists in Louisville, KY",
+                  "text": "Grace Psychological Services is Louisville's trusted choice for child therapy and child therapist services, offering: * Expertise:"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Creative Family Counseling",
+                  "domain": "creativefamilycounseling.org",
+                  "url": "https://creativefamilycounseling.org/",
+                  "title": "Creative Family Counseling | Child, Teen & Family Therapists ...",
+                  "text": "LOUISVILLE CAMPUS. 8134 New La Grange Rd # 102, Louisville, KY 40222. PROSPECT CAMPUS. 12945 W U.S. Hwy 42, Prospect, KY 40059."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "LifeStance Health",
+                  "domain": "lifestance.com",
+                  "url": "https://lifestance.com/services/family-therapy/ky/louisville/",
+                  "title": "Find Family Therapy in Louisville, Kentucky - LifeStance Health",
+                  "text": "Mental Health Clinics that offer Family Therapy in Louisville, Kentucky * Louisville. 100 Executive Park, Suite 103. Louisville, K..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Psychology Today",
+                  "domain": "www.psychologytoday.com",
+                  "url": "https://www.psychologytoday.com/us/therapists/ky/louisville?category=children-6-to-10",
+                  "title": "Therapists for Children in Louisville, KY - Psychology Today",
+                  "text": "* Katy Adams. * Justin Romney. * Hannah Richardson. * Beth Lyons. * Tatiana Tomovic. * Twyna Bell. * Drew Davis. * Heather Patters..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "fullslate.com",
+                  "domain": "jimwalker.fullslate.com",
+                  "url": "https://jimwalker.fullslate.com/services/6",
+                  "title": "In Office-Family Or Couples Counseling/Psychotherapy",
+                  "text": "May be completed by telephone or online video chat"
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

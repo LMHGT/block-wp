@@ -1,0 +1,13 @@
+{
+  "name": "backlinks-competitors-domain",
+  "method": "POST",
+  "path": "/v3/backlinks/competitors/live",
+  "body": [
+    {
+      "target": "louisvillementalhealth.org",
+      "limit": 50,
+      "tag": "lmhg backlinks competitors"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:27.465833+00:00"
+}

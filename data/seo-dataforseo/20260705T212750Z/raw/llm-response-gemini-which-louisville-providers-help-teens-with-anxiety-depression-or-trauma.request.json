@@ -1,0 +1,14 @@
+{
+  "name": "llm-response-gemini-Which Louisville providers help teens with anxiety, depression, or trauma?",
+  "path": "/v3/ai_optimization/gemini/llm_responses/live",
+  "body": [
+    {
+      "user_prompt": "Which Louisville providers help teens with anxiety, depression, or trauma?",
+      "model_name": "gemini-2.5-flash-lite",
+      "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+      "tag": "lmhg llm response gemini Which Louisville providers help teens with anxiety, depression, or trauma?",
+      "web_search": true,
+      "max_output_tokens": 1024
+    }
+  ]
+}

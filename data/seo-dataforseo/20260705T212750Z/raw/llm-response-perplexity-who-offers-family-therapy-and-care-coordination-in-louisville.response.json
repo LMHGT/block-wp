@@ -1,0 +1,101 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.9484 sec.",
+  "cost": 0.006216,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-d3a233f0bc96",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.9369 sec.",
+      "cost": 0.006216,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "perplexity",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "perplexity",
+        "user_prompt": "Who offers family therapy and care coordination in Louisville?",
+        "model_name": "sonar",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response perplexity Who offers family therapy and care coordination in Louisville?",
+        "max_output_tokens": 700
+      },
+      "result": [
+        {
+          "model_name": "sonar",
+          "input_tokens": 35,
+          "output_tokens": 581,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.005616,
+          "datetime": "2026-07-06 00:32:10 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Several providers in Louisville, Kentucky offer **family therapy**, and some also provide **care coordination** (often labeled as case management):\n\n### **Providers Offering Family Therapy + Care Coordination/Case Management**\n\n| Provider | Family Therapy | Care Coordination / Case Management | Notes |\n|----------|----------------|--------------------------------------|-------|\n| **Haven Family Counseling** (Boys & Girls Haven) | ✅ Yes | ✅ Yes (intensive in-home therapy + case management) | Outpatient program serving children, teens, adults, and families; offers in-home and telehealth services [8] |\n| **Creative Family Counseling** | ✅ Yes | ✅ Yes (parent support + matching to therapist) | Offers individual/family counseling and parent support; has Louisville and Prospect campuses [9] |\n| **LifeStance Health** | ✅ Yes | ✅ Yes (multidisciplinary team for personalized support) | 4 in-person locations near Louisville + telehealth; offers compassionate family therapy [4] |\n| **Revelation Counseling Center** | ✅ Yes | ❌ Not explicitly stated | LMFT and LCSW therapists; family & couples focus [1] |\n| **Innovative Family Therapy** | ✅ Yes | ❌ Not explicitly stated | Focuses on the whole family system; offers couples/marriage/divorce counseling [3] |\n| **Steere Family Therapy** | ✅ Yes | ❌ Not explicitly stated | Louisville's Family Therapy Specialists; emphasizes individual/family uniqueness [5] |\n| **Brock Family Therapy Center** | ✅ Yes | ❌ Not explicitly stated | Client-based services for personal growth and well-being [6] |\n| **Groupworks** | ✅ Yes | ❌ Not explicitly stated | Family psychologists support reconnection and individual growth [7] |\n\n---\n\n### **Top Recommendations for Combined Services**\n\n1. **Haven Family Counseling** – Best for **family therapy + intensive in-home care coordination/case management**, especially for families with children/adolescents [8].\n2. **LifeStance Health** – Strong option for **family therapy + multidisciplinary care coordination**, with multiple in-person locations near Louisville [4].\n3. **Creative Family Counseling** – Offers **family therapy + parent support/care coordination**, with convenient Louisville and Prospect campuses [9].\n\n---\n\n### **How to Find More Family Therapists**\n\nYou can browse additional licensed family therapists in Louisville via **Psychology Today**, filtering by “family therapy” and specialty:  \n🔗 [Psychology Today – Family Therapists in Louisville, KY](https://www.psychologytoday.com/us/therapists/ky/louisville?category=family-therapy) [1]\n\nLet me know if you’d like help contacting any of these providers or checking availability.",
+                  "annotations": [
+                    {
+                      "title": "Family Therapists in Louisville, KY - Psychology Today",
+                      "url": "https://www.psychologytoday.com/us/therapists/ky/louisville?category=family-therapy"
+                    },
+                    {
+                      "title": "Counseling - Louisville Family Center - Louisville, CO",
+                      "url": "https://www.louisvillefamilycenter.com"
+                    },
+                    {
+                      "title": "Licensed Therapists Louisville, KY | Mental Health Counseling",
+                      "url": "https://innovativefamilytherapy.com"
+                    },
+                    {
+                      "title": "Find Family Therapy in Louisville, Kentucky - LifeStance Health",
+                      "url": "https://lifestance.com/services/family-therapy/ky/louisville/"
+                    },
+                    {
+                      "title": "Welcome to Steere Family Therapy | Louisville Family Therapy ...",
+                      "url": "https://louisvillefamilytherapy.com"
+                    },
+                    {
+                      "title": "Brock Family Therapy Center | Louisville Family Therapy and ...",
+                      "url": "https://www.brockfamilytherapycenter.com"
+                    },
+                    {
+                      "title": "Family Counseling | Groupworks | Louisville, KY",
+                      "url": "https://groupworksky.com/family-counseling"
+                    },
+                    {
+                      "title": "Haven Family Counseling",
+                      "url": "https://boysandgirlshaven.org/programs/haven-family-counseling/"
+                    },
+                    {
+                      "title": "Creative Family Counseling | Child, Teen & Family Therapists ...",
+                      "url": "https://creativefamilycounseling.org"
+                    },
+                    {
+                      "title": "Family Therapy of Louisville - Facebook",
+                      "url": "https://www.facebook.com/p/Family-Therapy-of-Louisville-100063512529524/"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": null
+        }
+      ]
+    }
+  ]
+}

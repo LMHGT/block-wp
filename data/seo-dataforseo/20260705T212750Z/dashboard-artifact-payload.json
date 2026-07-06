@@ -1,0 +1,3289 @@
+{
+  "manifest": {
+    "version": 1,
+    "surface": "dashboard",
+    "title": "LMHG Louisville SEO and AI Visibility Dashboard",
+    "description": "Interactive dashboard summarizing the DataForSEO baseline for Louisville Mental Health Group local SEO, AI answer visibility, competitors, spend, and implementation priorities.",
+    "generatedAt": "2026-07-05T22:00:00Z",
+    "sources": [
+      {
+        "id": "run",
+        "label": "DataForSEO run folder",
+        "path": "/Users/tyler-lcsw/projects/lmhg-blockwp/data/seo-dataforseo/20260705T212750Z"
+      },
+      {
+        "id": "report",
+        "label": "Executive Markdown report",
+        "path": "/Users/tyler-lcsw/projects/lmhg-blockwp/data/seo-dataforseo/20260705T212750Z/dataforseo-executive-report.md"
+      },
+      {
+        "id": "normalized",
+        "label": "Normalized CSV/JSON outputs",
+        "path": "/Users/tyler-lcsw/projects/lmhg-blockwp/data/seo-dataforseo/20260705T212750Z/normalized"
+      }
+    ],
+    "cards": [
+      {
+        "id": "kpi-spend",
+        "title": "Known Spend",
+        "dataset": "kpis",
+        "valueField": "value",
+        "labelField": "metric",
+        "filter": {
+          "metric": "Known spend"
+        },
+        "format": "currency"
+      },
+      {
+        "id": "kpi-llm-mention",
+        "title": "LLM Mention Rate",
+        "dataset": "kpis",
+        "valueField": "value",
+        "labelField": "metric",
+        "filter": {
+          "metric": "LLM mention rate"
+        },
+        "format": "percent"
+      },
+      {
+        "id": "kpi-llm-cite",
+        "title": "LLM Citation Rate",
+        "dataset": "kpis",
+        "valueField": "value",
+        "labelField": "metric",
+        "filter": {
+          "metric": "LLM citation rate"
+        },
+        "format": "percent"
+      },
+      {
+        "id": "kpi-ai-mode",
+        "title": "AI Mode Citation Rate",
+        "dataset": "kpis",
+        "valueField": "value",
+        "labelField": "metric",
+        "filter": {
+          "metric": "Google AI Mode citation rate"
+        },
+        "format": "percent"
+      },
+      {
+        "id": "kpi-onpage",
+        "title": "OnPage Pages Crawled",
+        "dataset": "kpis",
+        "valueField": "value",
+        "labelField": "metric",
+        "filter": {
+          "metric": "OnPage pages crawled"
+        },
+        "format": "number"
+      },
+      {
+        "id": "kpi-gbp",
+        "title": "GBP Reviews",
+        "dataset": "kpis",
+        "valueField": "value",
+        "labelField": "metric",
+        "filter": {
+          "metric": "GBP reviews"
+        },
+        "format": "number"
+      }
+    ],
+    "charts": [
+      {
+        "id": "chart-cost",
+        "title": "API Spend by DataForSEO Family",
+        "dataset": "cost_by_api_family",
+        "type": "bar",
+        "encodings": {
+          "x": {
+            "field": "api_family"
+          },
+          "y": {
+            "field": "actual_cost_usd"
+          }
+        },
+        "display": {
+          "yAxisTitle": "USD"
+        }
+      },
+      {
+        "id": "chart-llm-platform",
+        "title": "LLM Visibility by Platform",
+        "dataset": "llm_platform_summary",
+        "type": "bar",
+        "encodings": {
+          "x": {
+            "field": "platform"
+          },
+          "y": {
+            "fields": [
+              "mention_rate",
+              "citation_rate"
+            ]
+          }
+        },
+        "display": {
+          "yAxisTitle": "Share of responses"
+        }
+      },
+      {
+        "id": "chart-ai-mode",
+        "title": "Google AI Mode Prompt Outcomes",
+        "dataset": "ai_mode_audit",
+        "type": "bar",
+        "encodings": {
+          "x": {
+            "field": "prompt"
+          },
+          "y": {
+            "fields": [
+              "mentions_lmhg",
+              "cites_lmhg"
+            ]
+          }
+        },
+        "display": {
+          "yAxisTitle": "0 or 1 outcome"
+        }
+      },
+      {
+        "id": "chart-keywords",
+        "title": "Top Louisville Keyword Volumes",
+        "dataset": "keyword_priorities",
+        "type": "bar",
+        "encodings": {
+          "x": {
+            "field": "keyword"
+          },
+          "y": {
+            "field": "search_volume"
+          },
+          "color": {
+            "field": "location_code"
+          }
+        },
+        "display": {
+          "yAxisTitle": "Monthly searches"
+        }
+      },
+      {
+        "id": "chart-local-grid",
+        "title": "Local Grid Best Rank by Keyword",
+        "dataset": "local_grid_keyword_summary",
+        "type": "bar",
+        "encodings": {
+          "x": {
+            "field": "keyword"
+          },
+          "y": {
+            "field": "best_rank"
+          }
+        },
+        "display": {
+          "yAxisTitle": "Best local rank"
+        }
+      },
+      {
+        "id": "chart-depth",
+        "title": "Organic Depth-100 Rank by Device",
+        "dataset": "organic_depth100_summary",
+        "type": "bar",
+        "encodings": {
+          "x": {
+            "field": "keyword"
+          },
+          "y": {
+            "field": "best_lmhg_rank"
+          },
+          "color": {
+            "field": "surface"
+          }
+        },
+        "display": {
+          "yAxisTitle": "Best rank, 101 means not found"
+        }
+      },
+      {
+        "id": "chart-competitors",
+        "title": "SERP Competitor Frequency",
+        "dataset": "competitor_summary",
+        "type": "bar",
+        "encodings": {
+          "x": {
+            "field": "competitor"
+          },
+          "y": {
+            "field": "serp_mentions"
+          },
+          "color": {
+            "field": "classification"
+          }
+        },
+        "display": {
+          "yAxisTitle": "Mentions across collected SERPs"
+        }
+      },
+      {
+        "id": "chart-competitor-labs",
+        "title": "Competitor Organic Footprint",
+        "dataset": "competitor_labs_ranked",
+        "type": "scatter",
+        "encodings": {
+          "x": {
+            "field": "total_count"
+          },
+          "y": {
+            "field": "etv"
+          },
+          "label": {
+            "field": "domain"
+          },
+          "size": {
+            "field": "pos_4_10"
+          }
+        },
+        "display": {
+          "xAxisTitle": "Ranked keywords",
+          "yAxisTitle": "Estimated traffic"
+        }
+      }
+    ],
+    "tables": [
+      {
+        "id": "table-actions",
+        "title": "Implementation Backlog",
+        "dataset": "action_backlog",
+        "columns": [
+          {
+            "field": "priority",
+            "label": "Priority",
+            "type": "number"
+          },
+          {
+            "field": "area",
+            "label": "Area"
+          },
+          {
+            "field": "action",
+            "label": "Action"
+          },
+          {
+            "field": "evidence",
+            "label": "Evidence"
+          },
+          {
+            "field": "owner",
+            "label": "Owner"
+          }
+        ],
+        "defaultSort": {
+          "field": "priority",
+          "direction": "asc"
+        }
+      },
+      {
+        "id": "table-llm-prompts",
+        "title": "LLM Prompt Audit",
+        "dataset": "llm_prompt_audit",
+        "columns": [
+          {
+            "field": "platform",
+            "label": "Platform"
+          },
+          {
+            "field": "prompt",
+            "label": "Prompt"
+          },
+          {
+            "field": "mentions_lmhg",
+            "label": "Mention",
+            "type": "number"
+          },
+          {
+            "field": "cites_lmhg",
+            "label": "Citation",
+            "type": "number"
+          },
+          {
+            "field": "cost",
+            "label": "Cost",
+            "type": "currency"
+          },
+          {
+            "field": "cited_domains",
+            "label": "Cited domains"
+          }
+        ],
+        "defaultSort": {
+          "field": "cites_lmhg",
+          "direction": "asc"
+        }
+      },
+      {
+        "id": "table-ai-mode",
+        "title": "Google AI Mode Citation Gaps",
+        "dataset": "ai_mode_audit",
+        "columns": [
+          {
+            "field": "prompt",
+            "label": "Prompt"
+          },
+          {
+            "field": "mentions_lmhg",
+            "label": "Mention",
+            "type": "number"
+          },
+          {
+            "field": "cites_lmhg",
+            "label": "Citation",
+            "type": "number"
+          },
+          {
+            "field": "reference_count",
+            "label": "Refs",
+            "type": "number"
+          },
+          {
+            "field": "cited_domains",
+            "label": "Cited domains"
+          }
+        ],
+        "defaultSort": {
+          "field": "cites_lmhg",
+          "direction": "asc"
+        }
+      },
+      {
+        "id": "table-local-grid",
+        "title": "Local Grid Keyword Summary",
+        "dataset": "local_grid_keyword_summary",
+        "columns": [
+          {
+            "field": "keyword",
+            "label": "Keyword"
+          },
+          {
+            "field": "found_points",
+            "label": "Found points",
+            "type": "number"
+          },
+          {
+            "field": "not_found_points",
+            "label": "Not found",
+            "type": "number"
+          },
+          {
+            "field": "best_rank",
+            "label": "Best rank",
+            "type": "number"
+          },
+          {
+            "field": "avg_found_rank",
+            "label": "Avg found rank",
+            "type": "number"
+          }
+        ],
+        "defaultSort": {
+          "field": "best_rank",
+          "direction": "asc"
+        }
+      },
+      {
+        "id": "table-competitors",
+        "title": "Competitors to Beat",
+        "dataset": "competitor_summary",
+        "columns": [
+          {
+            "field": "competitor",
+            "label": "Competitor"
+          },
+          {
+            "field": "classification",
+            "label": "Class"
+          },
+          {
+            "field": "serp_mentions",
+            "label": "SERP mentions",
+            "type": "number"
+          },
+          {
+            "field": "local_mentions",
+            "label": "Local mentions",
+            "type": "number"
+          },
+          {
+            "field": "example_url",
+            "label": "Example URL"
+          }
+        ],
+        "defaultSort": {
+          "field": "serp_mentions",
+          "direction": "desc"
+        }
+      },
+      {
+        "id": "table-backlinks",
+        "title": "Backlink Issues Sample",
+        "dataset": "backlink_issues",
+        "columns": [
+          {
+            "field": "source",
+            "label": "Source"
+          },
+          {
+            "field": "domain_from",
+            "label": "Referring domain"
+          },
+          {
+            "field": "url_to",
+            "label": "Target URL"
+          },
+          {
+            "field": "spam_score",
+            "label": "Spam",
+            "type": "number"
+          },
+          {
+            "field": "is_broken",
+            "label": "Broken"
+          },
+          {
+            "field": "url_to_status_code",
+            "label": "Target status",
+            "type": "number"
+          }
+        ],
+        "defaultSort": {
+          "field": "spam_score",
+          "direction": "desc"
+        }
+      }
+    ],
+    "blocks": [
+      {
+        "type": "markdown",
+        "body": "# LMHG Louisville SEO and AI Visibility Dashboard\nDataForSEO baseline for Louisville Mental Health Group. The run stayed far under budget and exposes three urgent themes: crawler access, AI citation gaps, and head-term/local-grid ranking work."
+      },
+      {
+        "type": "cardGrid",
+        "cards": [
+          "kpi-spend",
+          "kpi-llm-mention",
+          "kpi-llm-cite",
+          "kpi-ai-mode",
+          "kpi-onpage",
+          "kpi-gbp"
+        ]
+      },
+      {
+        "type": "markdown",
+        "body": "## Spend and API Mix\nThe run used a broad but tightly scoped mix of SERP, Labs, AI Optimization, Business Data, Backlinks, and OnPage endpoints."
+      },
+      {
+        "type": "chart",
+        "chart": "chart-cost"
+      },
+      {
+        "type": "markdown",
+        "body": "## AI and Agentic Search Visibility\nDirect LLM responses occasionally found LMHG, but Google AI Mode did not cite the site for tested Louisville prompts. These charts and tables show where copy and FAQ answers need to be made more citable."
+      },
+      {
+        "type": "chart",
+        "chart": "chart-llm-platform"
+      },
+      {
+        "type": "chart",
+        "chart": "chart-ai-mode"
+      },
+      {
+        "type": "table",
+        "table": "table-llm-prompts"
+      },
+      {
+        "type": "table",
+        "table": "table-ai-mode"
+      },
+      {
+        "type": "markdown",
+        "body": "## Louisville Ranking Priorities\nThe highest-volume terms are therapy, therapist, and counseling Louisville KY. Case management is the clear current strength; child, family, in-home, and community-based services need stronger local and answer-engine signals."
+      },
+      {
+        "type": "chart",
+        "chart": "chart-keywords"
+      },
+      {
+        "type": "chart",
+        "chart": "chart-local-grid"
+      },
+      {
+        "type": "chart",
+        "chart": "chart-depth"
+      },
+      {
+        "type": "table",
+        "table": "table-local-grid"
+      },
+      {
+        "type": "markdown",
+        "body": "## Competitors and Off-Page Signals\nKentucky Counseling Center, UofL Health, Seven Counties, LifeStance, Best Life, and other local providers repeatedly appear in SERP and LLM citation surfaces. Backlink cleanup is also required because DataForSEO sees many broken backlink targets."
+      },
+      {
+        "type": "chart",
+        "chart": "chart-competitors"
+      },
+      {
+        "type": "chart",
+        "chart": "chart-competitor-labs"
+      },
+      {
+        "type": "table",
+        "table": "table-competitors"
+      },
+      {
+        "type": "table",
+        "table": "table-backlinks"
+      },
+      {
+        "type": "markdown",
+        "body": "## Implementation Backlog\nThe backlog is ordered for impact: make the site crawlable to SEO tooling, fix soft-404 behavior, then improve entity copy/schema/FAQ surfaces for local and agentic queries."
+      },
+      {
+        "type": "table",
+        "table": "table-actions"
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "status": "ready",
+    "generatedAt": "2026-07-05T22:00:00Z",
+    "datasets": {
+      "kpis": [
+        {
+          "metric": "Known spend",
+          "value": 4.281544,
+          "unit": "USD",
+          "status": "under cap",
+          "detail": "Against $25 checkpoint and $35 cap"
+        },
+        {
+          "metric": "LLM mention rate",
+          "value": 0.229,
+          "unit": "share",
+          "status": "weak",
+          "detail": "11 of 48 responses mentioned LMHG"
+        },
+        {
+          "metric": "LLM citation rate",
+          "value": 0.167,
+          "unit": "share",
+          "status": "weak",
+          "detail": "8 of 48 responses cited LMHG"
+        },
+        {
+          "metric": "Google AI Mode citation rate",
+          "value": 0.0,
+          "unit": "share",
+          "status": "critical",
+          "detail": "0 of 17 AI Mode prompts cited LMHG"
+        },
+        {
+          "metric": "OnPage pages crawled",
+          "value": 0,
+          "unit": "pages",
+          "status": "blocked",
+          "detail": "DataForSEO OnPage stopped at forbidden_http_header"
+        },
+        {
+          "metric": "GBP reviews",
+          "value": 19,
+          "unit": "reviews",
+          "status": "asset",
+          "detail": "Rating 4.4 from Google Business Profile"
+        }
+      ],
+      "cost_by_api_family": [
+        {
+          "api_family": "ai_optimization",
+          "actual_cost_usd": "2.552476"
+        },
+        {
+          "api_family": "serp",
+          "actual_cost_usd": "0.855"
+        },
+        {
+          "api_family": "dataforseo_labs",
+          "actual_cost_usd": "0.43932"
+        },
+        {
+          "api_family": "keywords_data",
+          "actual_cost_usd": "0.27"
+        },
+        {
+          "api_family": "backlinks",
+          "actual_cost_usd": "0.126948"
+        },
+        {
+          "api_family": "on_page",
+          "actual_cost_usd": "0.027"
+        },
+        {
+          "api_family": "business_data",
+          "actual_cost_usd": "0.0108"
+        }
+      ],
+      "llm_platform_summary": [
+        {
+          "platform": "claude",
+          "calls": 12,
+          "mentions": 2,
+          "citations": 2,
+          "cost": 1.013457,
+          "mention_rate": 0.167,
+          "citation_rate": 0.167
+        },
+        {
+          "platform": "gemini",
+          "calls": 12,
+          "mentions": 3,
+          "citations": 0,
+          "cost": 0.395011,
+          "mention_rate": 0.25,
+          "citation_rate": 0.0
+        },
+        {
+          "platform": "chat_gpt",
+          "calls": 12,
+          "mentions": 2,
+          "citations": 2,
+          "cost": 0.250466,
+          "mention_rate": 0.167,
+          "citation_rate": 0.167
+        },
+        {
+          "platform": "perplexity",
+          "calls": 12,
+          "mentions": 4,
+          "citations": 4,
+          "cost": 0.074843,
+          "mention_rate": 0.333,
+          "citation_rate": 0.333
+        }
+      ],
+      "llm_prompt_audit": [
+        {
+          "platform": "perplexity",
+          "prompt": "Where can someone get mental health case management in Louisville, KY?",
+          "mentions_lmhg": 1,
+          "cites_lmhg": 1,
+          "annotation_count": 9,
+          "cost": 0.00619,
+          "cited_domains": "louisvillementalhealth.org | bestlifelouisville.com | wellspringky.org | cultivatebhe.com | sevencounties.org | nortonhealthcare.com | indeed.com | dbhdid.ky.gov | kentuckymentalhealth.com"
+        },
+        {
+          "platform": "claude",
+          "prompt": "Compare local outpatient mental health providers in Louisville.",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 9,
+          "cost": 0.078088,
+          "cited_domains": "uoflhealth.org | nortonhealthcare.com | mentalhealthclinics.org | kentuckymentalhealth.com"
+        },
+        {
+          "platform": "claude",
+          "prompt": "Recommend non-hospital mental health counseling options in Louisville, KY.",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 15,
+          "cost": 0.068998,
+          "cited_domains": "kentuckycounselingcenter.com | mandalalouisville.com | nortonhealthcare.com | cultivatebhe.com"
+        },
+        {
+          "platform": "claude",
+          "prompt": "What should I ask before choosing a therapist in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 11,
+          "cost": 0.076801,
+          "cited_domains": "therapy-mn.com | psychologytoday.com | counselingcentergroup.com | sageandsunshinetherapy.com | atracare.com"
+        },
+        {
+          "platform": "gemini",
+          "prompt": "Find a Louisville therapist who accepts Medicaid.",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 5,
+          "cost": 0.035719,
+          "cited_domains": "vertexaisearch.cloud.google.com"
+        },
+        {
+          "platform": "chat_gpt",
+          "prompt": "Who offers in-home therapy or community-based mental health support in Louisville?",
+          "mentions_lmhg": 1,
+          "cites_lmhg": 1,
+          "annotation_count": 9,
+          "cost": 0.023536,
+          "cited_domains": "kentucky.kvc.org | stepstoneyouth.com | wellspringky.org | louisvillementalhealth.org | creativespiritsonline.com | kilgorecounseling.org | onesjourneythroughlife.org | nortonhealthcare.com | louisvilleky.gov"
+        },
+        {
+          "platform": "chat_gpt",
+          "prompt": "Which Louisville mental health websites have useful service and referral information?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 9,
+          "cost": 0.02349,
+          "cited_domains": "louisvilleky.gov | 988.ky.gov | chfs.ky.gov | newvista.org | wellspringky.org | resources.hdiuky.org | abibehavioralhealth.com | solacelifechange.com | astrabh.com"
+        },
+        {
+          "platform": "perplexity",
+          "prompt": "Who offers family therapy and care coordination in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 10,
+          "cost": 0.006216,
+          "cited_domains": "psychologytoday.com | louisvillefamilycenter.com | innovativefamilytherapy.com | lifestance.com | louisvillefamilytherapy.com | brockfamilytherapycenter.com | groupworksky.com | boysandgirlshaven.org | creativefamilycounseling.org | faceboo"
+        },
+        {
+          "platform": "gemini",
+          "prompt": "What is community-based mental health care, and who provides it in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 0,
+          "cost": 0.000709,
+          "cited_domains": ""
+        },
+        {
+          "platform": "chat_gpt",
+          "prompt": "Compare local outpatient mental health providers in Louisville.",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 13,
+          "cost": 0.023491,
+          "cited_domains": "nortonhealthcare.com | uoflhealth.org | mentalhealthus.org | smitherpsychiatry.com | positivepsychiatryoflouisville.com | schrodthallpsych.com | mymodernpsychiatry.com"
+        },
+        {
+          "platform": "claude",
+          "prompt": "Which Louisville mental health websites have useful service and referral information?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 13,
+          "cost": 0.073648,
+          "cited_domains": "louisvilleky.gov | namilouisville.org | thebrookhospitals.com | kentuckymentalhealth.com | kentuckycounselingcenter.com"
+        },
+        {
+          "platform": "perplexity",
+          "prompt": "Which Louisville providers help teens with anxiety, depression, or trauma?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 10,
+          "cost": 0.006308,
+          "cited_domains": "louisvillegracepsychological.com | themortoncenter.org | psychologytoday.com | creativefamilycounseling.org | boysandgirlshaven.org | heartwoodtherapyplace.com | haganhealth.com | uoflhealth.org | thebrookhospitals.com | zencare.co"
+        },
+        {
+          "platform": "claude",
+          "prompt": "Find a Louisville therapist who accepts Medicaid.",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 10,
+          "cost": 0.073198,
+          "cited_domains": "kentuckycounselingcenter.com | psychologytoday.com | bestlifelouisville.com | mentalhealthmatch.com | zencare.co"
+        },
+        {
+          "platform": "gemini",
+          "prompt": "Where can someone get mental health case management in Louisville, KY?",
+          "mentions_lmhg": 1,
+          "cites_lmhg": 0,
+          "annotation_count": 10,
+          "cost": 0.035808,
+          "cited_domains": "vertexaisearch.cloud.google.com"
+        },
+        {
+          "platform": "chat_gpt",
+          "prompt": "Who offers family therapy and care coordination in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 8,
+          "cost": 0.023267,
+          "cited_domains": "bcalouisville.com | stepbystepfamilyservices.org | onesjourneythroughlife.org | stepstoneyouth.com | solacelifechange.com | kilgorecounseling.org | couplescarecenter.org | louisvillefamilytherapy.com"
+        },
+        {
+          "platform": "claude",
+          "prompt": "Where can someone get mental health case management in Louisville, KY?",
+          "mentions_lmhg": 1,
+          "cites_lmhg": 1,
+          "annotation_count": 12,
+          "cost": 0.071863,
+          "cited_domains": "louisvillementalhealth.org | stepbystepfamilyservices.org | bestlifelouisville.com | kentuckycounselingcenter.com | fhclouisville.org | kentuckymentalhealth.com | mentalhealthfacilities.net"
+        },
+        {
+          "platform": "perplexity",
+          "prompt": "What are good therapy options in Louisville for anxiety and depression?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 10,
+          "cost": 0.0063,
+          "cited_domains": "psychologytoday.com | louisvillegracepsychological.com | nationalsocialanxietycenter.com | katiedeshields.com | sondermind.com | kycards.com | brightside.com | bewellkentucky.com | counselingnow.com | mindsightbehavioral.com"
+        },
+        {
+          "platform": "perplexity",
+          "prompt": "Which Louisville mental health websites have useful service and referral information?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 8,
+          "cost": 0.006234,
+          "cited_domains": "mentalhealthlou.com | uoflhealth.org | sevencounties.org | haganhealth.com | behavioralhealth.spalding.edu | thebrookhospitals.com | dbhdid.ky.gov | nortonhealthcare.com"
+        },
+        {
+          "platform": "gemini",
+          "prompt": "Who offers family therapy and care coordination in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 11,
+          "cost": 0.035815,
+          "cited_domains": "vertexaisearch.cloud.google.com"
+        },
+        {
+          "platform": "gemini",
+          "prompt": "Recommend non-hospital mental health counseling options in Louisville, KY.",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 14,
+          "cost": 0.03589,
+          "cited_domains": "vertexaisearch.cloud.google.com"
+        },
+        {
+          "platform": "chat_gpt",
+          "prompt": "Where can someone get mental health case management in Louisville, KY?",
+          "mentions_lmhg": 1,
+          "cites_lmhg": 1,
+          "annotation_count": 10,
+          "cost": 0.023509,
+          "cited_domains": "mentalhealthus.org | louisvillementalhealth.org | stepbystepfamilyservices.org | bestlifelouisville.com | allianceky.com | blueskyky.com | onesjourneythroughlife.org | turnermentalhealth.com | solacelifechange.com | dbhdid.ky.gov"
+        },
+        {
+          "platform": "chat_gpt",
+          "prompt": "Which Louisville providers help teens with anxiety, depression, or trauma?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 10,
+          "cost": 0.023492,
+          "cited_domains": "northstarcounselingcenter.com | havenpointcounseling.com | lifesjourneyky.com | renewcounselingservices.org | apricuscounseling.org | brockfamilytherapycenter.com | stepstoneyouth.com | anchorofhopelouisville.com | shaquilla-cooper.clientse"
+        },
+        {
+          "platform": "perplexity",
+          "prompt": "What should I ask before choosing a therapist in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 10,
+          "cost": 0.006291,
+          "cited_domains": "louisvillegracepsychological.com | psychologytoday.com | kentuckycounselingcenter.com | lifestance.com | meridianbhservices.com | renewcounselingservices.org | reddit.com | peacefulsc.com | yelp.com | newhopecounselingsite.com"
+        },
+        {
+          "platform": "gemini",
+          "prompt": "What are good therapy options in Louisville for anxiety and depression?",
+          "mentions_lmhg": 1,
+          "cites_lmhg": 0,
+          "annotation_count": 14,
+          "cost": 0.0359,
+          "cited_domains": "vertexaisearch.cloud.google.com"
+        },
+        {
+          "platform": "gemini",
+          "prompt": "Who are the best mental health counseling providers in Louisville, KY?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 8,
+          "cost": 0.035823,
+          "cited_domains": "vertexaisearch.cloud.google.com"
+        },
+        {
+          "platform": "chat_gpt",
+          "prompt": "Find a Louisville therapist who accepts Medicaid.",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 5,
+          "cost": 0.023159,
+          "cited_domains": "sevencounties.org | omniresourcesservices.org | mentalhealthus.org | solacelifechange.com | trifectamedicalgroup.com"
+        },
+        {
+          "platform": "chat_gpt",
+          "prompt": "What is community-based mental health care, and who provides it in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 8,
+          "cost": 0.023393,
+          "cited_domains": "louisvilleky.gov | resources.hdiuky.org | bridgehaven.org | uoflhealth.org | nortonhealthcare.com | solacelifechange.com | creativespiritsonline.com"
+        },
+        {
+          "platform": "claude",
+          "prompt": "Who are the best mental health counseling providers in Louisville, KY?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 13,
+          "cost": 0.080317,
+          "cited_domains": "kentuckycounselingcenter.com | louisvillegracepsychological.com | doctor.webmd.com | yelp.com | counselingnow.com"
+        },
+        {
+          "platform": "perplexity",
+          "prompt": "What is community-based mental health care, and who provides it in Louisville?",
+          "mentions_lmhg": 1,
+          "cites_lmhg": 1,
+          "annotation_count": 9,
+          "cost": 0.006096,
+          "cited_domains": "theomnifamily.com | louisvillementalhealth.org | kentuckymentalhealth.com | findhelpnow.org | sevencounties.org | bridgehaven.org | uoflhealth.org | chfs.ky.gov | thebrookhospitals.com"
+        },
+        {
+          "platform": "perplexity",
+          "prompt": "Recommend non-hospital mental health counseling options in Louisville, KY.",
+          "mentions_lmhg": 1,
+          "cites_lmhg": 1,
+          "annotation_count": 9,
+          "cost": 0.006279,
+          "cited_domains": "kentuckycounselingcenter.com | louisvillementalhealth.org | psychologytoday.com | kentuckymentalhealth.com | nortonhealthcare.com | campushealth.louisville.edu | uoflhealth.org | sagementalhealth.net | yelp.com"
+        },
+        {
+          "platform": "perplexity",
+          "prompt": "Find a Louisville therapist who accepts Medicaid.",
+          "mentions_lmhg": 1,
+          "cites_lmhg": 1,
+          "annotation_count": 10,
+          "cost": 0.006306,
+          "cited_domains": "psychologytoday.com | mentalhealthmatch.com | therapist.com | reddit.com | kentuckycounselingcenter.com | louisvillementalhealth.org | nortonhealthcare.com | zencare.co | louisvillehealthandhealing.com | psychhub.com"
+        },
+        {
+          "platform": "claude",
+          "prompt": "Who offers family therapy and care coordination in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 14,
+          "cost": 0.070042,
+          "cited_domains": "creativefamilycounseling.org | innovativefamilytherapy.com | brockfamilytherapycenter.com | boysandgirlshaven.org | counselingunconditionally.com"
+        },
+        {
+          "platform": "gemini",
+          "prompt": "Who offers in-home therapy or community-based mental health support in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 13,
+          "cost": 0.035873,
+          "cited_domains": "vertexaisearch.cloud.google.com"
+        },
+        {
+          "platform": "chat_gpt",
+          "prompt": "Who are the best mental health counseling providers in Louisville, KY?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 11,
+          "cost": 0.023479,
+          "cited_domains": "renewcounselingservices.org | northstarcounselingcenter.com | kilgorecounseling.org | apricuscounseling.org | havenpointcounseling.com | mindivetherapy.com | eastloupsychgroup.com | themortoncenter.org | simscounseling.org | revolutionincou"
+        },
+        {
+          "platform": "perplexity",
+          "prompt": "Who offers in-home therapy or community-based mental health support in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 9,
+          "cost": 0.006116,
+          "cited_domains": "aprilaba.com | lifestance.com | boysandgirlshaven.org | baptisthealth.com | theomnifamily.com | mandalalouisville.com | holsmanpt.com | stepstoneyouth.com | yelp.com"
+        },
+        {
+          "platform": "claude",
+          "prompt": "What is community-based mental health care, and who provides it in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 8,
+          "cost": 0.179086,
+          "cited_domains": "sciencedirect.com | who.int | julota.com | healthworkscollective.com"
+        },
+        {
+          "platform": "claude",
+          "prompt": "What are good therapy options in Louisville for anxiety and depression?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 15,
+          "cost": 0.08296,
+          "cited_domains": "kycards.com | louisvillegracepsychological.com | kentuckymentalhealth.com | louisvillehealthandhealing.com | kentuckycounselingcenter.com"
+        },
+        {
+          "platform": "perplexity",
+          "prompt": "Who are the best mental health counseling providers in Louisville, KY?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 10,
+          "cost": 0.006221,
+          "cited_domains": "louisvillegracepsychological.com | northstarcounselingcenter.com | bestlifelouisville.com | psychologytoday.com | kentuckycounselingcenter.com | bridgemindbody.com | reddit.com | louisvillebehavioral.com | nortonhealthcare.com | yelp.com"
+        },
+        {
+          "platform": "gemini",
+          "prompt": "Which Louisville providers help teens with anxiety, depression, or trauma?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 11,
+          "cost": 0.035816,
+          "cited_domains": "vertexaisearch.cloud.google.com"
+        },
+        {
+          "platform": "gemini",
+          "prompt": "Compare local outpatient mental health providers in Louisville.",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 11,
+          "cost": 0.035943,
+          "cited_domains": "vertexaisearch.cloud.google.com"
+        },
+        {
+          "platform": "chat_gpt",
+          "prompt": "Recommend non-hospital mental health counseling options in Louisville, KY.",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 8,
+          "cost": 0.013353,
+          "cited_domains": "northstarcounselingcenter.com | kilgorecounseling.org | thecouchimmediatementalhealthcare.com | solacelifechange.com | uoflhealth.org | rehabs.org | creativespiritsonline.com | namilouisville.org"
+        },
+        {
+          "platform": "gemini",
+          "prompt": "Which Louisville mental health websites have useful service and referral information?",
+          "mentions_lmhg": 1,
+          "cites_lmhg": 0,
+          "annotation_count": 11,
+          "cost": 0.035878,
+          "cited_domains": "vertexaisearch.cloud.google.com"
+        },
+        {
+          "platform": "gemini",
+          "prompt": "What should I ask before choosing a therapist in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 20,
+          "cost": 0.035837,
+          "cited_domains": "vertexaisearch.cloud.google.com"
+        },
+        {
+          "platform": "perplexity",
+          "prompt": "Compare local outpatient mental health providers in Louisville.",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 8,
+          "cost": 0.006286,
+          "cited_domains": "baptisthealth.com | lifestance.com | kentuckycounselingcenter.com | uoflhealth.org | sevencounties.org | thebrookhospitals.com | louisvillebehavioral.com | nortonhealthcare.com"
+        },
+        {
+          "platform": "chat_gpt",
+          "prompt": "What should I ask before choosing a therapist in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 0,
+          "cost": 0.002775,
+          "cited_domains": ""
+        },
+        {
+          "platform": "claude",
+          "prompt": "Who offers in-home therapy or community-based mental health support in Louisville?",
+          "mentions_lmhg": 1,
+          "cites_lmhg": 1,
+          "annotation_count": 12,
+          "cost": 0.076687,
+          "cited_domains": "louisvilleky.gov | boysandgirlshaven.org | cultivatebhe.com | louisvillementalhealth.org | kentuckycounselingcenter.com"
+        },
+        {
+          "platform": "claude",
+          "prompt": "Which Louisville providers help teens with anxiety, depression, or trauma?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 13,
+          "cost": 0.081769,
+          "cited_domains": "louisvillegracepsychological.com | counselingunconditionally.com | newhopecounselingsite.com | cultivatebhe.com | kentuckymentalhealth.com"
+        },
+        {
+          "platform": "chat_gpt",
+          "prompt": "What are good therapy options in Louisville for anxiety and depression?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "annotation_count": 8,
+          "cost": 0.023522,
+          "cited_domains": "wellspringky.org | sevencounties.org | student.louisville.edu | info.peacefulsc.com | barbaramotley.com | louisville.edu | smitherpsychiatry.com | lifesjourneyky.com"
+        }
+      ],
+      "ai_mode_audit": [
+        {
+          "prompt": "Compare local outpatient mental health providers in Louisville.",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "reference_count": 11,
+          "cited_domains": "lindnercenterofhope.org | louisvillerecoverycenter.com | oakheartcenter.com | uoflhealth.org | nortonhealthcare.com | kentuckymentalhealth.com | therapyden.com | psychologytoday.com | m.yelp.com"
+        },
+        {
+          "prompt": "Which Louisville mental health websites have useful service and referral information?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "reference_count": 13,
+          "cited_domains": "louisvilleky.gov | metrounitedway.org | sevencounties.org | mentalhealthlou.com | facebook.com | linkedin.com | psychologytoday.com | cnshealthcare.org | helplinefaqs.nami.org | resilientmindcounseling.com | adaminc.org | klinic.com"
+        },
+        {
+          "prompt": "Where can I find individual therapy in Louisville Kentucky?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "reference_count": 27,
+          "cited_domains": "kentuckycounselingcenter.com | goodtherapy.org | louisvillerecoverycenter.com | betterhelp.com | hopequre.com | google.com | evolvecounselingnoco.com | instagram.com | lctps.org | psychologytoday.com | succeedsocially.com | tivoligardenscounseling.com | everyd"
+        },
+        {
+          "prompt": "What local counseling options are available in Louisville KY?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "reference_count": 23,
+          "cited_domains": "compservhealth.com | counselingnow.com | louisvillerecoverycenter.com | psychologytoday.com | zocdoc.com | creativefamilycounseling.org | dragonflymentalwellness.com | siumed.org | streetviewpixels-pa.googleapis.com | jimwalker.fullslate.com | regain.us | high"
+        },
+        {
+          "prompt": "Recommend non-hospital mental health counseling options in Louisville, KY.",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "reference_count": 9,
+          "cited_domains": "louisvilleky.gov | pdchc.org | miresource.com | sevencounties.org | facebook.com | m.yelp.com | jimwalker.fullslate.com | compservhealth.com | mentalhealthlou.com"
+        },
+        {
+          "prompt": "Where can someone get mental health case management in Louisville, KY?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "reference_count": 11,
+          "cited_domains": "missionconnectionhealthcare.com | circlecasemanagement.com | rhscares.com | evergreentreatment.org | cpcintegratedhealth.org | bestlifelouisville.com | compservhealth.com | zocdoc.com | tebra.com | jimwalker.fullslate.com"
+        },
+        {
+          "prompt": "What is community-based mental health care, and who provides it in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "reference_count": 27,
+          "cited_domains": "who.int | publichealth.tulane.edu | findhelpnow.org | facebook.com | csgjusticecenter.org | sevencounties.org | uoflhealth.org | startyourrecovery.org | pdchc.org | louisvilleky.gov | mightycause.com | recruiting.paylocity.com | courier-journal.com | findhelp."
+        },
+        {
+          "prompt": "Which Louisville mental health providers offer case management?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "reference_count": 5,
+          "cited_domains": "bestlifelouisville.com | indeed.com | sevencounties.org | kentuckymentalhealth.com | findhelp.org"
+        },
+        {
+          "prompt": "Which Louisville providers help teens with anxiety, depression, or trauma?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "reference_count": 13,
+          "cited_domains": "recovery.com | turningwinds.com | thebrookhospitals.com | uoflhealth.org | nortonhealthcare.com | louisvillegracepsychological.com | psychologytoday.com | missionprephealthcare.com | basepointacademy.com"
+        },
+        {
+          "prompt": "Where can I get child therapy in Louisville KY?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "reference_count": 12,
+          "cited_domains": "columbusbehavioral.com | fccwellbeing.com | healthgrades.com | creativefamilycounseling.org | providers.nortonchildrens.com | wrightchildpsychology.com | innovativefamilytherapy.com | meridianbhservices.com | riversidehealthcare.org | entunebh.com | recovery.c"
+        },
+        {
+          "prompt": "Does Louisville Mental Health Group offer therapy in Louisville KY?",
+          "mentions_lmhg": 1,
+          "cites_lmhg": 0,
+          "reference_count": 7,
+          "cited_domains": "louisvilleaddictioncenter.com | psychologytoday.com | app.squareup.com | jimwalker.fullslate.com | paintedgroverecovery.com | louisvillegracepsychological.com | flourishlouisville.com"
+        },
+        {
+          "prompt": "Who offers in-home therapy or community-based mental health support in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "reference_count": 27,
+          "cited_domains": "counselingnow.com | causeiq.com | kentuckycounselingcenter.com | robertalexandercenter.com | lctps.org | google.com | wellspringky.org | wlky.com | namilouisville.org | instagram.com | compservhealth.com | louisvillemindandwellness.com | tebra.com | bridgesupp"
+        },
+        {
+          "prompt": "Who offers family therapy and care coordination in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "reference_count": 6,
+          "cited_domains": "fccwellbeing.com | boysandgirlshaven.org | creativefamilycounseling.org | lifestance.com | jimwalker.fullslate.com | whiteglovehomecare.com"
+        },
+        {
+          "prompt": "Find a Louisville therapist who accepts Medicaid.",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "reference_count": 9,
+          "cited_domains": "psychologytoday.com | zencare.co | paid.care | therapist.com | mentalhealthmatch.com | manhattanmentalhealthcounseling.com | joingroups.com"
+        },
+        {
+          "prompt": "Who offers community based mental health services in Louisville?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "reference_count": 17,
+          "cited_domains": "louisvilleky.gov | sevencounties.org | uoflhealth.org | pdchc.org | compservhealth.com | mentalhealthlou.com | namilouisville.org | 1si.org | instagram.com | 988lifeline.org | crisistextline.org | metrounitedway.org"
+        },
+        {
+          "prompt": "Best therapy providers in Louisville KY for families and children",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "reference_count": 12,
+          "cited_domains": "louisvillegracepsychological.com | pivotalcounseling.com | searhc.org | lh3.googleusercontent.com | streetviewpixels-pa.googleapis.com | creativefamilycounseling.org | lifestance.com | jimwalker.fullslate.com | therapylab.com | ourchildrenourfuturefl.org | psy"
+        },
+        {
+          "prompt": "Who provides mental health services in Louisville KY?",
+          "mentions_lmhg": 0,
+          "cites_lmhg": 0,
+          "reference_count": 11,
+          "cited_domains": "louisvilleky.gov | kentuckymentalhealth.com | louisvillegracepsychological.com | divorcerecoverylouisville.org | tebra.com | jimwalker.fullslate.com | app.squareup.com | zocdoc.com | lightheartassociates.com | kysu.edu | instagram.com"
+        }
+      ],
+      "keyword_priorities": [
+        {
+          "keyword": "therapy Louisville KY",
+          "source": "google-ads-search-volume-core-agentic",
+          "location_code": "2840",
+          "search_volume": 1600.0,
+          "ai_search_volume": 0,
+          "intent": "informational",
+          "intent_probability": 0.4013
+        },
+        {
+          "keyword": "therapist Louisville KY",
+          "source": "google-ads-search-volume-core-agentic",
+          "location_code": "2840",
+          "search_volume": 1600.0,
+          "ai_search_volume": 0,
+          "intent": "commercial",
+          "intent_probability": 0.4341
+        },
+        {
+          "keyword": "therapist louisville ky",
+          "source": "labs-keyword-overview-core-agentic",
+          "location_code": "2840",
+          "search_volume": 1600.0,
+          "ai_search_volume": 0,
+          "intent": "commercial",
+          "intent_probability": 0.4341
+        },
+        {
+          "keyword": "therapy louisville ky",
+          "source": "labs-keyword-overview-core-agentic",
+          "location_code": "2840",
+          "search_volume": 1600.0,
+          "ai_search_volume": 0,
+          "intent": "commercial",
+          "intent_probability": 0.4013
+        },
+        {
+          "keyword": "therapy Louisville KY",
+          "source": "google-ads-search-volume-louisville-dma",
+          "location_code": "200529",
+          "search_volume": 1300.0,
+          "ai_search_volume": 0,
+          "intent": "informational",
+          "intent_probability": 0.4013
+        },
+        {
+          "keyword": "therapist Louisville KY",
+          "source": "google-ads-search-volume-louisville-dma",
+          "location_code": "200529",
+          "search_volume": 1300.0,
+          "ai_search_volume": 0,
+          "intent": "commercial",
+          "intent_probability": 0.4341
+        },
+        {
+          "keyword": "therapy Louisville KY",
+          "source": "google-ads-search-volume-louisville-city",
+          "location_code": "1017825",
+          "search_volume": 880.0,
+          "ai_search_volume": 0,
+          "intent": "informational",
+          "intent_probability": 0.4013
+        },
+        {
+          "keyword": "therapist Louisville KY",
+          "source": "google-ads-search-volume-louisville-city",
+          "location_code": "1017825",
+          "search_volume": 880.0,
+          "ai_search_volume": 0,
+          "intent": "commercial",
+          "intent_probability": 0.4341
+        },
+        {
+          "keyword": "counseling Louisville KY",
+          "source": "google-ads-search-volume-core-agentic",
+          "location_code": "2840",
+          "search_volume": 720.0,
+          "ai_search_volume": 0,
+          "intent": "informational",
+          "intent_probability": 0.3694
+        },
+        {
+          "keyword": "counseling louisville ky",
+          "source": "labs-keyword-overview-core-agentic",
+          "location_code": "2840",
+          "search_volume": 720.0,
+          "ai_search_volume": 0,
+          "intent": "informational",
+          "intent_probability": 0.3694
+        },
+        {
+          "keyword": "counseling Louisville KY",
+          "source": "google-ads-search-volume-louisville-city",
+          "location_code": "1017825",
+          "search_volume": 590.0,
+          "ai_search_volume": 0,
+          "intent": "informational",
+          "intent_probability": 0.3694
+        },
+        {
+          "keyword": "counseling Louisville KY",
+          "source": "google-ads-search-volume-louisville-dma",
+          "location_code": "200529",
+          "search_volume": 590.0,
+          "ai_search_volume": 0,
+          "intent": "informational",
+          "intent_probability": 0.3694
+        },
+        {
+          "keyword": "behavioral health Louisville KY",
+          "source": "google-ads-search-volume-louisville-dma",
+          "location_code": "200529",
+          "search_volume": 140.0,
+          "ai_search_volume": 0,
+          "intent": "",
+          "intent_probability": 0
+        },
+        {
+          "keyword": "behavioral health Louisville KY",
+          "source": "google-ads-search-volume-louisville-city",
+          "location_code": "1017825",
+          "search_volume": 90.0,
+          "ai_search_volume": 0,
+          "intent": "",
+          "intent_probability": 0
+        },
+        {
+          "keyword": "depression therapy Louisville KY",
+          "source": "google-ads-search-volume-core-agentic",
+          "location_code": "2840",
+          "search_volume": 70.0,
+          "ai_search_volume": 0,
+          "intent": "commercial",
+          "intent_probability": 0.5688
+        },
+        {
+          "keyword": "depression therapy Louisville KY",
+          "source": "google-ads-search-volume-louisville-city",
+          "location_code": "1017825",
+          "search_volume": 50.0,
+          "ai_search_volume": 0,
+          "intent": "commercial",
+          "intent_probability": 0.5688
+        },
+        {
+          "keyword": "depression therapy Louisville KY",
+          "source": "google-ads-search-volume-louisville-dma",
+          "location_code": "200529",
+          "search_volume": 50.0,
+          "ai_search_volume": 0,
+          "intent": "commercial",
+          "intent_probability": 0.5688
+        },
+        {
+          "keyword": "outpatient mental health Louisville KY",
+          "source": "google-ads-search-volume-louisville-city",
+          "location_code": "1017825",
+          "search_volume": 20.0,
+          "ai_search_volume": 0,
+          "intent": "",
+          "intent_probability": 0
+        },
+        {
+          "keyword": "outpatient mental health Louisville KY",
+          "source": "google-ads-search-volume-louisville-dma",
+          "location_code": "200529",
+          "search_volume": 20.0,
+          "ai_search_volume": 0,
+          "intent": "",
+          "intent_probability": 0
+        },
+        {
+          "keyword": "therapist louisville ky",
+          "source": "ai-keyword-search-volume-core-agentic",
+          "location_code": "2840",
+          "search_volume": 0,
+          "ai_search_volume": 16.0,
+          "intent": "commercial",
+          "intent_probability": 0.4341
+        },
+        {
+          "keyword": "case management louisville ky",
+          "source": "ai-keyword-search-volume-core-agentic",
+          "location_code": "2840",
+          "search_volume": 0,
+          "ai_search_volume": 1.0,
+          "intent": "commercial",
+          "intent_probability": 0.7285
+        }
+      ],
+      "local_grid_keyword_summary": [
+        {
+          "keyword": "case management Louisville KY",
+          "found_points": 2,
+          "not_found_points": 8,
+          "best_rank": 1,
+          "avg_found_rank": 1.0
+        },
+        {
+          "keyword": "child therapy Louisville KY",
+          "found_points": 2,
+          "not_found_points": 8,
+          "best_rank": 1,
+          "avg_found_rank": 1.0
+        },
+        {
+          "keyword": "community based mental health services Louisville KY",
+          "found_points": 2,
+          "not_found_points": 8,
+          "best_rank": 1,
+          "avg_found_rank": 1.5
+        },
+        {
+          "keyword": "counseling Louisville KY",
+          "found_points": 2,
+          "not_found_points": 8,
+          "best_rank": 1,
+          "avg_found_rank": 1.5
+        },
+        {
+          "keyword": "family therapy Louisville KY",
+          "found_points": 2,
+          "not_found_points": 8,
+          "best_rank": 2,
+          "avg_found_rank": 2.0
+        },
+        {
+          "keyword": "group therapy Louisville KY",
+          "found_points": 2,
+          "not_found_points": 8,
+          "best_rank": 1,
+          "avg_found_rank": 1.0
+        },
+        {
+          "keyword": "in home therapy Louisville KY",
+          "found_points": 2,
+          "not_found_points": 8,
+          "best_rank": 1,
+          "avg_found_rank": 1.0
+        },
+        {
+          "keyword": "mental health services Louisville KY",
+          "found_points": 2,
+          "not_found_points": 8,
+          "best_rank": 1,
+          "avg_found_rank": 1.0
+        },
+        {
+          "keyword": "therapist Louisville KY",
+          "found_points": 2,
+          "not_found_points": 8,
+          "best_rank": 2,
+          "avg_found_rank": 2.0
+        },
+        {
+          "keyword": "therapy Louisville KY",
+          "found_points": 2,
+          "not_found_points": 8,
+          "best_rank": 2,
+          "avg_found_rank": 2.0
+        }
+      ],
+      "organic_depth100_summary": [
+        {
+          "keyword": "anxiety therapy Louisville KY",
+          "surface": "desktop_depth100",
+          "best_lmhg_rank": 101,
+          "lmhg_result_count": 0,
+          "url": ""
+        },
+        {
+          "keyword": "anxiety therapy Louisville KY",
+          "surface": "mobile_depth100",
+          "best_lmhg_rank": 101,
+          "lmhg_result_count": 0,
+          "url": ""
+        },
+        {
+          "keyword": "case management Louisville KY",
+          "surface": "desktop_depth100",
+          "best_lmhg_rank": 4,
+          "lmhg_result_count": 1,
+          "url": "https://louisvillementalhealth.org/case-management/"
+        },
+        {
+          "keyword": "case management Louisville KY",
+          "surface": "mobile_depth100",
+          "best_lmhg_rank": 5,
+          "lmhg_result_count": 1,
+          "url": "https://louisvillementalhealth.org/case-management/"
+        },
+        {
+          "keyword": "child therapy Louisville KY",
+          "surface": "desktop_depth100",
+          "best_lmhg_rank": 39,
+          "lmhg_result_count": 1,
+          "url": "https://louisvillementalhealth.org/child-therapy/"
+        },
+        {
+          "keyword": "child therapy Louisville KY",
+          "surface": "mobile_depth100",
+          "best_lmhg_rank": 38,
+          "lmhg_result_count": 1,
+          "url": "https://louisvillementalhealth.org/child-therapy/"
+        },
+        {
+          "keyword": "community based mental health services Louisville KY",
+          "surface": "desktop_depth100",
+          "best_lmhg_rank": 6,
+          "lmhg_result_count": 2,
+          "url": "https://louisvillementalhealth.org/ | https://louisvillementalhealth.org/prospect-ky/"
+        },
+        {
+          "keyword": "community based mental health services Louisville KY",
+          "surface": "mobile_depth100",
+          "best_lmhg_rank": 4,
+          "lmhg_result_count": 4,
+          "url": "https://louisvillementalhealth.org/ | https://louisvillementalhealth.org/jeffersontown-ky/ | https://louisvillementalhealth.org/prospect-ky/ | https://louisvillementalhealth.org/gr"
+        },
+        {
+          "keyword": "counseling Louisville KY",
+          "surface": "desktop_depth100",
+          "best_lmhg_rank": 56,
+          "lmhg_result_count": 1,
+          "url": "https://louisvillementalhealth.org/"
+        },
+        {
+          "keyword": "counseling Louisville KY",
+          "surface": "mobile_depth100",
+          "best_lmhg_rank": 58,
+          "lmhg_result_count": 1,
+          "url": "https://louisvillementalhealth.org/"
+        },
+        {
+          "keyword": "depression therapy Louisville KY",
+          "surface": "desktop_depth100",
+          "best_lmhg_rank": 23,
+          "lmhg_result_count": 1,
+          "url": "https://louisvillementalhealth.org/"
+        },
+        {
+          "keyword": "depression therapy Louisville KY",
+          "surface": "mobile_depth100",
+          "best_lmhg_rank": 101,
+          "lmhg_result_count": 0,
+          "url": ""
+        },
+        {
+          "keyword": "family therapy Louisville KY",
+          "surface": "desktop_depth100",
+          "best_lmhg_rank": 40,
+          "lmhg_result_count": 2,
+          "url": "https://louisvillementalhealth.org/family-court/ | https://louisvillementalhealth.org/family-therapy/"
+        },
+        {
+          "keyword": "family therapy Louisville KY",
+          "surface": "mobile_depth100",
+          "best_lmhg_rank": 38,
+          "lmhg_result_count": 3,
+          "url": "https://louisvillementalhealth.org/family-court/ | https://louisvillementalhealth.org/family-therapy/"
+        },
+        {
+          "keyword": "group therapy Louisville KY",
+          "surface": "desktop_depth100",
+          "best_lmhg_rank": 3,
+          "lmhg_result_count": 6,
+          "url": "https://louisvillementalhealth.org/ | https://louisvillementalhealth.org/group-therapy/ | https://louisvillementalhealth.org/blogs/ | https://louisvillementalhealth.org/our-service"
+        },
+        {
+          "keyword": "group therapy Louisville KY",
+          "surface": "mobile_depth100",
+          "best_lmhg_rank": 3,
+          "lmhg_result_count": 5,
+          "url": "https://louisvillementalhealth.org/ | https://louisvillementalhealth.org/group-therapy/ | https://louisvillementalhealth.org/blogs/ | https://louisvillementalhealth.org/our-service"
+        },
+        {
+          "keyword": "in home therapy Louisville KY",
+          "surface": "desktop_depth100",
+          "best_lmhg_rank": 25,
+          "lmhg_result_count": 2,
+          "url": "https://louisvillementalhealth.org/ | https://louisvillementalhealth.org/louisville-ky/"
+        },
+        {
+          "keyword": "in home therapy Louisville KY",
+          "surface": "mobile_depth100",
+          "best_lmhg_rank": 83,
+          "lmhg_result_count": 1,
+          "url": "https://louisvillementalhealth.org/louisville-ky/"
+        },
+        {
+          "keyword": "individual therapy Louisville KY",
+          "surface": "desktop_depth100",
+          "best_lmhg_rank": 21,
+          "lmhg_result_count": 1,
+          "url": "https://louisvillementalhealth.org/individual-therapy/"
+        },
+        {
+          "keyword": "individual therapy Louisville KY",
+          "surface": "mobile_depth100",
+          "best_lmhg_rank": 20,
+          "lmhg_result_count": 1,
+          "url": "https://louisvillementalhealth.org/individual-therapy/"
+        },
+        {
+          "keyword": "mental health case management Louisville KY",
+          "surface": "desktop_depth100",
+          "best_lmhg_rank": 1,
+          "lmhg_result_count": 1,
+          "url": "https://louisvillementalhealth.org/case-management/"
+        },
+        {
+          "keyword": "mental health case management Louisville KY",
+          "surface": "mobile_depth100",
+          "best_lmhg_rank": 4,
+          "lmhg_result_count": 3,
+          "url": "https://louisvillementalhealth.org/case-management/ | https://louisvillementalhealth.org/ | https://louisvillementalhealth.org/our-services/"
+        },
+        {
+          "keyword": "mental health services Louisville KY",
+          "surface": "desktop_depth100",
+          "best_lmhg_rank": 17,
+          "lmhg_result_count": 4,
+          "url": "https://louisvillementalhealth.org/ | https://louisvillementalhealth.org/louisville-ky/ | https://louisvillementalhealth.org/group-therapy/"
+        },
+        {
+          "keyword": "mental health services Louisville KY",
+          "surface": "mobile_depth100",
+          "best_lmhg_rank": 17,
+          "lmhg_result_count": 3,
+          "url": "https://louisvillementalhealth.org/ | https://louisvillementalhealth.org/louisville-ky/ | https://louisvillementalhealth.org/group-therapy/"
+        },
+        {
+          "keyword": "play therapy Louisville KY",
+          "surface": "desktop_depth100",
+          "best_lmhg_rank": 101,
+          "lmhg_result_count": 0,
+          "url": ""
+        },
+        {
+          "keyword": "play therapy Louisville KY",
+          "surface": "mobile_depth100",
+          "best_lmhg_rank": 101,
+          "lmhg_result_count": 0,
+          "url": ""
+        },
+        {
+          "keyword": "therapist Louisville KY",
+          "surface": "desktop_depth100",
+          "best_lmhg_rank": 21,
+          "lmhg_result_count": 1,
+          "url": "https://louisvillementalhealth.org/"
+        },
+        {
+          "keyword": "therapist Louisville KY",
+          "surface": "mobile_depth100",
+          "best_lmhg_rank": 26,
+          "lmhg_result_count": 1,
+          "url": "https://louisvillementalhealth.org/"
+        },
+        {
+          "keyword": "therapy Louisville KY",
+          "surface": "desktop_depth100",
+          "best_lmhg_rank": 20,
+          "lmhg_result_count": 1,
+          "url": "https://louisvillementalhealth.org/"
+        },
+        {
+          "keyword": "therapy Louisville KY",
+          "surface": "mobile_depth100",
+          "best_lmhg_rank": 101,
+          "lmhg_result_count": 0,
+          "url": ""
+        },
+        {
+          "keyword": "trauma therapy Louisville KY",
+          "surface": "desktop_depth100",
+          "best_lmhg_rank": 101,
+          "lmhg_result_count": 0,
+          "url": ""
+        },
+        {
+          "keyword": "trauma therapy Louisville KY",
+          "surface": "mobile_depth100",
+          "best_lmhg_rank": 101,
+          "lmhg_result_count": 0,
+          "url": ""
+        }
+      ],
+      "competitor_summary": [
+        {
+          "competitor": "psychologytoday.com",
+          "classification": "directory",
+          "serp_mentions": 479,
+          "local_mentions": 17,
+          "example_title": "Find Therapists and Psychologists in Louisville, KY",
+          "example_url": "https://www.psychologytoday.com/us/therapists/ky/louisville"
+        },
+        {
+          "competitor": "people also search for",
+          "classification": "provider_or_system",
+          "serp_mentions": 268,
+          "local_mentions": 0,
+          "example_title": "People also search for",
+          "example_url": ""
+        },
+        {
+          "competitor": "uoflhealth.org",
+          "classification": "health_system_or_cmha",
+          "serp_mentions": 104,
+          "local_mentions": 67,
+          "example_title": "Anam Mukhtar, OTD, OTR/L",
+          "example_url": "https://uoflhealth.org/provider/anam-mukhtar-occupational-therapy/?utm_source=GMBSocialClimb&utm_medium=AnamMukhtar%2COTD%2COTR%2FL"
+        },
+        {
+          "competitor": "kentuckycounselingcenter.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 94,
+          "local_mentions": 18,
+          "example_title": "Kentucky Counseling Center",
+          "example_url": "http://kentuckycounselingcenter.com/"
+        },
+        {
+          "competitor": "lifestance.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 82,
+          "local_mentions": 11,
+          "example_title": "Find Therapists & Therapy Clinicians in Louisville, Kentucky",
+          "example_url": "https://lifestance.com/provider/therapist/ky/louisville/"
+        },
+        {
+          "competitor": "youtube.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 77,
+          "local_mentions": 0,
+          "example_title": "Child psychologist explains how kids' therapy works - and if ...",
+          "example_url": "https://www.youtube.com/watch?v=Mkx_hRxWRzE"
+        },
+        {
+          "competitor": "thriveworks.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 76,
+          "local_mentions": 18,
+          "example_title": "Louisville, KY Therapy & Counseling: Find a Therapist",
+          "example_url": "https://thriveworks.com/louisville-counseling/"
+        },
+        {
+          "competitor": "facebook.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 69,
+          "local_mentions": 0,
+          "example_title": "Kids Center for Pediatric Therapies | Louisville KY",
+          "example_url": "https://www.facebook.com/KidsCenterKY/"
+        },
+        {
+          "competitor": "creativefamilycounseling.org",
+          "classification": "provider_or_system",
+          "serp_mentions": 68,
+          "local_mentions": 5,
+          "example_title": "Creative Family Counseling | Child, Teen & Family Therapists ...",
+          "example_url": "https://creativefamilycounseling.org/"
+        },
+        {
+          "competitor": "louisvillegracepsychological.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 64,
+          "local_mentions": 5,
+          "example_title": "Grace Psychological Services: Best Therapists in Louisville",
+          "example_url": "https://louisvillegracepsychological.com/"
+        },
+        {
+          "competitor": "sevencounties.org",
+          "classification": "health_system_or_cmha",
+          "serp_mentions": 62,
+          "local_mentions": 27,
+          "example_title": "Seven Counties Services - Child & Family Downtown",
+          "example_url": "https://sevencounties.org/?utm_source=Google_Business&utm_medium=Organic_Search&utm_campaign=914_East_Broadway"
+        },
+        {
+          "competitor": "bestlifelouisville.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 60,
+          "local_mentions": 15,
+          "example_title": "Best Life Mental Health Services, LLC | Therapy in Louisville, KY",
+          "example_url": "https://www.bestlifelouisville.com/"
+        },
+        {
+          "competitor": "bridgemindbody.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 57,
+          "local_mentions": 23,
+          "example_title": "Bridge Counseling & Wellness | Counseling & Therapy Services",
+          "example_url": "https://www.bridgemindbody.com/"
+        },
+        {
+          "competitor": "baptisthealth.com",
+          "classification": "health_system_or_cmha",
+          "serp_mentions": 56,
+          "local_mentions": 6,
+          "example_title": "In-Home Physical Therapy - Baptist Health",
+          "example_url": "https://www.baptisthealth.com/care-services/services/home-care/services/therapy-and-rehabilitation/inhome-physical-therapy"
+        },
+        {
+          "competitor": "renewcounselingservices.org",
+          "classification": "provider_or_system",
+          "serp_mentions": 55,
+          "local_mentions": 21,
+          "example_title": "Renew Counseling Services | Online Therapy | Louisville, KY",
+          "example_url": "https://www.renewcounselingservices.org/"
+        },
+        {
+          "competitor": "innovativefamilytherapy.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 51,
+          "local_mentions": 2,
+          "example_title": "Licensed Therapists Louisville, KY | Mental Health Counseling",
+          "example_url": "https://innovativefamilytherapy.com/"
+        },
+        {
+          "competitor": "nortonhealthcare.com",
+          "classification": "health_system_or_cmha",
+          "serp_mentions": 51,
+          "local_mentions": 6,
+          "example_title": "Norton Genetic Counseling Services",
+          "example_url": "https://nortonhealthcare.com/services-and-conditions/cancer-care/patient-resources/genetic-counseling-and-testing/"
+        },
+        {
+          "competitor": "newhopecounselingsite.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 42,
+          "local_mentions": 0,
+          "example_title": "New Hope Counseling, Licensed Therapists Louisville Kentucky",
+          "example_url": "https://newhopecounselingsite.com/"
+        },
+        {
+          "competitor": "louisvillehealthandhealing.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 42,
+          "local_mentions": 6,
+          "example_title": "Louisville Health & Healing: Private Therapy Louisville KY",
+          "example_url": "https://www.louisvillehealthandhealing.com/"
+        },
+        {
+          "competitor": "namilouisville.org",
+          "classification": "provider_or_system",
+          "serp_mentions": 42,
+          "local_mentions": 6,
+          "example_title": "NAMI Louisville",
+          "example_url": "http://www.namilouisville.org/"
+        },
+        {
+          "competitor": "mindivetherapy.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 39,
+          "local_mentions": 25,
+          "example_title": "Therapist for Children Louisville KY",
+          "example_url": "http://mindivetherapy.com/therapist-for-children-louisville-ky/"
+        },
+        {
+          "competitor": "northstarcounselingcenter.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 38,
+          "local_mentions": 12,
+          "example_title": "Northstar Counseling Center",
+          "example_url": "https://northstarcounselingcenter.com/"
+        },
+        {
+          "competitor": "groupworksky.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 38,
+          "local_mentions": 2,
+          "example_title": "Family Counseling | Groupworks | Louisville, KY",
+          "example_url": "https://groupworksky.com/family-counseling"
+        },
+        {
+          "competitor": "evolvedcounselingcenter.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 37,
+          "local_mentions": 16,
+          "example_title": "Evolved Counseling",
+          "example_url": "https://evolvedcounselingcenter.com/"
+        },
+        {
+          "competitor": "meridianbhservices.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 37,
+          "local_mentions": 3,
+          "example_title": "Louisville – Online & In-Person Therapy for Couples, ...",
+          "example_url": "https://meridianbhservices.com/locations/kentucky/louisville/"
+        },
+        {
+          "competitor": "lctps.org",
+          "classification": "provider_or_system",
+          "serp_mentions": 37,
+          "local_mentions": 16,
+          "example_title": "Louisville Center for Therapy and Personal Sustainability",
+          "example_url": "http://www.lctps.org/"
+        },
+        {
+          "competitor": "brockfamilytherapycenter.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 36,
+          "local_mentions": 3,
+          "example_title": "Brock Family Therapy Center | Louisville Family Therapy and ...",
+          "example_url": "https://www.brockfamilytherapycenter.com/"
+        },
+        {
+          "competitor": "louisvilleky.gov",
+          "classification": "provider_or_system",
+          "serp_mentions": 35,
+          "local_mentions": 5,
+          "example_title": "Community Mental Health Services",
+          "example_url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services"
+        },
+        {
+          "competitor": "m.yelp.com",
+          "classification": "directory",
+          "serp_mentions": 33,
+          "local_mentions": 0,
+          "example_title": "TOP 10 BEST Child Therapist in Louisville, KY - Updated 2026",
+          "example_url": "https://m.yelp.com/search?find_desc=Child+Therapist&find_loc=Louisville%2C+KY"
+        },
+        {
+          "competitor": "havenpointcounseling.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 31,
+          "local_mentions": 9,
+          "example_title": "Havenpoint Counseling: Expert Mental Health Therapists in ...",
+          "example_url": "https://www.havenpointcounseling.com/"
+        },
+        {
+          "competitor": "thecorecounseling.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 30,
+          "local_mentions": 12,
+          "example_title": "Core Counseling - Mental Health Professionals - Louisville, KY",
+          "example_url": "https://thecorecounseling.com/"
+        },
+        {
+          "competitor": "derbycitycounseling.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 30,
+          "local_mentions": 30,
+          "example_title": "Derby City Counseling",
+          "example_url": "http://derbycitycounseling.com/"
+        },
+        {
+          "competitor": "yelp.com",
+          "classification": "directory",
+          "serp_mentions": 29,
+          "local_mentions": 0,
+          "example_title": "TOP 10 BEST Therapist in Louisville, KY - Updated 2026",
+          "example_url": "https://www.yelp.com/search?find_desc=Therapist&find_loc=Louisville%2C+KY"
+        },
+        {
+          "competitor": "findatherapist.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 29,
+          "local_mentions": 0,
+          "example_title": "Louisville, KY Therapists & Counselors",
+          "example_url": "https://www.findatherapist.com/local/kentucky/louisville/"
+        },
+        {
+          "competitor": "counselingunconditionally.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 28,
+          "local_mentions": 8,
+          "example_title": "Counseling Unconditionally",
+          "example_url": "https://counselingunconditionally.com/?utm_source=GMB&utm_medium=GMB&utm_campaign=GMB"
+        },
+        {
+          "competitor": "kentuckymentalhealth.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 28,
+          "local_mentions": 6,
+          "example_title": "Kentucky Mental Health Care",
+          "example_url": "http://kentuckymentalhealth.com/"
+        },
+        {
+          "competitor": "findhelp.org",
+          "classification": "provider_or_system",
+          "serp_mentions": 28,
+          "local_mentions": 0,
+          "example_title": "support groups programs in Louisville, ky",
+          "example_url": "https://www.findhelp.org/care/support-groups--louisville-ky"
+        },
+        {
+          "competitor": "therapyden.com",
+          "classification": "directory",
+          "serp_mentions": 27,
+          "local_mentions": 7,
+          "example_title": "The 10 BEST Therapists in Louisville, KY (for 2026)",
+          "example_url": "https://www.therapyden.com/therapists/us/ky/louisville-1"
+        },
+        {
+          "competitor": "louisvillefamilytherapy.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 27,
+          "local_mentions": 6,
+          "example_title": "Steere Family Therapy",
+          "example_url": "http://louisvillefamilytherapy.com/"
+        },
+        {
+          "competitor": "michaelarobards.com",
+          "classification": "provider_or_system",
+          "serp_mentions": 26,
+          "local_mentions": 11,
+          "example_title": "Therapist in Louisville, KY | Michael A. RoBards, LCSW",
+          "example_url": "https://www.michaelarobards.com/"
+        }
+      ],
+      "labs_serp_competitors": [
+        {
+          "domain": "kentuckycounselingcenter.com",
+          "avg_position": 3.0,
+          "median_position": 1.0,
+          "etv": 1013.76,
+          "keywords_count": 2,
+          "visibility": 2.4
+        },
+        {
+          "domain": "louisvillegracepsychological.com",
+          "avg_position": 10.333333333333334,
+          "median_position": 10.0,
+          "etv": 281.59999999999997,
+          "keywords_count": 2,
+          "visibility": 1.05
+        },
+        {
+          "domain": "www.psychologytoday.com",
+          "avg_position": 1.0,
+          "median_position": 1.0,
+          "etv": 972.8,
+          "keywords_count": 2,
+          "visibility": 2.0
+        },
+        {
+          "domain": "lifestance.com",
+          "avg_position": 2.0,
+          "median_position": 2.0,
+          "etv": 518.4,
+          "keywords_count": 2,
+          "visibility": 1.8
+        },
+        {
+          "domain": "www.thecorecounseling.com",
+          "avg_position": 3.0,
+          "median_position": 3.0,
+          "etv": 311.36,
+          "keywords_count": 2,
+          "visibility": 1.6
+        },
+        {
+          "domain": "newhopecounselingsite.com",
+          "avg_position": 3.5,
+          "median_position": 3.0,
+          "etv": 261.12,
+          "keywords_count": 2,
+          "visibility": 1.5
+        },
+        {
+          "domain": "www.bridgemindbody.com",
+          "avg_position": 4.0,
+          "median_position": 3.0,
+          "etv": 230.72,
+          "keywords_count": 2,
+          "visibility": 1.4
+        },
+        {
+          "domain": "www.renewcounselingservices.org",
+          "avg_position": 5.5,
+          "median_position": 5.0,
+          "etv": 129.12,
+          "keywords_count": 2,
+          "visibility": 1.1
+        },
+        {
+          "domain": "northstarcounselingcenter.com",
+          "avg_position": 7.0,
+          "median_position": 6.0,
+          "etv": 85.6,
+          "keywords_count": 2,
+          "visibility": 0.8
+        },
+        {
+          "domain": "www.therapyden.com",
+          "avg_position": 9.0,
+          "median_position": 8.0,
+          "etv": 49.599999999999994,
+          "keywords_count": 2,
+          "visibility": 0.4
+        },
+        {
+          "domain": "www.louisvillehealthandhealing.com",
+          "avg_position": 9.5,
+          "median_position": 7.0,
+          "etv": 52.96,
+          "keywords_count": 2,
+          "visibility": 0.45
+        },
+        {
+          "domain": "www.yelp.com",
+          "avg_position": 14.5,
+          "median_position": 11.0,
+          "etv": 19.84,
+          "keywords_count": 2,
+          "visibility": 0.1
+        },
+        {
+          "domain": "lecorgancounseling.com",
+          "avg_position": 16.5,
+          "median_position": 13.0,
+          "etv": 13.28,
+          "keywords_count": 2,
+          "visibility": 0.1
+        },
+        {
+          "domain": "thriveworks.com",
+          "avg_position": 18.5,
+          "median_position": 12.0,
+          "etv": 15.36,
+          "keywords_count": 2,
+          "visibility": 0.05
+        },
+        {
+          "domain": "meridianbhservices.com",
+          "avg_position": 20.5,
+          "median_position": 9.0,
+          "etv": 27.36,
+          "keywords_count": 2,
+          "visibility": 0.2
+        },
+        {
+          "domain": "zencare.co",
+          "avg_position": 25.5,
+          "median_position": 14.0,
+          "etv": 12.319999999999999,
+          "keywords_count": 2,
+          "visibility": 0.05
+        },
+        {
+          "domain": "thecorecounseling.com",
+          "avg_position": 25.5,
+          "median_position": 16.0,
+          "etv": 10.24,
+          "keywords_count": 2,
+          "visibility": 0.05
+        },
+        {
+          "domain": "www.mentalhealthlou.com",
+          "avg_position": 26.5,
+          "median_position": 15.0,
+          "etv": 11.52,
+          "keywords_count": 2,
+          "visibility": 0.05
+        },
+        {
+          "domain": "therapist.com",
+          "avg_position": 30.0,
+          "median_position": 20.0,
+          "etv": 7.199999999999999,
+          "keywords_count": 2,
+          "visibility": 0.05
+        },
+        {
+          "domain": "www.goodtherapy.org",
+          "avg_position": 30.5,
+          "median_position": 18.0,
+          "etv": 8.64,
+          "keywords_count": 2,
+          "visibility": 0.05
+        },
+        {
+          "domain": "www.betterhelp.com",
+          "avg_position": 32.5,
+          "median_position": 21.0,
+          "etv": 7.039999999999999,
+          "keywords_count": 2,
+          "visibility": 0
+        },
+        {
+          "domain": "www.findatherapist.com",
+          "avg_position": 36.0,
+          "median_position": 22.0,
+          "etv": 6.88,
+          "keywords_count": 2,
+          "visibility": 0
+        },
+        {
+          "domain": "thervo.com",
+          "avg_position": 36.5,
+          "median_position": 24.0,
+          "etv": 6.72,
+          "keywords_count": 2,
+          "visibility": 0
+        },
+        {
+          "domain": "www.theravive.com",
+          "avg_position": 37.0,
+          "median_position": 23.0,
+          "etv": 6.72,
+          "keywords_count": 2,
+          "visibility": 0
+        },
+        {
+          "domain": "www.healthgrades.com",
+          "avg_position": 40.5,
+          "median_position": 25.0,
+          "etv": 6.72,
+          "keywords_count": 2,
+          "visibility": 0
+        },
+        {
+          "domain": "www.youtube.com",
+          "avg_position": 44.5,
+          "median_position": 27.0,
+          "etv": 6.72,
+          "keywords_count": 2,
+          "visibility": 0
+        },
+        {
+          "domain": "www.lctps.org",
+          "avg_position": 2.0,
+          "median_position": 2.0,
+          "etv": 259.2,
+          "keywords_count": 1,
+          "visibility": 0.9
+        },
+        {
+          "domain": "creativefamilycounseling.org",
+          "avg_position": 4.0,
+          "median_position": 4.0,
+          "etv": 105.44,
+          "keywords_count": 1,
+          "visibility": 0.7
+        },
+        {
+          "domain": "www.reddit.com",
+          "avg_position": 9.0,
+          "median_position": 9.0,
+          "etv": 24.0,
+          "keywords_count": 1,
+          "visibility": 0.2
+        },
+        {
+          "domain": "www.findapsychologist.org",
+          "avg_position": 13.0,
+          "median_position": 13.0,
+          "etv": 9.44,
+          "keywords_count": 1,
+          "visibility": 0.05
+        }
+      ],
+      "competitor_labs_ranked": [
+        {
+          "domain": "lifestance.com",
+          "total_count": 71273,
+          "etv": 1352390.037915986,
+          "pos_1": 2739,
+          "pos_2_3": 2954,
+          "pos_4_10": 11718,
+          "pos_11_20": 13387
+        },
+        {
+          "domain": "bridgehaven.org",
+          "total_count": 108,
+          "etv": 765.5971245393157,
+          "pos_1": 3,
+          "pos_2_3": 2,
+          "pos_4_10": 2,
+          "pos_11_20": 15
+        },
+        {
+          "domain": "wellspringky.org",
+          "total_count": 278,
+          "etv": 2070.015933902934,
+          "pos_1": 8,
+          "pos_2_3": 5,
+          "pos_4_10": 12,
+          "pos_11_20": 25
+        },
+        {
+          "domain": "kentuckycounselingcenter.com",
+          "total_count": 9034,
+          "etv": 30278.91835208796,
+          "pos_1": 39,
+          "pos_2_3": 65,
+          "pos_4_10": 497,
+          "pos_11_20": 1061
+        },
+        {
+          "domain": "lctps.org",
+          "total_count": 13,
+          "etv": 1.4304799810051918,
+          "pos_1": 0,
+          "pos_2_3": 0,
+          "pos_4_10": 0,
+          "pos_11_20": 0
+        },
+        {
+          "domain": "creativefamilycounseling.org",
+          "total_count": 312,
+          "etv": 4470.296786174178,
+          "pos_1": 10,
+          "pos_2_3": 13,
+          "pos_4_10": 32,
+          "pos_11_20": 44
+        },
+        {
+          "domain": "bridgemindbody.com",
+          "total_count": 205,
+          "etv": 1258.6622540988028,
+          "pos_1": 4,
+          "pos_2_3": 10,
+          "pos_4_10": 25,
+          "pos_11_20": 32
+        },
+        {
+          "domain": "bestlifelouisville.com",
+          "total_count": 189,
+          "etv": 663.5055819451809,
+          "pos_1": 0,
+          "pos_2_3": 0,
+          "pos_4_10": 15,
+          "pos_11_20": 27
+        },
+        {
+          "domain": "brockfamilytherapycenter.com",
+          "total_count": 52,
+          "etv": 65.09767952933908,
+          "pos_1": 0,
+          "pos_2_3": 1,
+          "pos_4_10": 4,
+          "pos_11_20": 15
+        },
+        {
+          "domain": "sevencounties.org",
+          "total_count": 2089,
+          "etv": 11729.744424320757,
+          "pos_1": 51,
+          "pos_2_3": 32,
+          "pos_4_10": 184,
+          "pos_11_20": 240
+        }
+      ],
+      "backlink_issues": [
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.bunity.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "Louisville Mental Health Group  Counseling & Mental Health",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "buzzakoo.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "Louisville Mental Health Group",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "buzzakoo.com",
+          "url_to": "https://louisvillementalhealth.org/jeffersonville-ky/",
+          "anchor": "Mental Health Services in Jeffersonville, KY",
+          "spam_score": 0,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.therapysolutionsforkids.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "Visit website",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "plumeriamarketing.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "High Quality Dofollow Backlinks DA 50 PA 40 Premium PBN Network Service louisvillementalhealth.org Rank First Page Google Fast SEO Link Building Buy Backlinks Online Cheap",
+          "spam_score": 70,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.bizhwy.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "screenshots.wiki",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.read.org.in",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "urls-shortener.eu",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "sites.jake.eu",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "sites.jake.eu",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "way2check.cv",
+          "url_to": "https://ns1.louisvillementalhealth.org/",
+          "anchor": "",
+          "spam_score": 0,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "way2check.cv",
+          "url_to": "https://ns6.louisvillementalhealth.org/",
+          "anchor": "",
+          "spam_score": 0,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "way2check.cv",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "indeedforyou.eu",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "JOIN OUR TELEGRAM https://t.me/s/darksidelinks",
+          "spam_score": 15,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "sergechel.info",
+          "url_to": "https://ns6.louisvillementalhealth.org/",
+          "anchor": "ns6.louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "sergechel.info",
+          "url_to": "https://ns1.louisvillementalhealth.org/",
+          "anchor": "ns1.louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "bcrelx.com",
+          "url_to": "https://louisvillementalhealth.org/la-grange-ky/",
+          "anchor": "Mental health services in La Grange, KY",
+          "spam_score": 15,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "bcrelx.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "Louisville Mental Health Group",
+          "spam_score": 15,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.way2check.cv",
+          "url_to": "https://ns1.louisvillementalhealth.org/",
+          "anchor": "ns1.louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.way2check.cv",
+          "url_to": "https://ns6.louisvillementalhealth.org/",
+          "anchor": "ns6.louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "ycm.info",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "ycm.info",
+          "url_to": "https://ns1.louisvillementalhealth.org/",
+          "anchor": "ns1.louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "ycm.info",
+          "url_to": "https://ns6.louisvillementalhealth.org/",
+          "anchor": "ns6.louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "shortenurls.eu",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "drjack.world",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "greattraveladvisor.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "JOIN OUR TELEGRAM https://t.me/s/darksidelinks",
+          "spam_score": 20,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "greattraveladvisor.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "JOIN OUR TELEGRAM https://t.me/s/darksidelinks",
+          "spam_score": 10,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "bye.fyi",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "quero.party",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "al-jawharaa.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "JOIN OUR TELEGRAM https://t.me/s/darksidelinks",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "ready.pro",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "ready.pro",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "global-website.pages.dev",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 35,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.websiterace.com",
+          "url_to": "https://ns1.louisvillementalhealth.org/",
+          "anchor": "",
+          "spam_score": 0,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "buzzshrink.website",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "wonvision.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.tellows.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "Website",
+          "spam_score": 25,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "pagesearch.net",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "read.org.in",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "read.org.in",
+          "url_to": "https://ns1.louisvillementalhealth.org/",
+          "anchor": "ns1.louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "read.org.in",
+          "url_to": "https://ns6.louisvillementalhealth.org/",
+          "anchor": "ns6.louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "radiofreehubcity.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "Louisville Mental Health Group",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.tunca.org",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.wallpapers.pro",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.wallpapers.pro",
+          "url_to": "https://ns6.louisvillementalhealth.org/",
+          "anchor": "ns6.louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.wallpapers.pro",
+          "url_to": "https://ns1.louisvillementalhealth.org/",
+          "anchor": "",
+          "spam_score": 0,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "kentuckylantern.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "Louisville Mental Health Group",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "globalecommerce.org",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "globalecommerce.org",
+          "url_to": "https://ns6.louisvillementalhealth.org/",
+          "anchor": "ns6.louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "globalecommerce.org",
+          "url_to": "https://ns1.louisvillementalhealth.org/",
+          "anchor": "ns1.louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "revan-me.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "JOIN OUR TELEGRAM https://t.me/s/darksidelinks",
+          "spam_score": 50,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "mail.getwebsiteworth.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "mail.getwebsiteworth.com",
+          "url_to": "https://ns6.louisvillementalhealth.org/",
+          "anchor": "ns6.louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "mail.getwebsiteworth.com",
+          "url_to": "https://ns1.louisvillementalhealth.org/",
+          "anchor": "ns1.louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.websiterace.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "sergechel.info",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "bluecantera.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "JOIN OUR TELEGRAM https://t.me/s/darksidelinks",
+          "spam_score": 55,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "alljobs.info",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "kelas.seomuda.id",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "OUR TELEGRAM CHANEL https://t.me/s/quarterlinks25",
+          "spam_score": 30,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "quero.party",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.torun-stolarz.pl",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "JOIN OUR TELEGRAM https://t.me/s/darksidelinks",
+          "spam_score": 65,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "shoplogist.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "JOIN OUR TELEGRAM https://t.me/s/darksidelinks",
+          "spam_score": 15,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "getwebsiteworth.com",
+          "url_to": "https://ns6.louisvillementalhealth.org/",
+          "anchor": "ns6.louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "anchorurl.cloud",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.ateliereleaurorei.ro",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "JOIN OUR TELEGRAM https://t.me/s/darksidelinks",
+          "spam_score": 15,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "crisunzueta.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "JOIN OUR TELEGRAM https://t.me/s/darksidelinks",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "backlinksolutions.info",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "arteza.fr",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "JOIN OUR TELEGRAM https://t.me/s/darksidelinks",
+          "spam_score": 50,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.walisha.org",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "JOIN OUR TELEGRAM https://t.me/s/darksidelinks",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "australianwebdirectory.shop",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 70,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "up.net.tr",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "JOIN OUR TELEGRAM https://t.me/s/darksidelinks",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "australianwebdirectory.shop",
+          "url_to": "https://ns6.louisvillementalhealth.org/",
+          "anchor": "ns6.louisvillementalhealth.org",
+          "spam_score": 70,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "australianwebdirectory.shop",
+          "url_to": "https://ns1.louisvillementalhealth.org/",
+          "anchor": "ns1.louisvillementalhealth.org",
+          "spam_score": 70,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.getwebsiteworth.com",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "louisvillementalhealth.org",
+          "spam_score": 60,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.tunca.org",
+          "url_to": "https://ns1.louisvillementalhealth.org/",
+          "anchor": "ns1.louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "www.tunca.org",
+          "url_to": "https://ns6.louisvillementalhealth.org/",
+          "anchor": "ns6.louisvillementalhealth.org",
+          "spam_score": 50,
+          "is_broken": "False",
+          "url_to_status_code": null,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "urls-shortener.eu",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "shortenurls.eu",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "",
+          "spam_score": 0,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        },
+        {
+          "source": "backlinks-live-domain",
+          "domain_from": "building-industry.eu",
+          "url_to": "https://louisvillementalhealth.org/",
+          "anchor": "JOIN OUR TELEGRAM https://t.me/s/darksidelinks",
+          "spam_score": 25,
+          "is_broken": "True",
+          "url_to_status_code": 520,
+          "broken_backlinks": null
+        }
+      ],
+      "onpage_summary": [
+        {
+          "task": "onpage-default-ua-summary",
+          "crawl_progress": "finished",
+          "pages_crawled": 0,
+          "extended_crawl_status": "forbidden_http_header",
+          "gateway": "168.119.141.170"
+        },
+        {
+          "task": "onpage-browser-ua-summary",
+          "crawl_progress": "finished",
+          "pages_crawled": 0,
+          "extended_crawl_status": "forbidden_http_header",
+          "gateway": "168.119.141.170"
+        }
+      ],
+      "gmb_profile": [
+        {
+          "title": "Louisville Mental Health Group",
+          "category": "Mental health clinic",
+          "rating": 4.4,
+          "reviews": 19,
+          "photos": 3,
+          "claimed": "True",
+          "address": "4229 Bardstown Rd Ste 310, Louisville, KY 40218",
+          "phone": "+1502-416-1416",
+          "q_and_a_count": 1
+        }
+      ],
+      "action_backlog": [
+        {
+          "priority": 1,
+          "area": "Crawler access",
+          "action": "Fix Cloudflare/security rules so DataForSEO OnPage or chosen SEO crawler can fetch production pages.",
+          "evidence": "OnPage crawls ended forbidden_http_header with 0 pages crawled.",
+          "owner": "Technical SEO / hosting"
+        },
+        {
+          "priority": 2,
+          "area": "Soft 404",
+          "action": "Stop redirecting unknown URLs to homepage as 200; return real 404/410 or specific 301.",
+          "evidence": "Live no-cost inspection found missing URLs 301 to homepage then 200.",
+          "owner": "WordPress/Rank Math"
+        },
+        {
+          "priority": 3,
+          "area": "AI citations",
+          "action": "Add concise answer blocks and FAQ schema for Medicaid, case management, in-home/community-based care, teen/child/family therapy, and provider selection.",
+          "evidence": "LMHG cited in 8/48 direct LLM responses and 0/17 AI Mode prompts.",
+          "owner": "Content + schema"
+        },
+        {
+          "priority": 4,
+          "area": "Case management",
+          "action": "Protect /case-management/ as canonical owner and expand practical eligibility/support copy.",
+          "evidence": "Ranks #1 for mental health case management Louisville KY and #3 for case management Louisville KY.",
+          "owner": "Content SEO"
+        },
+        {
+          "priority": 5,
+          "area": "Head terms",
+          "action": "Strengthen /individual-counseling/, /services/, and homepage around therapy, therapist, and counseling Louisville KY.",
+          "evidence": "Highest city/DMA volume terms; LMHG visible but not dominant.",
+          "owner": "Content SEO"
+        },
+        {
+          "priority": 6,
+          "area": "GBP",
+          "action": "Mirror GBP service facts into site schema and copy; add Q&A child-therapy FAQ.",
+          "evidence": "Claimed GBP has rich services, 4.4 rating, and one relevant child session Q&A.",
+          "owner": "Local SEO"
+        },
+        {
+          "priority": 7,
+          "area": "Backlinks",
+          "action": "Triage broken backlinks and 520-status link targets; preserve useful citations.",
+          "evidence": "146 backlinks, 74 referring domains, 95 broken backlinks.",
+          "owner": "Off-page SEO"
+        },
+        {
+          "priority": 8,
+          "area": "WordPress 2026",
+          "action": "Activate route-level _lmhg_* SEO/schema rendering before treating sidecar as production SEO-ready.",
+          "evidence": "Sidecar noindex and rendered schema thinner than planned Core30 metadata.",
+          "owner": "WordPress engineering"
+        }
+      ]
+    }
+  },
+  "surface": "dashboard",
+  "sources": [
+    {
+      "id": "run",
+      "label": "DataForSEO run folder",
+      "path": "/Users/tyler-lcsw/projects/lmhg-blockwp/data/seo-dataforseo/20260705T212750Z"
+    },
+    {
+      "id": "report",
+      "label": "Executive Markdown report",
+      "path": "/Users/tyler-lcsw/projects/lmhg-blockwp/data/seo-dataforseo/20260705T212750Z/dataforseo-executive-report.md"
+    },
+    {
+      "id": "normalized",
+      "label": "Normalized CSV/JSON outputs",
+      "path": "/Users/tyler-lcsw/projects/lmhg-blockwp/data/seo-dataforseo/20260705T212750Z/normalized"
+    }
+  ],
+  "package_info": {
+    "name": "lmhg-dataforseo-dashboard",
+    "version": "2026.07.05",
+    "description": "LMHG DataForSEO Louisville SEO and AI visibility dashboard"
+  }
+}

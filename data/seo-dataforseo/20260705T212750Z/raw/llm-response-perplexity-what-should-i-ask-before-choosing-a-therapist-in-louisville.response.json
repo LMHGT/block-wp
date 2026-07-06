@@ -1,0 +1,101 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "5.6436 sec.",
+  "cost": 0.006291,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-c8844f265b7d",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "5.6328 sec.",
+      "cost": 0.006291,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "perplexity",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "perplexity",
+        "user_prompt": "What should I ask before choosing a therapist in Louisville?",
+        "model_name": "sonar",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response perplexity What should I ask before choosing a therapist in Louisville?",
+        "max_output_tokens": 700
+      },
+      "result": [
+        {
+          "model_name": "sonar",
+          "input_tokens": 36,
+          "output_tokens": 655,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.005691,
+          "datetime": "2026-07-06 00:32:10 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Before choosing a therapist in Louisville, you should ask about their **specific credentials**, **specialty areas**, **insurance acceptance**, and **approach to your unique needs** to ensure a good fit.\n\nHere are the essential questions to ask, based on local guidance and provider standards:\n\n### 1. Credentials and Licensing\n*   **\"Are you licensed in Kentucky, and what is your specific designation?\"**  \n    Verify they hold a valid license such as **Licensed Independent Social Worker (LISW)** or **Licensed Professional Clinical Counselor (LPCC)** [1]. You can confirm their status via the **Kentucky Department of Professional Licensing** [1].\n*   **\"How many years have you been in practice, and what is your experience with my specific issue?\"**  \n    Inquire about their expertise in areas like trauma, anxiety, or couples therapy, and the types of clients they typically work with [1].\n\n### 2. Therapy Approach and Specialization\n*   **\"What kind of therapy do you use, and is it right for me?\"**  \n    Ask if they specialize in specific modalities (e.g., **EMDR** for trauma, which is common in Louisville practices like Renew Counseling) [6][1].\n*   **\"How do you typically work with people who are [new to therapy, overwhelmed, or neurodivergent]?\"**  \n    This helps gauge their adaptability to your personal situation [8].\n*   **\"Do you prefer short-term or long-term therapy for my goals?\"**  \n    Clarify their perspective on the duration of treatment based on what you want to achieve [1].\n\n### 3. Cost and Insurance\n*   **\"What are your fees, and do you accept my insurance plan?\"**  \n    Ask if they accept insurance or require **full payment upfront**, and confirm if your specific plan covers their services [1].\n*   **\"Do you offer sliding scale fees if I don't have insurance?\"**  \n    Some providers may offer adjusted rates based on financial need.\n\n### 4. Logistics and Fit\n*   **\"Where is your office located, and do you offer online sessions?\"**  \n    Consider the logistics of travel versus the convenience of telehealth (many Louisville providers offer both) [1][4].\n*   **\"Can I schedule an initial consultation to see if I feel comfortable working with you?\"**  \n    An initial session is crucial to assess your comfort level and how the therapist works [1].\n*   **\"What are your hours of operation and availability for urgent support?\"**  \n    Check if they are available during your needed times (e.g., some clinics like Meridian are closed on weekends) [5].\n\n### 5. Recommendations\n*   **\"Do you have any recommendations from friends, family, or physicians?\"**  \n    Personal recommendations from trusted sources in Louisville can be valuable, such as **Bridge Counseling** or **Lotus Counseling**, which are noted by locals [7].\n\nBy asking these questions, you can ensure you choose a therapist in Louisville who is **licensed**, **experienced**, and **aligned** with your financial and therapeutic needs.",
+                  "annotations": [
+                    {
+                      "title": "How to Find the Best Therapist in Louisville, KY: Your 2025 Guide",
+                      "url": "https://louisvillegracepsychological.com/finding-the-right-therapist-in-louisville-ky-your-2025-guide/"
+                    },
+                    {
+                      "title": "Find Therapists and Psychologists in Louisville, KY",
+                      "url": "https://www.psychologytoday.com/us/therapists/ky/louisville"
+                    },
+                    {
+                      "title": "Louisville Therapist: Expert Psychiatrist & Counselors | KCC",
+                      "url": "https://kentuckycounselingcenter.com/kentucky-counseling-center/louisville/"
+                    },
+                    {
+                      "title": "Find Therapists In Louisville, Kentucky - LifeStance Health",
+                      "url": "https://lifestance.com/provider/therapist/ky/louisville/"
+                    },
+                    {
+                      "title": "Meridian Behavioral Health in Louisville, Kentucky",
+                      "url": "https://meridianbhservices.com/locations/kentucky/louisville/"
+                    },
+                    {
+                      "title": "Renew Counseling Services | Online Therapy | Louisville, KY",
+                      "url": "https://www.renewcounselingservices.org"
+                    },
+                    {
+                      "title": "Can anyone recommend a good therapist in the city? : r/Louisville",
+                      "url": "https://www.reddit.com/r/Louisville/comments/1okw0wt/can_anyone_recommend_a_good_therapist_in_the_city/"
+                    },
+                    {
+                      "title": "How to Find the Right Therapist in Louisville for You",
+                      "url": "https://peacefulsc.com/blog/f/how-to-find-the-right-therapist-in-louisville-for-you"
+                    },
+                    {
+                      "title": "TOP 10 BEST Therapist in Louisville, KY - Updated 2026 - Yelp",
+                      "url": "https://www.yelp.com/search?find_desc=Therapist&find_loc=Louisville%2C+KY"
+                    },
+                    {
+                      "title": "New Hope Counseling, Licensed Therapists Louisville Kentucky",
+                      "url": "https://newhopecounselingsite.com"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": null
+        }
+      ]
+    }
+  ]
+}

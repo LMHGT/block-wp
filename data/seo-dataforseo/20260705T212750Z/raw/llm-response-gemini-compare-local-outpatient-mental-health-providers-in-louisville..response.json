@@ -1,0 +1,110 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "6.0395 sec.",
+  "cost": 0.0359429,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-28a021bd9299",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "6.0248 sec.",
+      "cost": 0.0359429,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "gemini",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "gemini",
+        "user_prompt": "Compare local outpatient mental health providers in Louisville.",
+        "model_name": "gemini-2.5-flash-lite",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response gemini Compare local outpatient mental health providers in Louisville.",
+        "web_search": true,
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gemini-2.5-flash-lite",
+          "input_tokens": 109,
+          "output_tokens": 830,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.0353429,
+          "datetime": "2026-07-06 00:32:21 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here's a comparison of some local outpatient mental health providers in Louisville, KY:\n\n**Comprehensive Services & Large Organizations:**\n\n*   **Seven Counties Services:** This is a large organization that, along with Lifespring Health Systems, Maryhurst, Wellspring/SFK, and Bridgehaven Mental Health Services, generates a significant portion of the revenue for mental health centers in Louisville. They are noted for employing many individuals in the mental health field.\n*   **Lifespring Health Systems:** Another major provider in Louisville, contributing to the large revenue and employment within the local mental health sector.\n*   **Wellspring:** Their Outpatient Services Program assists clients in achieving recovery goals, maintaining community stability, and addressing behavioral and physical health needs. Services include individual therapy, group therapy, and expressive art therapy.\n*   **Bridgehaven Mental Health Services:** This organization provides a range of mental health services for individuals with severe and persistent mental illness, including depression, bipolar disorder, severe anxiety, PTSD, and schizophrenia. They offer individual services, group therapy, pet therapy, and daily activities.\n*   **UofL Health-Peace Adult Outpatient Center:** This center offers Intensive Outpatient (IOP) and Partial Hospitalization Programs (PHP) for adults 18 and older, with an integrated approach to substance use and mental health. Their multidisciplinary team includes therapists, nurses, case managers, nurse practitioners, and psychiatrists.\n\n**Specialized and Individualized Care:**\n\n*   **Hagan Health:** Offers expert care for anxiety, depression, ADHD, and more. They provide therapy and psychiatry services, with telehealth available for Kentucky residents. Hagan Health also utilizes Transcranial Magnetic Stimulation (TMS) technology for treating conditions like depression, OCD, and anxiety.\n*   **LifeStance Health:** Has multiple locations in Louisville, including 2550 Eastpoint Parkway and 100 Executive Park. They offer in-person and telehealth services with experienced therapists, psychiatrists, psychologists, and nurse practitioners. They treat a wide range of conditions such as ADHD, anxiety, depression, bipolar disorder, and substance use issues.\n*   **The Morton Center:** Focuses on helping adults overcome substance use and mental health challenges. They offer individual therapy for anxiety, trauma, grief, and depression, as well as an Intensive Outpatient Program (IOP) for adults. They accept commercial insurance, Medicaid, and offer scholarships.\n*   **Kentucky Mental Health Care (KMHC):** Provides Intensive Outpatient Programs (IOPs) for conditions like severe depression, PTSD, bipolar disorders, eating disorders, and anxiety. Their IOPs are offered online and in-person. KMHC also offers therapy and psychiatry services, with telehealth options available.\n\n**Other Notable Providers:**\n\n*   **Norton Healthcare (Norton Behavioral Medicine):** Their integrated team of therapists, psychologists, psychiatrists, and social workers addresses mental health concerns like depression, anxiety, PTSD, and substance use disorders. They offer telehealth visits for patients in Kentucky and Indiana.\n*   **Baptist Health Louisville:** Offers outpatient behavioral health services. You can schedule an initial appointment by calling their 24-hour Access Center.\n\n**Resources for Specific Needs:**\n\n*   **Psychology Today's Directory:** For those seeking Medicaid treatment centers, Psychology Today lists several options in Louisville, including A Vision For You, New Leaf Clinic, and Kilgore Counseling Center.\n*   **LouisvilleKY.gov:** Provides a list of community mental health resources, including crisis hotlines and specific organizations like The Black Counseling & Consulting Collective and Park DuValle Community Health Center.\n\nWhen choosing a provider, consider factors such as the specific conditions treated, types of therapy offered, insurance accepted, and whether telehealth or in-person appointments are preferred. It's recommended to contact the providers directly for the most current information on services and availability.",
+                  "annotations": [
+                    {
+                      "title": "causeiq.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUSc8K0vREhVscEaNQGxxnGqX1WJiQvK8MoeXUtyvxAj3LkqbXFFQtwtho4Dw-eoorB9GEkFRNvZU3RTlvUrEBrJzbEy49dgAcra8kl_BNRLr9y_nCDXqvJmVuKejbMRcG3dtvgQi9EPRHZSXm20Wz0gg2mEHFYzjzovx6ih9-q2SrmrIv8eSUZ1v5Q1wBWoEN_je6OKnAumetYzxIMDY="
+                    },
+                    {
+                      "title": "wellspringky.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGT-YdtFwuM3cx4VZQVOWe1YYtddyM-IMlfWZSSgNx2SxGfGXfDfiajIY9GH9dCuiANLdqmo_tdWAPy-FEeQrTCXK1r6X4ryINny904_U9EnehdR1Cx7O3ePMJyKchqPg=="
+                    },
+                    {
+                      "title": "psychologytoday.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENFA__2TwEN01qYjI7SOC-ENFrNIZW0Uf2lkxAGRIgKC0ZgHaiN7HRB7ZnxY1lrNqqVIlt5EwOldqUc9YALVDgVTZ8G53FmNS5bzVHcZQjcejckJJT_29xnAlgGjaw9UD5JdJF19hQbhB0gNhdC_PHZoS6cTAxfkuhmQeJh8UlurxQtjyqDCxtH4eByfI="
+                    },
+                    {
+                      "title": "haganhealth.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKKMaWDHzzF-m4PsPNli1St1-zxOkXyR0vBRpDIOjBowqoeltAPWBHPoQ2s2rtF_FwSyq53dW67SzbxNVBEd0aRWr8FhyoLPswFT90XQ3GEYDxEQ=="
+                    },
+                    {
+                      "title": "lifestance.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERHI66x86PJwl5JvkjxVTLtgTTjYDbCDaNMJetDgrkU6DpEhUTIwEnOd0QP0YQk5txzC6VZtMDMDkqHUjLxuHjlREKpBaktuWET1RrYUWRVFkoXmUiwh3pr8QDSQa7uyYHrsW3ndSzv2Van8x1eeRhYvBUHNBABEOWSfJWzFX89Q=="
+                    },
+                    {
+                      "title": "lifestance.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXu9MXUOo9Iag5y3YNwtpw_KrteRr2A1NtIsW8cfRcoTMMsXGRJpgBfQGXIapVp78RVeOkXyKm7a31vDH9lsTSmGIlwETvHxvbq5h1kJ1Fx78HrMwxdxlIPdABOsbwHkxucOpKQ7LCuThd8yYdwyumhfUhNrPr7cx6zYlJ"
+                    },
+                    {
+                      "title": "themortoncenter.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_A_pVRweyDGpq3hc5TeOAWESGh6f5-WnbpLLq3tqfsRfseb8trherqm7gcejKVXZE1QH-uugmwwP7LKZthgeI63N6iJnU1LOVpCF_oNbjFW1hxFXASwLjCaskAsE="
+                    },
+                    {
+                      "title": "kentuckymentalhealth.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFr4656nsxI9QIXTPxTd_1Mu-WXXY4668bez35Nlv4NwtT_HyA48j8dqO9aOj54kobxxFP9jwEMaaOX9xkAd1JOuVq2i2ODtqE6w98zKnLj6GGrLha54fqiMOE6Uw=="
+                    },
+                    {
+                      "title": "nortonhealthcare.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsVGVDV2RYr2-3A7RKj4a2q38SXyDCfxzb7hn9q_JBN-GO3MZSXP-4DGG3x6EEUs40AoLt2DF-Si-k_6CU-AF6Yl5FgFUhHRRXnLtB_Jr9baf7skPeDn8ecYYW5rXqu71XuKSoiaqULCUzeor6pGGxcJBZKUwWE_fnm1OcE1BJkFs9iuats7hHLLHb"
+                    },
+                    {
+                      "title": "baptisthealth.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXe8cS7rJAO8bcwtbAsAcasxVA84IZAF3m8AAx9k30ZLuXbclUe489lnmmKBhKd200e5BcESUIffuWPBgQ2plAN9z4wDa8UfQXIVbMYyY_YPbSo7q702Wp62GphTc-mnB4bDu7WrhtBvSNrsYzNZ6BmbRfqGiroXXWEf6ZYKzctoVEqHJ-uqSil__hcZKnEw5OCTq81bNJOMrtt2tpiF9rD2JYokE3cM2AVFbHBddAir9jcOud"
+                    },
+                    {
+                      "title": "louisvilleky.gov",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZJ71uEJvfZgP3b0Y77wIpdIUqQBFkyKmddt4bUHjyBdOgjsPcNdB-1Ec9u4lhwz9YF-aygbEX5J429ypdVxmwAmGrpoyxwmu9qAmKZyAgXXnROiEiOX9rUtuwKkRuWE5k53F7aBC4Jd2cNd4G9VkkGaDyu29NAtR8PiHiCCX323RtQ3HRFLolM4nXnT2m4g=="
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "outpatient mental health providers Louisville KY",
+            "list of mental health clinics Louisville KY",
+            "top outpatient mental health Louisville KY"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "labs-keyword-overview-louisville-dma",
+  "path": "/v3/dataforseo_labs/google/keyword_overview/live",
+  "body": [
+    {
+      "keywords": [
+        "mental health services Louisville KY",
+        "therapy Louisville KY",
+        "therapist Louisville KY",
+        "counseling Louisville KY",
+        "individual therapy Louisville KY",
+        "family therapy Louisville KY",
+        "child therapy Louisville KY",
+        "group therapy Louisville KY",
+        "case management Louisville KY",
+        "mental health case management Louisville KY",
+        "community based mental health services Louisville KY",
+        "in home therapy Louisville KY",
+        "trauma therapy Louisville KY",
+        "anxiety therapy Louisville KY",
+        "depression therapy Louisville KY",
+        "play therapy Louisville KY",
+        "Louisville Mental Health Group",
+        "behavioral health Louisville KY",
+        "outpatient mental health Louisville KY",
+        "Medicaid therapist Louisville KY",
+        "therapist that accepts Medicaid Louisville KY",
+        "therapy in your home Louisville KY"
+      ],
+      "location_code": 200529,
+      "language_code": "en",
+      "include_serp_info": true,
+      "tag": "lmhg keyword overview louisville dma"
+    }
+  ]
+}

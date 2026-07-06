@@ -1,0 +1,371 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.0620 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060041-9766-0139-0000-62131df02b45",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "3.9643 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "Compare local outpatient mental health providers in Louisville.",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode expanded Compare local outpatient mental health providers in Louisville.",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Compare local outpatient mental health providers in Louisville.",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=Compare%20local%20outpatient%20mental%20health%20providers%20in%20Louisville.&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:41:10 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[1]/div[1]/div[3]",
+              "markdown": "Several major hospital systems and private practices provide outpatient mental health care in Louisville, offering a range of services from therapy to medication management.[[1]](https://lindnercenterofhope.org/outpatient-care/)[[2]](https://louisvillerecoverycenter.com/mental-health/depression/)[[3]](https://louisvillerecoverycenter.com/mental-health/anxiety/)[[4]](https://www.oakheartcenter.com/oakheart-blog/levels-of-care-in-mental-health-care)[[5]](https://uoflhealth.org/services/mental-and-behavioral-health/)\n\n**Major Provider Networks** \n\n- **[Norton Behavioral Medicine](https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/)** provides comprehensive outpatient services, including specialized programs such as Women’s Mental Health Services and Behavioral Oncology Programs. They offer both in-person and telehealth appointments.\n- **[UofL Health – Peace Hospital Adult Outpatient Center](https://uoflhealth.org/services/mental-and-behavioral-health/)** offers specialized adult outpatient care, along with services from the UofL Physicians – Neuropsychology Associates and UofL Trager Institute for comprehensive care.\n- **[Kentucky Mental Health Care (KMHC)](https://kentuckymentalhealth.com/)** focuses on intensive outpatient programs (IOPs) for severe depression, anxiety, PTSD, and addiction, including MAT.[](https://uoflhealth.org/services/mental-and-behavioral-health/) [[1]](https://uoflhealth.org/services/mental-and-behavioral-health/)[[2]](https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/)[[3]](https://kentuckymentalhealth.com/)[[4]](https://www.therapyden.com/therapists/us/ky/louisville-1)\n\n**Private Practices & Specialized Care** \n\n- **The Couch Immediate Mental Health Care** (Lime Kiln Ln) is noted for fast access to care (sometimes same-week appointments) and provides both in-person and telehealth, although it may be more focused on direct-pay or specific insurance.\n- **[Psychology Today Directory](https://www.psychologytoday.com/us/psychiatrists/ky/louisville)** lists independent specialists in Louisville, including PsychMind Counseling and Psychiatry, Renewing Minds Psychiatry and Wellness, PLLC , and individual providers like Olivia Pierce and Laura Pohl.[](https://m.yelp.com/search?find_desc=Behavioral+Health&find_loc=Louisville%2C+KY) [[1]](https://m.yelp.com/search?find_desc=Behavioral+Health&find_loc=Louisville%2C+KY)[[2]](https://www.psychologytoday.com/us/psychiatrists/ky/louisville)[[3]](https://www.psychologytoday.com/us/treatment-rehab/ky/louisville)\n\n**Comparison Table of Key Features** \n\n| Provider[[1]](https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/)[[2]](https://uoflhealth.org/services/mental-and-behavioral-health/)[[3]](https://m.yelp.com/search?find_desc=Behavioral+Health&find_loc=Louisville%2C+KY)[[4]](https://kentuckymentalhealth.com/) | Core Services | Access/Type |\n|---|---|---|\n| **Norton Behavioral** | General Behavioral & Women's Health | Hospital System / Telehealth |\n| **UofL Health** | General, Neuropsych, Aging Care | Hospital System |\n| **The Couch** | Psychiatry/Therapy/Fast Access | Private/Telehealth |\n| **KMHC** | IOP & Addiction/MAT | Specialized IOP |\n\nWhen choosing a provider, consider checking directly with [local reviews on Yelp](https://m.yelp.com/search?find_desc=Behavioral+Health&find_loc=Louisville%2C+KY) and Psychology Today to compare specific therapist approaches and insurance acceptance.\n\nTo help narrow down the best option for you, I can:\n\n- Tell you which providers specialize in **specific conditions** (e.g., anxiety, depression, PTSD).\n- Search for providers who accept **your specific insurance**?\n- Find providers offering **evening or weekend** appointments.\n\nLet me know what is most important for your search!",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Several major hospital systems and private practices provide outpatient mental health care in Louisville, offering a range of services from therapy to medication management.",
+                  "markdown": "Several major hospital systems and private practices provide outpatient mental health care in Louisville, offering a range of services from therapy to medication management.[[1]](https://lindnercenterofhope.org/outpatient-care/)[[2]](https://louisvillerecoverycenter.com/mental-health/depression/)[[3]](https://louisvillerecoverycenter.com/mental-health/anxiety/)[[4]](https://www.oakheartcenter.com/oakheart-blog/levels-of-care-in-mental-health-care)[[5]](https://uoflhealth.org/services/mental-and-behavioral-health/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Lindner Center of Hope",
+                      "domain": "lindnercenterofhope.org",
+                      "url": "https://lindnercenterofhope.org/outpatient-care/",
+                      "title": "Outpatient Psychiatric Treatment",
+                      "text": "Outpatient care exists on a continuum, with many people blending many options at once. Depending on the patient's needs and progre..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Louisville Recovery Center",
+                      "domain": "louisvillerecoverycenter.com",
+                      "url": "https://louisvillerecoverycenter.com/mental-health/depression/",
+                      "title": "Depression Treatment In Louisville, KY",
+                      "text": "Kentucky Mental Health Care at Louisville Recovery Center We offer multiple levels of outpatient treatment for depression, includi..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Louisville Recovery Center",
+                      "domain": "louisvillerecoverycenter.com",
+                      "url": "https://louisvillerecoverycenter.com/mental-health/anxiety/",
+                      "title": "Anxiety Treatment In Louisville, KY",
+                      "text": "The mental health treatment programs for adults at Louisville Recovery Center operate on an outpatient basis. This means that you ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "OakHeart, Center for Counseling",
+                      "domain": "www.oakheartcenter.com",
+                      "url": "https://www.oakheartcenter.com/oakheart-blog/levels-of-care-in-mental-health-care",
+                      "title": "Mental Health Blog | OakHeart Center for Counseling",
+                      "text": "Examples of outpatient facilities include private practices (groups of providers or providers who work independently), community m..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "UofL Health",
+                      "domain": "uoflhealth.org",
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/",
+                      "title": "Mental and Behavioral Health | Louisville KY",
+                      "text": "Mental and Behavioral Health Locations * UofL Health – Peace Hospital Adult Outpatient Center. UofL Health – Peace Hospital. 4414 ..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Major Provider Networks",
+                  "markdown": "**Major Provider Networks**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Norton Behavioral Medicine provides comprehensive outpatient services, including specialized programs such as Women’s Mental Health Services and Behavioral Oncology Programs. They offer both in-person and telehealth appointments. UofL Health – Peace Hospital Adult Outpatient Center offers specialized adult outpatient care, along with services from the UofL Physicians – Neuropsychology Associates and UofL Trager Institute for comprehensive care. UofL Physicians – Neuropsychology Associates UofL Trager Institute Kentucky Mental Health Care (KMHC) focuses on intensive outpatient programs (IOPs) for severe depression, anxiety, PTSD, and addiction, including MAT.",
+                  "markdown": "- **[Norton Behavioral Medicine](https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/)** provides comprehensive outpatient services, including specialized programs such as Women’s Mental Health Services and Behavioral Oncology Programs. They offer both in-person and telehealth appointments.\n- **[UofL Health – Peace Hospital Adult Outpatient Center](https://uoflhealth.org/services/mental-and-behavioral-health/)** offers specialized adult outpatient care, along with services from the UofL Physicians – Neuropsychology Associates and UofL Trager Institute for comprehensive care.\n- **[Kentucky Mental Health Care (KMHC)](https://kentuckymentalhealth.com/)** focuses on intensive outpatient programs (IOPs) for severe depression, anxiety, PTSD, and addiction, including MAT.[](https://uoflhealth.org/services/mental-and-behavioral-health/) [[1]](https://uoflhealth.org/services/mental-and-behavioral-health/)[[2]](https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/)[[3]](https://kentuckymentalhealth.com/)[[4]](https://www.therapyden.com/therapists/us/ky/louisville-1)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Norton Behavioral Medicine",
+                      "description": null,
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/",
+                      "domain": "nortonhealthcare.com"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "UofL Health – Peace Hospital Adult Outpatient Center",
+                      "description": null,
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/",
+                      "domain": "uoflhealth.org"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Kentucky Mental Health Care (KMHC)",
+                      "description": null,
+                      "url": "https://kentuckymentalhealth.com/",
+                      "domain": "kentuckymentalhealth.com"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "UofL Health",
+                      "domain": "uoflhealth.org",
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/",
+                      "title": "Mental and Behavioral Health | Louisville KY",
+                      "text": "Mental and Behavioral Health Locations * UofL Health – Peace Hospital Adult Outpatient Center. UofL Health – Peace Hospital. 4414 ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Norton Healthcare",
+                      "domain": "nortonhealthcare.com",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/",
+                      "title": "Behavioral Medicine Services | Norton Healthcare Louisville, Ky.",
+                      "text": "Behavioral Medicine Services * Norton Behavioral Medicine. * Toggle submenu What We Treat. Mental Health. * Meet Our Team. * Locat..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Kentucky Mental Health Care",
+                      "domain": "kentuckymentalhealth.com",
+                      "url": "https://kentuckymentalhealth.com/",
+                      "title": "Kentucky Mental Health Care – Psychiatry | Therapy ...",
+                      "text": "If you or a loved one are struggling with addiction, and are interested in MAT utilizing Suboxone, please call us here at KMHC to ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "TherapyDen",
+                      "domain": "www.therapyden.com",
+                      "url": "https://www.therapyden.com/therapists/us/ky/louisville-1",
+                      "title": "The 10 BEST Therapists in Louisville, KY (for 2026)",
+                      "text": "In-person sessions offer face-to-face connection and may be preferred for certain therapeutic approaches that benefit from physica..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Private Practices & Specialized Care",
+                  "markdown": "**Private Practices & Specialized Care**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "The Couch Immediate Mental Health Care (Lime Kiln Ln) is noted for fast access to care (sometimes same-week appointments) and provides both in-person and telehealth, although it may be more focused on direct-pay or specific insurance. The Couch Immediate Mental Health Care Psychology Today Directory lists independent specialists in Louisville, including PsychMind Counseling and Psychiatry, Renewing Minds Psychiatry and Wellness, PLLC, and individual providers like Olivia Pierce and Laura Pohl. PsychMind Counseling and Psychiatry Renewing Minds Psychiatry and Wellness, PLLC Olivia Pierce Laura Pohl",
+                  "markdown": "- **The Couch Immediate Mental Health Care** (Lime Kiln Ln) is noted for fast access to care (sometimes same-week appointments) and provides both in-person and telehealth, although it may be more focused on direct-pay or specific insurance.\n- **[Psychology Today Directory](https://www.psychologytoday.com/us/psychiatrists/ky/louisville)** lists independent specialists in Louisville, including PsychMind Counseling and Psychiatry, Renewing Minds Psychiatry and Wellness, PLLC , and individual providers like Olivia Pierce and Laura Pohl.[](https://m.yelp.com/search?find_desc=Behavioral+Health&find_loc=Louisville%2C+KY) [[1]](https://m.yelp.com/search?find_desc=Behavioral+Health&find_loc=Louisville%2C+KY)[[2]](https://www.psychologytoday.com/us/psychiatrists/ky/louisville)[[3]](https://www.psychologytoday.com/us/treatment-rehab/ky/louisville)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Psychology Today Directory",
+                      "description": null,
+                      "url": "https://www.psychologytoday.com/us/psychiatrists/ky/louisville",
+                      "domain": "www.psychologytoday.com"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Yelp",
+                      "domain": "m.yelp.com",
+                      "url": "https://m.yelp.com/search?find_desc=Behavioral+Health&find_loc=Louisville%2C+KY",
+                      "title": "TOP 10 BEST Behavioral Health in Louisville, KY - Yelp",
+                      "text": "The Couch Immediate Mental Health Care. 4.5 (13 reviews) Counseling & Mental Health. Psychiatrists. Nurse Practitioner. 5.0 mi. Th..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Psychology Today",
+                      "domain": "www.psychologytoday.com",
+                      "url": "https://www.psychologytoday.com/us/psychiatrists/ky/louisville",
+                      "title": "Psychiatrists and Psychiatric Nurses in Louisville, KY",
+                      "text": "* Olivia Pierce. * Maryl Smith. * Anjuli Shah. * Christine Young. * Janae Johnson. * Laura Pohl @ Women's Mental Health Specialist..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Psychology Today",
+                      "domain": "www.psychologytoday.com",
+                      "url": "https://www.psychologytoday.com/us/treatment-rehab/ky/louisville",
+                      "title": "Treatment Centers and Rehab in Louisville, KY",
+                      "text": "How can I find a treatment center in Louisville? The Psychology Today Directory has customizable search options that show potentia..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Comparison Table of Key Features",
+                  "markdown": "**Comparison Table of Key Features**",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_table_element",
+                  "position": "left",
+                  "markdown": "| Provider[[1]](https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/)[[2]](https://uoflhealth.org/services/mental-and-behavioral-health/)[[3]](https://m.yelp.com/search?find_desc=Behavioral+Health&find_loc=Louisville%2C+KY)[[4]](https://kentuckymentalhealth.com/) | Core Services | Access/Type |\n|---|---|---|\n| **Norton Behavioral** | General Behavioral & Women's Health | Hospital System / Telehealth |\n| **UofL Health** | General, Neuropsych, Aging Care | Hospital System |\n| **The Couch** | Psychiatry/Therapy/Fast Access | Private/Telehealth |\n| **KMHC** | IOP & Addiction/MAT | Specialized IOP |",
+                  "table": {
+                    "table_header": [
+                      "Provider",
+                      "Core Services",
+                      "Access/Type"
+                    ],
+                    "table_content": [
+                      [
+                        "Norton Behavioral",
+                        "General Behavioral & Women's Health",
+                        "Hospital System / Telehealth"
+                      ],
+                      [
+                        "UofL Health",
+                        "General, Neuropsych, Aging Care",
+                        "Hospital System"
+                      ],
+                      [
+                        "The Couch",
+                        "Psychiatry/Therapy/Fast Access",
+                        "Private/Telehealth"
+                      ],
+                      [
+                        "KMHC",
+                        "IOP & Addiction/MAT",
+                        "Specialized IOP"
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Psychology Today",
+                  "markdown": "When choosing a provider, consider checking directly with [local reviews on Yelp](https://m.yelp.com/search?find_desc=Behavioral+Health&find_loc=Louisville%2C+KY) and Psychology Today to compare specific therapist approaches and insurance acceptance.",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "local reviews on Yelp",
+                      "description": null,
+                      "url": "https://m.yelp.com/search?find_desc=Behavioral+Health&find_loc=Louisville%2C+KY",
+                      "domain": "m.yelp.com"
+                    }
+                  ],
+                  "images": null,
+                  "references": null
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "UofL Health",
+                  "domain": "uoflhealth.org",
+                  "url": "https://uoflhealth.org/services/mental-and-behavioral-health/",
+                  "title": "Mental and Behavioral Health | Louisville KY",
+                  "text": "Mental and Behavioral Health Locations * UofL Health – Peace Hospital Adult Outpatient Center. UofL Health – Peace Hospital. 4414 ..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Norton Healthcare",
+                  "domain": "nortonhealthcare.com",
+                  "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/",
+                  "title": "Behavioral Medicine Services | Norton Healthcare Louisville, Ky.",
+                  "text": "Behavioral Medicine Services * Norton Behavioral Medicine. * Toggle submenu What We Treat. Mental Health. * Meet Our Team. * Locat..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Kentucky Mental Health Care",
+                  "domain": "kentuckymentalhealth.com",
+                  "url": "https://kentuckymentalhealth.com/",
+                  "title": "Kentucky Mental Health Care – Psychiatry | Therapy ...",
+                  "text": "If you or a loved one are struggling with addiction, and are interested in MAT utilizing Suboxone, please call us here at KMHC to ..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Psychology Today",
+                  "domain": "www.psychologytoday.com",
+                  "url": "https://www.psychologytoday.com/us/psychiatrists/ky/louisville",
+                  "title": "Psychiatrists and Psychiatric Nurses in Louisville, KY",
+                  "text": "* Olivia Pierce. * Maryl Smith. * Anjuli Shah. * Christine Young. * Janae Johnson. * Laura Pohl @ Women's Mental Health Specialist..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Yelp",
+                  "domain": "m.yelp.com",
+                  "url": "https://m.yelp.com/search?find_desc=Behavioral+Health&find_loc=Louisville%2C+KY",
+                  "title": "TOP 10 BEST Behavioral Health in Louisville, KY - Yelp",
+                  "text": "The Couch Immediate Mental Health Care. 4.5 (13 reviews) Counseling & Mental Health. Psychiatrists. Nurse Practitioner. 5.0 mi. Th..."
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

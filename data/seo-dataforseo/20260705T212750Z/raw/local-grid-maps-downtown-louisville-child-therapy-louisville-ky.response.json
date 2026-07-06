@@ -1,0 +1,608 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "2.0513 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-7a535c115527",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "1.9747 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "maps",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "maps",
+        "keyword": "child therapy Louisville KY",
+        "location_coordinate": "38.2526647,-85.7584557,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid maps downtown-louisville child therapy Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "child therapy Louisville KY",
+          "type": "maps",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://google.com/maps/search/child+therapy+Louisville+KY/@38.2526647,-85.7584557,17z?hl=en&gl=US&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-07-05 21:36:33 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "maps_search"
+          ],
+          "se_results_count": 0,
+          "items_count": 4,
+          "items": [
+            {
+              "type": "maps_search",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "domain": "louisvilleky.gov",
+              "title": "Metro Employee Wellness Center",
+              "original_title": null,
+              "url": "http://louisvilleky.gov/government/human-resources/metro-employee-wellness-center-information",
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.1,
+                "votes_count": 23,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 5,
+                "2": 0,
+                "3": 0,
+                "4": 1,
+                "5": 17
+              },
+              "snippet": "400 S 1st St, Louisville, KY 40202",
+              "address": "400 S 1st St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "400 S 1st St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJwz8dObpyaYgRMw0rI6BtorE",
+              "phone": "+1502-574-2273",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=nbmatSrfbiOUCRaw9bC9sQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=248.58142&pitch=-2.9488254&thumbfov=100",
+              "total_photos": 1,
+              "category": "Wellness center",
+              "additional_categories": [
+                "Doctor"
+              ],
+              "category_ids": [
+                "wellness_center",
+                "doctor"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 0,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886972ba391d3fc3:0xb1a26da0232b0d33",
+              "cid": "12799913625492589875",
+              "latitude": 38.2523099,
+              "longitude": -85.752522,
+              "is_claimed": false,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"Dr. Box is very comprehensive and covers all the bases.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "domain": "www.omnihotels.com",
+              "title": "Mokara Salon & Spa",
+              "original_title": null,
+              "url": "https://www.omnihotels.com/hotels/louisville/spa?utm_source=gmblisting&utm_medium=organic",
+              "contact_url": "https://omnispaexperiences.com/#/en-US/omnilouisville/spa",
+              "contributor_url": "https://maps.google.com/maps/contrib/107256649994564343765",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.5,
+                "votes_count": 156,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 12,
+                "2": 6,
+                "3": 5,
+                "4": 9,
+                "5": 124
+              },
+              "snippet": "400 S 2nd St, Louisville, KY 40202",
+              "address": "400 S 2nd St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "400 S 2nd St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ1wKf8rpyaYgRWpg27k7oL6E",
+              "phone": "+1502-625-1585",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG4BGj5x40jIYdO5vPdq5v8Tkxn1ytJuqKNKf8PD7q8NYe6epFA1zYfE5jTMZ-Pb7DVQqy4LDGqyNjh3WIshvydr1QjDxHmwu7T-CQZL0vb9WUX4JqEBQ6KQlSx3F6myYM6UiEO=w426-h240-k-no",
+              "total_photos": 69,
+              "category": "Spa",
+              "additional_categories": [
+                "Massage therapist"
+              ],
+              "category_ids": [
+                "spa",
+                "massage_therapist"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886972baf29f02d7:0xa12fe84eee36985a",
+              "cid": "11614757389713447002",
+              "latitude": 38.2518449,
+              "longitude": -85.7546449,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"Everyone here is so knowledgeable, professional, and friendly!\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "domain": "www.drchariker.com",
+              "title": "Dr Mark Chariker, Md",
+              "original_title": null,
+              "url": "http://www.drchariker.com/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/113529871600815761354",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.5,
+                "votes_count": 47,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 5,
+                "2": 0,
+                "3": 2,
+                "4": 0,
+                "5": 40
+              },
+              "snippet": "222 S 1st St, Louisville, KY 40202",
+              "address": "222 S 1st St, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "222 S 1st St",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJyxiKPrpyaYgR1iDpguH-Arg",
+              "phone": "+1502-568-4800",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGxj618a_WTR63numsiflnTIR5uAvMMrldIkF9XY6maFHlXh_mW1XgIr37m8_6bamFdjCrDXz-_Ib8oe0g4vdWLpYeFN5-Zg3JnbACY7dhxd8DAe4JOT-kkwMQq-9TV0CZgCKXXa-Llf1To=w426-h240-k-no",
+              "total_photos": 11,
+              "category": "Plastic surgeon",
+              "additional_categories": null,
+              "category_ids": [
+                "plastic_surgeon"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 30
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886972ba3e8a18cb:0xb802fee182e920d6",
+              "cid": "13259440497449574614",
+              "latitude": 38.2538765,
+              "longitude": -85.75222989999999,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"Kind and knowledgeable care for my super anxious daughter, after her injury.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "domain": null,
+              "title": "Mello CBD Oil",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/107026766362986519956",
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": null,
+              "address": null,
+              "address_info": {
+                "borough": null,
+                "address": null,
+                "city": null,
+                "zip": null,
+                "region": null,
+                "country_code": null
+              },
+              "place_id": "ChIJVVVVVblyaYgRfb5OkPVvbh4",
+              "phone": "+1502-818-3100",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG6OXraOHVBOwJxKo80KMTxs3NfzUuRyFWzGM34y9TPkjR-owpOm7INBRjRJzCrDuVE7LLcBUnHi1DmK-r-BNokaY0wfTY6-Gp-pdL8PzJfaQzml3F0uKB5iaN3lbHCr4RIbMH_=w408-h408-k-no",
+              "total_photos": 22,
+              "category": "Vitamin & supplements store",
+              "additional_categories": [
+                "Service establishment"
+              ],
+              "category_ids": [
+                "vitamin_and_supplements_store",
+                "establishment_service"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "open"
+              },
+              "feature_id": "0x886972b955555555:0x1e6e6ff5904ebe7d",
+              "cid": "2192813169054760573",
+              "latitude": 38.1887245,
+              "longitude": -85.6760015,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

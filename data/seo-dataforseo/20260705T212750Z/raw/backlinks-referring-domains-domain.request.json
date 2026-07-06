@@ -1,0 +1,12 @@
+{
+  "name": "backlinks-referring-domains-domain",
+  "path": "/v3/backlinks/referring_domains/live",
+  "body": [
+    {
+      "target": "louisvillementalhealth.org",
+      "limit": 100,
+      "include_subdomains": true,
+      "tag": "lmhg referring domains detail"
+    }
+  ]
+}

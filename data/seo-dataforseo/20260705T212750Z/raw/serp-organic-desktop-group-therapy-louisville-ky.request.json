@@ -1,0 +1,16 @@
+{
+  "name": "serp-organic-desktop-group therapy Louisville KY",
+  "method": "POST",
+  "path": "/v3/serp/google/organic/live/advanced",
+  "body": [
+    {
+      "keyword": "group therapy Louisville KY",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "depth": 20,
+      "tag": "lmhg organic desktop group therapy Louisville KY"
+    }
+  ],
+  "started_at": "2026-07-05T21:27:55.618294+00:00"
+}

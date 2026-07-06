@@ -1,0 +1,224 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "24.9538 sec.",
+  "cost": 0.076801,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060038-9766-0612-0000-f565907d0ae1",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "24.9284 sec.",
+      "cost": 0.076801,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "claude",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "claude",
+        "user_prompt": "What should I ask before choosing a therapist in Louisville?",
+        "model_name": "claude-sonnet-4-6",
+        "web_search": true,
+        "max_output_tokens": 1024,
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response claude What should I ask before choosing a therapist in Louisville?"
+      },
+      "result": [
+        {
+          "model_name": "claude-sonnet-4-6",
+          "input_tokens": 16417,
+          "output_tokens": 1130,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.076201,
+          "datetime": "2026-07-06 00:39:21 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Great question! Choosing the right therapist in Louisville is one of the most important steps you can take for your mental health. Here's a comprehensive guide to what you should ask — organized by category:\n\n---\n\n## 🎓 1. Credentials & Training\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "One of the first questions to ask any potential therapist is about their qualifications and experience — inquire about their educational background, certifications, and licenses.",
+                  "annotations": [
+                    {
+                      "title": "10 Questions to Ask When Searching for an Individual Therapist",
+                      "url": "https://therapy-mn.com/blog/10-questions-to-ask-when-searching-for-a-therapist/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n- *\"What degree do you hold, and are you licensed in Kentucky?\"*\n- ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Ask what degree they obtained. The therapist should have a Master's or Doctoral degree in a mental health field that provides intensive training in psychotherapy, such as psychology, psychiatry, psychiatric nursing, or counseling.",
+                  "annotations": [
+                    {
+                      "title": "20 Questions to Ask Your New Therapist | Psychology Today",
+                      "url": "https://www.psychologytoday.com/us/blog/the-recovery-coach/202109/20-questions-ask-your-new-therapist"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n- ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Common credentials include a Licensed Marriage and Family Therapist (LMFT), Licensed Clinical Social Worker (LCSW), a Licensed Professional Counselor (LPC), and several variations of these credentials.",
+                  "annotations": [
+                    {
+                      "title": "Key Questions to Ask Therapist Consultation: Get Prepared",
+                      "url": "https://counselingcentergroup.com/questions-to-ask-therapist-consultation/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n## 🧠 2. Specialization & Experience\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Because therapists specialize in the issues they treat, it's important to uncover if they've had previous experience working with your specific issues. Choosing a therapist with the proper experience can sometimes be much more important than choosing one who has simply been in practice for years.",
+                  "annotations": [
+                    {
+                      "title": "30 Questions to Ask a Therapist During a Consultation — Sage & Sunshine Therapy",
+                      "url": "https://www.sageandsunshinetherapy.com/blog/questions-to-ask-a-therapist-during-consultation"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n- *\"Do you have experience treating [anxiety / trauma / depression / grief / etc.]?\"*\n- ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "It can be helpful to ask potential clinicians about their past work experiences and the people they served. Many therapists have special training in certain areas such as trauma-informed care, neurodiversity, or issues such as substance use or mood disorders.",
+                  "annotations": [
+                    {
+                      "title": "Three Things to Ask Your Next Therapist Before Making An Appointment - Atracare - Premiere, Modern Healthcare",
+                      "url": "https://atracare.com/news/ask-your-therapist/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n## 🛋️ 3. Therapeutic Approach & Style\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Therapists often use different approaches or modalities to guide their practice. Common approaches include Cognitive Behavioral Therapy (CBT), Psychodynamic Therapy, Acceptance and Commitment Therapy (ACT), EMDR, and more. Many therapists have training across several treatment modalities, but most have settled on one or two that they tend to use the most.",
+                  "annotations": [
+                    {
+                      "title": "10 Questions to Ask When Searching for an Individual Therapist",
+                      "url": "https://therapy-mn.com/blog/10-questions-to-ask-when-searching-for-a-therapist/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n- *\"How would you describe your style or approach to therapy?\"*\n- ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Certain types of therapy are more focused on what is happening in the present, past, or future. If you would prefer to talk about past experiences, a therapist who is present-oriented might not guide the conversation in a way you find helpful. If you need someone who can approach tough questions gently, you may not be satisfied with a therapist who is more direct.",
+                  "annotations": [
+                    {
+                      "title": "Three Things to Ask Your Next Therapist Before Making An Appointment - Atracare - Premiere, Modern Healthcare",
+                      "url": "https://atracare.com/news/ask-your-therapist/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n## 💰 4. Fees, Insurance & Sliding Scale\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Therapy can be a significant financial commitment, so it's important to discuss fees upfront. Ask about the cost per session, any sliding fee options, and whether they accept your insurance.",
+                  "annotations": [
+                    {
+                      "title": "10 Questions to Ask When Searching for an Individual Therapist",
+                      "url": "https://therapy-mn.com/blog/10-questions-to-ask-when-searching-for-a-therapist/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n- *\"Do you accept my insurance? What is your out-of-pocket rate?\"*\n- ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "If you are unsure about your benefits or if a provider is in-network, the best place to start is by calling the number on the back of your insurance card. The representative will be able to confirm your copay or coinsurance — the amount you pay if your therapist is in-network — and also explain if you have a deductible.",
+                  "annotations": [
+                    {
+                      "title": "Three Things to Ask Your Next Therapist Before Making An Appointment - Atracare - Premiere, Modern Healthcare",
+                      "url": "https://atracare.com/news/ask-your-therapist/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n- ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Many therapists are willing to be somewhat flexible about their fees, particularly if you have financial hardships. Don't be afraid to ask for a lower fee or to inquire about possible referrals to lower-cost therapy providers.",
+                  "annotations": [
+                    {
+                      "title": "20 Questions to Ask Your New Therapist | Psychology Today",
+                      "url": "https://www.psychologytoday.com/us/blog/the-recovery-coach/202109/20-questions-ask-your-new-therapist"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n## 📅 5. Logistics & Availability\n\n- *\"What are your available appointment times? Do you offer evening or weekend hours?\"*\n- ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Since the pandemic, most therapists now offer online services, but be sure",
+                  "annotations": [
+                    {
+                      "title": "20 Questions to Ask Your New Therapist | Psychology Today",
+                      "url": "https://www.psychologytoday.com/us/blog/the-recovery-coach/202109/20-questions-ask-your-new-therapist"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "questions to ask before choosing a therapist",
+            "finding a therapist in Louisville Kentucky 2025"
+          ]
+        }
+      ]
+    }
+  ]
+}

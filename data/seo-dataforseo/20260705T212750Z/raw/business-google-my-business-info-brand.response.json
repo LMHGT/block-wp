@@ -1,0 +1,487 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.3188 sec.",
+  "cost": 0.0054,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060028-9766-0572-0000-81b67d536482",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.2661 sec.",
+      "cost": 0.0054,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "business_data",
+        "google",
+        "my_business_info",
+        "live"
+      ],
+      "data": {
+        "api": "business_data",
+        "function": "my_business_info",
+        "se": "google",
+        "keyword": "Louisville Mental Health Group",
+        "location_code": 1017825,
+        "language_code": "en",
+        "tag": "lmhg google business profile brand",
+        "se_type": "my_business_info",
+        "device": "desktop",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Louisville Mental Health Group",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/maps?cid=2768315829466915400&hl=en&gl=US",
+          "datetime": "2026-07-05 21:28:30 +00:00",
+          "item_types": [
+            "google_business_info"
+          ],
+          "items_count": 1,
+          "items": [
+            {
+              "type": "google_business_info",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "position": "left",
+              "title": "Louisville Mental Health Group",
+              "original_title": null,
+              "description": "Louisville Mental Health Group provides comprehensive mental health services including counseling, trauma treatment, EMDR, and case management for adults, children, and families throughout Jefferson County and surrounding areas. Our experienced team offers both in-office and in-home therapy, working within a community wrap-around model that extends care to schools, courts, and wherever our clients need support. We specialize in child behavioral intervention, family therapy, couples counseling, and trauma-informed care. With both male and female providers offering diverse expertise, we accept most commercial insurance and Medicaid plans. Our flexible scheduling typically allows new clients to begin treatment within seven days.",
+              "category": "Mental health clinic",
+              "category_ids": [
+                "mental_health_clinic",
+                "counselor",
+                "family_counselor",
+                "mental_health_service",
+                "social_worker"
+              ],
+              "additional_categories": [
+                "Counselor",
+                "Family counselor",
+                "Mental health service",
+                "Social worker"
+              ],
+              "cid": "2768315829466915400",
+              "feature_id": "0x88690b08f3b5f199:0x266b089469776248",
+              "address": "4229 Bardstown Rd Ste 310, Louisville, KY 40218",
+              "address_info": {
+                "borough": null,
+                "address": "4229 Bardstown Rd Ste 310",
+                "city": "Louisville",
+                "zip": "40218",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJmfG18wgLaYgRSGJ3aZQIayY",
+              "phone": "+1502-416-1416",
+              "url": "https://louisvillementalhealth.org/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/108023962124029526389",
+              "book_online_url": null,
+              "domain": "louisvillementalhealth.org",
+              "logo": "https://lh6.googleusercontent.com/-CeP0gCmJq1Q/AAAAAAAAAAI/AAAAAAAAAAA/jW0ZW1ucumo/s44-p-k-no-ns-nd/photo.jpg",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEAz1u-uCCgSYMrlS-nMaldB2zAs9t5vBDgHKu9DPVm_98GiaXnOEy_Y1GCSvE7o8rVlXO4lw8z93ubF9-IxNewyuudrKxXx-w73mg03l9u9y4Sh1wbs1pQ81yYbPI5hTKvaHWz=w408-h544-k-no",
+              "total_photos": 3,
+              "snippet": "4229 Bardstown Rd Ste 310, Louisville, KY 40218",
+              "latitude": 38.1880877,
+              "longitude": -85.6379469,
+              "is_claimed": true,
+              "questions_and_answers_count": null,
+              "attributes": {
+                "available_attributes": {
+                  "from_the_business": [
+                    "is_owned_by_disability",
+                    "is_owned_by_lgbtq",
+                    "is_owned_by_women"
+                  ],
+                  "accessibility": [
+                    "has_wheelchair_accessible_entrance",
+                    "has_wheelchair_accessible_parking",
+                    "has_wheelchair_accessible_restroom"
+                  ],
+                  "amenities": [
+                    "has_restroom"
+                  ],
+                  "crowd": [
+                    "welcomes_lgbtq",
+                    "is_transgender_safespace"
+                  ],
+                  "planning": [
+                    "requires_appointments",
+                    "recommends_appointment"
+                  ],
+                  "children": [
+                    "has_lactation_space"
+                  ],
+                  "parking": [
+                    "has_parking_lot_free",
+                    "has_onsite_parking"
+                  ]
+                },
+                "unavailable_attributes": null
+              },
+              "place_topics": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.4,
+                "votes_count": 19,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 1,
+                "2": 2,
+                "3": 0,
+                "4": 1,
+                "5": 15
+              },
+              "people_also_search": [
+                {
+                  "cid": "17820421987806657233",
+                  "feature_id": "0x0:0xf74edb619ac6bad1",
+                  "title": "Louisville Counseling Associates",
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 5,
+                    "votes_count": 1,
+                    "rating_max": null
+                  }
+                },
+                {
+                  "cid": "11940589728621395907",
+                  "feature_id": "0x0:0xa5b57f181f27ffc3",
+                  "title": "Louisville Behavioral Health",
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 3.3,
+                    "votes_count": 77,
+                    "rating_max": null
+                  }
+                },
+                {
+                  "cid": "9160707147478184474",
+                  "feature_id": "0x0:0x7f215e9d78d1b21a",
+                  "title": "Kentucky Mental Health Care",
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 2.7,
+                    "votes_count": 58,
+                    "rating_max": null
+                  }
+                },
+                {
+                  "cid": "14270489554605532624",
+                  "feature_id": "0x0:0xc60af6a4412f65d0",
+                  "title": "Kentucky Mental Health Services",
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 5,
+                    "votes_count": 1,
+                    "rating_max": null
+                  }
+                },
+                {
+                  "cid": "3518303045403584482",
+                  "feature_id": "0x0:0x30d385faa174a7e2",
+                  "title": "Louisville Health & Healing",
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.5,
+                    "votes_count": 24,
+                    "rating_max": null
+                  }
+                }
+              ],
+              "work_time": {
+                "work_hours": {
+                  "timetable": {
+                    "sunday": null,
+                    "monday": [
+                      {
+                        "open": {
+                          "hour": 8,
+                          "minute": 0
+                        },
+                        "close": {
+                          "hour": 21,
+                          "minute": 0
+                        }
+                      }
+                    ],
+                    "tuesday": [
+                      {
+                        "open": {
+                          "hour": 8,
+                          "minute": 0
+                        },
+                        "close": {
+                          "hour": 21,
+                          "minute": 0
+                        }
+                      }
+                    ],
+                    "wednesday": [
+                      {
+                        "open": {
+                          "hour": 8,
+                          "minute": 0
+                        },
+                        "close": {
+                          "hour": 21,
+                          "minute": 0
+                        }
+                      }
+                    ],
+                    "thursday": [
+                      {
+                        "open": {
+                          "hour": 8,
+                          "minute": 0
+                        },
+                        "close": {
+                          "hour": 21,
+                          "minute": 0
+                        }
+                      }
+                    ],
+                    "friday": [
+                      {
+                        "open": {
+                          "hour": 8,
+                          "minute": 0
+                        },
+                        "close": {
+                          "hour": 21,
+                          "minute": 0
+                        }
+                      }
+                    ],
+                    "saturday": [
+                      {
+                        "open": {
+                          "hour": 9,
+                          "minute": 0
+                        },
+                        "close": {
+                          "hour": 16,
+                          "minute": 0
+                        }
+                      }
+                    ]
+                  },
+                  "current_status": "close"
+                }
+              },
+              "popular_times": null,
+              "local_business_links": null,
+              "is_directory_item": false,
+              "directory": null,
+              "services": [
+                {
+                  "category": "Mental Health Clinic",
+                  "title": "Child Counseling",
+                  "snippet": "We specialize in child therapy services help kids navigate emotional challenges, behavioral issues, and developmental transitions. Our experienced staff use play therapy, cognitive behavioral techniques, and family-centered approaches to treat anything from anxiety or ADHD to trauma recovery.",
+                  "price": null
+                },
+                {
+                  "category": "Mental Health Clinic",
+                  "title": "Family Counseling",
+                  "snippet": "Our family therapy services help strengthen relationships, improve communication, and resolve conflicts within the family unit. Our experienced therapists use systemic approaches and evidence-based techniques to address blended family dynamics, parenting challenges, and family behavioral patterns.",
+                  "price": null
+                },
+                {
+                  "category": "Mental Health Clinic",
+                  "title": "Adult Counseling",
+                  "snippet": "Our counseling services for help individuals navigate life transitions, mental health challenges, and personal growth. Our experienced therapists use evidence-based approaches to treat anxiety, depression, trauma, relationship issues, and work-life stress through individualized treatment plans.",
+                  "price": null
+                },
+                {
+                  "category": "Counselor",
+                  "title": "Trauma Treatment",
+                  "snippet": "Our trauma therapy services help you heal from past experiences using specialized approaches like EMDR and trauma focused CBT. Our trauma-informed counselors provide expert treatment for PTSD, complex trauma, childhood trauma, and emotional wounds in a safe, supportive environment.",
+                  "price": null
+                },
+                {
+                  "category": "Counselor",
+                  "title": "EMDR",
+                  "snippet": "EMDR is effective at helping people process and heal from traumatic experiences, anxiety, and distressing memories. Using this proven approach, our trauma specialists guide clients through bilateral stimulation to reduce emotional distress and develop new adaptive responses.",
+                  "price": null
+                },
+                {
+                  "category": "Counselor",
+                  "title": "Couples Counseling",
+                  "snippet": "Our couples therapy services help partners strengthen their connection, improve communication, and resolve relationship conflicts. Our experienced therapists use proven techniques to address intimacy issues, rebuild trust, and develop healthy relationship patterns and emotional bonds.",
+                  "price": null
+                },
+                {
+                  "category": "Counselor",
+                  "title": "Child Behavioral Intervention",
+                  "snippet": "Our child behavioral intervention services help children develop positive behaviors and emotional regulation skills through evidence-based techniques. Licensed staff address ADHD, oppositional behaviors, social challenges, and school-related issues using structured behavioral strategies.",
+                  "price": null
+                },
+                {
+                  "category": "Counselor",
+                  "title": "Chronic Constipation Treatment",
+                  "snippet": "Chronic Constipation in children (medically known as Encopresis) can be treated by mental health professionals. Tyler Horn, LCSW specializes in the treatment of Chronic Constipation in kids. He is one of the only therapists in the Louisville, Ky area who has this as a speciality,",
+                  "price": null
+                },
+                {
+                  "category": "Social Worker",
+                  "title": "Case Management",
+                  "snippet": "Our community-based case management services help Medicaid clients access essential resources and coordinate care needs. Our case managers provide support with healthcare navigation, community services, treatment planning, and connecting to local resources for improved wellbeing.",
+                  "price": null
+                },
+                {
+                  "category": "Social Worker",
+                  "title": "Therapy in Your Home",
+                  "snippet": "Our in-home therapy services bring mental health care directly to you. Our community therapists provide convenient, personalized counseling for clients who prefer treatment in a familiar environment, or face mobility and transportation challenges.",
+                  "price": null
+                },
+                {
+                  "category": "Social Worker",
+                  "title": "Community Support Associates",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Family Counselor",
+                  "title": "Co-Parenting",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Family Counselor",
+                  "title": "Family Reunification",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Family Counselor",
+                  "title": "Court Ordered Treatment",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Family Counselor",
+                  "title": "Attachment-based Family Therapy",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Family Counselor",
+                  "title": "Parenting Help",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Family Counselor",
+                  "title": "Parental Conflict Resolution",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Family Counselor",
+                  "title": "Family Conflict Resolution",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Family Counselor",
+                  "title": "Therapy for family rebuilding",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Family Counselor",
+                  "title": "Family Reunification Therapy",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Family Counselor",
+                  "title": "Relationship counseling services",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Family Counselor",
+                  "title": "Couples conflict resolution therapy",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Family Counselor",
+                  "title": "family counseling",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Family Counselor",
+                  "title": "Couples Therapy Services",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Mental Health Service",
+                  "title": "Individual therapy for anxiety & depression",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Mental Health Service",
+                  "title": "Trauma-focused EMDR sessions",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Mental Health Service",
+                  "title": "EMDR therapy for PTSD & trauma",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Mental Health Service",
+                  "title": "EMDR therapy sessions",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Mental Health Service",
+                  "title": "EMDR for anxiety & emotional healing",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Mental Health Service",
+                  "title": "Private counseling",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Mental Health Service",
+                  "title": "trauma therapy",
+                  "snippet": null,
+                  "price": null
+                },
+                {
+                  "category": "Mental Health Service",
+                  "title": "One-on-one therapy sessions",
+                  "snippet": null,
+                  "price": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

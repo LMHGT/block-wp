@@ -1,0 +1,1091 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "1.6966 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-2c5218ae88fb",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "1.6077 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "maps",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "maps",
+        "keyword": "mental health services Louisville KY",
+        "location_coordinate": "38.1880877,-85.6379469,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid maps office-bardstown-road mental health services Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "mental health services Louisville KY",
+          "type": "maps",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://google.com/maps/search/mental+health+services+Louisville+KY/@38.1880877,-85.6379469,17z?hl=en&gl=US&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-07-05 21:36:26 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "maps_search"
+          ],
+          "se_results_count": 0,
+          "items_count": 12,
+          "items": [
+            {
+              "type": "maps_search",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "domain": "louisvillementalhealth.org",
+              "title": "Louisville Mental Health Group",
+              "original_title": null,
+              "url": "https://louisvillementalhealth.org/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/108023962124029526389",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.4,
+                "votes_count": 19,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 1,
+                "2": 2,
+                "3": 0,
+                "4": 1,
+                "5": 15
+              },
+              "snippet": "4229 Bardstown Rd Ste 310, Louisville, KY 40218",
+              "address": "4229 Bardstown Rd Ste 310, Louisville, KY 40218",
+              "address_info": {
+                "borough": null,
+                "address": "4229 Bardstown Rd Ste 310",
+                "city": "Louisville",
+                "zip": "40218",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJmfG18wgLaYgRSGJ3aZQIayY",
+              "phone": "+1502-416-1416",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEAz1u-uCCgSYMrlS-nMaldB2zAs9t5vBDgHKu9DPVm_98GiaXnOEy_Y1GCSvE7o8rVlXO4lw8z93ubF9-IxNewyuudrKxXx-w73mg03l9u9y4Sh1wbs1pQ81yYbPI5hTKvaHWz=w408-h544-k-no",
+              "total_photos": 3,
+              "category": "Mental health service",
+              "additional_categories": [
+                "Counselor",
+                "Family counselor",
+                "Mental health clinic",
+                "Social worker"
+              ],
+              "category_ids": [
+                "mental_health_service",
+                "counselor",
+                "family_counselor",
+                "mental_health_clinic",
+                "social_worker"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 21,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 21,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 21,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 21,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 21,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x88690b08f3b5f199:0x266b089469776248",
+              "cid": "2768315829466915400",
+              "latitude": 38.1880877,
+              "longitude": -85.6379469,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"I absolutely love being apart of louisville Mental Health Group!\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "domain": "louisvillementalhealth.org",
+              "title": "Tyler Horn, LCSW",
+              "original_title": null,
+              "url": "https://louisvillementalhealth.org/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/115333971469400606130",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 5,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 5
+              },
+              "snippet": "4229 Bardstown Rd Suite 310, Louisville, KY 40218",
+              "address": "4229 Bardstown Rd Suite 310, Louisville, KY 40218",
+              "address_info": {
+                "borough": null,
+                "address": "4229 Bardstown Rd Suite 310",
+                "city": "Louisville",
+                "zip": "40218",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJh9nSrFYKaYgRfB1OGBhNz4s",
+              "phone": "+1502-416-1416",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFO_vUTbLWnhVpCcDJdEXWwP-NnTMrOYCa5tx7lYfOnp15MzPeX9jyoZJxYOfh8wF72zPqzKfsUyDsrR0tYiM1TnFdI23EToU0ZgZqYU50QcsiKtfbGPsEo93Y2QqQpbm9Ul_5O=w408-h272-k-no",
+              "total_photos": 2,
+              "category": "Mental health clinic",
+              "additional_categories": [
+                "Family counselor",
+                "Social worker"
+              ],
+              "category_ids": [
+                "mental_health_clinic",
+                "family_counselor",
+                "social_worker"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x88690a56acd2d987:0x8bcf4d18184e1d7c",
+              "cid": "10074355657333415292",
+              "latitude": 38.1880877,
+              "longitude": -85.6379469,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "domain": "www.1stpriorityhealthcare.com",
+              "title": "1st Priority Healthcare, LLC",
+              "original_title": null,
+              "url": "http://www.1stpriorityhealthcare.com/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/110614587294665758942",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 3.5,
+                "votes_count": 8,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 3,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 5
+              },
+              "snippet": "4229 Bardstown Rd Ste 201, Louisville, KY 40218",
+              "address": "4229 Bardstown Rd Ste 201, Louisville, KY 40218",
+              "address_info": {
+                "borough": null,
+                "address": "4229 Bardstown Rd Ste 201",
+                "city": "Louisville",
+                "zip": "40218",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJVVWxTFEKaYgRkDxPjKbbsFA",
+              "phone": "+1502-286-6565",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHoUWkXkfsVo9TH3-OPds2NyCdjtHWIN9_NY3NCpZD3GTMezlCfKrdTUzv2U2t8cCGg3UVq_tU-7sy3vS9a4HXzdtnhs1u0GymUU28Be6GiBags0FGXiMC1KM9Xj3lxx4T_Y6bGYw=w408-h271-k-no",
+              "total_photos": 13,
+              "category": "Mental health service",
+              "additional_categories": [
+                "Counselor",
+                "Family counselor"
+              ],
+              "category_ids": [
+                "mental_health_service",
+                "counselor",
+                "family_counselor"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 20,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 20,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 20,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 20,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 20,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 14,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x88690a514cb15555:0x50b0dba68c4f3c90",
+              "cid": "5814388627300367504",
+              "latitude": 38.1880877,
+              "longitude": -85.6379469,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"I told my co-worker about 1st Priority and now she gets therapy there too!\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "domain": "counselinglouisvilleky.com",
+              "title": "The InnerView",
+              "original_title": null,
+              "url": "https://counselinglouisvilleky.com/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/111223777541644168977",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 3.8,
+                "votes_count": 8,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 2,
+                "2": 0,
+                "3": 0,
+                "4": 2,
+                "5": 4
+              },
+              "snippet": "4229 Bardstown Rd #311, Louisville, KY 40218",
+              "address": "4229 Bardstown Rd #311, Louisville, KY 40218",
+              "address_info": {
+                "borough": null,
+                "address": "4229 Bardstown Rd #311",
+                "city": "Louisville",
+                "zip": "40218",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJh9nSrFYKaYgRj1UOWDh_Bbs",
+              "phone": "+1502-499-8010",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=jjP4iyGkgNruunl1V4Piqg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=150.71053&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Family counselor",
+              "additional_categories": null,
+              "category_ids": [
+                "family_counselor"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 12,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 20,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 12,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 20,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 12,
+                        "minute": 30
+                      },
+                      "close": {
+                        "hour": 20,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 12,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 20,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x88690a56acd2d987:0xbb057f38580e558f",
+              "cid": "13476317339948307855",
+              "latitude": 38.1881318,
+              "longitude": -85.6380179,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 5,
+              "rank_absolute": 5,
+              "domain": null,
+              "title": "Louisville Counseling Associates",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 1,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 1
+              },
+              "snippet": "4229 Bardstown Rd #102, Louisville, KY 40218",
+              "address": "4229 Bardstown Rd #102, Louisville, KY 40218",
+              "address_info": {
+                "borough": null,
+                "address": "4229 Bardstown Rd #102",
+                "city": "Louisville",
+                "zip": "40218",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJh9nSrFYKaYgR0brGmmHbTvc",
+              "phone": "+1502-495-1888",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=jjP4iyGkgNruunl1V4Piqg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=150.71053&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Counselor",
+              "additional_categories": null,
+              "category_ids": [
+                "counselor"
+              ],
+              "work_hours": null,
+              "feature_id": "0x88690a56acd2d987:0xf74edb619ac6bad1",
+              "cid": "17820421987806657233",
+              "latitude": 38.1881318,
+              "longitude": -85.6380179,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 6,
+              "rank_absolute": 6,
+              "domain": "www.mymodernpsychiatry.com",
+              "title": "Modern Psychiatry - Kentucky",
+              "original_title": null,
+              "url": "https://www.mymodernpsychiatry.com/louisville-ky",
+              "contact_url": "https://www.mymodernpsychiatry.com/get-started",
+              "contributor_url": "https://maps.google.com/maps/contrib/104816669102315468183",
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "4229 Bardstown Rd #203, Louisville, KY 40218",
+              "address": "4229 Bardstown Rd #203, Louisville, KY 40218",
+              "address_info": {
+                "borough": null,
+                "address": "4229 Bardstown Rd #203",
+                "city": "Louisville",
+                "zip": "40218",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ7VVfupQLaYgRYZYctvNm-oo",
+              "phone": "+1502-753-4134",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=jjP4iyGkgNruunl1V4Piqg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=150.71053&pitch=0&thumbfov=100",
+              "total_photos": 2,
+              "category": "Psychiatrist",
+              "additional_categories": null,
+              "category_ids": [
+                "psychiatrist"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x88690b94ba5f55ed:0x8afa66f3b61c9661",
+              "cid": "10014429918330132065",
+              "latitude": 38.1881318,
+              "longitude": -85.6380179,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 7,
+              "rank_absolute": 7,
+              "domain": null,
+              "title": "Baker Sarah L",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "4229 Bardstown Rd #102, Louisville, KY 40218",
+              "address": "4229 Bardstown Rd #102, Louisville, KY 40218",
+              "address_info": {
+                "borough": null,
+                "address": "4229 Bardstown Rd #102",
+                "city": "Louisville",
+                "zip": "40218",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJh9nSrFYKaYgReAIj_dW55Os",
+              "phone": "+1502-495-1888",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=jjP4iyGkgNruunl1V4Piqg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=150.71053&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Social worker",
+              "additional_categories": null,
+              "category_ids": [
+                "social_worker"
+              ],
+              "work_hours": null,
+              "feature_id": "0x88690a56acd2d987:0xebe4b9d5fd230278",
+              "cid": "16997915222329197176",
+              "latitude": 38.1881318,
+              "longitude": -85.6380179,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 8,
+              "rank_absolute": 8,
+              "domain": null,
+              "title": "Susan Diemer",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "4229 Bardstown Rd, Louisville, KY 40218",
+              "address": "4229 Bardstown Rd, Louisville, KY 40218",
+              "address_info": {
+                "borough": null,
+                "address": "4229 Bardstown Rd",
+                "city": "Louisville",
+                "zip": "40218",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJpbv3bjanaYgRYdPotk_e0Nk",
+              "phone": "+1502-630-2018",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=3iy93Wwy06EBXALUeiwYrg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=207.85172&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Psychosocial therapist",
+              "additional_categories": [
+                "Practitioner service location"
+              ],
+              "category_ids": [
+                "psychosocial_therapist",
+                "practitioner_service_location"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": null,
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 14,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 14,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 14,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 14,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x8869a7366ef7bba5:0xd9d0de4fb6e8d361",
+              "cid": "15695289135338672993",
+              "latitude": 38.1883049,
+              "longitude": -85.6374579,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 9,
+              "rank_absolute": 9,
+              "domain": "louisvillecounseling.weebly.com",
+              "title": "Lisa Mcnear",
+              "original_title": null,
+              "url": "https://louisvillecounseling.weebly.com/",
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "4229 Bardstown Rd Ste 102, Louisville, KY 40218",
+              "address": "4229 Bardstown Rd Ste 102, Louisville, KY 40218",
+              "address_info": {
+                "borough": null,
+                "address": "4229 Bardstown Rd Ste 102",
+                "city": "Louisville",
+                "zip": "40218",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJVVWxTFEKaYgRP028OwSmD1k",
+              "phone": "+1502-495-1888",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=3iy93Wwy06EBXALUeiwYrg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=207.85172&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Counselor",
+              "additional_categories": [
+                "Practitioner service location"
+              ],
+              "category_ids": [
+                "counselor",
+                "practitioner_service_location"
+              ],
+              "work_hours": null,
+              "feature_id": "0x88690a514cb15555:0x590fa6043bbc4d3f",
+              "cid": "6417530531138522431",
+              "latitude": 38.1883049,
+              "longitude": -85.6374579,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 10,
+              "rank_absolute": 10,
+              "domain": "www.counselinglouisvilleky.com",
+              "title": "Parrish Mark A",
+              "original_title": null,
+              "url": "http://www.counselinglouisvilleky.com/",
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "4229 Bardstown Rd #311, Louisville, KY 40218",
+              "address": "4229 Bardstown Rd #311, Louisville, KY 40218",
+              "address_info": {
+                "borough": null,
+                "address": "4229 Bardstown Rd #311",
+                "city": "Louisville",
+                "zip": "40218",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJh9nSrFYKaYgRKKdUEalt_yI",
+              "phone": "+1502-499-8010",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=jjP4iyGkgNruunl1V4Piqg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=150.71053&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Marriage or relationship counselor",
+              "additional_categories": null,
+              "category_ids": [
+                "marriage_counselor"
+              ],
+              "work_hours": null,
+              "feature_id": "0x88690a56acd2d987:0x22ff6da91154a728",
+              "cid": "2521854889258428200",
+              "latitude": 38.1881318,
+              "longitude": -85.6380179,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 11,
+              "rank_absolute": 11,
+              "domain": null,
+              "title": "Kathryn M. Miller, LMFT",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": "4229 Bardstown Rd, Louisville, KY 40218",
+              "address": "4229 Bardstown Rd, Louisville, KY 40218",
+              "address_info": {
+                "borough": null,
+                "address": "4229 Bardstown Rd",
+                "city": "Louisville",
+                "zip": "40218",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJh9nSrFYKaYgRQ63xZQta2pk",
+              "phone": "+1502-499-8010",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=zn9ed1VD7ZAlB4NSvRrCZg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=139.26332&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "Marriage or relationship counselor",
+              "additional_categories": null,
+              "category_ids": [
+                "marriage_counselor"
+              ],
+              "work_hours": null,
+              "feature_id": "0x88690a56acd2d987:0x99da5a0b65f1ad43",
+              "cid": "11086272437727374659",
+              "latitude": 38.188336,
+              "longitude": -85.63789799999999,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 12,
+              "rank_absolute": 12,
+              "domain": "www.haffnertherapy.com",
+              "title": "Thomas L. Haffner, LMFT, LLC",
+              "original_title": null,
+              "url": "http://www.haffnertherapy.com/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/102028710012238998284",
+              "book_online_url": null,
+              "rating": null,
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": null,
+              "snippet": null,
+              "address": null,
+              "address_info": {
+                "borough": null,
+                "address": null,
+                "city": null,
+                "zip": null,
+                "region": null,
+                "country_code": null
+              },
+              "place_id": "ChIJl5qehQ8NaYgRsfZOFlD7wfg",
+              "phone": "+1502-296-6706",
+              "main_image": null,
+              "total_photos": null,
+              "category": "Psychotherapist",
+              "additional_categories": [
+                "Counselor",
+                "Service establishment",
+                "Marriage or relationship counselor"
+              ],
+              "category_ids": [
+                "psychotherapist",
+                "counselor",
+                "establishment_service",
+                "marriage_counselor"
+              ],
+              "work_hours": null,
+              "feature_id": "0x88690d0f859e9a97:0xf8c1fb50164ef6b1",
+              "cid": "17924884313301513905",
+              "latitude": 37.822395,
+              "longitude": -85.76799559999999,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

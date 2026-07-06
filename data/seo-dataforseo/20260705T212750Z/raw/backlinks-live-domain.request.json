@@ -1,0 +1,13 @@
+{
+  "name": "backlinks-live-domain",
+  "path": "/v3/backlinks/backlinks/live",
+  "body": [
+    {
+      "target": "louisvillementalhealth.org",
+      "limit": 100,
+      "include_subdomains": true,
+      "backlinks_status_type": "all",
+      "tag": "lmhg backlinks detail all"
+    }
+  ]
+}

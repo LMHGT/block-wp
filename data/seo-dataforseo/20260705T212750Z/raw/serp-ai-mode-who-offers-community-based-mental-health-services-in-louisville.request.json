@@ -1,0 +1,15 @@
+{
+  "name": "serp-ai-mode-Who offers community based mental health services in Louisville?",
+  "method": "POST",
+  "path": "/v3/serp/google/ai_mode/live/advanced",
+  "body": [
+    {
+      "keyword": "Who offers community based mental health services in Louisville?",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "tag": "lmhg ai mode Who offers community based mental health services in Louisville?"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:18.500077+00:00"
+}

@@ -1,0 +1,93 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "5.2676 sec.",
+  "cost": 0.006286,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-35dc85c2e2f9",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "5.2489 sec.",
+      "cost": 0.006286,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "perplexity",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "perplexity",
+        "user_prompt": "Compare local outpatient mental health providers in Louisville.",
+        "model_name": "sonar",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response perplexity Compare local outpatient mental health providers in Louisville.",
+        "max_output_tokens": 700
+      },
+      "result": [
+        {
+          "model_name": "sonar",
+          "input_tokens": 34,
+          "output_tokens": 652,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.005686,
+          "datetime": "2026-07-06 00:32:09 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "The top local outpatient mental health providers in Louisville include **LifeStance Health**, **Kentucky Counseling Center**, **Seven Counties Services**, **Baptist Health Louisville**, and **UofL Health**, each offering distinct outpatient levels of care.\n\n### Key Provider Comparison\n\n| Provider | Outpatient Services Offered | Location | Telehealth | Contact |\n| :--- | :--- | :--- | :--- | :--- |\n| **LifeStance Health** | Therapy & Psychiatry (In-person & Telehealth) | 100 Executive Park, Suite 103, Louisville, KY 40207 [2] | Yes [2] | 502-313-6880 [2] |\n| **Kentucky Counseling Center** | Counseling, Psychiatry, Case Management (In-person & Telehealth) | 1169 Eastern Pkwy #3328, Highlands, Louisville, KY 40217 [3] | Yes [3] | (Site: kentuckycounselingcenter.com) [3] |\n| **Seven Counties Services** | Community Mental Health Center services (Jefferson County) | Serves Jefferson County (Louisville) [5] | Likely (as CMHC) [5] | (Site: sevencounties.org) [5] |\n| **Baptist Health Louisville** | Intensive Outpatient Program (IOP), Partial Hospitalization | 4000 Kresge Way, Louisville, KY 40207 [1] | No (IOP is day sessions) [1] | 502-896-7105 (24-hr Access) [1] |\n| **UofL Health** | Adult Outpatient Services, Therapy, Art Therapy | Louisville, KY [4] | Yes (implied by system) [4] | 502-451-3333 (Peace Hospital for assessment) [4] |\n| **The Brook Hospitals** | Intensive Outpatient, Partial Hospitalization | Dupont & KMI locations, Louisville, KY [6] | No (Structured in-person) [6] | (Site: thebrookhospitals.com) [6] |\n| **Louisville Behavioral Health Systems** | Medication Management, TMS, Therapy | Louisville, KY [7] | Likely | (Site: louisvillebehavioral.com) [7] |\n| **Norton Healthcare** | Outpatient Mental Health Care | Kentucky & Indiana region [8] | Yes (coordinated care) [8] | (Site: nortonhealthcare.com) [8] |\n\n### Detailed Provider Highlights\n\n*   **LifeStance Health** is a full-service clinic offering both in-person and online visits with psychiatrists and therapists, rated 4.9/5 from 506 reviews [2]. It is convenient for those needing flexible scheduling [2].\n*   **Kentucky Counseling Center** specializes in individual, group, family, and couples counseling, plus targeted case management (TCM) for social services like housing and transportation [3]. Their Louisville Highlands office is a key local hub [3].\n*   **Seven Counties Services** is Kentucky’s leading Community Mental Health Center, serving Jefferson County (Louisville)",
+                  "annotations": [
+                    {
+                      "title": "Behavioral & Mental Health Intensive Outpatient Programs",
+                      "url": "https://www.baptisthealth.com/care-services/services/behavioral-health/services-and-programs/intensive-outpatient-programs"
+                    },
+                    {
+                      "title": "Therapy & Psychiatry in Louisville, KY - 100 Executive Park",
+                      "url": "https://lifestance.com/location/louisville-ky-100-executive-park/"
+                    },
+                    {
+                      "title": "Kentucky Counseling Center: Mental Health Counseling and ...",
+                      "url": "https://kentuckycounselingcenter.com"
+                    },
+                    {
+                      "title": "Mental and Behavioral Health | Louisville KY - UofL Health",
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/"
+                    },
+                    {
+                      "title": "Seven Counties Services | Mental Health, Addiction Recovery ...",
+                      "url": "https://sevencounties.org"
+                    },
+                    {
+                      "title": "Mental Health Treatment | The Brook Hospitals | Louisville, KY",
+                      "url": "https://thebrookhospitals.com"
+                    },
+                    {
+                      "title": "Louisville Behavioral Health Systems, PLLC | Get Back to Living Well",
+                      "url": "https://louisvillebehavioral.com"
+                    },
+                    {
+                      "title": "Kentucky and Indiana Mental Health Care - Norton Healthcare",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": null
+        }
+      ]
+    }
+  ]
+}

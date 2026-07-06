@@ -1,0 +1,259 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "21.5376 sec.",
+  "cost": 0.081769,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060038-9766-0612-0000-f9afdba16ff1",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "21.4766 sec.",
+      "cost": 0.081769,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "claude",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "claude",
+        "user_prompt": "Which Louisville providers help teens with anxiety, depression, or trauma?",
+        "model_name": "claude-sonnet-4-6",
+        "web_search": true,
+        "max_output_tokens": 1024,
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response claude Which Louisville providers help teens with anxiety, depression, or trauma?"
+      },
+      "result": [
+        {
+          "model_name": "claude-sonnet-4-6",
+          "input_tokens": 18028,
+          "output_tokens": 1139,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.081169,
+          "datetime": "2026-07-06 00:39:19 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here is a roundup of Louisville-area providers who specialize in helping teens with **anxiety, depression, and trauma**:\n\n---\n\n## 🧠 Louisville Teen Mental Health Providers\n\n---\n\n### 1. 🏅 Grace Psychological Services\n**Website:** [louisvillegracepsychological.com](https://louisvillegracepsychological.com/teen-therapy-louisville/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Their Louisville teen therapists specialize in therapy for adolescents aged 13–17, using Trauma-Focused Cognitive Behavioral Therapy (TF-CBT).",
+                  "annotations": [
+                    {
+                      "title": "Teen Therapy in Louisville, KY | Expert Counseling for Teens",
+                      "url": "https://louisvillegracepsychological.com/teen-therapy-louisville/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They deliver CBT, DBT, and family therapy in-person or online, ensuring accessibility for families in the Louisville area and beyond.",
+                  "annotations": [
+                    {
+                      "title": "Teen Therapy in Louisville, KY | Expert Counseling for Teens",
+                      "url": "https://louisvillegracepsychological.com/teen-therapy-louisville/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They are a veteran-owned practice and offer flexible, HIPAA-compliant teletherapy via platforms like Zoom.",
+                  "annotations": [
+                    {
+                      "title": "Teen Therapy in Louisville, KY | Expert Counseling for Teens",
+                      "url": "https://louisvillegracepsychological.com/teen-therapy-louisville/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 2. 🤝 Counseling Unconditionally\n**Website:** [counselingunconditionally.com](https://counselingunconditionally.com/teen-therapist-louisville-ky/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Their approach is tailored to meet the unique needs of teenagers, blending traditional therapeutic techniques with language and interventions that resonate with them. Whether dealing with anxiety, depression, social issues, trauma, or self-esteem struggles, their goal is to empower teens and instill hope and resilience.",
+                  "annotations": [
+                    {
+                      "title": "Teen Therapist Louisville KY | Licensed Therapists & Counselors",
+                      "url": "https://counselingunconditionally.com/teen-therapist-louisville-ky/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Their professional counselors are highly trained in a variety of therapeutic modalities, ensuring a diverse range of interventions and services.",
+                  "annotations": [
+                    {
+                      "title": "Teen Therapist Louisville KY | Licensed Therapists & Counselors",
+                      "url": "https://counselingunconditionally.com/teen-therapist-louisville-ky/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 3. 🌱 New Hope Counseling\n**Website:** [newhopecounselingsite.com](https://newhopecounselingsite.com/therapists/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Therapist Lindsey Smith has been a child, adolescent, and young adult therapist for over 10 years, with extensive experience in anxiety, depression, PTSD, autism spectrum disorder, ADHD, and other mood disorders.",
+                  "annotations": [
+                    {
+                      "title": "Licensed Therapists Louisville Kentucky, New Hope Counseling",
+                      "url": "https://newhopecounselingsite.com/therapists/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "She is a certified practitioner of Trauma-Focused Cognitive Behavioral Therapy (TF-CBT) for children, trained in Motivational Interviewing, Parent-Child Interaction Therapy (PCIT), CBT, and EMDR.",
+                  "annotations": [
+                    {
+                      "title": "Licensed Therapists Louisville Kentucky, New Hope Counseling",
+                      "url": "https://newhopecounselingsite.com/therapists/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " They also have therapists who specialize in trauma and substance use for teens, ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "using evidence-based practices including EMDR, CBT, and Internal Family Systems (IFS-informed) approaches.",
+                  "annotations": [
+                    {
+                      "title": "Licensed Therapists Louisville Kentucky, New Hope Counseling",
+                      "url": "https://newhopecounselingsite.com/therapists/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 4. 🏥 Cultivate Behavioral Health & Education (Louisville)\n**Website:** [cultivatebhe.com](https://cultivatebhe.com/locations/kentucky/louisville-ky-mental-health/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Therapist Sherman has over 8 years of experience in the field and enjoys working with teenagers and young adults, particularly in the areas of mood disorders, anxiety, and trauma.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Therapy in Louisville (Mental Health), KY | Autism Treatment - Cultivate BHE",
+                      "url": "https://cultivatebhe.com/locations/kentucky/louisville-ky-mental-health/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Their psychotherapy services are designed to address a wide range of needs, from anxiety and depression to relationship challenges, with a client-focused approach.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Therapy in Louisville (Mental Health), KY | Autism Treatment - Cultivate BHE",
+                      "url": "https://cultivatebhe.com/locations/kentucky/louisville-ky-mental-health/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Their telehealth options make it easy to access professional care from anywhere in Kentucky.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Therapy in Louisville (Mental Health), KY | Autism Treatment - Cultivate BHE",
+                      "url": "https://cultivatebhe.com/locations/kentucky/louisville-ky-mental-health/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 5. 🏢 Kentucky Mental Health Care (KMHC)\n**Website:** [kentuckymentalhealth.com](https://kentuckymentalhealth.com/therapy-in-louisville/)\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Kentucky Mental Health Care is a multidisciplinary therapy center with a team of experienced experts and psychologists in Louisville, offering a wide range of therapy, psychiatric, and counseling services.",
+                  "annotations": [
+                    {
+                      "title": "Therapy – Kentucky Mental Health Care",
+                      "url": "https://kentuckymentalhealth.com/therapy-in-louisville/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Areas they cover include depression, anxiety, bipolar disorder, PTSD, OCD, trauma, grief, and more.",
+                  "annotations": [
+                    {
+                      "title": "Therapy – Kentucky Mental Health Care",
+                      "url": "https://kentuckymentalhealth.com/therapy-in-louisville/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "Louisville Kentucky teen adolescent anxiety depression trauma therapy providers 2024",
+            "Louisville KY mental health counseling teenagers anxiety depression trauma 2025"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "labs-serp-competitors-core",
+  "path": "/v3/dataforseo_labs/google/serp_competitors/live",
+  "body": [
+    {
+      "keywords": [
+        "therapy Louisville KY",
+        "therapist Louisville KY",
+        "counseling Louisville KY",
+        "mental health services Louisville KY",
+        "family therapy Louisville KY",
+        "child therapy Louisville KY",
+        "case management Louisville KY",
+        "group therapy Louisville KY",
+        "community based mental health services Louisville KY",
+        "in home therapy Louisville KY",
+        "Medicaid therapist Louisville KY",
+        "outpatient mental health Louisville KY"
+      ],
+      "location_code": 2840,
+      "language_code": "en",
+      "limit": 100,
+      "tag": "lmhg serp competitors core"
+    }
+  ]
+}

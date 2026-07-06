@@ -1,0 +1,13 @@
+{
+  "name": "serp-ai-mode-expanded-Which Louisville mental health websites have useful service and referral information?",
+  "path": "/v3/serp/google/ai_mode/live/advanced",
+  "body": [
+    {
+      "keyword": "Which Louisville mental health websites have useful service and referral information?",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "tag": "lmhg ai mode expanded Which Louisville mental health websites have useful service and referral informa"
+    }
+  ]
+}

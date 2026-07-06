@@ -1,0 +1,16 @@
+{
+  "name": "serp-organic-desktop-play therapy Louisville KY",
+  "method": "POST",
+  "path": "/v3/serp/google/organic/live/advanced",
+  "body": [
+    {
+      "keyword": "play therapy Louisville KY",
+      "location_code": 1017825,
+      "language_code": "en",
+      "device": "desktop",
+      "depth": 20,
+      "tag": "lmhg organic desktop play therapy Louisville KY"
+    }
+  ],
+  "started_at": "2026-07-05T21:28:00.446539+00:00"
+}

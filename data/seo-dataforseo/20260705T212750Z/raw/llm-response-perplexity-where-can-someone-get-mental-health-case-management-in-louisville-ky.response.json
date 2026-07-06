@@ -1,0 +1,97 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.6830 sec.",
+  "cost": 0.00619,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-62e131a69acf",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.6543 sec.",
+      "cost": 0.00619,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "perplexity",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "perplexity",
+        "user_prompt": "Where can someone get mental health case management in Louisville, KY?",
+        "model_name": "sonar",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response perplexity Where can someone get mental health case management in Louisville, KY?",
+        "max_output_tokens": 700
+      },
+      "result": [
+        {
+          "model_name": "sonar",
+          "input_tokens": 38,
+          "output_tokens": 552,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.00559,
+          "datetime": "2026-07-06 00:32:07 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Someone can get mental health case management in Louisville, KY through several local providers, including **Louisville Mental Health Group**, **Best Life Mental Health Services**, **Wellspring**, **Autism Behavior Support Services**, and **Seven Counties Services**[1][2][3][4][5].\n\nHere are the key options with details on eligibility and contact methods:\n\n| Provider | Service Type | Eligibility | Contact Info |\n|----------|--------------|-------------|--------------|\n| **Louisville Mental Health Group** | General Case Management | Open to all; assists with housing, employment, medical care, transportation[1] | Visit [louisvillementalhealth.org/case-management/](https://louisvillementalhealth.org/case-management/) |\n| **Best Life Mental Health Services** | Targeted Case Management | **Medicaid members** with a qualified mental health diagnosis (social/emotional disorders)[2] | Call **(502) 333-9466** or visit [bestlifelouisville.com/case-management/](https://www.bestlifelouisville.com/case-management/) |\n| **Wellspring** | Case Management for Mentally Ill Patients | Adults with **serious mental illness**[3] | Visit [wellspringky.org/case-management/](https://wellspringky.org/case-management/) |\n| **Autism Behavior Support Services** | Targeted Case Management | **Medicaid-funded**; for children with severe emotional disabilities, adults with serious mental illness, or substance use disorders[4] | Visit [cultivatebhe.com/targeted-case-management/](https://cultivatebhe.com/targeted-case-management/) |\n| **Seven Counties Services** | General Case Management | **Everyone** regardless of diagnosis or insurance status[5] | Call **(502) 589-1100** or request an appointment online at [sevencounties.org](https://sevencounties.org) |\n\n**Additional Notes:**\n- If you or someone you know is in crisis, the **988 Suicide & Crisis Lifeline** is available 24/7[5].\n- For longer-term treatment needs, providers like **Norton Healthcare** can connect you to community-based long-term behavioral health providers[6].\n- The **Kentucky Department for Behavioral Health, Developmental and Intellectual Disabilities** administers state and federally funded programs for mental health and substance use[8].\n\nFor immediate assistance, **Seven Counties Services** is a strong starting point as they serve all individuals regardless of insurance[5]. If you have Medicaid, **Best Life** or **Autism Behavior Support Services** may offer specialized targeted case management[2][4].",
+                  "annotations": [
+                    {
+                      "title": "Case Management | Louisville Mental Health Group",
+                      "url": "https://louisvillementalhealth.org/case-management/"
+                    },
+                    {
+                      "title": "Targeted Case Management - Best Life Mental Health Services, LLC",
+                      "url": "https://www.bestlifelouisville.com/case-management/"
+                    },
+                    {
+                      "title": "Case Management for Mentally Ill Patients - Wellspring",
+                      "url": "https://wellspringky.org/case-management/"
+                    },
+                    {
+                      "title": "Targeted Case Management - Autism Behavior Support Services for ...",
+                      "url": "https://cultivatebhe.com/targeted-case-management/"
+                    },
+                    {
+                      "title": "What is Case Management? - Seven Counties Services",
+                      "url": "https://sevencounties.org/resources/blog/what-is-case-management/"
+                    },
+                    {
+                      "title": "Behavioral Medicine Services | Norton Healthcare Louisville, Ky.",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/services/"
+                    },
+                    {
+                      "title": "Behavioral health case manager jobs in Louisville, KY - Indeed",
+                      "url": "https://www.indeed.com/q-behavioral-health-case-manager-l-louisville,-ky-jobs.html"
+                    },
+                    {
+                      "title": "Department for Behavioral Health - Cabinet for Health and Family ...",
+                      "url": "https://dbhdid.ky.gov"
+                    },
+                    {
+                      "title": "Case management – Kentucky Mental Health Care",
+                      "url": "https://kentuckymentalhealth.com/kentucky-case-management/"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": null
+        }
+      ]
+    }
+  ]
+}

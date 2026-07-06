@@ -1,0 +1,101 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "5.6002 sec.",
+  "cost": 0.0063,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-420e6b34095e",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "5.5895 sec.",
+      "cost": 0.0063,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "perplexity",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "perplexity",
+        "user_prompt": "What are good therapy options in Louisville for anxiety and depression?",
+        "model_name": "sonar",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response perplexity What are good therapy options in Louisville for anxiety and depression?",
+        "max_output_tokens": 700
+      },
+      "result": [
+        {
+          "model_name": "sonar",
+          "input_tokens": 37,
+          "output_tokens": 663,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.0057,
+          "datetime": "2026-07-06 00:32:08 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "For anxiety and depression in Louisville, **Grace Psychological Services**, **The Kentucky Center for Anxiety and Related Disorders (KY-CARDS)**, and **Psychology Today’s Louisville anxiety therapist directory** are top-rated options that use evidence-based treatments like **Cognitive Behavioral Therapy (CBT)** and **Exposure Therapy** [1][2][3].\n\n### Key Therapy Options in Louisville\n\n| Provider | Specialties | Treatment Approaches | Contact / Location |\n|----------|-------------|----------------------|--------------------|\n| **Grace Psychological Services** | Anxiety, panic, overthinking | CBT (gold standard), mindfulness, exposure therapy | [louisvillegracepsychological.com](https://louisvillegracepsychological.com/anxiety-therapy-treatment/) • Face-to-face & online (HIPAA-compliant) [2] |\n| **KY-CARDS (NSAC Louisville)** | Anxiety, OCD, social anxiety, phobias | CBT, ERP, Unified Protocol, VRET, one-week intensives | 4205 Springhurst Blvd., Suite 202, Louisville • (502) 618-2060 • [kycards.com](https://kycards.com) [3][6] |\n| **Psychology Today – Louisville Anxiety Therapists** | Anxiety, depression, trauma, substance use | CBT, mindfulness, IFS, ACT, DBT | Multiple licensed therapists (e.g., Linda L. Stark, Tabitha Overstreet, Erin Hightower) • (502) 401-1849 [1] |\n| **Dr. Katie DeShields** | Anxiety in adults | IFS, ACT | Online in 43 states • (502) 681-7330 • [katiedeshields.com](https://katiedeshields.com) [4] |\n| **Be Well Kentucky** | Anxiety, depression, OCD, eating disorders | CBT, ERP, CPT, DBT | Louisville & Lexington clinics • (502) 338-0608 • [bewellkentucky.com](https://bewellkentucky.com) [8] |\n| **Brightside** | Online anxiety & depression care | Medication + therapy (telehealth) | Nationwide online • Free assessment • [brightside.com](https://www.brightside.com/psychiatrist-near-me/kentucky/louisville/) [7] |\n\n### Recommended First Steps\n- If you prefer **in-person, specialized care** for anxiety/OCD, start with **KY-CARDS**, which offers one-week intensive programs and virtual reality exposure therapy [3][6].\n- For **general anxiety and depression with CBT**, **Grace Psychological Services** is a strong local choice with both in-office and telehealth options [2].\n- To **browse multiple licensed therapists** and match by availability, insurance, or specialty, use **Psychology Today’s Louisville directory** [1].\n- For **online-only care** with medication management, **Brightside** connects you with licensed providers across Kentucky [7].\n\nAll listed providers offer **HIPAA-compliant telehealth** if you prefer remote sessions. For immediate support, call **911** or the **Kentucky Crisis Line** at 1",
+                  "annotations": [
+                    {
+                      "title": "Anxiety Therapists in Louisville, KY - Psychology Today",
+                      "url": "https://www.psychologytoday.com/us/therapists/ky/louisville?category=anxiety"
+                    },
+                    {
+                      "title": "Anxiety Therapy Louisville, KY | Grace Psychological Services",
+                      "url": "https://louisvillegracepsychological.com/anxiety-therapy-treatment/"
+                    },
+                    {
+                      "title": "SOCIAL ANXIETY THERAPY LOUISVILLE",
+                      "url": "https://nationalsocialanxietycenter.com/regional-clinics/national-social-anxiety-center-louisville/"
+                    },
+                    {
+                      "title": "Dr. Katie DeShields: Psychologist & Therapist in Louisville, KY ...",
+                      "url": "https://katiedeshields.com"
+                    },
+                    {
+                      "title": "Top Rated Cognitive Behavioral Therapy (CBT) Therapists in ...",
+                      "url": "https://www.sondermind.com/provider-directory/sta-ky/cty-louisville/tap-cognitive%20behavioral%20therapy%20%2528cbt%2529"
+                    },
+                    {
+                      "title": "KY Cards: Anxiety and OCD Treatment in Kentucky",
+                      "url": "https://kycards.com"
+                    },
+                    {
+                      "title": "Top Psychiatrists in Louisville for Anxiety & Depression Treatment",
+                      "url": "https://www.brightside.com/psychiatrist-near-me/kentucky/louisville/"
+                    },
+                    {
+                      "title": "Kentucky Therapists - Be Well Kentucky | Louisville, Lexington ...",
+                      "url": "https://bewellkentucky.com"
+                    },
+                    {
+                      "title": "Top Counseling in Louisville: Your Guide to Finding the Right ...",
+                      "url": "https://counselingnow.com/ky-local-counseling/top-counseling-in-louisville/"
+                    },
+                    {
+                      "title": "Online Counseling & Telehealth | Louisville | Mindsight Behavioral ...",
+                      "url": "https://www.mindsightbehavioral.com/counseling-louisville-ky"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": null
+        }
+      ]
+    }
+  ]
+}

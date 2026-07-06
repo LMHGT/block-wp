@@ -1,0 +1,1050 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.0530 sec.",
+  "cost": 0.01872,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060039-9766-0383-0000-2b99de3ebcc9",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.0456 sec.",
+      "cost": 0.01872,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "dataforseo_labs",
+        "google",
+        "serp_competitors",
+        "live"
+      ],
+      "data": {
+        "api": "dataforseo_labs",
+        "function": "serp_competitors",
+        "se_type": "google",
+        "keywords": [
+          "therapy Louisville KY",
+          "therapist Louisville KY",
+          "counseling Louisville KY",
+          "mental health services Louisville KY",
+          "family therapy Louisville KY",
+          "child therapy Louisville KY",
+          "case management Louisville KY",
+          "group therapy Louisville KY",
+          "community based mental health services Louisville KY",
+          "in home therapy Louisville KY",
+          "Medicaid therapist Louisville KY",
+          "outpatient mental health Louisville KY"
+        ],
+        "location_code": 2840,
+        "language_code": "en",
+        "limit": 100,
+        "tag": "lmhg serp competitors core"
+      },
+      "result": [
+        {
+          "se_type": "google",
+          "seed_keywords": [
+            "therapy louisville ky",
+            "therapist louisville ky",
+            "counseling louisville ky",
+            "mental health services louisville ky",
+            "family therapy louisville ky",
+            "child therapy louisville ky",
+            "case management louisville ky",
+            "group therapy louisville ky",
+            "community based mental health services louisville ky",
+            "in home therapy louisville ky",
+            "medicaid therapist louisville ky",
+            "outpatient mental health louisville ky"
+          ],
+          "location_code": 2840,
+          "language_code": "en",
+          "total_count": 56,
+          "items_count": 56,
+          "items": [
+            {
+              "se_type": "google",
+              "domain": "kentuckycounselingcenter.com",
+              "avg_position": 3,
+              "median_position": 1,
+              "rating": 291,
+              "etv": 1013.76,
+              "keywords_count": 2,
+              "visibility": 2.4,
+              "relevant_serp_items": 3,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  1
+                ],
+                "therapist louisville ky": [
+                  1,
+                  7
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "louisvillegracepsychological.com",
+              "avg_position": 10.333333333333334,
+              "median_position": 10,
+              "rating": 269,
+              "etv": 281.59999999999997,
+              "keywords_count": 2,
+              "visibility": 1.05,
+              "relevant_serp_items": 3,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  10
+                ],
+                "therapist louisville ky": [
+                  2,
+                  19
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.psychologytoday.com",
+              "avg_position": 1,
+              "median_position": 1,
+              "rating": 198,
+              "etv": 972.8,
+              "keywords_count": 2,
+              "visibility": 2,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  1
+                ],
+                "therapist louisville ky": [
+                  1
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "lifestance.com",
+              "avg_position": 2,
+              "median_position": 2,
+              "rating": 196,
+              "etv": 518.4,
+              "keywords_count": 2,
+              "visibility": 1.8,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  2
+                ],
+                "therapist louisville ky": [
+                  2
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.thecorecounseling.com",
+              "avg_position": 3,
+              "median_position": 3,
+              "rating": 194,
+              "etv": 311.36,
+              "keywords_count": 2,
+              "visibility": 1.6,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  3
+                ],
+                "therapist louisville ky": [
+                  3
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "newhopecounselingsite.com",
+              "avg_position": 3.5,
+              "median_position": 3,
+              "rating": 193,
+              "etv": 261.12,
+              "keywords_count": 2,
+              "visibility": 1.5,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  4
+                ],
+                "therapist louisville ky": [
+                  3
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.bridgemindbody.com",
+              "avg_position": 4,
+              "median_position": 3,
+              "rating": 192,
+              "etv": 230.72,
+              "keywords_count": 2,
+              "visibility": 1.4,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  3
+                ],
+                "therapist louisville ky": [
+                  5
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.renewcounselingservices.org",
+              "avg_position": 5.5,
+              "median_position": 5,
+              "rating": 189,
+              "etv": 129.12,
+              "keywords_count": 2,
+              "visibility": 1.1,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  5
+                ],
+                "therapist louisville ky": [
+                  6
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "northstarcounselingcenter.com",
+              "avg_position": 7,
+              "median_position": 6,
+              "rating": 186,
+              "etv": 85.6,
+              "keywords_count": 2,
+              "visibility": 0.8,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  6
+                ],
+                "therapist louisville ky": [
+                  8
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.therapyden.com",
+              "avg_position": 9,
+              "median_position": 8,
+              "rating": 182,
+              "etv": 49.599999999999994,
+              "keywords_count": 2,
+              "visibility": 0.4,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  8
+                ],
+                "therapist louisville ky": [
+                  10
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.louisvillehealthandhealing.com",
+              "avg_position": 9.5,
+              "median_position": 7,
+              "rating": 181,
+              "etv": 52.96,
+              "keywords_count": 2,
+              "visibility": 0.45,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  7
+                ],
+                "therapist louisville ky": [
+                  12
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.yelp.com",
+              "avg_position": 14.5,
+              "median_position": 11,
+              "rating": 171,
+              "etv": 19.84,
+              "keywords_count": 2,
+              "visibility": 0.1,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  11
+                ],
+                "therapist louisville ky": [
+                  18
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "lecorgancounseling.com",
+              "avg_position": 16.5,
+              "median_position": 13,
+              "rating": 167,
+              "etv": 13.28,
+              "keywords_count": 2,
+              "visibility": 0.1,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  13
+                ],
+                "therapist louisville ky": [
+                  20
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "thriveworks.com",
+              "avg_position": 18.5,
+              "median_position": 12,
+              "rating": 163,
+              "etv": 15.36,
+              "keywords_count": 2,
+              "visibility": 0.05,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  12
+                ],
+                "therapist louisville ky": [
+                  25
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "meridianbhservices.com",
+              "avg_position": 20.5,
+              "median_position": 9,
+              "rating": 159,
+              "etv": 27.36,
+              "keywords_count": 2,
+              "visibility": 0.2,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  9
+                ],
+                "therapist louisville ky": [
+                  32
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "zencare.co",
+              "avg_position": 25.5,
+              "median_position": 14,
+              "rating": 149,
+              "etv": 12.319999999999999,
+              "keywords_count": 2,
+              "visibility": 0.05,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  14
+                ],
+                "therapist louisville ky": [
+                  37
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "thecorecounseling.com",
+              "avg_position": 25.5,
+              "median_position": 16,
+              "rating": 149,
+              "etv": 10.24,
+              "keywords_count": 2,
+              "visibility": 0.05,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  16
+                ],
+                "therapist louisville ky": [
+                  35
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.mentalhealthlou.com",
+              "avg_position": 26.5,
+              "median_position": 15,
+              "rating": 147,
+              "etv": 11.52,
+              "keywords_count": 2,
+              "visibility": 0.05,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  15
+                ],
+                "therapist louisville ky": [
+                  38
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "therapist.com",
+              "avg_position": 30,
+              "median_position": 20,
+              "rating": 140,
+              "etv": 7.199999999999999,
+              "keywords_count": 2,
+              "visibility": 0.05,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  20
+                ],
+                "therapist louisville ky": [
+                  40
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.goodtherapy.org",
+              "avg_position": 30.5,
+              "median_position": 18,
+              "rating": 139,
+              "etv": 8.64,
+              "keywords_count": 2,
+              "visibility": 0.05,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  18
+                ],
+                "therapist louisville ky": [
+                  43
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.betterhelp.com",
+              "avg_position": 32.5,
+              "median_position": 21,
+              "rating": 135,
+              "etv": 7.039999999999999,
+              "keywords_count": 2,
+              "visibility": 0,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  21
+                ],
+                "therapist louisville ky": [
+                  44
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.findatherapist.com",
+              "avg_position": 36,
+              "median_position": 22,
+              "rating": 128,
+              "etv": 6.88,
+              "keywords_count": 2,
+              "visibility": 0,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  22
+                ],
+                "therapist louisville ky": [
+                  50
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "thervo.com",
+              "avg_position": 36.5,
+              "median_position": 24,
+              "rating": 127,
+              "etv": 6.72,
+              "keywords_count": 2,
+              "visibility": 0,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  24
+                ],
+                "therapist louisville ky": [
+                  49
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.theravive.com",
+              "avg_position": 37,
+              "median_position": 23,
+              "rating": 126,
+              "etv": 6.72,
+              "keywords_count": 2,
+              "visibility": 0,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  23
+                ],
+                "therapist louisville ky": [
+                  51
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.healthgrades.com",
+              "avg_position": 40.5,
+              "median_position": 25,
+              "rating": 119,
+              "etv": 6.72,
+              "keywords_count": 2,
+              "visibility": 0,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  25
+                ],
+                "therapist louisville ky": [
+                  56
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.youtube.com",
+              "avg_position": 44.5,
+              "median_position": 27,
+              "rating": 111,
+              "etv": 6.72,
+              "keywords_count": 2,
+              "visibility": 0,
+              "relevant_serp_items": 2,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  27
+                ],
+                "therapist louisville ky": [
+                  62
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.lctps.org",
+              "avg_position": 2,
+              "median_position": 2,
+              "rating": 98,
+              "etv": 259.2,
+              "keywords_count": 1,
+              "visibility": 0.9,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  2
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "creativefamilycounseling.org",
+              "avg_position": 4,
+              "median_position": 4,
+              "rating": 96,
+              "etv": 105.44,
+              "keywords_count": 1,
+              "visibility": 0.7,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  4
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.reddit.com",
+              "avg_position": 9,
+              "median_position": 9,
+              "rating": 91,
+              "etv": 24,
+              "keywords_count": 1,
+              "visibility": 0.2,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  9
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.findapsychologist.org",
+              "avg_position": 13,
+              "median_position": 13,
+              "rating": 87,
+              "etv": 9.44,
+              "keywords_count": 1,
+              "visibility": 0.05,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  13
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "mentalhealthmatch.com",
+              "avg_position": 14,
+              "median_position": 14,
+              "rating": 86,
+              "etv": 8.959999999999999,
+              "keywords_count": 1,
+              "visibility": 0.05,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  14
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "innovativefamilytherapy.com",
+              "avg_position": 15,
+              "median_position": 15,
+              "rating": 85,
+              "etv": 8.16,
+              "keywords_count": 1,
+              "visibility": 0.05,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  15
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "katiedeshields.com",
+              "avg_position": 16,
+              "median_position": 16,
+              "rating": 84,
+              "etv": 6.88,
+              "keywords_count": 1,
+              "visibility": 0.05,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  16
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.apricuscounseling.org",
+              "avg_position": 17,
+              "median_position": 17,
+              "rating": 83,
+              "etv": 6.88,
+              "keywords_count": 1,
+              "visibility": 0.05,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  17
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "counselingnow.com",
+              "avg_position": 19,
+              "median_position": 19,
+              "rating": 81,
+              "etv": 4.32,
+              "keywords_count": 1,
+              "visibility": 0.05,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapy louisville ky": [
+                  19
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.mindsightbehavioral.com",
+              "avg_position": 21,
+              "median_position": 21,
+              "rating": 79,
+              "etv": 3.6799999999999997,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  21
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.shelbycounselingassociates.com",
+              "avg_position": 22,
+              "median_position": 22,
+              "rating": 78,
+              "etv": 3.52,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  22
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.talkspace.com",
+              "avg_position": 23,
+              "median_position": 23,
+              "rating": 77,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  23
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "cultivatebhe.com",
+              "avg_position": 24,
+              "median_position": 24,
+              "rating": 76,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  24
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.bestlifelouisville.com",
+              "avg_position": 26,
+              "median_position": 26,
+              "rating": 74,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  26
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "louisvillementalhealth.org",
+              "avg_position": 27,
+              "median_position": 27,
+              "rating": 73,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  27
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.lifesjourneyky.com",
+              "avg_position": 28,
+              "median_position": 28,
+              "rating": 72,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  28
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "bloomlouisville.com",
+              "avg_position": 29,
+              "median_position": 29,
+              "rating": 71,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  29
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "bewellkentucky.com",
+              "avg_position": 30,
+              "median_position": 30,
+              "rating": 70,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  30
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.derbycitycounseling.com",
+              "avg_position": 31,
+              "median_position": 31,
+              "rating": 69,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  31
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.revivecounselingwellness.com",
+              "avg_position": 36,
+              "median_position": 36,
+              "rating": 64,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  36
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.zocdoc.com",
+              "avg_position": 42,
+              "median_position": 42,
+              "rating": 58,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  42
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "evolvedcounselingcenter.com",
+              "avg_position": 45,
+              "median_position": 45,
+              "rating": 55,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  45
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.sondermind.com",
+              "avg_position": 46,
+              "median_position": 46,
+              "rating": 54,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  46
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "care.headway.co",
+              "avg_position": 47,
+              "median_position": 47,
+              "rating": 53,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  47
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.havenpointcounseling.com",
+              "avg_position": 48,
+              "median_position": 48,
+              "rating": 52,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  48
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.therapylist.com",
+              "avg_position": 52,
+              "median_position": 52,
+              "rating": 48,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  52
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.networktherapy.com",
+              "avg_position": 53,
+              "median_position": 53,
+              "rating": 47,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  53
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "therapymattersllc.com",
+              "avg_position": 55,
+              "median_position": 55,
+              "rating": 45,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  55
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "www.counsellingup.com",
+              "avg_position": 60,
+              "median_position": 60,
+              "rating": 40,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  60
+                ]
+              }
+            },
+            {
+              "se_type": "google",
+              "domain": "idealmedhealth.com",
+              "avg_position": 69,
+              "median_position": 69,
+              "rating": 31,
+              "etv": 3.36,
+              "keywords_count": 1,
+              "visibility": 0,
+              "relevant_serp_items": 1,
+              "keywords_positions": {
+                "therapist louisville ky": [
+                  69
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

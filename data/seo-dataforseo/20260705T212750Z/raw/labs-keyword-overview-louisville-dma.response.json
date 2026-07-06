@@ -1,0 +1,60 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.0071 sec.",
+  "cost": 0,
+  "tasks_count": 1,
+  "tasks_error": 1,
+  "tasks": [
+    {
+      "id": "07060029-9766-0607-0000-86277417cdb8",
+      "status_code": 40501,
+      "status_message": "Invalid Field: 'location_code'.",
+      "time": "0 sec.",
+      "cost": 0,
+      "result_count": 0,
+      "path": [
+        "v3",
+        "dataforseo_labs",
+        "google",
+        "keyword_overview",
+        "live"
+      ],
+      "data": {
+        "api": "dataforseo_labs",
+        "function": "keyword_overview",
+        "se_type": "google",
+        "keywords": [
+          "mental health services Louisville KY",
+          "therapy Louisville KY",
+          "therapist Louisville KY",
+          "counseling Louisville KY",
+          "individual therapy Louisville KY",
+          "family therapy Louisville KY",
+          "child therapy Louisville KY",
+          "group therapy Louisville KY",
+          "case management Louisville KY",
+          "mental health case management Louisville KY",
+          "community based mental health services Louisville KY",
+          "in home therapy Louisville KY",
+          "trauma therapy Louisville KY",
+          "anxiety therapy Louisville KY",
+          "depression therapy Louisville KY",
+          "play therapy Louisville KY",
+          "Louisville Mental Health Group",
+          "behavioral health Louisville KY",
+          "outpatient mental health Louisville KY",
+          "Medicaid therapist Louisville KY",
+          "therapist that accepts Medicaid Louisville KY",
+          "therapy in your home Louisville KY"
+        ],
+        "location_code": 200529,
+        "language_code": "en",
+        "include_serp_info": true,
+        "tag": "lmhg keyword overview louisville dma"
+      },
+      "result": null
+    }
+  ]
+}

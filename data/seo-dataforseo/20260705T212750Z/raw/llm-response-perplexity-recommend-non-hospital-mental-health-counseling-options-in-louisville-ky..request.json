@@ -1,0 +1,13 @@
+{
+  "name": "llm-response-perplexity-Recommend non-hospital mental health counseling options in Louisville, KY.",
+  "path": "/v3/ai_optimization/perplexity/llm_responses/live",
+  "body": [
+    {
+      "user_prompt": "Recommend non-hospital mental health counseling options in Louisville, KY.",
+      "model_name": "sonar",
+      "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+      "tag": "lmhg llm response perplexity Recommend non-hospital mental health counseling options in Louisville, KY.",
+      "max_output_tokens": 700
+    }
+  ]
+}

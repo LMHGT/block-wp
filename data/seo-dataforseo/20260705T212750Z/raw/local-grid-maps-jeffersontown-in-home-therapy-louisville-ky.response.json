@@ -1,0 +1,495 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "1.4005 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-4efd7feff0d3",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "1.3159 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "maps",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "maps",
+        "keyword": "in home therapy Louisville KY",
+        "location_coordinate": "38.1942000,-85.5644000,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid maps jeffersontown in home therapy Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "in home therapy Louisville KY",
+          "type": "maps",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://google.com/maps/search/in+home+therapy+Louisville+KY/@38.1942,-85.5644,17z?hl=en&gl=US&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-07-05 21:36:49 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "maps_paid_item",
+            "maps_search"
+          ],
+          "se_results_count": 0,
+          "items_count": 4,
+          "items": [
+            {
+              "type": "maps_paid_item",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "domain": null,
+              "title": "Tender Love & Care Nursing Services",
+              "url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 57,
+                "rating_max": null
+              },
+              "rating_distribution": null
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 1,
+              "rank_absolute": 2,
+              "domain": "www.havenpointcounseling.com",
+              "title": "Havenpoint Counseling",
+              "original_title": null,
+              "url": "https://www.havenpointcounseling.com/",
+              "contact_url": "http://www.havenpointcounseling.com/",
+              "contributor_url": "https://maps.google.com/maps/contrib/117154514413057588645",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 6,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 6
+              },
+              "snippet": "3321 Ruckriegel Pkwy, Louisville, KY 40299",
+              "address": "3321 Ruckriegel Pkwy, Louisville, KY 40299",
+              "address_info": {
+                "borough": null,
+                "address": "3321 Ruckriegel Pkwy",
+                "city": "Louisville",
+                "zip": "40299",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJoYwmjS2haYgRlLMPBJDmxyU",
+              "phone": "+1502-208-6798",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=-NEaUz_hRUH1BjyaM5t_Lg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=111.10778&pitch=0&thumbfov=100",
+              "total_photos": 2,
+              "category": "Mental health service",
+              "additional_categories": null,
+              "category_ids": [
+                "mental_health_service"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 15,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x8869a12d8d268ca1:0x25c7e690040fb394",
+              "cid": "2722398005986571156",
+              "latitude": 38.1956874,
+              "longitude": -85.5562827,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"The experience has been nothing short of transformative!\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 2,
+              "rank_absolute": 3,
+              "domain": "jeffersontownrehab.com",
+              "title": "Jeffersontown Rehabilitation",
+              "original_title": null,
+              "url": "https://jeffersontownrehab.com/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/116952679557773186225",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.1,
+                "votes_count": 80,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 15,
+                "2": 1,
+                "3": 2,
+                "4": 4,
+                "5": 58
+              },
+              "snippet": "3500 Good Samaritan Way, Louisville, KY 40299",
+              "address": "3500 Good Samaritan Way, Louisville, KY 40299",
+              "address_info": {
+                "borough": null,
+                "address": "3500 Good Samaritan Way",
+                "city": "Louisville",
+                "zip": "40299",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJoel56bChaYgRN2-nu8V2Eu4",
+              "phone": "+1502-267-7403",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFApJvVSBZ7Y_utkZjCDPV_zjZ-dOgL1Rr2I_pRbYVWIB2ZSvuqewb9McWr0U-0XkLq5PGTJMNgZG_Id_dq9c_cQslVLcvYy0i0zFYtYWGnO3hZH8h80K7s0il5PfUbC9Ngf5g=w408-h306-k-no",
+              "total_photos": 14,
+              "category": "Nursing home",
+              "additional_categories": null,
+              "category_ids": [
+                "nursing_home"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "open"
+              },
+              "feature_id": "0x8869a1b0e979e9a1:0xee1276c5bba76f37",
+              "cid": "17154904522236587831",
+              "latitude": 38.1975317,
+              "longitude": -85.56438299999999,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"My mom is happy, clean and healthier than she has been in a while.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 3,
+              "rank_absolute": 4,
+              "domain": null,
+              "title": "Tranquil Gardens Massage",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.4,
+                "votes_count": 24,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 2,
+                "2": 0,
+                "3": 3,
+                "4": 0,
+                "5": 19
+              },
+              "snippet": "3920 Ruckriegel Pkwy, Louisville, KY 40299",
+              "address": "3920 Ruckriegel Pkwy, Louisville, KY 40299",
+              "address_info": {
+                "borough": null,
+                "address": "3920 Ruckriegel Pkwy",
+                "city": "Louisville",
+                "zip": "40299",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJia_onPigaYgRSa9_6dqpE3c",
+              "phone": "+1502-409-7049",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=EKHtuaR0Pd_6DR4bsLi8BA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=136.3317&pitch=1.0233213&thumbfov=100",
+              "total_photos": 2,
+              "category": "Massage therapist",
+              "additional_categories": null,
+              "category_ids": [
+                "massage_therapist"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 11,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 22,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 22,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 22,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 22,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 22,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 22,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "open"
+              },
+              "feature_id": "0x8869a0f89ce8af89:0x7713a9dae97faf49",
+              "cid": "8580388472756350793",
+              "latitude": 38.190656499999996,
+              "longitude": -85.5680806,
+              "is_claimed": false,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"Very relaxing and Jeff is great at what he does.\""
+                }
+              ],
+              "is_directory_item": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,714 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "1.3620 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-cf38fb99cdb0",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "1.2669 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "maps",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "maps",
+        "keyword": "community based mental health services Louisville KY",
+        "location_coordinate": "38.2526647,-85.7584557,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid maps downtown-louisville community based mental health services Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "community based mental health services Louisville KY",
+          "type": "maps",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://google.com/maps/search/community+based+mental+health+services+Louisville+KY/@38.2526647,-85.7584557,17z?hl=en&gl=US&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-07-05 21:36:35 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "maps_search"
+          ],
+          "se_results_count": 0,
+          "items_count": 6,
+          "items": [
+            {
+              "type": "maps_search",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "domain": null,
+              "title": "Crisis & Information Center",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 2,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 2
+              },
+              "snippet": "101 W Muhammad Ali Blvd, Louisville, KY 40202",
+              "address": "101 W Muhammad Ali Blvd, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "101 W Muhammad Ali Blvd",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ04vKdrpyaYgRV4XytQW5wNc",
+              "phone": "+1502-589-4313",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=DF91g7_d7S8PAsX5-HbMig&cb_client=search.gws-prod.gps&w=408&h=240&yaw=9.697236&pitch=0&thumbfov=100",
+              "total_photos": 1,
+              "category": "County government office",
+              "additional_categories": null,
+              "category_ids": [
+                "county_government_office"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972ba76ca8bd3:0xd7c0b905b5f28557",
+              "cid": "15546629347861497175",
+              "latitude": 38.2508546,
+              "longitude": -85.7529934,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "domain": "www.paxrecoverycenter.org",
+              "title": "Pax Recovery Center",
+              "original_title": null,
+              "url": "https://www.paxrecoverycenter.org/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/107056943947582422534",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.8,
+                "votes_count": 48,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 2,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 46
+              },
+              "snippet": "436 S 7th St #100, Louisville, KY 40203",
+              "address": "436 S 7th St #100, Louisville, KY 40203",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "436 S 7th St #100",
+                "city": "Louisville",
+                "zip": "40203",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJgf3oDVBzaYgRmzBUnrIFu-w",
+              "phone": "+1502-881-1742",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGUuD2IVJVYMHmPNvrFNoAFlbGIn2TcRYg9U5WqfIA1qwhmmwc2aoLYt98-gF3j7pTBssOulZnC-mOOqTNgIdTvOG7IXf06jTaXkDR78tDchTEarwgh6ZkZN_4aH-DR8IzsE_h3D-9ilqJs=w408-h412-k-no",
+              "total_photos": 6,
+              "category": "Addiction treatment center",
+              "additional_categories": null,
+              "category_ids": [
+                "addiction_treatment_center"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x886973500de8fd81:0xecbb05b29e54309b",
+              "cid": "17058234278314520731",
+              "latitude": 38.2524649,
+              "longitude": -85.7626801,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"They include therapy, outpatient groups, and a safe place to get sober.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "domain": "www.betteryoubhs.com",
+              "title": "Better You Behavioral Health Services",
+              "original_title": null,
+              "url": "https://www.betteryoubhs.com/",
+              "contact_url": "https://betteryoubhs.intakeq.com/booking",
+              "contributor_url": "https://maps.google.com/maps/contrib/109250716210257734586",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.4,
+                "votes_count": 7,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 6
+              },
+              "snippet": null,
+              "address": null,
+              "address_info": {
+                "borough": null,
+                "address": null,
+                "city": null,
+                "zip": null,
+                "region": null,
+                "country_code": null
+              },
+              "place_id": "ChIJH0Iuw-qRfgwRaMcgmHPOd_k",
+              "phone": "+1502-653-5800",
+              "main_image": null,
+              "total_photos": null,
+              "category": "Mental health service",
+              "additional_categories": [
+                "Service establishment"
+              ],
+              "category_ids": [
+                "mental_health_service",
+                "establishment_service"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 16,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 14,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 12,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0xc7e91eac32e421f:0xf977ce739820c768",
+              "cid": "17976063433541470056",
+              "latitude": 37.9660644,
+              "longitude": -85.2242514,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"I’ve been known to rack through them through my mental health journey.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "domain": "www.cardinalfamilycare.com",
+              "title": "Cardinal Family Care",
+              "original_title": null,
+              "url": "https://www.cardinalfamilycare.com/",
+              "contact_url": "https://www.cardinalfamilycare.com/",
+              "contributor_url": "https://maps.google.com/maps/contrib/114979490367607996028",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.8,
+                "votes_count": 1280,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 21,
+                "2": 5,
+                "3": 18,
+                "4": 102,
+                "5": 1134
+              },
+              "snippet": "312 S 4th St Ste 700, Louisville, KY 40202",
+              "address": "312 S 4th St Ste 700, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "312 S 4th St Ste 700",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ8bHG5lISaYgRvTTg18QpPvg",
+              "phone": "+1502-804-5495",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAExKkyhWOThbfJNUF8SkYHonCe-O5mwzFLdIYjfIV7SPwA9MC6QAWt8wg43W1A01AYvOKl2sdV_YYxOJgY-ltBFUVi9sSMY-RTQb_JgX0u74SwZPVZcvoGwfw3eYNvSWsKooaY=w426-h240-k-no",
+              "total_photos": 8,
+              "category": "Medical clinic",
+              "additional_categories": [
+                "Family practice physician",
+                "Nurse practitioner"
+              ],
+              "category_ids": [
+                "medical_clinic",
+                "family_practice_physician",
+                "nurse_practitioner"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x88691252e6c6b1f1:0xf83e29c4d7e034bd",
+              "cid": "17887780695374312637",
+              "latitude": 38.253369,
+              "longitude": -85.7575093,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"They’ve helped so much in my wife’s rehab\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 5,
+              "rank_absolute": 5,
+              "domain": "www.uplouisville.org",
+              "title": "UP for Women and Children",
+              "original_title": null,
+              "url": "http://www.uplouisville.org/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/116370538308538427858",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.6,
+                "votes_count": 68,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 4,
+                "2": 0,
+                "3": 3,
+                "4": 6,
+                "5": 55
+              },
+              "snippet": "425 S 2nd St Ste 100, Louisville, KY 40202",
+              "address": "425 S 2nd St Ste 100, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "425 S 2nd St Ste 100",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJZ7CMYLpyaYgRt7DHBtMn8nM",
+              "phone": "+1502-384-0001",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=qP84IhdsdtskKOISue4jgQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=102.44825&pitch=0&thumbfov=100",
+              "total_photos": 2,
+              "category": "Mental health service",
+              "additional_categories": [
+                "Women's shelter",
+                "Social services organization"
+              ],
+              "category_ids": [
+                "mental_health_service",
+                "womens_shelter",
+                "social_services_organization"
+              ],
+              "work_hours": null,
+              "feature_id": "0x886972ba608cb067:0x73f227d306c7b0b7",
+              "cid": "8354784046031024311",
+              "latitude": 38.2517498,
+              "longitude": -85.7536636,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"UP is an such an incredible resource for women in Louisville.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 6,
+              "rank_absolute": 6,
+              "domain": "uoflhealth.org",
+              "title": "UofL Health – Jewish Hospital",
+              "original_title": null,
+              "url": "https://uoflhealth.org/locations/jewish-hospital/?utm_source=GMBSocialClimb&utm_medium=UofLHealth%E2%80%93JewishHospital",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/103248197046363401879",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 3.2,
+                "votes_count": 560,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 213,
+                "2": 27,
+                "3": 19,
+                "4": 35,
+                "5": 266
+              },
+              "snippet": "200 Abraham Flexner Way, Louisville, KY 40202",
+              "address": "200 Abraham Flexner Way, Louisville, KY 40202",
+              "address_info": {
+                "borough": "Downtown",
+                "address": "200 Abraham Flexner Way",
+                "city": "Louisville",
+                "zip": "40202",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJzwKwNrdyaYgRyQyoep0AFYg",
+              "phone": "+1502-587-4011",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHztY6eYH41OLaAfT_P2zBu3tyFM3-HbBjfK463Ra_3E1NrF6aeNUfUbtr1J4ci6VaIjVz7bBSt5E_XHqNzfoTWwL2vt8-P5ofg2p7OxypPn38egHOAX2Kky_ELnN4EdnJ2wl16=w408-h272-k-no",
+              "total_photos": 49,
+              "category": "Hospital",
+              "additional_categories": null,
+              "category_ids": [
+                "hospital"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 24,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "open"
+              },
+              "feature_id": "0x886972b736b002cf:0x8815009d7aa80cc9",
+              "cid": "9805744440036822217",
+              "latitude": 38.249234099999995,
+              "longitude": -85.7512723,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

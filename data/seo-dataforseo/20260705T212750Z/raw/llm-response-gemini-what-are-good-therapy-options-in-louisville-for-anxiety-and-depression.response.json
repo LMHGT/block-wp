@@ -1,0 +1,122 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "5.2055 sec.",
+  "cost": 0.0358995,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-3f42547b64bd",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "5.1927 sec.",
+      "cost": 0.0358995,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "gemini",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "gemini",
+        "user_prompt": "What are good therapy options in Louisville for anxiety and depression?",
+        "model_name": "gemini-2.5-flash-lite",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response gemini What are good therapy options in Louisville for anxiety and depression?",
+        "web_search": true,
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gemini-2.5-flash-lite",
+          "input_tokens": 115,
+          "output_tokens": 720,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.0352995,
+          "datetime": "2026-07-06 00:32:20 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here are some therapy options in Louisville, KY, that can help with anxiety and depression:\n\n**Mental Health Centers and Clinics:**\n\n*   **The Brook Hospitals:** This facility has been providing mental health and substance use treatment since 1985, with two locations in Louisville. They offer various levels of care, including inpatient, partial hospitalization, and intensive outpatient programs for children, adolescents, and adults.\n*   **Mandala House:** An outpatient mental health center serving clients over 14 years old. They offer services for individuals, groups, relationships, and families, with a multidisciplinary staff of psychologists, social workers, counselors, and therapists. They also provide telehealth services across Kentucky.\n*   **Hagan Health:** Offers comprehensive mental health services including therapy and psychiatry for depression, anxiety, ADHD, and more. They provide telehealth services for Kentucky residents and also offer innovative treatments like Transcranial Magnetic Stimulation (TMS) for depression and anxiety.\n*   **LifeStance Health:** A full-service mental health clinic located at 100 Executive Park. They offer in-person and online appointments with experienced psychiatrists, therapists, and psychologists.\n*   **Acadia Counseling:** Provides compassionate therapy for anxiety, depression, trauma, relationships, and life transitions. They have in-person counseling in Louisville and Murray, as well as telehealth options across Kentucky.\n*   **Norton Behavioral Medicine:** This program is coordinated with Norton Healthcare primary care providers and offers outpatient mental health care. They provide telehealth and in-person visits and accept most insurance plans.\n*   **Louisville Mental Health Group:** A private practice offering individual and family therapy, group therapy, case management, EMDR, and community support services.\n*   **Grace Psychological Services:** Specializes in anxiety therapy using Cognitive Behavioral Therapy (CBT) and other evidence-based treatments. They offer individual therapy, couples counseling, and telehealth services.\n*   **Louisville Health & Healing:** An outpatient practice offering counseling for individuals, couples, and families, with a focus on trauma, anxiety, burnout, and relationships. They utilize approaches like EMDR and expressive techniques.\n*   **New Hope Counseling:** Offers counseling services for trauma, anxiety, life transitions, and more, with a focus on accessible care.\n*   **Bridge Counseling & Wellness:** Provides a variety of counseling services, including CBT, psychodynamic therapy, and mindfulness-based therapy, for concerns like anxiety, depression, and trauma. They embrace a holistic approach to well-being.\n*   **Northstar Counseling Center:** Offers counseling services for individuals, couples, children, and families, addressing issues such as depression, anxiety, and trauma. They utilize evidence-based treatment models in a supportive environment.\n\n**Therapist Directories:**\n\n*   **Psychology Today:** This directory lists therapists in Louisville, KY, who specialize in anxiety. You can find profiles for individual therapists, many of whom utilize approaches like CBT, EMDR, and DBT.\n\nWhen considering a therapist, think about the specific types of therapy that might be most beneficial for you. Common approaches for anxiety and depression include Cognitive Behavioral Therapy (CBT), Dialectical Behavior Therapy (DBT), and Eye Movement Desensitization and Reprocessing (EMDR). Many of these providers offer telehealth services, which can provide added convenience and accessibility.",
+                  "annotations": [
+                    {
+                      "title": "thebrookhospitals.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbAU4UVLpP-MfmzDgt4FyEEBHDKTUm_8dQfDp0BlN0n5iBNc8hAqWsB1C0vAqRNwakQMXLXcbr__gxldQooNzSbP4eVBlPYNSrOankUCGPY7bOacuLPW6AQQ=="
+                    },
+                    {
+                      "title": "mandalalouisville.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4dlBd8-rszOAnq4V1KsdH-59cMThRQegfHYUysx3zgKrIEjq9hWuCtE95VDMPYeVmMJSfQ31RLklNjlCCTlOQhjSOYdaJNUDqcRUOSnolAO-qGlAkWS97Bg=="
+                    },
+                    {
+                      "title": "haganhealth.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwUMBcACzS4C_reJ7GiKQRBG2Wsjm_4WPCRXwJqfBAn8o7Utkyl6A1w__Qbe2eRsll24x9fCG5PXBejAdr922qW6KqXjvVkEyxuuNh-HR4Po65dA=="
+                    },
+                    {
+                      "title": "lifestance.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbDyxK1dPHs5ZxtNYsZ6F5n5yVGvpG22NX57tMd18BvQbaknCoZXTkEzdJy9JV5r-WecLkHPQsME1b4R-Aa1sqCSzefML5Ap2lNwGn1q11IAFbILZwjjneswVw--OwhVme3RanAIl13HRcFJNZSkBYaXGklWx7qpRVH-xi"
+                    },
+                    {
+                      "title": "acadiacounseling.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvseMyCT_V4LVusKr548tQc2foUPMf84VFt9x8CeA-PQfkXcQ5Yse4AWwvXXVyRYL2rSb42M5U2O5c-kVcfBvxzodX3tA7IYUY3fkhP4086M1ZAL7Hq5zT"
+                    },
+                    {
+                      "title": "nortonhealthcare.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8DDtWuwevYj6vOT8r3ili0WzIds1ZnJiXz26vECuGV83Ny7Isi2LGWkTdSQt9gvCLgOYId0UTkrBBLpDQVRLIukSauuT7EOLxj63Q_dbw-JIJdckZFzYrSIqNW819BV-Uio0FzyXAElXCfUWsBHpSqOjT97JiVSWWzxKy7K9cq4hX"
+                    },
+                    {
+                      "title": "louisvillementalhealth.org",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPI1YaI07dQfdX6-OxyU9RNyY6etS5DrLnnfIK615FK1BgLLNN5vWODAoaIenmePmz-PUTwQg32pNb_t62Wkc1EPAlUP0TMxIqQiBjKzNyjf3seWBHXvtoO-puSx1e"
+                    },
+                    {
+                      "title": "louisvillegracepsychological.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGx0eKpShiMyX5ZceOiSm8hTeKPuHOj3XkJs9bn3JGhUjhx0EiJBN5qlHer1t7Ac7RDdEP0nC8QJcb2nm_0wTqAElRaQXs6VvMIYUSZWXOrEqqXtxwqeYymOSzQ77yS7sp7TWoyJpw711gBW5U0ixVHOBVwdlxZswQfNGmsv1A="
+                    },
+                    {
+                      "title": "louisvillehealthandhealing.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkaSLW0dLbePzolTY4YNVGfBEkp-I2rrQ9nrKgj43p_EhVlLE4l8wiXcJ7TSRzwF4Z944ZQHMFvbjGccvIFGJZuE9fHi-nxC_1oyQB3bXkfu9hQMyukuE2lQ7-NSBxRcUHcTxTthw="
+                    },
+                    {
+                      "title": "newhopecounselingsite.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOVAR9ZE7ddDjh1L1fz77icyh1Rgn52IC9lViXr2oZtzmDorsFbQ4bUH7Fcu6lbBKQ75U-va5oKfc6iSv468TBfDoamo5yiK3aNz5I3U2EcrJzMho3N_hqAajJWr4="
+                    },
+                    {
+                      "title": "bridgemindbody.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVzTpRBujvc_MAicoh_eJszj44INVCGOaQHHhnGedySlHF8AXt8Mtx3pQXiNhaLRLdDWtJL6oKq3qn2S2Gfm61EbGnadsLtmxQlut1qVJwGLVx4cQbCbjMSxs="
+                    },
+                    {
+                      "title": "northstarcounselingcenter.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYB2CUUc93lEPPcuFuiERfQX9o2cicEPzYbAK9gtoSj-7eVnHtWoHurD3a6N-fOylrfpbffv5EIrI75UhIlZNHbMTNUUL9cYbj18fjNW_9yGzWtcFFq0BU-Nmj24xLIiDc"
+                    },
+                    {
+                      "title": "psychologytoday.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtTK3GMr4HawI900F4uxiOPBSkgCK-oGlbAo1xh_lO0ZmTr0ShdKz0z3gdH7vfAX7pDS_H6pXyQwYASzl0YxuHKv1j_zwt4zxGOBplosQMKR2gn-KG8bU4X0ETMCA0DqW1Ck6-KkiNNYLjCZj9v31Q_7eDf6n9bkNt_OIm0zy2fe6bukzjQnMn"
+                    },
+                    {
+                      "title": "louisvilleaddictioncenter.com",
+                      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeD--hELopmfrwKTnM0CtxLcKxSG_qV8FjDX9ZLEaaI5sca9mwT3oZlDf4LhZKTLw-1nxUp0OoiPkgpYCDyWL4ZdoUQnZS7EAID8jhYCNvWT4N4noCfqCbi_856BaKx0-EdJSCyTxIhmhzU6DlBfSJpCiX2xml5hoc1-vUqxiVonBGKigRIanQpw0="
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "therapy options for anxiety and depression Louisville KY",
+            "anxiety and depression counseling Louisville KY",
+            "mental health services Louisville KY"
+          ]
+        }
+      ]
+    }
+  ]
+}

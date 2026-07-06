@@ -1,0 +1,76 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.6019 sec.",
+  "cost": 0,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060031-9766-0216-0000-756e3a0a4fe0",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.5700 sec.",
+      "cost": 0,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "on_page",
+        "summary"
+      ],
+      "data": {
+        "api": "on_page",
+        "function": "summary",
+        "limit": 50,
+        "target": "louisvillementalhealth.org",
+        "start_url": "https://louisvillementalhealth.org/",
+        "max_crawl_pages": 90,
+        "respect_sitemap": true,
+        "crawl_sitemap_only": true,
+        "custom_sitemap": "https://louisvillementalhealth.org/sitemap_index.xml",
+        "enable_javascript": false,
+        "custom_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+        "tag": "lmhg-louisville-browser-ua-sitemap-2026-07-05"
+      },
+      "result": [
+        {
+          "crawl_progress": "finished",
+          "crawl_status": {
+            "max_crawl_pages": 90,
+            "pages_in_queue": 0,
+            "pages_crawled": 0
+          },
+          "crawl_gateway_address": "168.119.141.170",
+          "crawl_stop_reason": "empty_queue",
+          "domain_info": {
+            "name": "louisvillementalhealth.org",
+            "cms": null,
+            "ip": null,
+            "server": null,
+            "crawl_start": "2026-07-05 21:31:04 +00:00",
+            "crawl_end": "2026-07-05 21:31:09 +00:00",
+            "extended_crawl_status": "forbidden_http_header",
+            "ssl_info": {
+              "valid_certificate": true,
+              "certificate_issuer": "CN=YE1, O=Let's Encrypt, C=US",
+              "certificate_subject": "CN=louisvillementalhealth.org",
+              "certificate_version": 3,
+              "certificate_hash": "sha384ECDSA",
+              "certificate_expiration_date": "2026-09-27 10:34:18 +00:00"
+            },
+            "checks": null,
+            "total_pages": 0,
+            "total_uncrawlable_resources": 0,
+            "page_not_found_status_code": null,
+            "canonicalization_status_code": null,
+            "directory_browsing_status_code": null,
+            "www_redirect_status_code": null,
+            "main_domain": "louisvillementalhealth.org"
+          },
+          "page_metrics": null
+        }
+      ]
+    }
+  ]
+}

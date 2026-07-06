@@ -1,0 +1,340 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "1.6819 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-f7dbc8d683e7",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "1.5805 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "maps",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "maps",
+        "keyword": "family therapy Louisville KY",
+        "location_coordinate": "38.1942000,-85.5644000,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid maps jeffersontown family therapy Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "family therapy Louisville KY",
+          "type": "maps",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://google.com/maps/search/family+therapy+Louisville+KY/@38.1942,-85.5644,17z?hl=en&gl=US&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-07-05 21:36:45 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "maps_search"
+          ],
+          "se_results_count": 0,
+          "items_count": 2,
+          "items": [
+            {
+              "type": "maps_search",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "domain": "www.havenpointcounseling.com",
+              "title": "Havenpoint Counseling",
+              "original_title": null,
+              "url": "https://www.havenpointcounseling.com/",
+              "contact_url": "http://www.havenpointcounseling.com/",
+              "contributor_url": "https://maps.google.com/maps/contrib/117154514413057588645",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 6,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 6
+              },
+              "snippet": "3321 Ruckriegel Pkwy, Louisville, KY 40299",
+              "address": "3321 Ruckriegel Pkwy, Louisville, KY 40299",
+              "address_info": {
+                "borough": null,
+                "address": "3321 Ruckriegel Pkwy",
+                "city": "Louisville",
+                "zip": "40299",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJoYwmjS2haYgRlLMPBJDmxyU",
+              "phone": "+1502-208-6798",
+              "main_image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=-NEaUz_hRUH1BjyaM5t_Lg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=111.10778&pitch=0&thumbfov=100",
+              "total_photos": 2,
+              "category": "Mental health service",
+              "additional_categories": null,
+              "category_ids": [
+                "mental_health_service"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 19,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 15,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x8869a12d8d268ca1:0x25c7e690040fb394",
+              "cid": "2722398005986571156",
+              "latitude": 38.1956874,
+              "longitude": -85.5562827,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"Two of my daughters and my wife see therapists here.\""
+                }
+              ],
+              "is_directory_item": false
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "domain": "jeffersontownchiropractic.com",
+              "title": "Jeffersontown Chiropractic",
+              "original_title": null,
+              "url": "http://jeffersontownchiropractic.com/",
+              "contact_url": null,
+              "contributor_url": "https://maps.google.com/maps/contrib/110083456116993409043",
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 84,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": null,
+              "rating_distribution": {
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 84
+              },
+              "snippet": "10131 Taylorsville Rd, Louisville, KY 40299",
+              "address": "10131 Taylorsville Rd, Louisville, KY 40299",
+              "address_info": {
+                "borough": null,
+                "address": "10131 Taylorsville Rd",
+                "city": "Louisville",
+                "zip": "40299",
+                "region": "Kentucky",
+                "country_code": "US"
+              },
+              "place_id": "ChIJmWcFP1GgaYgR7ashktxLfPA",
+              "phone": "+1502-267-6444",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHCYvH2bMZ2FpHGgFZvyETD06tm8_72OBodK2hAdJ1Hvagp3YgTkGxPeuhFvA2vFrrXhz5kpfGLua6p15CUS-iemrCyo1fznnZR9OX3cBkFDbd2JKwZ6dGGT-RLrYvedCX4495B=w408-h306-k-no",
+              "total_photos": 3,
+              "category": "Chiropractor",
+              "additional_categories": null,
+              "category_ids": [
+                "chiropractor"
+              ],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 12,
+                        "minute": 0
+                      }
+                    },
+                    {
+                      "open": {
+                        "hour": 14,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 14,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 12,
+                        "minute": 0
+                      }
+                    },
+                    {
+                      "open": {
+                        "hour": 14,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 12,
+                        "minute": 0
+                      }
+                    },
+                    {
+                      "open": {
+                        "hour": 14,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 18,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 13,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": null
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x8869a0513f056799:0xf07c4bdc9221abed",
+              "cid": "17328808876931394541",
+              "latitude": 38.1972374,
+              "longitude": -85.5681116,
+              "is_claimed": true,
+              "local_justifications": [
+                {
+                  "type": "user_review",
+                  "text": "\"Im excited to go back and continue to improve in my healing journey.\""
+                }
+              ],
+              "is_directory_item": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

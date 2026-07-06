@@ -1,0 +1,106 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "3.1570 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060036-9766-0139-0000-37283c5bb34c",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "3.0871 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "local_finder",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "local_finder",
+        "keyword": "group therapy Louisville KY",
+        "location_coordinate": "38.2526647,-85.7584557,5000",
+        "language_code": "en",
+        "device": "desktop",
+        "depth": 20,
+        "tag": "lmhg grid local_finder downtown-louisville group therapy Louisville KY",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "group therapy Louisville KY",
+          "type": "local_finder",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=group+therapy+Louisville+KY&oq=group+therapy+Louisville+KY&hl=en&gl=US&tbm=lcl&fll=38.2526647%2C-85.7584557&fspn=0.0028350891160214414%2C0.006474852561950684&fz=18&sll=38.2526647%2C-85.7584557&sspn=0.0028350891160214414%2C0.006474852561950684&sz=18",
+          "datetime": "2026-07-05 21:36:35 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "local_pack"
+          ],
+          "se_results_count": 0,
+          "items_count": 2,
+          "items": [
+            {
+              "type": "local_pack",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]",
+              "title": "Cardinal Family Care",
+              "description": "312 S 4th St Ste 700 · (502) 804-5495 \nClosed · Opens 8 AM Mon \n\"They have really helped me n they honestly care about their patients.\" \n",
+              "domain": "www.cardinalfamilycare.com",
+              "phone": "(502) 804-5495",
+              "booking_url": null,
+              "url": "https://www.cardinalfamilycare.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.8,
+                "votes_count": 1300,
+                "rating_max": 5
+              },
+              "cid": "17887780695374312637",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[13]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]",
+              "title": "Bosley - Hair Restoration & Transplant - Louisville",
+              "description": "312 S 4th St #719 · (888) 808-6651 \nClosed · Opens 8 AM Mon \n\"It’s not a one and done contact, but they are there for you the whole time!\" \n",
+              "domain": "www.bosley.com",
+              "phone": "(888) 808-6651",
+              "booking_url": null,
+              "url": "https://www.bosley.com/locations/louisville/?utm_source=rioseo&utm_medium=directory_loc&utm_campaign=google&utm_term=Louisville&utm_content=location&ph=ODg4LTgwOC02NjUx&cid=RIOSEO_LISTING_GOOGLE_LOUISVILLE",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.5,
+                "votes_count": 11,
+                "rating_max": 5
+              },
+              "cid": "13853817362764368508",
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

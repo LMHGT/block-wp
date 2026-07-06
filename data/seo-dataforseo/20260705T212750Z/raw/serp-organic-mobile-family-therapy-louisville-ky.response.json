@@ -1,0 +1,895 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "2.5694 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060028-9766-0139-0000-f6b50dbdfd6a",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "2.4923 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "organic",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "organic",
+        "keyword": "family therapy Louisville KY",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "mobile",
+        "depth": 10,
+        "tag": "lmhg organic mobile family therapy Louisville KY",
+        "os": "android"
+      },
+      "result": [
+        {
+          "keyword": "family therapy Louisville KY",
+          "type": "organic",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=family%20therapy%20Louisville%20KY&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:28:06 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview",
+            "local_pack",
+            "organic",
+            "people_also_ask",
+            "discussions_and_forums",
+            "people_also_search"
+          ],
+          "se_results_count": 0,
+          "pages_count": 1,
+          "items_count": 15,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[1]/div[1]",
+              "asynchronous_ai_overview": false,
+              "markdown": "[Creative Family Counseling, LLC 3.9 (14)Marriage or relationship counselor Closed 8134 New La Grange Rd #102](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdNMk1EVnNObDgwGAo) [![Image of Creative Family Counseling, LLC](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-f6b50dbdfd6a:0)\n![Image of Creative Family Counseling, LLC](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-f6b50dbdfd6a:1)\n![Image of Creative Family Counseling, LLC](https://lh3.googleusercontent.com/gps-cs-s/APNQkAF9VCcKppNDPmqd23O_GtXPmgyQThn9Pn2Q7aOhyFbY_OY4S5zWooQZFnh7UWAEEdy9j3BXxk2K6Cx_1cdanNIkj0bBpzmw7XoQpzWHl5RuyULl8tlS9G3O6W736bs0NCMDY5Oz=s110-w110-h82-n-k-no)\n![Image of Creative Family Counseling, LLC](https://lh3.googleusercontent.com/gps-cs-s/APNQkAH00AFs3LMuUD1GP6u7bY2kvgI3ax8ncyQ-A-XDj9Ne2VuDpxVyRpX2a3zasJVA-bp8ddcKJP23HgrO0soHJ6kJW81obajPAUyF2eOqzEhNkdvNuJs04pr3qtAEehDdG8g4vPMD=s110-w110-h82-n-k-no)\n![Image of Creative Family Counseling, LLC](https://lh3.googleusercontent.com/gps-cs-s/APNQkAHOYZnsgz24kSaOo9hJRI7Iz6zPW7KgW2m3qYTJpBrEQE3eoiKb-wbA8a8t1kfI6R1WE7EJ-15relZVVPGUd8j89JK8Efg1MZnkLqnJEKuDy74PwKpVxz8M6r-B0peFvBcjo1Fi=s110-w110-h82-n-k-no)\n![Image of Creative Family Counseling, LLC](https://lh3.googleusercontent.com/gps-cs-s/APNQkAGAHCELAfKXQE11pyVTz5AWhD3fQ4tCIUNXAvHO-FAirlY1cIRGrH-U546nDxqH2zvSzoHTYcXUAl3MkdQwaq9jc8GPIGaDRrRvpq1t3uahhhHR_hE7ZO4CMnkoV9HLAcmlH8ie=s82-w82-h82-n-k-no)\n![Image of Creative Family Counseling, LLC](https://lh3.googleusercontent.com/gps-cs-s/APNQkAEAfMbGpnIomfEYQ_PYy6HXRfEI8FfOxOWUAOaTVGKK3eZrgx5ruAoRMv3QpJUdnnf1ncF5u-HT0qSttt-RYA7MnrF7fJFGRTh1_rGXGt5AYnFtXUDkFoo8Hc9hY4dIjlROg1rT=s110-w110-h82-n-k-no)\n![Image of Creative Family Counseling, LLC](https://lh3.googleusercontent.com/gps-cs-s/APNQkAGgz-ARkOthWt29LMasT5PmQYLXTEKQcoRbd2bveQrAVR6tdOozeCs-agWHNtk3AgvmbGzlKGwWCufcO78Y-lwuzXEBDauAffrZj-9jArNfiYWQtt1uU_SWUZmtkhk95eZkdifwow=s110-w110-h82-n-k-no)\n![Image of Creative Family Counseling, LLC](https://lh3.googleusercontent.com/gps-cs-s/APNQkAEZS1nolhNUbBEU21ec-U1DfGk8V9iVtXIfb69o5r_GOSZdm69Ur47fqCQHzvalp8Vhu3PkqWE5wiWYsLaR2UlsAqnCNGiJm9036cgCXP8-waLZjQzcjEss1UOVT087TSofyp5_=s110-w110-h82-n-k-no)\n![Image of Creative Family Counseling, LLC](https://lh3.googleusercontent.com/gps-cs-s/APNQkAG13Lpt9McDrREHSAEdm7OAvBi4_Cn6_4aSN3HZ8DMpJd4RrFzWoFpbuyXcMtQd47qUgD0PdxN4lrG372dN8COVCUW9ctt1KGzkakkJgfMdb3PCssXMGwtvvExRNqasoQy5rtew=s110-w110-h82-n-k-no)\n](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdNMk1EVnNObDgwGAo)   \nOffers **specialized child, teen, and family therapy** with options for **play therapy, art therapy, and animal-assisted therapy** . Features a LGBTQIA+ friendly environment with two locations in Louisville and Prospect.[[1]](https://creativefamilycounseling.org/)[[2]](https://creativefamilycounseling.org/louisville-ky-campus/)  \n[Innovative Family Therapy 4.5 (16)Marriage or relationship counselor Closed 13121 Eastpoint Park Blvd suite f](https://www.google.com/searchviewer/10?svid=CAwSHBIaCgNwdnESE0Nnd3ZaeTh4Y1RaaU1ETm1ZMTgYCg) [![Image of Innovative Family Therapy](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-f6b50dbdfd6a:2)\n![Image of Innovative Family Therapy](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-f6b50dbdfd6a:3)\n![Image of Innovative Family Therapy](https://lh3.googleusercontent.com/gps-cs-s/APNQkAFO2XEgfcSOuJxXRv2FPON8KIgqbBJoSc92aGdsYmXQ7PuYagQT9mxeIczBjFbvrstsP4sEWvWV_VvcbF2HpLWi-CU04EIpBJBWW6FdX_omxj_AqD3uYkFgCDbVLhQajxFHpvc=s82-w62-h82-n-k-no)\n![Image of Innovative Family Therapy](https://lh3.googleusercontent.com/gps-cs-s/APNQkAHk82KilzIP2ActVJqjVhtL-eACgISXFV42xvm4ohalDMKGQKEiaTLysuOvULO_NHSHQNzINOhrBWxDMuWD1WLBvo7DJK0SE-y8zOCOScgkb85X71yXUsxJCHSPBXs_TntsR7rP=s110-w110-h82-n-k-no)\n![Image of Innovative Family Therapy](https://lh3.googleusercontent.com/gps-cs-s/APNQkAEX_IzK_IkuZMCjMHSVcsD4lbQVbQH0Hte48iJmVXulgtPpWKXokCu5SlT9LOiXlh5-5PwHgfCdPahQljmEL2KSYfsDBx0gpLMWMdWs5_zGHgdP3rX8H74ku6Bk2G_Wfp3YfhF7=s110-w110-h82-n-k-no)\n![Image of Innovative Family Therapy](https://lh3.googleusercontent.com/gps-cs-s/APNQkAFw0Wl5gY1plcMicNKd6ryjEM6x-x1RDzQc5Tyz17HbrsJVsH9v_jejWVtERp9uwVfRaZp_wUd5T1dDPNDoNxOUlt3p4AHrQLnkADi5XBfCX2SGYlmyPxgvx9PyF6GD7V61oxNdpA=s82-w82-h82-n-k-no)\n![Image of Innovative Family Therapy](https://lh3.googleusercontent.com/gps-cs-s/APNQkAGkEb69WyFZnrVT3ihp4xHlG4ipUiQtekRpX9Z7hW7P4Romz2OJjmzmCdG4vJioPlgxjp1M87RmOm9nWwLzUkyeyjWm-gkCR4XWp7HYnBzQuBJxUbBdWtk3OoGL0rY8aLXjApGv=s82-w82-h82-n-k-no)\n![Image of Innovative Family Therapy](https://lh3.googleusercontent.com/gps-cs-s/APNQkAFZhjXKuksp7G6hQDhI5JJcC8avqDZ_jgy7RGEubun3DHbXRKtGGhiifS-VYyVM4Wu4X2YesjS6tjuiPsWnt8P7thfpAFaNosisA-fX4ua2MlTgb_3_j7R1zwbkyIGCzzasuA1spw=s82-w82-h82-n-k-no)\n![Image of Innovative Family Therapy](https://lh3.googleusercontent.com/gps-cs-s/APNQkAGcg3JqsQmBzH1GITdc3DGeV8FTilkP3M0CZOa2LVG02Uzgm97gWjf0Y6PDo76wiSlP4hXPuWlQTiw2PmvEp6GhfFNvoVHAcigs7ceyhHy4NBgNOMK9dG_b7F5ljLwZfvhzoOwU=s110-w110-h82-n-k-no)\n![Image of Innovative Family Therapy](https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMWUh5pNCJEHSmpZuaI-H72q6Uw7E4RhGOL3zTJJjplMlSIXYVFK3KJimRP0hwOp70dhe-gmds9gzxXeorE9gZlDTN_afGJagilAyrFtV8apRk5hjOS9jTVeHiDp8DT7Bts3Bcgg=s82-w62-h82-n-k-no)\n](https://www.google.com/searchviewer/10?svid=CAwSHBIaCgNwdnESE0Nnd3ZaeTh4Y1RaaU1ETm1ZMTgYCg)   \nFocuses on the **entire family system** rather than just one individual, allowing multiple counselors to work with a single family. Offers both in-person and **teletherapy** with **no waiting list**.[[1]](https://innovativefamilytherapy.com/)  \n[Brock Family Therapy Center Inc.3.6 (16)Mental health service Closed 10300 Brookridge Village Blvd #104](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdNd2RtYzJNbVo1GAo) [![Image of Brock Family Therapy Center Inc.](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-f6b50dbdfd6a:4)\n![Image of Brock Family Therapy Center Inc.](https://api.dataforseo.com/cdn/i/07060028-9766-0139-0000-f6b50dbdfd6a:5)\n![Image of Brock Family Therapy Center Inc.](https://lh3.googleusercontent.com/gps-cs-s/APNQkAGQiQNbCHrY2KbezH-mW41le2v_b1Lk-D6gmUTcjUlOyR8QuXCV4iDjS2k77pLmSLjU0pglHiTxKMokWAGSKxcqLwQTDPztHBJ3wqpE6G8PeJhsEhyRiXHCjJgLfgAsQfxo9L5i=s82-w62-h82-n-k-no)\n![Image of Brock Family Therapy Center Inc.](https://lh3.googleusercontent.com/gps-cs-s/APNQkAHXiqyAw11-sIeeoXtqiPLOqGYj-expfyGN7PP85zAM2X3ypuArR99sJYwTb16qQ3PUuapulBayBFcuOKwyBocyysgzF3WYiPxwP_CxZYXCJ4ioKcAe0ItkgZ8N5Cpwe1vLkaGT=s110-w110-h82-n-k-no)\n![Image of Brock Family Therapy Center Inc.](https://lh3.googleusercontent.com/gps-cs-s/APNQkAEmRRGG5qho0FPWhbcVX4R5FannHbxo_ktBiq-OU01Hvy7bfoFXufWUj7l9z5HhyrNd1-8xlYyCzoknfK21u5RsDneBqzkA95hyhShIz7Milh1pHaAzarC5_ffl9M5u_lp7ajU5=s82-w62-h82-n-k-no)\n![Image of Brock Family Therapy Center Inc.](https://lh3.googleusercontent.com/gps-cs-s/APNQkAFw3U7wYoWJfKbQX9Gx4TzEU1jKJBasH1mM4nhQnWbz8wVWxhEShzMfIoCFxQnDDgk5KUPMYdjHx2aptYulmkL5fsPkP5IKW8W9itbWWy1rU0vkmlQXiBb4Dd-VhYwddXYS-BDCLA=s82-w62-h82-n-k-no)\n![Image of Brock Family Therapy Center Inc.](https://lh3.googleusercontent.com/gps-cs-s/APNQkAEkp07JtGzzUdzQg5ecc6TKqR0nQ4dbfKQIA8MMX2z9qE1SjxP0srhridkDEVBf--OY6kHn29isZBqy_ty6H1uIDORl4FLAjgSrJ6PNXKkF28hA-49drwWTMqnIpVClgXt9GVs=s82-w62-h82-n-k-no)\n![Image of Brock Family Therapy Center Inc.](https://lh3.googleusercontent.com/gps-cs-s/APNQkAFsl8mMrsXjzrkC6HvumQ2fQCpb38ISFTPa6T-X23TwWEZSXAn1KNs7m_cZsPvGPz8MSJ1Wa2VYWT7BK07vZgLzGekjrLii2d08ov9UkBbhuHL3sZetWNzN980-A-fDtsKA7Ra0=s110-w110-h82-n-k-no)\n![Image of Brock Family Therapy Center Inc.](https://lh3.googleusercontent.com/gps-cs-s/APNQkAHWixGo7aP0xGDFrpGmS5kdMURHflr4SfbLmNrXMOjOiACwu_I56Fq--5NrzIU7NAWo6On7dNwCTz9kw2HV4MlXJd6MfZTHdIZ0h9EeRzWS21BYFVoGJVR5cAXsQTPOC5_zZZA=s110-w110-h82-n-k-no)\n![Image of Brock Family Therapy Center Inc.](https://lh3.googleusercontent.com/gps-cs-s/APNQkAEh0FDxPd8uq85ZU54eyO5uPOuyuzMyMYrI9By4iNNSJiJPwEzlMdaH1gtjuPogvpZvwkJ9E6FRWd7p7dunUe1eNGZurwlYBkVmIG7gcUTTaaX8LzrdjRCpqCN_neMWp8esv-_-=s110-w110-h82-n-k-no)\n](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdNd2RtYzJNbVo1GAo)   \nProvides **counseling for families, couples, and children** , including **parent-child therapy** and **geriatric counseling** . Features a training clinic model with multiple locations.[[1]](https://www.brockfamilytherapycenter.com/)[[2]](https://www.brockfamilytherapycenter.com/)Show more\n\n  \n[Counseling Unconditionally 5.0 (36)Mental health service Closed Prospect, KY](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhaeGFHbzJlbVp0GAo) [![Image of Counseling Unconditionally](https://lh3.googleusercontent.com/gps-cs-s/APNQkAGJpKG0bEn9WQNdA7uso192UV8zq7ytdFC2Tym8zh8lFzzFmugaim_BkI7MwoN5V9l_qAatREQ-Ra61ynDsXe5i3c4CplIRm7ppigfzDHYtdZso8okS6H-9GDs_3d2246c0dZ4=s110-w110-h82-n-k-no)\n![Image of Counseling Unconditionally](https://lh3.googleusercontent.com/gps-cs-s/APNQkAHkY1oetx2CDeOBNqLH-zL8eRuXWNB_BVLcthkkVM9p13agbvhSBOolUqJEjJNSCKUua82bDKqsGiMrHhs9P65WyVp_TihNuElkzE5y1Bb5tdkSc8LVizBAyfqgF9f_QZWXDYI=s82-w62-h82-n-k-no)\n![Image of Counseling Unconditionally](https://lh3.googleusercontent.com/gps-cs-s/APNQkAHN6ntc43oXsVnvJEIt9esWQqXgz8eEI6dkLRGPdAP-yr1r803enP54vcSh-wxpmmBNyaqvOGuepS_Jayo1vHO1z71nvO1z3Rxl2UvxcQOmZcWK5TJBvOD0NRhyOSU1fVRyDb80=s82-w62-h82-n-k-no)\n![Image of Counseling Unconditionally](https://lh3.googleusercontent.com/gps-cs-s/APNQkAEkTTVHNy8s4fiDdZYtoId6pB1XOlYGnFCfVH6Uba0OwH_ChHxnvP5ykQ7YhRB6Vhgx1tBDWXCOL-qdI0I8_qgFeUY-6VInGWaqVX9MGEtlnwT7evb5Mm4qIf8IN9gaLV_VjMEe=s82-w62-h82-n-k-no)\n![Image of Counseling Unconditionally](https://lh3.googleusercontent.com/gps-cs-s/APNQkAHgCW8IYnSG08k4EnioGmAhpTg9R9-iTw4WQXggK3Oo9aoiOwaktEpYaMVbWn3ozIgpCehDYehoUKQBvwFjXtK5BrXST_9KZ6VoLSyHGiRrw40cKklbf5BMDhnzGF-leFpWyQwg=s82-w62-h82-n-k-no)\n![Image of Counseling Unconditionally](https://lh3.googleusercontent.com/gps-cs-s/APNQkAG3nwlSlgM1rgBrIfd6kGNbwVnVKJEWUFOIy4-40_p3pFBb8FOHnNr7BO6Oti9KGIjk33xq0XGXlunCjezQg0AlAvToymOsit9zWrvYLE-OyjIS4rD8osuzkYS1ZmVXHAjTUQAuE3C3wTGi=s82-w82-h82-n-k-no)\n![Image of Counseling Unconditionally](https://lh3.googleusercontent.com/gps-cs-s/APNQkAESy0FJWJSMYNyOP7DcEHl_OWFtiZKe_1COka9l537kWrHDam9xMfjZq6YLYWr2T0BiVaAephAVrqgucCXnNo8jCCcbJhIxwF--Ur1pPbftm0mCBPMivhm66Zg1Mt-TzCVq90TfaRcvwf-y=s82-w82-h82-n-k-no)\n![Image of Counseling Unconditionally](https://lh3.googleusercontent.com/gps-cs-s/APNQkAFe4WTbsWAgrbfph162pw7wboPQIU5E5YZZsxmCJjmXC6AgYQGxmiOPShOzgfzc51udRoLeEvbq5gChJbmARtkxnJ5X7Bkd8zNSx2saPVEQwgX_rC2YdUPRuB6lLI_5hqs-W3iVT5rWA7lC=s82-w82-h82-n-k-no)\n![Image of Counseling Unconditionally](https://lh3.googleusercontent.com/gps-cs-s/APNQkAFGMcENx41HmYbhbpK1aWDLbFdSqo0ulhLvKcWrXiuNAnVKiT8rpHMfXLunY1Wtk_-hUslJIO7GXOKekLYCgqPaGUsWVqfVJx1XRgiR6CIPIVVxWD4LflwofIUeoeZqPtqVaAMG3xAEo40e=s82-w62-h82-n-k-no)\n![Image of Counseling Unconditionally](https://lh3.googleusercontent.com/gps-cs-s/APNQkAGXoMbzz8PidO0hoCH3BVqJAnNqymaPrSAqRsPc_Dgxjrl5fz6Tn_DbnB0F4cyUtiWMFs3854EssWoxthAzR-RgmzDDAkXBXrwazyPpY1NScUsXhi_ZtdeakVDcrAvTBk7zkaSt=s82-w62-h82-n-k-no)\n](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhaeGFHbzJlbVp0GAo)   \nSpecializes in **child, teen, and family counseling** with a focus on overcoming **anxiety and building confidence** . Offers convenient evening and weekend hours.[[1]](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhaeGFHbzJlbVp0GAo)  \n[Olive Branch Family Counseling 4.9 (9)Counselor Closed 4010 Dupont Cir Suite 576](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdaNE5IcDJOM2x5GAo) [![Image of Olive Branch Family Counseling](https://lh3.googleusercontent.com/gps-cs-s/APNQkAGwRSLw2BG3MtvG1OktPSTk5OJFE_FSsemG4VdqtJgSlvexWvEFfuu-CtZeaQT1WAbRRZ-GWe_oxRnooyO25p8LHba96g1YwSK-ijYXxQzrRHe6I3-g9_jMFuS_Urea88oZl_z-=s110-w110-h82-n-k-no)\n![Image of Olive Branch Family Counseling](https://lh3.googleusercontent.com/gps-cs-s/APNQkAGGZ-zJbVbfPq4niYAVyjmUooLIPwJC3BPqF3kJwzWIxeqAOE6kTlwDdRiGmmORX4Xm05rFFaGUA27h9AAJAoWTDoX1YmZ70a1Hwu86egtIRim97PvoHQ-Fe9UCaro_jEvWaKxe=s110-w110-h82-n-k-no)\n![Image of Olive Branch Family Counseling](https://lh3.googleusercontent.com/gps-cs-s/APNQkAHlFIL2-MhGT2o69v6dmp7lbhQpxzDhK5oas0kNHDqb0DWGnuZvWZ4RfLUZcj0jtnPw0NpwtCLAx4WtIidW_i95ethmLukBiRzCxIkQoDqVVmQa9mTMfMWJs-Z_8cgjrhF4WGlh=s110-w110-h82-n-k-no)\n![Image of Olive Branch Family Counseling](https://lh3.googleusercontent.com/gps-cs-s/APNQkAHmDY0b7y73d6R1HDDUUovSYlh5-IND7OFnyCRU5TTeOd79YSXdkb3SwuGL3uv2GsrYrHy_epu-BZVYpb4PS1R9VgT6MrBQD46LPusLkIlljdFutU7gUbiB3tt4Ew9sAuA7Ykj3kw=s110-w110-h82-n-k-no)\n![Image of Olive Branch Family Counseling](https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=vr_NH31Cdr62FS4Ngvfsqw&amp;cb_client=search.gws-prod.gps&amp;yaw=298.6828&amp;pitch=0&amp;thumbfov=100&amp;w=82&amp;h=82)\n![Image of Olive Branch Family Counseling](https://www.google.com:443/maps/vt/data=qZMZ1dTBs1ffmE1TGmfwf3mWcbFJQxjjjElfJf9TBch8OO5mp2ORcqzdLE4Ey0wNlVkUQRqSPKs6RHuYAlcWRBj8prhbHVa7-7wxsh6NKSnC2Vqdi13KVoiv6yjjfivGOcoegHXMbcbCzrDGQwLGHHU7uZBOa_Qda5gLcpmwPYjpThd8dnp4Bb6OPL3Ih-6o1iO6AJAzh6ZlDFvw06awyg6TK4I74A)\n](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdaNE5IcDJOM2x5GAo)   \nProvides **Christian-based, solution-focused therapy** for individuals, couples, and families struggling with relationship issues, anxiety, or trauma.[[1]](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdaNE5IcDJOM2x5GAo)  \n[Revelation Counseling Center 4.8 (45)Mental health service Closed 4333 S Brook St](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdJNE1YTXhPVEZvGAo) [![Image of Revelation Counseling Center](https://lh3.googleusercontent.com/gps-cs-s/APNQkAF29P7ri9A75NneBxuqR2ZWSYZmt3tpoy3F1JIvg9CdAB-LRDdvMT4bc_5o-HKufOCwZDTLLSd6T81oeLlQg9YsMTUMjZfQ7AnXsYXS5zY6j2QxsWAieucDTDa4FMqxaxrkkjFt=s110-w110-h82-n-k-no)\n![Image of Revelation Counseling Center](https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Xa62AF2AAeWZdVfELSzE1Q&amp;cb_client=search.gws-prod.gps&amp;yaw=104.09959&amp;pitch=0&amp;thumbfov=100&amp;w=82&amp;h=82)\n![Image of Revelation Counseling Center](https://lh3.googleusercontent.com/gps-cs-s/APNQkAEqhHxFa0LyfbPKyt-X5e_rHidZ5xG0Cgwg4Oe6npbjKuupqsx5flyFr27I1XXkuh1Wc--dtLreePnYAnVbfn--Evdiepq3X0KR9yig_pgvTUtj04aDvKIX93pqZmVfApyfs9L3Lw=s110-w110-h82-n-k-no)\n![Image of Revelation Counseling Center](https://lh3.googleusercontent.com/gps-cs-s/APNQkAHlnOEyUFU1sFEXqQtd4dreuq0q3UQdTyVRH0v-YEsXkmCmqwrp6IGitF-EunFCYcZFrs_AWUexakDgxCD0z-fVAcWDFJSILKN0-6VLORh8EIqvwh_biCkX9HdlWPmmlcawtVneO1AlNv06=s110-w110-h82-n-k-no)\n![Image of Revelation Counseling Center](https://www.google.com:443/maps/vt/data=oLFIV3Em_xO3EV3T7iifSgrrajfC4qaAqAw7JE4Ij_NdIIgF0jldBBqvw29ORnGx2CUNrNu1gW9cpWy9rL2TozVYPhYscUUFJzw955AQDZ1wrO1EYJS7Z81f2LxdqZ0KrwhDr5sAik3sh69hXSPiThQfP5EmN8VmnnyfQ2jk22drUMAYf4U1nBP6invqcHRSvHs6caIIHeVy1pyt80u0WgIzUvp3AA)\n](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdJNE1YTXhPVEZvGAo)   \nVoted highly for **marriage and couples counseling** , also providing services for children and families. Offers a variety of specialized classes, including **anger management and parenting**.[[1]](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdJNE1YTXhPVEZvGAo)Show more Other options in the area include the Kentucky Counseling Center (4.6/5, 605 reviews) which offers no-waitlist services, and Northstar Counseling Center, which provides specialized care in the St. Matthews area.[[1]](https://northstarcounselingcenter.com/)[[2]](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhaeGFHbzJlbVp0GAo)Are you looking for a specific type of therapist, such as one who accepts **Anthem** or **Passport** insurance 💳, or perhaps someone specializing in **teen counseling** 🧑‍🎤?[](https://creativefamilycounseling.org/) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://creativefamilycounseling.org&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nCreative Family Counseling https://creativefamilycounseling.org Creative Family Counseling | Child, Teen & Family Therapists, Louisville Enjoy Courageous Growth! Implement effective tools for more connected and peaceful relationships. Call Today to Connect With CFC! LOUISVILLE CAMPUS. 8134 New La...![](https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRYUabd-nIunkczxU1_kl-oDI0FQc4jnYEKbm5eDyOlOV-i-e2aJy3r4QmBQ-eFXdDLNcKwEtPF)\n[](https://www.brockfamilytherapycenter.com/) ![](https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.brockfamilytherapycenter.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nBrock Family Therapy Center https://www.brockfamilytherapycenter.com Brock Family Therapy Center | Louisville Family Therapy and ...When you are ready to begin the process, contact us and we will schedule your welcome evaluation. Now Open - Second and Third Locations. 9700 Park Plaza Ave Sui...![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5CJYpwaCNP0ptQXI2D-ohXJjqtWq7JLmNjCfaXOSa1raUQEvcJTHxwFdCgB-wInu9oVG4C7BP)\n[](https://innovativefamilytherapy.com/) ![](https://encrypted-tbn2.gstatic.com/faviconV2?url=https://innovativefamilytherapy.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nInnovative Family Therapy https://innovativefamilytherapy.com Licensed Therapists Louisville, KY | Mental Health Counseling Our counselors go beyond the call of duty to form a bond between them and their client. * Multiple Therapists. At Innovative Family Therapy in Louisville![](https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS2V8HCZJrZ6Ag8oKm42sn2-owiSrf7lGR4bWZ9dHgMjs5JGHH-CpTAo5tcrxGh_fauGnU3Rcz5)\n[](https://creativefamilycounseling.org/louisville-ky-campus/) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://creativefamilycounseling.org&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nCreative Family Counseling https://creativefamilycounseling.org Visit Our Louisville, KY Campus - Creative Family Counseling Creative Family Counseling's Louisville, KY Campus ... Individuals, couples, and families looking for therapeutic services including therapy for kids, therapy![](https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1_vj-9R-LfYl5LQuqoZiWIQ4JMYjiJrICNriLwHnvGrEAtXVT8rEmrpd0Jau1__nKiKlp2ONJ)\n[](https://northstarcounselingcenter.com/) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://northstarcounselingcenter.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nNorthstar Counseling Center https://northstarcounselingcenter.com Northstar Counseling Center Northstar Counseling Center is committed to meeting our community's mental health needs through providing counseling services in Louisville, KY to individuals,![](https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTGEEYngbck8f7rlyuUG-qAX5qBqgjQmLu9RvIYf_nlREkzmxg7QKZApm9u6FA3HteWGfr9Mcd1)\n[](https://www.brockfamilytherapycenter.com/) ![](https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.brockfamilytherapycenter.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nBrock Family Therapy Center https://www.brockfamilytherapycenter.com Brock Family Therapy Center | Louisville Family Therapy and ...Certified Clinical Training. Preparing the clinicians of tomorrow with real-life training. Family & Parent-Child Therapy. Strengthening relationships between fa...![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5CJYpwaCNP0ptQXI2D-ohXJjqtWq7JLmNjCfaXOSa1raUQEvcJTHxwFdCgB-wInu9oVG4C7BP)\n[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhaeGFHbzJlbVp0GAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Counseling Unconditionally Counseling Unconditionally provides professional mental health counseling to children, teens, adults, couples, and families. We believe every person deserves to[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhaeGFHbzJlbVp0GAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Counseling Unconditionally Counseling Unconditionally provides professional mental health counseling to children, teens, adults, couples, and families. We believe every person deserves to[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdaNE5IcDJOM2x5GAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Olive Branch Family Counseling Individual, marriage, and family counseling services that offers insight, cognitive & emotional processing, and solution focused therapy approaches in a Christi[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdJNE1YTXhPVEZvGAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Revelation Counseling Center Revelation Counseling Center offers individual, couples, and marriage counseling. We provide therapy to both adults, children, and couples. Revelation Counselin[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhCd2VUUTJlRGxrGAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Core Counseling We are a Private Practice for Mental Health (Outpatient) Therapy. We are honored to provide Holistic Evidenced-based care to Individuals of Louisville Community[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdnM01XcHRZelpxGAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Life Training Christian Counseling Established in 2007, Life Training Christian Counseling offers Christ-centered therapy in Louisville, Kentucky. Led by Dr. Dave and Ann Ralston, they specialize[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdnMU5HUmZYemQwGAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Kentucky Counseling Center Kentucky Counseling Center in Louisville offers expert therapy in Louisville, KY, including individual therapy, couples counseling, and family therapy. Our serv[](https://www.google.com/searchviewer/10?svid=CAwSHBIaCgNwdnESE0Nnd3ZaeTh4YUdNeE1UUjVPVEUYCg) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Michael RoBards, LCSW Michael RoBards, LCSW, specializes in work with parents, children, adolescents, and adults in addressing issues with divorce, grief/loss, attention deficit hype[](https://www.google.com/searchviewer/10?svid=CAwSHBIaCgNwdnESE0Nnd3ZaeTh4Y1RaaU1ETm1ZMTgYCg) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Innovative Family Therapy Innovative Family Therapy is a group of professional therapists who work in a variety of areas of counseling including adult, couples, marriage, divorce, family[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhKeU5IWmllRFY1GAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Grace Psychological Services - Louisville Licensed therapists and psychologists in Louisville, KY providing therapy, psychological testing, and psychiatric medication management for adults, children, an[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdzMmRucHJkRFUxGAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Apricus Counseling At Apricus Counseling, we seek to be a haven for individuals, couples, and families seeking growth, support and healing. Our team of experienced mental health p[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhabU4zZzFObkZzGAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Laura Hope Counseling Laura Hope Counseling provides professional, biblical counseling services for girls and women in Louisville, KY and the surrounding area. Laura Milbourne, MS, M[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhSeWJUSnNZMkptGAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Safe Touch Family Counseling Safe Touch Family Counseling Center is located in the heart of Louisville, Kentucky. We offer individual and family therapy sessions to help families disrupt th[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdkb2N6YzVZMnRvGAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Bloom Counseling + Wellness Studio Bloom Counseling + Wellness Studio is now open in Norton Commons. (Google is reviewing our address change) Accepting new child, teen, couples & adult clients fo[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdaNGQyMTVkRFl4GAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com The Mindfulness Center Our mission at The Mindfulness Center is to help you find peace and joy within yourself and your relationships through therapy, coaching, and classes from a min[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdNMVgzaHNNR3gyGAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com LifeStance Therapists & Psychiatrists Louisville Discover expert mental health care at LifeStance in Louisville, KY. Choose between convenient online or in-person counseling, therapy, psychiatry and medication[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhOdFozUjNhRjk0GAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Derby City Counseling Derby City Counseling is a modern mental health practice located in Louisville, KY. Services include individual therapy, couples counseling, and workshops.[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdKM1ptdzNNSEZqGAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Sims Counseling & Consulting Sims Counseling and Consulting, is a sanctuary for holistic and integrative mental health services. Sims, established October 3, 2015, is the vision realized by[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhJeE9UZzROSE5rGAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Evolved Counseling Life isn’t easy. Sometimes, even the strongest people amongst us need a little help to work through some of life’s more challenging problems. Each of us have ba[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhkeFkyUXlYelV3GAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Diane Taylor, Marriage and Family Therapy Associate Diane Taylor, MFT Associate, provides compassionate and personalized mental health care in Louisville, KY. Specializing in marriage and family therapy, Diane he[](https://www.google.com/searchviewer/10?svid=CAwSGxIZCgNwdnESEkNnc3ZaeTh4ZEd4aWF6bHJlQRgK) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Steere Family Therapy Steere Family Therapy offers a way to assist you to fully participate in the moving experience of changing as an individual, a couple, or a family.\n\nSteere Fami[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdaNE5IcDJOM2x5GAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Olive Branch Family Counseling Individual, marriage, and family counseling services that offers insight, cognitive & emotional processing, and solution focused therapy approaches in a Christi[](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdJNE1YTXhPVEZvGAo) ![](https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&amp;client=AIM&amp;size=64&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL)\nGoogle https://www.google.com Revelation Counseling Center Revelation Counseling Center offers individual, couples, and marriage counseling. We provide therapy to both adults, children, and couples. Revelation Counselin",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Other options in the area include the Kentucky Counseling Center (4.6/5, 605 reviews) which offers no-waitlist services, and Northstar Counseling Center, which provides specialized care in the St. Matthews area. Northstar Counseling Center +20",
+                  "markdown": "Other options in the area include the Kentucky Counseling Center (4.6/5, 605 reviews) which offers no-waitlist services, and Northstar Counseling Center, which provides specialized care in the St. Matthews area.[[1]](https://northstarcounselingcenter.com/)[[2]](https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhaeGFHbzJlbVp0GAo)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Northstar Counseling Center",
+                      "domain": "northstarcounselingcenter.com",
+                      "url": "https://northstarcounselingcenter.com/",
+                      "title": "Northstar Counseling Center",
+                      "text": "Northstar Counseling Center is committed to meeting our community's mental health needs through providing counseling services in Louisville, KY to individuals,"
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Google",
+                      "domain": "www.google.com",
+                      "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhaeGFHbzJlbVp0GAo",
+                      "title": "Counseling Unconditionally",
+                      "text": "Counseling Unconditionally provides professional mental health counseling to children, teens, adults, couples, and families. We believe every person deserves to"
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Are you looking for a specific type of therapist, such as one who accepts Anthem or Passport insurance 💳, or perhaps someone specializing in teen counseling 🧑‍🎤?",
+                  "markdown": "Are you looking for a specific type of therapist, such as one who accepts **Anthem** or **Passport** insurance 💳, or perhaps someone specializing in **teen counseling** 🧑‍🎤?",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Creative Family Counseling",
+                  "domain": "creativefamilycounseling.org",
+                  "url": "https://creativefamilycounseling.org/",
+                  "title": "Creative Family Counseling | Child, Teen & Family Therapists, Louisville",
+                  "text": "Enjoy Courageous Growth! Implement effective tools for more connected and peaceful relationships. Call Today to Connect With CFC! LOUISVILLE CAMPUS. 8134 New La..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Brock Family Therapy Center",
+                  "domain": "www.brockfamilytherapycenter.com",
+                  "url": "https://www.brockfamilytherapycenter.com/",
+                  "title": "Brock Family Therapy Center | Louisville Family Therapy and ...",
+                  "text": "When you are ready to begin the process, contact us and we will schedule your welcome evaluation. Now Open - Second and Third Locations. 9700 Park Plaza Ave Sui..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Innovative Family Therapy",
+                  "domain": "innovativefamilytherapy.com",
+                  "url": "https://innovativefamilytherapy.com/",
+                  "title": "Licensed Therapists Louisville, KY | Mental Health Counseling",
+                  "text": "Our counselors go beyond the call of duty to form a bond between them and their client. * Multiple Therapists. At Innovative Family Therapy in Louisville"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Creative Family Counseling",
+                  "domain": "creativefamilycounseling.org",
+                  "url": "https://creativefamilycounseling.org/louisville-ky-campus/",
+                  "title": "Visit Our Louisville, KY Campus - Creative Family Counseling",
+                  "text": "Creative Family Counseling's Louisville, KY Campus ... Individuals, couples, and families looking for therapeutic services including therapy for kids, therapy"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Northstar Counseling Center",
+                  "domain": "northstarcounselingcenter.com",
+                  "url": "https://northstarcounselingcenter.com/",
+                  "title": "Northstar Counseling Center",
+                  "text": "Northstar Counseling Center is committed to meeting our community's mental health needs through providing counseling services in Louisville, KY to individuals,"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhaeGFHbzJlbVp0GAo",
+                  "title": "Counseling Unconditionally",
+                  "text": "Counseling Unconditionally provides professional mental health counseling to children, teens, adults, couples, and families. We believe every person deserves to"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdaNE5IcDJOM2x5GAo",
+                  "title": "Olive Branch Family Counseling",
+                  "text": "Individual, marriage, and family counseling services that offers insight, cognitive & emotional processing, and solution focused therapy approaches in a Christi"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdJNE1YTXhPVEZvGAo",
+                  "title": "Revelation Counseling Center",
+                  "text": "Revelation Counseling Center offers individual, couples, and marriage counseling. We provide therapy to both adults, children, and couples. Revelation Counselin"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhCd2VUUTJlRGxrGAo",
+                  "title": "Core Counseling",
+                  "text": "We are a Private Practice for Mental Health (Outpatient) Therapy. We are honored to provide Holistic Evidenced-based care to Individuals of Louisville Community"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdnM01XcHRZelpxGAo",
+                  "title": "Life Training Christian Counseling",
+                  "text": "Established in 2007, Life Training Christian Counseling offers Christ-centered therapy in Louisville, Kentucky. Led by Dr. Dave and Ann Ralston, they specialize"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdnMU5HUmZYemQwGAo",
+                  "title": "Kentucky Counseling Center",
+                  "text": "Kentucky Counseling Center in Louisville offers expert therapy in Louisville, KY, including individual therapy, couples counseling, and family therapy. Our serv"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHBIaCgNwdnESE0Nnd3ZaeTh4YUdNeE1UUjVPVEUYCg",
+                  "title": "Michael RoBards, LCSW",
+                  "text": "Michael RoBards, LCSW, specializes in work with parents, children, adolescents, and adults in addressing issues with divorce, grief/loss, attention deficit hype"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHBIaCgNwdnESE0Nnd3ZaeTh4Y1RaaU1ETm1ZMTgYCg",
+                  "title": "Innovative Family Therapy",
+                  "text": "Innovative Family Therapy is a group of professional therapists who work in a variety of areas of counseling including adult, couples, marriage, divorce, family"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhKeU5IWmllRFY1GAo",
+                  "title": "Grace Psychological Services - Louisville",
+                  "text": "Licensed therapists and psychologists in Louisville, KY providing therapy, psychological testing, and psychiatric medication management for adults, children, an"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdzMmRucHJkRFUxGAo",
+                  "title": "Apricus Counseling",
+                  "text": "At Apricus Counseling, we seek to be a haven for individuals, couples, and families seeking growth, support and healing. Our team of experienced mental health p"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhabU4zZzFObkZzGAo",
+                  "title": "Laura Hope Counseling",
+                  "text": "Laura Hope Counseling provides professional, biblical counseling services for girls and women in Louisville, KY and the surrounding area. Laura Milbourne, MS, M"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhSeWJUSnNZMkptGAo",
+                  "title": "Safe Touch Family Counseling",
+                  "text": "Safe Touch Family Counseling Center is located in the heart of Louisville, Kentucky. We offer individual and family therapy sessions to help families disrupt th"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdkb2N6YzVZMnRvGAo",
+                  "title": "Bloom Counseling + Wellness Studio",
+                  "text": "Bloom Counseling + Wellness Studio is now open in Norton Commons. (Google is reviewing our address change) Accepting new child, teen, couples & adult clients fo"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdaNGQyMTVkRFl4GAo",
+                  "title": "The Mindfulness Center",
+                  "text": "Our mission at The Mindfulness Center is to help you find peace and joy within yourself and your relationships through therapy, coaching, and classes from a min"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdNMVgzaHNNR3gyGAo",
+                  "title": "LifeStance Therapists & Psychiatrists Louisville",
+                  "text": "Discover expert mental health care at LifeStance in Louisville, KY. Choose between convenient online or in-person counseling, therapy, psychiatry and medication"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhOdFozUjNhRjk0GAo",
+                  "title": "Derby City Counseling",
+                  "text": "Derby City Counseling is a modern mental health practice located in Louisville, KY. Services include individual therapy, couples counseling, and workshops."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdKM1ptdzNNSEZqGAo",
+                  "title": "Sims Counseling & Consulting",
+                  "text": "Sims Counseling and Consulting, is a sanctuary for holistic and integrative mental health services. Sims, established October 3, 2015, is the vision realized by"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhJeE9UZzROSE5rGAo",
+                  "title": "Evolved Counseling",
+                  "text": "Life isn’t easy. Sometimes, even the strongest people amongst us need a little help to work through some of life’s more challenging problems. Each of us have ba"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVhkeFkyUXlYelV3GAo",
+                  "title": "Diane Taylor, Marriage and Family Therapy Associate",
+                  "text": "Diane Taylor, MFT Associate, provides compassionate and personalized mental health care in Louisville, KY. Specializing in marriage and family therapy, Diane he"
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Google",
+                  "domain": "www.google.com",
+                  "url": "https://www.google.com/searchviewer/10?svid=CAwSGxIZCgNwdnESEkNnc3ZaeTh4ZEd4aWF6bHJlQRgK",
+                  "title": "Steere Family Therapy",
+                  "text": "Steere Family Therapy offers a way to assist you to fully participate in the moving experience of changing as an individual, a couple, or a family. Steere Fami"
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 1,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[1]/c-wiz[1]",
+              "title": "Kentucky Counseling Center",
+              "description": "Open · Closes 8 PM · 1169 Eastern Pkwy Ste 3328",
+              "domain": "kentuckycounselingcenter.com",
+              "phone": "+18555910092",
+              "booking_url": null,
+              "url": "http://kentuckycounselingcenter.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.6,
+                "votes_count": 605,
+                "rating_max": 5
+              },
+              "cid": "12572663660737329637",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 2,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[1]/c-wiz[2]",
+              "title": "Olive Branch Family Counseling",
+              "description": "Closed · Opens 8:30 AM Mon · 4010 Dupont Cir Suite 576",
+              "domain": "www.olivebranchfamilycounseling.com",
+              "phone": "+15026532228",
+              "booking_url": null,
+              "url": "http://www.olivebranchfamilycounseling.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.9,
+                "votes_count": 9,
+                "rating_max": 5
+              },
+              "cid": "15906099659231562543",
+              "rectangle": null
+            },
+            {
+              "type": "local_pack",
+              "rank_group": 3,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[1]/c-wiz[3]",
+              "title": "Steere Family Therapy",
+              "description": "St Matthews, KY",
+              "domain": "louisvillefamilytherapy.com",
+              "phone": "+15022955008",
+              "booking_url": null,
+              "url": "http://louisvillefamilytherapy.com/",
+              "is_paid": false,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 1,
+                "rating_max": 5
+              },
+              "cid": "2787614966230724216",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 1,
+              "rank_absolute": 5,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "creativefamilycounseling.org",
+              "title": "Creative Family Counseling | Child, Teen & Family Therapists, Louisville",
+              "url": "https://creativefamilycounseling.org/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://creativefamilycounseling.org",
+              "website_name": "Creative Family Counseling",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Creative Family Counseling offers individual and family counseling & parent support. Telehealth & Online Counseling available. Call 502-709-0410 today.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "Campuses",
+                  "description": null,
+                  "url": "https://creativefamilycounseling.org/louisville-ky-campus/",
+                  "domain": "creativefamilycounseling.org"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Welcome",
+                  "description": null,
+                  "url": "https://creativefamilycounseling.org/#top",
+                  "domain": "creativefamilycounseling.org"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Services",
+                  "description": null,
+                  "url": "https://creativefamilycounseling.org/services/",
+                  "domain": "creativefamilycounseling.org"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Specialties",
+                  "description": null,
+                  "url": "https://creativefamilycounseling.org/specialties/",
+                  "domain": "creativefamilycounseling.org"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Our Team",
+                  "description": null,
+                  "url": "https://creativefamilycounseling.org/our-lyndon-team/",
+                  "domain": "creativefamilycounseling.org"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Resources",
+                  "description": null,
+                  "url": "https://creativefamilycounseling.org/resources/",
+                  "domain": "creativefamilycounseling.org"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Contact",
+                  "description": null,
+                  "url": "https://creativefamilycounseling.org/contact-us/",
+                  "domain": "creativefamilycounseling.org"
+                }
+              ],
+              "faq": null,
+              "extended_people_also_search": [
+                "brock family",
+                "family therapy",
+                "in-person therapy",
+                "creative family",
+                "couples therapy",
+                "creative family",
+                "best therapist",
+                "black therapist"
+              ],
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 2,
+              "rank_absolute": 6,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.brockfamilytherapycenter.com",
+              "title": "Brock Family Therapy Center | Louisville Family Therapy and ...",
+              "url": "https://www.brockfamilytherapycenter.com/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.brockfamilytherapycenter.com",
+              "website_name": "Brock Family Therapy Center",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Brock Family Therapy Center is dedicated to client-based services that encourage well-being and the development of strategies for personal growth.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": [
+                "brock family",
+                "family therapy",
+                "in-person therapy",
+                "creative family",
+                "couples therapy",
+                "creative family",
+                "best therapist",
+                "black therapist"
+              ],
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "people_also_ask",
+              "rank_group": 1,
+              "rank_absolute": 7,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[9]/div[1]",
+              "items": [
+                {
+                  "type": "people_also_ask_element",
+                  "title": "What are the four types of family therapy?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[9]/div[1]/div[2]/div[2]/div[1]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "What kind of therapy is best for family issues?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[9]/div[1]/div[2]/div[2]/div[2]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "What is the difference between family counseling and family therapy?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[9]/div[1]/div[2]/div[2]/div[3]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "What is the 2 year rule for therapists?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[9]/div[1]/div[2]/div[2]/div[4]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 3,
+              "rank_absolute": 8,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[11]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.psychologytoday.com",
+              "title": "Find Family Counseling and Therapists in Louisville, KY",
+              "url": "https://www.psychologytoday.com/us/therapists//ky/louisville?category=family-therapy",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.psychologytoday.com",
+              "website_name": "Psychology Today",
+              "is_image": true,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Browse therapists in Louisville, KY providing counseling for families and family relationships. Filter by therapy type, specialty, and more.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": [
+                {
+                  "type": "images_element",
+                  "alt": "family therapy Louisville KY from www.psychologytoday.com",
+                  "url": "https://www.psychologytoday.com/us/therapists//ky/louisville?category=family-therapy",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs5Byt2QEjttThFgoBl2_SWl4vBfC3KezqpJEYq9RSYVkghFm4WphL4YE&usqp=CAE&s"
+                }
+              ],
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": [
+                "brock family",
+                "family therapy",
+                "in-person therapy",
+                "creative family",
+                "couples therapy",
+                "creative family",
+                "best therapist",
+                "black therapist"
+              ],
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 4,
+              "rank_absolute": 9,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[13]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "innovativefamilytherapy.com",
+              "title": "Licensed Therapists Louisville, KY | Mental Health Counseling",
+              "url": "https://innovativefamilytherapy.com/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://innovativefamilytherapy.com",
+              "website_name": "Innovative Family Therapy",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Innovative Family Therapy has several licensed therapists in Louisville, KY that offer counseling services for adults, children & couples.",
+              "pre_snippet": "11/10/2025 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2025-11-10 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "discussions_and_forums",
+              "rank_group": 1,
+              "rank_absolute": 10,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[15]",
+              "title": "Discussions and forums",
+              "items": [
+                {
+                  "type": "discussions_and_forums_element",
+                  "title": "Family Therpists/Counselors - Louisville",
+                  "url": "https://www.reddit.com/r/Louisville/comments/s9kjd0/family_therpistscounselors/",
+                  "domain": "www.reddit.com",
+                  "source": "Reddit",
+                  "description": null,
+                  "timestamp": "2022-07-05 21:28:05 +00:00",
+                  "posts_count": 10
+                },
+                {
+                  "type": "discussions_and_forums_element",
+                  "title": "Wanting any recommendations",
+                  "url": "https://www.reddit.com/r/Louisville/comments/16tofgc/wanting_any_recommendations/",
+                  "domain": "www.reddit.com",
+                  "source": "Reddit",
+                  "description": null,
+                  "timestamp": "2024-07-05 21:28:05 +00:00",
+                  "posts_count": 5
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 5,
+              "rank_absolute": 11,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[17]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "louisvillefamilytherapy.com",
+              "title": "Welcome to Steere Family Therapy | Louisville Family Therapy - Steere ...",
+              "url": "https://louisvillefamilytherapy.com/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://louisvillefamilytherapy.com",
+              "website_name": "louisvillefamilytherapy.com",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Louisville's Family Therapy Specialists. Steere Family Therapy. MENU. 4169 Westport Road. Louisville, KY 40207. Mon-Thu 9am-9pm, Fri/Sat 9am-12pm. Sunday CLOSED.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 6,
+              "rank_absolute": 12,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[19]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "boysandgirlshaven.org",
+              "title": "Haven Family Counseling",
+              "url": "https://boysandgirlshaven.org/programs/haven-family-counseling/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://boysandgirlshaven.org",
+              "website_name": "Boys & Girls Haven",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Our mental health services are designed to be safe, affordable, and flexible. Individual Therapy; Family Therapy ... 2301 Goldsmith Lane, Louisville, KY 40218",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 7,
+              "rank_absolute": 13,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[21]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "groupworksky.com",
+              "title": "Family Counseling | Groupworks | Louisville, KY",
+              "url": "https://groupworksky.com/family-counseling",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://groupworksky.com",
+              "website_name": "Groupworks Psychological Services",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "We will help your family reconnect to the joy you once shared. Our family psychologists get to know each member of the family and support them in making their ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 8,
+              "rank_absolute": 14,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[23]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "lifestance.com",
+              "title": "Find Family Therapy in Louisville, Kentucky",
+              "url": "https://lifestance.com/services/family-therapy/ky/louisville/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://lifestance.com",
+              "website_name": "LifeStance Health",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "At LifeStance Health, we offer compassionate care and deep expertise in Family Therapy. We offer Family Therapy near Louisville, Kentucky at our mental ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "people_also_search",
+              "rank_group": 1,
+              "rank_absolute": 15,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[4]/div[2]/div[1]/div[12]/div[3]/div[1]/div[1]/div[25]",
+              "title": "People also search for",
+              "items": [
+                "Private family therapy louisville ky",
+                "Best family therapy louisville ky",
+                "Brock Family Therapy",
+                "Family therapy near me",
+                "In-person therapy Louisville, KY",
+                "Creative Family Counseling louisville KY"
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

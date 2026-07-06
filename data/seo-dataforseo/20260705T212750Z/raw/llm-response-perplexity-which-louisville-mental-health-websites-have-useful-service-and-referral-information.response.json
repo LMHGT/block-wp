@@ -1,0 +1,93 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.9208 sec.",
+  "cost": 0.006234,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-4d96ac46a950",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.9105 sec.",
+      "cost": 0.006234,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "perplexity",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "perplexity",
+        "user_prompt": "Which Louisville mental health websites have useful service and referral information?",
+        "model_name": "sonar",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response perplexity Which Louisville mental health websites have useful service and referral informa",
+        "max_output_tokens": 700
+      },
+      "result": [
+        {
+          "model_name": "sonar",
+          "input_tokens": 37,
+          "output_tokens": 597,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.005634,
+          "datetime": "2026-07-06 00:32:14 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "The most useful Louisville mental health websites for service and referral information are **Mental Health Lou**, **Seven Counties Services**, and **University of Louisville Health (UofL Health)**, as they provide comprehensive directories, crisis support, and community-specific referrals.\n\n| Website | Key Service & Referral Information |\n|---------|-----------------------------------|\n| **Mental Health Lou** ([mentalhealthlou.com](https://www.mentalhealthlou.com)) | A registered 501(c)(3) non-profit connecting Louisville residents to therapists, wellness events, and school workshops; focuses on reducing stigma and barriers to care in underserved neighborhoods [1]. |\n| **Seven Counties Services** ([sevencounties.org](https://sevencounties.org)) | Kentucky’s leading Community Mental Health Center serving Jefferson County and surrounding areas; offers mental health, addiction recovery, and developmental services with specialized content for families and caregivers [3]. |\n| **UofL Health – Mental & Behavioral Health** ([uoflhealth.org](https://uoflhealth.org/services/mental-and-behavioral-health/)) | Provides emergency psychiatric services, acute crisis stabilization, substance abuse treatment, and outpatient therapy; includes referral to Peace Hospital for no-charge assessments and lists crisis contact (988) [2]. |\n| **Spalding University – Center for Behavioral Health** ([behavioralhealth.spalding.edu](https://behavioralhealth.spalding.edu)) | Offers in-person and virtual counseling and psychological assessments for all ages in downtown Louisville [5]. |\n| **Hagan Health** ([haganhealth.com](https://haganhealth.com)) | Provides expert care for anxiety, depression, and ADHD; features a well-respected psychiatrist with 44+ years of experience [4]. |\n| **The Brook Hospitals** ([thebrookhospitals.com](https://thebrookhospitals.com)) | Operates two Louisville locations (KMI and Dupont) offering psychiatric and substance abuse treatment for adults 18+ since 1985 [6]. |\n| **Norton Healthcare – Behavioral Health** ([nortonhealthcare.com](https://nortonhealthcare.com/services-and-conditions/behavioral-health/)) | Coordinates outpatient mental health care with primary care services across Kentucky and Indiana [8]. |\n| **Kentucky Dept. for Behavioral Health** ([dbhdid.ky.gov](https://dbhdid.ky.gov)) | State agency administering funded mental health, substance use, and developmental services; useful for understanding public program eligibility [7]. |\n\nFor immediate crisis support, all sites recommend calling **988** (Suicide & Crisis Lifeline) or **911** in emergencies. If you need a no-charge assessment, **Peace Hospital** (via UofL Health referral) offers free treatment option assistance [2].\n\nThese websites are current as of July 2026 and prioritize local, accessible care in Louisville.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Lou – Louisville, KY",
+                      "url": "https://www.mentalhealthlou.com"
+                    },
+                    {
+                      "title": "Mental and Behavioral Health | Louisville KY",
+                      "url": "https://uoflhealth.org/services/mental-and-behavioral-health/"
+                    },
+                    {
+                      "title": "Seven Counties Services | Mental Health, Addiction Recovery ...",
+                      "url": "https://sevencounties.org"
+                    },
+                    {
+                      "title": "Hagan Health: Mental Health Services Louisville KY",
+                      "url": "https://haganhealth.com"
+                    },
+                    {
+                      "title": "Center for Behavioral Health: Home",
+                      "url": "https://behavioralhealth.spalding.edu"
+                    },
+                    {
+                      "title": "Mental Health Treatment | The Brook Hospitals | Louisville, KY",
+                      "url": "https://thebrookhospitals.com"
+                    },
+                    {
+                      "title": "Department for Behavioral Health - Cabinet for Health and Family ...",
+                      "url": "https://dbhdid.ky.gov"
+                    },
+                    {
+                      "title": "Kentucky and Indiana Mental Health Care - Norton Healthcare",
+                      "url": "https://nortonhealthcare.com/services-and-conditions/behavioral-health/"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": null
+        }
+      ]
+    }
+  ]
+}

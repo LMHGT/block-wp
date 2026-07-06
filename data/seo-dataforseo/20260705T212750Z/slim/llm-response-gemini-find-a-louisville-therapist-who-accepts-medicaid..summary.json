@@ -1,0 +1,19 @@
+{
+  "name": "llm-response-gemini-Find a Louisville therapist who accepts Medicaid.",
+  "path": "/v3/ai_optimization/gemini/llm_responses/live",
+  "platform": "gemini",
+  "model": "gemini-2.5-flash-lite",
+  "prompt": "Find a Louisville therapist who accepts Medicaid.",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "cost": 0.0357188,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "result_counts": [
+    1
+  ],
+  "task_statuses": [
+    20000
+  ],
+  "elapsed_seconds": 3.95
+}

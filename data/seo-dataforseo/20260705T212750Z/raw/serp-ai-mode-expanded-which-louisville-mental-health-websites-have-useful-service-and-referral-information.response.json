@@ -1,0 +1,277 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "10.0782 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060041-9766-0139-0000-f27c9debdc35",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "10.0085 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "ai_mode",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "ai_mode",
+        "keyword": "Which Louisville mental health websites have useful service and referral information?",
+        "location_code": 1017825,
+        "language_code": "en",
+        "device": "desktop",
+        "tag": "lmhg ai mode expanded Which Louisville mental health websites have useful service and referral informa",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Which Louisville mental health websites have useful service and referral information?",
+          "type": "ai_mode",
+          "se_domain": "google.com",
+          "location_code": 1017825,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=Which%20Louisville%20mental%20health%20websites%20have%20useful%20service%20and%20referral%20information%3F&hl=en&gl=US&udm=50&uule=w+CAIQIFISCRHVW7MaC2mIETL9cSAotNPU",
+          "datetime": "2026-07-05 21:41:22 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview"
+          ],
+          "se_results_count": 0,
+          "items_count": 1,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[2]/div[1]/div[9]/div[1]/div[2]/div[1]/section[1]/div[1]/div[1]/div[3]/div[4]/div[1]/div[1]/div[1]/div[3]",
+              "markdown": "When looking for mental health services and referrals in the Louisville area, several key local and regional websites offer comprehensive directories, crisis intervention resources, and direct provider connections.\n\nThe following platforms stand out for their robust service and referral information:\n\n- **[Louisville Metro Community Mental Health Services](https://louisvilleky.gov/government/health-wellness/community-mental-health-services):** The official city government portal acts as a central hub for finding local mental health resources. It features contact details for the Seven Counties Services 24/7 crisis hotlines (Adult, Child, and Addiction) and connects users to the [Metro United Way's Community Resource Directory](https://www.metrounitedway.org/) (or by calling 211) to locate nearby care.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n- **[Seven Counties Services](https://sevencounties.org/):** As the leading Community Mental Health Center for Louisville and the surrounding seven-county region, their website offers a comprehensive portal for behavioral health services, substance use treatment, and intellectual/developmental disability support. Their site details how to schedule appointments, request referrals, and access emergency mental health evaluations.[](https://sevencounties.org/) [[1]](https://sevencounties.org/)[[2]](https://louisvilleky.gov/events/venues/seven-counties-services)[[3]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n- **[Mental Health Lou](https://www.mentalhealthlou.com/):** This Louisville-based 501(c)(3) nonprofit is dedicated to breaking down barriers to care. Their website is an excellent tool for finding local therapist recommendations, specialized mental health education, and connecting with community-based wellness programs tailored for Louisville's neighborhoods.[](https://www.mentalhealthlou.com/) [[1]](https://www.mentalhealthlou.com/)\n- **National Alliance on Mental Illness (NAMI) Louisville:** The local chapter of this national organization provides critical support groups, educational classes, and peer-to-peer mentoring. Their website is a great resource for navigating the mental health system, finding family support, and getting personalized referral guidance over the phone.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://www.facebook.com/kychfs/posts/kentuckians-with-serious-mental-illness-smi-arent-limited-to-a-hospital-to-get-m/1488315123339699/)[[3]](https://www.linkedin.com/company/namilouisville)[[4]](https://www.psychologytoday.com/us/blog/physio-and-psych/202210/988-and-the-evolving-mental-healthcare-landscape)[[5]](https://www.cnshealthcare.org/depression-support-groups-a-lifeline-in-your-time-of-need)\n- **Psychology Today Therapist Finder - Louisville:** While a national platform, this is one of the most widely used local referral tools in Louisville. It allows you to filter providers by specific zip code, accepted insurance (e.g., Anthem BlueCross, Humana, Medicaid), areas of specialty (e.g., trauma, anxiety, ADHD), and therapy styles.[[1]](https://helplinefaqs.nami.org/article/255-i-need-to-see-a-psychiatrist-therapist-how-can-i-find-one)[[2]](https://resilientmindcounseling.com/bipoc-therapy/)[[3]](https://adaminc.org/psychology-today-therapy-directory/)[[4]](https://klinic.com/blog/how-to-access-mental-health-services-with-humana-insurance)\n\nTo help me tailor these recommendations, let me know:\n\n- Are you looking for **psychiatrists, therapists, or support groups**?\n- What **insurance or payment method** will be used?\n- Does the search involve an **adult or a child**?\n\nI can provide more targeted referral options based on your specific needs.",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "When looking for mental health services and referrals in the Louisville area, several key local and regional websites offer comprehensive directories, crisis intervention resources, and direct provider connections.",
+                  "markdown": "When looking for mental health services and referrals in the Louisville area, several key local and regional websites offer comprehensive directories, crisis intervention resources, and direct provider connections.",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "The following platforms stand out for their robust service and referral information:",
+                  "markdown": "The following platforms stand out for their robust service and referral information:",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Louisville Metro Community Mental Health Services : The official city government portal acts as a central hub for finding local mental health resources. It features contact details for the Seven Counties Services 24/7 crisis hotlines (Adult, Child, and Addiction) and connects users to the Metro United Way's Community Resource Directory (or by calling 211) to locate nearby care. Seven Counties Services : As the leading Community Mental Health Center for Louisville and the surrounding seven-county region, their website offers a comprehensive portal for behavioral health services, substance use treatment, and intellectual/developmental disability support. Their site details how to schedule appointments, request referrals, and access emergency mental health evaluations. Mental Health Lou : This Louisville-based 501(c)(3) nonprofit is dedicated to breaking down barriers to care. Their website is an excellent tool for finding local therapist recommendations, specialized mental health education, and connecting with community-based wellness programs tailored for Louisville's neighborhoods. National Alliance on Mental Illness (NAMI) Louisville : The local chapter of this national organization provides critical support groups, educational classes, and peer-to-peer mentoring. Their website is a great resource for navigating the mental health system, finding family support, and getting personalized referral guidance over the phone. National Alliance on Mental Illness (NAMI) Louisville Psychology Today Therapist Finder - Louisville : While a national platform, this is one of the most widely used local referral tools in Louisville. It allows you to filter providers by specific zip code, accepted insurance (e.g., Anthem BlueCross, Humana, Medicaid), areas of specialty (e.g., trauma, anxiety, ADHD), and therapy styles. Psychology Today Therapist Finder - Louisville",
+                  "markdown": "- **[Louisville Metro Community Mental Health Services](https://louisvilleky.gov/government/health-wellness/community-mental-health-services):** The official city government portal acts as a central hub for finding local mental health resources. It features contact details for the Seven Counties Services 24/7 crisis hotlines (Adult, Child, and Addiction) and connects users to the [Metro United Way's Community Resource Directory](https://www.metrounitedway.org/) (or by calling 211) to locate nearby care.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n- **[Seven Counties Services](https://sevencounties.org/):** As the leading Community Mental Health Center for Louisville and the surrounding seven-county region, their website offers a comprehensive portal for behavioral health services, substance use treatment, and intellectual/developmental disability support. Their site details how to schedule appointments, request referrals, and access emergency mental health evaluations.[](https://sevencounties.org/) [[1]](https://sevencounties.org/)[[2]](https://louisvilleky.gov/events/venues/seven-counties-services)[[3]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)\n- **[Mental Health Lou](https://www.mentalhealthlou.com/):** This Louisville-based 501(c)(3) nonprofit is dedicated to breaking down barriers to care. Their website is an excellent tool for finding local therapist recommendations, specialized mental health education, and connecting with community-based wellness programs tailored for Louisville's neighborhoods.[](https://www.mentalhealthlou.com/) [[1]](https://www.mentalhealthlou.com/)\n- **National Alliance on Mental Illness (NAMI) Louisville:** The local chapter of this national organization provides critical support groups, educational classes, and peer-to-peer mentoring. Their website is a great resource for navigating the mental health system, finding family support, and getting personalized referral guidance over the phone.[](https://louisvilleky.gov/government/health-wellness/community-mental-health-services) [[1]](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)[[2]](https://www.facebook.com/kychfs/posts/kentuckians-with-serious-mental-illness-smi-arent-limited-to-a-hospital-to-get-m/1488315123339699/)[[3]](https://www.linkedin.com/company/namilouisville)[[4]](https://www.psychologytoday.com/us/blog/physio-and-psych/202210/988-and-the-evolving-mental-healthcare-landscape)[[5]](https://www.cnshealthcare.org/depression-support-groups-a-lifeline-in-your-time-of-need)\n- **Psychology Today Therapist Finder - Louisville:** While a national platform, this is one of the most widely used local referral tools in Louisville. It allows you to filter providers by specific zip code, accepted insurance (e.g., Anthem BlueCross, Humana, Medicaid), areas of specialty (e.g., trauma, anxiety, ADHD), and therapy styles.[[1]](https://helplinefaqs.nami.org/article/255-i-need-to-see-a-psychiatrist-therapist-how-can-i-find-one)[[2]](https://resilientmindcounseling.com/bipoc-therapy/)[[3]](https://adaminc.org/psychology-today-therapy-directory/)[[4]](https://klinic.com/blog/how-to-access-mental-health-services-with-humana-insurance)",
+                  "links": [
+                    {
+                      "type": "link_element",
+                      "title": "Louisville Metro Community Mental Health Services",
+                      "description": null,
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "domain": "louisvilleky.gov"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Metro United Way's Community Resource Directory",
+                      "description": null,
+                      "url": "https://www.metrounitedway.org/",
+                      "domain": "www.metrounitedway.org"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Seven Counties Services",
+                      "description": null,
+                      "url": "https://sevencounties.org/",
+                      "domain": "sevencounties.org"
+                    },
+                    {
+                      "type": "link_element",
+                      "title": "Mental Health Lou",
+                      "description": null,
+                      "url": "https://www.mentalhealthlou.com/",
+                      "domain": "www.mentalhealthlou.com"
+                    }
+                  ],
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                      "title": "Community Mental Health Services - LouisvilleKY.gov",
+                      "text": "... Louisville Recovery Community Connection : 502-717-8321; National Suicide Prevention Lifeline : 1-800-273-8255; Crisis Text Li..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Seven Counties Services",
+                      "domain": "sevencounties.org",
+                      "url": "https://sevencounties.org/",
+                      "title": "Seven Counties Services | Mental Health, Addiction Recovery ...",
+                      "text": "Your Journey, Our Passion! As Kentucky's leading Community Mental Health Center and behavioral health services provider, Seven Cou..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LouisvilleKY.gov",
+                      "domain": "louisvilleky.gov",
+                      "url": "https://louisvilleky.gov/events/venues/seven-counties-services",
+                      "title": "Seven Counties Services - LouisvilleKY.gov",
+                      "text": "A happy diverse group of supporters & clients Seven Counties Services is a Community Mental Health Center that offers a full range..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Mental Health Lou",
+                      "domain": "www.mentalhealthlou.com",
+                      "url": "https://www.mentalhealthlou.com/",
+                      "title": "Mental Health Lou – Louisville, KY",
+                      "text": "Mental Health Lou – Louisville, KY. Provider Resources. Provider Resources. Providing Mental Health Workshops & Resource Connectio..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Facebook",
+                      "domain": "www.facebook.com",
+                      "url": "https://www.facebook.com/kychfs/posts/kentuckians-with-serious-mental-illness-smi-arent-limited-to-a-hospital-to-get-m/1488315123339699/",
+                      "title": "Kentuckians with serious mental illness (SMI) aren't limited to a hospital to get mental health support. With 1915(i) RISE, services come to you — in your home and your community. 1915(i) RISE can help you: • Stay in your home safely. • Build daily living skills. • Get help from a case manager. • Set and reach your goals. Everything is built around you and your choices, and if you’re on Medicaid, it’s available at no cost. To get started, call 502-564-9189 or visit https://www.chfs.ky.gov/agencies/dbhdid/Pages/1915iriseinitiative.aspx to get started.",
+                      "text": "💙 NAMI Louisville What It Is: NAMI Louisville is the local branch of the National Alliance on Mental Illness. They offer free sup..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "LinkedIn",
+                      "domain": "www.linkedin.com",
+                      "url": "https://www.linkedin.com/company/namilouisville",
+                      "title": "NAMI Louisville",
+                      "text": "NAMI Louisville | 246 followers on LinkedIn. National Alliance on Mental Illness - Louisville | NAMI is the National Alliance on M..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Psychology Today",
+                      "domain": "www.psychologytoday.com",
+                      "url": "https://www.psychologytoday.com/us/blog/physio-and-psych/202210/988-and-the-evolving-mental-healthcare-landscape",
+                      "title": "988 and the Evolving Mental Healthcare Landscape",
+                      "text": "You can also get help through their ( National Alliance on Mental Illness (NAMI) ) website, which offers a wide array of resources..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "CNS Healthcare",
+                      "domain": "www.cnshealthcare.org",
+                      "url": "https://www.cnshealthcare.org/depression-support-groups-a-lifeline-in-your-time-of-need",
+                      "title": "Depression Support Groups | Get The Help You Need At CNS!",
+                      "text": "Visit NAMI's website to search for local mental health organizations near you in Detroit and beyond. They offer a variety of optio..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "National Alliance on Mental Illness (NAMI)",
+                      "domain": "helplinefaqs.nami.org",
+                      "url": "https://helplinefaqs.nami.org/article/255-i-need-to-see-a-psychiatrist-therapist-how-can-i-find-one",
+                      "title": "I need to see a Psychiatrist/Therapist. How can I find one?",
+                      "text": "Psychology Today offers a “Find a Therapist” link on the site; you can also search for a psychiatrist here. Use the locator to sea..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Resilient Mind Counseling",
+                      "domain": "resilientmindcounseling.com",
+                      "url": "https://resilientmindcounseling.com/bipoc-therapy/",
+                      "title": "Top 5 Websites For Finding BIPOC Therapists",
+                      "text": "The Psychology Today Therapy Directory is a comprehensive resource listing credentialed therapists. You can filter therapists by l..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "adaminc.org",
+                      "domain": "adaminc.org",
+                      "url": "https://adaminc.org/psychology-today-therapy-directory/",
+                      "title": "May We Introduce You To: Psychology Today Therapy Directory",
+                      "text": "May We Introduce You To: Psychology Today Therapy Directory There are other directories that can give you listings of mental healt..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Klinic Care",
+                      "domain": "klinic.com",
+                      "url": "https://klinic.com/blog/how-to-access-mental-health-services-with-humana-insurance",
+                      "title": "How to access mental health services with Humana insurance",
+                      "text": "That's why we've accepted most of the insurance plans, including Humana insurance—to make it easier for individuals to connect wit..."
+                    }
+                  ]
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Seven Counties Services",
+                  "domain": "sevencounties.org",
+                  "url": "https://sevencounties.org/",
+                  "title": "Seven Counties Services | Mental Health, Addiction Recovery ...",
+                  "text": "Your Journey, Our Passion! As Kentucky's leading Community Mental Health Center and behavioral health services provider, Seven Cou..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "LouisvilleKY.gov",
+                  "domain": "louisvilleky.gov",
+                  "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services",
+                  "title": "Community Mental Health Services - LouisvilleKY.gov",
+                  "text": "... Louisville Recovery Community Connection : 502-717-8321; National Suicide Prevention Lifeline : 1-800-273-8255; Crisis Text Li..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "LouisvilleKY.gov",
+                  "domain": "louisvilleky.gov",
+                  "url": "https://louisvilleky.gov/events/venues/seven-counties-services",
+                  "title": "Seven Counties Services - LouisvilleKY.gov",
+                  "text": "A happy diverse group of supporters & clients Seven Counties Services is a Community Mental Health Center that offers a full range..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "Mental Health Lou",
+                  "domain": "www.mentalhealthlou.com",
+                  "url": "https://www.mentalhealthlou.com/",
+                  "title": "Mental Health Lou – Louisville, KY",
+                  "text": "Mental Health Lou – Louisville, KY. Provider Resources. Provider Resources. Providing Mental Health Workshops & Resource Connectio..."
+                }
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

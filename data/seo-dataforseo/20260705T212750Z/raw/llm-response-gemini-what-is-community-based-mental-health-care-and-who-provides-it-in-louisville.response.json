@@ -1,0 +1,61 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "2.4733 sec.",
+  "cost": 0.000709,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060032-9766-0612-0000-aef7f28ddcb6",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "2.4303 sec.",
+      "cost": 0.000709,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "gemini",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "gemini",
+        "user_prompt": "What is community-based mental health care, and who provides it in Louisville?",
+        "model_name": "gemini-2.5-flash-lite",
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response gemini What is community-based mental health care, and who provides it in Louisville?",
+        "web_search": true,
+        "max_output_tokens": 1024
+      },
+      "result": [
+        {
+          "model_name": "gemini-2.5-flash-lite",
+          "input_tokens": 44,
+          "output_tokens": 262,
+          "reasoning_tokens": 0,
+          "web_search": false,
+          "money_spent": 0.0001092,
+          "datetime": "2026-07-06 00:32:20 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Community-based mental health care refers to mental health services delivered in accessible, local settings within a community, rather than in isolated institutions. These services aim to provide support, treatment, and recovery opportunities to individuals experiencing mental health challenges, often integrating care with social support systems.\n\nIn Louisville, Kentucky, several organizations provide community-based mental health care:\n\n*   **Family & Children's Place:** This agency offers a range of services including therapy, case management, and support for children and families facing mental health issues.\n*   **Centerstone:** As a large provider of community mental health services, Centerstone offers outpatient counseling, psychiatric services, and crisis intervention throughout Indiana and Kentucky, including the Louisville area.\n*   **Seven Counties Services:** This is a major provider of community mental health services in Louisville and surrounding counties, offering a comprehensive array of programs for adults and children with mental health and developmental disabilities.\n*   **Louisville Metro Government - Health & Wellness:** The local government often plays a role in coordinating and supporting community mental health initiatives and can direct individuals to available resources.\n\nThese providers typically offer services such as individual and group therapy, medication management, case management, crisis services, and supportive housing, all with the goal of keeping individuals connected to their communities while receiving care.",
+                  "annotations": null
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": null
+        }
+      ]
+    }
+  ]
+}

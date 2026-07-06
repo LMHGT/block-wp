@@ -1,0 +1,19 @@
+{
+  "name": "llm-response-chat_gpt-Which Louisville mental health websites have useful service and referral information?",
+  "path": "/v3/ai_optimization/chat_gpt/llm_responses/live",
+  "platform": "chat_gpt",
+  "model": "gpt-5.4-nano",
+  "prompt": "Which Louisville mental health websites have useful service and referral information?",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "cost": 0.0234901,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "result_counts": [
+    1
+  ],
+  "task_statuses": [
+    20000
+  ],
+  "elapsed_seconds": 12.781
+}

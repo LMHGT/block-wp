@@ -1,0 +1,19 @@
+{
+  "name": "local-grid-maps-shively-southwest-therapist Louisville KY",
+  "path": "/v3/serp/google/maps/live/advanced",
+  "surface": "maps",
+  "point_name": "shively-southwest",
+  "coordinate": "38.2001000,-85.8227000,5000",
+  "keyword": "therapist Louisville KY",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "result_counts": [
+    1
+  ],
+  "task_statuses": [
+    40102
+  ]
+}

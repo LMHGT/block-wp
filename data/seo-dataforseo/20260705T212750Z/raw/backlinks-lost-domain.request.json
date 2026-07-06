@@ -1,0 +1,13 @@
+{
+  "name": "backlinks-lost-domain",
+  "path": "/v3/backlinks/backlinks/live",
+  "body": [
+    {
+      "target": "louisvillementalhealth.org",
+      "limit": 100,
+      "include_subdomains": true,
+      "backlinks_status_type": "lost",
+      "tag": "lmhg backlinks detail lost"
+    }
+  ]
+}

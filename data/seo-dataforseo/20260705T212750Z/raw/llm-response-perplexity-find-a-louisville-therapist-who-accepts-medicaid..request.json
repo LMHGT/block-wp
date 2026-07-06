@@ -1,0 +1,13 @@
+{
+  "name": "llm-response-perplexity-Find a Louisville therapist who accepts Medicaid.",
+  "path": "/v3/ai_optimization/perplexity/llm_responses/live",
+  "body": [
+    {
+      "user_prompt": "Find a Louisville therapist who accepts Medicaid.",
+      "model_name": "sonar",
+      "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+      "tag": "lmhg llm response perplexity Find a Louisville therapist who accepts Medicaid.",
+      "max_output_tokens": 700
+    }
+  ]
+}

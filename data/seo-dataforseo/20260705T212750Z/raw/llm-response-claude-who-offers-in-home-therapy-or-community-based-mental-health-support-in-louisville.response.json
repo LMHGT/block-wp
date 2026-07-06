@@ -1,0 +1,222 @@
+{
+  "version": "0.1.20260610",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "23.9259 sec.",
+  "cost": 0.076687,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "07060038-9766-0612-0000-192d1dc51fbd",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "23.8821 sec.",
+      "cost": 0.076687,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "ai_optimization",
+        "claude",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "api": "ai_optimization",
+        "function": "llm_responses",
+        "se": "claude",
+        "user_prompt": "Who offers in-home therapy or community-based mental health support in Louisville?",
+        "model_name": "claude-sonnet-4-6",
+        "web_search": true,
+        "max_output_tokens": 1024,
+        "system_message": "Answer as a local-search assistant for a person in Louisville, Kentucky. Prefer current local providers and cite source URLs when available.",
+        "tag": "lmhg llm response claude Who offers in-home therapy or community-based mental health support in Louisvill"
+      },
+      "result": [
+        {
+          "model_name": "claude-sonnet-4-6",
+          "input_tokens": 16349,
+          "output_tokens": 1136,
+          "reasoning_tokens": 0,
+          "web_search": true,
+          "money_spent": 0.076087,
+          "datetime": "2026-07-06 00:38:58 +00:00",
+          "items": [
+            {
+              "type": "message",
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "Here's a comprehensive guide to providers offering **in-home therapy and community-based mental health support** in Louisville, KY:\n\n---\n\n## 🏠 In-Home & Community-Based Mental Health Support in Louisville, KY\n\n---\n\n### 1. 🏥 Seven Counties Services\n**📞 502-589-4313 | [louisvilleky.gov](https://louisvilleky.gov/government/health-wellness/community-mental-health-services)**\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Seven Counties Services operates a Crisis and Information Center Hotline as well as a **Mobile Crisis Services Team (All Ages)** reachable at 502-589-4313.",
+                  "annotations": [
+                    {
+                      "title": "Community Mental Health Services | LouisvilleKY.gov",
+                      "url": "https://louisvilleky.gov/government/health-wellness/community-mental-health-services"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " This is one of Louisville's primary public behavioral health safety nets, offering community-based crisis intervention.\n\n---\n\n### 2. 👨‍👩‍👧 Boys & Girls Haven – Haven Family Counseling\n**📍 2301 Goldsmith Lane, Louisville, KY 40218 | 📞 502-458-1171 | [boysandgirlshaven.org](https://boysandgirlshaven.org/programs/haven-family-counseling/)**\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Haven Family Counseling is an outpatient program of Boys & Girls Haven, a private nonprofit that has served the Kentucky community for over 70 years. They specialize in the behavioral and emotional needs of children, adolescents, adults, and families, and **can provide intensive in-home therapy and case management**, or less intensive outpatient services.",
+                  "annotations": [
+                    {
+                      "title": "Haven Family Counseling | Boys & Girls Haven",
+                      "url": "https://boysandgirlshaven.org/programs/haven-family-counseling/"
+                    },
+                    {
+                      "title": "Haven Family Counseling | Boys & Girls Haven",
+                      "url": "https://boysandgirlshaven.org/programs/haven-family-counseling/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Sessions are also available online via their telehealth platform.",
+                  "annotations": [
+                    {
+                      "title": "Haven Family Counseling | Boys & Girls Haven",
+                      "url": "https://boysandgirlshaven.org/programs/haven-family-counseling/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 3. 🌱 Cultivate BHE – Louisville\n**[cultivatebhe.com](https://cultivatebhe.com/locations/kentucky/louisville-ky-mental-health/)**\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Cultivate BHE offers **Targeted Case Management (TCM)**, which assists Medicaid-eligible recipients in gaining access to medical, behavioral health, social, educational, and other services. TCM-eligible recipients include those diagnosed with a severe mental illness, severe emotional disability, substance use disorder, or a chronic complex health condition.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Therapy in Louisville (Mental Health), KY | Autism Treatment - Cultivate BHE",
+                      "url": "https://cultivatebhe.com/locations/kentucky/louisville-ky-mental-health/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Their **Community Support Associates** team also empowers individuals with disabilities to live independently through comprehensive support services.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Therapy in Louisville (Mental Health), KY | Autism Treatment - Cultivate BHE",
+                      "url": "https://cultivatebhe.com/locations/kentucky/louisville-ky-mental-health/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 4. 🧠 Louisville Mental Health Group\n**[louisvillementalhealth.org](https://louisvillementalhealth.org/)**\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Louisville Mental Health Group is a private practice established in 2016, with a multidisciplinary team specializing in individual and family therapy, group therapy, case management, EMDR, **community support**, and reunification services.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Clinic In Louisville | Louisville Mental Health Group",
+                      "url": "https://louisvillementalhealth.org/"
+                    },
+                    {
+                      "title": "Mental Health Clinic In Louisville | Louisville Mental Health Group",
+                      "url": "https://louisvillementalhealth.org/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "A case manager can meet you where you are — if you are at risk of homelessness, don't have enough food, or need someone to help you find a therapist or navigate your treatment team.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Clinic In Louisville | Louisville Mental Health Group",
+                      "url": "https://louisvillementalhealth.org/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "They accept most commercial insurances, all Medicaid plans, and private pay.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Clinic In Louisville | Louisville Mental Health Group",
+                      "url": "https://louisvillementalhealth.org/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 5. 🏢 Kentucky Counseling Center (KCC) – Louisville Highlands\n**📍 1169 Eastern Pkwy #3328, Louisville, KY 40217 | [kentuckycounselingcenter.com](https://kentuckycounselingcenter.com/)**\n\n",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "Kentucky Counseling Center offers in-person counseling and psychiatry services at multiple locations while also providing telehealth therapy throughout Kentucky. Patients in Louisville can visit one of their offices or schedule an online therapy appointment.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Counseling and Psychiatry | Kentucky Counseling Center",
+                      "url": "https://kentuckycounselingcenter.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ",
+                  "annotations": null
+                },
+                {
+                  "type": "text",
+                  "text": "The Louisville Highlands office also offers **Targeted Case Management (TCM)** services that provide individuals with a supportive case manager to help find social services like financial assistance, transportation, housing, and more.",
+                  "annotations": [
+                    {
+                      "title": "Mental Health Counseling and Psychiatry | Kentucky Counseling Center",
+                      "url": "https://kentuckycounselingcenter.com/"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\n\n---\n\n### 6. 💊 Kentucky Mental Health Care (KMHC)\n**[kentuc",
+                  "annotations": null
+                }
+              ]
+            }
+          ],
+          "fan_out_queries": [
+            "in-home therapy community mental health support Louisville Kentucky",
+            "community based mental health services Louisville KY 2024 2025"
+          ]
+        }
+      ]
+    }
+  ]
+}
