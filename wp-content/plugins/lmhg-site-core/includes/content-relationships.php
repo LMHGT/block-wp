@@ -1200,7 +1200,7 @@ function lmhg_site_core_register_relationship_assets(): void {
 		LMHG_SITE_CORE_RELATIONSHIP_STYLE,
 		plugin_dir_url( dirname( __DIR__ ) . '/lmhg-site-core.php' ) . 'assets/css/relationships.css',
 		array(),
-		'0.1.16'
+		'0.1.18'
 	);
 
 	if ( lmhg_site_core_request_needs_relationship_assets() ) {

@@ -77,6 +77,7 @@ function lmhg_site_core_import_block_manifest( array $manifest ): array {
 			continue;
 		}
 		$content = lmhg_site_core_rewrite_editable_media_urls( $content, $media_imports );
+		$content = lmhg_site_core_normalize_editable_block_content( $content );
 
 		$page = lmhg_site_core_find_existing_route_page( $url, implode( '/', lmhg_site_core_url_segments( $url ) ) );
 		if ( ! $page instanceof WP_Post ) {
@@ -107,6 +108,277 @@ function lmhg_site_core_import_block_manifest( array $manifest ): array {
 	}
 
 	return $result;
+}
+
+/**
+ * Normalizes imported block markup so core blocks remain recoverable in Gutenberg.
+ *
+ * @param string $content Serialized block content.
+ * @return string
+ */
+function lmhg_site_core_normalize_editable_block_content( string $content ): string {
+	$content = preg_replace_callback(
+		'/<!-- wp:image\b[\s\S]*?<!-- \/wp:image -->/i',
+		static function ( array $matches ): string {
+			return preg_replace(
+				'/(<a\b[^>]*?)\s+aria-label=(["\'])(.*?)\2/i',
+				'$1',
+				$matches[0]
+			) ?? $matches[0];
+		},
+		$content
+	) ?? $content;
+
+	$content = lmhg_site_core_normalize_group_block_wrappers( $content );
+
+	return lmhg_site_core_normalize_buttons_block_wrappers( $content );
+}
+
+/**
+ * Adds missing saved wrappers to imported core/group blocks.
+ *
+ * @param string $content Serialized block content.
+ * @return string
+ */
+function lmhg_site_core_normalize_group_block_wrappers( string $content ): string {
+	$result = '';
+	$offset = 0;
+	$length = strlen( $content );
+
+	while ( preg_match( '/<!--\s+wp:group\b[\s\S]*?-->/i', $content, $open_match, PREG_OFFSET_CAPTURE, $offset ) ) {
+		$open_markup = $open_match[0][0];
+		$open_start  = $open_match[0][1];
+		$open_end    = $open_start + strlen( $open_markup );
+		$close       = lmhg_site_core_find_group_block_close( $content, $open_end );
+
+		if ( null === $close ) {
+			break;
+		}
+
+		$result .= substr( $content, $offset, $open_start - $offset );
+
+		$inner = substr( $content, $open_end, $close['start'] - $open_end );
+		$inner = lmhg_site_core_normalize_group_block_wrappers( $inner );
+
+		if ( lmhg_site_core_group_block_has_saved_wrapper( $inner ) ) {
+			$result .= $open_markup . $inner . $close['markup'];
+		} else {
+			$wrapper = lmhg_site_core_group_block_wrapper_markup( $open_markup );
+			$result .= $open_markup . "\n" . $wrapper['open'] . "\n" . ltrim( $inner ) . "\n" . $wrapper['close'] . "\n" . $close['markup'];
+		}
+
+		$offset = $close['end'];
+	}
+
+	if ( $offset < $length ) {
+		$result .= substr( $content, $offset );
+	}
+
+	return $result;
+}
+
+/**
+ * Finds the matching closing delimiter for a core/group block.
+ *
+ * @param string $content Serialized block content.
+ * @param int    $offset Search offset after the opening delimiter.
+ * @return array{start:int,end:int,markup:string}|null
+ */
+function lmhg_site_core_find_group_block_close( string $content, int $offset ): ?array {
+	$depth = 1;
+
+	while ( preg_match( '/<!--\s+(\/)?wp:group\b[\s\S]*?-->/i', $content, $match, PREG_OFFSET_CAPTURE, $offset ) ) {
+		$markup = $match[0][0];
+		$start  = $match[0][1];
+		$end    = $start + strlen( $markup );
+
+		if ( '/' === ( $match[1][0] ?? '' ) ) {
+			--$depth;
+			if ( 0 === $depth ) {
+				return array(
+					'start'  => $start,
+					'end'    => $end,
+					'markup' => $markup,
+				);
+			}
+		} else {
+			++$depth;
+		}
+
+		$offset = $end;
+	}
+
+	return null;
+}
+
+/**
+ * Returns true when a group block already begins with saved wrapper markup.
+ *
+ * @param string $inner Serialized inner block content.
+ * @return bool
+ */
+function lmhg_site_core_group_block_has_saved_wrapper( string $inner ): bool {
+	return 1 === preg_match( '/^\s*<(?:div|section|main|article|aside|header|footer)\b/i', $inner );
+}
+
+/**
+ * Builds the saved wrapper markup expected by core/group.
+ *
+ * @param string $open_markup Opening block delimiter.
+ * @return array{open:string,close:string}
+ */
+function lmhg_site_core_group_block_wrapper_markup( string $open_markup ): array {
+	$attributes = array();
+	if ( preg_match( '/<!--\s+wp:group\s+(\{[\s\S]*?\})\s*-->/i', $open_markup, $match ) ) {
+		$decoded = json_decode( $match[1], true );
+		if ( is_array( $decoded ) ) {
+			$attributes = $decoded;
+		}
+	}
+
+	$allowed_tags = array( 'div', 'section', 'main', 'article', 'aside', 'header', 'footer' );
+	$tag = isset( $attributes['tagName'] ) ? strtolower( (string) $attributes['tagName'] ) : 'div';
+	if ( ! in_array( $tag, $allowed_tags, true ) ) {
+		$tag = 'div';
+	}
+
+	$classes = array( 'wp-block-group' );
+	if ( isset( $attributes['align'] ) && '' !== (string) $attributes['align'] ) {
+		$classes[] = 'align' . sanitize_html_class( (string) $attributes['align'] );
+	}
+	if ( isset( $attributes['className'] ) && '' !== (string) $attributes['className'] ) {
+		foreach ( preg_split( '/\s+/', (string) $attributes['className'] ) ?: array() as $class_name ) {
+			$class_name = sanitize_html_class( $class_name );
+			if ( '' !== $class_name ) {
+				$classes[] = $class_name;
+			}
+		}
+	}
+
+	$classes = array_values( array_unique( $classes ) );
+
+	return array(
+		'open'  => '<' . $tag . ' class="' . esc_attr( implode( ' ', $classes ) ) . '">',
+		'close' => '</' . $tag . '>',
+	);
+}
+
+/**
+ * Adds missing saved wrappers to imported core/buttons blocks.
+ *
+ * @param string $content Serialized block content.
+ * @return string
+ */
+function lmhg_site_core_normalize_buttons_block_wrappers( string $content ): string {
+	$result = '';
+	$offset = 0;
+	$length = strlen( $content );
+
+	while ( preg_match( '/<!--\s+wp:buttons\b[\s\S]*?-->/i', $content, $open_match, PREG_OFFSET_CAPTURE, $offset ) ) {
+		$open_markup = $open_match[0][0];
+		$open_start  = $open_match[0][1];
+		$open_end    = $open_start + strlen( $open_markup );
+		$close       = lmhg_site_core_find_buttons_block_close( $content, $open_end );
+
+		if ( null === $close ) {
+			break;
+		}
+
+		$result .= substr( $content, $offset, $open_start - $offset );
+
+		$inner = substr( $content, $open_end, $close['start'] - $open_end );
+		if ( lmhg_site_core_buttons_block_has_saved_wrapper( $inner ) ) {
+			$result .= $open_markup . $inner . $close['markup'];
+		} else {
+			$wrapper = lmhg_site_core_buttons_block_wrapper_markup( $open_markup );
+			$result .= $open_markup . "\n" . $wrapper['open'] . "\n" . ltrim( $inner ) . "\n" . $wrapper['close'] . "\n" . $close['markup'];
+		}
+
+		$offset = $close['end'];
+	}
+
+	if ( $offset < $length ) {
+		$result .= substr( $content, $offset );
+	}
+
+	return $result;
+}
+
+/**
+ * Finds the matching closing delimiter for a core/buttons block.
+ *
+ * @param string $content Serialized block content.
+ * @param int    $offset Search offset after the opening delimiter.
+ * @return array{start:int,end:int,markup:string}|null
+ */
+function lmhg_site_core_find_buttons_block_close( string $content, int $offset ): ?array {
+	$depth = 1;
+
+	while ( preg_match( '/<!--\s+(\/)?wp:buttons\b[\s\S]*?-->/i', $content, $match, PREG_OFFSET_CAPTURE, $offset ) ) {
+		$markup = $match[0][0];
+		$start  = $match[0][1];
+		$end    = $start + strlen( $markup );
+
+		if ( '/' === ( $match[1][0] ?? '' ) ) {
+			--$depth;
+			if ( 0 === $depth ) {
+				return array(
+					'start'  => $start,
+					'end'    => $end,
+					'markup' => $markup,
+				);
+			}
+		} else {
+			++$depth;
+		}
+
+		$offset = $end;
+	}
+
+	return null;
+}
+
+/**
+ * Returns true when a buttons block already begins with saved wrapper markup.
+ *
+ * @param string $inner Serialized inner block content.
+ * @return bool
+ */
+function lmhg_site_core_buttons_block_has_saved_wrapper( string $inner ): bool {
+	return 1 === preg_match( '/^\s*<div\b[^>]*\bwp-block-buttons\b/i', $inner );
+}
+
+/**
+ * Builds the saved wrapper markup expected by core/buttons.
+ *
+ * @param string $open_markup Opening block delimiter.
+ * @return array{open:string,close:string}
+ */
+function lmhg_site_core_buttons_block_wrapper_markup( string $open_markup ): array {
+	$attributes = array();
+	if ( preg_match( '/<!--\s+wp:buttons\s+(\{[\s\S]*?\})\s*-->/i', $open_markup, $match ) ) {
+		$decoded = json_decode( $match[1], true );
+		if ( is_array( $decoded ) ) {
+			$attributes = $decoded;
+		}
+	}
+
+	$classes = array( 'wp-block-buttons' );
+	if ( isset( $attributes['className'] ) && '' !== (string) $attributes['className'] ) {
+		foreach ( preg_split( '/\s+/', (string) $attributes['className'] ) ?: array() as $class_name ) {
+			$class_name = sanitize_html_class( $class_name );
+			if ( '' !== $class_name ) {
+				$classes[] = $class_name;
+			}
+		}
+	}
+
+	$classes = array_values( array_unique( $classes ) );
+
+	return array(
+		'open'  => '<div class="' . esc_attr( implode( ' ', $classes ) ) . '">',
+		'close' => '</div>',
+	);
 }
 
 /**

@@ -20,6 +20,7 @@ add_action( 'add_meta_boxes', 'lmhg_site_core_add_review_meta_box' );
 add_action( 'save_post_' . LMHG_SITE_CORE_REVIEW_POST_TYPE, 'lmhg_site_core_save_review_meta', 10, 2 );
 add_action( 'admin_menu', 'lmhg_site_core_add_review_settings_page' );
 add_action( 'admin_init', 'lmhg_site_core_register_review_settings' );
+add_action( 'init', 'lmhg_site_core_register_review_showcase_block', 20 );
 add_action( 'wp_enqueue_scripts', 'lmhg_site_core_register_review_assets' );
 add_filter( 'the_content', 'lmhg_site_core_append_reviews_to_configured_page', 25 );
 add_shortcode( 'lmhg_reviews', 'lmhg_site_core_reviews_shortcode' );
@@ -319,7 +320,7 @@ function lmhg_site_core_render_review_settings_page(): void {
 	?>
 	<div class="wrap">
 		<h1>LMHG Review Showcase</h1>
-		<p>Add individual curated reviews under <strong>LMHG Reviews</strong>. Use <code>[lmhg_reviews]</code> in page content, or set a page slug below to append the showcase automatically.</p>
+		<p>Add individual curated reviews under <strong>LMHG Reviews</strong>. The reviews page renders the selected showcase automatically; the shortcode remains available only for legacy or custom placements.</p>
 		<form action="options.php" method="post">
 			<?php
 			settings_fields( LMHG_SITE_CORE_REVIEW_OPTION_PAGE );
@@ -479,16 +480,27 @@ function lmhg_site_core_sanitize_review_date( mixed $value ): string {
  * Registers review assets and enqueues them when the current request needs them.
  */
 function lmhg_site_core_register_review_assets(): void {
+	lmhg_site_core_register_review_style();
+
+	if ( lmhg_site_core_request_needs_review_assets() ) {
+		wp_enqueue_style( LMHG_SITE_CORE_REVIEW_STYLE );
+	}
+}
+
+/**
+ * Registers review showcase CSS for front-end and block-editor use.
+ */
+function lmhg_site_core_register_review_style(): void {
+	if ( wp_style_is( LMHG_SITE_CORE_REVIEW_STYLE, 'registered' ) ) {
+		return;
+	}
+
 	wp_register_style(
 		LMHG_SITE_CORE_REVIEW_STYLE,
 		plugin_dir_url( dirname( __DIR__ ) . '/lmhg-site-core.php' ) . 'assets/css/reviews.css',
 		array(),
 		'0.1.0'
 	);
-
-	if ( lmhg_site_core_request_needs_review_assets() ) {
-		wp_enqueue_style( LMHG_SITE_CORE_REVIEW_STYLE );
-	}
 }
 
 /**
@@ -519,11 +531,52 @@ function lmhg_site_core_request_needs_review_assets(): bool {
 		return true;
 	}
 
-	$settings = lmhg_site_core_review_settings();
-	return '1' === (string) $settings['enabled']
-		&& 'page' === get_post_type( $post )
-		&& '' !== (string) $settings['auto_page_slug']
-		&& $post->post_name === (string) $settings['auto_page_slug'];
+	return lmhg_site_core_page_exposes_review_showcase( $post );
+}
+
+/**
+ * Registers a server-rendered Gutenberg block for manual review showcases.
+ */
+function lmhg_site_core_register_review_showcase_block(): void {
+	lmhg_site_core_register_review_style();
+
+	$script_handle = 'lmhg-site-core-review-showcase-block';
+	wp_register_script(
+		$script_handle,
+		plugin_dir_url( dirname( __DIR__ ) . '/lmhg-site-core.php' ) . 'assets/js/review-showcase-block.js',
+		array( 'wp-block-editor', 'wp-blocks', 'wp-components', 'wp-element', 'wp-i18n', 'wp-server-side-render' ),
+		'0.1.1',
+		true
+	);
+
+	register_block_type(
+		'lmhg/review-showcase',
+		array(
+			'api_version'     => 3,
+			'editor_script'   => $script_handle,
+			'editor_style'    => LMHG_SITE_CORE_REVIEW_STYLE,
+			'style'           => LMHG_SITE_CORE_REVIEW_STYLE,
+			'attributes'      => array(
+				'heading' => array(
+					'type'    => 'string',
+					'default' => 'Client feedback',
+				),
+				'intro'   => array(
+					'type'    => 'string',
+					'default' => '',
+				),
+				'count'   => array(
+					'type'    => 'number',
+					'default' => 3,
+				),
+				'context' => array(
+					'type'    => 'string',
+					'default' => 'default',
+				),
+			),
+			'render_callback' => 'lmhg_site_core_render_review_showcase_block',
+		)
+	);
 }
 
 /**
@@ -537,17 +590,16 @@ function lmhg_site_core_append_reviews_to_configured_page( string $content ): st
 		return $content;
 	}
 
-	if ( has_shortcode( $content, 'lmhg_reviews' ) ) {
-		return $content;
-	}
-
 	$post = get_post();
 	if ( ! $post instanceof WP_Post ) {
 		return $content;
 	}
 
-	$settings = lmhg_site_core_review_settings();
-	if ( '1' !== (string) $settings['enabled'] || '' === (string) $settings['auto_page_slug'] || $post->post_name !== (string) $settings['auto_page_slug'] ) {
+	if ( has_shortcode( (string) $post->post_content, 'lmhg_reviews' ) || str_contains( $content, 'data-lmhg-review-showcase' ) ) {
+		return $content;
+	}
+
+	if ( ! lmhg_site_core_is_review_showcase_page( $post ) ) {
 		return $content;
 	}
 
@@ -556,7 +608,93 @@ function lmhg_site_core_append_reviews_to_configured_page( string $content ): st
 		return $content;
 	}
 
+	if ( function_exists( 'lmhg_site_core_insert_before_page_cta' ) ) {
+		return lmhg_site_core_insert_before_page_cta( $content, $showcase );
+	}
+
 	return $content . "\n" . $showcase;
+}
+
+/**
+ * Determines whether a page should expose the manual review showcase without a shortcode.
+ *
+ * @param WP_Post $post Page post.
+ * @return bool
+ */
+function lmhg_site_core_is_review_showcase_page( WP_Post $post ): bool {
+	$settings = lmhg_site_core_review_settings();
+	if ( '1' !== (string) $settings['enabled'] || 'page' !== $post->post_type ) {
+		return false;
+	}
+
+	return in_array( $post->post_name, lmhg_site_core_review_showcase_page_slugs( $settings ), true );
+}
+
+/**
+ * Returns page slugs that should render the manual review showcase.
+ *
+ * @param array<string,string|int>|null $settings Optional review settings.
+ * @return string[]
+ */
+function lmhg_site_core_review_showcase_page_slugs( ?array $settings = null ): array {
+	$settings = null === $settings ? lmhg_site_core_review_settings() : $settings;
+	$slugs    = array( 'reviews' );
+
+	if ( '' !== (string) ( $settings['auto_page_slug'] ?? '' ) ) {
+		$slugs[] = sanitize_title( (string) $settings['auto_page_slug'] );
+	}
+
+	return array_values( array_unique( array_filter( $slugs ) ) );
+}
+
+/**
+ * Determines whether the current page has a visible review showcase surface.
+ *
+ * @param WP_Post $post Page post.
+ * @return bool
+ */
+function lmhg_site_core_page_exposes_review_showcase( WP_Post $post ): bool {
+	if ( lmhg_site_core_is_review_showcase_page( $post ) ) {
+		return true;
+	}
+
+	if ( has_block( 'lmhg/review-showcase', (string) $post->post_content ) ) {
+		return true;
+	}
+
+	return is_front_page() && (int) get_queried_object_id() === (int) $post->ID;
+}
+
+/**
+ * Renders the manual review showcase dynamic block.
+ *
+ * @param array<string,mixed> $attributes Block attributes.
+ * @return string
+ */
+function lmhg_site_core_render_review_showcase_block( array $attributes = array() ): string {
+	$count = isset( $attributes['count'] ) ? min( 12, max( 1, absint( $attributes['count'] ) ) ) : 3;
+	$args  = array(
+		'count'   => (string) $count,
+		'heading' => isset( $attributes['heading'] ) ? sanitize_text_field( (string) $attributes['heading'] ) : 'Client feedback',
+		'intro'   => isset( $attributes['intro'] ) ? sanitize_textarea_field( (string) $attributes['intro'] ) : '',
+	);
+
+	$html = lmhg_site_core_render_review_showcase( $args );
+	if ( '' === $html ) {
+		return '';
+	}
+
+	$context = isset( $attributes['context'] ) ? sanitize_key( (string) $attributes['context'] ) : '';
+	if ( '' === $context || 'default' === $context ) {
+		return $html;
+	}
+
+	return preg_replace(
+		'/<section class="lmhg-review-showcase"/',
+		'<section class="lmhg-review-showcase lmhg-review-showcase--' . esc_attr( $context ) . '"',
+		$html,
+		1
+	) ?? $html;
 }
 
 /**
@@ -758,6 +896,126 @@ function lmhg_site_core_render_review_cards( array $reviews, array $settings ): 
 	}
 
 	return '<div class="lmhg-review-showcase__grid">' . implode( '', $cards ) . '</div>';
+}
+
+/**
+ * Builds JSON-LD graph nodes from manually selected review records.
+ *
+ * @param int $post_id Current page ID.
+ * @return array<int,array<string,mixed>>
+ */
+function lmhg_site_core_review_showcase_schema_nodes( int $post_id ): array {
+	$post = get_post( $post_id );
+	if ( ! $post instanceof WP_Post || ! lmhg_site_core_page_exposes_review_showcase( $post ) ) {
+		return array();
+	}
+
+	$settings    = lmhg_site_core_review_settings();
+	$max_reviews = (int) $settings['max_reviews'];
+	$reviews     = lmhg_site_core_featured_reviews( $max_reviews );
+	$review_nodes = lmhg_site_core_review_schema_items( $reviews );
+	$aggregate    = lmhg_site_core_review_aggregate_schema( $settings );
+
+	if ( empty( $review_nodes ) && empty( $aggregate ) ) {
+		return array();
+	}
+
+	$organization = array(
+		'@type' => 'MedicalOrganization',
+		'@id'   => home_url( '/#organization' ),
+		'name'  => get_bloginfo( 'name' ),
+		'url'   => home_url( '/' ),
+	);
+
+	if ( ! empty( $aggregate ) ) {
+		$organization['aggregateRating'] = $aggregate;
+	}
+
+	if ( ! empty( $review_nodes ) ) {
+		$organization['review'] = $review_nodes;
+	}
+
+	return array( $organization );
+}
+
+/**
+ * Converts featured manual review posts into schema-safe Review items.
+ *
+ * @param WP_Post[] $reviews Review posts.
+ * @return array<int,array<string,mixed>>
+ */
+function lmhg_site_core_review_schema_items( array $reviews ): array {
+	$items = array();
+
+	foreach ( $reviews as $review ) {
+		if ( ! $review instanceof WP_Post ) {
+			continue;
+		}
+
+		$reviewer = trim( wp_strip_all_tags( get_the_title( $review ) ) );
+		$quote    = trim( wp_strip_all_tags( get_post_field( 'post_content', $review->ID ) ) );
+		if ( '' === $reviewer || '' === $quote ) {
+			continue;
+		}
+
+		$item = array(
+			'@type'        => 'Review',
+			'author'       => array(
+				'@type' => 'Person',
+				'name'  => $reviewer,
+			),
+			'reviewBody'   => $quote,
+			'itemReviewed' => array(
+				'@id' => home_url( '/#organization' ),
+			),
+		);
+
+		$rating = get_post_meta( $review->ID, '_lmhg_review_rating', true );
+		if ( '' !== $rating ) {
+			$item['reviewRating'] = array(
+				'@type'       => 'Rating',
+				'ratingValue' => lmhg_site_core_format_rating( (float) $rating ),
+				'bestRating'  => '5',
+				'worstRating' => '1',
+			);
+		}
+
+		$review_date = lmhg_site_core_sanitize_review_date( get_post_meta( $review->ID, '_lmhg_review_date', true ) );
+		if ( '' !== $review_date ) {
+			$item['datePublished'] = $review_date;
+		}
+
+		$items[] = $item;
+	}
+
+	return $items;
+}
+
+/**
+ * Builds AggregateRating schema from manual review showcase settings.
+ *
+ * @param array<string,string|int> $settings Review settings.
+ * @return array<string,mixed>
+ */
+function lmhg_site_core_review_aggregate_schema( array $settings ): array {
+	if ( '' === (string) $settings['overall_rating'] ) {
+		return array();
+	}
+
+	$aggregate = array(
+		'@type'       => 'AggregateRating',
+		'ratingValue' => lmhg_site_core_format_rating( (float) $settings['overall_rating'] ),
+		'bestRating'  => '5',
+		'worstRating' => '1',
+	);
+
+	$count = (int) $settings['review_count'];
+	if ( $count > 0 ) {
+		$aggregate['ratingCount'] = $count;
+		$aggregate['reviewCount'] = $count;
+	}
+
+	return $aggregate;
 }
 
 /**

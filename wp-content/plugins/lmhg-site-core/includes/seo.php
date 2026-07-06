@@ -255,17 +255,38 @@ function lmhg_site_core_output_json_ld(): void {
 	$post_id  = lmhg_site_core_imported_post_id();
 
 	if ( 0 === $post_id ) {
-		$graph = array(
-			'@context'        => 'https://schema.org',
-			'@type'           => 'WebSite',
-			'name'            => $name,
-			'url'             => $site_url,
-			'potentialAction' => array(
-				'@type'       => 'SearchAction',
-				'target'      => add_query_arg( 's', '{search_term_string}', $site_url ),
-				'query-input' => 'required name=search_term_string',
-			),
-		);
+		$queried_id = is_singular() ? (int) get_queried_object_id() : 0;
+		if ( $queried_id > 0 ) {
+			$headline = lmhg_site_core_normalize_core30_seo_copy( wp_strip_all_tags( get_the_title( $queried_id ) ) );
+			$canonical = lmhg_site_core_current_canonical_url();
+			$page_graph = array(
+				'@context'     => 'https://schema.org',
+				'@type'        => 'WebPage',
+				'name'         => $headline,
+				'headline'     => $headline,
+				'url'          => '' !== $canonical ? $canonical : get_permalink( $queried_id ),
+				'isPartOf'     => array(
+					'@type' => 'WebSite',
+					'name'  => $name,
+					'url'   => $site_url,
+				),
+				'dateModified' => get_the_modified_date( DATE_W3C, $queried_id ),
+			);
+
+			$graph = lmhg_site_core_singular_schema_graph( $page_graph, $queried_id );
+		} else {
+			$graph = array(
+				'@context'        => 'https://schema.org',
+				'@type'           => 'WebSite',
+				'name'            => $name,
+				'url'             => $site_url,
+				'potentialAction' => array(
+					'@type'       => 'SearchAction',
+					'target'      => add_query_arg( 's', '{search_term_string}', $site_url ),
+					'query-input' => 'required name=search_term_string',
+				),
+			);
+		}
 	} else {
 		$schema_type = trim( (string) get_post_meta( $post_id, '_lmhg_schema_type', true ) );
 		$schema_type = '' !== $schema_type ? $schema_type : ( is_front_page() ? 'WebPage' : 'Article' );
@@ -293,38 +314,165 @@ function lmhg_site_core_output_json_ld(): void {
 			$graph_nodes[] = $breadcrumb;
 		}
 
-		$faq_items = lmhg_site_core_publishable_faq_items( $route );
-		if ( empty( $faq_items ) && 1 === count( $graph_nodes ) ) {
-			$graph = $page_graph;
-		} else {
-			if ( ! empty( $faq_items ) ) {
-				$graph_nodes[] = array(
-					'@type'      => 'FAQPage',
-					'mainEntity' => array_map(
-						static fn( array $item ): array => array(
-							'@type'          => 'Question',
-							'name'           => $item['question'],
-							'acceptedAnswer' => array(
-								'@type' => 'Answer',
-								'text'  => $item['answer'],
-							),
-						),
-						$faq_items
-					),
-				);
-			}
-
-			$graph = array(
-				'@context' => 'https://schema.org',
-				'@graph'   => $graph_nodes,
-			);
-		}
+		$graph = lmhg_site_core_singular_schema_graph( $page_graph, $post_id, $route, $graph_nodes );
 	}
 
 	printf(
 		'<script type="application/ld+json">%s</script>' . "\n",
 		wp_json_encode( $graph, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE )
 	);
+}
+
+/**
+ * Builds the complete graph for a singular page.
+ *
+ * @param array<string,mixed> $page_graph Base WebPage/Article node.
+ * @param int                 $post_id Page/post ID.
+ * @param array<string,mixed> $route Optional route manifest entry.
+ * @param array<int,array<string,mixed>> $graph_nodes Optional prebuilt nodes.
+ * @return array<string,mixed>
+ */
+function lmhg_site_core_singular_schema_graph( array $page_graph, int $post_id, array $route = array(), array $graph_nodes = array() ): array {
+	if ( empty( $graph_nodes ) ) {
+		$graph_nodes = array( $page_graph );
+	}
+
+	$url = isset( $page_graph['url'] ) ? (string) $page_graph['url'] : '';
+
+	$service_node = lmhg_site_core_service_schema_node( $post_id, $url );
+	if ( ! empty( $service_node ) ) {
+		$graph_nodes[] = $service_node;
+	}
+
+	$faq_items = function_exists( 'lmhg_site_core_publishable_faq_items_for_page' )
+		? lmhg_site_core_publishable_faq_items_for_page( $post_id )
+		: array();
+	if ( empty( $faq_items ) ) {
+		$faq_items = lmhg_site_core_publishable_faq_items( $route );
+	}
+	if ( ! empty( $faq_items ) ) {
+		$graph_nodes[] = lmhg_site_core_faq_schema_node( $faq_items, $url );
+	}
+
+	$review_nodes = function_exists( 'lmhg_site_core_review_showcase_schema_nodes' )
+		? lmhg_site_core_review_showcase_schema_nodes( $post_id )
+		: array();
+	foreach ( $review_nodes as $review_node ) {
+		$graph_nodes[] = $review_node;
+	}
+
+	if ( 1 === count( $graph_nodes ) ) {
+		return $page_graph;
+	}
+
+	return array(
+		'@context' => 'https://schema.org',
+		'@graph'   => $graph_nodes,
+	);
+}
+
+/**
+ * Builds service schema for active service and specialty templates.
+ *
+ * @param int    $post_id Page ID.
+ * @param string $url Canonical page URL.
+ * @return array<string,mixed>
+ */
+function lmhg_site_core_service_schema_node( int $post_id, string $url ): array {
+	$post = get_post( $post_id );
+	if ( ! $post instanceof WP_Post || 'page' !== $post->post_type ) {
+		return array();
+	}
+
+	$template = get_page_template_slug( $post );
+	if ( ! in_array( $template, array( 'service-page', 'specialty-page' ), true ) ) {
+		return array();
+	}
+
+	$url = '' !== $url ? $url : (string) get_permalink( $post_id );
+	if ( '' === $url ) {
+		return array();
+	}
+
+	$name = lmhg_site_core_normalize_core30_seo_copy( wp_strip_all_tags( get_the_title( $post_id ) ) );
+
+	return array(
+		'@type'       => 'Service',
+		'@id'         => trailingslashit( $url ) . '#service',
+		'name'        => $name,
+		'serviceType' => $name,
+		'url'         => $url,
+		'provider'    => lmhg_site_core_organization_schema_node(),
+		'areaServed'  => array(
+			array(
+				'@type'   => 'City',
+				'name'    => 'Louisville',
+				'address' => array(
+					'@type'          => 'PostalAddress',
+					'addressRegion'  => 'KY',
+					'addressCountry' => 'US',
+				),
+			),
+			array(
+				'@type' => 'AdministrativeArea',
+				'name'  => 'Jefferson County, KY',
+			),
+		),
+	);
+}
+
+/**
+ * Builds the organization node used by local service and review schema.
+ *
+ * @return array<string,mixed>
+ */
+function lmhg_site_core_organization_schema_node(): array {
+	return array(
+		'@type'     => 'MedicalOrganization',
+		'@id'       => home_url( '/#organization' ),
+		'name'      => get_bloginfo( 'name' ),
+		'url'       => home_url( '/' ),
+		'telephone' => '+15024161416',
+		'address'   => array(
+			'@type'           => 'PostalAddress',
+			'streetAddress'   => '4229 Bardstown Rd, Suite 310',
+			'addressLocality' => 'Louisville',
+			'addressRegion'   => 'KY',
+			'postalCode'      => '40218',
+			'addressCountry'  => 'US',
+		),
+	);
+}
+
+/**
+ * Builds FAQPage schema from visible/publishable FAQ items.
+ *
+ * @param array<int,array{question:string,answer:string}> $faq_items FAQ items.
+ * @param string                                          $url Canonical page URL.
+ * @return array<string,mixed>
+ */
+function lmhg_site_core_faq_schema_node( array $faq_items, string $url ): array {
+	$node = array(
+		'@type'      => 'FAQPage',
+		'mainEntity' => array_map(
+			static fn( array $item ): array => array(
+				'@type'          => 'Question',
+				'name'           => $item['question'],
+				'acceptedAnswer' => array(
+					'@type' => 'Answer',
+					'text'  => $item['answer'],
+				),
+			),
+			$faq_items
+		),
+	);
+
+	if ( '' !== $url ) {
+		$node['@id'] = trailingslashit( $url ) . '#faq';
+		$node['url'] = $url;
+	}
+
+	return $node;
 }
 
 /**

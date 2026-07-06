@@ -74,6 +74,30 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.lmhg-review-showcase--home {
+  background: #f8fbf8;
+  border-color: rgba(21, 40, 33, 0.1);
+  border-left: 0;
+  border-radius: 0;
+  border-right: 0;
+  box-sizing: border-box;
+  margin-block: 0;
+  margin-inline: calc(50% - 50vw);
+  padding: clamp(44px, 6vw, 76px) max(18px, calc((100vw - 1180px) / 2));
+  width: 100vw;
+}
+
+.lmhg-review-showcase--home > * {
+  margin-inline: auto;
+  max-width: 1180px;
+  width: 100%;
+}
+
+.lmhg-review-showcase--home .lmhg-review-showcase__header {
+  max-width: 760px;
+  text-align: center;
+}
+
 .lmhg-review-card {
   background: var(--wp--preset--color--canvas, #ffffff);
   border: 1px solid color-mix(in srgb, var(--wp--preset--color--muted-text, #526059) 18%, transparent);

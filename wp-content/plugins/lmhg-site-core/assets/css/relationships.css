@@ -150,38 +150,48 @@
 	margin-block-start: 1.5rem;
 }
 
+.lmhg-team-directory,
+.page-template-team-page .lmhg-relationship-section.lmhg-team-directory {
+	max-width: 1180px;
+	width: min(calc(100% - 36px), 1180px);
+}
+
 .lmhg-team-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
-	gap: 1.1rem;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: clamp(1rem, 2vw, 1.5rem);
 }
 
 .lmhg-team-card {
-	align-items: center;
+	align-items: stretch;
 	background: Canvas;
 	border: 1px solid color-mix(in srgb, currentColor 14%, transparent);
 	border-radius: 8px;
 	display: flex;
-	gap: 1rem;
+	flex-direction: column;
 	min-width: 0;
-	padding: 1rem;
+	overflow: hidden;
+	padding: 0;
 }
 
 .lmhg-team-card img {
 	display: block;
-	width: 8rem;
-	height: 8rem;
-	aspect-ratio: 1;
-	border: 1px solid color-mix(in srgb, currentColor 14%, transparent);
-	border-radius: 999px;
-	flex: 0 0 8rem;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 3 / 4;
+	border: 0;
+	border-block-end: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+	border-radius: 0;
+	flex: 0 0 auto;
 	object-fit: cover;
+	object-position: center top;
 	background: color-mix(in srgb, currentColor 8%, transparent);
 }
 
 .lmhg-team-card__body {
 	min-width: 0;
-	padding: 0;
+	padding: 1rem;
+	text-align: center;
 }
 
 .lmhg-team-card__body p {
@@ -209,8 +219,13 @@
 		width: clamp(14.96rem, 72.21vw, 20.64rem);
 	}
 
-	.lmhg-team-card {
-		align-items: flex-start;
-		flex-direction: column;
+	.lmhg-team-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (min-width: 681px) and (max-width: 980px) {
+	.lmhg-team-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }
