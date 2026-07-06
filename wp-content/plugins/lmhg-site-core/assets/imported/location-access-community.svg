@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Community-based care graphic</title>
+  <desc id="desc">Connected care markers around a central route for community-based mental health support.</desc>
+  <circle cx="320" cy="320" r="174" fill="#f7f3ed" stroke="#31584a" stroke-width="10"/>
+  <path d="M212 328c52-68 164-76 222-10M236 404c42 34 112 40 160 8" fill="none" stroke="#a75f3f" stroke-width="12" stroke-linecap="round" stroke-dasharray="2 26"/>
+  <circle cx="206" cy="320" r="42" fill="#ffffff" stroke="#31584a" stroke-width="8"/>
+  <circle cx="320" cy="224" r="42" fill="#ffffff" stroke="#31584a" stroke-width="8"/>
+  <circle cx="434" cy="320" r="42" fill="#ffffff" stroke="#31584a" stroke-width="8"/>
+  <circle cx="320" cy="424" r="42" fill="#ffffff" stroke="#31584a" stroke-width="8"/>
+  <circle cx="206" cy="320" r="12" fill="#a75f3f"/>
+  <circle cx="320" cy="224" r="12" fill="#a75f3f"/>
+  <circle cx="434" cy="320" r="12" fill="#a75f3f"/>
+  <circle cx="320" cy="424" r="12" fill="#a75f3f"/>
+  <text x="320" y="586" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="700" fill="#31584a">Community Care</text>
+</svg>

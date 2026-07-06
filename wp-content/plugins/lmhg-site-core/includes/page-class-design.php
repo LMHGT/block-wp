@@ -45,6 +45,8 @@ function lmhg_site_core_render_page_class_design_sections( string $content ): st
 		'article-hub'          => lmhg_site_core_render_article_hub_design(),
 		'article-page'         => lmhg_site_core_render_article_page_design( $path ),
 		'location-access-page' => lmhg_site_core_render_location_access_design( $path ),
+		'team-page'           => '',
+		'contact-page'        => lmhg_site_core_render_contact_page_design( $path ),
 		'trust-page'           => lmhg_site_core_render_trust_page_design( $path ),
 		'legal-utility-page'   => lmhg_site_core_render_legal_utility_design( $path ),
 		default                => '',
@@ -408,6 +410,26 @@ function lmhg_site_core_render_location_access_design( string $path ): string {
 
 	return sprintf(
 		'<section class="lmhg-page-class-guide lmhg-page-class-guide--location" aria-labelledby="lmhg-location-access-title"><p class="lmhg-page-class-eyebrow">Access and service area</p><h2 id="lmhg-location-access-title">One Louisville office, several care settings.</h2><p class="lmhg-page-class-lead">Location pages should clarify access without duplicating service-page content or implying separate clinic locations.</p><div class="lmhg-page-class-grid">%s</div></section>',
+		lmhg_site_core_render_plain_cards( $cards )
+	);
+}
+
+/**
+ * Renders contact page next-step enhancements.
+ *
+ * @param string $path Current path.
+ * @return string
+ */
+function lmhg_site_core_render_contact_page_design( string $path ): string {
+	unset( $path );
+	$cards = array(
+		array( 'title' => 'Start intake', 'url' => 'https://intakeq.com/new/g91Z8x/bjxuno', 'body' => 'Use the intake form when you are ready to share what is happening and ask about next steps.' ),
+		array( 'title' => 'Call the office', 'url' => 'tel:5024161416', 'body' => 'Call for availability, fit, insurance, and care-setting questions before starting intake.' ),
+		array( 'title' => 'Office and access', 'url' => '/locations/in-person/', 'body' => 'Confirm the Louisville office address and other access options before planning a visit.' ),
+	);
+
+	return sprintf(
+		'<section class="lmhg-page-class-guide lmhg-page-class-guide--contact" aria-labelledby="lmhg-contact-next-title"><p class="lmhg-page-class-eyebrow">Contact paths</p><h2 id="lmhg-contact-next-title">Choose the contact path that matches what you need next.</h2><div class="lmhg-page-class-grid">%s</div></section>',
 		lmhg_site_core_render_plain_cards( $cards )
 	);
 }

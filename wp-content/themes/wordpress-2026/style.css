@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6, .wp-block-heading { letter-spacing: 0; line-height: 1.08
   background: transparent;
   border-color: var(--wp2026-clay);
 }
-.wp2026-template-home, .wp2026-template-page, .wp2026-template-service-page, .wp2026-template-specialty-page, .wp2026-template-location-access-page, .wp2026-template-faq-page, .wp2026-template-trust-page, .wp2026-template-legal-utility-page, .wp2026-template-article-page, .wp2026-template-services-hub, .wp2026-template-specialties-hub, .wp2026-template-article-hub, .wp2026-template-faq-hub { box-sizing: border-box; padding-block: clamp(32px, 5vw, 72px); padding-inline: max(18px, calc((100vw - 1180px) / 2)); width: 100%; }
+.wp2026-template-home, .wp2026-template-page, .wp2026-template-service-page, .wp2026-template-specialty-page, .wp2026-template-location-access-page, .wp2026-template-faq-page, .wp2026-template-team-page, .wp2026-template-contact-page, .wp2026-template-trust-page, .wp2026-template-legal-utility-page, .wp2026-template-article-page, .wp2026-template-services-hub, .wp2026-template-specialties-hub, .wp2026-template-article-hub, .wp2026-template-faq-hub { box-sizing: border-box; padding-block: clamp(32px, 5vw, 72px); padding-inline: max(18px, calc((100vw - 1180px) / 2)); width: 100%; }
 .wp2026-template-home { padding-block: 0; padding-inline: 0; }
 .wp2026-page-title { font-size: clamp(1.7rem, 4vw, 3.35rem); margin-left: auto; margin-right: auto; max-width: 100%; overflow-wrap: anywhere; position: relative; text-wrap: balance; white-space: normal; width: min(calc(100% - 36px), 980px); z-index: 0; }
 .wp2026-template-kicker { display: none; }
@@ -672,24 +672,24 @@ footer.wp-block-template-part > hr {
   line-height: 1.03;
   margin-bottom: clamp(92px, 9vw, 124px);
   margin-top: clamp(34px, 5vw, 70px);
-  max-width: calc(100vw - 36px);
-  overflow-wrap: normal;
-  text-align: center;
-  text-wrap: nowrap;
-  white-space: nowrap;
-  width: fit-content;
-}
-
-.page-template-specialty-page .wp2026-page-title {
-  font-size: clamp(2rem, 4.4vw, 3.35rem) !important;
-  line-height: 1.03;
-  margin-bottom: clamp(92px, 9vw, 124px);
-  margin-top: clamp(34px, 5vw, 70px);
   max-width: min(calc(100vw - 36px), 1040px);
   overflow-wrap: normal;
   text-align: center;
   text-wrap: balance;
   white-space: normal;
+  width: fit-content;
+}
+
+.page-template-specialty-page .wp2026-page-title {
+  font-size: min(3.35rem, calc((100vw - 36px) / 28)) !important;
+  line-height: 1.03;
+  margin-bottom: clamp(92px, 9vw, 124px);
+  margin-top: clamp(34px, 5vw, 70px);
+  max-width: calc(100vw - 36px);
+  overflow-wrap: normal;
+  text-align: center;
+  text-wrap: nowrap;
+  white-space: nowrap;
   width: fit-content;
 }
 
@@ -858,10 +858,298 @@ footer.wp-block-template-part > hr {
   border-top: 1px solid rgba(21, 40, 33, 0.12);
 }
 
+/* Team, location, FAQ, and contact templates reuse the service/specialty page rhythm. */
+.page-template-location-access-page header.wp-block-template-part,
+.page-template-faq-hub header.wp-block-template-part,
+.page-template-faq-page header.wp-block-template-part,
+.page-template-team-page header.wp-block-template-part,
+.page-template-contact-page header.wp-block-template-part {
+  box-shadow: 0 1px 0 rgba(21, 40, 33, 0.08), 0 12px 30px rgba(21, 40, 33, 0.045);
+}
+
+.page-template-location-access-page .lmhg-main-content,
+.page-template-faq-hub .lmhg-main-content,
+.page-template-faq-page .lmhg-main-content,
+.page-template-team-page .lmhg-main-content,
+.page-template-contact-page .lmhg-main-content {
+  background:
+    linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.42) 12%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 70%, #ffffff 100%) top / 100% clamp(430px, 42vw, 620px) no-repeat,
+    radial-gradient(circle at 50% 8rem, #d4e6da 0%, #eaf4ee 42%, #ffffff 78%) top / 100% clamp(430px, 42vw, 620px) no-repeat,
+    #ffffff;
+  overflow: hidden;
+}
+
+.page-template-location-access-page .wp2026-page-title,
+.page-template-faq-hub .wp2026-page-title,
+.page-template-faq-page .wp2026-page-title,
+.page-template-team-page .wp2026-page-title,
+.page-template-contact-page .wp2026-page-title {
+  font-size: min(3.25rem, calc((100vw - 36px) / 18.6)) !important;
+  line-height: 1.03;
+  margin-bottom: clamp(86px, 8.5vw, 118px);
+  margin-top: clamp(34px, 5vw, 70px);
+  max-width: calc(100vw - 36px);
+  overflow-wrap: normal;
+  text-align: center;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.page-template-location-access-page .wp2026-page-title::before,
+.page-template-faq-hub .wp2026-page-title::before,
+.page-template-faq-page .wp2026-page-title::before,
+.page-template-team-page .wp2026-page-title::before,
+.page-template-contact-page .wp2026-page-title::before {
+  height: clamp(130px, 17vw, 230px);
+  opacity: 0.78;
+  top: 86%;
+  width: clamp(130px, 17vw, 230px);
+}
+
+.wp2026-location-hero-copy,
+.wp2026-faq-hero-copy,
+.wp2026-team-hero-copy,
+.wp2026-contact-hero-copy {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 880px;
+  padding-bottom: clamp(30px, 5vw, 54px);
+  text-align: center;
+  width: min(calc(100% - 36px), 880px);
+}
+
+.wp2026-location-hero-copy .wp2026-breadcrumbs,
+.wp2026-location-hero-copy .wp2026-lead,
+.wp2026-faq-hero-copy .wp2026-breadcrumbs,
+.wp2026-faq-hero-copy .wp2026-lead,
+.wp2026-team-hero-copy .wp2026-breadcrumbs,
+.wp2026-team-hero-copy .wp2026-lead,
+.wp2026-contact-hero-copy .wp2026-breadcrumbs,
+.wp2026-contact-hero-copy .wp2026-lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp2026-location-hero-copy .wp2026-hero-actions.wp-block-buttons,
+.wp2026-faq-hero-copy .wp2026-hero-actions.wp-block-buttons,
+.wp2026-team-hero-copy .wp2026-hero-actions.wp-block-buttons,
+.wp2026-contact-hero-copy .wp2026-hero-actions.wp-block-buttons {
+  justify-content: center;
+}
+
+.wp2026-location-process,
+.wp2026-faq-process,
+.wp2026-team-process,
+.wp2026-contact-process {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(21, 40, 33, 0.08);
+  border-top: 1px solid rgba(21, 40, 33, 0.08);
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: none !important;
+  padding: clamp(42px, 5.8vw, 72px) max(18px, calc((100vw - 1180px) / 2));
+  width: 100% !important;
+}
+
+.wp2026-location-process > .wp2026-section-title,
+.wp2026-location-process > .wp2026-section-lead,
+.wp2026-faq-process > .wp2026-section-title,
+.wp2026-faq-process > .wp2026-section-lead,
+.wp2026-team-process > .wp2026-section-title,
+.wp2026-team-process > .wp2026-section-lead,
+.wp2026-contact-process > .wp2026-section-title,
+.wp2026-contact-process > .wp2026-section-lead {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.wp2026-location-process .wp2026-section-title,
+.wp2026-faq-process .wp2026-section-title,
+.wp2026-team-process .wp2026-section-title,
+.wp2026-contact-process .wp2026-section-title {
+  font-size: clamp(1.65rem, 3vw, 2.8rem) !important;
+  line-height: 1.08;
+  max-width: min(calc(100vw - 36px), 980px);
+  white-space: normal;
+}
+
+.wp2026-support-detail,
+.wp2026-location-detail,
+.wp2026-contact-detail,
+.wp2026-faq-detail,
+.wp2026-team-detail {
+  box-sizing: border-box;
+  margin: clamp(34px, 5vw, 54px) auto 0;
+  max-width: 980px;
+  width: min(calc(100% - 36px), 980px);
+}
+
+.wp2026-support-detail p,
+.wp2026-location-detail p,
+.wp2026-contact-detail p,
+.wp2026-faq-detail p,
+.wp2026-team-detail p {
+  font-size: clamp(1.02rem, 1.28vw, 1.12rem);
+  line-height: 1.68;
+  white-space: normal;
+}
+
+.wp2026-location-card-grid,
+.wp2026-contact-card-grid,
+.wp2026-faq-card-grid,
+.wp2026-team-fit-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: clamp(24px, 3.4vw, 38px);
+}
+
+.wp2026-location-card-grid--wide,
+.wp2026-contact-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.wp2026-location-card,
+.wp2026-contact-card,
+.wp2026-faq-topic-card,
+.wp2026-team-fit-card {
+  background: #faf8f4;
+  border: 1px solid rgba(21, 40, 33, 0.13);
+  border-radius: 8px;
+  box-shadow: 0 14px 30px rgba(21, 40, 33, 0.045);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(18px, 2vw, 24px);
+}
+
+.wp2026-location-card h3,
+.wp2026-contact-card h3,
+.wp2026-faq-topic-card h3,
+.wp2026-team-fit-card h3 {
+  color: var(--wp2026-deep);
+  font-size: clamp(1.02rem, 1.25vw, 1.2rem);
+  line-height: 1.22;
+  margin: 0 0 0.65rem;
+  white-space: normal;
+}
+
+.wp2026-location-card p,
+.wp2026-contact-card p,
+.wp2026-faq-topic-card p,
+.wp2026-team-fit-card p {
+  font-size: 0.98rem;
+  line-height: 1.58;
+  margin: 0.3rem 0 0;
+  white-space: normal;
+}
+
+.wp2026-location-card a,
+.wp2026-contact-card a,
+.wp2026-faq-topic-card a,
+.wp2026-team-fit-card a {
+  color: var(--wp2026-green);
+  font-weight: 800;
+  text-decoration-color: rgba(167, 95, 63, 0.44);
+  text-underline-offset: 0.18em;
+}
+
+.wp2026-location-graphic {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid rgba(167, 95, 63, 0.42);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 1rem;
+  min-height: 148px;
+  padding: 12px;
+}
+
+.wp2026-location-graphic img {
+  display: block;
+  height: auto;
+  max-height: 148px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.wp2026-contact-meta {
+  color: rgba(31, 42, 38, 0.78);
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin-bottom: 0.45rem;
+}
+
+.wp2026-contact-card--primary {
+  background: #ffffff;
+  border-color: rgba(167, 95, 63, 0.46);
+}
+
+.wp2026-faq-answer-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: clamp(20px, 3vw, 30px);
+}
+
+.wp2026-faq-answer {
+  background: #ffffff;
+  border: 1px solid rgba(49, 88, 74, 0.14);
+  border-left: 5px solid var(--wp2026-clay);
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: clamp(18px, 2.4vw, 24px);
+}
+
+.wp2026-faq-answer h3 {
+  font-size: clamp(1.04rem, 1.32vw, 1.22rem);
+  line-height: 1.24;
+  margin: 0 0 0.6rem;
+  white-space: normal;
+}
+
+.wp2026-faq-answer p {
+  margin: 0;
+}
+
+.page-template-location-access-page .wp2026-page-cta,
+.page-template-faq-hub .wp2026-page-cta,
+.page-template-faq-page .wp2026-page-cta,
+.page-template-team-page .wp2026-page-cta,
+.page-template-contact-page .wp2026-page-cta {
+  background: linear-gradient(180deg, #dce9df 0%, #d3e4d9 100%);
+  border-bottom: 1px solid #000000;
+  border-left: 0;
+  border-top: 1px solid #000000;
+  margin-top: clamp(48px, 6vw, 78px);
+  max-width: none;
+  padding: clamp(50px, 6vw, 78px) max(18px, calc((100vw - 860px) / 2));
+  text-align: center;
+  width: 100%;
+}
+
+.page-template-location-access-page .wp2026-page-cta > *,
+.page-template-faq-hub .wp2026-page-cta > *,
+.page-template-faq-page .wp2026-page-cta > *,
+.page-template-team-page .wp2026-page-cta > *,
+.page-template-contact-page .wp2026-page-cta > * {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 860px;
+}
+
 @media (max-width: 1000px) {
   .wp2026-start-grid,
   .wp2026-service-grid,
-  .wp2026-service-process-grid {
+  .wp2026-service-process-grid,
+  .wp2026-location-card-grid,
+  .wp2026-contact-card-grid,
+  .wp2026-faq-card-grid,
+  .wp2026-team-fit-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1052,12 +1340,20 @@ footer.wp-block-template-part > hr {
   }
 
   .wp2026-service-process,
-  .wp2026-specialty-process {
+  .wp2026-specialty-process,
+  .wp2026-location-process,
+  .wp2026-faq-process,
+  .wp2026-team-process,
+  .wp2026-contact-process {
     padding-left: 18px;
     padding-right: 18px;
   }
 
-  .wp2026-service-process-grid {
+  .wp2026-service-process-grid,
+  .wp2026-location-card-grid,
+  .wp2026-contact-card-grid,
+  .wp2026-faq-card-grid,
+  .wp2026-team-fit-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1075,13 +1371,37 @@ footer.wp-block-template-part > hr {
     max-width: calc(100vw - 36px) !important;
     overflow-wrap: normal;
     text-align: center;
-    text-wrap: nowrap;
-    white-space: nowrap;
+    text-wrap: balance;
+    white-space: normal;
     width: fit-content !important;
   }
 
   .page-template-service-page .wp2026-page-title::before {
     top: 200%;
+  }
+
+  .page-template-location-access-page .wp2026-page-title,
+  .page-template-faq-hub .wp2026-page-title,
+  .page-template-faq-page .wp2026-page-title,
+  .page-template-team-page .wp2026-page-title,
+  .page-template-contact-page .wp2026-page-title {
+    font-size: min(2.15rem, calc((100vw - 36px) / 18.6)) !important;
+    line-height: 1.03 !important;
+    margin-bottom: 102px;
+    max-width: calc(100vw - 36px) !important;
+    overflow-wrap: normal;
+    text-align: center;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    width: fit-content !important;
+  }
+
+  .page-template-location-access-page .wp2026-page-title::before,
+  .page-template-faq-hub .wp2026-page-title::before,
+  .page-template-faq-page .wp2026-page-title::before,
+  .page-template-team-page .wp2026-page-title::before,
+  .page-template-contact-page .wp2026-page-title::before {
+    top: 178%;
   }
 
   .page-template-specialty-page .wp2026-page-title {
@@ -1103,8 +1423,8 @@ footer.wp-block-template-part > hr {
     font-size: min(2rem, calc((100vw - 36px) / 19.6)) !important;
     line-height: 1.08 !important;
     overflow-wrap: normal;
-    text-wrap: nowrap;
-    white-space: nowrap;
+    text-wrap: balance;
+    white-space: normal;
   }
 
   .page-template-specialty-page .wp2026-specialty-process .wp2026-section-title {
@@ -1114,7 +1434,12 @@ footer.wp-block-template-part > hr {
   }
 
   .page-template-service-page .wp2026-page-cta .wp2026-section-title,
-  .page-template-specialty-page .wp2026-page-cta .wp2026-section-title {
+  .page-template-specialty-page .wp2026-page-cta .wp2026-section-title,
+  .page-template-location-access-page .wp2026-page-cta .wp2026-section-title,
+  .page-template-faq-hub .wp2026-page-cta .wp2026-section-title,
+  .page-template-faq-page .wp2026-page-cta .wp2026-section-title,
+  .page-template-team-page .wp2026-page-cta .wp2026-section-title,
+  .page-template-contact-page .wp2026-page-cta .wp2026-section-title {
     font-size: clamp(1.45rem, 7vw, 2rem) !important;
     line-height: 1.1 !important;
     white-space: normal;
@@ -1122,8 +1447,15 @@ footer.wp-block-template-part > hr {
 
   .page-template-service-page .lmhg-page-class-guide h2,
   .page-template-specialty-page .lmhg-page-class-guide h2,
+  .page-template-location-access-page .lmhg-page-class-guide h2,
+  .page-template-faq-hub .lmhg-page-class-guide h2,
+  .page-template-faq-page .lmhg-page-class-guide h2,
+  .page-template-team-page .lmhg-page-class-guide h2,
+  .page-template-contact-page .lmhg-page-class-guide h2,
   .page-template-specialty-page .lmhg-relationship-section h2,
-  .page-template-service-page .lmhg-relationship-section h2 {
+  .page-template-service-page .lmhg-relationship-section h2,
+  .page-template-team-page .lmhg-relationship-section h2,
+  .page-template-faq-hub .lmhg-relationship-section h2 {
     font-size: clamp(1.3rem, 6vw, 1.8rem) !important;
     line-height: 1.12 !important;
     white-space: normal;

@@ -152,27 +152,36 @@
 
 .lmhg-team-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
-	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+	gap: 1.1rem;
 }
 
 .lmhg-team-card {
+	align-items: center;
+	background: Canvas;
 	border: 1px solid color-mix(in srgb, currentColor 14%, transparent);
 	border-radius: 8px;
-	overflow: hidden;
-	background: Canvas;
+	display: flex;
+	gap: 1rem;
+	min-width: 0;
+	padding: 1rem;
 }
 
 .lmhg-team-card img {
 	display: block;
-	width: 100%;
-	aspect-ratio: 4 / 5;
+	width: 8rem;
+	height: 8rem;
+	aspect-ratio: 1;
+	border: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+	border-radius: 999px;
+	flex: 0 0 8rem;
 	object-fit: cover;
 	background: color-mix(in srgb, currentColor 8%, transparent);
 }
 
 .lmhg-team-card__body {
-	padding: 0.95rem;
+	min-width: 0;
+	padding: 0;
 }
 
 .lmhg-team-card__body p {
@@ -198,5 +207,10 @@
 
 	.page-template-service-page .lmhg-relationship-section.lmhg-faqs > h2 {
 		width: clamp(14.96rem, 72.21vw, 20.64rem);
+	}
+
+	.lmhg-team-card {
+		align-items: flex-start;
+		flex-direction: column;
 	}
 }

@@ -1239,8 +1239,12 @@ function lmhg_site_core_request_needs_relationship_assets(): bool {
 	}
 
 	if ( 'page' === $post->post_type ) {
+		$template = get_page_template_slug( $post );
+
 		return has_term( '', LMHG_SITE_CORE_SPECIALTY_TAXONOMY, $post )
 			|| has_term( '', LMHG_SITE_CORE_FAQ_SET_TAXONOMY, $post )
+			|| 'faq-hub' === $template
+			|| 'team-page' === $template
 			|| in_array( $post->post_name, lmhg_site_core_team_page_slugs(), true );
 	}
 
@@ -1267,6 +1271,8 @@ function lmhg_site_core_append_relationship_sections( string $content ): string 
 	$raw      = (string) $post->post_content;
 
 	if ( 'page' === $post->post_type ) {
+		$template = get_page_template_slug( $post );
+
 		if ( ! has_shortcode( $raw, 'lmhg_service_specialties' ) && ! has_shortcode( $raw, 'lmhg_related_pages' ) && has_term( '', LMHG_SITE_CORE_SPECIALTY_TAXONOMY, $post ) ) {
 			$sections[] = lmhg_site_core_render_taxonomy_related_pages( $post->ID );
 		}
@@ -1275,7 +1281,15 @@ function lmhg_site_core_append_relationship_sections( string $content ): string 
 			$sections[] = lmhg_site_core_render_faqs_for_page( $post->ID );
 		}
 
-		if ( ! has_shortcode( $raw, 'lmhg_team' ) && in_array( $post->post_name, lmhg_site_core_team_page_slugs(), true ) ) {
+		if ( 'faq-hub' === $template && ! has_shortcode( $raw, 'lmhg_faq_index' ) ) {
+			$sections[] = lmhg_site_core_faq_index_shortcode(
+				array(
+					'heading' => 'Frequently asked questions',
+				)
+			);
+		}
+
+		if ( ! has_shortcode( $raw, 'lmhg_team' ) && ( 'team-page' === $template || in_array( $post->post_name, lmhg_site_core_team_page_slugs(), true ) ) ) {
 			$sections[] = lmhg_site_core_render_team_members();
 		}
 	}
@@ -1289,7 +1303,12 @@ function lmhg_site_core_append_relationship_sections( string $content ): string 
 		return $content;
 	}
 
-	return $content . "\n" . implode( "\n", $sections );
+	$section_html = implode( "\n", $sections );
+	if ( function_exists( 'lmhg_site_core_insert_before_page_cta' ) ) {
+		return lmhg_site_core_insert_before_page_cta( $content, $section_html );
+	}
+
+	return $content . "\n" . $section_html;
 }
 
 /**
@@ -1732,6 +1751,21 @@ function lmhg_site_core_render_faqs_for_page( int $post_id ): string {
 }
 
 /**
+ * Returns publishable FAQ question/answer pairs assigned to a page.
+ *
+ * @param int $post_id Page ID.
+ * @return array<int,array{question:string,answer:string}>
+ */
+function lmhg_site_core_publishable_faq_items_for_page( int $post_id ): array {
+	$term_ids = lmhg_site_core_faq_set_term_ids( '', $post_id );
+	if ( empty( $term_ids ) ) {
+		return array();
+	}
+
+	return lmhg_site_core_publishable_faq_items_from_posts( lmhg_site_core_query_faqs( $term_ids, -1 ) );
+}
+
+/**
  * Renders FAQ items for FAQ set terms.
  *
  * @param int[]  $term_ids FAQ set IDs.
@@ -1922,6 +1956,34 @@ function lmhg_site_core_render_faq_items( array $faqs ): string {
 	}
 
 	return implode( '', $items );
+}
+
+/**
+ * Returns publishable FAQ question/answer pairs from FAQ posts.
+ *
+ * @param WP_Post[] $faqs FAQ posts.
+ * @return array<int,array{question:string,answer:string}>
+ */
+function lmhg_site_core_publishable_faq_items_from_posts( array $faqs ): array {
+	$items = array();
+	foreach ( $faqs as $faq ) {
+		if ( ! $faq instanceof WP_Post ) {
+			continue;
+		}
+
+		$question = trim( wp_strip_all_tags( get_the_title( $faq ) ) );
+		$answer   = trim( wp_strip_all_tags( lmhg_site_core_render_post_body( $faq ) ) );
+		if ( '' === $question || '' === $answer ) {
+			continue;
+		}
+
+		$items[] = array(
+			'question' => $question,
+			'answer'   => $answer,
+		);
+	}
+
+	return $items;
 }
 
 /**
@@ -2298,7 +2360,7 @@ function lmhg_site_core_team_member_headshot_url( WP_Post $member ): string {
  * @return string[]
  */
 function lmhg_site_core_team_page_slugs(): array {
-	return array( 'team', 'our-team', 'team-members' );
+	return array( 'meet-the-team', 'team', 'our-team', 'team-members' );
 }
 
 /**

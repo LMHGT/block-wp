@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">In-home care graphic</title>
+  <desc id="desc">A home outline with a care path marker for in-home mental health services.</desc>
+  <path d="M158 314l162-140 162 140v184H158z" fill="#f7f3ed" stroke="#31584a" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M112 330l208-180 208 180" fill="none" stroke="#31584a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="250" y="352" width="140" height="146" rx="12" fill="#ffffff" stroke="#31584a" stroke-width="9"/>
+  <path d="M206 406h64M370 406h64" fill="none" stroke="#a75f3f" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="320" cy="288" r="38" fill="#dce9df" stroke="#31584a" stroke-width="8"/>
+  <path d="M304 286l14 14 24-30" fill="none" stroke="#a75f3f" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="320" y="586" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="700" fill="#31584a">In-Home Support</text>
+</svg>
