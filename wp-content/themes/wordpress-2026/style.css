@@ -1943,3 +1943,31 @@ footer.wp-block-template-part a:focus-visible {
     gap: 0.5rem;
   }
 }
+
+/* Design contract enforcement: page H1s stay on one line and fit the viewport. */
+.wp2026-home-title,
+.wp2026-page-title.wp2026-title-fit {
+  box-sizing: border-box !important;
+  display: block !important;
+  inline-size: fit-content !important;
+  letter-spacing: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-inline-size: calc(100vw - 36px) !important;
+  max-width: calc(100vw - 36px) !important;
+  overflow: visible !important;
+  overflow-wrap: normal !important;
+  text-wrap: nowrap !important;
+  white-space: nowrap !important;
+  word-break: normal !important;
+}
+
+.wp2026-page-title.wp2026-title-fit {
+  font-size: min(3.35rem, var(--wp2026-title-fit-vw, 4vw)) !important;
+  line-height: 1.08 !important;
+}
+
+.wp2026-home-title {
+  font-size: min(3.25rem, 3.99vw) !important;
+  line-height: 1.02 !important;
+}

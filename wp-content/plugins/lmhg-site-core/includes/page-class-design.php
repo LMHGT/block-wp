@@ -33,13 +33,16 @@ function lmhg_site_core_render_page_class_design_sections( string $content ): st
 	if ( 'service-page' === $template && lmhg_site_core_page_content_owns_service_context( $post ) ) {
 		return $content;
 	}
+	if ( 'specialty-page' === $template && lmhg_site_core_page_content_owns_specialty_context( $post ) ) {
+		return $content;
+	}
 
 	$path     = lmhg_site_core_page_class_path( $post );
 	$section  = match ( $template ) {
 		'services-hub'         => lmhg_site_core_render_services_hub_design(),
-		'service-page'         => '',
+		'service-page'         => lmhg_site_core_render_service_page_design( $path ),
 		'specialties-hub'      => lmhg_site_core_render_specialties_hub_design(),
-		'specialty-page'       => '',
+		'specialty-page'       => lmhg_site_core_render_specialty_page_design( $path ),
 		'faq-hub'              => lmhg_site_core_render_faq_hub_design(),
 		'faq-page'             => lmhg_site_core_render_faq_page_design( $path ),
 		'article-hub'          => lmhg_site_core_render_article_hub_design(),
@@ -54,6 +57,10 @@ function lmhg_site_core_render_page_class_design_sections( string $content ): st
 
 	if ( '' === $section ) {
 		return $content;
+	}
+
+	if ( 'services-hub' === $template || 'specialties-hub' === $template ) {
+		return lmhg_site_core_insert_after_breadcrumbs( $content, $section );
 	}
 
 	return lmhg_site_core_insert_before_page_cta( $content, $section );
@@ -202,7 +209,23 @@ function lmhg_site_core_insert_before_page_cta( string $content, string $section
 }
 
 /**
- * Renders the Services hub Core30 map.
+ * Inserts a section immediately after page breadcrumbs.
+ *
+ * @param string $content Rendered content.
+ * @param string $section Section HTML.
+ * @return string
+ */
+function lmhg_site_core_insert_after_breadcrumbs( string $content, string $section ): string {
+	$pattern = '/(<p\b[^>]*class="[^"]*\bwp2026-breadcrumbs\b[^"]*"[^>]*>.*?<\/p>)/is';
+	if ( preg_match( $pattern, $content ) ) {
+		return preg_replace( $pattern, '$1' . "\n" . $section, $content, 1 ) ?? $section . "\n" . $content;
+	}
+
+	return $section . "\n" . $content;
+}
+
+/**
+ * Renders the services hub map.
  *
  * @return string
  */
@@ -219,13 +242,37 @@ function lmhg_site_core_render_services_hub_design(): string {
 	}
 
 	return sprintf(
-		'<section class="lmhg-page-class-guide lmhg-page-class-guide--services-hub" aria-labelledby="lmhg-services-map-title"><p class="lmhg-page-class-eyebrow">Core30 service map</p><h2 id="lmhg-services-map-title">Choose a service family, then compare related options.</h2><p class="lmhg-page-class-lead">The services hub should organize broad commercial service intent first, then expose related specialty pages as crawlable links. This keeps the page useful for visitors and aligned with the Core30 service-family model.</p><div class="lmhg-page-class-grid lmhg-page-class-grid--families">%s</div></section>',
+		'<section class="lmhg-page-class-guide lmhg-page-class-guide--services-hub" aria-labelledby="lmhg-services-map-title"><p class="lmhg-page-class-eyebrow">Services</p><h2 id="lmhg-services-map-title">Compare services by type of support.</h2><p class="lmhg-page-class-lead">Start with the broad area that best matches what is happening now. Each service page links to related specialty pages when a more focused care path may fit.</p><div class="lmhg-page-class-grid lmhg-page-class-grid--families">%s</div></section>',
 		implode( '', $cards )
 	);
 }
 
 /**
- * Renders the specialties hub grouped by Core30 service family.
+ * Renders broad service page enhancements.
+ *
+ * @param string $path Current path.
+ * @return string
+ */
+function lmhg_site_core_render_service_page_design( string $path ): string {
+	$family = lmhg_site_core_find_service_family( $path );
+	if ( empty( $family ) ) {
+		return '';
+	}
+
+	$children = ! empty( $family['children'] )
+		? lmhg_site_core_render_link_list( $family['children'], 'lmhg-page-class-link-list lmhg-page-class-link-list--chips' )
+		: '<p class="lmhg-page-class-note">This service page does not currently have additional specialty links.</p>';
+
+	return sprintf(
+		'<section class="lmhg-page-class-guide lmhg-page-class-guide--service-page" aria-labelledby="lmhg-service-map-title"><p class="lmhg-page-class-eyebrow">Service options</p><h2 id="lmhg-service-map-title">%1$s pathway</h2><div class="lmhg-page-class-split"><div><p class="lmhg-page-class-lead">%2$s</p><p>Use this page to understand the broader service area, then compare any related specialty pages that may fit your situation.</p></div><div class="lmhg-page-class-panel"><h3>Related options</h3>%3$s</div></div></section>',
+		esc_html( $family['title'] ),
+		esc_html( $family['description'] ),
+		$children
+	);
+}
+
+/**
+ * Renders the specialties hub grouped by service family.
  *
  * @return string
  */
@@ -244,7 +291,7 @@ function lmhg_site_core_render_specialties_hub_design(): string {
 	}
 
 	return sprintf(
-		'<section class="lmhg-page-class-guide lmhg-page-class-guide--specialties-hub" aria-labelledby="lmhg-specialties-map-title"><p class="lmhg-page-class-eyebrow">Specialty map</p><h2 id="lmhg-specialties-map-title">Specific pages should stay connected to their parent service family.</h2><p class="lmhg-page-class-lead">Specialty pages are narrower than service-family pages. This hub should help visitors compare specific modalities, concerns, court-service paths, and community-service options without fragmenting service intent.</p><div class="lmhg-page-class-grid">%s</div></section>',
+		'<section class="lmhg-page-class-guide lmhg-page-class-guide--specialties-hub" aria-labelledby="lmhg-specialties-map-title"><p class="lmhg-page-class-eyebrow">Specialties</p><h2 id="lmhg-specialties-map-title">Compare specialties by service family.</h2><p class="lmhg-page-class-lead">Use this hub to find focused care paths such as therapy modalities, specific concerns, court-related services, and community support. Each specialty stays connected to a broader service page.</p><div class="lmhg-page-class-grid">%s</div></section>',
 		implode( '', $groups )
 	);
 }
@@ -280,7 +327,7 @@ function lmhg_site_core_render_specialty_page_design( string $path ): string {
 	}
 
 	return sprintf(
-		'<section class="lmhg-page-class-guide lmhg-page-class-guide--specialty-page" aria-labelledby="lmhg-specialty-context-title"><h2 id="lmhg-specialty-context-title">How this specialty fits with broader care.</h2><p class="lmhg-page-class-lead">Use this page for the focused concern, then compare the broader service family if another starting point may fit better.</p><div class="lmhg-page-class-grid">%s</div></section>',
+		'<section class="lmhg-page-class-guide lmhg-page-class-guide--specialty-page" aria-labelledby="lmhg-specialty-context-title"><h2 id="lmhg-specialty-context-title">How this specialty fits with broader care</h2><p class="lmhg-page-class-lead">Use this page for the focused concern, then compare the broader service family if another starting point may fit better.</p><div class="lmhg-page-class-grid">%s</div></section>',
 		implode( '', $parent_cards )
 	);
 }
@@ -312,7 +359,7 @@ function lmhg_site_core_render_faq_hub_design(): string {
 		),
 		array(
 			'title' => 'Services and fit',
-			'body'  => 'Questions that should link back to commercial service families instead of becoming isolated FAQ content.',
+			'body'  => 'Questions about choosing a service, specialty, or contact path.',
 			'links' => array(
 				array( 'title' => 'Services', 'url' => '/services/' ),
 				array( 'title' => 'Specialties', 'url' => '/specialties/' ),
@@ -364,13 +411,13 @@ function lmhg_site_core_render_faq_page_design( string $path ): string {
  */
 function lmhg_site_core_render_article_hub_design(): string {
 	$topics = array(
-		array( 'title' => 'Therapy versus counseling', 'url' => '/articles/family-therapy-vs-individual-therapy/', 'body' => 'Comparison content should support the homepage and services hub.' ),
-		array( 'title' => 'Starting therapy', 'url' => '/articles/what-to-expect-when-starting-therapy/', 'body' => 'Starter content should help visitors decide what to ask before scheduling.' ),
-		array( 'title' => 'When support may help', 'url' => '/articles/top-5-signs-its-time-to-seek-therapy/', 'body' => 'Informational content should route back to service-family pages.' ),
+		array( 'title' => 'Therapy versus counseling', 'url' => '/articles/family-therapy-vs-individual-therapy/', 'body' => 'Compare individual, family, and other care paths.' ),
+		array( 'title' => 'Starting therapy', 'url' => '/articles/what-to-expect-when-starting-therapy/', 'body' => 'Clarify what usually happens before your first appointment.' ),
+		array( 'title' => 'When support may help', 'url' => '/articles/top-5-signs-its-time-to-seek-therapy/', 'body' => 'Understand signs that extra support may be useful.' ),
 	);
 
 	return sprintf(
-		'<section class="lmhg-page-class-guide lmhg-page-class-guide--article-hub" aria-labelledby="lmhg-article-hub-title"><p class="lmhg-page-class-eyebrow">Article strategy</p><h2 id="lmhg-article-hub-title">Articles should absorb informational demand and point back to care pages.</h2><p class="lmhg-page-class-lead">Use article pages for questions, comparisons, and modifiers that would otherwise create duplicate commercial pages.</p><div class="lmhg-page-class-grid">%s</div></section>',
+		'<section class="lmhg-page-class-guide lmhg-page-class-guide--article-hub" aria-labelledby="lmhg-article-hub-title"><p class="lmhg-page-class-eyebrow">Mental health articles</p><h2 id="lmhg-article-hub-title">Read practical guides, then compare care options.</h2><p class="lmhg-page-class-lead">Use these articles to understand common questions before choosing a service page or contacting the office.</p><div class="lmhg-page-class-grid">%s</div></section>',
 		lmhg_site_core_render_plain_cards( $topics )
 	);
 }
@@ -409,7 +456,7 @@ function lmhg_site_core_render_location_access_design( string $path ): string {
 	}
 
 	return sprintf(
-		'<section class="lmhg-page-class-guide lmhg-page-class-guide--location" aria-labelledby="lmhg-location-access-title"><p class="lmhg-page-class-eyebrow">Access and service area</p><h2 id="lmhg-location-access-title">One Louisville office, several care settings.</h2><p class="lmhg-page-class-lead">Location pages should clarify access without duplicating service-page content or implying separate clinic locations.</p><div class="lmhg-page-class-grid">%s</div></section>',
+		'<section class="lmhg-page-class-guide lmhg-page-class-guide--location" aria-labelledby="lmhg-location-access-title"><p class="lmhg-page-class-eyebrow">Access and service area</p><h2 id="lmhg-location-access-title">One Louisville office, several care settings.</h2><p class="lmhg-page-class-lead">Use these pages to compare office, telehealth, in-home, school, and community-based care settings.</p><div class="lmhg-page-class-grid">%s</div></section>',
 		lmhg_site_core_render_plain_cards( $cards )
 	);
 }
@@ -448,15 +495,15 @@ function lmhg_site_core_render_trust_page_design( string $path ): string {
 			array( 'title' => 'Location details', 'url' => '/locations/in-person/', 'body' => 'Confirm office and access information before visiting.' ),
 		),
 		'/reviews/' => array(
-			array( 'title' => 'Contact LMHG', 'url' => '/contact-us/', 'body' => 'Reviews should support trust, not replace a fit conversation.' ),
-			array( 'title' => 'Services', 'url' => '/services/', 'body' => 'Compare service families after reading trust signals.' ),
+			array( 'title' => 'Contact LMHG', 'url' => '/contact-us/', 'body' => 'Contact the office when you are ready to ask about fit and next steps.' ),
+			array( 'title' => 'Services', 'url' => '/services/', 'body' => 'Compare service options after reviewing trust information.' ),
 		),
 		'/meet-the-team/' => array(
-			array( 'title' => 'Services', 'url' => '/services/', 'body' => 'Provider fit should connect back to service needs.' ),
+			array( 'title' => 'Services', 'url' => '/services/', 'body' => 'Compare service options when choosing the next step.' ),
 			array( 'title' => 'Contact', 'url' => '/contact-us/', 'body' => 'Ask the office about provider availability and fit.' ),
 		),
 		'/careers/' => array(
-			array( 'title' => 'About LMHG', 'url' => '/faq/about-lmhg/', 'body' => 'Careers content should stay connected to mission and service model.' ),
+			array( 'title' => 'About LMHG', 'url' => '/faq/about-lmhg/', 'body' => 'Learn more about the practice before reaching out about career questions.' ),
 			array( 'title' => 'Contact', 'url' => '/contact-us/', 'body' => 'Use contact details for practical next steps.' ),
 		),
 		default => array(
@@ -493,7 +540,7 @@ function lmhg_site_core_render_legal_utility_design( string $path ): string {
 }
 
 /**
- * Core30 service-family data used for design sections.
+ * Service-family data used for design sections.
  *
  * @return array<int,array<string,mixed>>
  */
@@ -502,7 +549,7 @@ function lmhg_site_core_core30_service_families(): array {
 		array(
 			'title'       => 'Individual Counseling',
 			'url'         => '/individual-counseling/',
-			'description' => 'One-on-one care for adults and teens comparing therapy, counseling, anxiety, depression, stress, trauma, and life-change support.',
+			'description' => 'One-on-one care for adults and teens seeking support for anxiety, depression, stress, trauma, relationships, or major life changes.',
 			'children'    => array(
 				array( 'title' => 'Adult Counseling', 'url' => '/adult-counseling/' ),
 				array( 'title' => 'Anxiety and Depression Therapy', 'url' => '/anxiety-depression-therapy/' ),

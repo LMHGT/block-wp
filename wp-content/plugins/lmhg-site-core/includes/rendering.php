@@ -64,19 +64,126 @@ function lmhg_site_core_mark_post_title_block( string $block_content, array $blo
 		return $block_content;
 	}
 
-	if ( function_exists( 'lmhg_site_core_has_editable_block_content' ) && lmhg_site_core_has_editable_block_content( $post_id ) ) {
+	if (
+		function_exists( 'lmhg_site_core_has_editable_block_content' )
+		&& lmhg_site_core_has_editable_block_content( $post_id )
+		&& lmhg_site_core_post_content_has_h1( $post_id )
+	) {
 		return '';
 	}
 
 	$source_url = trim( (string) get_post_meta( $post_id, '_lmhg_source_url', true ) );
 	$marker = lmhg_site_core_marker_id( $source_url, 'h1' );
+	$title = trim( wp_strip_all_tags( (string) get_the_title( $post_id ) ) );
+	$title_chars = function_exists( 'mb_strlen' ) ? mb_strlen( $title ) : strlen( $title );
+	$title_fit_vw = lmhg_site_core_title_fit_vw( (int) $title_chars );
 
-	return preg_replace(
+	return preg_replace_callback(
 		'/<(h[1-6])([^>]*)>/',
-		'<$1$2 data-lmhg-edit-field="' . esc_attr( $marker ) . '">',
+		static function ( array $matches ) use ( $marker, $title_chars, $title_fit_vw ): string {
+			$attributes = $matches[2];
+			$class_count = 0;
+			$attributes = preg_replace_callback(
+				'/\sclass=(["\'])(.*?)\1/i',
+				static function ( array $class_matches ): string {
+					return ' class=' . $class_matches[1] . esc_attr( trim( $class_matches[2] . ' wp2026-title-fit' ) ) . $class_matches[1];
+				},
+				$attributes,
+				1,
+				$class_count
+			) ?? $attributes;
+			if ( 0 === $class_count ) {
+				$attributes .= ' class="wp2026-title-fit"';
+			}
+
+			$style_value = '--wp2026-title-fit-vw: ' . $title_fit_vw;
+			$style_count = 0;
+			$attributes = preg_replace_callback(
+				'/\sstyle=(["\'])(.*?)\1/i',
+				static function ( array $style_matches ) use ( $style_value ): string {
+					$existing_style = trim( $style_matches[2] );
+					if ( '' !== $existing_style && ';' !== substr( $existing_style, -1 ) ) {
+						$existing_style .= ';';
+					}
+
+					return ' style=' . $style_matches[1] . esc_attr( trim( $existing_style . ' ' . $style_value . ';' ) ) . $style_matches[1];
+				},
+				$attributes,
+				1,
+				$style_count
+			) ?? $attributes;
+			if ( 0 === $style_count ) {
+				$attributes .= ' style="' . esc_attr( $style_value . ';' ) . '"';
+			}
+
+			return sprintf(
+				'<%1$s%2$s data-lmhg-edit-field="%3$s" data-lmhg-title-chars="%4$d">',
+				$matches[1],
+				$attributes,
+				esc_attr( $marker ),
+				(int) $title_chars
+			);
+		},
 		$block_content,
 		1
 	) ?? $block_content;
+}
+
+/**
+ * Returns the viewport font-size value used to keep page titles on one line.
+ *
+ * @param int $title_chars Title character count.
+ * @return string CSS vw value.
+ */
+function lmhg_site_core_title_fit_vw( int $title_chars ): string {
+	$effective_chars = max( 8, $title_chars );
+	$divisor = max( 8.0, round( $effective_chars * 0.66, 1 ) );
+	$vw = 100 / $divisor;
+
+	return rtrim( rtrim( number_format( $vw, 2, '.', '' ), '0' ), '.' ) . 'vw';
+}
+
+/**
+ * Detects whether editable post content already owns the document H1.
+ *
+ * @param int $post_id Post ID.
+ * @return bool
+ */
+function lmhg_site_core_post_content_has_h1( int $post_id ): bool {
+	$content = (string) get_post_field( 'post_content', $post_id );
+	if ( '' === trim( $content ) ) {
+		return false;
+	}
+
+	if ( preg_match( '/<h1(?:\s|>)/i', $content ) ) {
+		return true;
+	}
+
+	return function_exists( 'parse_blocks' ) && lmhg_site_core_blocks_contain_h1( parse_blocks( $content ) );
+}
+
+/**
+ * Checks parsed Gutenberg blocks for an H1 heading.
+ *
+ * @param array<int,array<string,mixed>> $blocks Parsed blocks.
+ * @return bool
+ */
+function lmhg_site_core_blocks_contain_h1( array $blocks ): bool {
+	foreach ( $blocks as $block ) {
+		if ( 'core/heading' === ( $block['blockName'] ?? '' ) && 1 === (int) ( $block['attrs']['level'] ?? 2 ) ) {
+			return true;
+		}
+
+		if ( isset( $block['innerHTML'] ) && is_string( $block['innerHTML'] ) && preg_match( '/<h1(?:\s|>)/i', $block['innerHTML'] ) ) {
+			return true;
+		}
+
+		if ( ! empty( $block['innerBlocks'] ) && is_array( $block['innerBlocks'] ) && lmhg_site_core_blocks_contain_h1( $block['innerBlocks'] ) ) {
+			return true;
+		}
+	}
+
+	return false;
 }
 
 /**
