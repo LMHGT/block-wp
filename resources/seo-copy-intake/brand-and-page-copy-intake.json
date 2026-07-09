@@ -86,6 +86,14 @@
       "For the general Family Therapy page, lead with communication, conflict, parenting stress, healthy routines, understanding patterns, understanding motivations for behavior, and increasing communication.",
       "More specific topics such as grief, divorce or separation, blended family stress, attachment concerns, reunification stress, and court-related family issues should usually be handled more deeply on their specific related pages.",
       "Family therapy copy should avoid promising custody evaluations, court opinions, mediation, crisis response, or guaranteed reconciliation."
+    ],
+    "couples_service_content_rules": [
+      "Couples Counseling should speak primarily to couples, including same-sex and opposite-sex couples, married or unmarried.",
+      "Marriage counseling can be used as a secondary SEO phrase, but the page should clarify that LMHG provides both couples counseling and marital counseling.",
+      "Couples Counseling can cover communication, recurring arguments, emotional distance, trust repair, parenting stress, sex and intimacy, financial stress, major decisions, separation, and ambivalence.",
+      "The Couples Counseling page should frame the service around making hard conversations more structured.",
+      "Couples copy can mention that one or both partners may also have individual therapy, with clinician roles and boundaries kept clear.",
+      "Couples copy should avoid promising guaranteed relationship repair, taking sides, custody or legal opinions, or crisis response."
     ]
   },
   "external_seo_guidance": [
@@ -210,6 +218,19 @@
       "location_code": 2840,
       "language_code": "en",
       "summary": "The Labs ideas response was broad and noisy, so live SERP review and LMHG's service boundaries are more useful than raw keyword ideas for this page."
+    },
+    {
+      "date": "2026-07-09",
+      "tool": "dfs_google_serp_live",
+      "page_slug": "couples-counseling",
+      "queries": [
+        "couples counseling louisville ky",
+        "couples therapy louisville ky",
+        "marriage counseling louisville ky"
+      ],
+      "location_code": 2840,
+      "language_code": "en",
+      "summary": "SERP checks were local-pack-heavy and showed strong overlap between couples counseling, couples therapy, and marriage counseling. Related search language included best, affordable, Black marriage counseling, Christian marriage counseling, near me, and local therapist terms. Use marriage counseling secondarily without narrowing the page to married couples only."
     }
   ],
   "brand_level_answers": [
@@ -495,6 +516,82 @@
           "Do not imply mediation.",
           "Do not imply crisis response.",
           "Do not imply guaranteed reconciliation."
+        ]
+      }
+    },
+    {
+      "slug": "couples-counseling",
+      "status": "answers_recorded",
+      "current_page_notes": [
+        "Live page title: Couples Counseling in Louisville, KY.",
+        "Current page has a short lead, one expectation section, related page cards, FAQ output, and CTA.",
+        "Current lead: Couples counseling for communication, recurring conflict, emotional distance, trust repair, and relationship decisions."
+      ],
+      "seo_notes": [
+        "Use couples counseling and couples therapy naturally; live SERPs use both.",
+        "Marriage counseling can be used secondarily, but the page should stay broad enough for married and unmarried couples.",
+        "A FAQ can clarify that LMHG provides both couples counseling and marital counseling.",
+        "Differentiation between Relationship Counseling and Couples Counseling may depend partly on SEO term intent."
+      ],
+      "answers": [
+        {
+          "date": "2026-07-09",
+          "question": "Should this page speak to all couples broadly, or mainly married or long-term couples?",
+          "answer": "Speak primarily to couples, including same-sex and opposite-sex couples, married or unmarried."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Should marriage counseling be used as a secondary SEO phrase?",
+          "answer": "Yes. Marriage counseling can be used secondarily. A FAQ can clarify that LMHG provides both couples counseling and marital counseling."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Which concerns should lead?",
+          "answer": "Communication, recurring arguments, emotional distance, trust repair, parenting stress, sex and intimacy, financial stress, major decisions, separation, and ambivalence are all valid concerns for this page."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "How should this page differ from Couples Conflict Resolution and Relationship Counseling?",
+          "answer": "Conflict Resolution and Relationship Counseling will go into more specifics. Conflict resolution can occur within larger families as a whole, including between parents and grandparents or within blended families. The difference between Relationship Counseling and Couples Counseling will be harder and may be led by SEO term differences."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "What should the tone focus on?",
+          "answer": "Focus on making hard conversations more structured."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Should the page mention individual therapy alongside couples work?",
+          "answer": "Yes. The page can mention that one or both partners may also have individual therapy, with role boundaries kept clear."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "What should this page avoid promising?",
+          "answer": "Do not promise guaranteed relationship repair, taking sides, custody or legal opinions, or crisis response."
+        }
+      ],
+      "draft_direction": {
+        "primary_message": "Couples counseling gives married and unmarried couples a structured place to talk through hard issues with a therapist.",
+        "secondary_messages": [
+          "The page should include same-sex and opposite-sex couples without making that feel like a special exception.",
+          "Couples counseling may help with communication, recurring arguments, emotional distance, trust repair, parenting stress, sex and intimacy, financial stress, major decisions, separation, and ambivalence.",
+          "Marriage counseling can appear as a secondary term, with FAQ language that LMHG provides both couples counseling and marital counseling.",
+          "Some couples also use individual therapy for one or both partners, with clear role boundaries between clinicians."
+        ],
+        "internal_link_candidates": [
+          "couples conflict resolution",
+          "relationship counseling",
+          "family therapy",
+          "individual counseling",
+          "co-parenting",
+          "costs and insurance"
+        ],
+        "avoid_claims": [
+          "Do not imply guaranteed relationship repair.",
+          "Do not imply the therapist takes sides.",
+          "Do not imply custody opinions.",
+          "Do not imply legal opinions.",
+          "Do not imply crisis response."
         ]
       }
     }
