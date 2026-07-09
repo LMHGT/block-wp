@@ -164,6 +164,16 @@
       "Main goals can include restoring contact, rebuilding trust, improving communication, setting roles, increasing emotional safety, and moving at a structured pace.",
       "The page should say the provider is impartial and may provide recommendations or testimony when expected.",
       "Family Reunification Services copy should exclude legal advice, guarantees, custody evaluations, taking sides, emergency crisis response, supervised visitation, mediation, and cases without an accurately worded court order."
+    ],
+    "co_parenting_content_rules": [
+      "Co-Parenting Services can speak to one parent searching alone or to both parents together.",
+      "Lead with an even mix of proactive co-parenting support and court-related co-parenting.",
+      "Co-parenting counseling can be used as a secondary SEO phrase while keeping Co-Parenting Services as the service label.",
+      "LMHG provides court-ordered co-parenting intervention, but it is not a parenting class.",
+      "Court-ordered co-parenting intervention involves each parent individually and the parents together.",
+      "The page can name high-conflict communication, parenting decisions, schedule stress, children feeling stuck in the middle, school or medical decisions, new partners, blended family stress, and court expectations.",
+      "The process can include meeting with one or both parents, reviewing court orders if present, setting communication rules, and child-focused parenting.",
+      "Co-Parenting Services copy should avoid promising mediation, custody evaluations, legal advice, taking sides, supervised visitation, emergency response, guaranteed court outcomes, or parenting classes."
     ]
   },
   "external_seo_guidance": [
@@ -379,6 +389,19 @@
       "location_code": 2840,
       "language_code": "en",
       "summary": "SERP checks showed mixed intent across reunification therapy, family reunification services, state child-welfare programs, local court-related providers, co-parenting, and general family counseling. One checked Kentucky query returned an asynchronous AI Overview placeholder. LMHG copy should use Family Reunification Services as the service label, can acknowledge reunification therapy as a search phrase in FAQ language, and should avoid implying ordinary therapy, mediation, custody evaluation, legal advice, or guaranteed court outcomes."
+    },
+    {
+      "date": "2026-07-09",
+      "tool": "dfs_google_serp_live",
+      "page_slug": "co-parenting",
+      "queries": [
+        "co parenting counseling louisville ky",
+        "co parenting therapy louisville ky",
+        "co parenting classes louisville ky"
+      ],
+      "location_code": 2840,
+      "language_code": "en",
+      "summary": "SERP checks showed co-parenting counseling and co-parenting therapy intent overlapping with family therapy, parent support, directory results, Reddit recommendations, and local packs. Co-parenting classes produced a different intent around parent education, court-recognized certificates, visitation or exchange centers, and class/group listings. LMHG copy should use co-parenting counseling as a secondary phrase but clearly state that court-ordered co-parenting intervention is not a parenting class."
     }
   ],
   "brand_level_answers": [
@@ -1228,6 +1251,87 @@
           "Do not imply supervised visitation.",
           "Do not imply mediation.",
           "Do not accept cases without an accurately worded court order."
+        ]
+      }
+    },
+    {
+      "slug": "co-parenting",
+      "status": "answers_recorded",
+      "current_page_notes": [
+        "Live page title: Co-Parenting Services in Louisville, KY.",
+        "Current page has a short lead, one expectation section, related page cards, FAQ output, and CTA.",
+        "Current lead: Co-parenting services for steadier communication, child-focused coordination, parenting structure, and family stability.",
+        "Current page already links this service to Court-Ordered Services and names communication pattern, parenting decisions, court expectations, and what children are experiencing."
+      ],
+      "seo_notes": [
+        "Use Co-Parenting Services as the primary service label.",
+        "Use co-parenting counseling as a secondary SEO phrase.",
+        "Avoid targeting co-parenting classes because that search intent pulls class, certificate, parent education, visitation, and exchange-center results.",
+        "Clarify that court-ordered co-parenting intervention is not a parenting class."
+      ],
+      "answers": [
+        {
+          "date": "2026-07-09",
+          "question": "Should this page speak to one parent searching alone, both parents together, or either situation?",
+          "answer": "Either."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Should we lead with proactive co-parenting support, court-related co-parenting, or an even mix?",
+          "answer": "Use an even mix."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Can we use co-parenting counseling or co-parenting therapy as secondary SEO phrases while keeping Co-Parenting Services as the service label?",
+          "answer": "Use co-parenting counseling as the secondary SEO phrase."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Should we explicitly say LMHG does not provide court-approved co-parenting classes or certificates?",
+          "answer": "LMHG provides court-ordered co-parenting intervention, but it is not a class. It includes each parent individually and the parents together."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Which issues should the page name?",
+          "answer": "High-conflict communication, parenting decisions, schedule stress, children feeling stuck in the middle, school or medical decisions, new partners, blended family stress, and court expectations are all good to name."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "What can the process include?",
+          "answer": "The process can include meeting with one or both parents, reviewing court orders if present, setting communication rules, and child-focused parenting."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "What should this page avoid promising?",
+          "answer": "Avoid promising mediation, custody evaluations, legal advice, taking sides, supervised visitation, emergency response, guaranteed court outcomes, and parenting classes. This is not a parenting class."
+        }
+      ],
+      "draft_direction": {
+        "primary_message": "Co-Parenting Services at LMHG help parents work on child-focused communication and parenting structure, whether support is proactive or connected to court expectations.",
+        "secondary_messages": [
+          "Speak to either one parent searching alone or both parents looking for help.",
+          "Use co-parenting counseling as a secondary SEO phrase while keeping Co-Parenting Services as the service label.",
+          "Explain that LMHG can provide court-ordered co-parenting intervention, but it is not a parenting class or certificate program.",
+          "Name high-conflict communication, parenting decisions, schedules, school or medical decisions, new partners, blended family stress, and children feeling stuck in the middle.",
+          "Describe the process as meeting with one or both parents, reviewing court orders if present, setting communication rules, and child-focused parenting."
+        ],
+        "internal_link_candidates": [
+          "court-ordered services",
+          "family reunification",
+          "family therapy",
+          "parenting support",
+          "costs and insurance"
+        ],
+        "avoid_claims": [
+          "Do not call this a parenting class.",
+          "Do not promise a certificate.",
+          "Do not imply mediation.",
+          "Do not imply custody evaluations.",
+          "Do not provide legal advice.",
+          "Do not take sides.",
+          "Do not imply supervised visitation.",
+          "Do not imply emergency response.",
+          "Do not guarantee court outcomes."
         ]
       }
     }
