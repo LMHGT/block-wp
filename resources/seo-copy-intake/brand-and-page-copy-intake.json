@@ -143,6 +143,16 @@
       "LMHG can name EMDR, talk therapy, grounding skills, CBT, TF-CBT, family involvement, and child therapy as possible approaches when they fit the client.",
       "Use plain trauma-informed language such as: We do not push clients to tell everything at once. Therapy moves at a pace that makes sense for the person.",
       "Trauma Therapy copy should avoid promising emergency crisis care, inpatient or residential care, medication management, forensic trauma evaluations, custody opinions, or guaranteed cure."
+    ],
+    "emdr_therapy_content_rules": [
+      "EMDR Therapy should speak to someone who knows EMDR is an effective trauma treatment but may not know other details.",
+      "Keep age references broad because EMDR can be effective for children, teens, and adults when appropriate.",
+      "PTSD can be used as a secondary SEO term on the EMDR Therapy page.",
+      "Use plain language such as: EMDR helps people work through memories or experiences that still feel stuck or overwhelming, often without having to talk through every detail of the memory.",
+      "Explain that EMDR is not always the first step. Some clients may need coping skills, trust, or stabilization work first.",
+      "Mention LMHG's team approach: a client may have a primary therapist and also work with an EMDR-trained therapist if needed.",
+      "The page can say EMDR is not appropriate for everyone and may temporarily worsen symptoms.",
+      "EMDR Therapy copy should avoid promising a guaranteed cure, promising that memories disappear, crisis care, hypnosis language, forensic or custody opinions, or medication management."
     ]
   },
   "external_seo_guidance": [
@@ -332,6 +342,19 @@
       "location_code": 2840,
       "language_code": "en",
       "summary": "SERP checks showed local-pack-heavy results and organic competitors using trauma therapy, PTSD and trauma therapists, trauma-informed therapist, and EMDR language. LMHG copy should keep Trauma Therapy as the broad parent page, mention EMDR as one possible related option, and avoid leading with PTSD because the user does not want PTSD called out specifically on this page."
+    },
+    {
+      "date": "2026-07-09",
+      "tool": "dfs_google_serp_live",
+      "page_slug": "emdr-therapy",
+      "queries": [
+        "emdr therapy louisville ky",
+        "emdr therapist louisville ky",
+        "emdr counseling louisville ky"
+      ],
+      "location_code": 2840,
+      "language_code": "en",
+      "summary": "SERP checks showed direct EMDR intent, with local pack and organic results using EMDR therapy, EMDR therapist, EMDR counseling, EMDR for trauma, and directory-style therapist language. LMHG copy should lead with EMDR Therapy, use EMDR therapist naturally, include PTSD as a secondary phrase, and distinguish EMDR from broader Trauma Therapy without overpromising outcomes."
     }
   ],
   "brand_level_answers": [
@@ -1020,6 +1043,86 @@
           "Do not imply forensic trauma evaluations.",
           "Do not imply custody opinions.",
           "Do not guarantee a cure."
+        ]
+      }
+    },
+    {
+      "slug": "emdr-therapy",
+      "status": "answers_recorded",
+      "current_page_notes": [
+        "Live page title: EMDR Therapy in Louisville, KY.",
+        "Current page has a short lead, one expectation section, related page cards, FAQ output, and CTA.",
+        "Current lead: EMDR therapy in Louisville for trauma, PTSD symptoms, anxiety, distressing memories, triggers, and experiences that still affect daily life.",
+        "Current page already says the office can help determine whether EMDR, another therapy approach, or a different LMHG service is the better starting point."
+      ],
+      "seo_notes": [
+        "Use EMDR Therapy as the primary phrase.",
+        "Use EMDR therapist naturally where appropriate because search results show direct provider-intent language.",
+        "PTSD can be used as a secondary SEO term on this page.",
+        "Avoid making EMDR sound like hypnosis, a guaranteed cure, or a stand-alone service that is always appropriate."
+      ],
+      "answers": [
+        {
+          "date": "2026-07-09",
+          "question": "Should this page speak to people who already know they want EMDR, people who were referred for EMDR, or people who are curious but unsure?",
+          "answer": "The page should speak to somebody who knows that EMDR is an effective trauma treatment but may not know any other details."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Should EMDR Therapy be framed mostly for adults, or broadly for adults, teens, and children when appropriate?",
+          "answer": "EMDR is effective for any age range, including children, teens, and adults, so keep the references broad."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Can this page use PTSD as a secondary SEO term?",
+          "answer": "Yes. PTSD can be used as a secondary SEO term."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Is this plain language accurate: EMDR helps people work through memories or experiences that still feel stuck or overwhelming?",
+          "answer": "Yes, and add that EMDR often helps without having to talk through every detail of the memory."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Should we explain that EMDR is not always the first step, and some clients may need coping skills, trust, or stabilization work first?",
+          "answer": "Yes."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Should we mention LMHG's team approach, where a client may have a primary therapist and also work with an EMDR-trained therapist if needed?",
+          "answer": "Yes."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "What should this page avoid promising?",
+          "answer": "Use general phrasing that EMDR is not appropriate for everyone and may temporarily worsen symptoms. Avoid promising a guaranteed cure, promising that memories disappear, crisis care, hypnosis language, forensic or custody opinions, and medication management."
+        }
+      ],
+      "draft_direction": {
+        "primary_message": "EMDR Therapy at LMHG is a trauma-focused option for children, teens, and adults who know EMDR may help but need a plain explanation of fit and next steps.",
+        "secondary_messages": [
+          "Explain EMDR as a way to work through memories or experiences that still feel stuck or overwhelming, often without talking through every detail of the memory.",
+          "Use PTSD as a secondary SEO term, not the only reason someone might ask about EMDR.",
+          "Say EMDR is not always the first step; coping skills, trust, and stabilization may need to come first.",
+          "Name LMHG's team approach, including the possibility of a primary therapist and an EMDR-trained therapist working together when appropriate.",
+          "Include a plain caution that EMDR is not appropriate for everyone and may temporarily worsen symptoms."
+        ],
+        "internal_link_candidates": [
+          "trauma therapy",
+          "individual counseling",
+          "child therapy",
+          "teen therapy",
+          "family therapy",
+          "costs and insurance"
+        ],
+        "avoid_claims": [
+          "Do not guarantee a cure.",
+          "Do not promise that memories disappear.",
+          "Do not imply crisis care.",
+          "Do not use hypnosis language.",
+          "Do not imply forensic opinions.",
+          "Do not imply custody opinions.",
+          "Do not imply medication management."
         ]
       }
     }
