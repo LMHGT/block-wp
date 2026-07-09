@@ -94,6 +94,19 @@
       "The Couples Counseling page should frame the service around making hard conversations more structured.",
       "Couples copy can mention that one or both partners may also have individual therapy, with clinician roles and boundaries kept clear.",
       "Couples copy should avoid promising guaranteed relationship repair, taking sides, custody or legal opinions, or crisis response."
+    ],
+    "court_ordered_service_content_rules": [
+      "Court-Ordered Services should focus on Family Court, not criminal, DUI, or substance-use court requirements.",
+      "The page can name Co-Parenting, Family Reunification, and mandated therapy related to CPS involvement.",
+      "The service being court ordered must be one LMHG provides, or the court order should state that treatment type is at LMHG's discretion.",
+      "Accurate court order wording is critical before starting a service because service acceptance can depend on what the order requires.",
+      "Court-ordered therapy and court-ordered services can both be used, but Family Reunification should not be called therapy or counseling.",
+      "Family Reunification is its own service and can include expert witness testimony because the reunification provider is an impartial party.",
+      "Co-Parenting does not have to be court ordered and can be presented as a proactive measure.",
+      "The page can mention attendance confirmation, treatment participation documentation, general progress letters, treatment recommendations, testimony, and specific recommendations when appropriate to the service.",
+      "Court-Ordered Services copy should speak primarily to the person who has been ordered to complete the service.",
+      "The page should be explicit that LMHG does not provide evaluations related to DUI convictions.",
+      "Court-Ordered Services copy should avoid legal advice, guarantees that a court will accept a service, and crisis-response promises."
     ]
   },
   "external_seo_guidance": [
@@ -231,6 +244,19 @@
       "location_code": 2840,
       "language_code": "en",
       "summary": "SERP checks were local-pack-heavy and showed strong overlap between couples counseling, couples therapy, and marriage counseling. Related search language included best, affordable, Black marriage counseling, Christian marriage counseling, near me, and local therapist terms. Use marriage counseling secondarily without narrowing the page to married couples only."
+    },
+    {
+      "date": "2026-07-09",
+      "tool": "dfs_google_serp_live",
+      "page_slug": "court-ordered",
+      "queries": [
+        "court ordered therapy louisville ky",
+        "court ordered counseling louisville ky",
+        "court ordered mental health evaluation louisville ky"
+      ],
+      "location_code": 2840,
+      "language_code": "en",
+      "summary": "SERP checks showed AI Overview placeholders and mixed intent across court-ordered therapy, court-ordered counseling, DUI or substance programs, evaluations, family court, legal-resource pages, court-mandated therapy, and court-ordered services. LMHG copy should focus the page on Family Court fit and explicitly avoid DUI-evaluation intent."
     }
   ],
   "brand_level_answers": [
@@ -591,6 +617,94 @@
           "Do not imply the therapist takes sides.",
           "Do not imply custody opinions.",
           "Do not imply legal opinions.",
+          "Do not imply crisis response."
+        ]
+      }
+    },
+    {
+      "slug": "court-ordered",
+      "status": "answers_recorded",
+      "current_page_notes": [
+        "Live page title: Court-Ordered Services in Louisville, KY.",
+        "Current page has a short lead, one expectation section, related page cards, FAQ output, and CTA.",
+        "Current lead: Court-ordered services for family reunification, co-parenting support, court expectations, documentation questions, and stability."
+      ],
+      "seo_notes": [
+        "Use court-ordered services and court-ordered therapy carefully; SERPs mix Family Court, DUI, substance-use, evaluation, and legal-resource intent.",
+        "Court-mandated therapy can be used when describing mandated therapy related to CPS involvement.",
+        "Family Reunification should not be called therapy or counseling, even when it is court ordered.",
+        "Be explicit that LMHG does not provide evaluations related to DUI convictions."
+      ],
+      "answers": [
+        {
+          "date": "2026-07-09",
+          "question": "Should this page mainly target family-court-related services, not criminal, DUI, or substance-use court requirements?",
+          "answer": "Yes. This page should target Family Court."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Which services should be named here?",
+          "answer": "Name Co-Parenting, Family Reunification, and mandated therapy as a result of CPS involvement."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Do you provide court-ordered therapy when the court order is broad?",
+          "answer": "The service that is being court ordered must be one LMHG provides, or the court order should state that the type of treatment is at LMHG's discretion."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "What documentation can LMHG provide?",
+          "answer": "LMHG can provide attendance confirmation, treatment participation documentation, general progress letters, treatment recommendations, testimony, and specific recommendations. Providing testimony and specific recommendations is common and expected in Family Reunification cases."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "What should this page clearly say LMHG does not provide?",
+          "answer": "The page should clearly avoid legal advice and guarantees that a court will accept a service. It should be explicit that LMHG does not provide evaluations related to DUI convictions. Service acceptance is why it is critical to get an accurately worded court order before starting a service."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "How should Family Reunification be described?",
+          "answer": "Family Reunification should never be referred to as therapy or counseling. It is its own different kind of service. Expert witness testimony can be part of Family Reunification because the reunification provider is an impartial party."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Does Co-Parenting have to be court ordered?",
+          "answer": "No. Co-Parenting does not have to be court ordered and can be presented as a proactive measure."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Who should the tone speak to?",
+          "answer": "Speak to the person who has been ordered to complete the service."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Should court-mandated therapy be used alongside court-ordered services?",
+          "answer": "Use court-ordered therapy and court-ordered services, with court-ordered services related to the reunification service. Be explicit that LMHG does not provide evaluations related to DUI convictions."
+        }
+      ],
+      "draft_direction": {
+        "primary_message": "Court-ordered services at LMHG are for Family Court situations where the requested service fits what LMHG provides or the order leaves treatment type to LMHG's discretion.",
+        "secondary_messages": [
+          "The page should speak to the person who has been ordered to complete a service.",
+          "Relevant services include Co-Parenting, Family Reunification, and mandated therapy related to CPS involvement.",
+          "Court order wording matters. Families should share the order, deadline, referral, and documentation expectations early so LMHG can review fit.",
+          "Co-Parenting can also be proactive and does not have to be court ordered.",
+          "Family Reunification is not therapy or counseling and may include testimony or specific recommendations because the provider is an impartial party."
+        ],
+        "internal_link_candidates": [
+          "co-parenting",
+          "family reunification",
+          "parenting support",
+          "family therapy",
+          "individual counseling",
+          "costs and insurance"
+        ],
+        "avoid_claims": [
+          "Do not imply legal advice.",
+          "Do not guarantee a court will accept a service.",
+          "Do not call Family Reunification therapy.",
+          "Do not call Family Reunification counseling.",
+          "Do not imply DUI evaluations.",
           "Do not imply crisis response."
         ]
       }
