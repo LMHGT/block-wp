@@ -9,6 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+add_filter( 'wp_insert_post_data', 'lmhg_site_core_normalize_editable_post_save_data', 20, 2 );
+
 /**
  * Returns true when a page owns imported editable block content.
  *
@@ -132,6 +134,62 @@ function lmhg_site_core_normalize_editable_block_content( string $content ): str
 	$content = lmhg_site_core_normalize_group_block_wrappers( $content );
 
 	return lmhg_site_core_normalize_buttons_block_wrappers( $content );
+}
+
+/**
+ * Keeps editor saves and autosaves aligned with core block serialization.
+ *
+ * @param array<string,mixed> $data Sanitized post data before database write.
+ * @param array<string,mixed> $postarr Raw post data passed to wp_insert_post().
+ * @return array<string,mixed>
+ */
+function lmhg_site_core_normalize_editable_post_save_data( array $data, array $postarr ): array {
+	if ( empty( $data['post_content'] ) || ! is_string( $data['post_content'] ) ) {
+		return $data;
+	}
+
+	if ( ! lmhg_site_core_should_normalize_editable_post_save( $data, $postarr ) ) {
+		return $data;
+	}
+
+	$data['post_content'] = lmhg_site_core_normalize_editable_block_content( $data['post_content'] );
+
+	return $data;
+}
+
+/**
+ * Determines whether a save payload belongs to the LMHG editable block surface.
+ *
+ * @param array<string,mixed> $data Sanitized post data before database write.
+ * @param array<string,mixed> $postarr Raw post data passed to wp_insert_post().
+ * @return bool
+ */
+function lmhg_site_core_should_normalize_editable_post_save( array $data, array $postarr ): bool {
+	$content = (string) ( $data['post_content'] ?? '' );
+	if ( '' === trim( $content ) || ! str_contains( $content, '<!-- wp:' ) ) {
+		return false;
+	}
+
+	if (
+		str_contains( $content, 'wp2026-' )
+		|| str_contains( $content, 'lmhg-' )
+		|| str_contains( $content, 'lmhg/' )
+	) {
+		return true;
+	}
+
+	$post_type = (string) ( $data['post_type'] ?? $postarr['post_type'] ?? '' );
+	if ( ! in_array( $post_type, array( 'page', 'revision' ), true ) ) {
+		return false;
+	}
+
+	$post_id = (int) ( $postarr['ID'] ?? 0 );
+	if ( $post_id > 0 && lmhg_site_core_has_editable_block_content( $post_id ) ) {
+		return true;
+	}
+
+	$parent_id = (int) ( $data['post_parent'] ?? $postarr['post_parent'] ?? 0 );
+	return $parent_id > 0 && lmhg_site_core_has_editable_block_content( $parent_id );
 }
 
 /**

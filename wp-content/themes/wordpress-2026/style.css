@@ -544,6 +544,16 @@ footer.wp-block-template-part > hr {
   max-width: 100%;
 }
 
+.wp2026-home-services > .wp2026-section-title {
+  font-size: min(2.8rem, 2vw) !important;
+  line-height: 1.06;
+  max-width: calc(100vw - 36px);
+  overflow-wrap: normal;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  width: fit-content;
+}
+
 .wp2026-service-grid {
   display: grid;
   gap: 28px 22px;
@@ -1359,6 +1369,14 @@ footer.wp-block-template-part > hr {
     overflow-wrap: anywhere !important;
     white-space: normal !important;
     width: calc(100vw - 36px) !important;
+  }
+
+  .wp2026-home-services > .wp2026-section-title {
+    line-height: 1.1;
+    max-width: calc(100vw - 36px);
+    text-wrap: balance;
+    white-space: normal;
+    width: min(100%, calc(100vw - 36px));
   }
 
   .wp2026-section-title,
