@@ -57,8 +57,34 @@
       "LMHG serves Medicaid clients and also accepts multiple insurance companies.",
       "LMHG can provide services on a cash-pay basis for commercial insurance or private-pay clients who may not qualify for intensive services but still need them.",
       "All three practice owners are hands-on and accessible to clients when concerns need to be addressed."
+    ],
+    "cross_page_content_rules": [
+      "Service pages should use general service language and can mention related services as natural in-copy hyperlinks.",
+      "Avoid repeating the same internal link in a thin section unless it is useful for the reader and there is enough surrounding copy to justify it.",
+      "Use descriptive anchor text for internal links rather than generic text.",
+      "Unordered lists can be used on service pages when they help readers scan examples, especially with language such as includes, but is not limited to.",
+      "Do not overuse lists as filler; each list should answer a real visitor question and support the page's main purpose.",
+      "It is acceptable across multiple pages to say clients can often be seen within 7 to 14 days.",
+      "When naming the 7 to 14 day timing, include a caveat that waits may be longer when the client has specific provider requirements, such as only wanting a male therapist, because those providers may be in the minority.",
+      "Mention Medicaid, commercial insurance, and private pay briefly when relevant, then route detailed questions to the costs and insurance page.",
+      "A costs and insurance page can be a recurring related page across service pages if the link is useful, naturally placed, and not mechanically repeated in a thin block.",
+      "For future page interviews, do not re-ask questions already answered by these global rules unless the specific page creates a meaningful exception."
     ]
   },
+  "external_seo_guidance": [
+    {
+      "date": "2026-07-09",
+      "source": "Google Search Central",
+      "topic": "Internal links",
+      "guidance": "No automatic penalty was found for linking to the same internal URL more than once. The safer rule is to keep links crawlable, useful to readers, and supported by descriptive anchor text and enough surrounding copy."
+    },
+    {
+      "date": "2026-07-09",
+      "source": "Google Search Central",
+      "topic": "Lists",
+      "guidance": "Use unordered lists when they make content easier to understand and scan. Do not use lists as filler; they should support helpful, people-first content and use words people would use to search."
+    }
+  ],
   "seo_decision_lab_checks": [
     {
       "date": "2026-07-09",
@@ -114,6 +140,34 @@
       "location_name": "Louisville,Kentucky,United States",
       "language_code": "en",
       "summary": "SERP checks showed local packs and organic competitors using both counseling and therapy. Related searches included Medicaid, Anthem, anxiety therapist, best therapist, female therapists, and behavioral health terms. No ai_overview item type was returned in these checked SERPs."
+    },
+    {
+      "date": "2026-07-09",
+      "tool": "dfs_labs_keyword_ideas",
+      "page_slug": "child-counseling",
+      "seed_keywords": [
+        "child therapy louisville ky",
+        "child counseling louisville ky",
+        "children's therapist louisville ky",
+        "play therapy louisville ky",
+        "medicaid child therapist louisville ky"
+      ],
+      "location_code": 2840,
+      "language_code": "en",
+      "summary": "The Labs ideas response was broad and noisy, with some relevant child psychologist and therapist terms but many general mental health terms. SERP review is more useful for this page."
+    },
+    {
+      "date": "2026-07-09",
+      "tool": "dfs_request",
+      "page_slug": "child-counseling",
+      "endpoint": "/v3/serp/google/organic/live/advanced",
+      "queries": [
+        "child therapy louisville ky",
+        "child counseling louisville ky"
+      ],
+      "location_name": "Louisville,Kentucky,United States",
+      "language_code": "en",
+      "summary": "SERP checks showed local packs and organic competitors using child therapy, child counseling, child therapist, play therapy, child behavioral therapist, and child counseling near me that accepts Medicaid. Results include institution-heavy and hospital-adjacent competitors, so LMHG copy should distinguish the practice from hospital-style behavioral health language."
     }
   ],
   "brand_level_answers": [
@@ -151,7 +205,7 @@
   "page_answers": [
     {
       "slug": "individual-counseling",
-      "status": "questions_pending",
+      "status": "answers_recorded",
       "current_page_notes": [
         "Live page title: Individual Counseling in Louisville, KY.",
         "Current page has a short lead, one expectation section, related page cards, FAQ output, and CTA.",
@@ -162,6 +216,100 @@
         "Medicaid and insurance wording is likely useful, but should be accurate and not overpromise eligibility.",
         "Avoid making the page sound like a hospital system even when using insurance and therapist terms.",
         "No AI Overview result was observed in the checked SERPs for this first pass."
+      ],
+      "answers": [
+        {
+          "date": "2026-07-09",
+          "question": "How should related pages be handled for service pages?",
+          "answer": "Use general language on the service page and mention related services as hyperlinks in the page copy when natural. Avoid excessive repeated links to the same page when there is relatively little copy."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Should this page speak to both adults and teens?",
+          "answer": "Use general service language for individual therapy and link to related pages where useful. The answer also sets a broader service-page pattern: deeper related services can be linked in copy rather than over-explained on the parent service page."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Which concerns should be named first?",
+          "answer": "Anxiety, depression, trauma, grief, stress, relationships, life changes, anger, and work or school stress can all be named as examples of things people can talk about in individual therapy."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "What main point should the page make about individual therapy?",
+          "answer": "Individual therapy may be the most diverse, customizable, and confidential LMHG service."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Can unordered lists be used?",
+          "answer": "Yes. Use unordered lists in some service page areas when they help give examples, with language such as includes, but is not limited to."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "How should the team approach show up?",
+          "answer": "Explain that everyone's treatment approach looks different. A client may have one primary therapist they meet with regularly. If a more specialized approach is needed and the primary therapist does not provide it, another therapist may be brought in. Examples include adding someone who specializes in EMDR, or keeping boundaries clean by having one clinician for couples therapy and a separate individual therapist."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Can the page say clients can be seen quickly?",
+          "answer": "Yes. Across multiple pages it is acceptable to say clients can often be seen within 7 to 14 days. FAQs should explain that wait time may be longer when a potential client has specific provider requirements, such as only wanting a male therapist, because those providers may be in the minority."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Should payment options be mentioned?",
+          "answer": "Yes, briefly. Individual counseling can apply to Medicaid, commercial insurance, and private pay. Link or route detailed cost and insurance questions to the costs and insurance page."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "What is not a good fit for this page?",
+          "answer": "Crisis care, medication management, testing, custody evaluations, court reports, and similar services are not a good fit for this individual counseling page."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Should therapy methods be named?",
+          "answer": "Keep methods plain. Explain that part of individual therapy is deciding which treatment techniques are appropriate based on why the client is seeking therapy in the first place."
+        }
+      ],
+      "draft_direction": {
+        "primary_message": "Individual counseling is a private, flexible, and highly customizable service where clients can talk through what is happening, set goals, and decide next steps with a primary therapist.",
+        "secondary_messages": [
+          "Individual therapy can help with many concerns, including but not limited to anxiety, depression, trauma, grief, stress, relationship strain, life changes, anger, and work or school stress.",
+          "LMHG can involve more than one therapist when it helps the client, while keeping roles clear.",
+          "Clients can often be seen within 7 to 14 days, with longer waits possible for specific provider requests.",
+          "Payment options can include Medicaid, commercial insurance, and private pay depending on fit, plan, and eligibility."
+        ],
+        "internal_link_candidates": [
+          "adult counseling",
+          "teen therapy",
+          "anxiety and depression therapy",
+          "trauma therapy",
+          "EMDR therapy",
+          "group therapy",
+          "couples counseling",
+          "costs and insurance"
+        ],
+        "avoid_claims": [
+          "Do not imply crisis response.",
+          "Do not imply medication management.",
+          "Do not imply psychological testing.",
+          "Do not imply custody evaluations.",
+          "Do not imply court reports from this page."
+        ]
+      }
+    },
+    {
+      "slug": "child-counseling",
+      "status": "questions_pending",
+      "current_page_notes": [
+        "Live page title: Child Therapy in Louisville, KY.",
+        "Visible H1: Child Therapy.",
+        "Current page has a short lead, one expectation section, related page cards, FAQ output, and CTA.",
+        "Current lead: Child counseling for emotional regulation, behavior concerns, trauma, school stress, and caregiver support."
+      ],
+      "seo_notes": [
+        "Use child therapy and child counseling intentionally; local SERPs use both.",
+        "Related SERP language includes child therapist, child behavioral therapist, play therapy, family therapy, child psychiatrist, and child counseling near me that accepts Medicaid.",
+        "Avoid sounding like a hospital or institutional behavioral health system even when acknowledging behavioral concerns.",
+        "The page should likely speak to parents and caregivers first, while still making clear the child is the client."
       ],
       "answers": []
     }
