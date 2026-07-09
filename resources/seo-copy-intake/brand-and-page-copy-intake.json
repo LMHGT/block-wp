@@ -132,6 +132,17 @@
       "Do not target or use the term support group as an SEO phrase for LMHG Group Therapy.",
       "It is acceptable to say that one benefit of group therapy is clients supporting each other.",
       "Group Therapy copy should avoid promising crisis support, anonymous or drop-in peer support, current group openings, or that group therapy replaces individual therapy."
+    ],
+    "trauma_therapy_content_rules": [
+      "Trauma Therapy should speak broadly to adults, teens, and families.",
+      "The page should not call out PTSD specifically, even though related search results often use PTSD language.",
+      "The page can address symptoms and experiences such as distressing memories, avoiding people or places, feeling on edge, childhood trauma, medical trauma, and trauma from past relationships.",
+      "Avoid making relationship trauma a main angle; if included, use plain phrasing such as trauma from past relationships.",
+      "Trauma Therapy is the parent or general trauma page, and EMDR should be presented as one possible trauma-focused option when it fits.",
+      "Trauma therapy may start with coping skills, safety, trust, or stabilization before deeper trauma processing.",
+      "LMHG can name EMDR, talk therapy, grounding skills, CBT, TF-CBT, family involvement, and child therapy as possible approaches when they fit the client.",
+      "Use plain trauma-informed language such as: We do not push clients to tell everything at once. Therapy moves at a pace that makes sense for the person.",
+      "Trauma Therapy copy should avoid promising emergency crisis care, inpatient or residential care, medication management, forensic trauma evaluations, custody opinions, or guaranteed cure."
     ]
   },
   "external_seo_guidance": [
@@ -308,6 +319,19 @@
       "location_code": 2840,
       "language_code": "en",
       "summary": "SERP checks showed LMHG visible in local pack and organic results for group therapy terms. Support-group searches bring in NAMI, Psychology Today, free peer-support resources, and condition-specific groups, so LMHG copy should focus on clinician-led group therapy and avoid targeting support group as the main phrase."
+    },
+    {
+      "date": "2026-07-09",
+      "tool": "dfs_google_serp_live",
+      "page_slug": "trauma-therapy",
+      "queries": [
+        "trauma therapy louisville ky",
+        "ptsd therapy louisville ky",
+        "trauma informed therapist louisville ky"
+      ],
+      "location_code": 2840,
+      "language_code": "en",
+      "summary": "SERP checks showed local-pack-heavy results and organic competitors using trauma therapy, PTSD and trauma therapists, trauma-informed therapist, and EMDR language. LMHG copy should keep Trauma Therapy as the broad parent page, mention EMDR as one possible related option, and avoid leading with PTSD because the user does not want PTSD called out specifically on this page."
     }
   ],
   "brand_level_answers": [
@@ -915,6 +939,87 @@
           "Do not imply drop-in peer support.",
           "Do not guarantee current group openings.",
           "Do not imply group therapy replaces individual therapy."
+        ]
+      }
+    },
+    {
+      "slug": "trauma-therapy",
+      "status": "answers_recorded",
+      "current_page_notes": [
+        "Live page title: Trauma Therapy in Louisville, KY.",
+        "Current page has a short lead, one expectation section, related page cards, FAQ output, and CTA.",
+        "Current lead: Trauma therapy for adults, teens, and families working through distressing memories, triggers, grief, anxiety, and PTSD symptoms.",
+        "Current page already positions EMDR as one trauma-focused option, not the only path."
+      ],
+      "seo_notes": [
+        "Use trauma therapy and trauma-informed therapist language naturally when it fits the copy.",
+        "SERPs use PTSD heavily, but the user does not want PTSD called out specifically on this page.",
+        "EMDR appears in search results and should be linked or mentioned as a related option, while keeping this page as the broader parent page.",
+        "Avoid making the page sound like a forensic, crisis, inpatient, or medication service."
+      ],
+      "answers": [
+        {
+          "date": "2026-07-09",
+          "question": "Should Trauma Therapy speak broadly to adults, teens, and families, or should one group lead?",
+          "answer": "Speak broadly."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Which concerns should we name?",
+          "answer": "Do not call PTSD out specifically. The page can address symptoms and experiences such as distressing memories, avoiding people or places, feeling on edge, childhood trauma, and medical trauma. Avoid the relationship angle except perhaps saying trauma from past relationships."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Should Trauma Therapy be the parent or general trauma page, with EMDR as one possible trauma-focused option?",
+          "answer": "Yes."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Can we say trauma therapy may start with coping skills, safety, trust, or stabilization before deeper trauma processing?",
+          "answer": "Yes."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Which approaches can LMHG accurately name here?",
+          "answer": "LMHG offers EMDR, talk therapy, grounding skills, CBT, TF-CBT, family involvement, and child therapy."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Is this plain trauma-informed language accurate: We do not push clients to tell everything at once. Therapy moves at a pace that makes sense for the person.",
+          "answer": "Yes."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "What should this page avoid promising or offering?",
+          "answer": "Do not promise or offer emergency crisis care, inpatient or residential care, medication management, forensic trauma evaluations, custody opinions, or guaranteed cure."
+        }
+      ],
+      "draft_direction": {
+        "primary_message": "Trauma therapy at LMHG is broad, practical support for adults, teens, and families whose past experiences still affect daily life.",
+        "secondary_messages": [
+          "Use plain examples such as distressing memories, avoiding people or places, feeling on edge, childhood trauma, medical trauma, and trauma from past relationships.",
+          "Do not lead with PTSD or call it out specifically.",
+          "Explain that trauma therapy does not always start with telling the whole story; early work may focus on coping skills, safety, trust, stabilization, and deciding what approach fits.",
+          "Present EMDR as one related trauma-focused option, not the definition of trauma therapy.",
+          "Mention that LMHG can use EMDR, talk therapy, grounding skills, CBT, TF-CBT, family involvement, and child therapy when appropriate."
+        ],
+        "internal_link_candidates": [
+          "EMDR therapy",
+          "individual counseling",
+          "child therapy",
+          "family therapy",
+          "teen therapy",
+          "costs and insurance"
+        ],
+        "avoid_claims": [
+          "Do not call out PTSD specifically.",
+          "Do not imply emergency crisis care.",
+          "Do not imply inpatient care.",
+          "Do not imply residential care.",
+          "Do not imply medication management.",
+          "Do not imply forensic trauma evaluations.",
+          "Do not imply custody opinions.",
+          "Do not guarantee a cure."
         ]
       }
     }
