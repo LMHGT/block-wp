@@ -1279,7 +1279,7 @@ function lmhg_site_core_append_relationship_sections( string $content ): string 
 	if ( 'page' === $post->post_type ) {
 		$template = get_page_template_slug( $post );
 
-		if ( ! $has_service_specialties && ! $has_related_pages && has_term( '', LMHG_SITE_CORE_SPECIALTY_TAXONOMY, $post ) ) {
+		if ( 'location-access-page' !== $template && ! $has_service_specialties && ! $has_related_pages && has_term( '', LMHG_SITE_CORE_SPECIALTY_TAXONOMY, $post ) ) {
 			$sections[] = lmhg_site_core_render_taxonomy_related_pages( $post->ID );
 		}
 

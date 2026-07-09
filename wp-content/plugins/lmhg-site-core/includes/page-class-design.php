@@ -47,7 +47,7 @@ function lmhg_site_core_render_page_class_design_sections( string $content ): st
 		'faq-page'             => lmhg_site_core_render_faq_page_design( $path ),
 		'article-hub'          => lmhg_site_core_render_article_hub_design(),
 		'article-page'         => lmhg_site_core_render_article_page_design( $path ),
-		'location-access-page' => lmhg_site_core_render_location_access_design( $path ),
+		'location-access-page' => '',
 		'team-page'           => '',
 		'contact-page'        => lmhg_site_core_render_contact_page_design( $path ),
 		'trust-page'           => lmhg_site_core_render_trust_page_design( $path ),
