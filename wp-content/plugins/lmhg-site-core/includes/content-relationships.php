@@ -1268,20 +1268,26 @@ function lmhg_site_core_append_relationship_sections( string $content ): string 
 	}
 
 	$sections = array();
-	$raw      = (string) $post->post_content;
+	$has_service_specialties = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-service-specialties' );
+	$has_related_pages       = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-related-pages' );
+	$has_faqs                = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-faqs' );
+	$has_faq_index           = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-faq-index' );
+	$has_team                = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-team-directory' );
+	$has_article_pages       = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-article-pages' );
+	$has_related_articles    = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-related-articles' );
 
 	if ( 'page' === $post->post_type ) {
 		$template = get_page_template_slug( $post );
 
-		if ( ! has_shortcode( $raw, 'lmhg_service_specialties' ) && ! has_shortcode( $raw, 'lmhg_related_pages' ) && has_term( '', LMHG_SITE_CORE_SPECIALTY_TAXONOMY, $post ) ) {
+		if ( ! $has_service_specialties && ! $has_related_pages && has_term( '', LMHG_SITE_CORE_SPECIALTY_TAXONOMY, $post ) ) {
 			$sections[] = lmhg_site_core_render_taxonomy_related_pages( $post->ID );
 		}
 
-		if ( ! has_shortcode( $raw, 'lmhg_faqs' ) && ! has_shortcode( $raw, 'lmhg_faq_index' ) && has_term( '', LMHG_SITE_CORE_FAQ_SET_TAXONOMY, $post ) ) {
+		if ( ! $has_faqs && ! $has_faq_index && has_term( '', LMHG_SITE_CORE_FAQ_SET_TAXONOMY, $post ) ) {
 			$sections[] = lmhg_site_core_render_faqs_for_page( $post->ID );
 		}
 
-		if ( 'faq-hub' === $template && ! has_shortcode( $raw, 'lmhg_faq_index' ) ) {
+		if ( 'faq-hub' === $template && ! $has_faq_index ) {
 			$sections[] = lmhg_site_core_faq_index_shortcode(
 				array(
 					'heading' => 'Frequently asked questions',
@@ -1289,12 +1295,12 @@ function lmhg_site_core_append_relationship_sections( string $content ): string 
 			);
 		}
 
-		if ( ! has_shortcode( $raw, 'lmhg_team' ) && ( 'team-page' === $template || in_array( $post->post_name, lmhg_site_core_team_page_slugs(), true ) ) ) {
+		if ( ! $has_team && ( 'team-page' === $template || in_array( $post->post_name, lmhg_site_core_team_page_slugs(), true ) ) ) {
 			$sections[] = lmhg_site_core_render_team_members();
 		}
 	}
 
-	if ( 'post' === $post->post_type && ! has_shortcode( $raw, 'lmhg_article_pages' ) && ! has_shortcode( $raw, 'lmhg_related_pages' ) ) {
+	if ( 'post' === $post->post_type && ! $has_article_pages && ! $has_related_pages && ! $has_related_articles ) {
 		$sections[] = lmhg_site_core_render_article_pages( $post->ID );
 	}
 
@@ -1309,6 +1315,17 @@ function lmhg_site_core_append_relationship_sections( string $content ): string 
 	}
 
 	return $content . "\n" . $section_html;
+}
+
+/**
+ * Detects whether a relationship section already rendered into content.
+ *
+ * @param string $content Rendered content.
+ * @param string $class_name Section class to find.
+ * @return bool
+ */
+function lmhg_site_core_content_has_rendered_section( string $content, string $class_name ): bool {
+	return str_contains( $content, $class_name );
 }
 
 /**

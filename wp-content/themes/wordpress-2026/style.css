@@ -738,7 +738,7 @@ footer.wp-block-template-part > hr {
   box-sizing: border-box;
   margin: 0 auto;
   max-width: none !important;
-  padding: clamp(42px, 5.8vw, 72px) max(18px, calc((100vw - 1180px) / 2));
+  padding: clamp(42px, 5.8vw, 72px) clamp(18px, 5vw, 72px);
   width: 100% !important;
 }
 
@@ -835,7 +835,7 @@ footer.wp-block-template-part > hr {
   border-top: 1px solid #000000;
   margin-top: clamp(48px, 6vw, 78px);
   max-width: none;
-  padding: clamp(50px, 6vw, 78px) max(18px, calc((100vw - 860px) / 2));
+  padding: clamp(50px, 6vw, 78px) clamp(18px, 5vw, 78px);
   text-align: center;
   width: 100%;
 }
@@ -845,6 +845,7 @@ footer.wp-block-template-part > hr {
   margin-left: auto;
   margin-right: auto;
   max-width: 860px;
+  width: min(100%, 860px);
 }
 
 .page-template-service-page .wp2026-page-cta > p,
@@ -948,7 +949,7 @@ footer.wp-block-template-part > hr {
   box-sizing: border-box;
   margin: 0 auto;
   max-width: none !important;
-  padding: clamp(42px, 5.8vw, 72px) max(18px, calc((100vw - 1180px) / 2));
+  padding: clamp(42px, 5.8vw, 72px) clamp(18px, 5vw, 72px);
   width: 100% !important;
 }
 
@@ -1127,7 +1128,7 @@ footer.wp-block-template-part > hr {
   border-top: 1px solid #000000;
   margin-top: clamp(48px, 6vw, 78px);
   max-width: none;
-  padding: clamp(50px, 6vw, 78px) max(18px, calc((100vw - 860px) / 2));
+  padding: clamp(50px, 6vw, 78px) clamp(18px, 5vw, 78px);
   text-align: center;
   width: 100%;
 }
@@ -1140,6 +1141,7 @@ footer.wp-block-template-part > hr {
   margin-left: auto;
   margin-right: auto;
   max-width: 860px;
+  width: min(100%, 860px);
 }
 
 @media (max-width: 1000px) {

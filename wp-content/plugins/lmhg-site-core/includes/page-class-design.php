@@ -74,7 +74,18 @@ function lmhg_site_core_render_page_class_design_sections( string $content ): st
  */
 function lmhg_site_core_page_content_owns_service_context( WP_Post $post ): bool {
 	$content = (string) $post->post_content;
-	return has_shortcode( $content, 'lmhg_service_specialties' );
+
+	if ( has_shortcode( $content, 'lmhg_service_specialties' ) ) {
+		return true;
+	}
+
+	foreach ( array( 'wp2026-service-hero-copy', 'wp2026-service-process', 'wp2026-page-cta' ) as $class_name ) {
+		if ( str_contains( $content, $class_name ) ) {
+			return true;
+		}
+	}
+
+	return false;
 }
 
 /**
@@ -85,7 +96,18 @@ function lmhg_site_core_page_content_owns_service_context( WP_Post $post ): bool
  */
 function lmhg_site_core_page_content_owns_specialty_context( WP_Post $post ): bool {
 	$content = (string) $post->post_content;
-	return has_shortcode( $content, 'lmhg_specialty_context' );
+
+	if ( has_shortcode( $content, 'lmhg_specialty_context' ) ) {
+		return true;
+	}
+
+	foreach ( array( 'wp2026-specialty-hero-copy', 'wp2026-specialty-process', 'wp2026-specialty-detail', 'wp2026-page-cta' ) as $class_name ) {
+		if ( str_contains( $content, $class_name ) ) {
+			return true;
+		}
+	}
+
+	return false;
 }
 
 /**
