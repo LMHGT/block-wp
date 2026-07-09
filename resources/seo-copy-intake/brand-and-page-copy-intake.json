@@ -120,6 +120,18 @@
       "In-home therapy is often covered by all insurances.",
       "School coordination and attendance at IEP meetings may be available to all clients, but clients without Medicaid may be charged an agreed-upon fee because coordination meetings are usually not covered by commercial insurance.",
       "Community-Based Services copy should avoid promising emergency or crisis response, inpatient placement, residential services, transportation, medication management, or guaranteed resource availability."
+    ],
+    "group_therapy_content_rules": [
+      "Group Therapy should focus on groups provided by LMHG clinicians.",
+      "Keep Group Therapy copy generic until specific group blurbs are ready.",
+      "The page can mention that LMHG currently has a teen-oriented group, but active groups should be listed on the page only when copy is ready.",
+      "The page should state that active groups will be listed on this page, with nothing listed until the group blurb is added.",
+      "Group Therapy should speak to clients generally.",
+      "Group availability changes, so readers should ask about current group options before assuming a group is open.",
+      "Group therapy can have different benefits and can be a helpful supplement to other kinds of therapy for LMHG clients.",
+      "Do not target or use the term support group as an SEO phrase for LMHG Group Therapy.",
+      "It is acceptable to say that one benefit of group therapy is clients supporting each other.",
+      "Group Therapy copy should avoid promising crisis support, anonymous or drop-in peer support, current group openings, or that group therapy replaces individual therapy."
     ]
   },
   "external_seo_guidance": [
@@ -283,6 +295,19 @@
       "location_code": 2840,
       "language_code": "en",
       "summary": "SERP checks were broad and institutional, including city and state resources, Seven Counties, community mental health centers, crisis pages, hospital systems, targeted case management, Medicaid case management, and local resource directories. LMHG already appears for some community-based and case-management intent, so the page should differentiate LMHG as a smaller practice offering wraparound support without becoming a generic crisis or government-resource page."
+    },
+    {
+      "date": "2026-07-09",
+      "tool": "dfs_google_serp_live",
+      "page_slug": "group-therapy",
+      "queries": [
+        "group therapy louisville ky",
+        "therapy groups louisville ky",
+        "mental health support groups louisville ky"
+      ],
+      "location_code": 2840,
+      "language_code": "en",
+      "summary": "SERP checks showed LMHG visible in local pack and organic results for group therapy terms. Support-group searches bring in NAMI, Psychology Today, free peer-support resources, and condition-specific groups, so LMHG copy should focus on clinician-led group therapy and avoid targeting support group as the main phrase."
     }
   ],
   "brand_level_answers": [
@@ -812,6 +837,84 @@
           "Do not imply transportation services.",
           "Do not imply medication management.",
           "Do not guarantee resource availability."
+        ]
+      }
+    },
+    {
+      "slug": "group-therapy",
+      "status": "answers_recorded",
+      "current_page_notes": [
+        "Live page title: Group Therapy in Louisville, KY.",
+        "Current page has a short lead, one expectation section, related page cards, FAQ output, and CTA.",
+        "Current lead: Group therapy for structured support, guided discussion, shared learning, skill practice, and connection.",
+        "Current page already notes that group therapy can be primary or supplemental and that fit depends on topic, goals, symptoms, timing, and availability."
+      ],
+      "seo_notes": [
+        "Use group therapy and therapy groups naturally.",
+        "LMHG is visible in checked local pack and organic results for group therapy terms.",
+        "Avoid using support group as an SEO target because support-group searches bring in peer-led, free, anonymous, or community-resource expectations.",
+        "Clarify that LMHG groups are clinician-led groups through the practice."
+      ],
+      "answers": [
+        {
+          "date": "2026-07-09",
+          "question": "Should this page focus on therapy groups led by LMHG clinicians, not peer-led or free support groups?",
+          "answer": "Yes. Focus on groups provided by LMHG clinicians. Keep everything generic right now because only one adolescent group is currently running and a blurb is still pending."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Who should this page speak to first?",
+          "answer": "Speak to clients generally."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Which group types should be named if available or likely?",
+          "answer": "Make a general statement about the current teen-oriented group and say that active groups will be listed on this page, with nothing currently listed until the blurb is added later."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Should the page emphasize that group availability changes?",
+          "answer": "Yes. People should ask about current groups before assuming one is open."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "How should the benefit of group therapy be explained in plain language?",
+          "answer": "State vaguely that group therapy has different benefits and can be a wonderful supplement to other kinds of therapy for LMHG clients."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Should support groups be used as a secondary SEO phrase?",
+          "answer": "No. Do not include or use the term support group, but phrasing such as a benefit of group therapy is clients supporting each other is acceptable."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "What should this page avoid promising?",
+          "answer": "Do not promise crisis support, anonymous or drop-in peer support, guaranteed current group openings, or that group therapy replaces individual therapy."
+        }
+      ],
+      "draft_direction": {
+        "primary_message": "Group therapy at LMHG is clinician-led and may give clients a different kind of support than individual or family therapy.",
+        "secondary_messages": [
+          "Keep the page generic until active group blurbs are ready.",
+          "Mention that LMHG currently has a teen-oriented group, but active groups should be listed only when the group blurb is available.",
+          "Group therapy can be a helpful supplement to other kinds of therapy and may offer shared learning, guided discussion, skill practice, and clients supporting each other.",
+          "Availability changes, so visitors should ask about current groups, fit, schedule, and whether another service should come first."
+        ],
+        "internal_link_candidates": [
+          "individual counseling",
+          "teen therapy",
+          "child therapy",
+          "family therapy",
+          "trauma therapy",
+          "costs and insurance"
+        ],
+        "avoid_claims": [
+          "Do not use support group as an SEO target phrase.",
+          "Do not imply crisis support.",
+          "Do not imply anonymous peer support.",
+          "Do not imply drop-in peer support.",
+          "Do not guarantee current group openings.",
+          "Do not imply group therapy replaces individual therapy."
         ]
       }
     }
