@@ -1,0 +1,309 @@
+{
+  "project": "Louisville Mental Health Group WordPress 2026 service and specialty copy",
+  "created_at": "2026-07-09",
+  "source_runtime": "http://100.70.222.25:8093",
+  "public_domain_for_seo_checks": "louisvillementalhealth.org",
+  "storage_branch": "resources",
+  "status": "in_progress",
+  "global_observations": [
+    {
+      "date": "2026-07-09",
+      "source": "site_inventory",
+      "observation": "The current service and specialty pages are thin: most contain a short lead, one expectation section, related page and FAQ shortcodes, and a CTA."
+    },
+    {
+      "date": "2026-07-09",
+      "source": "user",
+      "observation": "Each page needs to be handled individually because each page has thin content."
+    }
+  ],
+  "global_copy_strategy": {
+    "primary_audience": "Potential clients of all ages, written for a balanced mix of adults, parents and caregivers, families, Medicaid clients, commercial insurance clients, and private pay clients.",
+    "reading_level": "Do not write above a 6th grade reading level.",
+    "voice": [
+      "plainspoken",
+      "practical",
+      "human",
+      "specific"
+    ],
+    "primary_conversion_action": "Use the interest/intake form linked from the Reach Out CTA as the primary conversion action.",
+    "secondary_conversion_action": "Phone calls to the office are acceptable as a secondary action, but they are harder to track than the form.",
+    "intake_form_notes": [
+      "The intake form does not ask for clinical information.",
+      "The form is routed directly into the electronic medical record.",
+      "The usual next step is for someone from the agency, often a company owner, to contact the person using the contact information listed on the form."
+    ],
+    "seo_positioning": [
+      "Decide keyword emphasis after page-specific DataForSEO keyword phrase and AI Overview checks.",
+      "Vary therapy and counseling terms by page when the data and reader intent support it.",
+      "Case management is an important term because the domain already ranks for it.",
+      "Use mental health services cautiously because it has not produced the desired search traffic historically.",
+      "Use behavioral health cautiously because it can imply a larger hospital or institutional system."
+    ],
+    "avoid_or_use_carefully": [
+      "Avoid stereotypical hospital or clinic language.",
+      "Use commitment language only when it is specific to LMHG services and strengths.",
+      "Use care sparingly.",
+      "Avoid compare care phrasing."
+    ],
+    "differentiators": [
+      "Potential clients can often be seen quickly.",
+      "LMHG offers a wide variety of services and specialties.",
+      "The team approach is appreciated by clients.",
+      "LMHG does not assume one clinician can meet all needs for an entire family or even one person.",
+      "More than one therapist may be involved when appropriate, with different clinicians focused on different areas of therapy.",
+      "Plans are individualized for each client.",
+      "Provider diversity and practical coordination are strengths.",
+      "LMHG serves Medicaid clients and also accepts multiple insurance companies.",
+      "LMHG can provide services on a cash-pay basis for commercial insurance or private-pay clients who may not qualify for intensive services but still need them.",
+      "All three practice owners are hands-on and accessible to clients when concerns need to be addressed."
+    ]
+  },
+  "seo_decision_lab_checks": [
+    {
+      "date": "2026-07-09",
+      "tool": "dfs_auth_status",
+      "result": "DataForSEO credentials configured through stored plugin credentials."
+    },
+    {
+      "date": "2026-07-09",
+      "tool": "dfs_labs_ranked_keywords",
+      "target": "louisvillementalhealth.org",
+      "location_code": 2840,
+      "language_code": "en",
+      "summary": "Domain has 152 ranked organic keywords in the DataForSEO US dataset; first returned examples included address, court-ordered therapy, hiring, support-group, and Louisville behavioral-health queries."
+    },
+    {
+      "date": "2026-07-09",
+      "tool": "dfs_labs_keyword_ideas",
+      "seed_keywords": [
+        "mental health clinic louisville ky",
+        "therapy louisville ky",
+        "counseling louisville ky",
+        "medicaid therapist louisville ky"
+      ],
+      "location_code": 2840,
+      "language_code": "en",
+      "summary": "Broad seed set returned many noisy national therapy ideas, so page-specific keyword checks should be run during each page pass."
+    },
+    {
+      "date": "2026-07-09",
+      "tool": "dfs_labs_keyword_ideas",
+      "page_slug": "individual-counseling",
+      "seed_keywords": [
+        "individual counseling louisville ky",
+        "individual therapy louisville ky",
+        "therapy for adults louisville ky",
+        "counseling for adults louisville ky",
+        "medicaid therapist louisville ky"
+      ],
+      "location_code": 2840,
+      "language_code": "en",
+      "summary": "The broad Labs ideas response mixed relevant therapy intent with noisy national and modality terms, so SERP review is more useful than raw keyword ideas for this page."
+    },
+    {
+      "date": "2026-07-09",
+      "tool": "dfs_request",
+      "page_slug": "individual-counseling",
+      "endpoint": "/v3/serp/google/organic/live/advanced",
+      "queries": [
+        "individual counseling louisville ky",
+        "individual therapy louisville ky",
+        "therapist louisville ky medicaid"
+      ],
+      "location_name": "Louisville,Kentucky,United States",
+      "language_code": "en",
+      "summary": "SERP checks showed local packs and organic competitors using both counseling and therapy. Related searches included Medicaid, Anthem, anxiety therapist, best therapist, female therapists, and behavioral health terms. No ai_overview item type was returned in these checked SERPs."
+    }
+  ],
+  "brand_level_answers": [
+    {
+      "date": "2026-07-09",
+      "question": "Who is the primary audience?",
+      "answer": "A balanced mix. The answer is potential clients of all ages, with unique appeal around the variety of services and the fact that potential clients can be seen quickly."
+    },
+    {
+      "date": "2026-07-09",
+      "question": "What should LMHG sound like?",
+      "answer": "Plainspoken and practical. Clients typically appreciate that style. Copy should not be above a 6th grade reading level."
+    },
+    {
+      "date": "2026-07-09",
+      "question": "What language should be avoided?",
+      "answer": "Avoid stereotypical hospital or clinic terms. Commitment language needs to be specific to LMHG services and strengths."
+    },
+    {
+      "date": "2026-07-09",
+      "question": "What makes LMHG different?",
+      "answer": "LMHG uses a team approach and does not assume one clinician can meet all needs for a family or one person. Multiple therapists may be involved when appropriate, each focused on different therapy areas. LMHG offers a wide variety of services, individualized plans, provider diversity, practical coordination, strong Medicaid access, multiple insurance options, cash pay options, and hands-on accessible owners."
+    },
+    {
+      "date": "2026-07-09",
+      "question": "How should therapy, counseling, mental health services, and behavioral health terms be handled?",
+      "answer": "Decide after page-specific DataForSEO keyword phrase and AI Overview checks. Vary therapy and counseling terms when appropriate. Case management is important because LMHG already ranks for it. Mental health services has not yielded desired search traffic historically. Behavioral health can sound like a larger hospital system, which is not the desired positioning."
+    },
+    {
+      "date": "2026-07-09",
+      "question": "What is the main conversion action?",
+      "answer": "The primary conversion action is the interest/intake form linked from the Reach Out CTA. Calls are acceptable but harder to track. The form does not ask for clinical information, routes into the electronic medical record, and is usually followed by contact from someone at the agency, often a company owner."
+    }
+  ],
+  "page_answers": [
+    {
+      "slug": "individual-counseling",
+      "status": "questions_pending",
+      "current_page_notes": [
+        "Live page title: Individual Counseling in Louisville, KY.",
+        "Current page has a short lead, one expectation section, related page cards, FAQ output, and CTA.",
+        "Current lead: Individual counseling gives adults and teens a private, practical place to work through anxiety, depression, trauma, grief, stress, relationship strain, and life changes."
+      ],
+      "seo_notes": [
+        "Use both individual counseling and individual therapy intentionally; competitors and SERPs use both.",
+        "Medicaid and insurance wording is likely useful, but should be accurate and not overpromise eligibility.",
+        "Avoid making the page sound like a hospital system even when using insurance and therapist terms.",
+        "No AI Overview result was observed in the checked SERPs for this first pass."
+      ],
+      "answers": []
+    }
+  ],
+  "page_inventory": [
+    {
+      "slug": "individual-counseling",
+      "type": "service",
+      "title": "Individual Counseling in Louisville, KY",
+      "parent_path": "/services/"
+    },
+    {
+      "slug": "child-counseling",
+      "type": "service",
+      "title": "Child Therapy",
+      "parent_path": "/services/"
+    },
+    {
+      "slug": "family-therapy",
+      "type": "service",
+      "title": "Family Therapy in Louisville, KY",
+      "parent_path": "/services/"
+    },
+    {
+      "slug": "couples-counseling",
+      "type": "service",
+      "title": "Couples Counseling in Louisville, KY",
+      "parent_path": "/services/"
+    },
+    {
+      "slug": "court-ordered",
+      "type": "service",
+      "title": "Court-Ordered Services in Louisville, KY",
+      "parent_path": "/services/"
+    },
+    {
+      "slug": "community-based-services",
+      "type": "service",
+      "title": "Community-Based Mental Health Services in Louisville, KY",
+      "parent_path": "/services/"
+    },
+    {
+      "slug": "group-therapy",
+      "type": "service",
+      "title": "Group Therapy in Louisville, KY",
+      "parent_path": "/services/"
+    },
+    {
+      "slug": "trauma-therapy",
+      "type": "service",
+      "title": "Trauma Therapy in Louisville, KY",
+      "parent_path": "/services/"
+    },
+    {
+      "slug": "adolescent-counseling",
+      "type": "specialty",
+      "title": "Teen Therapy in Louisville, KY",
+      "parent_path": "/child-counseling/"
+    },
+    {
+      "slug": "adult-counseling",
+      "type": "specialty",
+      "title": "Adult Counseling in Louisville, KY",
+      "parent_path": "/individual-counseling/"
+    },
+    {
+      "slug": "anxiety-depression-therapy",
+      "type": "specialty",
+      "title": "Anxiety and Depression Therapy in Louisville, KY",
+      "parent_path": "/individual-counseling/"
+    },
+    {
+      "slug": "attachment-therapy",
+      "type": "specialty",
+      "title": "Attachment Therapy in Louisville, KY",
+      "parent_path": "/family-therapy/"
+    },
+    {
+      "slug": "case-management",
+      "type": "specialty",
+      "title": "Case Management in Louisville, KY",
+      "parent_path": "/community-based-services/"
+    },
+    {
+      "slug": "child-behavioral-intervention",
+      "type": "specialty",
+      "title": "Child Behavioral Therapy in Louisville, KY",
+      "parent_path": "/child-counseling/"
+    },
+    {
+      "slug": "co-parenting",
+      "type": "specialty",
+      "title": "Co-Parenting Services in Louisville, KY",
+      "parent_path": "/court-ordered/"
+    },
+    {
+      "slug": "community-support",
+      "type": "specialty",
+      "title": "Community Support Services in Louisville, KY",
+      "parent_path": "/community-based-services/"
+    },
+    {
+      "slug": "couples-conflict-resolution",
+      "type": "specialty",
+      "title": "Couples Conflict Resolution in Louisville, KY",
+      "parent_path": "/couples-counseling/"
+    },
+    {
+      "slug": "emdr-therapy",
+      "type": "specialty",
+      "title": "EMDR Therapy in Louisville, KY",
+      "parent_path": "/trauma-therapy/"
+    },
+    {
+      "slug": "family-reunification",
+      "type": "specialty",
+      "title": "Family Reunification Services in Louisville, KY",
+      "parent_path": "/court-ordered/"
+    },
+    {
+      "slug": "parenting-support",
+      "type": "specialty",
+      "title": "Parenting Support in Louisville, KY",
+      "parent_path": "/family-therapy/"
+    },
+    {
+      "slug": "play-therapy",
+      "type": "specialty",
+      "title": "Play Therapy in Louisville, KY",
+      "parent_path": "/child-counseling/"
+    },
+    {
+      "slug": "relationship-counseling",
+      "type": "specialty",
+      "title": "Relationship Counseling in Louisville, KY",
+      "parent_path": "/couples-counseling/"
+    },
+    {
+      "slug": "therapy-in-your-home",
+      "type": "specialty",
+      "title": "In-Home Therapy in Louisville, KY",
+      "parent_path": "/community-based-services/"
+    }
+  ]
+}
