@@ -107,6 +107,19 @@
       "Court-Ordered Services copy should speak primarily to the person who has been ordered to complete the service.",
       "The page should be explicit that LMHG does not provide evaluations related to DUI convictions.",
       "Court-Ordered Services copy should avoid legal advice, guarantees that a court will accept a service, and crisis-response promises."
+    ],
+    "community_based_service_content_rules": [
+      "Community-Based Services should function as a parent page for Case Management, Community Support Services, In-Home Therapy, and school or community coordination.",
+      "The overall intent is to show that LMHG offers more than office-based therapy.",
+      "The page should position LMHG as a small group practice that offers services often associated with large community mental health centers, without sounding bureaucratic or institutional.",
+      "Community-based services are in addition to therapy; in-home is a location where therapy may be provided.",
+      "Community-based services are designed to be short-term and intensive, often addressing a specific need for support, linkage to services, or advocacy with community partners.",
+      "The page should emphasize LMHG's wraparound philosophy, seeing the whole person and their practical needs, and accepting clients no matter how they come to LMHG.",
+      "Use plain examples of practical support such as provider coordination, advocacy skills, basic needs, crisis planning, and referrals to other resources.",
+      "Targeted Case Management and Community Support are mostly Medicaid-based, but can be arranged by fee-for-service for commercial-insurance or private-pay clients.",
+      "In-home therapy is often covered by all insurances.",
+      "School coordination and attendance at IEP meetings may be available to all clients, but clients without Medicaid may be charged an agreed-upon fee because coordination meetings are usually not covered by commercial insurance.",
+      "Community-Based Services copy should avoid promising emergency or crisis response, inpatient placement, residential services, transportation, medication management, or guaranteed resource availability."
     ]
   },
   "external_seo_guidance": [
@@ -257,6 +270,19 @@
       "location_code": 2840,
       "language_code": "en",
       "summary": "SERP checks showed AI Overview placeholders and mixed intent across court-ordered therapy, court-ordered counseling, DUI or substance programs, evaluations, family court, legal-resource pages, court-mandated therapy, and court-ordered services. LMHG copy should focus the page on Family Court fit and explicitly avoid DUI-evaluation intent."
+    },
+    {
+      "date": "2026-07-09",
+      "tool": "dfs_google_serp_live",
+      "page_slug": "community-based-services",
+      "queries": [
+        "community based mental health services louisville ky",
+        "community support services louisville ky mental health",
+        "mental health case management louisville ky medicaid"
+      ],
+      "location_code": 2840,
+      "language_code": "en",
+      "summary": "SERP checks were broad and institutional, including city and state resources, Seven Counties, community mental health centers, crisis pages, hospital systems, targeted case management, Medicaid case management, and local resource directories. LMHG already appears for some community-based and case-management intent, so the page should differentiate LMHG as a smaller practice offering wraparound support without becoming a generic crisis or government-resource page."
     }
   ],
   "brand_level_answers": [
@@ -706,6 +732,86 @@
           "Do not call Family Reunification counseling.",
           "Do not imply DUI evaluations.",
           "Do not imply crisis response."
+        ]
+      }
+    },
+    {
+      "slug": "community-based-services",
+      "status": "answers_recorded",
+      "current_page_notes": [
+        "Live page title: Community-Based Mental Health Services in Louisville, KY.",
+        "Current page has a short lead, one expectation section, related page cards, FAQ output, and CTA.",
+        "Current lead: Community-based mental health services for case management, community support, in-home help, resources, and follow-through."
+      ],
+      "seo_notes": [
+        "Use community-based mental health services carefully because SERPs include large agencies, government resources, crisis pages, and hospitals.",
+        "Case management and targeted case management are important related terms, but the parent page should not replace the dedicated Case Management page.",
+        "The page should distinguish LMHG from large bureaucratic community mental health agencies while still being plain and practical.",
+        "Avoid making this page sound like emergency, inpatient, residential, or medication-management support."
+      ],
+      "answers": [
+        {
+          "date": "2026-07-09",
+          "question": "Should this page be a parent page for Case Management, Community Support Services, In-Home Therapy, and school or community coordination?",
+          "answer": "Yes. The overall intent is to convey that LMHG offers more than office-based services. Community support is available from other sources, but large providers such as Seven Counties are bureaucratic community mental health agencies. LMHG is in the minority as a small group practice offering services usually offered only by large community mental health centers."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Who should this page speak to first?",
+          "answer": "Speak to people who need practical support, typically Medicaid clients. School coordination and attendance at IEP meetings may be available to everyone, but may incur an extra cost because those meetings are not covered by insurance. Case management and community support can also be available by private pay for people with commercial insurance."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "How should LMHG define community-based services?",
+          "answer": "Community-based services are in addition to therapy. In-home is a location where therapy could be provided. Community-based services themselves are designed to be short-term and intensive, and often address a specific need for support, linkage to services, or advocacy with community partners."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Which practical needs should be named?",
+          "answer": "Name coordination between providers, helping clients learn advocacy skills, help meeting basic needs, crisis planning, and referrals to other resources."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "How should this page differ from Case Management and Community Support Services?",
+          "answer": "Targeted Case Management, Community Support, and In-Home Services will all have dedicated pages. The parent page should highlight LMHG's wraparound philosophy, ability and willingness to see the whole person and their needs, and willingness to accept clients no matter how they come to LMHG. Practical needs should be framed as part of mental health support because it is difficult to do therapy when someone does not have enough food."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Are these services mostly Medicaid-based, or can any parts apply to commercial insurance or private-pay clients?",
+          "answer": "Targeted Case Management and Community Support are mostly Medicaid-based, although LMHG can come to fee-for-service arrangements. In-home therapy is often covered by all insurances. School coordination is available to all clients, but clients without Medicaid will be charged an agreed-upon fee because coordination via meetings is not covered by commercial insurance."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "What should this page avoid promising?",
+          "answer": "Do not promise emergency or crisis response, inpatient placement, residential services, transportation service, medication management, or guaranteed resource availability."
+        }
+      ],
+      "draft_direction": {
+        "primary_message": "Community-based services show that LMHG can support more than office-based therapy by helping with practical needs, resource connection, advocacy, and follow-through.",
+        "secondary_messages": [
+          "The page should frame LMHG as a smaller group practice that offers wraparound services often associated with larger community mental health centers.",
+          "Community-based services are in addition to therapy and are often short-term, intensive, and focused on a specific support need.",
+          "The page should name Case Management, Community Support Services, In-Home Therapy, and school or community coordination, then route readers to the dedicated pages for details.",
+          "Practical support can include provider coordination, advocacy skills, basic needs, crisis planning, and referrals.",
+          "Payment language should explain that Medicaid often applies to Targeted Case Management and Community Support, while private-pay or fee-for-service arrangements may apply for commercial-insurance clients and school coordination."
+        ],
+        "internal_link_candidates": [
+          "case management",
+          "community support services",
+          "in-home therapy",
+          "school-based mental health support",
+          "individual counseling",
+          "family therapy",
+          "costs and insurance"
+        ],
+        "avoid_claims": [
+          "Do not imply emergency response.",
+          "Do not imply crisis response.",
+          "Do not imply inpatient placement.",
+          "Do not imply residential services.",
+          "Do not imply transportation services.",
+          "Do not imply medication management.",
+          "Do not guarantee resource availability."
         ]
       }
     }
