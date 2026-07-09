@@ -153,6 +153,17 @@
       "Mention LMHG's team approach: a client may have a primary therapist and also work with an EMDR-trained therapist if needed.",
       "The page can say EMDR is not appropriate for everyone and may temporarily worsen symptoms.",
       "EMDR Therapy copy should avoid promising a guaranteed cure, promising that memories disappear, crisis care, hypnosis language, forensic or custody opinions, or medication management."
+    ],
+    "family_reunification_content_rules": [
+      "Family Reunification Services should speak mainly to a parent who is searching for the service.",
+      "The searching parent may be the custodial parent who is caring for the child daily, or the reunifying parent who has had an attachment break with the child.",
+      "The page can acknowledge that people may search for reunification therapy, but LMHG treats Family Reunification as its own service, not regular therapy or counseling.",
+      "The page can name Family Court orders, custody changes, long gaps in contact, parent-child conflict, CPS involvement, separation, and instability.",
+      "Plain process language can include understanding the history of the case, reviewing court orders, confirming both the custodial party and reunifying party agree to LMHG's Reunification service, confirming both parties have signed the reunification agreement, and choosing which party to meet with initially.",
+      "The page can also describe setting contact rules, pacing contact, joint sessions, documentation, recommendations, and testimony when appropriate.",
+      "Main goals can include restoring contact, rebuilding trust, improving communication, setting roles, increasing emotional safety, and moving at a structured pace.",
+      "The page should say the provider is impartial and may provide recommendations or testimony when expected.",
+      "Family Reunification Services copy should exclude legal advice, guarantees, custody evaluations, taking sides, emergency crisis response, supervised visitation, mediation, and cases without an accurately worded court order."
     ]
   },
   "external_seo_guidance": [
@@ -355,6 +366,19 @@
       "location_code": 2840,
       "language_code": "en",
       "summary": "SERP checks showed direct EMDR intent, with local pack and organic results using EMDR therapy, EMDR therapist, EMDR counseling, EMDR for trauma, and directory-style therapist language. LMHG copy should lead with EMDR Therapy, use EMDR therapist naturally, include PTSD as a secondary phrase, and distinguish EMDR from broader Trauma Therapy without overpromising outcomes."
+    },
+    {
+      "date": "2026-07-09",
+      "tool": "dfs_google_serp_live",
+      "page_slug": "family-reunification",
+      "queries": [
+        "family reunification therapy louisville ky",
+        "family reunification services louisville ky",
+        "reunification therapy kentucky"
+      ],
+      "location_code": 2840,
+      "language_code": "en",
+      "summary": "SERP checks showed mixed intent across reunification therapy, family reunification services, state child-welfare programs, local court-related providers, co-parenting, and general family counseling. One checked Kentucky query returned an asynchronous AI Overview placeholder. LMHG copy should use Family Reunification Services as the service label, can acknowledge reunification therapy as a search phrase in FAQ language, and should avoid implying ordinary therapy, mediation, custody evaluation, legal advice, or guaranteed court outcomes."
     }
   ],
   "brand_level_answers": [
@@ -1123,6 +1147,87 @@
           "Do not imply forensic opinions.",
           "Do not imply custody opinions.",
           "Do not imply medication management."
+        ]
+      }
+    },
+    {
+      "slug": "family-reunification",
+      "status": "answers_recorded",
+      "current_page_notes": [
+        "Live page title: Family Reunification Services in Louisville, KY.",
+        "Current page has a short lead, one expectation section, related page cards, FAQ output, and CTA.",
+        "Current lead: Family reunification services for restoring contact, trust, communication, emotional safety, and family stability.",
+        "Current page already links this service to Court-Ordered Services and uses services/support language rather than therapy language."
+      ],
+      "seo_notes": [
+        "Use Family Reunification Services as the primary service label.",
+        "Search results use reunification therapy and family reunification services, but LMHG should not label its service as ordinary therapy or counseling.",
+        "FAQ copy can acknowledge that people may search for reunification therapy while clarifying LMHG's service boundary.",
+        "Avoid state-agency, child-welfare-program, mediation, custody-evaluation, and legal-advice positioning."
+      ],
+      "answers": [
+        {
+          "date": "2026-07-09",
+          "question": "Who should this page speak to first?",
+          "answer": "Typically one of the two parents is conducting the search and viewing the page. This may be either the custodial parent, meaning the parent currently providing daily care for the child or children, or the reunifying parent, meaning the parent who has had an attachment break with the child or children."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Can the FAQ acknowledge reunification therapy as a search phrase while treating Family Reunification as its own service?",
+          "answer": "In principle, yes. The page can acknowledge that people may search for reunification therapy, but LMHG should treat Family Reunification as its own service, not regular therapy or counseling."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Which situations should the page name?",
+          "answer": "Yes to Family Court orders, custody changes, long gaps in contact, parent-child conflict, CPS involvement, separation, and instability."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "What steps can the page describe in plain language?",
+          "answer": "The page can describe understanding the history of the case, reviewing court orders, confirming both the custodial party and reunifying party agree to LMHG's Reunification service and have signed the reunification agreement, and choosing which party to meet with initially."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Are these main goals accurate: restoring contact, rebuilding trust, improving communication, setting roles, increasing emotional safety, and moving at a structured pace?",
+          "answer": "Yes."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Should the page say the provider is impartial and may provide recommendations or testimony when expected?",
+          "answer": "Yes."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "What should this page exclude beyond legal advice and guarantees?",
+          "answer": "Exclude custody evaluations, taking sides, emergency crisis response, supervised visitation, mediation, and cases without an accurately worded court order. This is 100% correct."
+        }
+      ],
+      "draft_direction": {
+        "primary_message": "Family Reunification Services at LMHG are structured, impartial services for families working through court-related contact, trust, safety, and communication issues after an attachment break.",
+        "secondary_messages": [
+          "Speak to the parent searching for help, whether that is the custodial parent caring for the child daily or the reunifying parent with an attachment break.",
+          "Use Family Reunification Services as the service label; in FAQ language, clarify that people may search for reunification therapy, but LMHG treats this as its own service.",
+          "Name Family Court orders, custody changes, long gaps in contact, parent-child conflict, CPS involvement, separation, and instability.",
+          "Explain that the process starts with case history, court orders, agreement from both parties, signed reunification agreements, and deciding which party is seen first.",
+          "Describe the provider as impartial and able to provide recommendations or testimony when expected."
+        ],
+        "internal_link_candidates": [
+          "court-ordered services",
+          "co-parenting",
+          "family therapy",
+          "parenting support",
+          "costs and insurance"
+        ],
+        "avoid_claims": [
+          "Do not call Family Reunification regular therapy or counseling.",
+          "Do not provide legal advice.",
+          "Do not guarantee outcomes.",
+          "Do not imply custody evaluations.",
+          "Do not take sides.",
+          "Do not imply emergency crisis response.",
+          "Do not imply supervised visitation.",
+          "Do not imply mediation.",
+          "Do not accept cases without an accurately worded court order."
         ]
       }
     }
