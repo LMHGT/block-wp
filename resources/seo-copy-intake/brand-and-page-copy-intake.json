@@ -69,6 +69,14 @@
       "Mention Medicaid, commercial insurance, and private pay briefly when relevant, then route detailed questions to the costs and insurance page.",
       "A costs and insurance page can be a recurring related page across service pages if the link is useful, naturally placed, and not mechanically repeated in a thin block.",
       "For future page interviews, do not re-ask questions already answered by these global rules unless the specific page creates a meaningful exception."
+    ],
+    "child_service_content_rules": [
+      "For child-service pages, assume the copy usually speaks to parents and caregivers first.",
+      "Generally, child therapy means therapy with kids ages 2 to 12.",
+      "Parents may be seeing behaviors but may not know the root cause yet; copy should meet them at that point.",
+      "Younger children typically involve more parent participation.",
+      "Child therapy is the parent page. Play Therapy and Child Behavioral Therapy are types of child therapy chosen based on the presenting problem.",
+      "Child-service copy should emphasize individualized care, which may include parent check-ins, family sessions, coaching around home routines, school coordination, or a case-by-case mix."
     ]
   },
   "external_seo_guidance": [
@@ -298,7 +306,7 @@
     },
     {
       "slug": "child-counseling",
-      "status": "questions_pending",
+      "status": "answers_recorded",
       "current_page_notes": [
         "Live page title: Child Therapy in Louisville, KY.",
         "Visible H1: Child Therapy.",
@@ -311,7 +319,77 @@
         "Avoid sounding like a hospital or institutional behavioral health system even when acknowledging behavioral concerns.",
         "The page should likely speak to parents and caregivers first, while still making clear the child is the client."
       ],
-      "answers": []
+      "tone_reference": {
+        "url": "https://www.psychologytoday.com/us/therapists/tyler-horn-louisville-ky/193109",
+        "usage": "Tone reference only. Do not copy language from the page.",
+        "notes": [
+          "Parent-facing tone.",
+          "Starts from the parent's concern and uncertainty.",
+          "Direct, practical, and reassuring without sounding institutional.",
+          "Makes parent involvement and family routines part of the work."
+        ]
+      },
+      "answers": [
+        {
+          "date": "2026-07-09",
+          "question": "Who should this page speak to?",
+          "answer": "This page should speak to parents."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "What age range should child therapy imply?",
+          "answer": "Generally, child therapy is therapy with kids ages 2 to 12."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "Which concerns should lead the page?",
+          "answer": "Focus on parental concerns. Assume the parent is seeing behaviors but may not know the root cause for sure."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "How should Child Therapy differ from Play Therapy and Child Behavioral Therapy?",
+          "answer": "Child Therapy is the parent page. Play Therapy and Child Behavioral Therapy are types of child therapy that are chosen based on the presenting problem. The page can be filled out by describing different kinds of child therapy, including a bulleted list where useful, even if not every item is hyperlinked."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "How involved should caregivers expect to be?",
+          "answer": "Individualized care should be emphasized. It may include regular parent check-ins, family sessions when needed, coaching around home routines, school coordination, or a case-by-case mix. Typically, the younger the child is, the more the parent is involved."
+        },
+        {
+          "date": "2026-07-09",
+          "question": "What should this page avoid promising?",
+          "answer": "Do not promise psychiatry, medication, autism testing, learning testing, ABA, speech therapy, occupational therapy, custody opinions, or crisis response. LMHG does not provide those services right now."
+        }
+      ],
+      "draft_direction": {
+        "primary_message": "Child therapy helps parents understand what they are seeing and choose a practical therapy path for a child, generally ages 2 to 12.",
+        "secondary_messages": [
+          "Parents may notice behavior changes, stress, school problems, big feelings, grief, trauma responses, family changes, or routine struggles before they know the root cause.",
+          "LMHG chooses the child therapy approach based on the presenting problem, not a one-size-fits-all model.",
+          "Child therapy can include parent check-ins, family sessions, home-routine coaching, school coordination, or other supports based on the child and family.",
+          "Younger children usually need more parent involvement."
+        ],
+        "internal_link_candidates": [
+          "play therapy",
+          "child behavioral therapy",
+          "teen therapy",
+          "family therapy",
+          "parenting support",
+          "school-based mental health support",
+          "costs and insurance"
+        ],
+        "avoid_claims": [
+          "Do not imply psychiatry.",
+          "Do not imply medication management.",
+          "Do not imply autism testing.",
+          "Do not imply learning testing.",
+          "Do not imply ABA.",
+          "Do not imply speech therapy.",
+          "Do not imply occupational therapy.",
+          "Do not imply custody opinions.",
+          "Do not imply crisis response."
+        ]
+      }
     }
   ],
   "page_inventory": [
