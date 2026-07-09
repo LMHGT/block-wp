@@ -652,6 +652,17 @@ footer.wp-block-template-part > hr {
   padding-block: clamp(50px, 6vw, 78px);
 }
 
+.page-template-location-access-page .wp2026-home-closing {
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  width: auto !important;
+}
+
+.wp2026-template-location-access-page {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
 /* Service-page pilot sections mirror the homepage system with page-specific density. */
 .page-template-service-page header.wp-block-template-part,
 .page-template-specialty-page header.wp-block-template-part {
@@ -1176,7 +1187,6 @@ footer.wp-block-template-part > hr {
   margin: 0;
 }
 
-.page-template-location-access-page .wp2026-page-cta,
 .page-template-faq-hub .wp2026-page-cta,
 .page-template-faq-page .wp2026-page-cta,
 .page-template-team-page .wp2026-page-cta,
@@ -1192,7 +1202,6 @@ footer.wp-block-template-part > hr {
   width: 100%;
 }
 
-.page-template-location-access-page .wp2026-page-cta > *,
 .page-template-faq-hub .wp2026-page-cta > *,
 .page-template-faq-page .wp2026-page-cta > *,
 .page-template-team-page .wp2026-page-cta > *,
@@ -1496,7 +1505,6 @@ footer.wp-block-template-part > hr {
 
   .page-template-service-page .wp2026-page-cta .wp2026-section-title,
   .page-template-specialty-page .wp2026-page-cta .wp2026-section-title,
-  .page-template-location-access-page .wp2026-page-cta .wp2026-section-title,
   .page-template-faq-hub .wp2026-page-cta .wp2026-section-title,
   .page-template-faq-page .wp2026-page-cta .wp2026-section-title,
   .page-template-team-page .wp2026-page-cta .wp2026-section-title,
