@@ -13,7 +13,7 @@ Text Domain: wordpress-2026
 body { color: var(--wp2026-ink); background: #ffffff; }
 a { color: var(--wp2026-green); }
 body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, .wp-block-heading { font-family: Inter, Arial, sans-serif; }
-h1, h2, h3, h4, h5, h6, .wp-block-heading { letter-spacing: 0; line-height: 1.08; max-width: 100%; overflow-wrap: normal; text-wrap: nowrap; white-space: nowrap; }
+h1, h2, h3, h4, h5, h6, .wp-block-heading { letter-spacing: 0; line-height: 1.08; max-width: 100%; overflow-wrap: anywhere; text-wrap: balance; white-space: normal; }
 .lmhg-skip-link { background: var(--wp2026-deep); border: 2px solid var(--wp2026-clay); border-radius: 6px; color: #ffffff; font-weight: 800; left: 16px; padding: 0.65rem 0.9rem; position: absolute; text-decoration: none; top: 8px; transform: translateY(-150%); transition: transform 120ms ease; z-index: 1000; }
 .lmhg-skip-link:focus { color: #ffffff; transform: translateY(0); }
 .lmhg-main-content:focus { outline: none; }
