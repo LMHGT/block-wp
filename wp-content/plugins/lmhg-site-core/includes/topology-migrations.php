@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_OPTION  = 'lmhg_content_topology_migration_version';
-const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_VERSION = '2026-07-10-service-topology-v5';
+const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_VERSION = '2026-07-10-rich-copy-v6';
 
 add_action( 'init', 'lmhg_site_core_run_topology_migration', 27 );
 
@@ -27,14 +27,35 @@ function lmhg_site_core_run_topology_migration(): void {
 		return;
 	}
 
-	$complete = true;
-	$complete = lmhg_site_core_sync_topology_page( $page_data, '/attachment-therapy/', '/attachment-therapy/' ) && $complete;
-	$complete = lmhg_site_core_sync_topology_page( $page_data, '/adolescent-counseling/', '/adolescent-counseling/' ) && $complete;
-	$complete = lmhg_site_core_sync_topology_page( $page_data, '/child-behavioral-intervention/', '/child-behavioral-intervention/' ) && $complete;
-	$complete = lmhg_site_core_sync_topology_page( $page_data, '/couples-conflict-resolution/', '/conflict-resolution-counseling/' ) && $complete;
-	$complete = lmhg_site_core_sync_topology_page( $page_data, '/couples-counseling/', '/couples-counseling/' ) && $complete;
-	$complete = lmhg_site_core_sync_topology_page( $page_data, '/parenting-support/', '/parenting-support/' ) && $complete;
-	$complete = lmhg_site_core_sync_topology_page( $page_data, '/locations/in-home/', '/locations/in-home/' ) && $complete;
+	$complete        = true;
+	$page_migrations = array(
+		'/attachment-therapy/'              => '/attachment-therapy/',
+		'/adolescent-counseling/'            => '/adolescent-counseling/',
+		'/adult-counseling/'                 => '/adult-counseling/',
+		'/anxiety-depression-therapy/'       => '/anxiety-depression-therapy/',
+		'/case-management/'                  => '/case-management/',
+		'/child-behavioral-intervention/'    => '/child-behavioral-intervention/',
+		'/child-counseling/'                 => '/child-counseling/',
+		'/co-parenting/'                     => '/co-parenting/',
+		'/community-based-services/'         => '/community-based-services/',
+		'/community-support/'                => '/community-support/',
+		'/couples-conflict-resolution/'      => '/conflict-resolution-counseling/',
+		'/couples-counseling/'               => '/couples-counseling/',
+		'/court-ordered/'                    => '/court-ordered/',
+		'/emdr-therapy/'                     => '/emdr-therapy/',
+		'/family-reunification/'             => '/family-reunification/',
+		'/family-therapy/'                   => '/family-therapy/',
+		'/group-therapy/'                    => '/group-therapy/',
+		'/individual-counseling/'            => '/individual-counseling/',
+		'/locations/in-home/'                => '/locations/in-home/',
+		'/parenting-support/'                => '/parenting-support/',
+		'/play-therapy/'                     => '/play-therapy/',
+		'/trauma-therapy/'                   => '/trauma-therapy/',
+	);
+
+	foreach ( $page_migrations as $current_path => $target_path ) {
+		$complete = lmhg_site_core_sync_topology_page( $page_data, $current_path, $target_path ) && $complete;
+	}
 
 	$complete = lmhg_site_core_rename_topology_term(
 		LMHG_SITE_CORE_SPECIALTY_TAXONOMY,
@@ -79,13 +100,34 @@ function lmhg_site_core_run_topology_migration(): void {
 		'Couples Conflict Resolution',
 		'Conflict Resolution Counseling'
 	) && $complete;
-	$complete = lmhg_site_core_sync_topology_faq_items( $page_data, '/attachment-therapy/', 'attachment-therapy' ) && $complete;
-	$complete = lmhg_site_core_sync_topology_faq_items( $page_data, '/adolescent-counseling/', 'adolescent-counseling' ) && $complete;
-	$complete = lmhg_site_core_sync_topology_faq_items( $page_data, '/child-behavioral-intervention/', 'child-behavioral-intervention' ) && $complete;
-	$complete = lmhg_site_core_sync_topology_faq_items( $page_data, '/conflict-resolution-counseling/', 'conflict-resolution-counseling' ) && $complete;
-	$complete = lmhg_site_core_sync_topology_faq_items( $page_data, '/couples-counseling/', 'couples-counseling' ) && $complete;
-	$complete = lmhg_site_core_sync_topology_faq_items( $page_data, '/parenting-support/', 'parenting-support' ) && $complete;
-	$complete = lmhg_site_core_sync_topology_faq_items( $page_data, '/locations/in-home/', 'locations-in-home' ) && $complete;
+	$faq_migrations = array(
+		'/attachment-therapy/'           => 'attachment-therapy',
+		'/adolescent-counseling/'         => 'adolescent-counseling',
+		'/adult-counseling/'              => 'adult-counseling',
+		'/anxiety-depression-therapy/'    => 'anxiety-depression-therapy',
+		'/case-management/'               => 'case-management',
+		'/child-behavioral-intervention/' => 'child-behavioral-intervention',
+		'/child-counseling/'              => 'child-counseling',
+		'/co-parenting/'                  => 'co-parenting',
+		'/community-based-services/'      => 'community-based-services',
+		'/community-support/'             => 'community-support',
+		'/conflict-resolution-counseling/' => 'conflict-resolution-counseling',
+		'/couples-counseling/'            => 'couples-counseling',
+		'/court-ordered/'                 => 'court-ordered',
+		'/emdr-therapy/'                  => 'emdr-therapy',
+		'/family-reunification/'          => 'family-reunification',
+		'/family-therapy/'                => 'family-therapy',
+		'/group-therapy/'                 => 'group-therapy',
+		'/individual-counseling/'         => 'individual-counseling',
+		'/locations/in-home/'             => 'locations-in-home',
+		'/parenting-support/'             => 'parenting-support',
+		'/play-therapy/'                  => 'play-therapy',
+		'/trauma-therapy/'                => 'trauma-therapy',
+	);
+
+	foreach ( $faq_migrations as $page_path => $faq_slug ) {
+		$complete = lmhg_site_core_sync_topology_faq_items( $page_data, $page_path, $faq_slug ) && $complete;
+	}
 
 	$complete = lmhg_site_core_move_conflict_resolution_relationship() && $complete;
 	$complete = lmhg_site_core_move_parenting_support_relationship() && $complete;
@@ -223,6 +265,7 @@ function lmhg_site_core_sync_topology_page( array $page_data, string $current_pa
 	}
 
 	lmhg_site_core_update_topology_source_url( (int) $page->ID, $target_path );
+	lmhg_site_core_sync_topology_meta( (int) $page->ID, $entry, $target_path );
 
 	if ( $current_path !== $target_path ) {
 		lmhg_site_core_delete_topology_page_duplicates( sanitize_title( basename( trim( $current_path, '/' ) ) ), 0 );
@@ -230,6 +273,37 @@ function lmhg_site_core_sync_topology_page( array $page_data, string $current_pa
 	}
 
 	return true;
+}
+
+/**
+ * Publishes page-specific SEO and FAQ metadata without clearing unrelated importer data.
+ *
+ * @param int                 $post_id Page ID.
+ * @param array<string,mixed> $entry Page-data entry.
+ * @param string              $target_path Canonical page path.
+ */
+function lmhg_site_core_sync_topology_meta( int $post_id, array $entry, string $target_path ): void {
+	$seo = isset( $entry['seo'] ) && is_array( $entry['seo'] ) ? $entry['seo'] : array();
+	if ( ! empty( $seo ) ) {
+		$meta = array(
+			'_lmhg_seo_title'          => (string) ( $seo['title'] ?? '' ),
+			'_lmhg_meta_description'   => (string) ( $seo['description'] ?? '' ),
+			'_lmhg_h1'                 => (string) ( $seo['h1'] ?? '' ),
+			'_lmhg_primary_keyword'    => (string) ( $seo['primaryKeyword'] ?? '' ),
+			'_lmhg_secondary_keywords' => wp_json_encode( $seo['secondaryKeywords'] ?? array() ),
+			'_lmhg_schema_type'        => (string) ( $seo['schemaType'] ?? 'MedicalWebPage' ),
+			'_lmhg_canonical_url'      => home_url( $target_path ),
+			'_lmhg_seo_status'         => (string) ( $seo['status'] ?? 'owner-answer-based-rich-copy' ),
+		);
+
+		foreach ( $meta as $key => $value ) {
+			update_post_meta( $post_id, $key, '_lmhg_secondary_keywords' === $key ? wp_slash( $value ) : $value );
+		}
+	}
+
+	if ( isset( $entry['faqItems'] ) && is_array( $entry['faqItems'] ) ) {
+		update_post_meta( $post_id, '_lmhg_faq_items', wp_slash( wp_json_encode( $entry['faqItems'] ) ) );
+	}
 }
 
 /**
@@ -406,6 +480,42 @@ function lmhg_site_core_rename_topology_faq_posts( string $old_slug, string $new
 
 		if ( is_wp_error( $updated ) ) {
 			return false;
+		}
+	}
+
+	return lmhg_site_core_remove_legacy_faq_posts( $faq_slug );
+}
+
+/**
+ * Removes superseded placeholder FAQs after approved page-specific FAQs exist.
+ *
+ * @param string $faq_slug FAQ-set slug.
+ * @return bool
+ */
+function lmhg_site_core_remove_legacy_faq_posts( string $faq_slug ): bool {
+	foreach ( array( 'placeholder-', 'service-' ) as $prefix ) {
+		$posts = get_posts(
+			array(
+				'post_type'      => LMHG_SITE_CORE_FAQ_POST_TYPE,
+				'post_status'    => 'any',
+				'posts_per_page' => -1,
+				'no_found_rows'  => true,
+				'post_name__in'  => array(
+					$prefix . $faq_slug . '-faq-1',
+					$prefix . $faq_slug . '-faq-2',
+					$prefix . $faq_slug . '-faq-3',
+					$prefix . $faq_slug . '-faq-4',
+					$prefix . $faq_slug . '-faq-fit',
+					$prefix . $faq_slug . '-faq-start',
+					$prefix . $faq_slug . '-faq-louisville',
+				),
+			)
+		);
+
+		foreach ( $posts as $post ) {
+			if ( $post instanceof WP_Post && false === wp_delete_post( (int) $post->ID, true ) ) {
+				return false;
+			}
 		}
 	}
 
