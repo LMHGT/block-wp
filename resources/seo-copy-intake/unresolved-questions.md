@@ -6,6 +6,8 @@ These are the only questions still below high confidence after the 2026-07-10 ow
 
 2. **Relationship Counseling:** Which answer controls? The first answer approved merging this page into Couples Counseling. The later answer said it is a separate service for family relationships such as parent, grandparent, and blended-family relationships. Should the page be **kept and broadened under Family Therapy**, or **merged into Couples Counseling and redirected**?
 
+3. **Parenting Support:** The owner defined this as parent-only support that is part of child therapy, but the current site relationship places it under Family Therapy. Should its site parent move to Child Therapy while Family Therapy keeps a contextual link?
+
 ## Architecture Choices Confirmed
 
 Conflict Resolution will cover couples and larger family systems at `/conflict-resolution-counseling/` under Family Therapy. `/locations/in-home/` will absorb the former Therapy in Your Home page. Attachment Therapy will be titled Parent-Child Attachment Therapy. Child Behavioral Therapy remains the public name. Parenting Support is parent-only and part of child therapy. Play Therapy will use ages 2 to 12 as a typical range, not a hard rule.
