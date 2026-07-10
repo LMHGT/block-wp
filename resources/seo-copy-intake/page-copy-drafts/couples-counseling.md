@@ -38,7 +38,7 @@ The therapist does not take one partner's side. The role is to keep the talk fai
 
 Marriage counseling is couples counseling for people who are married. LMHG offers couples and marital counseling, but marriage is not required.
 
-[Conflict Resolution Counseling](/couples-conflict-resolution/) can go deeper into repeat conflict among couples or other family members. [Relationship Counseling](/relationship-counseling/) focuses more on trust, closeness, patterns, and choices about the relationship. Couples counseling stays focused on the two partners and the goals they bring.
+[Conflict Resolution Counseling](/conflict-resolution-counseling/) can go deeper into repeat conflict among couples or other family members. [Relationship Counseling](/relationship-counseling/) focuses more on trust, closeness, patterns, and choices about the relationship. Couples counseling stays focused on the two partners and the goals they bring.
 
 One or both partners may also use [Individual Counseling](/individual-counseling/). When that happens, a different therapist should lead the couple's work. Separate therapists keep the roles clear and give each service its own focus.
 

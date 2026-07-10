@@ -1,14 +1,14 @@
 Status: draft pending owner review
 Source slug: attachment-therapy
-Primary keyword: attachment therapy Louisville KY
+Primary keyword: parent child attachment therapy Louisville KY
 Secondary keywords: attachment therapy for children; family therapy for attachment concerns
-Title tag: Attachment Therapy in Louisville, KY | LMHG
-Meta description: Attachment therapy in Louisville for families who want help with parent-child trust, feeling safe, and rebuilding a close bond. Reach out to ask about fit.
-H1: Attachment Therapy in Louisville, KY
+Title tag: Parent-Child Attachment Therapy in Louisville, KY | LMHG
+Meta description: Parent-child attachment therapy in Louisville for families who want help with trust, feeling safe, and rebuilding a close bond. Reach out to ask about fit.
+H1: Parent-Child Attachment Therapy in Louisville, KY
 
-# Attachment Therapy in Louisville, KY
+# Parent-Child Attachment Therapy in Louisville, KY
 
-At LMHG, attachment therapy helps a child and parent rebuild trust. It may fit after stress, time apart, loss, moves, or other hard change. The work looks at the child-parent bond.
+At LMHG, parent-child attachment therapy helps a child and parent rebuild trust. It may fit after stress, time apart, loss, moves, or other hard change. The work looks at the bond between a child and parent.
 
 This work often fits within [family therapy](/family-therapy/). It may also connect with [child therapy](/child-counseling/) when the child needs their own support.
 
@@ -51,7 +51,7 @@ LMHG must review court-related family needs before naming the right service. Att
 
 ## Getting Started
 
-Use the [Reach Out intake form](https://intakeq.com/new/g91Z8x/bjxuno) to ask about attachment therapy. Share a short note about the parent-child trust concern. The form does not ask for clinical details. Someone from LMHG will follow up.
+Use the [Reach Out intake form](https://intakeq.com/new/g91Z8x/bjxuno) to ask about parent-child attachment therapy. Share a short note about the parent-child trust concern. The form does not ask for clinical details. Someone from LMHG will follow up.
 
 You do not need to pick the service on your own. We can help sort out the clearest first step.
 
@@ -59,7 +59,7 @@ You do not need to pick the service on your own. We can help sort out the cleare
 
 ### Is this page about adult attachment styles?
 
-No. At LMHG, this page is about trust and repair between a child and parent. Adult concerns may fit better with individual or couples counseling.
+No. At LMHG, this service is only for trust and repair between a child and parent. LMHG is not adding a separate adult attachment page at this time.
 
 ### Does a parent take part?
 

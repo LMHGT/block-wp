@@ -186,6 +186,23 @@
       "Case managers may coordinate with therapists, medical providers, schools, insurance plans, and community agencies when appropriate and authorized.",
       "Case Management is mostly Medicaid-based, but a private-pay or fee-for-service arrangement may be possible case by case.",
       "Case Management copy should avoid promising emergency response, transportation, guaranteed housing or resources, direct financial aid, legal advice or representation, medication management, or 24-hour availability."
+    ],
+    "confirmed_architecture_decisions_2026_07_10": [
+      "Keep Couples Counseling as the main romantic-couple page.",
+      "Rename Couples Conflict Resolution to Conflict Resolution Counseling, broaden it to couples and family relationships, and place it under Family Therapy.",
+      "Consolidate Therapy in Your Home into the existing /locations/in-home/ page and keep the Locations parent page.",
+      "Rename Attachment Therapy to Parent-Child Attachment Therapy and limit the service to parent-child work.",
+      "Keep Child Behavioral Therapy as the public service name.",
+      "Describe Parenting Support as support for parents only and as part of child therapy.",
+      "Say play therapy is typically used with ages 2 to 12 while making clear that techniques may be used with older clients, including adults.",
+      "Keep the public Case Management page and do not add a separate Targeted Case Management page.",
+      "Do not add an adult attachment therapy page at this time.",
+      "Describe the in-home service area only as Louisville and surrounding areas until more specific eligibility rules are confirmed."
+    ],
+    "relationship_counseling_decision_conflict": [
+      "The owner first approved merging Relationship Counseling into Couples Counseling.",
+      "The owner later said Relationship Counseling is separate from Couples Counseling and may cover family relationships such as parent, grandparent, and blended-family relationships.",
+      "Keep the page unchanged until the owner resolves which later architecture to use; do not delete or redirect it based on an inference."
     ]
   },
   "external_seo_guidance": [
@@ -1541,7 +1558,7 @@
     {
       "slug": "attachment-therapy",
       "type": "specialty",
-      "title": "Attachment Therapy in Louisville, KY",
+      "title": "Parent-Child Attachment Therapy in Louisville, KY",
       "parent_path": "/family-therapy/"
     },
     {
@@ -1569,10 +1586,10 @@
       "parent_path": "/community-based-services/"
     },
     {
-      "slug": "couples-conflict-resolution",
+      "slug": "conflict-resolution-counseling",
       "type": "specialty",
-      "title": "Couples Conflict Resolution in Louisville, KY",
-      "parent_path": "/couples-counseling/"
+      "title": "Conflict Resolution Counseling in Louisville, KY",
+      "parent_path": "/family-therapy/"
     },
     {
       "slug": "emdr-therapy",
@@ -1605,10 +1622,10 @@
       "parent_path": "/couples-counseling/"
     },
     {
-      "slug": "therapy-in-your-home",
-      "type": "specialty",
+      "slug": "locations/in-home",
+      "type": "location",
       "title": "In-Home Therapy in Louisville, KY",
-      "parent_path": "/community-based-services/"
+      "parent_path": "/locations/"
     }
   ]
 }

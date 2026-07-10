@@ -38,7 +38,7 @@ This page is a guide to three types of help. [Case Management](/case-management/
 
 [Community Support Services](/community-support/) help a client use therapy goals in daily life. A Community Support Associate works with the client and stays in touch with the therapist.
 
-[In-Home Therapy](/therapy-in-your-home/) is therapy held in the home. The home is the place for the visit. It is not the same as Case Management or Community Support.
+[In-Home Therapy](/locations/in-home/) is therapy held in the home. The home is the place for the visit. It is not the same as Case Management or Community Support.
 
 Some people need one type of help. Others may need a team with clear roles. LMHG can help you pick a first step.
 

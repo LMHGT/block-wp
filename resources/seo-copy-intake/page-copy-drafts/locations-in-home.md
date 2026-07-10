@@ -1,5 +1,5 @@
 Status: draft pending owner review
-Source slug: `therapy-in-your-home`
+Source slug: `locations/in-home`
 Primary keyword: in-home therapy Louisville KY
 Secondary keywords: in-home mental health therapy; home-based therapy
 Title tag: In-Home Therapy in Louisville, KY | LMHG
@@ -8,7 +8,7 @@ H1: In-Home Mental Health Therapy in Louisville, KY
 
 # In-Home Mental Health Therapy in Louisville, KY
 
-In-home mental health therapy is a therapy visit held in the client's home. It is not home health care or physical therapy. It is also not a separate type of therapy. The therapist still picks an approach. It is based on the client's needs and goals. The home is simply where the visit takes place.
+In-home mental health therapy is a therapy visit held in the client's home in Louisville or a surrounding area. It is not home health care or physical therapy. It is also not a separate type of therapy. The therapist still picks an approach. It is based on the client's needs and goals. The home is simply where the visit takes place.
 
 For some clients and families, meeting at home can help. The therapist can learn about home routines and stress. The family can talk about needs as they come up in daily life. In-home therapy is offered only when the setting is a good fit.
 
@@ -42,6 +42,8 @@ The main difference is the job, not just the place. A therapist gives therapy. A
 ## Getting Started
 
 Use the [Reach Out intake form](https://intakeq.com/new/g91Z8x/bjxuno). Tell us who needs help and why home visits may work better. You do not need to share private health details on the form. Our team will check fit, safety, location, insurance, and open providers. Asking about in-home therapy does not mean home visits will be open.
+
+This copy replaces the separate Therapy in Your Home specialty page and belongs on the existing `/locations/in-home/` page.
 
 ## Frequently Asked Questions
 

@@ -8,7 +8,9 @@ H1: Play Therapy in Louisville, KY
 
 # Play Therapy in Louisville, KY
 
-Play therapy is a type of therapy for children. It helps a child show feelings that may be hard to explain with words. A therapist may use toys, art, stories, and games with a clear goal. It is not just free play, a reward, or a way to keep a child busy.
+Play therapy is typically used with children ages 2 to 12. It helps a child show feelings that may be hard to explain with words. A therapist may use toys, art, stories, and games with a clear goal. It is not just free play, a reward, or a way to keep a child busy.
+
+The age range is not a hard rule. Some play-based techniques may also be used with teens or adults when they fit the person and the therapy goal.
 
 At LMHG, play therapy may fit a child who needs help with feelings, behavior, stress, grief, trauma, school, or family change. Parents take part in a way that fits the child. Younger children often need more parent help.
 
@@ -54,7 +56,7 @@ Families can ask about Medicaid, other insurance, and private pay. For more deta
 
 ### What ages is play therapy for?
 
-It is most often used with younger children. Fit depends on the child, the concern, and the provider.
+It is typically used with children ages 2 to 12. This is not a hard rule. Some play-based techniques may also fit teens or adults.
 
 ### How involved are parents?
 

@@ -1,7 +1,7 @@
 # Conflict Resolution Counseling Page Copy Draft
 
 - Status: draft pending owner review
-- Source slug: `couples-conflict-resolution` (current slug; rename recommended)
+- Source slug: `conflict-resolution-counseling`
 - Primary keyword: `conflict resolution counseling louisville ky`
 - Secondary keywords: `family conflict resolution counseling`; `couples conflict resolution therapy`
 - Title tag: `Conflict Resolution Counseling in Louisville, KY | LMHG`
@@ -68,4 +68,4 @@ No. The therapist helps people see the pattern and have a more useful talk. The 
 
 ## Architecture Note
 
-The current couples-only slug does not match the owner-confirmed broader family scope. Consider a new public slug such as `/conflict-resolution-counseling/`, then redirect the current URL after traffic and backlink checks.
+The owner approved `/conflict-resolution-counseling/` as the replacement for the current couples-only page. Place it under Family Therapy and redirect `/couples-conflict-resolution/` after the merged page is live.

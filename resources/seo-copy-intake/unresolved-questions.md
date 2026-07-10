@@ -1,21 +1,11 @@
-# Cumulative Owner Questions After Drafting
+# Remaining Owner Questions After Drafting
 
-These are the only page questions that remained below high confidence after all drafts were written. Answers can be added to `brand-and-page-copy-intake.json` before copy is promoted.
+These are the only questions still below high confidence after the 2026-07-10 owner answers. All other page questions have been resolved and stored in `brand-and-page-copy-intake.json`.
 
-1. **Teen Therapy:** Does the current draft match LMHG's real policy for teen privacy, parent check-ins, and what is shared when there is a safety concern, or is different wording needed?
+1. **Teen Therapy:** Review the expanded privacy wording in chat. Confirm whether it matches LMHG's real policy for teen privacy, parent updates, and safety-related or legally required disclosures.
 
-2. **Attachment Therapy:** Is this service only for parent-child attachment and repair? If yes, may the public page be renamed `Parent-Child Attachment Therapy`? If LMHG also provides adult attachment work, what adult audience and concerns should that service cover?
+2. **Relationship Counseling:** Which answer controls? The first answer approved merging this page into Couples Counseling. The later answer said it is a separate service for family relationships such as parent, grandparent, and blended-family relationships. Should the page be **kept and broadened under Family Therapy**, or **merged into Couples Counseling and redirected**?
 
-3. **Child Behavioral Therapy:** Should the public service name remain `Child Behavioral Therapy`, or should it be `Child Behavioral Intervention`? The current title is more search-friendly, but both names appear in LMHG's current site structure.
+## Architecture Choices Confirmed
 
-4. **Parenting Support:** Are sessions usually parent-only, or can and should children attend some sessions? Should the service be described as counseling, parent coaching, family therapy, or a case-by-case mix?
-
-5. **Play Therapy:** Should the page state a usual age range, such as ages 2 to 12, or keep the broader phrase `younger children`?
-
-6. **Relationship Counseling:** Is this only for romantic couples? If so, should the page be merged into Couples Counseling and redirected because the search intent overlaps? If it serves other close relationships, which ones should the page name?
-
-7. **In-Home Therapy:** Which counties or Southern Indiana areas may receive in-home therapy, and are there client, home-safety, or service eligibility rules that should be stated before someone reaches out?
-
-## Architecture Choice Already Supported By Prior Answers
-
-Conflict Resolution should cover both couples and larger family systems. The revised draft uses `Conflict Resolution Counseling` and includes parent-child, sibling, parent-grandparent, and blended-family conflict. The remaining choice is whether to replace the current couples-only slug with `/conflict-resolution-counseling/` and place the page under Family Therapy.
+Conflict Resolution will cover couples and larger family systems at `/conflict-resolution-counseling/` under Family Therapy. `/locations/in-home/` will absorb the former Therapy in Your Home page. Attachment Therapy will be titled Parent-Child Attachment Therapy. Child Behavioral Therapy remains the public name. Parenting Support is parent-only and part of child therapy. Play Therapy will use ages 2 to 12 as a typical range, not a hard rule.

@@ -1,6 +1,6 @@
 # Service And Specialty Page Architecture Recommendations
 
-Status: Recommendation only. No page was added, removed, redirected, or changed on deployable `main`.
+Status: Owner decisions recorded on 2026-07-10. Deployable implementation is tracked separately from this reusable copy record.
 
 Evidence used:
 
@@ -13,10 +13,10 @@ Evidence used:
 
 | Priority | Current page | Recommendation | Reason | Confidence |
 | --- | --- | --- | --- | --- |
-| 1 | `/relationship-counseling/` | Merge into `/couples-counseling/` unless LMHG confirms a separate audience or service. Preserve useful copy and use a 301 redirect only after GSC and backlink checks. | Relationship counseling, couples counseling, couples therapy, and marriage counseling share nearly the same Louisville search intent. The current draft can be a strong section on the parent page. | Medium-high |
-| 2 | `/couples-conflict-resolution/` | Replace the couples-only framing with `Conflict Resolution Counseling`. Consider `/conflict-resolution-counseling/` and reparenting under Family Therapy, with links from Couples Counseling. | The owner already confirmed that this service can include parents and children, siblings, parents and grandparents, and blended families. Broader DataForSEO results support family and counseling intent; the couples-only phrase leans toward mediation. | High |
-| 3 | `/therapy-in-your-home/` and `/locations/in-home/` | Choose one primary in-home page. The current structure favors keeping `/locations/in-home/` as the care-setting page and folding the therapy-specific copy into it. Redirect the other URL only after traffic and backlink checks. | Both pages answer closely related in-home mental health intent. The plugin already removes the old In-Home specialty classification, which points toward a care-setting rather than specialty model. | Medium |
-| 4 | `/attachment-therapy/` | If the service is only parent-child work, rename it `Parent-Child Attachment Therapy` and keep it under Family Therapy. Add an adult attachment page only if LMHG truly offers a separate adult service with provider depth. | Current LMHG copy is parent-child focused, but the Louisville SERP for attachment therapy leans toward adult attachment patterns and romantic relationships. The present title sets the wrong expectation for many searchers. | High after scope confirmation |
+| 1 | `/relationship-counseling/` | **Hold.** The owner first approved a merge into Couples Counseling, then said Relationship Counseling is a separate service for family relationships. Keep the current page unchanged until the contradiction is resolved. | A deletion or redirect would be hard to reverse and could remove a service the later answer says is distinct. | Low until confirmed |
+| 2 | `/couples-conflict-resolution/` | **Approved.** Replace it with `/conflict-resolution-counseling/`, use `Conflict Resolution Counseling`, and place it under Family Therapy with links from Couples Counseling. | The owner confirmed that the service covers couples and larger family systems. DataForSEO results support counseling intent and avoid mediation and Accelerated Resolution Therapy noise. | High |
+| 3 | `/therapy-in-your-home/` and `/locations/in-home/` | **Approved.** Keep `/locations/in-home/`, fold the therapy copy into it, and redirect `/therapy-in-your-home/`. | Both pages answer the same in-home intent. The location page is the stronger care-setting home and must remain under Locations. | High |
+| 4 | `/attachment-therapy/` | **Approved.** Keep the existing URL, rename the page `Parent-Child Attachment Therapy`, limit it to parent-child work, and keep it under Family Therapy. | The narrower title sets the right service expectation without creating an unnecessary URL change. Do not add an adult attachment page now. | High |
 
 ## Keep And Deepen
 
@@ -32,14 +32,14 @@ Keep the other service and specialty pages as separate pages for now. They have 
 
 Case Management should not be split into a second Targeted Case Management page. LMHG already ranks for the main Case Management phrase, and a second thin page would create avoidable overlap.
 
-## Conditional Addition
+## No New Pages
 
-Do not add a new service page solely for SEO at this time. The only reasonable conditional addition is an adult attachment therapy page, and only if LMHG confirms that it is a real, distinct service with enough provider expertise and copy to support it.
+Do not add a new service page solely for SEO at this time. Do not add an adult attachment page or a separate Targeted Case Management page.
 
-## Required Checks Before A Merge Or Deletion
+## Required Implementation Checks
 
-1. Restore Google Search Console access and compare query-page pairs for at least 90 days.
-2. Check backlinks and referring pages for every URL being considered for a redirect.
-3. Choose the stronger destination based on intent, clicks, impressions, links, and the real service model.
-4. Move useful copy and internal links before adding a 301 redirect.
-5. Confirm the old URL leaves the sitemap and that the destination is indexable and canonical.
+1. Move useful copy and all internal links before adding each 301 redirect.
+2. Update page data, menus, service relationships, FAQ relationships, media mappings, schema inputs, hidden inventories, and redirect records.
+3. Confirm the old URL leaves the sitemap and that the destination is indexable and canonical.
+4. Verify the old route returns one 301 to the exact destination and keeps the query string.
+5. Verify the retained route returns 200 and no duplicate published page remains.

@@ -36,7 +36,9 @@ One or both partners may also see a separate [individual therapist](/individual-
 
 [Couples counseling](/couples-counseling/) is a broad term for therapy with married or unmarried partners. It can overlap with relationship counseling and marriage counseling. This page puts more focus on trust, closeness, patterns that repeat, and choices about the relationship.
 
-[Conflict resolution counseling](/couples-conflict-resolution/) has a tighter focus on fights that get worse and on shutting down. It also covers repair after a fight. A couple may have needs that fit both areas. LMHG can help choose the best page or provider to start with.
+[Conflict resolution counseling](/conflict-resolution-counseling/) has a tighter focus on fights that get worse and on shutting down. It also covers repair after a fight. A couple may have needs that fit both areas. LMHG can help choose the best page or provider to start with.
+
+> Architecture hold: the owner first approved merging this page into Couples Counseling, then said it is a separate service for family relationships. Do not promote, delete, or redirect this page until that conflict is resolved.
 
 ## Getting Started
 

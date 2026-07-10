@@ -10,7 +10,7 @@ H1: Parenting Support in Louisville, KY
 
 Parenting support at Louisville Mental Health Group helps parents work through hard moments at home. It gives them a place to slow down, spot patterns, and choose clear next steps. The focus may be behavior, big feelings, limits, routines, school stress, or family strain.
 
-This service is for parents and other adults who care for a child. It is not a parenting class, a program that gives a certificate, a custody review, or a legal service.
+This service is for parents. It is part of child therapy and gives parents focused help with what is happening at home. It is not a parenting class, a program that gives a certificate, a custody review, or a legal service.
 
 ## When This May Help
 
@@ -28,19 +28,19 @@ You do not need to know the root cause before reaching out. Start with what you 
 
 ## What Support Can Look Like
 
-Support may include parent sessions, check-ins, and plans for home routines. A therapist may help parents notice what happens before conflict. Parents can practice clear limits, calm replies, and steady follow-through.
+Parenting support is parent-only work. It may include parent sessions, check-ins, and plans for home routines. A therapist may help parents notice what happens before conflict. Parents can practice clear limits, calm replies, and steady follow-through.
 
 The work may also cover how to repair after an argument. School or family contact may be part of the plan when it is useful and allowed.
 
-LMHG does not assume one plan fits every home. Some parents need a few visits for one concern. Some families need family sessions. Some children need their own therapist. More than one provider may help when each person has a clear need.
+LMHG does not assume one plan fits every home. Some parents need a few visits for one concern. Some children need their own therapist or family sessions through another part of child therapy. More than one provider may help when each person has a clear need.
 
 ## How Parenting Support Is Different
 
-Parenting support is not a class. It does not follow one set lesson plan or promise a certificate. It is counseling and guidance based on what is happening in your home.
+Parenting support is not a class. It does not follow one set lesson plan or promise a certificate. It is parent-only counseling and guidance based on what is happening in your home.
 
 [Family therapy](/family-therapy/) looks at the wider family pattern. It may include parents, children, siblings, grandparents, or others. Parenting support keeps the main focus on the adult who cares for the child.
 
-[Child therapy](/child-counseling/) gives the child their own support. A child may have therapy while a parent also gets help with rules, routines, and home stress.
+[Child therapy](/child-counseling/) is the parent service that includes parenting support. A child may have their own therapy while a parent also gets help with rules, routines, and home stress.
 
 For separated parents who need help working with each other, [co-parenting services](/co-parenting/) may be a better fit.
 
@@ -56,9 +56,9 @@ You do not need to know which service to pick. We can help sort that out with yo
 
 No. It is counseling and guidance for parents. It does not give a class certificate.
 
-### Can one parent start without the whole family?
+### Does the child attend parenting support sessions?
 
-Often, yes. One parent can reach out so LMHG can learn what is happening and talk about fit.
+No. Parenting support is for parents. A child may take part in another part of child therapy or family therapy when that fits the plan.
 
 ### Can this connect with child therapy?
 

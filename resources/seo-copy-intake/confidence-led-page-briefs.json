@@ -57,31 +57,26 @@
     },
     {
       "slug": "attachment-therapy",
-      "overall_confidence": "low",
+      "overall_confidence": "high",
       "high_confidence_inferences": [
-        "The current LMHG page belongs under Family Therapy and focuses on caregiver-child trust, connection, emotional safety, and repair.",
+        "The page belongs under Family Therapy and is limited to parent-child trust, connection, emotional safety, and repair.",
         "Caregiver participation is important and the plan should be individualized.",
         "The page should distinguish this work from Family Reunification and should not imply custody work or guaranteed repair."
       ],
-      "low_confidence_items": [
-        "Current Google results lean toward adult attachment patterns and relationship therapy, while LMHG's current page is parent-child and family focused. The intended public scope needs confirmation."
-      ],
-      "draft_path": "page-copy-drafts/attachment-therapy.md"
+      "low_confidence_items": [],
+      "draft_path": "page-copy-drafts/parent-child-attachment-therapy.md"
     },
     {
       "slug": "child-behavioral-intervention",
-      "overall_confidence": "medium",
+      "overall_confidence": "high",
       "high_confidence_inferences": [
         "Speak to parents who see behavior but may not know the cause.",
         "Present Child Behavioral Therapy as one type of Child Therapy chosen from the presenting problem.",
         "Include parent check-ins, home routines, family sessions, and school coordination when useful.",
         "Exclude psychiatry, medication, autism or learning testing, ABA, speech therapy, occupational therapy, custody opinions, and crisis response."
       ],
-      "low_confidence_items": [
-        "LMHG has not yet confirmed whether the service should publicly be called Child Behavioral Therapy or Child Behavioral Intervention.",
-        "The exact use of written behavior plans, reward systems, school observation, or parent-only coaching has not been stated."
-      ],
-      "draft_path": "page-copy-drafts/child-behavioral-intervention.md"
+      "low_confidence_items": [],
+      "draft_path": "page-copy-drafts/child-behavioral-therapy.md"
     },
     {
       "slug": "community-support",
@@ -96,7 +91,7 @@
       "draft_path": "page-copy-drafts/community-support.md"
     },
     {
-      "slug": "couples-conflict-resolution",
+      "slug": "conflict-resolution-counseling",
       "overall_confidence": "high",
       "high_confidence_inferences": [
         "The owner already confirmed that Conflict Resolution can include larger family systems, including parents and grandparents and blended families, so the page should not be couples-only.",
@@ -105,22 +100,18 @@
         "State clearly that this is therapy work, not mediation, legal work, or a service that takes sides.",
         "Use Conflict Resolution Counseling as the main public phrase because the broader Louisville SERP supports counseling intent while the current couples-only phrase leans toward mediation."
       ],
-      "low_confidence_items": [
-        "The current slug and title are couples-only and do not match the confirmed broader family scope. A redirect and final replacement slug require an architecture decision before promotion."
-      ],
-      "draft_path": "page-copy-drafts/couples-conflict-resolution.md"
+      "low_confidence_items": [],
+      "draft_path": "page-copy-drafts/conflict-resolution-counseling.md"
     },
     {
       "slug": "parenting-support",
-      "overall_confidence": "medium",
+      "overall_confidence": "high",
       "high_confidence_inferences": [
-        "Speak to parents and caregivers dealing with behavior, boundaries, communication, stress, and home routines.",
-        "Use an individualized mix of caregiver guidance, family sessions, child therapy, and school coordination when useful.",
+        "Speak to parents dealing with behavior, boundaries, communication, stress, and home routines.",
+        "Describe Parenting Support as parent-only support that is part of child therapy.",
         "Do not frame the service as a parenting class unless LMHG actually offers a class."
       ],
-      "low_confidence_items": [
-        "It is not yet clear whether Parenting Support may be delivered as parent-only counseling, coaching, family therapy, or a case-by-case mix for billing and public labeling."
-      ],
+      "low_confidence_items": [],
       "draft_path": "page-copy-drafts/parenting-support.md"
     },
     {
@@ -130,6 +121,7 @@
         "Speak to parents and caregivers.",
         "Explain that children often use play to show and work through feelings they cannot yet explain in a long talk.",
         "Present Play Therapy as one type of Child Therapy and explain that parent involvement often grows as the child gets younger.",
+        "Say play therapy is typically used with ages 2 to 12 without making that range a hard rule; some techniques may also be used with teens or adults.",
         "Cover big feelings, behavior changes, anxiety, grief, trauma, school stress, and family change without promising a result."
       ],
       "low_confidence_items": [],
@@ -144,24 +136,23 @@
         "Keep the parent-page rule that married and unmarried couples of any gender are welcome."
       ],
       "low_confidence_items": [
-        "It is not confirmed whether Relationship Counseling is only for romantic couples or may also cover other close relationships.",
-        "Search intent strongly overlaps Couples Counseling, so the final page purpose and keyword target need owner confirmation."
+        "The owner first approved merging this page into Couples Counseling, then gave a more specific answer that it is a separate service for family relationships. The final keep-or-merge decision must be confirmed before promotion."
       ],
       "draft_path": "page-copy-drafts/relationship-counseling.md"
     },
     {
-      "slug": "therapy-in-your-home",
-      "overall_confidence": "medium",
+      "slug": "locations/in-home",
+      "overall_confidence": "high",
       "high_confidence_inferences": [
         "Define in-home therapy as therapy delivered in the client's home, not a different therapy method.",
         "Use in-home mental health therapy early because search results are mixed with physical therapy and home health.",
         "The service may be useful when transportation, home routines, child needs, or family patterns make office-only therapy less useful.",
-        "Medicaid and commercial insurance may cover the service depending on fit and benefits."
+        "Medicaid and commercial insurance may cover the service depending on fit and benefits.",
+        "Use only Louisville and surrounding areas for the public service area.",
+        "Consolidate the service copy into the existing Locations child page instead of keeping a second in-home specialty page."
       ],
-      "low_confidence_items": [
-        "The exact service area, client eligibility rules, and any home-safety requirements have not been stated."
-      ],
-      "draft_path": "page-copy-drafts/therapy-in-your-home.md"
+      "low_confidence_items": [],
+      "draft_path": "page-copy-drafts/locations-in-home.md"
     }
   ]
 }
