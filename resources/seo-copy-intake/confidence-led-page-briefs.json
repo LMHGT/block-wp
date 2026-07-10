@@ -20,16 +20,15 @@
   "pages": [
     {
       "slug": "adolescent-counseling",
-      "overall_confidence": "medium",
+      "overall_confidence": "high",
       "high_confidence_inferences": [
         "Speak mainly to parents while keeping the page readable for teens.",
         "Use Teen Therapy as the main term and teen counseling or adolescent counseling as supporting terms.",
         "Cover mood changes, shutdown, anger, school pressure, social strain, trauma, and family conflict.",
-        "Connect the page to Child Therapy and Family Therapy without treating teens like younger children."
+        "Connect the page to Child Therapy and Family Therapy without treating teens like younger children.",
+        "Use the owner-approved privacy language covering private teen time, parent or caregiver check-ins, safety concerns, legally required sharing, and sharing only what is needed when possible."
       ],
-      "low_confidence_items": [
-        "The exact LMHG policy for teen privacy, parent updates, and safety-related disclosures has not been stated."
-      ],
+      "low_confidence_items": [],
       "draft_path": "page-copy-drafts/adolescent-counseling.md"
     },
     {
@@ -94,7 +93,7 @@
       "slug": "conflict-resolution-counseling",
       "overall_confidence": "high",
       "high_confidence_inferences": [
-        "The owner already confirmed that Conflict Resolution can include larger family systems, including parents and grandparents and blended families, so the page should not be couples-only.",
+        "Use Conflict Resolution Counseling for non-couple family relationships, including parents and adult children, siblings, parents and grandparents, and blended families. Route romantic partners to Couples Counseling.",
         "Include couples, parent-child conflict, siblings, parents and grandparents, and blended family members when they fit the presenting conflict.",
         "Focus on repeating conflict, escalation, shutdown, repair, and making hard talks more structured.",
         "State clearly that this is therapy work, not mediation, legal work, or a service that takes sides.",
@@ -109,7 +108,8 @@
       "high_confidence_inferences": [
         "Speak to parents dealing with behavior, boundaries, communication, stress, and home routines.",
         "Describe Parenting Support as parent-only support that is part of child therapy.",
-        "Do not frame the service as a parenting class unless LMHG actually offers a class."
+        "Do not frame the service as a parenting class unless LMHG actually offers a class.",
+        "Place Parenting Support under Child Therapy while Family Therapy may keep a contextual link."
       ],
       "low_confidence_items": [],
       "draft_path": "page-copy-drafts/parenting-support.md"
@@ -126,19 +126,6 @@
       ],
       "low_confidence_items": [],
       "draft_path": "page-copy-drafts/play-therapy.md"
-    },
-    {
-      "slug": "relationship-counseling",
-      "overall_confidence": "low",
-      "high_confidence_inferences": [
-        "Current site structure places the page under Couples Counseling.",
-        "A workable distinction is to focus this page on trust, closeness, repeating patterns, and relationship decisions while the conflict page focuses on arguments and repair skills.",
-        "Keep the parent-page rule that married and unmarried couples of any gender are welcome."
-      ],
-      "low_confidence_items": [
-        "The owner first approved merging this page into Couples Counseling, then gave a more specific answer that it is a separate service for family relationships. The final keep-or-merge decision must be confirmed before promotion."
-      ],
-      "draft_path": "page-copy-drafts/relationship-counseling.md"
     },
     {
       "slug": "locations/in-home",

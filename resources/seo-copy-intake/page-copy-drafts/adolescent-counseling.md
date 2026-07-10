@@ -1,4 +1,4 @@
-Status: draft pending owner review
+Status: owner approved
 Source slug: adolescent-counseling
 Primary keyword: teen therapy in Louisville KY
 Secondary keywords: teen counseling; adolescent counseling
@@ -29,9 +29,7 @@ Some families are not sure where to start. [Child Therapy](/child-counseling/) i
 
 ## What Support Can Look Like
 
-Adolescent counseling often includes private time with the teen. It may also include parent check-ins or family sessions. The mix depends on the teen, the concern, and the goals.
-
-Teens often need room to speak on their own. Parents also need to know how they can help. The therapist should explain what can stay private. The therapist should also explain when a safety concern must be shared. These talks help set clear limits from the start.
+Teen therapy often includes time for the teen to meet with the therapist alone. Parents or caregivers may also join check-ins or family sessions. At the first visit, the therapist explains what can stay private. The therapist also explains what may be shared and when a safety concern or law requires sharing. When possible, the therapist talks with the teen before sharing and shares only what is needed.
 
 LMHG may use a team approach when it helps. A teen may have one main therapist. Another therapist may join if a special skill is needed. Each role should stay clear. For some older teens, [Individual Counseling](/individual-counseling/) may be a better fit.
 
@@ -59,7 +57,7 @@ They may be. Parent check-ins or family sessions can be used when they fit the t
 
 ### Can a teen have privacy in therapy?
 
-Yes, but privacy has limits. The therapist should explain those limits and what happens if there is a safety concern.
+Yes, but privacy has limits. At the first visit, the therapist explains what may be shared and when a safety concern or law requires sharing.
 
 ### Is teen therapy the same as family therapy?
 

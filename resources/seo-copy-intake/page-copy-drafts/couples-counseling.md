@@ -1,12 +1,12 @@
-# Couples Counseling Page Copy Draft
+Status: owner approved
+Source slug: `couples-counseling`
+Primary keyword: `couples counseling in Louisville KY`
+Secondary keywords: `couples therapy`; `relationship counseling`; `marriage counseling`
+Title tag: `Couples Counseling in Louisville, KY | LMHG`
+Meta description: `Couples counseling in Louisville gives married and unmarried couples a structured place to work through hard talks, trust, closeness, and relationship stress.`
+H1: `Couples Counseling in Louisville, KY`
 
-- Status: draft pending owner review
-- Source slug: `couples-counseling`
-- Primary keyword: `couples counseling in Louisville KY`
-- Secondary keywords: `couples therapy`; `marriage counseling`
-- Title tag: `Couples Counseling in Louisville, KY | LMHG`
-- Meta description: `Couples counseling in Louisville gives married and unmarried couples a structured place to work through hard talks and relationship stress.`
-- H1: `Couples Counseling in Louisville, KY`
+# Couples Counseling in Louisville, KY
 
 Couples counseling gives two partners a structured place to talk through hard issues with a therapist. LMHG works with same-sex and opposite-sex couples, whether they are married or not. You do not have to agree on the cause of the problem before you start.
 
@@ -14,15 +14,15 @@ Couples counseling gives two partners a structured place to talk through hard is
 
 Couples therapy may help with:
 
-- Talks that turn into the same argument
-- A loss of trust
-- Feeling far apart or alone in the relationship
-- Parenting stress
-- Sex or intimacy concerns
-- Money stress
-- A major choice or life change
-- Thoughts about separation
-- Doubt about whether to stay together
+- Talks that turn into the same argument.
+- A loss of trust.
+- Feeling far apart or alone in the relationship.
+- Parenting stress.
+- Sex or intimacy concerns.
+- Money stress.
+- A major choice or life change.
+- Thoughts about separation.
+- Doubt about whether to stay together.
 
 You can come in when a problem is new or when it has been present for years. Therapy does not promise that the relationship will stay the same or be repaired. It gives both partners a clear way to talk and look at next steps.
 
@@ -34,11 +34,11 @@ Both people have a say. They help set the plan. The pace can slow when talks get
 
 The therapist does not take one partner's side. The role is to keep the talk fair, clear, and tied to the goals both partners set.
 
-## Couples Counseling And Other Relationship Support
+## Couples, Relationship, And Marriage Counseling
 
-Marriage counseling is couples counseling for people who are married. LMHG offers couples and marital counseling, but marriage is not required.
+Couples counseling, relationship counseling, and marriage counseling often mean the same kind of service. At LMHG, Couples Counseling is the main name. It is for two romantic partners who want help with trust, closeness, patterns that repeat, or hard choices about the relationship. Marriage is not required.
 
-[Conflict Resolution Counseling](/conflict-resolution-counseling/) can go deeper into repeat conflict among couples or other family members. [Relationship Counseling](/relationship-counseling/) focuses more on trust, closeness, patterns, and choices about the relationship. Couples counseling stays focused on the two partners and the goals they bring.
+[Conflict Resolution Counseling](/conflict-resolution-counseling/) has a different focus. It helps with conflict among non-couple family members, such as parents and adult children, siblings, grandparents, or blended family members. Couples Counseling stays focused on the two partners and the goals they bring.
 
 One or both partners may also use [Individual Counseling](/individual-counseling/). When that happens, a different therapist should lead the couple's work. Separate therapists keep the roles clear and give each service its own focus.
 
@@ -55,6 +55,10 @@ No. LMHG works with married and unmarried couples, including same-sex and opposi
 ### Does LMHG offer marriage counseling?
 
 Yes. Marriage counseling is available as couples counseling for married partners.
+
+### Is relationship counseling the same as couples counseling?
+
+The terms often overlap. LMHG uses Couples Counseling as the main name for work with married or unmarried romantic partners.
 
 ### Can one or both partners have individual therapy too?
 

@@ -6,7 +6,7 @@ This folder keeps owner answers, model inferences, SEO findings, and page copy d
 
 - `brand-and-page-copy-intake.json`: direct owner answers and confirmed page rules.
 - `confidence-led-page-briefs.json`: high-, medium-, and low-confidence inferences for pages that were drafted without another full interview.
-- `page-copy-drafts/`: complete copy drafts for all 23 service and specialty pages, pending owner review.
+- `page-copy-drafts/`: current copy drafts for 21 active service and specialty pages plus the consolidated In-Home location page.
 - `unresolved-questions.md`: one cumulative set of only the decisions that could not be made with high confidence.
 - `page-architecture-recommendations.md`: provisional keep, rename, merge, redirect, and conditional-add recommendations based on service boundaries and current search intent.
 

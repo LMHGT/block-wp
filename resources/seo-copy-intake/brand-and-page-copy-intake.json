@@ -93,7 +93,7 @@
       "Couples Counseling can cover communication, recurring arguments, emotional distance, trust repair, parenting stress, sex and intimacy, financial stress, major decisions, separation, and ambivalence.",
       "The Couples Counseling page should frame the service around making hard conversations more structured.",
       "Couples copy can mention that one or both partners may also have individual therapy, with clinician roles and boundaries kept clear.",
-      "The Conflict Resolution specialty should not be limited to couples. It can include conflict within larger family systems, such as parent-child conflict, siblings, parents and grandparents, or blended families.",
+      "Conflict Resolution Counseling is for non-couple family relationships, such as parent-child conflict, siblings, parents and grandparents, or blended families. Romantic partners should use Couples Counseling.",
       "Couples copy should avoid promising guaranteed relationship repair, taking sides, custody or legal opinions, or crisis response."
     ],
     "court_ordered_service_content_rules": [
@@ -189,11 +189,13 @@
     ],
     "confirmed_architecture_decisions_2026_07_10": [
       "Keep Couples Counseling as the main romantic-couple page.",
-      "Rename Couples Conflict Resolution to Conflict Resolution Counseling, broaden it to couples and family relationships, and place it under Family Therapy.",
+      "Merge Relationship Counseling into Couples Counseling and redirect /relationship-counseling/ to /couples-counseling/.",
+      "Keep Conflict Resolution Counseling under Family Therapy for non-couple family relationships.",
+      "Place Parenting Support under Child Therapy while Family Therapy may keep a contextual link.",
+      "Use the owner-approved Teen Therapy language for privacy, parent or caregiver involvement, safety concerns, and legally required sharing.",
       "Consolidate Therapy in Your Home into the existing /locations/in-home/ page and keep the Locations parent page.",
       "Rename Attachment Therapy to Parent-Child Attachment Therapy and limit the service to parent-child work.",
       "Keep Child Behavioral Therapy as the public service name.",
-      "Describe Parenting Support as support for parents only and as part of child therapy.",
       "Say play therapy is typically used with ages 2 to 12 while making clear that techniques may be used with older clients, including adults.",
       "Keep the public Case Management page and do not add a separate Targeted Case Management page.",
       "Do not add an adult attachment therapy page at this time.",
@@ -476,7 +478,7 @@
       ],
       "location_code": 2840,
       "language_code": "en",
-      "summary": "The broader family query returned an AI Overview plus family therapy and family counseling results. Conflict resolution counseling returned a direct Louisville therapy result but still mixed counseling and mediation intent. This supports broadening the page to couples and larger family systems, using Conflict Resolution Counseling as the main phrase, and clearly stating that LMHG provides therapy rather than mediation or legal services."
+      "summary": "The broader family query returned an AI Overview plus family therapy and family counseling results. Conflict resolution counseling returned a direct Louisville therapy result but still mixed counseling and mediation intent. The search data supported a broader family page and the Conflict Resolution Counseling phrase. The final owner decision narrows this page to non-couple family relationships and routes romantic partners to Couples Counseling."
     }
   ],
   "brand_level_answers": [
@@ -1607,7 +1609,7 @@
       "slug": "parenting-support",
       "type": "specialty",
       "title": "Parenting Support in Louisville, KY",
-      "parent_path": "/family-therapy/"
+      "parent_path": "/child-counseling/"
     },
     {
       "slug": "play-therapy",
@@ -1616,16 +1618,19 @@
       "parent_path": "/child-counseling/"
     },
     {
-      "slug": "relationship-counseling",
-      "type": "specialty",
-      "title": "Relationship Counseling in Louisville, KY",
-      "parent_path": "/couples-counseling/"
-    },
-    {
       "slug": "locations/in-home",
       "type": "location",
       "title": "In-Home Therapy in Louisville, KY",
       "parent_path": "/locations/"
+    }
+  ],
+  "merged_pages": [
+    {
+      "source_slug": "relationship-counseling",
+      "destination_slug": "couples-counseling",
+      "redirect": "/relationship-counseling/ -> /couples-counseling/",
+      "confirmed_at": "2026-07-10",
+      "owner_reason": "Relationship counseling and couples counseling are the same LMHG service."
     }
   ]
 }

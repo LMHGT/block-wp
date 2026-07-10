@@ -1,4 +1,4 @@
-Status: draft pending owner review
+Status: owner approved
 Source slug: parenting-support
 Primary keyword: parenting support Louisville KY
 Secondary keywords: parent counseling; caregiver guidance

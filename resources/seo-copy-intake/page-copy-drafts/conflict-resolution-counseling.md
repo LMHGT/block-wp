@@ -1,16 +1,16 @@
-Status: draft pending owner review
+Status: owner approved
 Source slug: `conflict-resolution-counseling`
 Primary keyword: `conflict resolution counseling louisville ky`
-Secondary keywords: `family conflict resolution counseling`; `couples conflict resolution therapy`
+Secondary keywords: `family conflict resolution counseling`; `family relationship conflict counseling`
 Title tag: `Conflict Resolution Counseling in Louisville, KY | LMHG`
-Meta description: `Conflict resolution counseling in Louisville for couples and families caught in repeat fights, shutdown, blame, or hard talks that go nowhere.`
+Meta description: `Conflict resolution counseling in Louisville for non-couple family relationships caught in repeat fights, shutdown, blame, or hard talks that go nowhere.`
 H1: `Conflict Resolution Counseling in Louisville, KY`
 
 # Conflict Resolution Counseling in Louisville, KY
 
 Hard talks can get stuck. They may turn into fights, blame, or long silence. The goal is not to decide who is right. The goal is to slow the pattern. It is also to see what is going on. This can give hard talks more structure.
 
-Couples may be married or unmarried. This work can also include parents and children or siblings. It can include parents and grandparents. It can also include members of a blended family. Who takes part will depend on the conflict. It will also depend on the plan.
+This work is for conflict among family members who are not a couple. It may include parents and adult children, siblings, parents and grandparents, or members of a blended family. Who takes part will depend on the conflict and the plan.
 
 ## When This May Help
 
@@ -40,19 +40,19 @@ LMHG may use more than one provider when roles are clear. One person may also ha
 
 [Family Therapy](/family-therapy/) is broad. It may look at family habits, stress, and daily life. It may also look at roles and how people talk. This page has a tighter aim. It works on a fight that repeats or keeps the family stuck.
 
-[Couples Counseling](/couples-counseling/) can help with trust, closeness, sex, money, and how two people talk. It may also cover parenting stress and big choices. This work may be one part of couples counseling. It can also help with fights among other family members.
+[Couples Counseling](/couples-counseling/) is for two romantic partners. It may cover trust, closeness, sex, money, parenting stress, and big choices. Conflict Resolution Counseling is for non-couple family relationships.
 
 This is therapy. It is not a legal service or custody review. It does not settle a case or make a binding deal. LMHG does not give legal advice or promise a court result.
 
 ## Getting Started
 
-Use the Reach Out form to share your contact details. Tell us who is involved and add a short note about the conflict. You do not need to know which service fits. It may be Family Therapy, Couples Counseling, or conflict-focused work. Someone from LMHG will follow up about fit and next steps.
+Use the Reach Out form to share your contact details. Tell us who is involved and add a short note about the conflict. You do not need to know whether Family Therapy or conflict-focused work fits best. Someone from LMHG will follow up about fit and next steps.
 
 ## Frequently Asked Questions
 
-### Is this only for couples?
+### Is this for couples?
 
-No. It may include couples or other family members. This can mean parents and children, siblings, parents and grandparents, or members of a blended family.
+No. Couples Counseling is for romantic partners. This service is for conflict among other family members, such as parents and adult children, siblings, parents and grandparents, or members of a blended family.
 
 ### Is this the same as mediation?
 
@@ -68,4 +68,4 @@ No. The therapist helps people see the pattern and have a more useful talk. The 
 
 ## Architecture Note
 
-The owner approved `/conflict-resolution-counseling/` as the replacement for the current couples-only page. Place it under Family Therapy and redirect `/couples-conflict-resolution/` after the merged page is live.
+Keep `/conflict-resolution-counseling/` under Family Therapy for non-couple family relationships. Redirect the old couples-focused route `/couples-conflict-resolution/` to `/couples-counseling/`.

@@ -102,7 +102,7 @@ function lmhg_site_core_redirect_map(): array {
 		return $map;
 	}
 
-	$map = array();
+	$map = lmhg_site_core_static_redirect_map();
 	$redirects = get_option( 'lmhg_route_redirects', array() );
 	if ( ! is_array( $redirects ) || empty( $redirects ) ) {
 		$manifest = lmhg_site_core_read_route_manifest();
@@ -133,6 +133,30 @@ function lmhg_site_core_redirect_map(): array {
 	}
 
 	return $map;
+}
+
+/**
+ * Returns redirects owned by the deployed site topology.
+ *
+ * These rules remain active even when no imported Astro redirect manifest is present.
+ *
+ * @return array<string,array{target:string,statusCode:int}>
+ */
+function lmhg_site_core_static_redirect_map(): array {
+	return array(
+		'/couples-conflict-resolution/' => array(
+			'target'     => '/couples-counseling/',
+			'statusCode' => 301,
+		),
+		'/relationship-counseling/'      => array(
+			'target'     => '/couples-counseling/',
+			'statusCode' => 301,
+		),
+		'/therapy-in-your-home/'        => array(
+			'target'     => '/locations/in-home/',
+			'statusCode' => 301,
+		),
+	);
 }
 
 /**
