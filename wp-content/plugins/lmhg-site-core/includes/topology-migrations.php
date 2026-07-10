@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_OPTION  = 'lmhg_content_topology_migration_version';
-const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_VERSION = '2026-07-10-service-topology-v4';
+const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_VERSION = '2026-07-10-service-topology-v5';
 
 add_action( 'init', 'lmhg_site_core_run_topology_migration', 27 );
 
