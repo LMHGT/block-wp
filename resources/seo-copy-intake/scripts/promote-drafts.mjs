@@ -21,6 +21,21 @@ const targetSlugs = new Set([
   'play-therapy',
 ]);
 
+const metadataSlugs = new Set([
+  ...targetSlugs,
+  'adolescent-counseling',
+  'attachment-therapy',
+  'child-behavioral-intervention',
+  'conflict-resolution-counseling',
+  'couples-counseling',
+  'parenting-support',
+]);
+
+const draftNames = {
+  'attachment-therapy': 'parent-child-attachment-therapy',
+  'child-behavioral-intervention': 'child-behavioral-therapy',
+};
+
 const [, , draftsDir, pageDataPath] = process.argv;
 if (!draftsDir || !pageDataPath) {
   throw new Error('Usage: promote-drafts.mjs <drafts-dir> <wp2026-page-data.json>');
@@ -65,8 +80,10 @@ function parseDraft(filePath) {
     metadataEnd = Math.max(metadataEnd, index);
   });
 
-  const h1 = meta.h1;
+  const explicitPageHeading = lines.find((line) => /^# (?!.*Page Copy Draft).+$/.test(line.trim()));
+  const h1 = meta.h1 || explicitPageHeading?.replace(/^#\s+/, '').trim();
   if (!h1) throw new Error(`Missing H1 metadata in ${filePath}`);
+  meta.h1 = h1;
 
   const explicitH1 = lines.findIndex((line, index) => index > metadataEnd && line.trim() === `# ${h1}`);
   const bodyStart = explicitH1 >= 0 ? explicitH1 + 1 : metadataEnd + 1;
@@ -219,14 +236,18 @@ function faqItems(draft) {
 
 const data = JSON.parse(fs.readFileSync(pageDataPath, 'utf8'));
 const promoted = [];
+const metadataPromoted = [];
 for (const page of data.pages) {
-  if (!targetSlugs.has(page.slug)) continue;
-  const draftPath = path.join(draftsDir, `${page.slug}.md`);
+  if (!metadataSlugs.has(page.slug)) continue;
+  const draftPath = path.join(draftsDir, `${draftNames[page.slug] ?? page.slug}.md`);
   if (!fs.existsSync(draftPath)) throw new Error(`Draft not found: ${draftPath}`);
   const draft = parseDraft(draftPath);
-  page.title = draft.meta.h1;
-  page.content = buildContent(page, draft);
-  page.faqItems = faqItems(draft);
+  if (targetSlugs.has(page.slug)) {
+    page.title = draft.meta.h1;
+    page.content = buildContent(page, draft);
+    page.faqItems = faqItems(draft);
+    promoted.push(page.slug);
+  }
   page.seo = {
     title: draft.meta['title tag'],
     description: draft.meta['meta description'],
@@ -237,11 +258,13 @@ for (const page of data.pages) {
     canonicalUrl: page.path,
     status: 'owner-answer-based-rich-copy',
   };
-  promoted.push(page.slug);
+  metadataPromoted.push(page.slug);
 }
 
 const missing = [...targetSlugs].filter((slug) => !promoted.includes(slug));
 if (missing.length) throw new Error(`Page-data entries not found: ${missing.join(', ')}`);
+const missingMetadata = [...metadataSlugs].filter((slug) => !metadataPromoted.includes(slug));
+if (missingMetadata.length) throw new Error(`Metadata entries not found: ${missingMetadata.join(', ')}`);
 
 fs.writeFileSync(pageDataPath, `${JSON.stringify(data, null, 2)}\n`);
-console.log(`Promoted ${promoted.length} drafts: ${promoted.join(', ')}`);
+console.log(`Promoted ${promoted.length} bodies and ${metadataPromoted.length} metadata records.`);

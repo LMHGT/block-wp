@@ -39,7 +39,20 @@
           "question": "Is teen therapy the same as family therapy?",
           "answer": "No. Teen therapy centers on the teen. Family therapy works more on patterns and stress across the family."
         }
-      ]
+      ],
+      "seo": {
+        "title": "Teen Therapy in Louisville, KY | LMHG",
+        "description": "Teen therapy in Louisville, KY for mood changes, worry, sadness, school pressure, social stress, trauma, family conflict, and overwhelm.",
+        "h1": "Teen Therapy in Louisville, KY",
+        "primaryKeyword": "teen therapy in Louisville KY",
+        "secondaryKeywords": [
+          "teen counseling",
+          "adolescent counseling"
+        ],
+        "schemaType": "MedicalWebPage",
+        "canonicalUrl": "/adolescent-counseling/",
+        "status": "owner-answer-based-rich-copy"
+      }
     },
     {
       "sourceId": 7,
@@ -163,7 +176,20 @@
           "question": "Is this the same as family therapy?",
           "answer": "It may be part of family therapy, but it has a tighter focus on parent-child trust and repair."
         }
-      ]
+      ],
+      "seo": {
+        "title": "Parent-Child Attachment Therapy in Louisville, KY | LMHG",
+        "description": "Parent-child attachment therapy in Louisville for families who want help with trust, feeling safe, and rebuilding a close bond. Reach out to ask about fit.",
+        "h1": "Parent-Child Attachment Therapy in Louisville, KY",
+        "primaryKeyword": "parent child attachment therapy Louisville KY",
+        "secondaryKeywords": [
+          "attachment therapy for children",
+          "family therapy for attachment concerns"
+        ],
+        "schemaType": "MedicalWebPage",
+        "canonicalUrl": "/attachment-therapy/",
+        "status": "owner-answer-based-rich-copy"
+      }
     },
     {
       "sourceId": 16,
@@ -258,7 +284,20 @@
           "question": "Is this crisis support?",
           "answer": "No. This is not a crisis response service. Use emergency or crisis resources when there is an immediate safety concern."
         }
-      ]
+      ],
+      "seo": {
+        "title": "Child Behavioral Therapy in Louisville, KY | LMHG",
+        "description": "Child behavioral therapy in Louisville for behavior concerns, big feelings, school stress, daily routines, and parent support. Reach out to ask about fit.",
+        "h1": "Child Behavioral Therapy in Louisville, KY",
+        "primaryKeyword": "child behavioral therapy Louisville KY",
+        "secondaryKeywords": [
+          "child behavioral therapist",
+          "child behavior therapy"
+        ],
+        "schemaType": "MedicalWebPage",
+        "canonicalUrl": "/child-behavioral-intervention/",
+        "status": "owner-answer-based-rich-copy"
+      }
     },
     {
       "sourceId": 20,
@@ -477,7 +516,20 @@
           "question": "Will the therapist decide who is right?",
           "answer": "No. The therapist helps people see the pattern and have a more useful talk. The therapist does not take sides."
         }
-      ]
+      ],
+      "seo": {
+        "title": "Conflict Resolution Counseling in Louisville, KY | LMHG",
+        "description": "Conflict resolution counseling in Louisville for non-couple family relationships caught in repeat fights, shutdown, blame, or hard talks that go nowhere.",
+        "h1": "Conflict Resolution Counseling in Louisville, KY",
+        "primaryKeyword": "conflict resolution counseling louisville ky",
+        "secondaryKeywords": [
+          "family conflict resolution counseling",
+          "family relationship conflict counseling"
+        ],
+        "schemaType": "MedicalWebPage",
+        "canonicalUrl": "/conflict-resolution-counseling/",
+        "status": "owner-answer-based-rich-copy"
+      }
     },
     {
       "sourceId": 27,
@@ -510,7 +562,21 @@
           "question": "Will the therapist tell us who is right?",
           "answer": "No. The therapist does not take sides or give legal or custody opinions."
         }
-      ]
+      ],
+      "seo": {
+        "title": "Couples Counseling in Louisville, KY | LMHG",
+        "description": "Couples counseling in Louisville gives married and unmarried couples a structured place to work through hard talks, trust, closeness, and relationship stress.",
+        "h1": "Couples Counseling in Louisville, KY",
+        "primaryKeyword": "couples counseling in Louisville KY",
+        "secondaryKeywords": [
+          "couples therapy",
+          "relationship counseling",
+          "marriage counseling"
+        ],
+        "schemaType": "MedicalWebPage",
+        "canonicalUrl": "/couples-counseling/",
+        "status": "owner-answer-based-rich-copy"
+      }
     },
     {
       "sourceId": 28,
@@ -900,7 +966,20 @@
           "question": "Does this include custody advice?",
           "answer": "No. Parenting support does not include legal advice, custody opinions, custody reviews, or court outcome promises."
         }
-      ]
+      ],
+      "seo": {
+        "title": "Parenting Support in Louisville, KY | LMHG",
+        "description": "Parenting support in Louisville for child behavior, home routines, family stress, and clearer next steps. Reach out to ask about fit.",
+        "h1": "Parenting Support in Louisville, KY",
+        "primaryKeyword": "parenting support Louisville KY",
+        "secondaryKeywords": [
+          "parent counseling",
+          "caregiver guidance"
+        ],
+        "schemaType": "MedicalWebPage",
+        "canonicalUrl": "/parenting-support/",
+        "status": "owner-answer-based-rich-copy"
+      }
     },
     {
       "sourceId": 50,
