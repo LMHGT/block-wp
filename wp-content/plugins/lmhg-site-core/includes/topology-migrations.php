@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_OPTION  = 'lmhg_content_topology_migration_version';
-const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_VERSION = '2026-07-10-rich-copy-v6';
+const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_VERSION = '2026-07-10-rich-copy-v7';
 
 add_action( 'init', 'lmhg_site_core_run_topology_migration', 27 );
 
@@ -509,6 +509,31 @@ function lmhg_site_core_remove_legacy_faq_posts( string $faq_slug ): bool {
 					$prefix . $faq_slug . '-faq-start',
 					$prefix . $faq_slug . '-faq-louisville',
 				),
+			)
+		);
+
+		foreach ( $posts as $post ) {
+			if ( $post instanceof WP_Post && false === wp_delete_post( (int) $post->ID, true ) ) {
+				return false;
+			}
+		}
+	}
+
+	$legacy_slugs = array(
+		'individual-counseling' => array(
+			'individual-counseling-concerns',
+			'individual-counseling-therapy-type',
+			'individual-counseling-start-louisville',
+		),
+	);
+	if ( isset( $legacy_slugs[ $faq_slug ] ) ) {
+		$posts = get_posts(
+			array(
+				'post_type'      => LMHG_SITE_CORE_FAQ_POST_TYPE,
+				'post_status'    => 'any',
+				'posts_per_page' => -1,
+				'no_found_rows'  => true,
+				'post_name__in'  => $legacy_slugs[ $faq_slug ],
 			)
 		);
 
