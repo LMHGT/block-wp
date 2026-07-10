@@ -8,13 +8,13 @@
 - Meta description: `Conflict resolution counseling in Louisville for couples and families caught in repeat fights, shutdown, blame, or hard talks that go nowhere.`
 - H1: `Conflict Resolution Counseling in Louisville, KY`
 
-Conflict resolution counseling helps couples and families with hard talks. These talks may turn into fights, blame, or long silence. The goal is not to decide who is right. The goal is to slow the pattern. It is also to see what is going on. This can give hard talks more structure.
+Hard talks can get stuck. They may turn into fights, blame, or long silence. The goal is not to decide who is right. The goal is to slow the pattern. It is also to see what is going on. This can give hard talks more structure.
 
 Couples may be married or unmarried. This work can also include parents and children or siblings. It can include parents and grandparents. It can also include members of a blended family. Who takes part will depend on the conflict. It will also depend on the plan.
 
 ## When This May Help
 
-Conflict resolution counseling may help when:
+This work may help when:
 
 - the same fight keeps coming back.
 - one person gets louder while another shuts down.
@@ -28,21 +28,21 @@ You do not have to wait until each talk becomes a fight. Some families seek help
 
 ## What Support Can Look Like
 
-A therapist may help each person see the full conflict. This includes what happens before, during, and after it. Sessions can help people slow down and name the real issue. People can learn to listen before they plan a reply. They can also ask for change in a clear way.
+A therapist may help each person see the fight as a whole. This includes what happens before, during, and after it. Sessions can help people slow down and name the real issue. People can learn to listen before they plan a reply. They can also ask for change in a clear way.
 
 People may practice taking a break without dropping the issue. They may learn to return to the talk and set a clear limit. They may also learn to repair harm after someone gets hurt.
 
-The therapist does not pick a winner or take sides. Each person is asked to look at their part in the pattern. LMHG cannot promise a result or repair.
+The therapist does not pick a winner or take sides. Each person looks at what they do. LMHG cannot promise that things will change.
 
-LMHG may use more than one provider when each role is clear. For example, one person may have a separate [individual therapist](/individual-counseling/). Another therapist may lead the conflict work.
+LMHG may use more than one provider when roles are clear. One person may also have their own [therapist](/individual-counseling/). A different therapist may lead this work.
 
 ## Conflict Resolution, Family Therapy, And Couples Counseling
 
-[Family Therapy](/family-therapy/) is broad. It may focus on family patterns, stress, and routines. It may also focus on roles and communication. Conflict resolution counseling has a tighter focus. It works on a conflict that repeats or keeps the family stuck.
+[Family Therapy](/family-therapy/) is broad. It may look at family habits, stress, and daily life. It may also look at roles and how people talk. This page has a tighter aim. It works on a fight that repeats or keeps the family stuck.
 
-[Couples Counseling](/couples-counseling/) covers communication, trust, closeness, sex, and money. It may also cover parenting stress and major choices. Conflict resolution may be one part of that work. This page can also fit conflicts among other family members.
+[Couples Counseling](/couples-counseling/) can help with trust, closeness, sex, money, and how two people talk. It may also cover parenting stress and big choices. This work may be one part of couples counseling. It can also help with fights among other family members.
 
-Conflict resolution counseling is therapy. It is not mediation, legal work, or custody review. It does not make a binding agreement. LMHG does not give legal advice or promise a court outcome.
+This is therapy. It is not a legal service or custody review. It does not settle a case or make a binding deal. LMHG does not give legal advice or promise a court result.
 
 ## Getting Started
 
@@ -50,17 +50,17 @@ Use the Reach Out form to share your contact details. Tell us who is involved an
 
 ## Frequently Asked Questions
 
-### Is conflict resolution counseling only for couples?
+### Is this only for couples?
 
-No. It may include couples or other family members. This can include parents and children or siblings. It can include parents and grandparents. It can also include members of a blended family.
+No. It may include couples or other family members. This can mean parents and children, siblings, parents and grandparents, or members of a blended family.
 
 ### Is this the same as mediation?
 
-No. This is therapy. It works on patterns, communication, and repair. LMHG does not settle legal disputes or make binding agreements.
+No. This is therapy. It works on habits, how people talk, and how they make up after a fight. LMHG does not settle legal cases or make binding deals.
 
 ### Does everyone have to attend every session?
 
-Not always. The therapist decides who should attend. This choice is based on the conflict, the goals, and clear provider roles.
+Not always. The therapist will help decide who should come. The plan will fit the goals and each provider's role.
 
 ### Will the therapist decide who is right?
 
