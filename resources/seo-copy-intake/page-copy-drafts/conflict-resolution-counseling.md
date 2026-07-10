@@ -1,12 +1,12 @@
-# Conflict Resolution Counseling Page Copy Draft
+Status: draft pending owner review
+Source slug: `conflict-resolution-counseling`
+Primary keyword: `conflict resolution counseling louisville ky`
+Secondary keywords: `family conflict resolution counseling`; `couples conflict resolution therapy`
+Title tag: `Conflict Resolution Counseling in Louisville, KY | LMHG`
+Meta description: `Conflict resolution counseling in Louisville for couples and families caught in repeat fights, shutdown, blame, or hard talks that go nowhere.`
+H1: `Conflict Resolution Counseling in Louisville, KY`
 
-- Status: draft pending owner review
-- Source slug: `conflict-resolution-counseling`
-- Primary keyword: `conflict resolution counseling louisville ky`
-- Secondary keywords: `family conflict resolution counseling`; `couples conflict resolution therapy`
-- Title tag: `Conflict Resolution Counseling in Louisville, KY | LMHG`
-- Meta description: `Conflict resolution counseling in Louisville for couples and families caught in repeat fights, shutdown, blame, or hard talks that go nowhere.`
-- H1: `Conflict Resolution Counseling in Louisville, KY`
+# Conflict Resolution Counseling in Louisville, KY
 
 Hard talks can get stuck. They may turn into fights, blame, or long silence. The goal is not to decide who is right. The goal is to slow the pattern. It is also to see what is going on. This can give hard talks more structure.
 

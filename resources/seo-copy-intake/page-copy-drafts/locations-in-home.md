@@ -43,8 +43,6 @@ The main difference is the job, not just the place. A therapist gives therapy. A
 
 Use the [Reach Out intake form](https://intakeq.com/new/g91Z8x/bjxuno). Tell us who needs help and why home visits may work better. You do not need to share private health details on the form. Our team will check fit, safety, location, insurance, and open providers. Asking about in-home therapy does not mean home visits will be open.
 
-This copy replaces the separate Therapy in Your Home specialty page and belongs on the existing `/locations/in-home/` page.
-
 ## Frequently Asked Questions
 
 ### Is in-home therapy the same as home health or physical therapy?
@@ -62,3 +60,7 @@ Commercial insurance or Medicaid may cover it. LMHG must check the plan and serv
 ### Can family members join an in-home session?
 
 They may join when the therapist and client agree that family input fits the therapy plan.
+
+## Architecture Note
+
+This copy replaces the separate Therapy in Your Home specialty page and belongs on the existing `/locations/in-home/` page.
