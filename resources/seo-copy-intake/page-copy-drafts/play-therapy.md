@@ -1,7 +1,7 @@
-Status: draft pending owner review
+Status: approved for live promotion from recorded owner answers
 Source slug: play-therapy
 Primary keyword: play therapy in Louisville, KY
-Secondary keywords: child therapy; child behavioral therapy
+Secondary keywords: child therapy; therapy through play
 Title tag: Play Therapy in Louisville, KY | LMHG
 Meta description: Play therapy in Louisville helps children work through feelings, stress, behavior, trauma, and family change. Reach out to ask about fit.
 H1: Play Therapy in Louisville, KY

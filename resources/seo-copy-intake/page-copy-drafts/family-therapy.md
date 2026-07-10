@@ -1,6 +1,6 @@
 # Family Therapy Page Copy Draft
 
-- Status: draft pending owner review
+- Status: approved for live promotion from recorded owner answers
 - Source slug: `family-therapy`
 - Primary keyword: `family therapy in Louisville KY`
 - Secondary keywords: `family counseling`; `family therapist`
@@ -28,7 +28,7 @@ The goal is not to label one person as the problem. Therapy can help each person
 
 The first talks focus on the concern and what the family wants to change. The therapist can help set a plan for who should join. Parents, children, siblings, grandparents, or other family members may take part.
 
-Not every person has to attend every session. The right mix must fit the goal and each person's needs. A therapist may meet with the group, part of the group, or one person at a time. The plan can change as needs change. Goals may shift with time. That is okay. The group can make a new plan.
+Not every person has to attend every session. The right mix must fit the goal and each person's needs. A therapist may meet with the whole group or part of the group. The plan can change as needs change. Goals may shift with time. That is okay. The group can make a new plan.
 
 Sessions may focus on clear talks, family roles, daily routines, and the reasons behind each person's actions. Each voice can be heard. Family therapy does not promise that every tie will be fixed. It offers a clear place to work on the issue.
 
@@ -58,4 +58,4 @@ Yes. A few family sessions may be added when a family tie is part of the work.
 
 ### Does family therapy include mediation or court opinions?
 
-No. This service does not provide mediation, custody reviews, or court opinions.
+No. This service does not provide mediation, custody evaluations, or court opinions.

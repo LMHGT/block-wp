@@ -1,6 +1,6 @@
 # Child Therapy Page Copy Draft
 
-- Status: draft pending owner review
+- Status: approved for live promotion from recorded owner answers
 - Source slug: `child-counseling`
 - Primary keyword: `child therapy in Louisville KY`
 - Secondary keywords: `child counseling`; `child therapist`
@@ -26,11 +26,13 @@ These signs do not tell you the full cause. A therapist can learn more about you
 
 ## What Support Can Look Like
 
-There is no single plan for every child. The therapist picks an approach based on the child's age, needs, and main concern. Sessions may use play, art, games, stories, talk, or skill practice.
+There is no single plan for every child. The therapist picks an approach based on the child's age, needs, and main concern. Sessions may use play, talk, or skill practice.
 
 Parent help is also shaped case by case. It may include parent check-ins, a family session, help with home routines, or talks with a school when needed and approved. Younger children often need a parent to take a larger role.
 
-The therapist will explain who joins each session and what can be shared. The goal is to support the child while giving parents useful ways to help at home.
+Parents may also need help using the plan between visits. This can include a simple routine, a new way to respond to behavior, or a way to help the child name a feeling before it grows.
+
+The therapist will explain how parents will be involved. Parent check-ins and updates depend on the child's age, needs, and plan. The goal is to support the child while giving parents useful ways to help at home.
 
 ## Child Therapy, Play Therapy, And Behavior Therapy
 

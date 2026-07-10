@@ -1,6 +1,6 @@
 # Adult Counseling Page Copy Draft
 
-- Status: draft pending owner review
+- Status: approved for live promotion from recorded owner answers
 - Source slug: `adult-counseling`
 - Primary keyword: `adult counseling in Louisville KY`
 - Secondary keywords: `adult therapy`; `individual counseling`

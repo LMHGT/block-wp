@@ -1,6 +1,6 @@
 # Anxiety And Depression Therapy Page Copy Draft
 
-- Status: draft pending owner review
+- Status: approved for live promotion from recorded owner answers
 - Source slug: `anxiety-depression-therapy`
 - Primary keyword: `anxiety and depression therapy in Louisville KY`
 - Secondary keywords: `anxiety therapy`; `depression counseling`

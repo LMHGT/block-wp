@@ -1,6 +1,6 @@
 # Trauma Therapy Page Copy Draft
 
-- Status: draft pending owner review
+- Status: approved for live promotion from recorded owner answers
 - Source slug: `trauma-therapy`
 - Primary keyword: `trauma therapy Louisville KY`
 - Secondary keywords: `trauma-informed therapist`; `trauma counseling`
@@ -25,9 +25,9 @@ You do not need to know the right term for what is going on. You can start with 
 
 ## What Support Can Look Like
 
-Trauma therapy does not always start with the hardest part of the story. Early work may focus on coping skills, safety, trust, and ways to feel more steady. This step is often called stabilization. Deeper work can come later if it fits your needs.
+Trauma therapy does not always start with the hardest part of the story. Early work may focus on coping skills, safety, trust, and ways to feel more steady. Deeper work can come later if it fits your needs.
 
-The plan may use talk therapy, grounding skills, CBT, TF-CBT, family support, or another method. Adults and teens may work one-on-one through [Individual Counseling](/individual-counseling/). A child may use [Child Therapy](/child-counseling/) with help from a parent or caregiver. A family may also use [Family Therapy](/family-therapy/) when trauma has changed trust, roles, or daily life.
+The plan may use talk therapy, grounding skills, methods that work on thoughts and actions, family support, or another approach. Adults and teens may work one-on-one through [Individual Counseling](/individual-counseling/). A child may use [Child Therapy](/child-counseling/) with help from a parent or caregiver. A family may also use [Family Therapy](/family-therapy/) when trauma has changed trust, roles, or daily life.
 
 Your therapist will help choose the pace and tools. The plan can change as needs change. No one method is right for every person.
 
@@ -51,7 +51,7 @@ No. You can start with what is affecting you now. Therapy can first focus on tru
 
 ### Is EMDR always part of trauma therapy?
 
-No. EMDR is one option. Trauma therapy may also use talk therapy, grounding skills, CBT, TF-CBT, child therapy, or family support.
+No. EMDR is one option. Trauma therapy may also use talk therapy, grounding skills, methods that work on thoughts and actions, child therapy, or family support.
 
 ### Can children and teens receive trauma therapy?
 
@@ -59,4 +59,4 @@ Yes, when it fits their needs. The plan may include a parent or caregiver, famil
 
 ### Does LMHG provide crisis care or medication management?
 
-No. LMHG does not provide emergency crisis care, inpatient or residential care, or medication management. LMHG also does not provide forensic trauma evaluations or custody opinions.
+No. LMHG does not provide emergency crisis care, inpatient or residential care, or medication management. LMHG also does not provide trauma evaluations for court cases or custody opinions.

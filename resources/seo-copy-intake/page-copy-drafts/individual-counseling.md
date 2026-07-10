@@ -1,6 +1,6 @@
 # Individual Counseling Page Copy Draft
 
-- Status: draft pending owner review
+- Status: approved for live promotion from recorded owner answers
 - Source slug: `individual-counseling`
 - Primary keyword: `individual counseling in Louisville KY`
 - Secondary keywords: `individual therapy`; `one-on-one therapy`
@@ -27,6 +27,8 @@ You do not need to know the cause or the right therapy term before you start. Yo
 
 Early sessions help you and your therapist learn what brings you in. You can talk about goals, privacy, pace, and what may be useful. Part of the work is choosing therapy methods that fit why you came.
 
+Because this is one-on-one work, the plan can be very flexible. You can spend more time on one concern, change a goal, or slow the pace when a topic needs more care.
+
 Most clients have one main therapist they see on a regular basis. At times, a second therapist may help with a focused need. For example, you may keep your main therapist and also meet with an [EMDR therapist](/emdr-therapy/). Each therapist has a clear role.
 
 The same rule can help keep boundaries clear when couples work is added. One therapist may meet with the couple, while a different therapist provides one-on-one support.
@@ -37,7 +39,7 @@ LMHG accepts Medicaid, commercial insurance, and private pay when they fit the s
 
 Individual counseling is the broad one-on-one service. [Adult Counseling](/adult-counseling/) speaks to adult needs, while [Teen Therapy](/adolescent-counseling/) is written for teens and their families. Your therapist can help decide whether a more focused page or service fits your needs.
 
-If family or couple talks may help, that work can be added with clear roles. It does not take away the private focus of your own therapy.
+If family or couple talks may help, that work can be added with clear roles. A different therapist may lead that service so each therapist's role stays clear.
 
 ## Getting Started
 

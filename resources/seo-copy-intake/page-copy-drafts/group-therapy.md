@@ -1,4 +1,4 @@
-Status: draft pending owner review
+Status: approved for live promotion from recorded owner answers
 Source slug: `group-therapy`
 Primary keyword: group therapy Louisville KY
 Secondary keywords: therapy groups Louisville KY; clinician-led group therapy
@@ -31,13 +31,15 @@ The group leader sets the plan for each session. They explain the rules and help
 
 Clients may learn from one another and help each other. The clinician still leads the work. Groups are not peer-led, anonymous, or drop-in. Group therapy does not give emergency help.
 
+The clinician also explains privacy rules and their limits. Group members are expected to respect each other's privacy, but LMHG cannot promise what another member may share outside the group.
+
 ## How Group Therapy Differs From Other Therapy
 
 Group therapy includes several clients and one or more clinicians. The shared setting is part of the work. [Individual Counseling](/individual-counseling/) gives one client more one-on-one time with a therapist. [Family Therapy](/family-therapy/) brings family members into therapy to work on shared needs.
 
-Group therapy may be the main service for a time. It may also add to another form of therapy. It does not always replace one-on-one work. A clinician can help decide which plan makes sense.
+Group therapy can add a different kind of practice and shared learning to individual or family therapy. A clinician can help decide whether a group is a useful part of the client's plan.
 
-Cost and coverage depend on the group and the client's plan. The [Costs and Insurance page](/insurance/) explains the main payment choices. LMHG must check the group, coverage, and cost before sessions start.
+Group details can change. LMHG will explain the topic, schedule, age range, and any other steps before a client joins.
 
 ## Getting Started
 
@@ -55,7 +57,7 @@ Open groups and spots change. Ask LMHG what is open now. Full group details will
 
 ### Can group therapy replace individual therapy?
 
-Sometimes it may be the main service. In other cases, it adds to individual or family therapy. Fit depends on the client's needs.
+Group therapy can be a useful addition to individual or family therapy. Fit depends on the client's needs and the group.
 
 ### Is group therapy for crisis help?
 

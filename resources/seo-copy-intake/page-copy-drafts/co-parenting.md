@@ -1,6 +1,6 @@
 # Co-Parenting Services Page Copy Draft
 
-- Status: draft pending owner review
+- Status: approved for live promotion from recorded owner answers
 - Source slug: `co-parenting`
 - Primary keyword: `co-parenting services louisville ky`
 - Secondary keywords: `co-parenting counseling louisville ky`; `court ordered co-parenting intervention`
@@ -36,6 +36,8 @@ Sessions may be one-on-one or joint. The provider will choose the format. The ne
 LMHG can review a court order before the work starts. Sessions may cover rules for contact. Parents may learn ways to share key facts. They may work on school plans or medical choices. Schedules and family changes may also be part of the work.
 
 The provider stays impartial. They do not take sides. LMHG cannot promise less conflict or a set court result.
+
+The plan can change as new concerns come up. The provider will keep the work tied to the child's needs and the goals set for the service.
 
 ## How Co-Parenting Services Are Different
 

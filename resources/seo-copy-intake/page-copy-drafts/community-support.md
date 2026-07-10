@@ -1,7 +1,7 @@
-Status: draft pending owner review
+Status: approved for live promotion from recorded owner answers
 Source slug: `community-support`
 Primary keyword: community support services Louisville KY
-Secondary keywords: mental health community support services; community-based mental health services
+Secondary keywords: mental health community support services; Community Support Associate
 Title tag: Community Support Services in Louisville, KY | LMHG
 Meta description: Community support helps clients practice therapy goals in daily life while working with a regular therapist. Ask LMHG about fit and payment.
 H1: Community Support Services in Louisville, KY
@@ -28,6 +28,8 @@ Community support is often short-term and focused. The type and amount of help c
 ## What Support Can Look Like
 
 The therapist, client, and CSA work as a team. The therapist guides the therapy plan. The CSA helps the client practice parts of that plan. The work takes place in daily settings when it is a good fit. The team may review what worked. They may also talk about what felt hard and what to try next.
+
+Practice may happen while the client works through a routine, prepares for an appointment, uses a coping skill, or speaks up in a real setting. The activity should connect to a therapy goal. It is not just time spent together in the community.
 
 This team plan gives each provider a clear job. It also keeps therapy and skill practice tied together. Community support does not replace regular therapy.
 

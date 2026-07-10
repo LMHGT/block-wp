@@ -1,6 +1,6 @@
 # EMDR Therapy Page Copy Draft
 
-- Status: draft pending owner review
+- Status: approved for live promotion from recorded owner answers
 - Source slug: `emdr-therapy`
 - Primary keyword: `EMDR therapy Louisville KY`
 - Secondary keywords: `EMDR therapist`; `EMDR for PTSD`

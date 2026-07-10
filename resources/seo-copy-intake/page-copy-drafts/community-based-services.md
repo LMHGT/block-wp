@@ -1,4 +1,4 @@
-Status: draft pending owner review
+Status: approved for live promotion from recorded owner answers
 Source slug: `community-based-services`
 Primary keyword: community-based mental health services Louisville KY
 Secondary keywords: community support services Louisville KY; case management Louisville KY
@@ -8,7 +8,7 @@ H1: Community-Based Mental Health Services in Louisville, KY
 
 # Community-Based Mental Health Services in Louisville, KY
 
-Therapy is hard when a person does not have enough food or cannot get the help they need. LMHG can help with these day-to-day needs. We call this community-based support. The work can link you to help, teach skills, and help you act on a plan. It is often short and has a clear goal.
+Therapy is hard when a person does not have enough food or cannot get the help they need. LMHG can help clients plan next steps and connect with resources for these day-to-day needs. We call this community-based support. The work can link you to help, teach skills, and help you act on a plan. It is often short and has a clear goal.
 
 LMHG is a small local practice. We can offer practical help that is often found only at a large agency. We look at the whole person, not just what happens in a therapy visit.
 
@@ -21,7 +21,7 @@ This kind of help may fit when daily needs make it hard to focus in therapy. It 
 - learning to ask questions and speak up for your needs;
 - making a crisis plan before a hard time becomes an emergency;
 - getting links to local help;
-- planning for a school meeting or IEP; or
+- planning for a school meeting or Individualized Education Program, often called an IEP; or
 - following through on calls, forms, and next steps.
 
 LMHG cannot promise that a resource will be open. These services do not provide emergency help, rides, medicine, inpatient care, or a place to live.
@@ -44,7 +44,7 @@ Some people need one type of help. Others may need a team with clear roles. LMHG
 
 ## Getting Started
 
-Use the [Reach Out form](https://intakeq.com/new/g91Z8x/bjxuno). Share your name and a short note about the help you need. You do not need to pick the right service first. The form does not ask for health details. Someone from LMHG will check fit, cost, and open staff time.
+Use the [Reach Out form](https://intakeq.com/new/g91Z8x/bjxuno). Share your name and a short note about the help you need. You do not need to pick the right service first. The form does not ask for health details. Someone from LMHG will check fit, cost, and provider availability.
 
 ## Frequently Asked Questions
 

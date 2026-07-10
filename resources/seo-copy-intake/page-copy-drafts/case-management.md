@@ -1,6 +1,6 @@
 # Case Management Page Copy Draft
 
-- Status: Draft pending owner review
+- Status: approved for live promotion from recorded owner answers
 - Source slug: `case-management`
 - Primary keyword: `case management louisville ky`
 - Secondary keywords: `mental health case management louisville ky`; `targeted case management louisville ky`
@@ -28,29 +28,29 @@ A case manager cannot promise housing, money, transportation, or any other resou
 
 Your plan should fit your needs. A case manager may help you choose what comes first. They may make calls, complete referrals, prepare for meetings, or track next steps. With your permission, they may also work with therapists, doctors, schools, insurance plans, and community groups.
 
-Case Management is not therapy. You may still see a therapist. Your case manager can help with the day-to-day parts of your plan. Louisville Mental Health Group offers therapy and [community-based mental health services](/community-based-services/). Our team can link these parts, so one provider does not have to do every job.
+Case Management is not therapy. You may still see a therapist. Your case manager can help with the day-to-day parts of your plan. LMHG can link this work with [community-based mental health services](/community-based-services/) when needed.
 
 ## Case Management And Community Support Are Different
 
-Case Management focuses on plans, resources, care coordination, and self-advocacy. Self-advocacy means speaking up for your needs. [Community Support Services](/community-support/) focus more on helping a client practice therapy goals in daily life.
+Case Management focuses on plans, resources, helping providers work together, and speaking up for your needs. [Community Support Services](/community-support/) focus more on helping a client practice therapy goals in daily life.
 
 Community Support Associates work much like therapeutic assistants. They work closely with the client's therapist. They may help the client use new skills at home, at school, or in the community. The client still sees the therapist often.
 
-Some clients may use one service. Others may use both when each one has a clear role. The LMHG team can help decide which choice fits the current need.
+Some clients use one service. Others use both when each one has a clear role.
 
 ## Paying For Case Management
 
-Case Management is mostly for Medicaid clients. Private-pay or fee-for-service plans may be possible in some cases. We must check coverage and service fit before care starts. Visit [Costs and Insurance](/insurance/) for general payment information.
+Case Management is mostly for Medicaid clients. A private-pay plan with an agreed fee may be possible in some cases. We must check coverage and service fit before care starts. Visit [Costs and Insurance](/insurance/) for general payment information.
 
 ## Getting Started
 
-You do not need to know the right service name before you contact us. Use the Reach Out form to share your contact details. You can add a short note about the kind of help you need. The form does not ask for clinical details. Someone from LMHG will follow up to talk about fit and next steps.
+Use the Reach Out form to share your contact details and a short note about the help you need. The form does not ask for clinical details. LMHG will follow up about fit and next steps.
 
 ## Frequently Asked Questions
 
 ### Is Case Management the same as therapy?
 
-No. Therapy focuses on thoughts, feelings, behavior, and therapy goals. Case Management focuses on daily needs, resources, plans, care coordination, and follow-through. A client may use both services.
+No. Therapy focuses on thoughts, feelings, behavior, and therapy goals. Case Management focuses on daily needs, resources, plans, helping providers work together, and follow-through. A client may use both services.
 
 ### Does Case Management include crisis help?
 
@@ -62,7 +62,7 @@ No. A case manager may help find options, complete steps, and speak with other g
 
 ### Does Medicaid cover Case Management?
 
-Case Management is mostly paid for by Medicaid. Coverage depends on the plan and the client's needs. Private-pay or fee-for-service options may be possible in some cases.
+Case Management is mostly paid for by Medicaid. Coverage depends on the plan and the client's needs. A private-pay plan with an agreed fee may be possible in some cases.
 
 ## Implementation Note
 

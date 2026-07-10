@@ -1,4 +1,4 @@
-Status: draft pending owner review
+Status: approved for live promotion from recorded owner answers
 Source slug: `court-ordered`
 Primary keyword: court-ordered services Louisville KY
 Secondary keywords: court-ordered therapy Louisville KY; court-mandated therapy
@@ -16,20 +16,24 @@ These services may include Co-Parenting, Family Reunification, or mandated thera
 
 This page may help if a Family Court has told you to take part in a service. You may need help with:
 
-- an order that names a service and due date;
+- an order that names a service LMHG provides;
 - Co-Parenting after conflict or a family change;
 - Family Reunification after a break in parent-child contact;
 - therapy ordered due to CPS involvement;
 - proof that you came or took part; or
 - a progress letter, specific recommendations, or testimony.
 
-LMHG does not provide DUI evaluations. We do not handle criminal or substance-use court rules on this page.
+LMHG does not provide evaluations tied to DUI convictions. This page covers the Family Court services named above.
 
 ## What Support Can Look Like
 
-Start by sending the order, due date, referral, and rules about proof. We will read each word. We may ask what the court wants and who must take part.
+Start by sending the court order and any rules about proof. We will review the order. We may ask what the court wants and who must take part.
 
-The proof we can give is based on the service. It may show that you came or took part. It may be a short progress letter or treatment recommendation. LMHG may also give specific recommendations or testimony. This is common in some Family Reunification cases, but not in all services.
+The order must be clear before the service starts. If its wording does not match a service LMHG provides, the person who was ordered to take part may need to ask the court or an attorney about the next step. LMHG cannot change the order or give legal advice.
+
+The documents we can give depend on the service. They may include attendance confirmation, proof that you took part, a general progress letter, or a treatment recommendation. LMHG may also give testimony or specific recommendations when they fit the service. This is common in some Family Reunification cases, but not in all services.
+
+Before you begin, LMHG will explain what records, updates, fees, or testimony may be part of the service. Those details can differ based on the order and the service being provided.
 
 ## How These Family Court Services Differ
 
@@ -53,9 +57,9 @@ No. The order must name a service LMHG offers or let LMHG pick the kind of care.
 
 No. Family Reunification is its own service. It is not therapy or counseling.
 
-### Can LMHG send records to the court?
+### What documents may LMHG provide?
 
-At times. LMHG may give proof that you came or took part. We may also give a progress letter, recommendation, or testimony. It depends on the service and the case.
+LMHG may provide attendance confirmation, proof that you took part, a general progress letter, a treatment recommendation, testimony, or a specific recommendation. What is available depends on the service and the case.
 
 ### Does LMHG provide DUI evaluations?
 

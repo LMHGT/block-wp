@@ -1,6 +1,6 @@
 # Family Reunification Services Page Copy Draft
 
-- Status: draft pending owner review
+- Status: approved for live promotion from recorded owner answers
 - Source slug: `family-reunification`
 - Primary keyword: `family reunification services louisville ky`
 - Secondary keywords: `reunification therapy louisville ky`; `court ordered family reunification`
