@@ -41,7 +41,7 @@ The plan can change as new concerns come up. The provider will keep the work tie
 
 ## How Co-Parenting Services Are Different
 
-Some people call this co-parenting counseling. LMHG uses Co-Parenting Services as the public name. This work may start before a court issue. It may also be court ordered. It is not a parenting class. It does not give a class certificate.
+Some people search for co-parenting counseling in Louisville, KY. LMHG uses Co-Parenting Services as the public name. This work may start before a court issue. It may also be court ordered. It is not a parenting class. It does not give a class certificate.
 
 [Parenting Support](/parenting-support/) looks at a parent's work with a child at home. Co-Parenting Services look at how adults parent across homes. [Family Reunification Services](/family-reunification/) have a different goal. They focus on parent-child contact after an attachment break. See [Court-Ordered Services](/court-ordered/) for the wider set of court-related options.
 

@@ -8,39 +8,39 @@
 - Meta description: `Case management for Medicaid clients who need help with basic needs, housing, school, providers, crisis plans, job skills, and next steps.`
 - H1: `Case Management in Louisville, KY`
 
-Case Management helps Medicaid clients with daily needs that can affect mental health. A case manager can help you make a plan and find services. They can also help people and service systems work toward the same goals. This service is also called targeted case management.
+Case Management helps Medicaid clients with needs that can affect mental health. A case manager can help you make a plan. They can help you find aid. They can also help each person on your team work toward the same goals. This service is also called targeted case management.
 
 ## When Case Management May Help
 
-It can be hard to focus on mental health when basic needs are not met. It can also be hard when many problems happen at once. Case Management may help with needs that include, but are not limited to:
+It is hard to focus on your health when basic needs are not met. It is also hard when many problems happen at once. Case Management may help with:
 
-- finding and using help for basic needs;
-- dealing with housing stress or housing changes;
-- building job skills and planning next steps for work;
-- keeping up with more than one medical or mental health provider;
-- working with a school on support or a plan;
+- finding help for basic needs;
+- dealing with housing stress;
+- building job skills;
+- keeping up with more than one provider;
+- working with a school on a plan;
 - making a crisis plan before a hard time becomes an emergency; and
 - learning to ask questions and speak up for your needs.
 
-A case manager cannot promise housing, money, transportation, or any other resource. The goal is to help you know your choices. Your case manager can then help you take useful steps and follow through.
+A case manager cannot promise a home, money, a ride, or other aid. The goal is to help you know your choices. Your case manager can then help you take the next step.
 
 ## What Case Management Can Look Like
 
-Your plan should fit your needs. A case manager may help you choose what comes first. They may make calls, complete referrals, prepare for meetings, or track next steps. With your permission, they may also work with therapists, doctors, schools, insurance plans, and community groups.
+Your plan should fit your needs. A case manager may help you choose what comes first. They may make calls, send forms, plan for a meeting, or track next steps. With your OK, they may work with a therapist, doctor, school, health plan, or local group.
 
 Case Management is not therapy. You may still see a therapist. Your case manager can help with the day-to-day parts of your plan. LMHG can link this work with [community-based mental health services](/community-based-services/) when needed.
 
 ## Case Management And Community Support Are Different
 
-Case Management focuses on plans, resources, helping providers work together, and speaking up for your needs. [Community Support Services](/community-support/) focus more on helping a client practice therapy goals in daily life.
+Case Management focuses on plans, aid, team work, and speaking up for your needs. [Community Support Services](/community-support/) help a client use therapy goals in daily life.
 
-Community Support Associates work much like therapeutic assistants. They work closely with the client's therapist. They may help the client use new skills at home, at school, or in the community. The client still sees the therapist often.
+Community Support Associates work like therapy aides. They work with the client's therapist. They may help the client use new skills at home, at school, or out in town. The client still sees the therapist often.
 
 Some clients use one service. Others use both when each one has a clear role.
 
 ## Paying For Case Management
 
-Case Management is mostly for Medicaid clients. A private-pay plan with an agreed fee may be possible in some cases. We must check coverage and service fit before care starts. Visit [Costs and Insurance](/insurance/) for general payment information.
+Case Management is most often for Medicaid clients. Private pay may be an option in some cases. We must check the plan and service fit before work starts. Visit [Costs and Insurance](/insurance/) to learn more.
 
 ## Getting Started
 

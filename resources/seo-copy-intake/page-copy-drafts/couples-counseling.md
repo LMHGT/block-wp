@@ -8,7 +8,7 @@ H1: `Couples Counseling in Louisville, KY`
 
 # Couples Counseling in Louisville, KY
 
-Couples counseling gives two partners a structured place to talk through hard issues with a therapist. LMHG works with same-sex and opposite-sex couples, whether they are married or not. You do not have to agree on the cause of the problem before you start.
+Couples counseling in Louisville, KY, gives two partners a set place to talk through hard issues with a therapist. LMHG works with same-sex and opposite-sex couples, whether they are married or not. You do not have to agree on the cause of the problem before you start.
 
 ## When This May Help
 

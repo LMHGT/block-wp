@@ -8,7 +8,7 @@ H1: Parent-Child Attachment Therapy in Louisville, KY
 
 # Parent-Child Attachment Therapy in Louisville, KY
 
-At LMHG, parent-child attachment therapy helps a child and parent rebuild trust. It may fit after stress, time apart, loss, moves, or other hard change. The work looks at the bond between a child and parent.
+Parent-child attachment therapy in Louisville, KY, helps a child and parent rebuild trust. It may fit after stress, time apart, loss, moves, or other hard change. This attachment therapy for children looks at the bond between a child and parent. It may also use family therapy for attachment concerns when more family members need to take part.
 
 This work often fits within [family therapy](/family-therapy/). It may also connect with [child therapy](/child-counseling/) when the child needs their own support.
 

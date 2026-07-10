@@ -8,7 +8,7 @@
 - Meta description: `Family therapy in Louisville offers a practical place to work on conflict, communication, parenting stress, patterns, and daily routines.`
 - H1: `Family Therapy in Louisville, KY`
 
-Family therapy gives family members a place to work on conflict, patterns, and how they talk with each other. Family does not have to mean two parents and children in one home. It may include siblings, grandparents, adult children and parents, a blended home, or other people who act as family.
+Family therapy gives people a place to work on fights and hard talks. Each family can look at what keeps a problem going. Family does not have to mean two parents and kids in one home. It may include siblings, grandparents, grown children, a blended home, or other people who act as family.
 
 ## When This May Help
 
@@ -22,21 +22,21 @@ Family counseling may help when:
 - A family cannot find a routine that works
 - Family members do not understand why a pattern keeps coming back
 
-The goal is not to label one person as the problem. Therapy can help each person slow down, hear what others mean, and look at what keeps the pattern going.
+The goal is not to blame one person. Therapy can help each person slow down. It can help them hear what others mean. The family can then work on the pattern as a team.
 
 ## What Support Can Look Like
 
-The first talks focus on the concern and what the family wants to change. The therapist can help set a plan for who should join. Parents, children, siblings, grandparents, or other family members may take part.
+The first talks focus on what is wrong and what the family wants to change. The therapist can help make a plan for who should join. A parent, child, sibling, grandparent, or other family member may take part.
 
-Not every person has to attend every session. The right mix must fit the goal and each person's needs. A therapist may meet with the whole group or part of the group. The plan can change as needs change. Goals may shift with time. That is okay. The group can make a new plan.
+Not each person has to come to each talk. The right mix must fit the goal and each person's needs. A therapist may meet with the whole group or part of it. The plan can change as needs change. Goals may shift with time. That is okay. The group can make a new plan.
 
-Sessions may focus on clear talks, family roles, daily routines, and the reasons behind each person's actions. Each voice can be heard. Family therapy does not promise that every tie will be fixed. It offers a clear place to work on the issue.
+Talks may focus on family roles, home tasks, and why each person acts as they do. Each voice can be heard. Family therapy cannot promise that each tie will be fixed. It gives the family a clear place to do the work.
 
 ## Family Therapy As A Main Or Added Service
 
-Family therapy can be the main service. It can also be added to another type of therapy for a short time. For example, a person in [Individual Counseling](/individual-counseling/) may invite a parent or sibling to a few sessions to work on one concern.
+Family therapy can be the main service. It can also be added to other work for a short time. A person in [Individual Counseling](/individual-counseling/) may ask a parent or sibling to join a few talks. They can work on one concern.
 
-The same can happen in [Child Therapy](/child-counseling/) when family talks may help the child's plan. Some needs may fit [Parenting Support](/parenting-support/) or [Co-Parenting Services](/co-parenting/). Those pages have a more set focus. Family therapy stays broad and follows the family's goal.
+The same can happen in [Child Therapy](/child-counseling/) when family talks may help the child. Some needs may fit [Parenting Support](/parenting-support/) or [Co-Parenting Services](/co-parenting/). Those types of help have a set focus. Family therapy stays broad and follows the family's goal.
 
 ## Getting Started
 

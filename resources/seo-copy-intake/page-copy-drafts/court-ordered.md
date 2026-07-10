@@ -8,7 +8,7 @@ H1: Court-Ordered Services in Louisville, KY
 
 # Court-Ordered Services in Louisville, KY
 
-LMHG helps with some Family Court orders. We read the order first. It must name a service we offer. Or it must let LMHG pick the kind of care. Clear words help us check fit before you start.
+Court-ordered services in Louisville, KY, may include some Family Court needs. LMHG reads the order first. It must name a service we offer, or it must let LMHG pick the kind of care. Court-ordered therapy in Louisville, KY, must still fit our scope. Clear words help us check fit before you start.
 
 These services may include Co-Parenting, Family Reunification, or mandated therapy tied to CPS involvement. LMHG does not give legal advice. We also cannot promise that a court will accept a service.
 

@@ -7,7 +7,7 @@ Meta description: Teen therapy in Louisville, KY for mood changes, worry, sadnes
 
 # Teen Therapy in Louisville, KY
 
-Teen therapy gives teens a place to talk. It also helps parents make sense of changes at home. A family may reach out when a teen seems sad, worried, angry, shut down, or hard to reach.
+Teen therapy in Louisville, KY, gives teens a place to talk. It also helps parents make sense of changes at home. A family may reach out when a teen seems sad, worried, angry, shut down, or hard to reach. This kind of adolescent counseling can help the family slow down and learn what the teen needs.
 
 At Louisville Mental Health Group, teen counseling starts with what is happening now. We listen to the teen and the parent. Then we help the family find a plan that fits. The plan may change as needs become clear.
 

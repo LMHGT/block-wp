@@ -8,9 +8,9 @@ H1: Group Therapy in Louisville, KY
 
 # Group Therapy in Louisville, KY
 
-Group therapy at LMHG is led by a clinician. It gives clients a set place to talk, learn, and practice skills with other people. It can offer a different kind of help than one-on-one or family therapy. For some clients, it can be one part of a larger plan.
+Group therapy in Louisville, KY, at LMHG is led by a clinician. This clinician-led group therapy gives clients a set place to talk, learn, and practice skills with other people. It can offer a different kind of help than one-on-one or family therapy. For some clients, it can be one part of a larger plan.
 
-Group topics and open spots change. LMHG currently has a teen-focused group. Its full description will be added here when it is ready. This does not mean the group has an open spot. Ask about current therapy groups before you plan to join one.
+Group topics and open spots change. LMHG currently has a teen-focused group. Its full description will be added here when it is ready. This does not mean the group has an open spot. Ask about current therapy groups in Louisville, KY, before you plan to join one.
 
 ## When This May Help
 

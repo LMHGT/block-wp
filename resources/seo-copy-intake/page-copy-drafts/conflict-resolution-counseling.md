@@ -8,7 +8,7 @@ H1: `Conflict Resolution Counseling in Louisville, KY`
 
 # Conflict Resolution Counseling in Louisville, KY
 
-Hard talks can get stuck. They may turn into fights, blame, or long silence. The goal is not to decide who is right. The goal is to slow the pattern. It is also to see what is going on. This can give hard talks more structure.
+Conflict resolution counseling in Louisville, KY, can help when hard family talks get stuck. They may turn into fights, blame, or long silence. Family conflict resolution counseling does not decide who is right. It slows the pattern so each person can see what is going on. Family relationship conflict counseling can then give hard talks more structure.
 
 This work is for conflict among family members who are not a couple. It may include parents and adult children, siblings, parents and grandparents, or members of a blended family. Who takes part will depend on the conflict and the plan.
 

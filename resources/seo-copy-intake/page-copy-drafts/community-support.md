@@ -8,7 +8,7 @@ H1: Community Support Services in Louisville, KY
 
 # Community Support Services in Louisville, KY
 
-At LMHG, community support helps clients practice therapy goals in daily life. A Community Support Associate, or CSA, works like a therapy assistant. The CSA works with the client. The CSA also stays in touch with the client's regular therapist. The client still meets with that therapist for therapy.
+Community support services in Louisville, KY, help clients practice therapy goals in daily life. These mental health community support services are led by a Community Support Associate, or CSA. The CSA works with the client and stays in touch with the client's regular therapist. The client still meets with that therapist for therapy.
 
 This is a mental health service. It is not crisis care or a general social service. It helps clients use skills outside the therapy room. This is where daily stress and real choices happen.
 

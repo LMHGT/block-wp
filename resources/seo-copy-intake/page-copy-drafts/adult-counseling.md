@@ -8,7 +8,7 @@
 - Meta description: `Adult counseling in Louisville for stress, anxiety, depression, grief, trauma, work stress, and life changes. Reach out to ask about fit.`
 - H1: `Adult Counseling in Louisville, KY`
 
-Adult counseling gives you a private place to talk. You can start with what feels hard right now. This may be stress, worry, low mood, grief, anger, trauma, or a major change. At Louisville Mental Health Group, adult therapy is shaped around the person. There is no one plan for every client.
+Adult counseling in Louisville, KY, gives you a private place to talk. You can start with what feels hard now. This may be stress, worry, low mood, grief, anger, trauma, or a big change. Adult therapy at LMHG is shaped around the person. There is no one plan for each client.
 
 ## When This May Help
 

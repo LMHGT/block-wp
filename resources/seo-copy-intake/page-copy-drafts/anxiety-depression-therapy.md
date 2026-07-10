@@ -8,7 +8,7 @@
 - Meta description: `Therapy and counseling in Louisville for anxiety, depression, stress, worry, low mood, and next steps. LMHG does not provide medication management.`
 - H1: `Anxiety and Depression Therapy in Louisville, KY`
 
-Anxiety and depression therapy gives you a place to talk. It can help you look at worry, low mood, stress, and daily strain. Louisville Mental Health Group provides therapy and counseling. LMHG does not provide psychiatry or medication management.
+Anxiety and depression therapy gives you a place to talk. It can help with worry, low mood, stress, and daily strain. LMHG offers therapy and counseling. It does not manage medicine.
 
 ## When This May Help
 

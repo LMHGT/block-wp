@@ -8,7 +8,7 @@
 - Meta description: `Trauma therapy in Louisville for adults, teens, and families. Learn what support may look like and use the Reach Out form to ask about next steps.`
 - H1: `Trauma Therapy in Louisville, KY`
 
-Trauma therapy can help adults, teens, and families. It may fit when a past event still affects daily life. At LMHG, therapy moves at a pace that fits the person. We do not push clients to tell everything at once.
+Trauma therapy in Louisville, KY, may help adults, teens, and families. It may fit when a past event still affects life now. A trauma-informed therapist will work at a pace that fits the person. We do not push clients to tell all the facts at once.
 
 ## When This May Help
 

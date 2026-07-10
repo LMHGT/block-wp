@@ -8,7 +8,7 @@ H1: Parenting Support in Louisville, KY
 
 # Parenting Support in Louisville, KY
 
-Parenting support at Louisville Mental Health Group helps parents work through hard moments at home. It gives them a place to slow down, spot patterns, and choose clear next steps. The focus may be behavior, big feelings, limits, routines, school stress, or family strain.
+Parenting support in Louisville, KY, helps parents work through hard moments at home. Parent counseling gives them a place to slow down, spot patterns, and choose clear next steps. Caregiver guidance may focus on behavior, big feelings, limits, routines, school stress, or family strain.
 
 This service is for parents. It is part of child therapy and gives parents focused help with what is happening at home. It is not a parenting class, a program that gives a certificate, a custody review, or a legal service.
 

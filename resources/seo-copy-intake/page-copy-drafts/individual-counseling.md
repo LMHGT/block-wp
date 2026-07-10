@@ -8,7 +8,7 @@
 - Meta description: `Individual counseling in Louisville offers a private, flexible place to work on stress, grief, trauma, relationships, and life changes.`
 - H1: `Individual Counseling in Louisville, KY`
 
-Individual counseling gives you a private place to talk with one main therapist. You can name what is hard, set goals, and shape the work to fit you. At Louisville Mental Health Group, each plan is made for the person. The method and pace can change as your needs change.
+Individual counseling gives you a private place to talk with one main therapist. You can name what is hard. You can set goals. You can shape the work to fit you. Each plan is made for the person. The pace can change as your needs change.
 
 ## When This May Help
 
@@ -25,9 +25,9 @@ You do not need to know the cause or the right therapy term before you start. Yo
 
 ## What Support Can Look Like
 
-Early sessions help you and your therapist learn what brings you in. You can talk about goals, privacy, pace, and what may be useful. Part of the work is choosing therapy methods that fit why you came.
+Early talks help you and your therapist learn what brings you in. You can talk about goals, privacy, pace, and what may help. You can then pick ways to work on the need.
 
-Because this is one-on-one work, the plan can be very flexible. You can spend more time on one concern, change a goal, or slow the pace when a topic needs more care.
+Because this is one-on-one work, the plan can bend. You can spend more time on one need. You can change a goal. You can slow down when a topic needs more care.
 
 Most clients have one main therapist they see on a regular basis. At times, a second therapist may help with a focused need. For example, you may keep your main therapist and also meet with an [EMDR therapist](/emdr-therapy/). Each therapist has a clear role.
 

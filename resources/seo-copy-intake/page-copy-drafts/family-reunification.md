@@ -46,7 +46,7 @@ Not every case calls for these steps.
 
 ## How Family Reunification Differs From Therapy
 
-Some people search for reunification therapy. At LMHG, this service is not regular therapy or counseling. [Family therapy](/family-therapy/) is broader work on family ties, stress, and patterns. It does not replace this court-based process.
+Some people search for reunification therapy in Louisville, KY. At LMHG, this service is not regular therapy or counseling. [Family therapy](/family-therapy/) is broader work on family ties, stress, and patterns. It does not replace this court-based process.
 
 [Co-Parenting Services](/co-parenting/) may fit shared choices across two homes. The [Court-Ordered Services](/court-ordered/) page shows how these services relate.
 

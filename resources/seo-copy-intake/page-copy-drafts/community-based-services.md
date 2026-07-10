@@ -8,7 +8,9 @@ H1: Community-Based Mental Health Services in Louisville, KY
 
 # Community-Based Mental Health Services in Louisville, KY
 
-Therapy is hard when a person does not have enough food or cannot get the help they need. LMHG can help clients plan next steps and connect with resources for these day-to-day needs. We call this community-based support. The work can link you to help, teach skills, and help you act on a plan. It is often short and has a clear goal.
+Community-based mental health services in Louisville, KY, can help when daily needs make therapy harder. LMHG can help clients plan next steps and connect with resources. The work can link you to help, teach skills, and help you act on a plan. It is often short and has a clear goal.
+
+This page explains how case management in Louisville, KY, and community support services in Louisville, KY, fit with therapy. Each service has its own role. A person may need one service or a small team.
 
 LMHG is a small local practice. We can offer practical help that is often found only at a large agency. We look at the whole person, not just what happens in a therapy visit.
 

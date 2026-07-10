@@ -8,7 +8,7 @@ H1: Child Behavioral Therapy in Louisville, KY
 
 # Child Behavioral Therapy in Louisville, KY
 
-Child behavioral therapy helps parents make sense of behavior they see at home or school. The cause may not be clear yet. A therapist looks at what happens before, during, and after the behavior. Then the family can build a plan that fits the child.
+Child behavioral therapy in Louisville, KY, helps parents make sense of behavior they see at home or school. The cause may not be clear yet. A child behavioral therapist looks at what happens before, during, and after the behavior. This child behavior therapy process helps the family build a plan that fits the child.
 
 This service is often used with children ages 2 to 12. It is one type of [child therapy](/child-counseling/), not a one-size plan for every child.
 

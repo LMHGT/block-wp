@@ -8,7 +8,7 @@
 - Meta description: `Child therapy in Louisville helps parents understand behavior, big feelings, school stress, grief, trauma, and changes at home.`
 - H1: `Child Therapy in Louisville, KY`
 
-Child therapy helps parents make sense of what they see and find a useful next step. At LMHG, this service is often for children ages 2 to 12. You may see a change in mood or behavior but not know the cause. That is a fine place to start.
+Child therapy in Louisville, KY, helps parents make sense of what they see. It can also help them find a next step. At LMHG, child counseling is often for kids ages 2 to 12. You may see a change in mood or behavior but not know the cause. That is a fine place to start.
 
 ## When This May Help
 

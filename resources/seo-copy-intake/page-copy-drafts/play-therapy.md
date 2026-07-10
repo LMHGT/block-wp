@@ -8,7 +8,7 @@ H1: Play Therapy in Louisville, KY
 
 # Play Therapy in Louisville, KY
 
-Play therapy is typically used with children ages 2 to 12. It helps a child show feelings that may be hard to explain with words. A therapist may use toys, art, stories, and games with a clear goal. It is not just free play, a reward, or a way to keep a child busy.
+Play therapy is typically used with children ages 2 to 12. This therapy through play helps a child show feelings that may be hard to explain with words. A therapist may use toys, art, stories, and games with a clear goal. It is not just free play, a reward, or a way to keep a child busy.
 
 The age range is not a hard rule. Some play-based techniques may also be used with teens or adults when they fit the person and the therapy goal.
 

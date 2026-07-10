@@ -8,7 +8,7 @@
 - Meta description: `EMDR therapy in Louisville for children, teens, and adults. Learn how it works, when it may fit, and how to ask LMHG about next steps.`
 - H1: `EMDR Therapy in Louisville, KY`
 
-EMDR therapy is one trauma-focused option. It can fit children, teens, and adults. It may help with memories or events that still feel stuck or too intense. Often, a client does not have to talk through every detail.
+EMDR therapy in Louisville, KY, is one trauma-focused option for children, teens, and adults. It can help a person work with a hard memory while staying aware of the present. An EMDR therapist will explain each step and check the pace. You may not need to tell every detail out loud.
 
 ## When This May Help
 
@@ -25,11 +25,13 @@ EMDR is not right for everyone. Age alone does not decide fit. A therapist will 
 
 ## What Support Can Look Like
 
-EMDR stands for eye movement desensitization and reprocessing. First, the therapist learns what is going on. You then choose what you want to work on. It may be a memory, thought, feeling, or body response.
+EMDR stands for eye movement desensitization and reprocessing. It is a structured form of therapy. First, the therapist learns what is going on. You then choose what you want to work on. It may be a memory, thought, feeling, or body response.
 
-The therapist may guide your eyes from side to side. They may use taps or sounds instead. This back-and-forth input is one part of EMDR. You notice what comes up. The therapist checks your pace and how you feel. You often do not need to say every detail out loud.
+The therapist may guide your eyes from side to side. They may use taps or sounds instead. The U.S. Department of Veterans Affairs explains that a person holds the memory in mind while also paying attention to a back-and-forth movement or sound. You notice what comes up while the therapist checks your pace and how you feel. [Learn more from the VA National Center for PTSD](https://www.ptsd.va.gov/understand_tx/emdr.asp).
 
-EMDR is not always the first step. Some clients need time to build trust. They may need coping skills or a sense of safety first. This early work is often called stabilization. EMDR may also bring up hard feelings, memories, dreams, or body responses. Symptoms can get worse for a short time. That is why plans and honest check-ins matter.
+EMDR is not always the first step. Some clients need time to build trust. They may need coping skills or a sense of safety first. This early work is often called stabilization. EMDR may also bring up hard feelings, memories, dreams, or body responses. Symptoms can feel worse for a short time. That is why plans and honest check-ins matter.
+
+EMDR for PTSD has support from major health groups. The World Health Organization lists EMDR as one treatment that may be considered for adults with PTSD. This does not mean it is the right fit for every person. [Read the WHO PTSD guidance](https://www.who.int/teams/mental-health-and-substance-use/treatment-care/mental-health-gap-action-programme/evidence-centre/conditions-related-to-stress/posttraumatic-stress-disorder-%28ptsd%29--psychological-interventions---adults).
 
 ## EMDR, Trauma Therapy, And Your Main Therapist
 
