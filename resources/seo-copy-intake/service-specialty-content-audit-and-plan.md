@@ -1,20 +1,20 @@
 # Service And Specialty Content Audit And Plan
 
-Status: Current baseline and implementation plan
+Status: Current baseline after the approved topology changes and first four rich-copy promotions
 Audit date: 2026-07-10
 Scope: 21 active Service and Specialty pages after the approved Relationship Counseling merge, plus the consolidated In-Home location page as a launch check
 
 ## Executive Findings
 
-- The active site has 8 Service pages and 14 Specialty pages.
-- 19 of the 22 pages have fewer than 500 rendered words.
-- All 22 pages have reusable page-copy drafts.
-- 18 drafts are already between 500 and 700 page-specific words.
-- Four drafts need a small addition: Individual Counseling, Child Therapy, Couples Counseling, and Court-Ordered Services.
-- Three drafts are above the sixth-grade target: Family Therapy, Couples Counseling, and Case Management.
-- Parent-Child Attachment Therapy, Child Behavioral Therapy, and Conflict Resolution Counseling already have rich live copy. The consolidated In-Home location page is also rich.
+- The active site has 8 Service pages and 13 Specialty pages. The consolidated In-Home location page is tracked as a separate launch check.
+- Six of the 21 active Service and Specialty pages now have 500 to 700 rendered words. Fifteen remain below 500 words.
+- All 21 active pages and the In-Home launch-check page have reusable page-copy drafts.
+- Nineteen of those 22 drafts are now between 500 and 700 page-specific words.
+- Three drafts need a small addition: Individual Counseling, Child Therapy, and Court-Ordered Services.
+- Two drafts remain above the sixth-grade target: Family Therapy and Case Management.
+- Teen Therapy, Couples Counseling, Parenting Support, and Conflict Resolution Counseling now have rich live copy. Parent-Child Attachment Therapy and Child Behavioral Therapy also remain in range.
 
-The main problem is no longer a lack of source material. It is a controlled promotion problem: finish four short drafts, simplify three drafts, resolve three owner decisions, add SEO metadata support, and promote the copy without changing established URL value.
+The main problem is no longer a lack of source material or unresolved page ownership. It is a controlled promotion problem: finish three short drafts, simplify two drafts, add SEO metadata support, and promote the remaining copy without changing established URL value.
 
 ## Current Search Evidence
 
@@ -52,7 +52,7 @@ Counts and grades are approximate. Current counts include generated FAQs and rel
 | Individual Counseling | 391 / 11.5 | 479 / 5.7 | Add 20 to 30 useful words. Keep privacy, customization, provider roles, and brief payment guidance. |
 | Child Therapy | 388 / 12.6 | 470 / 5.4 | Add about 30 words. Keep the parent audience, typical ages 2 to 12, parent involvement, and therapy-type guidance. |
 | Family Therapy | 367 / 13.4 | 517 / 6.8 | Keep the depth but simplify abstract wording and long sentences. Clarify that family sessions may be a main service or added to another service. |
-| Couples Counseling | 322 / 12.6 | 500-700 target | Merge the useful Relationship Counseling copy, simplify it, and use Couples Counseling as the main service name. |
+| Couples Counseling | 508 / 5.8 | 563 / 5.9 | Complete. Relationship Counseling is merged here; five focused FAQs and the redirect are live. |
 | Court-Ordered Services | 317 / 14.4 | 497 / 5.8 | Add a short operational detail. Preserve court-order wording, service acceptance limits, no legal advice, and no DUI evaluations. |
 | Community-Based Services | 334 / 13.9 | 567 / 5.1 | Promote after assigning umbrella intent. Keep wraparound care, Medicaid and private-pay distinctions, and non-crisis limits. |
 | Group Therapy | 324 / 11.6 | 538 / 4.9 | Promote generic copy. Do not publish an active-group listing until the teen-group blurb is supplied. Do not call it a support group. |
@@ -62,18 +62,18 @@ Counts and grades are approximate. Current counts include generated FAQs and rel
 
 | Page | Current words / grade | Draft words / grade | Required action |
 | --- | ---: | ---: | --- |
-| Teen Therapy | 260 / 12.7 | 500-700 target | Privacy and parent-update wording is approved. Promote the rich draft. |
+| Teen Therapy | 534 / 5.0 | 573 / 5.1 | Complete. Approved privacy and parent-update wording is live. |
 | Adult Counseling | 284 / 12.8 | 519 / 5.4 | Promote. Keep it focused on adult life concerns and link up to the broader Individual Counseling page. |
 | Anxiety And Depression Therapy | 286 / 14.1 | 518 / 5.7 | Promote. Do not diagnose the reader or imply medication management. |
-| Parent-Child Attachment Therapy | 603 / 5.8 | 568 / 5.5 | Live copy is strong. Keep the existing broad URL, but make parent-child scope clear in the title and opening. |
+| Parent-Child Attachment Therapy | 526 / 5.8 | 568 / 5.5 | Live copy is strong. Keep the existing broad URL, but make parent-child scope clear in the title and opening. |
 | Case Management | 261 / 13.5 | 635 / 6.8 | Simplify. Keep `Case Management` primary and use `targeted case management` once. Preserve Medicaid and private-pay details. |
-| Child Behavioral Therapy | 585 / 5.9 | 554 / 5.7 | Live copy is strong. Keep the legacy `intervention` URL until Search Console supports a change. |
+| Child Behavioral Therapy | 535 / 5.9 | 554 / 5.7 | Live copy is strong. Keep the legacy `intervention` URL until Search Console supports a change. |
 | Co-Parenting Services | 267 / 14.3 | 540 / 4.7 | Promote. Keep the distinction from a class, mediation, custody evaluation, or legal advice. |
 | Community Support | 281 / 14.5 | 518 / 6.0 | Promote. Keep the Community Support Associate role distinct from Case Management and therapy. |
-| Conflict Resolution Counseling | 681 / 4.7 | 500-700 target | Keep the page focused on non-couple family relationships, with no mediation or court-result implication. |
+| Conflict Resolution Counseling | 570 / 4.7 | 648 / 5.3 | Complete. The page is focused on non-couple family relationships, with no mediation or court-result implication. |
 | EMDR Therapy | 234 / 11.9 | 559 / 4.4 | Promote. Keep broad ages, readiness, team roles, and the warning that symptoms may get worse for a short time. |
 | Family Reunification Services | 254 / 15.7 | 561 / 5.6 | Promote after final operational review. Never call reunification therapy or counseling. Keep impartiality, agreements, court-order review, testimony, and recommendation language accurate. |
-| Parenting Support | 273 / 13.3 | 571 / 5.7 | Promote the copy and move the site relationship from Family Therapy to Child Therapy. |
+| Parenting Support | 536 / 5.6 | 571 / 5.7 | Complete. The rich copy is live and the page now belongs under Child Therapy. |
 | Play Therapy | 282 / 13.2 | 583 / 5.0 | Promote. State that ages 2 to 12 are typical, not a rule. Remove Child Behavioral Therapy from its target keyword set and retain it only as a comparison link. |
 
 ## Keyword Ownership
@@ -96,7 +96,7 @@ The Community-Based Services draft should not target the exact primary phrases a
 
 ### Wave 0: Protect Search Value
 
-1. Authenticate Search Console and export query-by-page data for all 22 pages and legacy URLs.
+1. Authenticate Search Console and export query-by-page data for all 21 active pages and legacy URLs.
 2. Add and test the approved legacy redirects, especially `/family-court/` and `/family-court-services/` to `/court-ordered/`.
 3. Add a structured SEO metadata path so title tags and meta descriptions in the drafts reach WordPress output.
 4. Record one primary keyword and one canonical URL for every page.
@@ -107,14 +107,14 @@ Promote Community-Based Services, Group Therapy, Trauma Therapy, Adult Counselin
 
 ### Wave 2: Short Or Too Complex
 
-Finish Individual Counseling, Child Therapy, Family Therapy, Couples Counseling, Court-Ordered Services, and Case Management. Run the grade-six check after Gutenberg conversion, not only against Markdown.
+Finish Individual Counseling, Child Therapy, Family Therapy, Court-Ordered Services, and Case Management. Run the grade-six check after Gutenberg conversion, not only against Markdown.
 
 ### Wave 3: Operational And Owner Gates
 
 1. Review Family Reunification and Court-Ordered wording against LMHG's current agreements and intake practice.
-2. Promote the approved Teen Therapy privacy language.
-3. Merge Relationship Counseling into Couples Counseling and verify the redirect.
-4. Move Parenting Support under Child Therapy.
+2. Teen Therapy privacy language is promoted and verified.
+3. Relationship Counseling is merged into Couples Counseling, and the query-preserving redirect is verified.
+4. Parenting Support is under Child Therapy in the breadcrumb, menu, and taxonomy relationship.
 5. Add the active teen-group blurb when it is ready.
 
 ## Verification For Every Promotion

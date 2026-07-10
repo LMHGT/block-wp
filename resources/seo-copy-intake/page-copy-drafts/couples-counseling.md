@@ -30,7 +30,7 @@ You can come in when a problem is new or when it has been present for years. The
 
 The therapist helps set a plan for the talks. This may include slowing the pace, naming the main issue, and making sure each partner has time to speak. The work can help you hear what the other person means, even when you do not agree.
 
-Both people have a say. They help set the plan. The pace can slow when talks get tense. The work may start with one hard event. It may also look at a pattern that keeps coming back. You can plan how to talk at home. The topic may be parenting, money, sex, trust, or a major choice.
+Both people have a say. They help set the plan. The plan can change as the work moves forward. The pace can slow when talks get tense. The work may start with one hard event. It may also look at a pattern that keeps coming back. You can plan how to talk at home. The topic may be parenting, money, sex, trust, or a major choice.
 
 The therapist does not take one partner's side. The role is to keep the talk fair, clear, and tied to the goals both partners set.
 

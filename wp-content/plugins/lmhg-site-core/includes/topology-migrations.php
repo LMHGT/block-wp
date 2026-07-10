@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_OPTION  = 'lmhg_content_topology_migration_version';
-const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_VERSION = '2026-07-10-service-topology-v3';
+const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_VERSION = '2026-07-10-service-topology-v5';
 
 add_action( 'init', 'lmhg_site_core_run_topology_migration', 27 );
 
@@ -89,6 +89,7 @@ function lmhg_site_core_run_topology_migration(): void {
 
 	$complete = lmhg_site_core_move_conflict_resolution_relationship() && $complete;
 	$complete = lmhg_site_core_move_parenting_support_relationship() && $complete;
+	$complete = lmhg_site_core_remove_legacy_couples_faqs() && $complete;
 	$complete = lmhg_site_core_remove_obsolete_in_home_records() && $complete;
 	$complete = lmhg_site_core_replace_topology_references() && $complete;
 	$complete = lmhg_site_core_remove_relationship_counseling_records() && $complete;
@@ -96,6 +97,41 @@ function lmhg_site_core_run_topology_migration(): void {
 	if ( $complete ) {
 		update_option( LMHG_SITE_CORE_TOPOLOGY_MIGRATION_OPTION, LMHG_SITE_CORE_TOPOLOGY_MIGRATION_VERSION, false );
 	}
+}
+
+/**
+ * Removes superseded seeded FAQs after the approved Couples copy is published.
+ *
+ * @return bool
+ */
+function lmhg_site_core_remove_legacy_couples_faqs(): bool {
+	$slugs = array(
+		'placeholder-couples-counseling-faq-1',
+		'placeholder-couples-counseling-faq-2',
+		'placeholder-couples-counseling-faq-3',
+		'service-couples-counseling-faq-louisville',
+		'service-couples-counseling-faq-fit',
+	);
+
+	foreach ( $slugs as $slug ) {
+		$posts = get_posts(
+			array(
+				'name'           => $slug,
+				'post_type'      => LMHG_SITE_CORE_FAQ_POST_TYPE,
+				'post_status'    => 'any',
+				'posts_per_page' => -1,
+				'no_found_rows'  => true,
+			)
+		);
+
+		foreach ( $posts as $post ) {
+			if ( $post instanceof WP_Post && false === wp_delete_post( (int) $post->ID, true ) ) {
+				return false;
+			}
+		}
+	}
+
+	return true;
 }
 
 /**
