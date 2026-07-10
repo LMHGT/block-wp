@@ -129,15 +129,9 @@ function lmhg_site_core_ensure_main_landmark( string $html ): string {
 function lmhg_site_core_normalize_frontend_core30_copy( string $html ): string {
 	return str_replace(
 		array(
-			'Targeted Case Management',
-			'Targeted case management',
-			'targeted case management',
 			'Community Based Services',
 		),
 		array(
-			'Case Management',
-			'Case management',
-			'case management',
 			'Community-Based Services',
 		),
 		$html

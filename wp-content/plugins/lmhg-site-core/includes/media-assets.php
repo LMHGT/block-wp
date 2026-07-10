@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 const LMHG_SITE_CORE_MEDIA_ASSET_ROLE_META         = '_lmhg_asset_role';
 const LMHG_SITE_CORE_MEDIA_ASSET_SOURCE_PATH_META  = '_lmhg_asset_source_path';
 const LMHG_SITE_CORE_MEDIA_ASSET_SEED_OPTION       = 'lmhg_media_asset_seed_version';
-const LMHG_SITE_CORE_MEDIA_ASSET_SEED_VERSION      = '2026-07-05-media-library-assets-v1';
+const LMHG_SITE_CORE_MEDIA_ASSET_SEED_VERSION      = '2026-07-10-media-library-assets-v2';
 
 add_action( 'init', 'lmhg_site_core_register_media_asset_meta', 11 );
 add_action( 'init', 'lmhg_site_core_seed_media_library_assets', 40 );
@@ -134,8 +134,8 @@ function lmhg_site_core_specialty_icon_definitions(): array {
 		),
 		'attachment-therapy'            => array(
 			'file'  => 'attachment-therapy-card-icon-transparent.webp',
-			'alt'   => 'Attachment Therapy icon',
-			'title' => 'Attachment Therapy specialty icon',
+			'alt'   => 'Parent-Child Attachment Therapy icon',
+			'title' => 'Parent-Child Attachment Therapy specialty icon',
 		),
 		'case-management'               => array(
 			'file'  => 'case-management-card-icon-transparent.webp',
@@ -157,10 +157,10 @@ function lmhg_site_core_specialty_icon_definitions(): array {
 			'alt'   => 'Community Support Services icon',
 			'title' => 'Community Support Services specialty icon',
 		),
-		'couples-conflict-resolution'   => array(
+		'conflict-resolution-counseling'  => array(
 			'file'  => 'couples-conflict-resolution-card-icon-transparent.webp',
-			'alt'   => 'Couples Conflict Resolution icon',
-			'title' => 'Couples Conflict Resolution specialty icon',
+			'alt'   => 'Conflict Resolution Counseling icon',
+			'title' => 'Conflict Resolution Counseling specialty icon',
 		),
 		'emdr-therapy'                  => array(
 			'file'  => 'emdr-therapy-card-icon-transparent.webp',
@@ -478,6 +478,14 @@ function lmhg_site_core_ensure_media_asset_attachment( array $asset ): int|WP_Er
 	}
 
 	$attachment_id = (int) $attachment_id;
+	wp_update_post(
+		wp_slash(
+			array(
+				'ID'         => $attachment_id,
+				'post_title' => (string) ( $asset['title'] ?? basename( $file_path ) ),
+			)
+		)
+	);
 	update_attached_file( $attachment_id, $file_path );
 	update_post_meta( $attachment_id, LMHG_SITE_CORE_MEDIA_ASSET_ROLE_META, $role );
 	update_post_meta( $attachment_id, LMHG_SITE_CORE_MEDIA_ASSET_SOURCE_PATH_META, $relative_path );

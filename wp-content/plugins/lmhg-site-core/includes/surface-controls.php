@@ -14,7 +14,6 @@ add_filter( 'wp_sitemaps_post_types', 'lmhg_site_core_filter_sitemap_post_types'
 add_filter( 'wp_sitemaps_posts_query_args', 'lmhg_site_core_filter_sitemap_posts_query_args', 10, 2 );
 add_filter( 'wp_sitemaps_taxonomies', 'lmhg_site_core_filter_sitemap_taxonomies' );
 add_filter( 'wp_sitemaps_add_provider', 'lmhg_site_core_filter_sitemap_providers', 10, 2 );
-add_filter( 'the_content', 'lmhg_site_core_filter_core30_content_copy', 35 );
 add_filter( 'the_title', 'lmhg_site_core_filter_core30_title_copy', 20, 2 );
 add_filter( 'pre_get_document_title', 'lmhg_site_core_filter_core30_document_title_copy', 20 );
 
@@ -120,41 +119,6 @@ function lmhg_site_core_filter_sitemap_providers( mixed $provider, string $name 
 	}
 
 	return $provider;
-}
-
-/**
- * Corrects Core30 copy mismatches in live rendered page content without mutating page bodies.
- *
- * @param string $content Rendered content.
- * @return string
- */
-function lmhg_site_core_filter_core30_content_copy( string $content ): string {
-	if ( is_admin() || ! is_singular( 'page' ) || ! in_the_loop() || ! is_main_query() ) {
-		return $content;
-	}
-
-	$post = get_post();
-	if ( ! $post instanceof WP_Post ) {
-		return $content;
-	}
-
-	if ( 'case-management' === $post->post_name ) {
-		$content = str_replace(
-			array( 'Targeted Case Management', 'Targeted case management', 'targeted case management' ),
-			array( 'Case Management', 'Case management', 'case management' ),
-			$content
-		);
-	}
-
-		if ( 'therapy-in-your-home' === $post->post_name ) {
-			$content = str_replace(
-				'<a href="/specialties/">Specialties</a> &nbsp;/&nbsp; <span>In-Home Therapy in Louisville, KY</span>',
-				'<a href="/services/">Services</a> &nbsp;/&nbsp; <a href="/community-based-services/">Community-Based Services</a> &nbsp;/&nbsp; <span>In-Home Therapy in Louisville, KY</span>',
-				$content
-			);
-		}
-
-	return $content;
 }
 
 /**

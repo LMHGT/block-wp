@@ -584,7 +584,7 @@ function lmhg_site_core_core30_service_families(): array {
 			'children'    => array(
 				array( 'title' => 'Teen Therapy', 'url' => '/adolescent-counseling/' ),
 				array( 'title' => 'Play Therapy', 'url' => '/play-therapy/' ),
-				array( 'title' => 'Child Behavioral Intervention', 'url' => '/child-behavioral-intervention/' ),
+				array( 'title' => 'Child Behavioral Therapy', 'url' => '/child-behavioral-intervention/' ),
 			),
 		),
 		array(
@@ -592,7 +592,8 @@ function lmhg_site_core_core30_service_families(): array {
 			'url'         => '/family-therapy/',
 			'description' => 'Family support for communication, routines, parenting stress, attachment concerns, conflict, and major transitions.',
 			'children'    => array(
-				array( 'title' => 'Attachment Therapy', 'url' => '/attachment-therapy/' ),
+				array( 'title' => 'Parent-Child Attachment Therapy', 'url' => '/attachment-therapy/' ),
+				array( 'title' => 'Conflict Resolution Counseling', 'url' => '/conflict-resolution-counseling/' ),
 				array( 'title' => 'Parenting Support', 'url' => '/parenting-support/' ),
 			),
 		),
@@ -602,7 +603,6 @@ function lmhg_site_core_core30_service_families(): array {
 			'description' => 'Relationship support for communication, recurring conflict, emotional distance, repair, and relationship decisions.',
 			'children'    => array(
 				array( 'title' => 'Relationship Counseling', 'url' => '/relationship-counseling/' ),
-				array( 'title' => 'Couples Conflict Resolution', 'url' => '/couples-conflict-resolution/' ),
 			),
 		),
 		array(
