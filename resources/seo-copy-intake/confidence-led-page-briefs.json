@@ -1,0 +1,167 @@
+{
+  "created_at": "2026-07-10",
+  "purpose": "Separate high-confidence inferences from direct owner answers while drafting the remaining LMHG specialty pages.",
+  "confidence_method": {
+    "high": "The same decision appears across several owner answers, follows a confirmed parent-page rule, and does not create a new service claim.",
+    "medium": "The decision is supported by current site copy and related owner answers, but the exact service boundary was not stated directly.",
+    "low": "The decision could change service scope, billing, legal or clinical expectations, geographic eligibility, or SEO page separation. Owner review is needed before promotion."
+  },
+  "sitewide_high_confidence_rules": [
+    "Write in a plainspoken and practical voice at or below a 6th grade reading level.",
+    "Start with what the potential client or parent is seeing, not a clinical definition.",
+    "Use examples in short lists when they help the reader scan the page.",
+    "Explain that plans are individualized and may involve more than one LMHG provider when roles are clear.",
+    "Use the Reach Out intake form as the main next step and phone calls as a secondary option.",
+    "Mention the 7 to 14 day timing only with a caveat that specific provider requests can take longer.",
+    "Keep insurance language brief and route detailed questions to the insurance page.",
+    "Do not promise emergency response, outcomes, guaranteed resources, medication management, testing, legal opinions, or services LMHG does not provide.",
+    "Use one main search intent per page and link naturally to the parent or closely related service."
+  ],
+  "pages": [
+    {
+      "slug": "adolescent-counseling",
+      "overall_confidence": "medium",
+      "high_confidence_inferences": [
+        "Speak mainly to parents while keeping the page readable for teens.",
+        "Use Teen Therapy as the main term and teen counseling or adolescent counseling as supporting terms.",
+        "Cover mood changes, shutdown, anger, school pressure, social strain, trauma, and family conflict.",
+        "Connect the page to Child Therapy and Family Therapy without treating teens like younger children."
+      ],
+      "low_confidence_items": [
+        "The exact LMHG policy for teen privacy, parent updates, and safety-related disclosures has not been stated."
+      ],
+      "draft_path": "page-copy-drafts/adolescent-counseling.md"
+    },
+    {
+      "slug": "adult-counseling",
+      "overall_confidence": "high",
+      "high_confidence_inferences": [
+        "Use Adult Counseling as the main term and adult therapy as a supporting term.",
+        "Carry forward the Individual Counseling page's privacy, choice, broad concern list, team approach, and payment rules.",
+        "Write for adults with work, family, grief, stress, relationship, trauma, and life-change concerns."
+      ],
+      "low_confidence_items": [],
+      "draft_path": "page-copy-drafts/adult-counseling.md"
+    },
+    {
+      "slug": "anxiety-depression-therapy",
+      "overall_confidence": "high",
+      "high_confidence_inferences": [
+        "Use Anxiety and Depression Therapy as the main term while using counseling naturally in body copy.",
+        "Speak to symptoms and daily effects without diagnosing the reader.",
+        "Keep the page within therapy scope and do not imply psychiatry or medication management.",
+        "Use the Individual Counseling team and payment rules."
+      ],
+      "low_confidence_items": [],
+      "draft_path": "page-copy-drafts/anxiety-depression-therapy.md"
+    },
+    {
+      "slug": "attachment-therapy",
+      "overall_confidence": "low",
+      "high_confidence_inferences": [
+        "The current LMHG page belongs under Family Therapy and focuses on caregiver-child trust, connection, emotional safety, and repair.",
+        "Caregiver participation is important and the plan should be individualized.",
+        "The page should distinguish this work from Family Reunification and should not imply custody work or guaranteed repair."
+      ],
+      "low_confidence_items": [
+        "Current Google results lean toward adult attachment patterns and relationship therapy, while LMHG's current page is parent-child and family focused. The intended public scope needs confirmation."
+      ],
+      "draft_path": "page-copy-drafts/attachment-therapy.md"
+    },
+    {
+      "slug": "child-behavioral-intervention",
+      "overall_confidence": "medium",
+      "high_confidence_inferences": [
+        "Speak to parents who see behavior but may not know the cause.",
+        "Present Child Behavioral Therapy as one type of Child Therapy chosen from the presenting problem.",
+        "Include parent check-ins, home routines, family sessions, and school coordination when useful.",
+        "Exclude psychiatry, medication, autism or learning testing, ABA, speech therapy, occupational therapy, custody opinions, and crisis response."
+      ],
+      "low_confidence_items": [
+        "LMHG has not yet confirmed whether the service should publicly be called Child Behavioral Therapy or Child Behavioral Intervention.",
+        "The exact use of written behavior plans, reward systems, school observation, or parent-only coaching has not been stated."
+      ],
+      "draft_path": "page-copy-drafts/child-behavioral-intervention.md"
+    },
+    {
+      "slug": "community-support",
+      "overall_confidence": "high",
+      "high_confidence_inferences": [
+        "Speak mainly to Medicaid clients.",
+        "Define a Community Support Associate as a therapeutic assistant who helps the client practice therapy goals in daily life.",
+        "State that the client still sees a therapist and that the Community Support Associate works closely with that therapist.",
+        "Distinguish this service from Case Management, which focuses more on plans, resources, systems, and coordination."
+      ],
+      "low_confidence_items": [],
+      "draft_path": "page-copy-drafts/community-support.md"
+    },
+    {
+      "slug": "couples-conflict-resolution",
+      "overall_confidence": "high",
+      "high_confidence_inferences": [
+        "The owner already confirmed that Conflict Resolution can include larger family systems, including parents and grandparents and blended families, so the page should not be couples-only.",
+        "Include couples, parent-child conflict, siblings, parents and grandparents, and blended family members when they fit the presenting conflict.",
+        "Focus on repeating conflict, escalation, shutdown, repair, and making hard talks more structured.",
+        "State clearly that this is therapy work, not mediation, legal work, or a service that takes sides.",
+        "Use Conflict Resolution Counseling as the main public phrase because the broader Louisville SERP supports counseling intent while the current couples-only phrase leans toward mediation."
+      ],
+      "low_confidence_items": [
+        "The current slug and title are couples-only and do not match the confirmed broader family scope. A redirect and final replacement slug require an architecture decision before promotion."
+      ],
+      "draft_path": "page-copy-drafts/couples-conflict-resolution.md"
+    },
+    {
+      "slug": "parenting-support",
+      "overall_confidence": "medium",
+      "high_confidence_inferences": [
+        "Speak to parents and caregivers dealing with behavior, boundaries, communication, stress, and home routines.",
+        "Use an individualized mix of caregiver guidance, family sessions, child therapy, and school coordination when useful.",
+        "Do not frame the service as a parenting class unless LMHG actually offers a class."
+      ],
+      "low_confidence_items": [
+        "It is not yet clear whether Parenting Support may be delivered as parent-only counseling, coaching, family therapy, or a case-by-case mix for billing and public labeling."
+      ],
+      "draft_path": "page-copy-drafts/parenting-support.md"
+    },
+    {
+      "slug": "play-therapy",
+      "overall_confidence": "high",
+      "high_confidence_inferences": [
+        "Speak to parents and caregivers.",
+        "Explain that children often use play to show and work through feelings they cannot yet explain in a long talk.",
+        "Present Play Therapy as one type of Child Therapy and explain that parent involvement often grows as the child gets younger.",
+        "Cover big feelings, behavior changes, anxiety, grief, trauma, school stress, and family change without promising a result."
+      ],
+      "low_confidence_items": [],
+      "draft_path": "page-copy-drafts/play-therapy.md"
+    },
+    {
+      "slug": "relationship-counseling",
+      "overall_confidence": "low",
+      "high_confidence_inferences": [
+        "Current site structure places the page under Couples Counseling.",
+        "A workable distinction is to focus this page on trust, closeness, repeating patterns, and relationship decisions while the conflict page focuses on arguments and repair skills.",
+        "Keep the parent-page rule that married and unmarried couples of any gender are welcome."
+      ],
+      "low_confidence_items": [
+        "It is not confirmed whether Relationship Counseling is only for romantic couples or may also cover other close relationships.",
+        "Search intent strongly overlaps Couples Counseling, so the final page purpose and keyword target need owner confirmation."
+      ],
+      "draft_path": "page-copy-drafts/relationship-counseling.md"
+    },
+    {
+      "slug": "therapy-in-your-home",
+      "overall_confidence": "medium",
+      "high_confidence_inferences": [
+        "Define in-home therapy as therapy delivered in the client's home, not a different therapy method.",
+        "Use in-home mental health therapy early because search results are mixed with physical therapy and home health.",
+        "The service may be useful when transportation, home routines, child needs, or family patterns make office-only therapy less useful.",
+        "Medicaid and commercial insurance may cover the service depending on fit and benefits."
+      ],
+      "low_confidence_items": [
+        "The exact service area, client eligibility rules, and any home-safety requirements have not been stated."
+      ],
+      "draft_path": "page-copy-drafts/therapy-in-your-home.md"
+    }
+  ]
+}

@@ -93,6 +93,7 @@
       "Couples Counseling can cover communication, recurring arguments, emotional distance, trust repair, parenting stress, sex and intimacy, financial stress, major decisions, separation, and ambivalence.",
       "The Couples Counseling page should frame the service around making hard conversations more structured.",
       "Couples copy can mention that one or both partners may also have individual therapy, with clinician roles and boundaries kept clear.",
+      "The Conflict Resolution specialty should not be limited to couples. It can include conflict within larger family systems, such as parent-child conflict, siblings, parents and grandparents, or blended families.",
       "Couples copy should avoid promising guaranteed relationship repair, taking sides, custody or legal opinions, or crisis response."
     ],
     "court_ordered_service_content_rules": [
@@ -174,6 +175,17 @@
       "The page can name high-conflict communication, parenting decisions, schedule stress, children feeling stuck in the middle, school or medical decisions, new partners, blended family stress, and court expectations.",
       "The process can include meeting with one or both parents, reviewing court orders if present, setting communication rules, and child-focused parenting.",
       "Co-Parenting Services copy should avoid promising mediation, custody evaluations, legal advice, taking sides, supervised visitation, emergency response, guaranteed court outcomes, or parenting classes."
+    ],
+    "case_management_content_rules": [
+      "Case Management should speak mainly to Medicaid clients who need practical help that supports their mental health.",
+      "Use Case Management as the primary page and SEO term because LMHG already ranks for it.",
+      "Use targeted case management at least once as a secondary phrase, without changing the public service label.",
+      "The page can name basic needs, housing instability, job skills, coordination with multiple medical or mental health providers, school coordination, crisis planning, and advocacy skills.",
+      "Case Management focuses on planning, connecting resources, coordinating providers and systems, and helping clients build advocacy skills.",
+      "Community Support is different: Community Support Associates work like therapeutic assistants who help clients practice therapy goals in the community while working closely with the therapist the client still sees on a regular basis.",
+      "Case managers may coordinate with therapists, medical providers, schools, insurance plans, and community agencies when appropriate and authorized.",
+      "Case Management is mostly Medicaid-based, but a private-pay or fee-for-service arrangement may be possible case by case.",
+      "Case Management copy should avoid promising emergency response, transportation, guaranteed housing or resources, direct financial aid, legal advice or representation, medication management, or 24-hour availability."
     ]
   },
   "external_seo_guidance": [
@@ -402,6 +414,52 @@
       "location_code": 2840,
       "language_code": "en",
       "summary": "SERP checks showed co-parenting counseling and co-parenting therapy intent overlapping with family therapy, parent support, directory results, Reddit recommendations, and local packs. Co-parenting classes produced a different intent around parent education, court-recognized certificates, visitation or exchange centers, and class/group listings. LMHG copy should use co-parenting counseling as a secondary phrase but clearly state that court-ordered co-parenting intervention is not a parenting class."
+    },
+    {
+      "date": "2026-07-10",
+      "tool": "dfs_google_serp_live",
+      "page_slug": "case-management",
+      "queries": [
+        "mental health case management louisville ky",
+        "targeted case management louisville ky",
+        "medicaid case management louisville ky"
+      ],
+      "location_code": 2840,
+      "language_code": "en",
+      "summary": "LMHG ranked first organically in the checked mental health case management Louisville results. Targeted case management and Medicaid case management results mixed provider pages with state, training, job, directory, and managed-care intent. Keep Case Management primary, use targeted case management once, lead with Medicaid and practical support, and avoid agency, job-listing, or insurance utilization language."
+    },
+    {
+      "date": "2026-07-10",
+      "tool": "dfs_google_serp_live",
+      "page_group": "remaining-specialty-drafts",
+      "queries": [
+        "teen therapy louisville ky",
+        "adult counseling louisville ky",
+        "anxiety and depression therapy louisville ky",
+        "attachment therapy louisville ky",
+        "child behavioral therapy louisville ky",
+        "community support services mental health louisville ky",
+        "couples conflict resolution louisville ky",
+        "parenting support counseling louisville ky",
+        "play therapy louisville ky",
+        "relationship counseling louisville ky",
+        "in home therapy louisville ky"
+      ],
+      "location_code": 2840,
+      "language_code": "en",
+      "summary": "Live SERPs supported direct teen therapy, adult counseling, anxiety therapy, child behavioral therapy, parenting support, play therapy, and relationship counseling intent. Attachment therapy results leaned toward adult relationship and attachment-pattern work even though LMHG currently places the page under Family Therapy. Couples conflict resolution results leaned toward mediation and legal services, creating an intent risk that the copy must answer clearly. Community support and in-home therapy results were broad and institutional or mixed with physical therapy; those pages need plain mental-health definitions early. AI Overview items appeared for community support, parenting support, and in-home therapy."
+    },
+    {
+      "date": "2026-07-10",
+      "tool": "dfs_google_serp_live",
+      "page_slug": "couples-conflict-resolution",
+      "queries": [
+        "family conflict resolution counseling louisville ky",
+        "conflict resolution counseling louisville ky"
+      ],
+      "location_code": 2840,
+      "language_code": "en",
+      "summary": "The broader family query returned an AI Overview plus family therapy and family counseling results. Conflict resolution counseling returned a direct Louisville therapy result but still mixed counseling and mediation intent. This supports broadening the page to couples and larger family systems, using Conflict Resolution Counseling as the main phrase, and clearly stating that LMHG provides therapy rather than mediation or legal services."
     }
   ],
   "brand_level_answers": [
@@ -1332,6 +1390,83 @@
           "Do not imply supervised visitation.",
           "Do not imply emergency response.",
           "Do not guarantee court outcomes."
+        ]
+      }
+    },
+    {
+      "slug": "case-management",
+      "status": "answers_recorded_and_drafted",
+      "current_page_notes": [
+        "Live page title: Case Management in Louisville, KY.",
+        "Current lead is brief and already speaks to Medicaid clients, coordination, referrals, resources, appointments, and follow-through.",
+        "The current WordPress filter replaces every use of targeted case management on this page with case management, so that filter must be narrowed before the approved secondary phrase can render."
+      ],
+      "seo_notes": [
+        "Use Case Management as the primary term because it is the ranking phrase and LMHG ranked first organically in the checked Louisville SERP.",
+        "Use targeted case management once as a supporting phrase.",
+        "Lead with Medicaid and practical support, not generic therapy or hospital-style language.",
+        "Define the difference between Case Management and Community Support in plain language."
+      ],
+      "answers": [
+        {
+          "date": "2026-07-10",
+          "question": "Who should the page speak to first?",
+          "answer": "Mostly Medicaid clients."
+        },
+        {
+          "date": "2026-07-10",
+          "question": "Which main and secondary service terms should the page use?",
+          "answer": "Use Case Management as the primary term because it is the ranking keyword. Include targeted case management at least once."
+        },
+        {
+          "date": "2026-07-10",
+          "question": "Which practical needs should the page name?",
+          "answer": "Basic needs, housing instability, job skills, coordination with multiple medical or mental health providers, school coordination, crisis planning, and advocacy skills."
+        },
+        {
+          "date": "2026-07-10",
+          "question": "How should Case Management differ from Community Support?",
+          "answer": "Case Management provides the practical planning, coordination, resource, and skill support named above. Community Support Associates are like therapeutic assistants who help clients work on therapy goals in the community while working closely with the client's therapist, whom the client still sees on a regular basis."
+        },
+        {
+          "date": "2026-07-10",
+          "question": "May case managers coordinate with therapists, medical providers, schools, insurance plans, and community agencies?",
+          "answer": "Yes."
+        },
+        {
+          "date": "2026-07-10",
+          "question": "How should payment be described?",
+          "answer": "Case Management is mostly Medicaid-based, with private-pay or fee-for-service arrangements possible case by case."
+        },
+        {
+          "date": "2026-07-10",
+          "question": "Which limits should the page state or preserve?",
+          "answer": "Do not promise emergency response, transportation, guaranteed housing or resources, direct financial aid, legal advice or representation, medication management, or 24-hour availability."
+        }
+      ],
+      "draft_direction": {
+        "primary_message": "Case Management helps mostly Medicaid clients connect practical needs, providers, schools, resources, and plans that affect mental health and daily stability.",
+        "secondary_messages": [
+          "Use targeted case management once while keeping Case Management as the public label.",
+          "Name basic needs, housing instability, job skills, provider coordination, school coordination, crisis planning, and advocacy skills.",
+          "Explain that Community Support Associates help clients practice therapy goals in daily life and work with the client's regular therapist.",
+          "State that case managers may coordinate with providers, schools, insurance plans, and community agencies when appropriate.",
+          "Keep Medicaid primary and mention case-by-case private-pay or fee-for-service options."
+        ],
+        "internal_link_candidates": [
+          "community-based mental health services",
+          "community support services",
+          "in-home therapy",
+          "costs and insurance"
+        ],
+        "avoid_claims": [
+          "Do not promise emergency response.",
+          "Do not promise transportation.",
+          "Do not guarantee housing, benefits, or other resources.",
+          "Do not imply direct financial aid.",
+          "Do not imply legal advice or representation.",
+          "Do not imply medication management.",
+          "Do not imply 24-hour availability."
         ]
       }
     }
