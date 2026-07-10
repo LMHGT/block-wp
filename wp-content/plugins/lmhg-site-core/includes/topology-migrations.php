@@ -483,7 +483,7 @@ function lmhg_site_core_rename_topology_faq_posts( string $old_slug, string $new
 		}
 	}
 
-	return lmhg_site_core_remove_legacy_faq_posts( $faq_slug );
+	return true;
 }
 
 /**
@@ -585,7 +585,7 @@ function lmhg_site_core_sync_topology_faq_items( array $page_data, string $page_
 		wp_set_object_terms( (int) $result, array( $term_id ), LMHG_SITE_CORE_FAQ_SET_TAXONOMY, false );
 	}
 
-	return true;
+	return lmhg_site_core_remove_legacy_faq_posts( $faq_slug );
 }
 
 /**
