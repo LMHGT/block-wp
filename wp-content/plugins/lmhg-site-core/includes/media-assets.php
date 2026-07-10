@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 const LMHG_SITE_CORE_MEDIA_ASSET_ROLE_META         = '_lmhg_asset_role';
 const LMHG_SITE_CORE_MEDIA_ASSET_SOURCE_PATH_META  = '_lmhg_asset_source_path';
 const LMHG_SITE_CORE_MEDIA_ASSET_SEED_OPTION       = 'lmhg_media_asset_seed_version';
-const LMHG_SITE_CORE_MEDIA_ASSET_SEED_VERSION      = '2026-07-10-media-library-assets-v2';
+const LMHG_SITE_CORE_MEDIA_ASSET_SEED_VERSION      = '2026-07-10-media-library-assets-v3';
 
 add_action( 'init', 'lmhg_site_core_register_media_asset_meta', 11 );
 add_action( 'init', 'lmhg_site_core_seed_media_library_assets', 40 );
@@ -181,11 +181,6 @@ function lmhg_site_core_specialty_icon_definitions(): array {
 			'file'  => 'play-therapy-card-icon-transparent.webp',
 			'alt'   => 'Play Therapy icon',
 			'title' => 'Play Therapy specialty icon',
-		),
-		'relationship-counseling'       => array(
-			'file'  => 'relationship-counseling-card-icon-transparent.webp',
-			'alt'   => 'Relationship Counseling icon',
-			'title' => 'Relationship Counseling specialty icon',
 		),
 	);
 }

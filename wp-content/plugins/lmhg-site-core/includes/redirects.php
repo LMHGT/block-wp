@@ -145,7 +145,11 @@ function lmhg_site_core_redirect_map(): array {
 function lmhg_site_core_static_redirect_map(): array {
 	return array(
 		'/couples-conflict-resolution/' => array(
-			'target'     => '/conflict-resolution-counseling/',
+			'target'     => '/couples-counseling/',
+			'statusCode' => 301,
+		),
+		'/relationship-counseling/'      => array(
+			'target'     => '/couples-counseling/',
 			'statusCode' => 301,
 		),
 		'/therapy-in-your-home/'        => array(

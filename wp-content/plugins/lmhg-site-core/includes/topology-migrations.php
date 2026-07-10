@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_OPTION  = 'lmhg_content_topology_migration_version';
-const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_VERSION = '2026-07-10-service-topology-v2';
+const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_VERSION = '2026-07-10-service-topology-v3';
 
 add_action( 'init', 'lmhg_site_core_run_topology_migration', 27 );
 
@@ -29,8 +29,11 @@ function lmhg_site_core_run_topology_migration(): void {
 
 	$complete = true;
 	$complete = lmhg_site_core_sync_topology_page( $page_data, '/attachment-therapy/', '/attachment-therapy/' ) && $complete;
+	$complete = lmhg_site_core_sync_topology_page( $page_data, '/adolescent-counseling/', '/adolescent-counseling/' ) && $complete;
 	$complete = lmhg_site_core_sync_topology_page( $page_data, '/child-behavioral-intervention/', '/child-behavioral-intervention/' ) && $complete;
 	$complete = lmhg_site_core_sync_topology_page( $page_data, '/couples-conflict-resolution/', '/conflict-resolution-counseling/' ) && $complete;
+	$complete = lmhg_site_core_sync_topology_page( $page_data, '/couples-counseling/', '/couples-counseling/' ) && $complete;
+	$complete = lmhg_site_core_sync_topology_page( $page_data, '/parenting-support/', '/parenting-support/' ) && $complete;
 	$complete = lmhg_site_core_sync_topology_page( $page_data, '/locations/in-home/', '/locations/in-home/' ) && $complete;
 
 	$complete = lmhg_site_core_rename_topology_term(
@@ -77,13 +80,18 @@ function lmhg_site_core_run_topology_migration(): void {
 		'Conflict Resolution Counseling'
 	) && $complete;
 	$complete = lmhg_site_core_sync_topology_faq_items( $page_data, '/attachment-therapy/', 'attachment-therapy' ) && $complete;
+	$complete = lmhg_site_core_sync_topology_faq_items( $page_data, '/adolescent-counseling/', 'adolescent-counseling' ) && $complete;
 	$complete = lmhg_site_core_sync_topology_faq_items( $page_data, '/child-behavioral-intervention/', 'child-behavioral-intervention' ) && $complete;
 	$complete = lmhg_site_core_sync_topology_faq_items( $page_data, '/conflict-resolution-counseling/', 'conflict-resolution-counseling' ) && $complete;
+	$complete = lmhg_site_core_sync_topology_faq_items( $page_data, '/couples-counseling/', 'couples-counseling' ) && $complete;
+	$complete = lmhg_site_core_sync_topology_faq_items( $page_data, '/parenting-support/', 'parenting-support' ) && $complete;
 	$complete = lmhg_site_core_sync_topology_faq_items( $page_data, '/locations/in-home/', 'locations-in-home' ) && $complete;
 
 	$complete = lmhg_site_core_move_conflict_resolution_relationship() && $complete;
+	$complete = lmhg_site_core_move_parenting_support_relationship() && $complete;
 	$complete = lmhg_site_core_remove_obsolete_in_home_records() && $complete;
 	$complete = lmhg_site_core_replace_topology_references() && $complete;
+	$complete = lmhg_site_core_remove_relationship_counseling_records() && $complete;
 
 	if ( $complete ) {
 		update_option( LMHG_SITE_CORE_TOPOLOGY_MIGRATION_OPTION, LMHG_SITE_CORE_TOPOLOGY_MIGRATION_VERSION, false );
@@ -454,6 +462,157 @@ function lmhg_site_core_move_conflict_resolution_relationship(): bool {
 }
 
 /**
+ * Moves Parenting Support from Family Therapy to Child Therapy.
+ *
+ * @return bool
+ */
+function lmhg_site_core_move_parenting_support_relationship(): bool {
+	$term   = get_term_by( 'slug', 'parenting-support', LMHG_SITE_CORE_SPECIALTY_TAXONOMY );
+	$child  = lmhg_site_core_find_published_topology_page( '/child-counseling/' );
+	$family = lmhg_site_core_find_published_topology_page( '/family-therapy/' );
+	if ( ! $term instanceof WP_Term || ! $child instanceof WP_Post || ! $family instanceof WP_Post ) {
+		return false;
+	}
+
+	$added   = wp_set_object_terms( (int) $child->ID, array( (int) $term->term_id ), LMHG_SITE_CORE_SPECIALTY_TAXONOMY, true );
+	$removed = wp_remove_object_terms( (int) $family->ID, array( (int) $term->term_id ), LMHG_SITE_CORE_SPECIALTY_TAXONOMY );
+
+	return ! is_wp_error( $added ) && ! is_wp_error( $removed );
+}
+
+/**
+ * Removes the Relationship Counseling page and its dedicated runtime records.
+ *
+ * Unexpected editor-authored FAQs are moved to the Couples Counseling FAQ set.
+ *
+ * @return bool
+ */
+function lmhg_site_core_remove_relationship_counseling_records(): bool {
+	$couples = lmhg_site_core_find_published_topology_page( '/couples-counseling/' );
+	if ( ! $couples instanceof WP_Post ) {
+		return false;
+	}
+
+	$couples_faq_id = lmhg_site_core_ensure_specialty_faq_set( 'couples-counseling', 'Couples Counseling' );
+	if ( $couples_faq_id <= 0 ) {
+		return false;
+	}
+
+	$relationship_faq = get_term_by( 'slug', 'relationship-counseling', LMHG_SITE_CORE_FAQ_SET_TAXONOMY );
+	if ( $relationship_faq instanceof WP_Term ) {
+		$object_ids = get_objects_in_term( (int) $relationship_faq->term_id, LMHG_SITE_CORE_FAQ_SET_TAXONOMY );
+		if ( is_wp_error( $object_ids ) ) {
+			return false;
+		}
+
+		foreach ( $object_ids as $object_id ) {
+			$faq = get_post( (int) $object_id );
+			if ( ! $faq instanceof WP_Post || LMHG_SITE_CORE_FAQ_POST_TYPE !== $faq->post_type ) {
+				continue;
+			}
+
+			if ( str_starts_with( $faq->post_name, 'specialty-relationship-counseling-faq-' ) ) {
+				if ( false === wp_delete_post( (int) $faq->ID, true ) ) {
+					return false;
+				}
+				continue;
+			}
+
+			$added   = wp_set_object_terms( (int) $faq->ID, array( $couples_faq_id ), LMHG_SITE_CORE_FAQ_SET_TAXONOMY, true );
+			$removed = wp_remove_object_terms( (int) $faq->ID, array( (int) $relationship_faq->term_id ), LMHG_SITE_CORE_FAQ_SET_TAXONOMY );
+			if ( is_wp_error( $added ) || is_wp_error( $removed ) ) {
+				return false;
+			}
+		}
+
+		$deleted = wp_delete_term( (int) $relationship_faq->term_id, LMHG_SITE_CORE_FAQ_SET_TAXONOMY );
+		if ( is_wp_error( $deleted ) || false === $deleted ) {
+			return false;
+		}
+	}
+
+	$relationship_term = get_term_by( 'slug', 'relationship-counseling', LMHG_SITE_CORE_SPECIALTY_TAXONOMY );
+	$icon_id           = $relationship_term instanceof WP_Term
+		? absint( get_term_meta( (int) $relationship_term->term_id, LMHG_SITE_CORE_SPECIALTY_ICON_ID_META, true ) )
+		: 0;
+	if ( $relationship_term instanceof WP_Term ) {
+		$deleted = wp_delete_term( (int) $relationship_term->term_id, LMHG_SITE_CORE_SPECIALTY_TAXONOMY );
+		if ( is_wp_error( $deleted ) || false === $deleted ) {
+			return false;
+		}
+	}
+
+	$pages = get_posts(
+		array(
+			'name'           => 'relationship-counseling',
+			'post_type'      => 'page',
+			'post_status'    => 'any',
+			'posts_per_page' => -1,
+			'no_found_rows'  => true,
+		)
+	);
+	foreach ( $pages as $page ) {
+		if ( ! $page instanceof WP_Post ) {
+			continue;
+		}
+
+		$uri        = '/' . trim( get_page_uri( $page ), '/' ) . '/';
+		$source_url = (string) get_post_meta( (int) $page->ID, '_lmhg_source_url', true );
+		$imported   = '/relationship-counseling/' === lmhg_site_core_normalize_redirect_path( (string) wp_parse_url( $source_url, PHP_URL_PATH ) );
+		if ( '/relationship-counseling/' !== $uri && ! $imported ) {
+			continue;
+		}
+
+		if ( false === wp_delete_post( (int) $page->ID, true ) ) {
+			return false;
+		}
+	}
+
+	$media_role_meta = defined( 'LMHG_SITE_CORE_MEDIA_ASSET_ROLE_META' )
+		? (string) constant( 'LMHG_SITE_CORE_MEDIA_ASSET_ROLE_META' )
+		: '_lmhg_asset_role';
+	$attachments    = get_posts(
+		array(
+			'post_type'      => 'attachment',
+			'post_status'    => 'inherit',
+			'posts_per_page' => -1,
+			'no_found_rows'  => true,
+			'meta_key'       => $media_role_meta,
+			'meta_value'     => 'specialty-icon-relationship-counseling',
+		)
+	);
+	if ( $icon_id > 0 && empty( array_filter( $attachments, static fn( $item ) => $item instanceof WP_Post && (int) $item->ID === $icon_id ) ) ) {
+		$icon = get_post( $icon_id );
+		if ( $icon instanceof WP_Post && 'specialty-icon-relationship-counseling' === get_post_meta( $icon_id, $media_role_meta, true ) ) {
+			$attachments[] = $icon;
+		}
+	}
+	foreach ( $attachments as $attachment ) {
+		if ( $attachment instanceof WP_Post && false === wp_delete_attachment( (int) $attachment->ID, true ) ) {
+			return false;
+		}
+	}
+
+	$remaining_pages = get_posts(
+		array(
+			'name'           => 'relationship-counseling',
+			'post_type'      => 'page',
+			'post_status'    => 'any',
+			'posts_per_page' => -1,
+			'no_found_rows'  => true,
+		)
+	);
+	foreach ( $remaining_pages as $page ) {
+		if ( $page instanceof WP_Post && '/relationship-counseling/' === '/' . trim( get_page_uri( $page ), '/' ) . '/' ) {
+			return false;
+		}
+	}
+
+	return ! get_term_by( 'slug', 'relationship-counseling', LMHG_SITE_CORE_SPECIALTY_TAXONOMY )
+		&& ! get_term_by( 'slug', 'relationship-counseling', LMHG_SITE_CORE_FAQ_SET_TAXONOMY );
+}
+
+/**
  * Deletes the replaced in-home specialty page, taxonomy terms, and seeded FAQ records.
  *
  * @return bool
@@ -516,7 +675,15 @@ function lmhg_site_core_replace_topology_references(): bool {
 		'_lmhg_related_pages',
 		'_lmhg_source_content',
 		'_lmhg_seo_title',
+		'_lmhg_meta_description',
 		'_lmhg_h1',
+		'_lmhg_primary_keyword',
+		'_lmhg_secondary_keywords',
+		'_lmhg_optimization_terms',
+		'_lmhg_faq_items',
+		'_lmhg_editable_blocks_manifest_entry',
+		'_lmhg_editable_blocks',
+		'_lmhg_editable_media_assets',
 	);
 
 	foreach ( $pages as $page ) {
@@ -600,14 +767,16 @@ function lmhg_site_core_replace_topology_string( string $value ): string {
 	$value = str_replace(
 		array(
 			'/couples-conflict-resolution/',
+			'/relationship-counseling/',
 			'/therapy-in-your-home/',
 			'Couples Conflict Resolution',
 			'Child Behavioral Intervention',
 		),
 		array(
-			'/conflict-resolution-counseling/',
+			'/couples-counseling/',
+			'/couples-counseling/',
 			'/locations/in-home/',
-			'Conflict Resolution Counseling',
+			'Couples Counseling',
 			'Child Behavioral Therapy',
 		),
 		$value

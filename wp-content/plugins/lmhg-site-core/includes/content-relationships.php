@@ -23,9 +23,9 @@ const LMHG_SITE_CORE_TEAM_LAST_META      = '_lmhg_team_last_name';
 const LMHG_SITE_CORE_TEAM_CREDENTIALS    = '_lmhg_team_credentials';
 const LMHG_SITE_CORE_TEAM_HEADSHOT_URL   = '_lmhg_team_headshot_url';
 const LMHG_SITE_CORE_SPECIALTY_FAQ_SEED_OPTION  = 'lmhg_specialty_placeholder_faq_seed_version';
-const LMHG_SITE_CORE_SPECIALTY_FAQ_SEED_VERSION = '2026-07-10-specialty-faq-placeholders-v2';
+const LMHG_SITE_CORE_SPECIALTY_FAQ_SEED_VERSION = '2026-07-10-specialty-faq-placeholders-v3';
 const LMHG_SITE_CORE_SERVICE_SPECIALTY_SEED_OPTION  = 'lmhg_service_specialty_relationship_seed_version';
-const LMHG_SITE_CORE_SERVICE_SPECIALTY_SEED_VERSION = '2026-07-10-service-specialty-taxonomy-v2';
+const LMHG_SITE_CORE_SERVICE_SPECIALTY_SEED_VERSION = '2026-07-10-service-specialty-taxonomy-v3';
 const LMHG_SITE_CORE_RELATED_PAGE_TERM_SEED_OPTION  = 'lmhg_related_page_term_metadata_seed_version';
 const LMHG_SITE_CORE_RELATED_PAGE_TERM_SEED_VERSION = '2026-07-05-related-page-term-metadata-v1';
 const LMHG_SITE_CORE_IN_HOME_SPECIALTY_CLEANUP_OPTION  = 'lmhg_in_home_specialty_cleanup_version';
@@ -365,14 +365,12 @@ function lmhg_site_core_service_specialty_relationship_seed_items(): array {
 		'child-counseling'         => array(
 			'adolescent-counseling'         => 'Teen Therapy',
 			'child-behavioral-intervention' => 'Child Behavioral Therapy',
+			'parenting-support'              => 'Parenting Support',
 			'play-therapy'                  => 'Play Therapy',
 		),
 		'community-based-services' => array(
 			'case-management'   => 'Case Management',
 			'community-support' => 'Community Support',
-		),
-		'couples-counseling'       => array(
-			'relationship-counseling' => 'Relationship Counseling',
 		),
 		'court-ordered'            => array(
 			'co-parenting'         => 'Co-Parenting',
@@ -381,7 +379,6 @@ function lmhg_site_core_service_specialty_relationship_seed_items(): array {
 		'family-therapy'           => array(
 			'attachment-therapy'             => 'Parent-Child Attachment Therapy',
 			'conflict-resolution-counseling' => 'Conflict Resolution Counseling',
-			'parenting-support'              => 'Parenting Support',
 		),
 		'individual-counseling'    => array(
 			'adult-counseling'           => 'Adult Counseling',
@@ -466,7 +463,6 @@ function lmhg_site_core_specialty_placeholder_faq_seed_items(): array {
 		'family-reunification'           => 'Family Reunification Services',
 		'parenting-support'              => 'Parenting Support',
 		'play-therapy'                   => 'Play Therapy',
-		'relationship-counseling'        => 'Relationship Counseling',
 	);
 }
 

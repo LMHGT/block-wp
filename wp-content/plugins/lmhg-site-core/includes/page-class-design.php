@@ -585,6 +585,7 @@ function lmhg_site_core_core30_service_families(): array {
 				array( 'title' => 'Teen Therapy', 'url' => '/adolescent-counseling/' ),
 				array( 'title' => 'Play Therapy', 'url' => '/play-therapy/' ),
 				array( 'title' => 'Child Behavioral Therapy', 'url' => '/child-behavioral-intervention/' ),
+				array( 'title' => 'Parenting Support', 'url' => '/parenting-support/' ),
 			),
 		),
 		array(
@@ -594,16 +595,13 @@ function lmhg_site_core_core30_service_families(): array {
 			'children'    => array(
 				array( 'title' => 'Parent-Child Attachment Therapy', 'url' => '/attachment-therapy/' ),
 				array( 'title' => 'Conflict Resolution Counseling', 'url' => '/conflict-resolution-counseling/' ),
-				array( 'title' => 'Parenting Support', 'url' => '/parenting-support/' ),
 			),
 		),
 		array(
 			'title'       => 'Couples Counseling',
 			'url'         => '/couples-counseling/',
 			'description' => 'Relationship support for communication, recurring conflict, emotional distance, repair, and relationship decisions.',
-			'children'    => array(
-				array( 'title' => 'Relationship Counseling', 'url' => '/relationship-counseling/' ),
-			),
+			'children'    => array(),
 		),
 		array(
 			'title'       => 'Court-Ordered Services',
