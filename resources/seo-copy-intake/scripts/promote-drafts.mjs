@@ -4,6 +4,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const targetSlugs = new Set([
+  'services',
+  'specialties',
   'individual-counseling',
   'child-counseling',
   'family-therapy',
@@ -19,16 +21,16 @@ const targetSlugs = new Set([
   'emdr-therapy',
   'family-reunification',
   'play-therapy',
-]);
-
-const metadataSlugs = new Set([
-  ...targetSlugs,
   'adolescent-counseling',
   'attachment-therapy',
   'child-behavioral-intervention',
   'conflict-resolution-counseling',
   'couples-counseling',
   'parenting-support',
+]);
+
+const metadataSlugs = new Set([
+  ...targetSlugs,
 ]);
 
 const draftNames = {
@@ -149,7 +151,7 @@ function renderBlock(block) {
 }
 
 function buildContent(page, draft) {
-  const kind = page.template === 'service-page' ? 'service' : 'specialty';
+  const kind = page.template === 'service-page' || page.template === 'services-hub' ? 'service' : 'specialty';
   const intro = draft.sections.find((item) => item.title === '');
   const leadIndex = intro?.blocks.findIndex((item) => item.type === 'paragraph') ?? -1;
   if (!intro || leadIndex < 0) throw new Error(`Missing opening paragraph for ${page.slug}`);
