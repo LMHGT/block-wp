@@ -9,6 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+require_once __DIR__ . '/faq-question-queue.php';
+
 add_action( 'init', 'lmhg_site_core_register_taxonomies' );
 
 const LMHG_SITE_CORE_TAXONOMY_BACKFILL_OPTION  = 'lmhg_technical_taxonomy_backfill_version';
