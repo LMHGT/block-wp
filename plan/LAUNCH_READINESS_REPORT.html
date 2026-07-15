@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LMHG WordPress Launch Readiness Report</title>
+  <style>body{font:16px/1.55 system-ui,sans-serif;color:#1f2a26;max-width:1100px;margin:auto;padding:32px}h1,h2{color:#152821}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccd7d0;padding:10px;text-align:left;vertical-align:top}th{background:#eaf4ee}.pass{color:#27643f;font-weight:700}.gate{color:#8b452d;font-weight:700}code{background:#f2f4f2;padding:.1em .3em}</style>
+</head>
+<body>
+  <h1>LMHG WordPress Launch Readiness</h1>
+  <p>Evidence snapshot: 2026-07-11 09:40 EDT resumed development window. Current authority: WordPress Playground at <code>100.70.222.25:8093</code>. Publishing/cutover is not authorized by this report.</p>
+  <p>Custom feature owner: LMHG Site Core 0.3.0. Rank Math is not installed; its integration remains dormant.</p>
+
+  <h2>Verified now</h2>
+  <table><thead><tr><th>Area</th><th>Result</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Canonical inventory</td><td class="pass">Pass</td><td>52 sitemap routes return 200; the intentional not-found route returns 404; 53 pages are published and 30 obsolete drafts are in Trash.</td></tr>
+    <tr><td>Rendered SEO</td><td class="pass">Pass with editorial queue</td><td>All 52 routes have a description, Open Graph set, Twitter set, canonical behavior, and parseable JSON-LD. No shortcode or unsupported-block leakage; 23 pages use native server-rendered relationship/FAQ blocks.</td></tr>
+    <tr><td>Lower CTA assignments</td><td class="pass">Pass</td><td>Current post-migration inventory is 42 Default CTA and 11 No Lower CTA assignments across 53 published pages; none are missing and none have multiple variants.</td></tr>
+    <tr><td>CTA invariants</td><td class="pass">Pass live tests</td><td>A disposable page proved Default CTA assignment on first publication, nonce-protected bulk assignment, REST multi-term collapse to one variant, and cleanup. Protected system terms reject REST deletion with a structured 403 and do not expose a Delete row action.</td></tr>
+    <tr><td>Global Reach Out control</td><td class="pass">Pass all routes</td><td>A temporary label and URL changed all 136 recognized intake destinations across all 52 sitemap routes with zero stale links. The approved Reach Out label and IntakeQ URL were restored; 136 approved links and zero temporary links were confirmed afterward.</td></tr>
+    <tr><td>Authenticated administration</td><td class="pass">Pass</td><td>Overview, Page Controls, CTA Variants, Taxonomies, Media Quality, SEO Overview, and Settings return authenticated 200 responses without PHP errors. A temporary Editor was denied CTA controls, protected taxonomy management, and global settings while retaining the intended read-only SEO and media views; the account was removed. Active development credentials are stored in the protected server environment rather than an editor-test script.</td></tr>
+    <tr><td>Gutenberg editor</td><td class="pass">Pass</td><td>The live Teen Therapy page loads 34 valid blocks, including native LMHG FAQs, related pages, and server-rendered Reach Out blocks, with zero invalid, missing, unsupported, shortcode, or recovery warnings. The editor canvas visibly renders the approved button and page layout.</td></tr>
+    <tr><td>Accessibility</td><td class="pass">Pass automated gates</td><td>All 52 canonical routes report zero mobile WCAG A/AA axe violations. 320px and 200% zoom have no overflow; headings wrap; skip link/main landmark/focus targets pass.</td></tr>
+    <tr><td>Images</td><td class="pass">Pass</td><td>44 canonical image records, zero missing Media Library alt values, zero duplicate durable roles; all rendered images have alt attributes and intrinsic dimensions.</td></tr>
+    <tr><td>Links</td><td class="pass">Pass</td><td>All 52 unique internal destinations resolve directly. IntakeQ and both external clinical sources return 200. Generic visible “Learn More” anchors were replaced with destination-specific text.</td></tr>
+    <tr><td>Performance</td><td class="pass">Strong development baseline</td><td>Mobile Lighthouse: performance 95 homepage, 99 representative service, 95 team; accessibility 100; SEO 100; CLS 0; TBT 0 ms.</td></tr>
+    <tr><td>Runtime</td><td class="pass">Pass</td><td>Six Playground workers; a resumed 120-request concurrent <code>/articles/</code> sweep returned 120×200 after one non-reproducing transient audit response. SQLite quick-check and full integrity-check are OK; reviewed local/source/runtime hashes match. Standing backups use SQLite's online backup API and verify each recovery file.</td></tr>
+    <tr><td>WordPress core</td><td class="pass">Current</td><td>Runtime is WordPress 7.0.1, the current maintenance release as of this evidence snapshot.</td></tr>
+    <tr><td>Security surface</td><td class="pass">Application-level pass</td><td>Feeds, search, and author archives return 404; anonymous user enumeration returns 404; XML-RPC introspection, pingback, and authenticated methods now return a hard 403 and RSD discovery is absent; the file editor is disabled; conservative public security headers are enabled.</td></tr>
+  </tbody></table>
+
+  <h2>Editorial and owner gates</h2>
+  <ol>
+    <li><strong>Final copy/keyword review:</strong> 23 pages currently satisfy the rich-copy plus primary/secondary keyword rule, 27 need work, and 3 are exempt. This is the user's final review queue.</li>
+    <li><strong>Search titles:</strong> 23 of 52 rendered titles exceed 60 characters. Review for intent and readability; do not truncate mechanically.</li>
+    <li><strong>Descriptions:</strong> none are missing; 51 are 120–160 characters and the team description is shorter.</li>
+    <li><strong>Social image:</strong> all 52 pages need either an approved global share image or page-specific featured images.</li>
+    <li><strong>Team image semantics:</strong> decide whether provider-name alt text is desired or whether cards already provide enough adjacent identity and the portraits should remain decorative.</li>
+    <li><strong>External intake:</strong> conduct a manual keyboard/screen-reader/privacy review of the third-party IntakeQ experience.</li>
+  </ol>
+
+  <h2>Production and integration gates</h2>
+  <ol>
+    <li>Set the production hostname and HTTPS canonical policy; add HTTP→HTTPS, HSTS, HTTP/2 or HTTP/3, Brotli/Gzip, cache policy, CSP/reporting, and remove the outer Express disclosure at the production edge.</li>
+    <li>Obtain and hash a compatible Rank Math pair. Current discovered versions are Free 1.0.273 and Pro 3.0.116, newer than the earlier planned pair.</li>
+    <li>Activate Rank Math only in development, verify the LMHG content-analysis bridge, resolve handoff conflicts, and prove deactivation fallback before account connection.</li>
+    <li>Choose redirect ownership, import and verify redirects once, and ensure LMHG and Rank Math do not both execute them.</li>
+    <li>Connect license, Search Console, Analytics, Rank Tracker, and optional AI Visibility only after production-domain approval.</li>
+    <li>Run a final backup/cutover rehearsal, production crawl, rich-results validation, social-card preview, consent/privacy check, and Search Console sitemap submission.</li>
+  </ol>
+
+  <h2>Reusable assistance after launch</h2>
+  <ul>
+    <li>Media Quality monitoring for missing/changed alt text, oversized files, duplicate roles, missing dimensions, and orphaned assets.</li>
+    <li>Weekly broken-link, redirect-chain, 404, sitemap/canonical, metadata, schema-duplication, and indexability drift checks.</li>
+    <li>Keyword cannibalization and orphan-page reports using LMHG taxonomies plus Rank Math/Google data.</li>
+    <li>Monthly accessibility smoke tests across representative templates and after plugin/theme updates.</li>
+    <li>Performance budgets for LCP, CLS, asset weight, response time, caching, and mobile regressions.</li>
+    <li>Content freshness queues for provider credentials, services, insurance, locations, legal pages, and time-sensitive claims.</li>
+    <li>Rank Math MCP read-only audits for metadata, schema, and link health; mutation actions remain approval-gated.</li>
+    <li>Backup restore drills, plugin/version compatibility checks, security-header review, and source/runtime parity evidence.</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LMHG Rank Math Pro Integration Contract</title>
+  <style>
+    body{font:16px/1.55 system-ui,sans-serif;color:#1f2a26;margin:0 auto;max-width:1100px;padding:32px}h1,h2{color:#152821}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccd7d0;padding:10px;text-align:left;vertical-align:top}th{background:#eaf4ee}code{background:#f3f5f3;padding:.1em .3em} .gate{border-left:5px solid #a75f3f;background:#f7f3ed;padding:14px}
+  </style>
+</head>
+<body>
+  <h1>LMHG Rank Math Pro Integration Contract</h1>
+  <p>Rank Math Pro becomes the editing and output authority for standard SEO after an administrator-approved, conflict-preserving one-time handoff. LMHG Site Core remains the source of page relationships, publication readiness, CTA variants, organization rules, provenance, and fallback behavior.</p>
+
+  <h2>Content model clarification</h2>
+  <p>The live WordPress page is stored as Gutenberg <code>post_content</code>, which Rank Math analyzes natively. <code>wp2026-page-data.json</code> is a versioned import/source artifact, not a second live page store and not something Rank Math should parse on every request. LMHG's editor bridge uses Rank Math's <code>rank_math_content</code> JavaScript filter only for content assembled outside <code>post_content</code>: taxonomy-driven FAQs and related pages, team/review sections, and CTA term copy.</p>
+
+  <h2>Ownership matrix</h2>
+  <table>
+    <thead><tr><th>Concern</th><th>After activation</th><th>LMHG integration</th></tr></thead>
+    <tbody>
+      <tr><td>SEO title, description, canonical, robots</td><td>Rank Math</td><td>One-time non-overwriting metadata handoff; LMHG values retained as provenance/fallback.</td></tr>
+      <tr><td>Focus keywords and editor score</td><td>Rank Math Pro</td><td>Primary keyword remains first in <code>rank_math_focus_keyword</code>; secondary keywords follow de-duplicated. LMHG SEO Overview remains a read-only cross-check.</td></tr>
+      <tr><td>Open Graph and Twitter</td><td>Rank Math</td><td>LMHG output automatically stops. Missing page-specific share images remain visible in SEO Overview.</td></tr>
+      <tr><td>XML sitemap</td><td>Rank Math</td><td>LMHG route exclusions and private-content rules are applied through supported sitemap filters; only canonical public pages are admitted.</td></tr>
+      <tr><td>llms.txt</td><td>LMHG curated discovery layer</td><td>Keep the existing LMHG file authoritative and leave Rank Math's LLMS Txt module disabled unless its generated inventory is explicitly chosen and validated. Never publish two owners for the route.</td></tr>
+      <tr><td>Organization, WebPage, Breadcrumb schema</td><td>Rank Math</td><td>LMHG never emits duplicates.</td></tr>
+      <tr><td>Service, FAQ, and curated Review schema</td><td>Shared graph</td><td>LMHG adds unique-ID nodes through <code>rank_math/json_ld</code> only when Rank Math has not already emitted the entity.</td></tr>
+      <tr><td>Schema templates and display conditions</td><td>Rank Math Pro</td><td>Use templates for page-family defaults; keep LMHG taxonomy mapping visible for audit and conflict detection.</td></tr>
+      <tr><td>Redirects and 404 monitoring</td><td>Rank Math after migration</td><td>Import existing redirect inventory once, validate every source/target/status, then remove duplicate LMHG redirect execution while retaining a fallback export.</td></tr>
+      <tr><td>Analytics and Rank Tracker</td><td>Rank Math Pro</td><td>Connect Search Console/GA only at go-live; auto-add approved focus keywords after cannibalization review.</td></tr>
+      <tr><td>AI Link Genius</td><td>Rank Math Pro, advisory first</td><td>Use link-health/orphan reports initially. Do not auto-insert or bulk rewrite links until LMHG relationship taxonomies and protected page families are excluded.</td></tr>
+      <tr><td>Image SEO</td><td>Rank Math fallback automation</td><td>Editorial alt text remains authoritative. Never replace intentional empty alt text on decorative images; use automation only for truly missing attributes.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Supported integration hooks</h2>
+  <ul>
+    <li><code>rank_math_content</code> and <code>rank_math_title</code>: editor analysis of plugin/custom-field content.</li>
+    <li><code>rank_math/researches/tests</code> and <code>rank_math/content_ai/research_tests</code>: adjust only tests that are invalid for an LMHG page family.</li>
+    <li><code>rank_math/metabox/post/meta_keys</code> and <code>rank_math/metabox/post/values</code>: expose LMHG audit/provenance data in Gutenberg if needed.</li>
+    <li><code>rank_math/vars/register_extra_replacements</code>: optional stable variables backed by LMHG taxonomy data.</li>
+    <li><code>rank_math/frontend/title</code>, <code>description</code>, <code>robots</code>, and <code>canonical</code>: last-resort organization rules, not ongoing two-way sync.</li>
+    <li><code>rank_math/opengraph/{network}/image</code>: approved global fallback share image.</li>
+    <li><code>rank_math/json_ld</code> and related schema filters: merge unique LMHG entities and prevent duplicates.</li>
+    <li><code>rank_math/sitemap/entry</code>: canonical/private/exclusion enforcement.</li>
+  </ul>
+
+  <h2>Pro capabilities to evaluate deliberately</h2>
+  <p>Unlimited/reorderable focus keywords; Quick Edit and CSV metadata workflows; multiple schema types; Custom Schema Builder, reusable templates, variables, and display conditions; Analytics and Rank Tracker; 404 monitoring and redirect categories/schedules/CSV; Local SEO/KML if the physical-location model warrants it; Image SEO; Role Manager; SEO Analyzer; AI Link Genius; AI Visibility; Content AI; llms.txt; and Rank Math MCP tools. Content AI is a separate editorial assistance surface and must not silently replace approved clinical or legal copy.</p>
+  <p>Leave unrelated integrations disabled unless the content model changes: WooCommerce/EDD, bbPress/BuddyPress, AMP, Podcast, News Sitemap, and Video Sitemap. Rank Math is modular; “use Pro fully” means using every relevant module with one clear owner, not enabling every module indiscriminately.</p>
+  <p>Rank Math's MCP surface can retrieve SEO metadata, schema, post links, and site-wide link health, and newer Pro releases expose competitor audits and richer link reports. Mutation tools such as <code>rank-math/fix-site-seo</code> must remain disabled or human-approved because they can alter indexing, permalink, sitemap, schema, robots, tagline, and focus-keyword settings.</p>
+
+  <h2>Activation gates</h2>
+  <ol>
+    <li>Obtain and hash the licensed Free/Pro packages; record exact versions and verify their compatibility together. Rank Math Pro is an add-on and both Free and Pro must remain installed and active, with Free updated first. As of 2026-07-11, WordPress.org reports Free 1.0.273 and Rank Math reports Pro 3.0.116; the previously named 1.0.271.1/3.0.114 pair is no longer current.</li>
+    <li>Back up database, source, runtime, uploads, settings, redirects, and current public metadata.</li>
+    <li>Install inactive, inspect modules/settings, then activate on development only.</li>
+    <li>Run LMHG handoff dry-run. Resolve every pre-existing Rank Math conflict; never overwrite silently.</li>
+    <li>Verify Gutenberg analysis sees ordinary blocks once and server-rendered LMHG sections once.</li>
+    <li>Validate all canonical routes for one title, description, canonical, robots policy, social set, and one coherent JSON-LD graph.</li>
+    <li>Verify sitemap membership, route blocking, redirects, 404 logging, permissions, Quick Edit/CSV keyword order, and deactivation fallback.</li>
+    <li>Connect license, Rank Math account, Search Console, Analytics, and Rank Tracker only during the approved go-live phase.</li>
+  </ol>
+
+  <p class="gate"><strong>Current gate:</strong> Rank Math is not installed. The LMHG adapter is dormant. Installation, licensing, account connections, data writes, and redirect ownership transfer require an explicit go-live decision.</p>
+
+  <h2>Primary references</h2>
+  <ul>
+    <li><a href="https://rankmath.com/kb/content-analysis-api/">Content Analysis API</a></li>
+    <li><a href="https://rankmath.com/kb/filters-hooks-api-developer/">Developer filters and hooks</a></li>
+    <li><a href="https://rankmath.com/docs/filters-and-hooks/gutenberg/">Gutenberg hooks</a></li>
+    <li><a href="https://rankmath.com/kb/schema-templates/">Pro schema templates and display conditions</a></li>
+    <li><a href="https://rankmath.com/kb/bulk-editing-in-rank-math/">Bulk and Quick Edit workflows</a></li>
+    <li><a href="https://rankmath.com/kb/export-keywords/">Pro keyword CSV export</a></li>
+    <li><a href="https://rankmath.com/kb/analytics/">Analytics and Rank Tracker</a></li>
+    <li><a href="https://rankmath.com/kb/how-to-use-ai-link-genius/">AI Link Genius</a></li>
+    <li><a href="https://rankmath.com/kb/mcp-tools/">Rank Math MCP tools</a></li>
+    <li><a href="https://rankmath.com/kb/llms-txt/">Rank Math llms.txt ownership options</a></li>
+    <li><a href="https://rankmath.com/changelog/">Current Free and Pro changelogs</a></li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,50 @@
+name: wordpress-2026-mariadb
+
+services:
+  db:
+    image: mariadb:10.11.18
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    env_file:
+      - mariadb.env
+    volumes:
+      - ./mariadb:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+
+  wordpress:
+    image: wordpress:7.0.1-php8.3-apache
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - wordpress.env
+    volumes:
+      - ./wordpress:/var/www/html
+    ports:
+      - "100.70.222.25:8093:80"
+    healthcheck:
+      test: ["CMD-SHELL", "php -r '$$s=@fsockopen(\"127.0.0.1\",80,$$e,$$m,2); exit($$s?0:1);'"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+
+  cli:
+    image: wordpress:cli-php8.3
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - wordpress.env
+    user: "33:33"
+    volumes:
+      - ./wordpress:/var/www/html
+    working_dir: /var/www/html
+    entrypoint: ["wp"]
+    profiles: ["tools"]
