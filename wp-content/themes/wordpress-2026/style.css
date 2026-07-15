@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6, .wp-block-heading { letter-spacing: 0; line-height: 1.08
 .wp2026-page-title { font-size: clamp(1.7rem, 4vw, 3.35rem); margin-left: auto; margin-right: auto; max-width: 100%; overflow-wrap: anywhere; position: relative; text-wrap: balance; white-space: normal; width: min(calc(100% - 36px), 980px); z-index: 0; }
 .wp2026-template-kicker { display: none; }
 .wp2026-breadcrumbs { color: var(--wp2026-clay); font-size: 0.9rem; font-weight: 700; letter-spacing: 0; margin-bottom: 0.8rem; }
-.wp2026-breadcrumbs a { color: var(--wp2026-green); text-decoration: none; }
+.wp2026-breadcrumbs a { color: var(--wp2026-green); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
 .wp2026-lead { font-size: clamp(1.1rem, 1.5vw, 1.28rem); line-height: 1.65; max-width: 860px; }
 .wp2026-content-section { box-sizing: border-box; margin-left: auto; margin-right: auto; margin-top: 2rem; max-width: 860px; width: min(calc(100% - 36px), 860px); }
 .wp2026-page-cta { box-sizing: border-box; margin-left: auto; margin-right: auto; margin-top: 2rem; max-width: 860px; padding: clamp(20px, 4vw, 36px); background: var(--wp2026-mint); border-left: 5px solid var(--wp2026-green); width: min(calc(100% - 36px), 860px); }
@@ -111,6 +111,15 @@ header.wp-block-template-part .wp-block-navigation {
 
 header.wp-block-template-part .wp-block-navigation__container {
   gap: clamp(0.8rem, 1.4vw, 1.25rem);
+}
+
+header.wp-block-template-part .wp-block-navigation__submenu-icon {
+  align-items: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 24px;
+  min-width: 24px;
 }
 
 @media (min-width: 782px) {
@@ -2031,30 +2040,30 @@ footer.wp-block-template-part a:focus-visible {
   }
 }
 
-/* Design contract enforcement: page H1s stay on one line and fit the viewport. */
+/* Accessible page-title sizing: preserve readable minimums and allow wrapping. */
 .wp2026-home-title,
 .wp2026-page-title.wp2026-title-fit {
   box-sizing: border-box !important;
   display: block !important;
-  inline-size: fit-content !important;
+  inline-size: auto !important;
   letter-spacing: 0 !important;
   margin-left: auto !important;
   margin-right: auto !important;
   max-inline-size: calc(100vw - 36px) !important;
   max-width: calc(100vw - 36px) !important;
   overflow: visible !important;
-  overflow-wrap: normal !important;
-  text-wrap: nowrap !important;
-  white-space: nowrap !important;
+  overflow-wrap: anywhere !important;
+  text-wrap: balance !important;
+  white-space: normal !important;
   word-break: normal !important;
 }
 
 .wp2026-page-title.wp2026-title-fit {
-  font-size: min(3.35rem, var(--wp2026-title-fit-vw, 4vw)) !important;
+  font-size: clamp(1.9rem, 4vw, 3.35rem) !important;
   line-height: 1.08 !important;
 }
 
 .wp2026-home-title {
-  font-size: min(3.25rem, 3.99vw) !important;
+  font-size: clamp(2rem, 4vw, 3.25rem) !important;
   line-height: 1.02 !important;
 }

@@ -30,14 +30,18 @@ const LMHG_SITE_CORE_RELATED_PAGE_TERM_SEED_OPTION  = 'lmhg_related_page_term_me
 const LMHG_SITE_CORE_RELATED_PAGE_TERM_SEED_VERSION = '2026-07-05-related-page-term-metadata-v1';
 const LMHG_SITE_CORE_IN_HOME_SPECIALTY_CLEANUP_OPTION  = 'lmhg_in_home_specialty_cleanup_version';
 const LMHG_SITE_CORE_IN_HOME_SPECIALTY_CLEANUP_VERSION = '2026-07-05-in-home-location-v1';
+const LMHG_SITE_CORE_RELATIONSHIP_BLOCK_MIGRATION_OPTION  = 'lmhg_relationship_block_migration_version';
+const LMHG_SITE_CORE_RELATIONSHIP_BLOCK_MIGRATION_VERSION = '2026-07-11-native-relationship-blocks-v1';
 
 add_action( 'init', 'lmhg_site_core_register_relationship_taxonomies', 8 );
 add_action( 'init', 'lmhg_site_core_register_relationship_post_types', 9 );
 add_action( 'init', 'lmhg_site_core_register_relationship_meta', 10 );
+add_action( 'init', 'lmhg_site_core_register_relationship_blocks', 20 );
 add_action( 'init', 'lmhg_site_core_seed_related_page_terms', 28 );
 add_action( 'init', 'lmhg_site_core_seed_service_specialty_relationships', 29 );
 add_action( 'init', 'lmhg_site_core_seed_specialty_placeholder_faqs', 30 );
 add_action( 'init', 'lmhg_site_core_cleanup_in_home_specialty_classification', 31 );
+add_action( 'init', 'lmhg_site_core_run_relationship_block_migration', 44 );
 add_action( 'add_meta_boxes', 'lmhg_site_core_add_relationship_meta_boxes' );
 add_action( 'save_post_post', 'lmhg_site_core_save_article_relationship_meta', 10, 2 );
 add_action( 'save_post_post', 'lmhg_site_core_save_article_card_description_meta', 10, 2 );
@@ -58,6 +62,150 @@ add_shortcode( 'lmhg_article_pages', 'lmhg_site_core_article_pages_shortcode' );
 add_shortcode( 'lmhg_related_pages', 'lmhg_site_core_related_pages_shortcode' );
 add_shortcode( 'lmhg_related_articles', 'lmhg_site_core_related_articles_shortcode' );
 add_shortcode( 'lmhg_team', 'lmhg_site_core_team_shortcode' );
+
+/** Registers native server-rendered blocks for taxonomy-driven page relationships. */
+function lmhg_site_core_register_relationship_blocks(): void {
+	lmhg_site_core_register_relationship_assets();
+	$script_path = dirname( __DIR__ ) . '/assets/js/relationship-blocks.js';
+	$script_handle = 'lmhg-site-core-relationship-blocks';
+	wp_register_script(
+		$script_handle,
+		plugin_dir_url( dirname( __DIR__ ) . '/lmhg-site-core.php' ) . 'assets/js/relationship-blocks.js',
+		array( 'wp-block-editor', 'wp-blocks', 'wp-components', 'wp-data', 'wp-element', 'wp-i18n', 'wp-server-side-render' ),
+		is_readable( $script_path ) ? (string) filemtime( $script_path ) : '0.1.0',
+		true
+	);
+
+	register_block_type(
+		'lmhg/related-pages',
+		array(
+			'api_version'     => 3,
+			'editor_script'   => $script_handle,
+			'editor_style'    => LMHG_SITE_CORE_RELATIONSHIP_STYLE,
+			'style'           => LMHG_SITE_CORE_RELATIONSHIP_STYLE,
+			'uses_context'    => array( 'postId' ),
+			'attributes'      => array(
+				'heading' => array( 'type' => 'string', 'default' => 'Related Pages' ),
+			),
+			'render_callback' => 'lmhg_site_core_render_related_pages_block',
+		)
+	);
+
+	register_block_type(
+		'lmhg/faqs',
+		array(
+			'api_version'     => 3,
+			'editor_script'   => $script_handle,
+			'editor_style'    => LMHG_SITE_CORE_RELATIONSHIP_STYLE,
+			'style'           => LMHG_SITE_CORE_RELATIONSHIP_STYLE,
+			'uses_context'    => array( 'postId' ),
+			'attributes'      => array(
+				'heading' => array( 'type' => 'string', 'default' => 'Common Questions' ),
+			),
+			'render_callback' => 'lmhg_site_core_render_faqs_block',
+		)
+	);
+}
+
+/** Resolves the current page for a dynamic relationship block. */
+function lmhg_site_core_relationship_block_post_id( ?WP_Block $block = null ): int {
+	$post_id = $block instanceof WP_Block ? (int) ( $block->context['postId'] ?? 0 ) : 0;
+	if ( $post_id <= 0 && isset( $_GET['post_id'] ) ) {
+		$post_id = absint( wp_unslash( $_GET['post_id'] ) );
+	}
+	return $post_id > 0 ? $post_id : (int) get_the_ID();
+}
+
+/** Returns an editor-only explanation when a taxonomy-driven block has no data. */
+function lmhg_site_core_relationship_block_empty_preview( int $post_id, string $message ): string {
+	if ( ! defined( 'REST_REQUEST' ) || ! REST_REQUEST || ! current_user_can( 'edit_post', $post_id ) ) {
+		return '';
+	}
+	return '<p class="lmhg-relationship-editor-empty">' . esc_html( $message ) . '</p>';
+}
+
+/** Renders Related Pages from the current page's taxonomy relationships. */
+function lmhg_site_core_render_related_pages_block( array $attributes, string $content = '', ?WP_Block $block = null ): string {
+	unset( $content );
+	$post_id = lmhg_site_core_relationship_block_post_id( $block );
+	$heading = sanitize_text_field( (string) ( $attributes['heading'] ?? 'Related Pages' ) );
+	$rendered = $post_id > 0 ? lmhg_site_core_render_taxonomy_related_pages( $post_id, $heading ) : '';
+	return '' !== $rendered ? $rendered : lmhg_site_core_relationship_block_empty_preview( $post_id, 'No related pages are assigned to this page.' );
+}
+
+/** Renders FAQs from the current page's assigned FAQ Set taxonomy. */
+function lmhg_site_core_render_faqs_block( array $attributes, string $content = '', ?WP_Block $block = null ): string {
+	unset( $content );
+	$post_id = lmhg_site_core_relationship_block_post_id( $block );
+	$heading = sanitize_text_field( (string) ( $attributes['heading'] ?? 'Common Questions' ) );
+	$rendered = $post_id > 0 ? lmhg_site_core_render_faqs( lmhg_site_core_faq_set_term_ids( '', $post_id ), $heading, -1 ) : '';
+	return '' !== $rendered ? $rendered : lmhg_site_core_relationship_block_empty_preview( $post_id, 'No FAQ Set is assigned to this page.' );
+}
+
+/** Converts supported legacy Gutenberg shortcode blocks to native dynamic blocks. */
+function lmhg_site_core_replace_relationship_shortcodes( string $content ): string {
+	$blocks = array(
+		'lmhg_related_pages' => array( 'name' => 'lmhg/related-pages', 'heading' => 'Related Pages' ),
+		'lmhg_faqs'          => array( 'name' => 'lmhg/faqs', 'heading' => 'Common Questions' ),
+	);
+	foreach ( $blocks as $shortcode => $definition ) {
+		$pattern = '/<!--\s+wp:shortcode\s+-->\s*\[' . preg_quote( $shortcode, '/' ) . '([^\]]*)\]\s*<!--\s+\/wp:shortcode\s+-->/';
+		$content = (string) preg_replace_callback(
+			$pattern,
+			static function ( array $matches ) use ( $definition ): string {
+				$parsed  = shortcode_parse_atts( trim( (string) $matches[1] ) );
+				$heading = is_array( $parsed ) && isset( $parsed['heading'] )
+					? sanitize_text_field( (string) $parsed['heading'] )
+					: $definition['heading'];
+				return sprintf(
+					'<!-- wp:%s %s /-->',
+					$definition['name'],
+					wp_json_encode( array( 'heading' => $heading ), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE )
+				);
+			},
+			$content
+		);
+	}
+	return $content;
+}
+
+/** Migrates page content and revisions, then disables the legacy shortcodes. */
+function lmhg_site_core_run_relationship_block_migration(): void {
+	global $wpdb;
+	$installed = (string) get_option( LMHG_SITE_CORE_RELATIONSHIP_BLOCK_MIGRATION_OPTION, '' );
+	if ( LMHG_SITE_CORE_RELATIONSHIP_BLOCK_MIGRATION_VERSION !== $installed ) {
+		$rows    = $wpdb->get_results( "SELECT ID, post_content FROM {$wpdb->posts} WHERE post_type IN ('page', 'revision')" );
+		$changed = 0;
+		$complete = is_array( $rows );
+		foreach ( $rows as $row ) {
+			$content = lmhg_site_core_replace_relationship_shortcodes( (string) $row->post_content );
+			if ( $content === (string) $row->post_content ) {
+				continue;
+			}
+			$written = $wpdb->update(
+				$wpdb->posts,
+				array( 'post_content' => $content ),
+				array( 'ID' => (int) $row->ID ),
+				array( '%s' ),
+				array( '%d' )
+			);
+			$complete = false !== $written && $complete;
+			if ( false !== $written ) {
+				++$changed;
+				clean_post_cache( (int) $row->ID );
+			}
+		}
+		update_option( 'lmhg_relationship_block_migration_report', array( 'rows' => count( $rows ), 'changed' => $changed ), false );
+		if ( $complete ) {
+			update_option( LMHG_SITE_CORE_RELATIONSHIP_BLOCK_MIGRATION_OPTION, LMHG_SITE_CORE_RELATIONSHIP_BLOCK_MIGRATION_VERSION, false );
+		}
+	}
+
+	if ( LMHG_SITE_CORE_RELATIONSHIP_BLOCK_MIGRATION_VERSION === (string) get_option( LMHG_SITE_CORE_RELATIONSHIP_BLOCK_MIGRATION_OPTION, '' ) ) {
+		remove_shortcode( 'lmhg_related_pages' );
+		remove_shortcode( 'lmhg_faqs' );
+	}
+}
 
 /**
  * Registers LMHG relationship taxonomies.
@@ -87,7 +235,8 @@ function lmhg_site_core_register_relationship_taxonomies(): void {
 			'hierarchical'      => true,
 			'sort'              => true,
 			'show_ui'           => true,
-			'show_admin_column' => true,
+				'show_admin_column' => false,
+				'show_in_menu'       => false,
 			'show_in_rest'      => true,
 			'show_tagcloud'     => false,
 			'rewrite'           => false,
@@ -118,7 +267,8 @@ function lmhg_site_core_register_relationship_taxonomies(): void {
 			'publicly_queryable' => false,
 			'hierarchical'      => true,
 			'show_ui'           => true,
-			'show_admin_column' => true,
+				'show_admin_column' => false,
+				'show_in_menu'       => false,
 			'show_in_rest'      => true,
 			'show_tagcloud'     => false,
 			'rewrite'           => false,
@@ -150,7 +300,7 @@ function lmhg_site_core_register_relationship_post_types(): void {
 			'publicly_queryable'  => false,
 			'exclude_from_search' => true,
 			'show_ui'             => true,
-			'show_in_menu'        => true,
+			'show_in_menu'        => false,
 			'show_in_rest'        => true,
 			'menu_icon'           => 'dashicons-editor-help',
 			'supports'            => array( 'title', 'editor', 'excerpt', 'revisions', 'page-attributes' ),
@@ -180,7 +330,7 @@ function lmhg_site_core_register_relationship_post_types(): void {
 			'publicly_queryable'  => false,
 			'exclude_from_search' => true,
 			'show_ui'             => true,
-			'show_in_menu'        => true,
+			'show_in_menu'        => false,
 			'show_in_rest'        => true,
 			'menu_icon'           => 'dashicons-groups',
 			'supports'            => array( 'title', 'thumbnail', 'revisions', 'page-attributes' ),
@@ -2315,10 +2465,27 @@ function lmhg_site_core_render_team_members( string $heading = 'Our team', int $
 		$name        = lmhg_site_core_team_member_name( $member );
 		$credentials = trim( (string) get_post_meta( $member->ID, LMHG_SITE_CORE_TEAM_CREDENTIALS, true ) );
 		$headshot    = lmhg_site_core_team_member_headshot_url( $member );
+		$thumbnail_id = (int) get_post_thumbnail_id( $member );
+		$image_attributes = array(
+			'alt'      => $name,
+			'loading'  => empty( $cards ) ? 'eager' : 'lazy',
+			'decoding' => 'async',
+		);
+		if ( empty( $cards ) ) {
+			$image_attributes['fetchpriority'] = 'high';
+		}
+		$headshot_html = $thumbnail_id > 0
+			? wp_get_attachment_image(
+				$thumbnail_id,
+				'medium',
+				false,
+				$image_attributes
+			)
+			: ( '' !== $headshot ? '<img src="' . esc_url( $headshot ) . '" alt="' . esc_attr( $name ) . '" loading="' . ( empty( $cards ) ? 'eager' : 'lazy' ) . '" decoding="async"' . ( empty( $cards ) ? ' fetchpriority="high"' : '' ) . ' />' : '' );
 
 		$cards[] = sprintf(
 			'<article class="lmhg-team-card">%1$s<div class="lmhg-team-card__body"><h3>%2$s</h3>%3$s</div></article>',
-			'' !== $headshot ? '<img src="' . esc_url( $headshot ) . '" alt="' . esc_attr( $name ) . '" loading="lazy" decoding="async" />' : '',
+			$headshot_html,
 			esc_html( $name ),
 			'' !== $credentials ? '<p>' . esc_html( $credentials ) . '</p>' : ''
 		);

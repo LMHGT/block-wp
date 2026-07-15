@@ -492,7 +492,7 @@ function lmhg_site_core_render_location_access_design( string $path ): string {
 function lmhg_site_core_render_contact_page_design( string $path ): string {
 	unset( $path );
 	$cards = array(
-		array( 'title' => 'Start intake', 'url' => 'https://intakeq.com/new/g91Z8x/bjxuno', 'body' => 'Use the intake form when you are ready to share what is happening and ask about next steps.' ),
+		array( 'title' => 'Start intake', 'url' => lmhg_site_core_resolve_reach_out_url( LMHG_SITE_CORE_CTA_DEFAULT_URL ), 'body' => 'Use the intake form when you are ready to share what is happening and ask about next steps.' ),
 		array( 'title' => 'Call the office', 'url' => 'tel:5024161416', 'body' => 'Call for availability, fit, insurance, and care-setting questions before starting intake.' ),
 		array( 'title' => 'Office and access', 'url' => '/locations/in-person/', 'body' => 'Confirm the Louisville office address and other access options before planning a visit.' ),
 	);
@@ -513,7 +513,7 @@ function lmhg_site_core_render_trust_page_design( string $path ): string {
 	$cards = match ( $path ) {
 		'/contact-us/' => array(
 			array( 'title' => 'Call the office', 'url' => 'tel:5024161416', 'body' => 'Use phone for availability, fit, insurance, and next-step questions.' ),
-			array( 'title' => 'Start intake', 'url' => 'https://intakeq.com/new/g91Z8x/bjxuno', 'body' => 'Use the intake form when you are ready to share what is happening.' ),
+			array( 'title' => 'Start intake', 'url' => lmhg_site_core_resolve_reach_out_url( LMHG_SITE_CORE_CTA_DEFAULT_URL ), 'body' => 'Use the intake form when you are ready to share what is happening.' ),
 			array( 'title' => 'Location details', 'url' => '/locations/in-person/', 'body' => 'Confirm office and access information before visiting.' ),
 		),
 		'/reviews/' => array(

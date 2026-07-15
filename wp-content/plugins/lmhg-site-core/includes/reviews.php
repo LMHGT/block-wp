@@ -18,7 +18,6 @@ add_action( 'init', 'lmhg_site_core_register_review_post_type' );
 add_action( 'init', 'lmhg_site_core_register_review_meta' );
 add_action( 'add_meta_boxes', 'lmhg_site_core_add_review_meta_box' );
 add_action( 'save_post_' . LMHG_SITE_CORE_REVIEW_POST_TYPE, 'lmhg_site_core_save_review_meta', 10, 2 );
-add_action( 'admin_menu', 'lmhg_site_core_add_review_settings_page' );
 add_action( 'admin_init', 'lmhg_site_core_register_review_settings' );
 add_action( 'init', 'lmhg_site_core_register_review_showcase_block', 20 );
 add_action( 'wp_enqueue_scripts', 'lmhg_site_core_register_review_assets' );
@@ -48,7 +47,7 @@ function lmhg_site_core_register_review_post_type(): void {
 			'publicly_queryable'  => false,
 			'exclude_from_search' => true,
 			'show_ui'             => true,
-			'show_in_menu'        => true,
+		'show_in_menu'        => false,
 			'show_in_rest'        => true,
 			'menu_icon'           => 'dashicons-star-filled',
 			'supports'            => array( 'title', 'editor', 'excerpt', 'revisions', 'page-attributes' ),

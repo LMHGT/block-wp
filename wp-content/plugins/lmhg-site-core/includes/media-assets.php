@@ -13,9 +13,14 @@ const LMHG_SITE_CORE_MEDIA_ASSET_ROLE_META         = '_lmhg_asset_role';
 const LMHG_SITE_CORE_MEDIA_ASSET_SOURCE_PATH_META  = '_lmhg_asset_source_path';
 const LMHG_SITE_CORE_MEDIA_ASSET_SEED_OPTION       = 'lmhg_media_asset_seed_version';
 const LMHG_SITE_CORE_MEDIA_ASSET_SEED_VERSION      = '2026-07-10-media-library-assets-v3';
+const LMHG_SITE_CORE_MEDIA_ASSET_LOCK_OPTION        = 'lmhg_media_asset_maintenance_lock';
+const LMHG_SITE_CORE_MEDIA_ASSET_DEDUP_OPTION       = 'lmhg_media_asset_dedup_version';
+const LMHG_SITE_CORE_MEDIA_ASSET_DEDUP_VERSION      = '2026-07-11-role-dedup-v1';
+const LMHG_SITE_CORE_MEDIA_ASSET_DEDUP_AUDIT_OPTION = 'lmhg_media_asset_dedup_audit';
 
 add_action( 'init', 'lmhg_site_core_register_media_asset_meta', 11 );
 add_action( 'init', 'lmhg_site_core_seed_media_library_assets', 40 );
+add_action( 'init', 'lmhg_site_core_deduplicate_media_asset_records', 41 );
 add_action( 'wp_head', 'lmhg_site_core_print_media_asset_css', 20 );
 
 /**
@@ -373,32 +378,167 @@ function lmhg_site_core_seed_media_library_assets( bool $force = false ): array 
 		$result['complete'] = true;
 		return $result;
 	}
-
-	foreach ( lmhg_site_core_media_asset_registry() as $asset ) {
-		$existing_id = lmhg_site_core_media_asset_id( (string) $asset['role'] );
-		$attachment_id = lmhg_site_core_ensure_media_asset_attachment( $asset );
-		if ( is_wp_error( $attachment_id ) ) {
-			++$result['failed'];
-			continue;
-		}
-
-		if ( $existing_id > 0 ) {
-			++$result['updated'];
-		} else {
-			++$result['created'];
-		}
-
-		if ( lmhg_site_core_sync_media_asset_term_meta( $asset, (int) $attachment_id ) ) {
-			++$result['termLinked'];
-		}
+	if ( ! lmhg_site_core_acquire_media_asset_lock() ) {
+		$result['complete'] = lmhg_site_core_media_asset_seed_complete();
+		return $result;
 	}
 
-	$result['complete'] = 0 === $result['failed'] && lmhg_site_core_media_asset_seed_complete();
-	if ( $result['complete'] ) {
-		update_option( LMHG_SITE_CORE_MEDIA_ASSET_SEED_OPTION, LMHG_SITE_CORE_MEDIA_ASSET_SEED_VERSION, false );
+	try {
+		foreach ( lmhg_site_core_media_asset_registry() as $asset ) {
+			$existing_id  = lmhg_site_core_media_asset_id( (string) $asset['role'] );
+			$attachment_id = lmhg_site_core_ensure_media_asset_attachment( $asset );
+			if ( is_wp_error( $attachment_id ) ) {
+				++$result['failed'];
+				continue;
+			}
+
+			if ( $existing_id > 0 ) {
+				++$result['updated'];
+			} else {
+				++$result['created'];
+			}
+
+			if ( lmhg_site_core_sync_media_asset_term_meta( $asset, (int) $attachment_id ) ) {
+				++$result['termLinked'];
+			}
+		}
+
+		$result['complete'] = 0 === $result['failed'] && lmhg_site_core_media_asset_seed_complete();
+		if ( $result['complete'] ) {
+			update_option( LMHG_SITE_CORE_MEDIA_ASSET_SEED_OPTION, LMHG_SITE_CORE_MEDIA_ASSET_SEED_VERSION, false );
+		}
+
+		return $result;
+	} finally {
+		lmhg_site_core_release_media_asset_lock();
+	}
+}
+
+/** Acquires the short-lived cross-worker media maintenance lock. */
+function lmhg_site_core_acquire_media_asset_lock(): bool {
+	$now      = time();
+	$existing = absint( get_option( LMHG_SITE_CORE_MEDIA_ASSET_LOCK_OPTION, 0 ) );
+	if ( $existing > 0 && ( $now - $existing ) < 300 ) {
+		return false;
+	}
+	if ( $existing > 0 ) {
+		delete_option( LMHG_SITE_CORE_MEDIA_ASSET_LOCK_OPTION );
 	}
 
-	return $result;
+	return add_option( LMHG_SITE_CORE_MEDIA_ASSET_LOCK_OPTION, (string) $now, '', false );
+}
+
+/** Releases the cross-worker media maintenance lock. */
+function lmhg_site_core_release_media_asset_lock(): void {
+	delete_option( LMHG_SITE_CORE_MEDIA_ASSET_LOCK_OPTION );
+}
+
+/**
+ * Collapses duplicate attachment records created by concurrent asset seeding.
+ *
+ * The registered assets deliberately share one persistent uploads file per role.
+ * Removing an attachment through the WordPress media API could therefore delete
+ * the file used by the canonical record. This migration only removes redundant
+ * database rows after known attachment-ID references have been repointed.
+ */
+function lmhg_site_core_deduplicate_media_asset_records(): void {
+	if ( LMHG_SITE_CORE_MEDIA_ASSET_DEDUP_VERSION === (string) get_option( LMHG_SITE_CORE_MEDIA_ASSET_DEDUP_OPTION, '' ) ) {
+		return;
+	}
+	if ( ! lmhg_site_core_acquire_media_asset_lock() ) {
+		return;
+	}
+
+	$audit = array(
+		'version'   => LMHG_SITE_CORE_MEDIA_ASSET_DEDUP_VERSION,
+		'runAt'     => gmdate( 'c' ),
+		'canonical' => array(),
+		'removed'   => array(),
+		'skipped'   => array(),
+	);
+
+	try {
+		global $wpdb;
+
+		$role_rows = $wpdb->get_results(
+			$wpdb->prepare(
+				"SELECT pm.meta_value AS role, GROUP_CONCAT(pm.post_id ORDER BY pm.post_id ASC) AS attachment_ids
+				FROM {$wpdb->postmeta} pm
+				INNER JOIN {$wpdb->posts} p ON p.ID = pm.post_id
+				WHERE pm.meta_key = %s AND p.post_type = 'attachment'
+				GROUP BY pm.meta_value HAVING COUNT(*) > 1",
+				LMHG_SITE_CORE_MEDIA_ASSET_ROLE_META
+			)
+		);
+
+		foreach ( $role_rows as $role_row ) {
+			$role = sanitize_key( (string) $role_row->role );
+			$ids  = array_values( array_filter( array_map( 'absint', explode( ',', (string) $role_row->attachment_ids ) ) ) );
+			if ( '' === $role || count( $ids ) < 2 ) {
+				continue;
+			}
+
+			$canonical_id   = (int) array_shift( $ids );
+			$canonical_file = (string) get_post_meta( $canonical_id, '_wp_attached_file', true );
+			$audit['canonical'][ $role ] = $canonical_id;
+
+			foreach ( $ids as $duplicate_id ) {
+				$duplicate_file = (string) get_post_meta( $duplicate_id, '_wp_attached_file', true );
+				if ( '' === $canonical_file || $canonical_file !== $duplicate_file ) {
+					$audit['skipped'][ (string) $duplicate_id ] = 'Attachment file differs from the canonical role record.';
+					continue;
+				}
+
+				$reference_patterns = array(
+					'%wp-image-' . $wpdb->esc_like( (string) $duplicate_id ) . '%',
+					'%"id":' . $wpdb->esc_like( (string) $duplicate_id ) . '%',
+					'%"id":"' . $wpdb->esc_like( (string) $duplicate_id ) . '"%',
+				);
+				$content_reference = (int) $wpdb->get_var(
+					$wpdb->prepare(
+						"SELECT ID FROM {$wpdb->posts}
+						WHERE post_type <> 'attachment'
+						AND (post_content LIKE %s OR post_content LIKE %s OR post_content LIKE %s)
+						LIMIT 1",
+						...$reference_patterns
+					)
+				);
+				if ( $content_reference > 0 ) {
+					$audit['skipped'][ (string) $duplicate_id ] = 'Referenced in post content ' . $content_reference . '.';
+					continue;
+				}
+
+				$wpdb->update(
+					$wpdb->postmeta,
+					array( 'meta_value' => (string) $canonical_id ),
+					array( 'meta_key' => '_thumbnail_id', 'meta_value' => (string) $duplicate_id ),
+					array( '%s' ),
+					array( '%s', '%s' )
+				);
+				$wpdb->update(
+					$wpdb->termmeta,
+					array( 'meta_value' => (string) $canonical_id ),
+					array( 'meta_key' => lmhg_site_core_media_asset_term_icon_meta_key(), 'meta_value' => (string) $duplicate_id ),
+					array( '%s' ),
+					array( '%s', '%s' )
+				);
+
+				$wpdb->delete( $wpdb->term_relationships, array( 'object_id' => $duplicate_id ), array( '%d' ) );
+				$wpdb->delete( $wpdb->postmeta, array( 'post_id' => $duplicate_id ), array( '%d' ) );
+				$wpdb->delete( $wpdb->posts, array( 'ID' => $duplicate_id, 'post_type' => 'attachment' ), array( '%d', '%s' ) );
+				clean_post_cache( $duplicate_id );
+				$audit['removed'][] = $duplicate_id;
+			}
+		}
+
+		update_option( LMHG_SITE_CORE_MEDIA_ASSET_DEDUP_AUDIT_OPTION, $audit, false );
+		update_option( LMHG_SITE_CORE_MEDIA_ASSET_DEDUP_OPTION, LMHG_SITE_CORE_MEDIA_ASSET_DEDUP_VERSION, false );
+	} catch ( Throwable $error ) {
+		$audit['error'] = sanitize_text_field( $error->getMessage() );
+		update_option( LMHG_SITE_CORE_MEDIA_ASSET_DEDUP_AUDIT_OPTION, $audit, false );
+	} finally {
+		lmhg_site_core_release_media_asset_lock();
+	}
 }
 
 /**

@@ -59,9 +59,126 @@ function lmhg_site_core_filter_frontend_html( string $html ): string {
 
 	$html = lmhg_site_core_ensure_skip_link( $html );
 	$html = lmhg_site_core_ensure_main_landmark( $html );
+	$html = lmhg_site_core_expand_generic_link_names( $html );
+	$html = lmhg_site_core_add_intrinsic_upload_dimensions( $html );
 	$html = lmhg_site_core_normalize_frontend_core30_copy( $html );
 
 	return $html;
+}
+
+/**
+ * Adds intrinsic dimensions to raw uploads images without rewriting page copy.
+ *
+ * Gutenberg normally emits these values for Image blocks. A small set of
+ * decorative legacy HTML images bypass that renderer, so resolve their local
+ * upload files and add dimensions to prevent layout shift.
+ */
+function lmhg_site_core_add_intrinsic_upload_dimensions( string $html ): string {
+	$uploads = wp_upload_dir();
+	if ( ! empty( $uploads['error'] ) || empty( $uploads['basedir'] ) ) {
+		return $html;
+	}
+
+	$base_dir = trailingslashit( wp_normalize_path( (string) $uploads['basedir'] ) );
+	return preg_replace_callback(
+		'/<img\b[^>]*>/i',
+		static function ( array $matches ) use ( $base_dir ): string {
+			$tag = (string) $matches[0];
+			if ( preg_match( '/\bwidth\s*=/i', $tag ) || preg_match( '/\bheight\s*=/i', $tag ) ) {
+				return $tag;
+			}
+			if ( ! preg_match( '/\bsrc\s*=\s*(["\'])(.*?)\1/i', $tag, $source_match ) ) {
+				return $tag;
+			}
+
+			$path = (string) wp_parse_url( html_entity_decode( (string) $source_match[2] ), PHP_URL_PATH );
+			$upload_marker = '/wp-content/uploads/';
+			$plugin_marker = '/wp-content/plugins/';
+			$upload_offset = strpos( $path, $upload_marker );
+			$plugin_offset = strpos( $path, $plugin_marker );
+			if ( false !== $upload_offset ) {
+				$allowed_base = $base_dir;
+				$relative = rawurldecode( substr( $path, $upload_offset + strlen( $upload_marker ) ) );
+			} elseif ( false !== $plugin_offset ) {
+				$allowed_base = trailingslashit( wp_normalize_path( WP_PLUGIN_DIR ) );
+				$relative = rawurldecode( substr( $path, $plugin_offset + strlen( $plugin_marker ) ) );
+			} else {
+				return $tag;
+			}
+
+			$file = wp_normalize_path( $allowed_base . ltrim( $relative, '/' ) );
+			if ( ! str_starts_with( $file, $allowed_base ) || ! is_file( $file ) ) {
+				return $tag;
+			}
+
+			$dimensions = lmhg_site_core_local_image_dimensions( $file );
+			if ( empty( $dimensions ) ) {
+				return $tag;
+			}
+
+			return preg_replace(
+				'/\s*\/?>$/',
+				' width="' . absint( $dimensions[0] ) . '" height="' . absint( $dimensions[1] ) . '" />',
+				$tag,
+				1
+			) ?? $tag;
+		},
+		$html
+	) ?? $html;
+}
+
+/** Returns raster dimensions or an SVG viewBox size for a trusted local file. */
+function lmhg_site_core_local_image_dimensions( string $file ): array {
+	if ( 'svg' !== strtolower( (string) pathinfo( $file, PATHINFO_EXTENSION ) ) ) {
+		$size = getimagesize( $file );
+		return is_array( $size ) && ! empty( $size[0] ) && ! empty( $size[1] )
+			? array( absint( $size[0] ), absint( $size[1] ) )
+			: array();
+	}
+
+	$source = file_get_contents( $file, false, null, 0, 1024 );
+	if ( ! is_string( $source ) || ! preg_match( '/\bviewBox=["\']\s*[-\d.]+\s+[-\d.]+\s+([\d.]+)\s+([\d.]+)\s*["\']/i', $source, $matches ) ) {
+		return array();
+	}
+
+	return array( max( 1, (int) round( (float) $matches[1] ) ), max( 1, (int) round( (float) $matches[2] ) ) );
+}
+
+/**
+ * Gives generic internal "Learn More" links a destination-specific accessible name.
+ *
+ * @param string $html Rendered HTML.
+ * @return string
+ */
+function lmhg_site_core_expand_generic_link_names( string $html ): string {
+	return preg_replace_callback(
+		'/<a\b([^>]*)>\s*Learn More\s*<\/a>/i',
+		static function ( array $matches ): string {
+			$attributes = (string) $matches[1];
+			if ( preg_match( '/\baria-label\s*=/i', $attributes ) ) {
+				return $matches[0];
+			}
+
+			if ( ! preg_match( '/\bhref\s*=\s*(["\'])(.*?)\1/i', $attributes, $href_match ) ) {
+				return $matches[0];
+			}
+
+			$path = (string) wp_parse_url( (string) $href_match[2], PHP_URL_PATH );
+			if ( '' === $path || ! str_starts_with( $path, '/' ) ) {
+				return $matches[0];
+			}
+
+			$page  = get_page_by_path( trim( $path, '/' ), OBJECT, 'page' );
+			$label = $page instanceof WP_Post ? wp_strip_all_tags( get_the_title( $page ) ) : '';
+			if ( '' === trim( $label ) ) {
+				$label = ucwords( str_replace( '-', ' ', basename( trim( $path, '/' ) ) ) );
+			}
+
+			$link_text = 'Learn more about ' . $label;
+			return '<a' . $attributes . ' aria-label="' . esc_attr( $link_text ) . '">' . esc_html( $link_text ) . '</a>';
+		},
+		$html
+	) ?? $html;
 }
 
 /**

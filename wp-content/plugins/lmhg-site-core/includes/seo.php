@@ -16,6 +16,7 @@ add_filter( 'wp_headers', 'lmhg_site_core_filter_development_robots_headers' );
 add_action( 'send_headers', 'lmhg_site_core_send_development_robots_header' );
 add_action( 'wp_head', 'lmhg_site_core_output_canonical', 4 );
 add_action( 'wp_head', 'lmhg_site_core_output_meta_description', 5 );
+add_action( 'wp_head', 'lmhg_site_core_output_social_metadata', 6 );
 add_action( 'wp_head', 'lmhg_site_core_output_json_ld', 20 );
 
 const LMHG_SITE_CORE_DEVELOPMENT_ROBOTS = 'noindex, nofollow, noarchive, nosnippet, noimageindex';
@@ -211,35 +212,128 @@ function lmhg_site_core_output_meta_description(): void {
 		return;
 	}
 
-	$post_id = lmhg_site_core_imported_post_id();
-	if ( 0 !== $post_id ) {
-		$description = trim( (string) get_post_meta( $post_id, '_lmhg_meta_description', true ) );
-		if ( '' === $description ) {
-			$description = lmhg_site_core_fallback_meta_description( $post_id );
-		}
-		if ( '' === $description ) {
-			return;
-		}
-
-		$description = lmhg_site_core_normalize_core30_seo_copy( $description );
-		printf( '<meta name="description" content="%s" />' . "\n", esc_attr( $description ) );
-		return;
+	$post_id     = is_singular() ? (int) get_queried_object_id() : 0;
+	$description = $post_id > 0 ? lmhg_site_core_resolved_meta_description_for_post( $post_id ) : '';
+	if ( '' === $description ) {
+		$description = lmhg_site_core_normalize_core30_seo_copy( wp_html_excerpt( wp_strip_all_tags( get_bloginfo( 'description' ) ), 155, '...' ) );
 	}
-
-	$description = get_bloginfo( 'description' );
-	if ( is_singular() ) {
-		$excerpt = get_the_excerpt();
-		if ( '' !== trim( $excerpt ) ) {
-			$description = $excerpt;
-		}
-	}
-
-	$description = lmhg_site_core_normalize_core30_seo_copy( wp_html_excerpt( wp_strip_all_tags( $description ), 155, '...' ) );
 	if ( '' === trim( $description ) ) {
 		return;
 	}
 
 	printf( '<meta name="description" content="%s" />' . "\n", esc_attr( $description ) );
+}
+
+/**
+ * Returns the public meta description for any canonical page.
+ */
+function lmhg_site_core_resolved_meta_description_for_post( int $post_id ): string {
+	$description = trim( (string) get_post_meta( $post_id, '_lmhg_meta_description', true ) );
+	if ( '' === $description ) {
+		$description = lmhg_site_core_fallback_meta_description( $post_id );
+	}
+	if ( '' === $description ) {
+		$description = trim( (string) get_post_field( 'post_excerpt', $post_id ) );
+	}
+	if ( '' === $description ) {
+		$description = lmhg_site_core_first_meaningful_content_paragraph( $post_id );
+	}
+
+	return lmhg_site_core_normalize_core30_seo_copy(
+		wp_html_excerpt( wp_strip_all_tags( $description ), 155, '...' )
+	);
+}
+
+/**
+ * Finds the first substantive paragraph in serialized Gutenberg content.
+ */
+function lmhg_site_core_first_meaningful_content_paragraph( int $post_id ): string {
+	$blocks = parse_blocks( (string) get_post_field( 'post_content', $post_id ) );
+	return lmhg_site_core_find_meaningful_paragraph_in_blocks( $blocks );
+}
+
+/**
+ * Recursively finds one substantive paragraph.
+ *
+ * @param array<int,array<string,mixed>> $blocks Parsed blocks.
+ */
+function lmhg_site_core_find_meaningful_paragraph_in_blocks( array $blocks ): string {
+	$excluded_classes = array( 'wp2026-breadcrumbs', 'wp2026-start-number', 'wp2026-service-link', 'wp2026-kicker' );
+	foreach ( $blocks as $block ) {
+		if ( ! is_array( $block ) ) {
+			continue;
+		}
+
+		if ( 'core/paragraph' === (string) ( $block['blockName'] ?? '' ) ) {
+			$class_name = (string) ( $block['attrs']['className'] ?? '' );
+			$excluded   = array_filter( $excluded_classes, static fn( string $class ): bool => str_contains( $class_name, $class ) );
+			$text       = trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( (string) ( $block['innerHTML'] ?? '' ) ) ) ?? '' );
+			if ( empty( $excluded ) && mb_strlen( $text ) >= 40 ) {
+				return $text;
+			}
+		}
+
+		$inner_blocks = isset( $block['innerBlocks'] ) && is_array( $block['innerBlocks'] ) ? $block['innerBlocks'] : array();
+		if ( ! empty( $inner_blocks ) ) {
+			$text = lmhg_site_core_find_meaningful_paragraph_in_blocks( $inner_blocks );
+			if ( '' !== $text ) {
+				return $text;
+			}
+		}
+	}
+
+	return '';
+}
+
+/** Returns the preferred social/document title for an arbitrary page. */
+function lmhg_site_core_resolved_seo_title_for_post( int $post_id ): string {
+	$title = trim( (string) get_post_meta( $post_id, '_lmhg_seo_title', true ) );
+	if ( '' === $title ) {
+		$title = wp_strip_all_tags( get_the_title( $post_id ) );
+	}
+	return lmhg_site_core_normalize_core30_seo_copy( $title );
+}
+
+/** Outputs shared Open Graph and Twitter metadata while Rank Math is absent. */
+function lmhg_site_core_output_social_metadata(): void {
+	if ( is_admin() || is_feed() || is_robots() || is_404() || ( function_exists( 'lmhg_site_core_rank_math_owns_standard_seo' ) && lmhg_site_core_rank_math_owns_standard_seo() ) ) {
+		return;
+	}
+
+	$post_id     = is_singular() ? (int) get_queried_object_id() : 0;
+	$title       = $post_id > 0 ? lmhg_site_core_resolved_seo_title_for_post( $post_id ) : wp_get_document_title();
+	$description = $post_id > 0 ? lmhg_site_core_resolved_meta_description_for_post( $post_id ) : trim( (string) get_bloginfo( 'description' ) );
+	$url         = lmhg_site_core_current_canonical_url();
+	$type        = $post_id > 0 && 'Article' === lmhg_site_core_default_schema_type_for_page( $post_id ) ? 'article' : 'website';
+
+	$tags = array(
+		array( 'property', 'og:locale', 'en_US' ),
+		array( 'property', 'og:type', $type ),
+		array( 'property', 'og:title', $title ),
+		array( 'property', 'og:description', $description ),
+		array( 'property', 'og:url', $url ),
+		array( 'property', 'og:site_name', get_bloginfo( 'name' ) ),
+		array( 'name', 'twitter:card', has_post_thumbnail( $post_id ) ? 'summary_large_image' : 'summary' ),
+		array( 'name', 'twitter:title', $title ),
+		array( 'name', 'twitter:description', $description ),
+	);
+
+	if ( $post_id > 0 && has_post_thumbnail( $post_id ) ) {
+		$image_id = (int) get_post_thumbnail_id( $post_id );
+		$image    = wp_get_attachment_image_src( $image_id, 'full' );
+		if ( is_array( $image ) && ! empty( $image[0] ) ) {
+			$tags[] = array( 'property', 'og:image', (string) $image[0] );
+			$tags[] = array( 'property', 'og:image:width', (string) ( $image[1] ?? '' ) );
+			$tags[] = array( 'property', 'og:image:height', (string) ( $image[2] ?? '' ) );
+			$tags[] = array( 'name', 'twitter:image', (string) $image[0] );
+		}
+	}
+
+	foreach ( $tags as $tag ) {
+		if ( '' !== trim( (string) $tag[2] ) ) {
+			printf( '<meta %1$s="%2$s" content="%3$s" />' . "\n", esc_attr( $tag[0] ), esc_attr( $tag[1] ), esc_attr( $tag[2] ) );
+		}
+	}
 }
 
 /**
@@ -289,7 +383,7 @@ function lmhg_site_core_output_json_ld(): void {
 		}
 	} else {
 		$schema_type = trim( (string) get_post_meta( $post_id, '_lmhg_schema_type', true ) );
-		$schema_type = '' !== $schema_type ? $schema_type : ( is_front_page() ? 'WebPage' : 'Article' );
+		$schema_type = '' !== $schema_type ? $schema_type : lmhg_site_core_default_schema_type_for_page( $post_id );
 		$headline    = lmhg_site_core_normalize_core30_seo_copy( wp_strip_all_tags( get_the_title( $post_id ) ) );
 		$canonical   = lmhg_site_core_imported_canonical_url( $post_id );
 		$route       = lmhg_site_core_route_manifest_entry( $post_id );
@@ -321,6 +415,26 @@ function lmhg_site_core_output_json_ld(): void {
 		'<script type="application/ld+json">%s</script>' . "\n",
 		wp_json_encode( $graph, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE )
 	);
+}
+
+/** Returns the semantic base schema type for a page template. */
+function lmhg_site_core_default_schema_type_for_page( int $post_id ): string {
+	if ( (int) get_option( 'page_on_front' ) === $post_id ) {
+		return 'WebPage';
+	}
+
+	$path = trim( get_page_uri( $post_id ), '/' );
+	if ( str_starts_with( $path, 'articles/' ) ) {
+		return 'Article';
+	}
+
+	$template = sanitize_key( (string) get_page_template_slug( $post_id ) );
+	return match ( $template ) {
+		'service-page', 'specialty-page', 'location-access-page' => 'MedicalWebPage',
+		'services-hub', 'specialties-hub', 'article-hub', 'faq-hub', 'team-page', 'trust-page' => 'CollectionPage',
+		'contact-page' => 'ContactPage',
+		default        => 'WebPage',
+	};
 }
 
 /**

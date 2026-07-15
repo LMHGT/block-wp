@@ -2,7 +2,7 @@
 /*
 Plugin Name: LMHG Site Core
 Description: Durable site behavior for the LMHG WordPress proof track.
-Version: 0.1.0
+Version: 0.3.1
 Requires at least: 6.9
 Requires PHP: 8.1
 Author: Codex
@@ -18,6 +18,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( ! defined( 'DISALLOW_FILE_EDIT' ) ) {
+	define( 'DISALLOW_FILE_EDIT', true );
+}
+
 require_once __DIR__ . '/includes/importer.php';
 require_once __DIR__ . '/includes/editable-blocks.php';
 require_once __DIR__ . '/includes/redirects.php';
@@ -27,9 +31,13 @@ require_once __DIR__ . '/includes/discovery.php';
 require_once __DIR__ . '/includes/accessibility.php';
 require_once __DIR__ . '/includes/surface-controls.php';
 require_once __DIR__ . '/includes/rendering.php';
+require_once __DIR__ . '/includes/cta.php';
 require_once __DIR__ . '/includes/reviews.php';
 require_once __DIR__ . '/includes/taxonomies.php';
 require_once __DIR__ . '/includes/content-relationships.php';
+require_once __DIR__ . '/includes/admin.php';
+require_once __DIR__ . '/includes/readiness.php';
+require_once __DIR__ . '/includes/rank-math.php';
 require_once __DIR__ . '/includes/topology-migrations.php';
 require_once __DIR__ . '/includes/page-class-design.php';
 
