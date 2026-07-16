@@ -111,7 +111,27 @@
 	width: 100%;
 }
 
+.lmhg-page-graphic {
+	box-sizing: border-box;
+	margin: clamp(18px, 2.8vw, 30px) auto;
+	max-width: 360px;
+	width: min(78vw, 360px);
+}
+
+.lmhg-page-graphic__image {
+	display: block;
+	height: auto;
+	max-width: 100%;
+	object-fit: contain;
+	width: 100%;
+}
+
 @media (max-width: 680px) {
+	.lmhg-page-graphic {
+		margin-block: 16px 22px;
+		width: min(78vw, 300px);
+	}
+
 	.lmhg-page-process-icon,
 	.lmhg-service-page-icon {
 		margin-bottom: 24px;

@@ -10,6 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 add_filter( 'the_content', 'lmhg_site_core_render_page_class_design_sections', 28 );
+add_filter( 'render_block', 'lmhg_site_core_render_page_graphic', 10, 2 );
 add_filter( 'render_block', 'lmhg_site_core_render_page_process_icon', 10, 2 );
 add_shortcode( 'lmhg_specialty_context', 'lmhg_site_core_specialty_context_shortcode' );
 
@@ -129,6 +130,109 @@ function lmhg_site_core_specialty_context_shortcode( array|string $atts = array(
 	}
 
 	return lmhg_site_core_render_specialty_page_design( lmhg_site_core_page_class_path( $post ) );
+}
+
+/**
+ * Adds the approved, meaningful page graphic to service and specialty heroes.
+ *
+ * @param string $block_content Existing rendered block markup.
+ * @param array  $block Rendered block data.
+ * @return string
+ */
+function lmhg_site_core_render_page_graphic( string $block_content, array $block ): string {
+	static $rendered_for_posts = array();
+
+	if ( is_admin() || ! is_singular( 'page' ) || ! in_the_loop() || ! is_main_query() ) {
+		return $block_content;
+	}
+
+	if ( 'core/group' !== ( $block['blockName'] ?? '' ) ) {
+		return $block_content;
+	}
+
+	$class_name = (string) ( $block['attrs']['className'] ?? '' );
+	$is_service_hero   = str_contains( " {$class_name} ", ' wp2026-service-hero-copy ' );
+	$is_specialty_hero = str_contains( " {$class_name} ", ' wp2026-specialty-hero-copy ' );
+	if ( ! $is_service_hero && ! $is_specialty_hero ) {
+		return $block_content;
+	}
+
+	$post = get_post();
+	if ( ! $post instanceof WP_Post || isset( $rendered_for_posts[ $post->ID ] ) ) {
+		return $block_content;
+	}
+
+	$template = lmhg_site_core_page_class_template_slug( $post );
+	if (
+		( 'service-page' !== $template && 'specialty-page' !== $template )
+		|| ( 'service-page' === $template && ! $is_service_hero )
+		|| ( 'specialty-page' === $template && ! $is_specialty_hero )
+	) {
+		return $block_content;
+	}
+
+	$type  = 'service-page' === $template ? 'service' : 'specialty';
+	$role  = $type . '-graphic-' . sanitize_title( $post->post_name );
+	$asset = function_exists( 'lmhg_site_core_media_asset_definition_for_role' )
+		? lmhg_site_core_media_asset_definition_for_role( $role )
+		: array();
+	if ( empty( $asset ) ) {
+		return $block_content;
+	}
+
+	$graphic = lmhg_site_core_page_graphic_markup( $role, $asset );
+	if ( '' === $graphic ) {
+		return $block_content;
+	}
+
+	if ( function_exists( 'lmhg_site_core_enqueue_relationship_assets' ) ) {
+		lmhg_site_core_enqueue_relationship_assets();
+	}
+
+	$rendered_for_posts[ $post->ID ] = true;
+	return lmhg_site_core_insert_after_breadcrumbs( $block_content, $graphic );
+}
+
+/**
+ * Renders a responsive Media Library image for a durable page-graphic role.
+ *
+ * @param string              $role Durable media asset role.
+ * @param array<string,mixed> $asset Registry entry.
+ * @return string
+ */
+function lmhg_site_core_page_graphic_markup( string $role, array $asset ): string {
+	$alt           = sanitize_text_field( (string) ( $asset['alt'] ?? '' ) );
+	$attachment_id = function_exists( 'lmhg_site_core_media_asset_id' ) ? lmhg_site_core_media_asset_id( $role ) : 0;
+	$image          = '';
+
+	if ( $attachment_id > 0 ) {
+		$image = wp_get_attachment_image(
+			$attachment_id,
+			'large',
+			false,
+			array(
+				'alt'           => $alt,
+				'class'         => 'lmhg-page-graphic__image',
+				'decoding'      => 'async',
+				'fetchpriority' => 'high',
+				'loading'       => 'eager',
+				'sizes'         => '(max-width: 680px) 78vw, 360px',
+			)
+		);
+	}
+
+	if ( '' === $image && function_exists( 'lmhg_site_core_media_asset_role_url' ) ) {
+		$url = lmhg_site_core_media_asset_role_url( $role );
+		if ( '' !== $url ) {
+			$image = sprintf(
+				'<img src="%1$s" width="1254" height="1254" class="lmhg-page-graphic__image" alt="%2$s" loading="eager" decoding="async" fetchpriority="high">',
+				esc_url( $url ),
+				esc_attr( $alt )
+			);
+		}
+	}
+
+	return '' !== $image ? '<figure class="lmhg-page-graphic">' . $image . '</figure>' : '';
 }
 
 /**

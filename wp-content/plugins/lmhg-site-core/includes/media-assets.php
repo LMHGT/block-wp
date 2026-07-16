@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 const LMHG_SITE_CORE_MEDIA_ASSET_ROLE_META         = '_lmhg_asset_role';
 const LMHG_SITE_CORE_MEDIA_ASSET_SOURCE_PATH_META  = '_lmhg_asset_source_path';
 const LMHG_SITE_CORE_MEDIA_ASSET_SEED_OPTION       = 'lmhg_media_asset_seed_version';
-const LMHG_SITE_CORE_MEDIA_ASSET_SEED_VERSION      = '2026-07-10-media-library-assets-v3';
+const LMHG_SITE_CORE_MEDIA_ASSET_SEED_VERSION      = '2026-07-16-page-graphics-v4';
 const LMHG_SITE_CORE_MEDIA_ASSET_LOCK_OPTION        = 'lmhg_media_asset_maintenance_lock';
 const LMHG_SITE_CORE_MEDIA_ASSET_DEDUP_OPTION       = 'lmhg_media_asset_dedup_version';
 const LMHG_SITE_CORE_MEDIA_ASSET_DEDUP_VERSION      = '2026-07-11-role-dedup-v1';
@@ -191,6 +191,134 @@ function lmhg_site_core_specialty_icon_definitions(): array {
 }
 
 /**
+ * Returns service page-graphic definitions keyed by page slug.
+ *
+ * Alt text describes the visible scene instead of repeating location keywords
+ * that are not represented in the artwork.
+ *
+ * @return array<string,array{file:string,alt:string,title:string}>
+ */
+function lmhg_site_core_service_graphic_definitions(): array {
+	return array(
+		'individual-counseling'    => array(
+			'file'  => 'individual-counseling-category-graphic-transparent.webp',
+			'alt'   => 'Illustration of a therapist and client in an individual counseling session.',
+			'title' => 'Individual Counseling page graphic',
+		),
+		'child-counseling'         => array(
+			'file'  => 'child-counseling-category-graphic-transparent.webp',
+			'alt'   => 'Illustration of a therapist and child in a child counseling session with toys and art supplies.',
+			'title' => 'Child Counseling page graphic',
+		),
+		'family-therapy'           => array(
+			'file'  => 'family-therapy-category-graphic-transparent.webp',
+			'alt'   => 'Illustration of a therapist meeting with a family during family therapy.',
+			'title' => 'Family Therapy page graphic',
+		),
+		'couples-counseling'       => array(
+			'file'  => 'couples-counseling-category-graphic-transparent.webp',
+			'alt'   => 'Illustration of a therapist meeting with a couple during couples counseling.',
+			'title' => 'Couples Counseling page graphic',
+		),
+		'court-ordered'            => array(
+			'file'  => 'court-ordered-category-graphic-transparent.webp',
+			'alt'   => 'Illustration of a provider and client in a structured court-ordered counseling session.',
+			'title' => 'Court-Ordered Services page graphic',
+		),
+		'community-based-services' => array(
+			'file'  => 'community-based-services-category-graphic-transparent.webp',
+			'alt'   => 'Illustration of a car outside a home representing community-based mental health services.',
+			'title' => 'Community-Based Services page graphic',
+		),
+		'group-therapy'            => array(
+			'file'  => 'group-therapy-category-graphic-transparent.webp',
+			'alt'   => 'Illustration of a therapist leading a group therapy session.',
+			'title' => 'Group Therapy page graphic',
+		),
+		'trauma-therapy'           => array(
+			'file'  => 'trauma-therapy-category-graphic-transparent.webp',
+			'alt'   => 'Illustration of a thought bubble with an exclamation mark representing trauma therapy.',
+			'title' => 'Trauma Therapy page graphic',
+		),
+	);
+}
+
+/**
+ * Returns specialty page-graphic definitions keyed by page slug.
+ *
+ * @return array<string,array{file:string,alt:string,title:string}>
+ */
+function lmhg_site_core_specialty_graphic_definitions(): array {
+	return array(
+		'adult-counseling'              => array(
+			'file'  => 'adult-counseling-page-graphic-transparent.webp',
+			'alt'   => 'Illustration of a counseling chair and journal representing adult counseling.',
+			'title' => 'Adult Counseling page graphic',
+		),
+		'adolescent-counseling'         => array(
+			'file'  => 'adolescent-counseling-page-graphic-transparent.webp',
+			'alt'   => 'Illustration of a notebook and headphones representing teen therapy.',
+			'title' => 'Teen Therapy page graphic',
+		),
+		'anxiety-depression-therapy'    => array(
+			'file'  => 'anxiety-depression-therapy-page-graphic-transparent.webp',
+			'alt'   => 'Illustration of mood cards and a calm line representing anxiety and depression therapy.',
+			'title' => 'Anxiety and Depression Therapy page graphic',
+		),
+		'attachment-therapy'            => array(
+			'file'  => 'attachment-therapy-page-graphic-transparent.webp',
+			'alt'   => 'Illustration of two linked chairs representing parent-child attachment therapy.',
+			'title' => 'Parent-Child Attachment Therapy page graphic',
+		),
+		'case-management'               => array(
+			'file'  => 'case-management-page-graphic-transparent.webp',
+			'alt'   => 'Illustration of a folder and connected route points representing case management.',
+			'title' => 'Case Management page graphic',
+		),
+		'child-behavioral-intervention' => array(
+			'file'  => 'child-behavioral-intervention-page-graphic-transparent.webp',
+			'alt'   => 'Illustration of a routine checklist and building block representing child behavioral therapy.',
+			'title' => 'Child Behavioral Therapy page graphic',
+		),
+		'co-parenting'                  => array(
+			'file'  => 'co-parenting-page-graphic-transparent.webp',
+			'alt'   => 'Illustration of two homes and a calendar representing co-parenting services.',
+			'title' => 'Co-Parenting Services page graphic',
+		),
+		'community-support'             => array(
+			'file'  => 'community-support-page-graphic-transparent.webp',
+			'alt'   => 'Illustration of a map pin and connected route representing community support services.',
+			'title' => 'Community Support Services page graphic',
+		),
+		'conflict-resolution-counseling' => array(
+			'file'  => 'couples-conflict-resolution-page-graphic-transparent.webp',
+			'alt'   => 'Illustration of a dialogue card above a repair bridge representing conflict resolution counseling.',
+			'title' => 'Conflict Resolution Counseling page graphic',
+		),
+		'emdr-therapy'                  => array(
+			'file'  => 'emdr-therapy-page-graphic-transparent.webp',
+			'alt'   => 'Illustration of a focus screen and bilateral dots representing EMDR therapy.',
+			'title' => 'EMDR Therapy page graphic',
+		),
+		'family-reunification'          => array(
+			'file'  => 'family-reunification-page-graphic-transparent.webp',
+			'alt'   => 'Illustration of two homes connected by a bridge representing family reunification services.',
+			'title' => 'Family Reunification Services page graphic',
+		),
+		'parenting-support'             => array(
+			'file'  => 'parenting-support-page-graphic-transparent.webp',
+			'alt'   => 'Illustration of a home and routine checklist representing parenting support.',
+			'title' => 'Parenting Support page graphic',
+		),
+		'play-therapy'                  => array(
+			'file'  => 'play-therapy-page-graphic-transparent.webp',
+			'alt'   => 'Illustration of building blocks and a crayon representing play therapy.',
+			'title' => 'Play Therapy page graphic',
+		),
+	);
+}
+
+/**
  * Returns all durable media assets keyed by LMHG role.
  *
  * @return array<string,array<string,mixed>>
@@ -237,6 +365,34 @@ function lmhg_site_core_media_asset_registry(): array {
 			'alt'          => $definition['alt'],
 			'title'        => $definition['title'],
 			'pluginFile'   => 'assets/specialty-icons/' . $definition['file'],
+		);
+	}
+
+	foreach ( lmhg_site_core_service_graphic_definitions() as $slug => $definition ) {
+		$role = 'service-graphic-' . $slug;
+		$assets[ $role ] = array(
+			'role'         => $role,
+			'type'         => 'service-graphic',
+			'slug'         => $slug,
+			'relativePath' => '2026/07/' . $definition['file'],
+			'file'         => $definition['file'],
+			'alt'          => $definition['alt'],
+			'title'        => $definition['title'],
+			'pluginFile'   => 'assets/page-graphics/' . $definition['file'],
+		);
+	}
+
+	foreach ( lmhg_site_core_specialty_graphic_definitions() as $slug => $definition ) {
+		$role = 'specialty-graphic-' . $slug;
+		$assets[ $role ] = array(
+			'role'         => $role,
+			'type'         => 'specialty-graphic',
+			'slug'         => $slug,
+			'relativePath' => '2026/07/' . $definition['file'],
+			'file'         => $definition['file'],
+			'alt'          => $definition['alt'],
+			'title'        => $definition['title'],
+			'pluginFile'   => 'assets/page-graphics/' . $definition['file'],
 		);
 	}
 
