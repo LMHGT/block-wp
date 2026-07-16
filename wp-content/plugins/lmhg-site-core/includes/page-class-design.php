@@ -171,16 +171,7 @@ function lmhg_site_core_render_page_graphic( string $block_content, array $block
 		return $block_content;
 	}
 
-	$type  = 'service-page' === $template ? 'service' : 'specialty';
-	$role  = $type . '-graphic-' . sanitize_title( $post->post_name );
-	$asset = function_exists( 'lmhg_site_core_media_asset_definition_for_role' )
-		? lmhg_site_core_media_asset_definition_for_role( $role )
-		: array();
-	if ( empty( $asset ) ) {
-		return $block_content;
-	}
-
-	$graphic = lmhg_site_core_page_graphic_markup( $role, $asset );
+	$graphic = lmhg_site_core_page_graphic_markup_for_post( $post );
 	if ( '' === $graphic ) {
 		return $block_content;
 	}
@@ -191,6 +182,39 @@ function lmhg_site_core_render_page_graphic( string $block_content, array $block
 
 	$rendered_for_posts[ $post->ID ] = true;
 	return lmhg_site_core_insert_after_breadcrumbs( $block_content, $graphic );
+}
+
+/**
+ * Gets the durable page-graphic role for a service or specialty page.
+ *
+ * @param WP_Post $post Page post.
+ * @return string
+ */
+function lmhg_site_core_page_graphic_role_for_post( WP_Post $post ): string {
+	$template = lmhg_site_core_page_class_template_slug( $post );
+	$type     = match ( $template ) {
+		'service-page'   => 'service',
+		'specialty-page' => 'specialty',
+		default          => '',
+	};
+
+	return '' !== $type ? $type . '-graphic-' . sanitize_title( $post->post_name ) : '';
+}
+
+/**
+ * Renders the registered page graphic for a service or specialty page.
+ *
+ * @param WP_Post $post Page post.
+ * @return string
+ */
+function lmhg_site_core_page_graphic_markup_for_post( WP_Post $post ): string {
+	$role = lmhg_site_core_page_graphic_role_for_post( $post );
+	if ( '' === $role || ! function_exists( 'lmhg_site_core_media_asset_definition_for_role' ) ) {
+		return '';
+	}
+
+	$asset = lmhg_site_core_media_asset_definition_for_role( $role );
+	return ! empty( $asset ) ? lmhg_site_core_page_graphic_markup( $role, $asset ) : '';
 }
 
 /**

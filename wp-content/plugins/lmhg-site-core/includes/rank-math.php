@@ -85,6 +85,9 @@ function lmhg_site_core_rank_math_extra_analysis_content( int $post_id ): string
 	}
 
 	$sections = array();
+	if ( function_exists( 'lmhg_site_core_page_graphic_markup_for_post' ) ) {
+		$sections[] = lmhg_site_core_page_graphic_markup_for_post( $post );
+	}
 	if ( function_exists( 'lmhg_site_core_render_taxonomy_related_pages' ) && has_term( '', LMHG_SITE_CORE_SPECIALTY_TAXONOMY, $post ) ) {
 		$sections[] = lmhg_site_core_render_taxonomy_related_pages( $post_id );
 	}
