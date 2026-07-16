@@ -15,7 +15,7 @@ const LMHG_SITE_CORE_RANK_MATH_JOURNAL_OPTION  = 'lmhg_rank_math_handoff_journal
 const LMHG_SITE_CORE_RANK_MATH_LOCK_OPTION     = 'lmhg_rank_math_handoff_lock';
 const LMHG_SITE_CORE_RANK_MATH_LOCK_TTL        = 900;
 const LMHG_SITE_CORE_RANK_MATH_KEYWORD_SYNC_OPTION  = 'lmhg_rank_math_keyword_sync_version';
-const LMHG_SITE_CORE_RANK_MATH_KEYWORD_SYNC_VERSION = '2026-07-16-seo-decision-lab-v1';
+const LMHG_SITE_CORE_RANK_MATH_KEYWORD_SYNC_VERSION = '2026-07-16-seo-decision-lab-all-pages-v2';
 const LMHG_SITE_CORE_RANK_MATH_KEYWORD_REPORT_OPTION = 'lmhg_rank_math_keyword_sync_report';
 
 add_action( 'init', 'lmhg_site_core_configure_rank_math_integration', 99 );
@@ -727,7 +727,15 @@ function lmhg_site_core_sync_canonical_rank_math_keywords(): void {
 			continue;
 		}
 
-		$page = lmhg_site_core_find_published_topology_page( $path );
+		if ( '/' === $path ) {
+			$front_page_id = (int) get_option( 'page_on_front', 0 );
+			$page          = $front_page_id > 0 ? get_post( $front_page_id ) : null;
+			if ( ! $page instanceof WP_Post || 'page' !== $page->post_type || 'publish' !== $page->post_status ) {
+				$page = null;
+			}
+		} else {
+			$page = lmhg_site_core_find_published_topology_page( $path );
+		}
 		if ( ! $page instanceof WP_Post ) {
 			$report['missing_pages'][] = $path;
 			continue;

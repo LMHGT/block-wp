@@ -2,7 +2,7 @@
 /*
 Plugin Name: LMHG Site Core
 Description: Durable site behavior for the LMHG WordPress proof track.
-Version: 0.3.2
+Version: 0.3.3
 Requires at least: 6.9
 Requires PHP: 8.1
 Author: Codex
