@@ -2,13 +2,14 @@
   "schemaVersion": 1,
   "project": "Louisville Mental Health Group",
   "authority": "SEO Decision Lab",
-  "researchDate": "2026-07-10",
+  "researchDate": "2026-07-16",
   "precedence": "Newest route-specific SEO Decision Lab result wins; this map supersedes older Core30 and tracking-keyword assignments for the routes listed here.",
-  "scope": "Services and Specialties hubs plus 21 active service and specialty pages.",
+  "scope": "All 53 published WordPress pages: the original Services and Specialties set plus 30 additional published routes. The draft Sample Page is excluded.",
   "sourceArtifacts": [
     "service-specialty-keyword-map.html",
     "service-specialty-keyword-optimization-report.md",
-    "brand-and-page-copy-intake.json"
+    "brand-and-page-copy-intake.json",
+    "remaining-page-keyword-research-2026-07-16.md"
   ],
   "entries": [
     {
@@ -147,6 +148,186 @@
       "path": "/trauma-therapy/",
       "primaryKeyword": "trauma therapy Louisville KY",
       "secondaryKeywords": ["trauma-informed therapist"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/",
+      "primaryKeyword": "therapy Louisville KY",
+      "secondaryKeywords": [],
+      "evidenceLevel": "volume-confirmed"
+    },
+    {
+      "path": "/articles/",
+      "primaryKeyword": "mental health articles",
+      "secondaryKeywords": [],
+      "evidenceLevel": "volume-confirmed"
+    },
+    {
+      "path": "/bullitt-county-ky/",
+      "primaryKeyword": "mental health services Bullitt County KY",
+      "secondaryKeywords": [],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/careers/",
+      "primaryKeyword": "mental health jobs Louisville KY",
+      "secondaryKeywords": [],
+      "evidenceLevel": "volume-confirmed"
+    },
+    {
+      "path": "/compliance/",
+      "primaryKeyword": "Louisville Mental Health Group compliance",
+      "secondaryKeywords": [],
+      "evidenceLevel": "route-intent-no-volume-data"
+    },
+    {
+      "path": "/contact-us/",
+      "primaryKeyword": "contact Louisville Mental Health Group",
+      "secondaryKeywords": [],
+      "evidenceLevel": "route-intent-no-volume-data"
+    },
+    {
+      "path": "/faq/",
+      "primaryKeyword": "mental health services FAQ Louisville",
+      "secondaryKeywords": [],
+      "evidenceLevel": "prior-seo-decision-lab-confirmed"
+    },
+    {
+      "path": "/insurance/",
+      "primaryKeyword": "Medicaid therapist Louisville KY",
+      "secondaryKeywords": [],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/jefferson-county-ky/",
+      "primaryKeyword": "mental health services Jefferson County KY",
+      "secondaryKeywords": [],
+      "evidenceLevel": "route-intent-no-volume-data"
+    },
+    {
+      "path": "/locations/",
+      "primaryKeyword": "mental health services near Louisville",
+      "secondaryKeywords": [],
+      "evidenceLevel": "route-intent-no-volume-data"
+    },
+    {
+      "path": "/louisville-ky/",
+      "primaryKeyword": "mental health services Louisville KY",
+      "secondaryKeywords": [],
+      "evidenceLevel": "labs-intent-confirmed"
+    },
+    {
+      "path": "/meet-the-team/",
+      "primaryKeyword": "mental health providers Louisville KY",
+      "secondaryKeywords": [],
+      "evidenceLevel": "labs-intent-confirmed"
+    },
+    {
+      "path": "/not-found/",
+      "primaryKeyword": "page not found Louisville Mental Health Group",
+      "secondaryKeywords": [],
+      "evidenceLevel": "utility-navigational"
+    },
+    {
+      "path": "/oldham-county-ky/",
+      "primaryKeyword": "mental health services Oldham County KY",
+      "secondaryKeywords": [],
+      "evidenceLevel": "route-intent-no-volume-data"
+    },
+    {
+      "path": "/privacy-policy/",
+      "primaryKeyword": "Louisville Mental Health Group privacy policy",
+      "secondaryKeywords": [],
+      "evidenceLevel": "utility-navigational"
+    },
+    {
+      "path": "/reviews/",
+      "primaryKeyword": "Louisville Mental Health Group reviews",
+      "secondaryKeywords": [],
+      "evidenceLevel": "utility-navigational"
+    },
+    {
+      "path": "/terms-of-use/",
+      "primaryKeyword": "Louisville Mental Health Group terms of use",
+      "secondaryKeywords": [],
+      "evidenceLevel": "utility-navigational"
+    },
+    {
+      "path": "/articles/family-therapy-vs-individual-therapy/",
+      "primaryKeyword": "family therapy vs individual therapy",
+      "secondaryKeywords": [],
+      "evidenceLevel": "labs-intent-confirmed"
+    },
+    {
+      "path": "/articles/guide-to-individual-therapy/",
+      "primaryKeyword": "what is individual therapy",
+      "secondaryKeywords": [],
+      "evidenceLevel": "labs-intent-confirmed"
+    },
+    {
+      "path": "/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/",
+      "primaryKeyword": "how to talk to someone about therapy",
+      "secondaryKeywords": [],
+      "evidenceLevel": "route-intent-no-volume-data"
+    },
+    {
+      "path": "/articles/top-5-signs-its-time-to-seek-therapy/",
+      "primaryKeyword": "when to seek therapy",
+      "secondaryKeywords": [],
+      "evidenceLevel": "volume-confirmed"
+    },
+    {
+      "path": "/articles/what-to-expect-when-starting-therapy/",
+      "primaryKeyword": "what to expect in therapy",
+      "secondaryKeywords": [],
+      "evidenceLevel": "labs-intent-confirmed"
+    },
+    {
+      "path": "/faq/about-lmhg/",
+      "primaryKeyword": "about Louisville Mental Health Group",
+      "secondaryKeywords": [],
+      "evidenceLevel": "utility-navigational"
+    },
+    {
+      "path": "/faq/cost/",
+      "primaryKeyword": "therapy cost Louisville KY",
+      "secondaryKeywords": [],
+      "evidenceLevel": "prior-seo-decision-lab-confirmed"
+    },
+    {
+      "path": "/faq/our-approach/",
+      "primaryKeyword": "Louisville Mental Health Group approach",
+      "secondaryKeywords": [],
+      "evidenceLevel": "utility-navigational"
+    },
+    {
+      "path": "/locations/community/",
+      "primaryKeyword": "community based mental health care Louisville KY",
+      "secondaryKeywords": [],
+      "evidenceLevel": "route-intent-no-volume-data"
+    },
+    {
+      "path": "/locations/in-home/",
+      "primaryKeyword": "in home therapy Louisville KY",
+      "secondaryKeywords": [],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/locations/in-person/",
+      "primaryKeyword": "in person therapy Louisville KY",
+      "secondaryKeywords": [],
+      "evidenceLevel": "labs-intent-confirmed"
+    },
+    {
+      "path": "/locations/online/",
+      "primaryKeyword": "online therapy Kentucky",
+      "secondaryKeywords": [],
+      "evidenceLevel": "labs-intent-confirmed"
+    },
+    {
+      "path": "/locations/school/",
+      "primaryKeyword": "school based mental health services Louisville KY",
+      "secondaryKeywords": [],
       "evidenceLevel": "serp-reviewed"
     }
   ]
