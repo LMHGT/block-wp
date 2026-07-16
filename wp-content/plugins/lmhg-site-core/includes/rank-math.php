@@ -14,8 +14,12 @@ const LMHG_SITE_CORE_RANK_MATH_HANDOFF_VERSION = '2026-07-11-rank-math-v1';
 const LMHG_SITE_CORE_RANK_MATH_JOURNAL_OPTION  = 'lmhg_rank_math_handoff_journal';
 const LMHG_SITE_CORE_RANK_MATH_LOCK_OPTION     = 'lmhg_rank_math_handoff_lock';
 const LMHG_SITE_CORE_RANK_MATH_LOCK_TTL        = 900;
+const LMHG_SITE_CORE_RANK_MATH_KEYWORD_SYNC_OPTION  = 'lmhg_rank_math_keyword_sync_version';
+const LMHG_SITE_CORE_RANK_MATH_KEYWORD_SYNC_VERSION = '2026-07-16-seo-decision-lab-v1';
+const LMHG_SITE_CORE_RANK_MATH_KEYWORD_REPORT_OPTION = 'lmhg_rank_math_keyword_sync_report';
 
 add_action( 'init', 'lmhg_site_core_configure_rank_math_integration', 99 );
+add_action( 'init', 'lmhg_site_core_sync_canonical_rank_math_keywords', 101 );
 add_action( 'admin_post_lmhg_rank_math_handoff', 'lmhg_site_core_handle_rank_math_handoff' );
 add_action( 'admin_post_lmhg_rank_math_handoff_rollback', 'lmhg_site_core_handle_rank_math_handoff_rollback' );
 add_action( 'enqueue_block_editor_assets', 'lmhg_site_core_enqueue_rank_math_content_bridge', 99 );
@@ -670,6 +674,112 @@ function lmhg_site_core_unique_keywords( array $keywords ): array {
 		$unique[]     = $keyword;
 	}
 	return $unique;
+}
+
+/**
+ * Promotes the active theme's canonical SEO Decision Lab keywords once.
+ *
+ * Existing Rank Math values are changed only when they are blank or still
+ * match the previous LMHG-derived value. This keeps later manual edits intact.
+ */
+function lmhg_site_core_sync_canonical_rank_math_keywords(): void {
+	if ( LMHG_SITE_CORE_RANK_MATH_KEYWORD_SYNC_VERSION === (string) get_option( LMHG_SITE_CORE_RANK_MATH_KEYWORD_SYNC_OPTION, '' ) ) {
+		return;
+	}
+	if ( ! function_exists( 'lmhg_site_core_topology_page_data' ) || ! function_exists( 'lmhg_site_core_find_published_topology_page' ) ) {
+		return;
+	}
+
+	$page_data = lmhg_site_core_topology_page_data();
+	if ( empty( $page_data ) ) {
+		return;
+	}
+
+	$report = array(
+		'version'        => LMHG_SITE_CORE_RANK_MATH_KEYWORD_SYNC_VERSION,
+		'status'         => 'pending',
+		'eligible'       => 0,
+		'lmhg_updates'   => 0,
+		'rank_updates'   => 0,
+		'scores_cleared' => 0,
+		'missing_pages'  => array(),
+		'invalid_items'  => array(),
+		'conflicts'      => array(),
+		'completed_at'   => '',
+	);
+
+	foreach ( $page_data as $path => $entry ) {
+		$seo       = isset( $entry['seo'] ) && is_array( $entry['seo'] ) ? $entry['seo'] : array();
+		$primary   = trim( sanitize_text_field( (string) ( $seo['primaryKeyword'] ?? '' ) ) );
+		$secondary = isset( $seo['secondaryKeywords'] ) && is_array( $seo['secondaryKeywords'] ) ? $seo['secondaryKeywords'] : array();
+		$keywords  = lmhg_site_core_unique_keywords( array_merge( array( $primary ), $secondary ) );
+		if ( '' === $primary ) {
+			continue;
+		}
+
+		++$report['eligible'];
+		if ( count( $keywords ) !== count( array_filter( array_merge( array( $primary ), $secondary ), static fn( mixed $keyword ): bool => '' !== trim( (string) $keyword ) ) ) ) {
+			$report['invalid_items'][] = array( 'path' => $path, 'reason' => 'duplicate_or_empty_keyword' );
+			continue;
+		}
+		if ( array_filter( $keywords, static fn( string $keyword ): bool => str_contains( $keyword, ',' ) ) ) {
+			$report['invalid_items'][] = array( 'path' => $path, 'reason' => 'keyword_contains_delimiter' );
+			continue;
+		}
+
+		$page = lmhg_site_core_find_published_topology_page( $path );
+		if ( ! $page instanceof WP_Post ) {
+			$report['missing_pages'][] = $path;
+			continue;
+		}
+
+		$post_id             = (int) $page->ID;
+		$previous_primary    = trim( (string) get_post_meta( $post_id, '_lmhg_primary_keyword', true ) );
+		$previous_secondary  = json_decode( (string) get_post_meta( $post_id, '_lmhg_secondary_keywords', true ), true );
+		$previous_secondary  = is_array( $previous_secondary ) ? $previous_secondary : array();
+		$previous_rank       = implode( ',', lmhg_site_core_unique_keywords( array_merge( array( $previous_primary ), $previous_secondary ) ) );
+		$canonical_rank      = implode( ',', $keywords );
+		$canonical_secondary = array_slice( $keywords, 1 );
+
+		if ( $previous_primary !== $primary ) {
+			update_post_meta( $post_id, '_lmhg_primary_keyword', $primary );
+			++$report['lmhg_updates'];
+		}
+		if ( $previous_secondary !== $canonical_secondary ) {
+			update_post_meta( $post_id, '_lmhg_secondary_keywords', wp_slash( wp_json_encode( $canonical_secondary ) ) );
+			++$report['lmhg_updates'];
+		}
+
+		if ( ! lmhg_site_core_rank_math_is_active() ) {
+			continue;
+		}
+
+		$current_rank = trim( (string) get_post_meta( $post_id, 'rank_math_focus_keyword', true ) );
+		if ( '' !== $current_rank && $current_rank !== $previous_rank && $current_rank !== $canonical_rank ) {
+			$report['conflicts'][] = array( 'path' => $path, 'post_id' => $post_id );
+			continue;
+		}
+		if ( $current_rank === $canonical_rank ) {
+			continue;
+		}
+
+		update_post_meta( $post_id, 'rank_math_focus_keyword', $canonical_rank );
+		++$report['rank_updates'];
+		if ( metadata_exists( 'post', $post_id, 'rank_math_seo_score' ) ) {
+			delete_post_meta( $post_id, 'rank_math_seo_score' );
+			++$report['scores_cleared'];
+		}
+	}
+
+	$report['completed_at'] = gmdate( 'c' );
+	$report['status'] = empty( $report['missing_pages'] ) && empty( $report['invalid_items'] )
+		? ( empty( $report['conflicts'] ) ? 'complete' : 'complete_with_conflicts' )
+		: 'incomplete';
+	update_option( LMHG_SITE_CORE_RANK_MATH_KEYWORD_REPORT_OPTION, $report, false );
+
+	if ( 'incomplete' !== $report['status'] ) {
+		update_option( LMHG_SITE_CORE_RANK_MATH_KEYWORD_SYNC_OPTION, LMHG_SITE_CORE_RANK_MATH_KEYWORD_SYNC_VERSION, false );
+	}
 }
 
 /** Applies the administrator-confirmed one-time handoff. */

@@ -30,8 +30,7 @@
         "h1": "Teen Therapy in Louisville, KY",
         "primaryKeyword": "teen therapy in Louisville KY",
         "secondaryKeywords": [
-          "teen counseling",
-          "adolescent counseling"
+          "teen counseling"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/adolescent-counseling/",
@@ -73,8 +72,7 @@
         "h1": "Adult Counseling in Louisville, KY",
         "primaryKeyword": "adult counseling in Louisville KY",
         "secondaryKeywords": [
-          "adult therapy",
-          "individual counseling"
+          "adult therapy"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/adult-counseling/",
@@ -116,8 +114,7 @@
         "h1": "Anxiety and Depression Therapy in Louisville, KY",
         "primaryKeyword": "anxiety and depression therapy in Louisville KY",
         "secondaryKeywords": [
-          "anxiety therapy",
-          "depression counseling"
+          "anxiety therapy"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/anxiety-depression-therapy/",
@@ -171,8 +168,7 @@
         "h1": "Parent-Child Attachment Therapy in Louisville, KY",
         "primaryKeyword": "parent child attachment therapy Louisville KY",
         "secondaryKeywords": [
-          "attachment therapy for children",
-          "family therapy for attachment concerns"
+          "attachment therapy for children"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/attachment-therapy/",
@@ -238,10 +234,9 @@
         "title": "Case Management in Louisville, KY | LMHG",
         "description": "Case management for Medicaid clients who need help with basic needs, housing, school, providers, crisis plans, job skills, and next steps.",
         "h1": "Case Management in Louisville, KY",
-        "primaryKeyword": "case management louisville ky",
+        "primaryKeyword": "case management Louisville KY",
         "secondaryKeywords": [
-          "mental health case management louisville ky",
-          "targeted case management louisville ky"
+          "mental health case management Louisville KY"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/case-management/",
@@ -283,8 +278,7 @@
         "h1": "Child Behavioral Therapy in Louisville, KY",
         "primaryKeyword": "child behavioral therapy Louisville KY",
         "secondaryKeywords": [
-          "child behavioral therapist",
-          "child behavior therapy"
+          "child behavioral therapist"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/child-behavioral-intervention/",
@@ -326,8 +320,7 @@
         "h1": "Child Therapy in Louisville, KY",
         "primaryKeyword": "child therapy in Louisville KY",
         "secondaryKeywords": [
-          "child counseling",
-          "child therapist"
+          "child counseling"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/child-counseling/",
@@ -367,10 +360,9 @@
         "title": "Co-Parenting Services in Louisville, KY | LMHG",
         "description": "Co-Parenting Services in Louisville help parents build child-focused communication for proactive needs or court-related concerns.",
         "h1": "Co-Parenting Services in Louisville, KY",
-        "primaryKeyword": "co-parenting services louisville ky",
+        "primaryKeyword": "co-parenting services Louisville KY",
         "secondaryKeywords": [
-          "co-parenting counseling louisville ky",
-          "court ordered co-parenting intervention"
+          "co-parenting counseling Louisville KY"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/co-parenting/",
@@ -412,8 +404,7 @@
         "h1": "Community-Based Mental Health Services in Louisville, KY",
         "primaryKeyword": "community-based mental health services Louisville KY",
         "secondaryKeywords": [
-          "community support services Louisville KY",
-          "case management Louisville KY"
+          "community support services Louisville KY"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/community-based-services/",
@@ -455,8 +446,7 @@
         "h1": "Community Support Services in Louisville, KY",
         "primaryKeyword": "community support services Louisville KY",
         "secondaryKeywords": [
-          "mental health community support services",
-          "Community Support Associate"
+          "mental health community support services"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/community-support/",
@@ -520,10 +510,9 @@
         "title": "Conflict Resolution Counseling in Louisville, KY | LMHG",
         "description": "Conflict resolution counseling in Louisville for non-couple family relationships caught in repeat fights, shutdown, blame, or hard talks that go nowhere.",
         "h1": "Conflict Resolution Counseling in Louisville, KY",
-        "primaryKeyword": "conflict resolution counseling louisville ky",
+        "primaryKeyword": "conflict resolution counseling Louisville KY",
         "secondaryKeywords": [
-          "family conflict resolution counseling",
-          "family relationship conflict counseling"
+          "family conflict resolution counseling"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/conflict-resolution-counseling/",
@@ -569,9 +558,7 @@
         "h1": "Couples Counseling in Louisville, KY",
         "primaryKeyword": "couples counseling in Louisville KY",
         "secondaryKeywords": [
-          "couples therapy",
-          "relationship counseling",
-          "marriage counseling"
+          "couples therapy"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/couples-counseling/",
@@ -613,8 +600,7 @@
         "h1": "Court-Ordered Services in Louisville, KY",
         "primaryKeyword": "court-ordered services Louisville KY",
         "secondaryKeywords": [
-          "court-ordered therapy Louisville KY",
-          "court-mandated therapy"
+          "court-ordered therapy Louisville KY"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/court-ordered/",
@@ -656,8 +642,7 @@
         "h1": "EMDR Therapy in Louisville, KY",
         "primaryKeyword": "EMDR therapy Louisville KY",
         "secondaryKeywords": [
-          "EMDR therapist",
-          "EMDR for PTSD"
+          "EMDR therapist"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/emdr-therapy/",
@@ -697,10 +682,9 @@
         "title": "Family Reunification Services in Louisville, KY | LMHG",
         "description": "Family Reunification Services in Louisville offer a structured, impartial process for court-related contact after a parent-child attachment break.",
         "h1": "Family Reunification Services in Louisville, KY",
-        "primaryKeyword": "family reunification services louisville ky",
+        "primaryKeyword": "family reunification services Louisville KY",
         "secondaryKeywords": [
-          "reunification therapy louisville ky",
-          "court ordered family reunification"
+          "reunification therapy Louisville KY"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/family-reunification/",
@@ -742,8 +726,7 @@
         "h1": "Family Therapy in Louisville, KY",
         "primaryKeyword": "family therapy in Louisville KY",
         "secondaryKeywords": [
-          "family counseling",
-          "family therapist"
+          "family counseling"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/family-therapy/",
@@ -797,8 +780,7 @@
         "h1": "Group Therapy in Louisville, KY",
         "primaryKeyword": "group therapy Louisville KY",
         "secondaryKeywords": [
-          "therapy groups Louisville KY",
-          "clinician-led group therapy"
+          "therapy groups Louisville KY"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/group-therapy/",
@@ -840,8 +822,7 @@
         "h1": "Individual Counseling in Louisville, KY",
         "primaryKeyword": "individual counseling in Louisville KY",
         "secondaryKeywords": [
-          "individual therapy",
-          "one-on-one therapy"
+          "individual therapy"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/individual-counseling/",
@@ -988,8 +969,7 @@
         "h1": "Parenting Support in Louisville, KY",
         "primaryKeyword": "parenting support Louisville KY",
         "secondaryKeywords": [
-          "parent counseling",
-          "caregiver guidance"
+          "parent counseling"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/parenting-support/",
@@ -1029,10 +1009,9 @@
         "title": "Play Therapy in Louisville, KY | LMHG",
         "description": "Play therapy in Louisville helps children work through feelings, stress, behavior, trauma, and family change. Reach out to ask about fit.",
         "h1": "Play Therapy in Louisville, KY",
-        "primaryKeyword": "play therapy in Louisville, KY",
+        "primaryKeyword": "play therapy in Louisville KY",
         "secondaryKeywords": [
-          "child therapy",
-          "therapy through play"
+          "child therapy"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/play-therapy/",
@@ -1206,8 +1185,7 @@
         "h1": "Trauma Therapy in Louisville, KY",
         "primaryKeyword": "trauma therapy Louisville KY",
         "secondaryKeywords": [
-          "trauma-informed therapist",
-          "trauma counseling"
+          "trauma-informed therapist"
         ],
         "schemaType": "MedicalWebPage",
         "canonicalUrl": "/trauma-therapy/",
