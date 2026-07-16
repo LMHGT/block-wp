@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "project": "Louisville Mental Health Group",
+  "authority": "SEO Decision Lab",
+  "researchDate": "2026-07-10",
+  "precedence": "Newest route-specific SEO Decision Lab result wins; this map supersedes older Core30 and tracking-keyword assignments for the routes listed here.",
+  "scope": "Services and Specialties hubs plus 21 active service and specialty pages.",
+  "sourceArtifacts": [
+    "service-specialty-keyword-map.html",
+    "service-specialty-keyword-optimization-report.md",
+    "brand-and-page-copy-intake.json"
+  ],
+  "entries": [
+    {
+      "path": "/adolescent-counseling/",
+      "primaryKeyword": "teen therapy in Louisville KY",
+      "secondaryKeywords": ["teen counseling"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/adult-counseling/",
+      "primaryKeyword": "adult counseling in Louisville KY",
+      "secondaryKeywords": ["adult therapy"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/anxiety-depression-therapy/",
+      "primaryKeyword": "anxiety and depression therapy in Louisville KY",
+      "secondaryKeywords": ["anxiety therapy"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/attachment-therapy/",
+      "primaryKeyword": "parent child attachment therapy Louisville KY",
+      "secondaryKeywords": ["attachment therapy for children"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/case-management/",
+      "primaryKeyword": "case management Louisville KY",
+      "secondaryKeywords": ["mental health case management Louisville KY"],
+      "evidenceLevel": "ranking-confirmed"
+    },
+    {
+      "path": "/child-behavioral-intervention/",
+      "primaryKeyword": "child behavioral therapy Louisville KY",
+      "secondaryKeywords": ["child behavioral therapist"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/child-counseling/",
+      "primaryKeyword": "child therapy in Louisville KY",
+      "secondaryKeywords": ["child counseling"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/co-parenting/",
+      "primaryKeyword": "co-parenting services Louisville KY",
+      "secondaryKeywords": ["co-parenting counseling Louisville KY"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/community-based-services/",
+      "primaryKeyword": "community-based mental health services Louisville KY",
+      "secondaryKeywords": ["community support services Louisville KY"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/community-support/",
+      "primaryKeyword": "community support services Louisville KY",
+      "secondaryKeywords": ["mental health community support services"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/conflict-resolution-counseling/",
+      "primaryKeyword": "conflict resolution counseling Louisville KY",
+      "secondaryKeywords": ["family conflict resolution counseling"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/couples-counseling/",
+      "primaryKeyword": "couples counseling in Louisville KY",
+      "secondaryKeywords": ["couples therapy"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/court-ordered/",
+      "primaryKeyword": "court-ordered services Louisville KY",
+      "secondaryKeywords": ["court-ordered therapy Louisville KY"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/emdr-therapy/",
+      "primaryKeyword": "EMDR therapy Louisville KY",
+      "secondaryKeywords": ["EMDR therapist"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/family-reunification/",
+      "primaryKeyword": "family reunification services Louisville KY",
+      "secondaryKeywords": ["reunification therapy Louisville KY"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/family-therapy/",
+      "primaryKeyword": "family therapy in Louisville KY",
+      "secondaryKeywords": ["family counseling"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/group-therapy/",
+      "primaryKeyword": "group therapy Louisville KY",
+      "secondaryKeywords": ["therapy groups Louisville KY"],
+      "evidenceLevel": "ranking-confirmed"
+    },
+    {
+      "path": "/individual-counseling/",
+      "primaryKeyword": "individual counseling in Louisville KY",
+      "secondaryKeywords": ["individual therapy"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/parenting-support/",
+      "primaryKeyword": "parenting support Louisville KY",
+      "secondaryKeywords": ["parent counseling"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/play-therapy/",
+      "primaryKeyword": "play therapy in Louisville KY",
+      "secondaryKeywords": ["child therapy"],
+      "evidenceLevel": "serp-reviewed"
+    },
+    {
+      "path": "/services/",
+      "primaryKeyword": "counseling services Louisville KY",
+      "secondaryKeywords": ["mental health services Louisville KY"],
+      "evidenceLevel": "volume-confirmed"
+    },
+    {
+      "path": "/specialties/",
+      "primaryKeyword": "specialized therapy Louisville KY",
+      "secondaryKeywords": ["specialty counseling Louisville KY"],
+      "evidenceLevel": "intent-based-lower-confidence"
+    },
+    {
+      "path": "/trauma-therapy/",
+      "primaryKeyword": "trauma therapy Louisville KY",
+      "secondaryKeywords": ["trauma-informed therapist"],
+      "evidenceLevel": "serp-reviewed"
+    }
+  ]
+}

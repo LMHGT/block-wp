@@ -5,6 +5,7 @@ This folder keeps owner answers, model inferences, SEO findings, and page copy d
 ## Durable Sources
 
 - `brand-and-page-copy-intake.json`: direct owner answers and confirmed page rules.
+- `rank-math-keyword-map.json`: canonical SEO Decision Lab keyword authority for Rank Math and deployable metadata. Newer route-specific entries in this ledger override older Core30 and tracking artifacts.
 - `confidence-led-page-briefs.json`: high-, medium-, and low-confidence inferences for pages that were drafted without another full interview.
 - `page-copy-drafts/`: optimized copy drafts for all 23 Services and Specialties pages, including both hubs, plus the consolidated In-Home location page.
 - `scripts/verify-service-specialty-copy.mjs`: checks page inventory, keyword coverage, copy length, reading grade, metadata, and the gentle next-step section.
