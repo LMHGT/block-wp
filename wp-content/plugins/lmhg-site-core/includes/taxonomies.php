@@ -10,6 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 require_once __DIR__ . '/faq-question-queue.php';
+require_once __DIR__ . '/owner-faq-expansion.php';
+require_once __DIR__ . '/owner-page-expansion.php';
 
 add_action( 'init', 'lmhg_site_core_register_taxonomies' );
 
