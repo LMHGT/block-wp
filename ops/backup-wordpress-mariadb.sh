@@ -6,6 +6,7 @@ stamp="$(date -u +%Y%m%dT%H%M%SZ)"
 destination="$root/backups/$stamp-mariadb"
 
 test -f "$root/compose.yml"
+test -f "$root/.env"
 test -f "$root/secrets/mariadb.env"
 test -f "$root/secrets/wordpress.env"
 test -d "$root/wordpress/wp-content"
@@ -21,6 +22,7 @@ tar -C "$root/wordpress" -czf "$destination/wp-content.tar.gz" wp-content
 install -m 0600 "$root/secrets/mariadb.env" "$destination/mariadb.env"
 install -m 0600 "$root/secrets/wordpress.env" "$destination/wordpress.env"
 install -m 0640 "$root/compose.yml" "$destination/compose.yml"
+install -m 0640 "$root/.env" "$destination/.env"
 gzip -9 "$destination/wordpress2026.sql"
 
 manifest="$(mktemp)"
