@@ -52,8 +52,6 @@ add_action( 'init', 'lmhg_site_core_run_article_contextual_link_migration', 46 )
 add_action( 'add_meta_boxes', 'lmhg_site_core_add_relationship_meta_boxes', 10, 2 );
 add_action( 'save_post_post', 'lmhg_site_core_save_article_relationship_meta', 10, 2 );
 add_action( 'save_post_post', 'lmhg_site_core_save_article_card_description_meta', 10, 2 );
-add_action( 'save_post_page', 'lmhg_site_core_save_article_relationship_meta', 10, 2 );
-add_action( 'save_post_page', 'lmhg_site_core_save_article_card_description_meta', 10, 2 );
 add_action( 'save_post_' . LMHG_SITE_CORE_TEAM_POST_TYPE, 'lmhg_site_core_save_team_member_meta', 10, 2 );
 add_action( LMHG_SITE_CORE_SPECIALTY_TAXONOMY . '_add_form_fields', 'lmhg_site_core_add_specialty_card_description_field' );
 add_action( LMHG_SITE_CORE_SPECIALTY_TAXONOMY . '_add_form_fields', 'lmhg_site_core_add_specialty_icon_field', 11 );
@@ -1028,38 +1026,36 @@ function lmhg_site_core_register_relationship_meta(): void {
 		)
 	);
 
-	foreach ( array( 'post', 'page' ) as $article_post_type ) {
-		register_post_meta(
-			$article_post_type,
-			LMHG_SITE_CORE_RELATED_PAGES_META,
-			array(
-				'type'              => 'array',
-				'single'            => true,
-				'show_in_rest'      => array(
-					'schema' => array(
-						'type'  => 'array',
-						'items' => array(
-							'type' => 'integer',
-						),
+	register_post_meta(
+		'post',
+		LMHG_SITE_CORE_RELATED_PAGES_META,
+		array(
+			'type'              => 'array',
+			'single'            => true,
+			'show_in_rest'      => array(
+				'schema' => array(
+					'type'  => 'array',
+					'items' => array(
+						'type' => 'integer',
 					),
 				),
-				'sanitize_callback' => 'lmhg_site_core_sanitize_page_id_array',
-				'auth_callback'     => $article_auth_callback,
-			)
-		);
+			),
+			'sanitize_callback' => 'lmhg_site_core_sanitize_page_id_array',
+			'auth_callback'     => $article_auth_callback,
+		)
+	);
 
-		register_post_meta(
-			$article_post_type,
-			LMHG_SITE_CORE_ARTICLE_CARD_DESCRIPTION_META,
-			array(
-				'type'              => 'string',
-				'single'            => true,
-				'show_in_rest'      => true,
-				'sanitize_callback' => 'sanitize_textarea_field',
-				'auth_callback'     => $article_auth_callback,
-			)
-		);
-	}
+	register_post_meta(
+		'post',
+		LMHG_SITE_CORE_ARTICLE_CARD_DESCRIPTION_META,
+		array(
+			'type'              => 'string',
+			'single'            => true,
+			'show_in_rest'      => true,
+			'sanitize_callback' => 'sanitize_textarea_field',
+			'auth_callback'     => $article_auth_callback,
+		)
+	);
 
 	foreach ( lmhg_site_core_team_meta_definitions() as $meta_key => $definition ) {
 		register_post_meta(
@@ -1106,8 +1102,7 @@ function lmhg_site_core_relationship_meta_auth_callback( mixed $allowed = false,
 /**
  * Determines whether a post is an LMHG article.
  *
- * Posts remain supported for backwards compatibility. Canonical site articles
- * are Pages assigned the article-page template.
+ * Public copy calls these entries Articles; WordPress stores them as Posts.
  *
  * @param WP_Post|int|null $post Post object or ID.
  */
@@ -1117,12 +1112,11 @@ function lmhg_site_core_is_article( WP_Post|int|null $post ): bool {
 		return false;
 	}
 
-	return 'post' === $post->post_type
-		|| ( 'page' === $post->post_type && 'article-page' === get_page_template_slug( $post ) );
+	return 'post' === $post->post_type;
 }
 
 /**
- * Authorizes article metadata only for Posts and canonical article Pages.
+ * Authorizes article metadata only for conventional WordPress Posts.
  *
  * @param mixed  $allowed Existing permission value.
  * @param string $meta_key Meta key.
@@ -1202,15 +1196,11 @@ function lmhg_site_core_render_article_pages_meta_box( WP_Post $post ): void {
 		<?php endforeach; ?>
 	</select>
 	<p class="description">Select the service or specialty pages where this article should appear. No more than three cards show on each selected page.</p>
-	<?php if ( 'post' === $post->post_type ) : ?>
-		<p>
-			<label for="lmhg-article-order"><strong>Helpful Articles order</strong></label><br />
-			<input id="lmhg-article-order" name="lmhg_article_order" type="number" step="1" class="small-text" value="<?php echo esc_attr( (string) $post->menu_order ); ?>" />
-		</p>
-		<p class="description">Lower numbers appear first; title breaks ties.</p>
-	<?php else : ?>
-		<p class="description">Use the Page Attributes Order to set card priority; title breaks ties.</p>
-	<?php endif; ?>
+	<p>
+		<label for="lmhg-article-order"><strong>Helpful Articles order</strong></label><br />
+		<input id="lmhg-article-order" name="lmhg_article_order" type="number" step="1" class="small-text" value="<?php echo esc_attr( (string) $post->menu_order ); ?>" />
+	</p>
+	<p class="description">Lower numbers appear first; title breaks ties.</p>
 	<?php
 }
 
@@ -2698,10 +2688,6 @@ function lmhg_site_core_render_article_pages( int $post_id, string $heading = 'R
 /**
  * Queries manually related published articles for a page.
  *
- * The unbounded database query prevents an ordinary Page with stale
- * relationship metadata from consuming one of the requested article slots.
- * Results are filtered through the shared article predicate before limiting.
- *
  * @param int $page_id Related page ID.
  * @param int $limit Maximum articles to return.
  * @return WP_Post[]
@@ -2713,7 +2699,7 @@ function lmhg_site_core_query_related_articles( int $page_id, int $limit = 3 ): 
 
 	$query = new WP_Query(
 		array(
-			'post_type'              => array( 'post', 'page' ),
+			'post_type'              => 'post',
 			'post_status'            => 'publish',
 			'posts_per_page'         => -1,
 			'orderby'                => array(
@@ -2734,8 +2720,7 @@ function lmhg_site_core_query_related_articles( int $page_id, int $limit = 3 ): 
 		)
 	);
 
-	$articles = array_values( array_filter( $query->posts, 'lmhg_site_core_is_article' ) );
-	return array_slice( $articles, 0, min( 12, max( 1, $limit ) ) );
+	return array_slice( $query->posts, 0, min( 12, max( 1, $limit ) ) );
 }
 
 /**
