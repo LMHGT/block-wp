@@ -37,6 +37,9 @@ const LMHG_SITE_CORE_RELATED_PAGE_PRESENTATION_MIGRATION_VERSION = '2026-07-21-c
 const LMHG_SITE_CORE_ARTICLE_CONTEXTUAL_LINK_MIGRATION_OPTION     = 'lmhg_article_contextual_link_migration_version';
 const LMHG_SITE_CORE_ARTICLE_CONTEXTUAL_LINK_MIGRATION_VERSION    = '2026-07-21-article-contextual-links-v1';
 const LMHG_SITE_CORE_ARTICLE_CONTEXTUAL_LINK_MIGRATION_REPORT     = 'lmhg_article_contextual_link_migration_report';
+const LMHG_SITE_CORE_FAQ_PRESENTATION_MIGRATION_OPTION            = 'lmhg_faq_presentation_migration_version';
+const LMHG_SITE_CORE_FAQ_PRESENTATION_MIGRATION_VERSION           = '2026-07-21-native-faq-presentation-v1';
+const LMHG_SITE_CORE_FAQ_PRESENTATION_MIGRATION_REPORT            = 'lmhg_faq_presentation_migration_report';
 
 add_action( 'init', 'lmhg_site_core_register_relationship_taxonomies', 8 );
 add_action( 'init', 'lmhg_site_core_register_relationship_post_types', 9 );
@@ -49,6 +52,7 @@ add_action( 'init', 'lmhg_site_core_cleanup_in_home_specialty_classification', 3
 add_action( 'init', 'lmhg_site_core_run_relationship_block_migration', 44 );
 add_action( 'init', 'lmhg_site_core_run_related_page_presentation_migration', 45 );
 add_action( 'init', 'lmhg_site_core_run_article_contextual_link_migration', 46 );
+add_action( 'init', 'lmhg_site_core_run_faq_presentation_migration', 48 );
 add_action( 'add_meta_boxes', 'lmhg_site_core_add_relationship_meta_boxes', 10, 2 );
 add_action( 'save_post_post', 'lmhg_site_core_save_article_relationship_meta', 10, 2 );
 add_action( 'save_post_post', 'lmhg_site_core_save_article_card_description_meta', 10, 2 );
@@ -360,6 +364,175 @@ function lmhg_site_core_run_article_contextual_link_migration(): void {
 	}
 
 	update_option( LMHG_SITE_CORE_ARTICLE_CONTEXTUAL_LINK_MIGRATION_REPORT, $report, false );
+}
+
+/**
+ * Converges four published Pages on the native, taxonomy-backed FAQ block.
+ *
+ * This migration changes Page presentation only. FAQ records and FAQ Set
+ * assignments remain under their existing editorial migrations and controls.
+ */
+function lmhg_site_core_run_faq_presentation_migration(): void {
+	if ( LMHG_SITE_CORE_FAQ_PRESENTATION_MIGRATION_VERSION === (string) get_option( LMHG_SITE_CORE_FAQ_PRESENTATION_MIGRATION_OPTION, '' ) ) {
+		return;
+	}
+
+	$paths  = array( '/adolescent-counseling/', '/locations/in-home/', '/our-services/', '/specialties/' );
+	$report = array(
+		'version'        => LMHG_SITE_CORE_FAQ_PRESENTATION_MIGRATION_VERSION,
+		'completed_at'   => '',
+		'pages_expected' => count( $paths ),
+		'pages_updated'  => 0,
+		'pages_current'  => 0,
+		'conflicts'      => array(),
+		'failures'       => array(),
+	);
+
+	foreach ( $paths as $path ) {
+		$page = get_page_by_path( trim( $path, '/' ), OBJECT, 'page' );
+		if (
+			! $page instanceof WP_Post
+			|| 'publish' !== $page->post_status
+			|| trim( (string) get_page_uri( $page ), '/' ) !== trim( $path, '/' )
+		) {
+			$report['failures'][] = array( 'path' => $path, 'reason' => 'exact_published_page_not_found' );
+			continue;
+		}
+
+		$result = lmhg_site_core_apply_native_faq_presentation( (string) $page->post_content, $path );
+		if ( ! $result['valid'] ) {
+			$report['conflicts'][] = array(
+				'path'    => $path,
+				'post_id' => (int) $page->ID,
+				'reason'  => (string) $result['reason'],
+			);
+			continue;
+		}
+
+		if ( ! $result['changed'] ) {
+			++$report['pages_current'];
+			continue;
+		}
+
+		$updated = wp_update_post(
+			wp_slash(
+				array(
+					'ID'           => (int) $page->ID,
+					'post_content' => (string) $result['content'],
+				)
+			),
+			true
+		);
+		if ( is_wp_error( $updated ) || (int) $updated !== (int) $page->ID ) {
+			$report['failures'][] = array(
+				'path'   => $path,
+				'reason' => is_wp_error( $updated ) ? $updated->get_error_code() : 'page_update_failed',
+			);
+			continue;
+		}
+
+		++$report['pages_updated'];
+	}
+
+	if (
+		empty( $report['conflicts'] )
+		&& empty( $report['failures'] )
+		&& $report['pages_expected'] === $report['pages_updated'] + $report['pages_current']
+	) {
+		$report['completed_at'] = gmdate( 'c' );
+		update_option( LMHG_SITE_CORE_FAQ_PRESENTATION_MIGRATION_OPTION, LMHG_SITE_CORE_FAQ_PRESENTATION_MIGRATION_VERSION, false );
+	}
+
+	update_option( LMHG_SITE_CORE_FAQ_PRESENTATION_MIGRATION_REPORT, $report, false );
+}
+
+/**
+ * Applies the approved FAQ-only presentation changes without rewriting other copy.
+ *
+ * @param string $content Existing Page content.
+ * @param string $path Exact public Page path.
+ * @return array{valid:bool,changed:bool,content:string,reason:string}
+ */
+function lmhg_site_core_apply_native_faq_presentation( string $content, string $path ): array {
+	$approved_paths = array( '/adolescent-counseling/', '/locations/in-home/', '/our-services/', '/specialties/' );
+	if ( ! in_array( $path, $approved_paths, true ) ) {
+		return array( 'valid' => false, 'changed' => false, 'content' => $content, 'reason' => 'path_not_approved' );
+	}
+
+	$candidate = $content;
+	$changed   = false;
+
+	if ( '/adolescent-counseling/' === $path ) {
+		$heading = "<!-- wp:heading {\"level\":2,\"className\":\"wp2026-section-title\"} -->\n<h2 class=\"wp-block-heading wp2026-section-title\">FAQs</h2>\n<!-- /wp:heading -->";
+		if ( 1 === substr_count( $candidate, $heading ) ) {
+			$start = strpos( $candidate, $heading );
+			$end   = false !== $start ? strpos( $candidate, "</div>\n<!-- /wp:group -->", $start ) : false;
+			$legacy = false !== $start && false !== $end ? substr( $candidate, $start, $end - $start ) : '';
+			$required_answers = array(
+				'No. It can help with stress, worry, sadness, school pressure, social strain, family conflict, or a hard change.',
+				'They may be. Parent check-ins or family sessions can be used when they fit the teen\'s needs.',
+				'Yes, but privacy has limits.',
+				'No. Teen therapy centers on the teen.',
+			);
+			$exact_legacy = 4 === substr_count( $legacy, '<!-- wp:paragraph -->' );
+			foreach ( $required_answers as $answer ) {
+				$exact_legacy = str_contains( $legacy, $answer ) && $exact_legacy;
+			}
+			if ( ! $exact_legacy ) {
+				return array( 'valid' => false, 'changed' => false, 'content' => $content, 'reason' => 'adolescent_legacy_faq_conflict' );
+			}
+			$candidate = substr_replace( $candidate, '', $start, $end - $start );
+			$changed   = true;
+		} elseif ( str_contains( $candidate, '>FAQs</h2>' ) ) {
+			return array( 'valid' => false, 'changed' => false, 'content' => $content, 'reason' => 'adolescent_faq_heading_conflict' );
+		}
+	}
+
+	if ( '/locations/in-home/' === $path ) {
+		$opening = '<!-- wp:group {"className":"wp2026-location-faq lmhg-faqs","layout":{"type":"constrained"}} -->';
+		if ( 1 === substr_count( $candidate, $opening ) ) {
+			$start  = strpos( $candidate, $opening );
+			$end    = false !== $start ? strpos( $candidate, '<!-- /wp:group -->', $start ) : false;
+			$legacy = false !== $start && false !== $end ? substr( $candidate, $start, $end + strlen( '<!-- /wp:group -->' ) - $start ) : '';
+			if ( 4 !== substr_count( $legacy, '<details class="lmhg-faq-item wp2026-location-faq-item">' ) ) {
+				return array( 'valid' => false, 'changed' => false, 'content' => $content, 'reason' => 'in_home_legacy_faq_conflict' );
+			}
+			$candidate = substr_replace( $candidate, '', $start, strlen( $legacy ) );
+			$changed   = true;
+		} elseif ( str_contains( $candidate, 'wp2026-location-faq' ) ) {
+			return array( 'valid' => false, 'changed' => false, 'content' => $content, 'reason' => 'in_home_faq_marker_conflict' );
+		}
+	}
+
+	if ( str_contains( $candidate, '[lmhg_faqs' ) ) {
+		return array( 'valid' => false, 'changed' => false, 'content' => $content, 'reason' => 'legacy_shortcode_conflict' );
+	}
+
+	$block_count = substr_count( $candidate, 'wp:lmhg/faqs' );
+	if ( $block_count > 1 ) {
+		return array( 'valid' => false, 'changed' => false, 'content' => $content, 'reason' => 'multiple_native_faq_blocks' );
+	}
+
+	$canonical = '<!-- wp:lmhg/faqs {"heading":"Common Questions"} /-->';
+	if ( 0 === $block_count ) {
+		$candidate = rtrim( $candidate ) . "\n\n" . $canonical;
+		$changed   = true;
+	} elseif ( 1 !== substr_count( $candidate, $canonical ) ) {
+		$replaced = 0;
+		$candidate = (string) preg_replace(
+			'/<!--\s+wp:lmhg\/faqs(?:\s+\{[^\r\n]*\})?\s+\/-->/',
+			$canonical,
+			$candidate,
+			1,
+			$replaced
+		);
+		if ( 1 !== $replaced ) {
+			return array( 'valid' => false, 'changed' => false, 'content' => $content, 'reason' => 'native_faq_block_conflict' );
+		}
+		$changed = true;
+	}
+
+	return array( 'valid' => true, 'changed' => $changed, 'content' => $candidate, 'reason' => '' );
 }
 
 /**
@@ -2234,7 +2407,7 @@ function lmhg_site_core_faqs_shortcode( array|string $atts = array() ): string {
  * @return string
  */
 function lmhg_site_core_render_faqs_for_page( int $post_id ): string {
-	return lmhg_site_core_render_faqs( lmhg_site_core_faq_set_term_ids( '', $post_id ), 'Common questions', -1 );
+	return lmhg_site_core_render_faqs( lmhg_site_core_faq_set_term_ids( '', $post_id ), 'Common Questions', -1 );
 }
 
 /**
