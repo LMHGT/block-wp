@@ -83,7 +83,7 @@
   box-sizing: border-box;
   margin-block: 0;
   margin-inline: calc(50% - 50vw);
-  padding: clamp(44px, 6vw, 76px) max(18px, calc((100vw - 1180px) / 2));
+  padding: clamp(44px, 6vw, 76px) max(18px, calc(50vw - 590px));
   width: 100vw;
 }
 

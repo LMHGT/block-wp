@@ -423,12 +423,11 @@ function lmhg_site_core_default_schema_type_for_page( int $post_id ): string {
 		return 'WebPage';
 	}
 
-	$path = trim( get_page_uri( $post_id ), '/' );
-	if ( str_starts_with( $path, 'articles/' ) ) {
+	$template = sanitize_key( (string) get_page_template_slug( $post_id ) );
+	if ( 'article-page' === $template ) {
 		return 'Article';
 	}
 
-	$template = sanitize_key( (string) get_page_template_slug( $post_id ) );
 	return match ( $template ) {
 		'service-page', 'specialty-page', 'location-access-page' => 'MedicalWebPage',
 		'services-hub', 'specialties-hub', 'article-hub', 'faq-hub', 'team-page', 'trust-page' => 'CollectionPage',

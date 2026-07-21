@@ -144,6 +144,102 @@ function lmhg_site_core_redirect_map(): array {
  */
 function lmhg_site_core_static_redirect_map(): array {
 	return array(
+		'/articles/family-therapy-vs-individual-therapy/' => array(
+			'target'     => '/family-therapy-vs-individual-therapy/',
+			'statusCode' => 301,
+		),
+		'/articles/guide-to-individual-therapy/' => array(
+			'target'     => '/guide-to-individual-therapy/',
+			'statusCode' => 301,
+		),
+		'/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/' => array(
+			'target'     => '/how-to-talk-to-your-loved-ones-about-going-to-therapy/',
+			'statusCode' => 301,
+		),
+		'/articles/top-5-signs-its-time-to-seek-therapy/' => array(
+			'target'     => '/top-5-signs-its-time-to-seek-therapy/',
+			'statusCode' => 301,
+		),
+		'/articles/what-to-expect-when-starting-therapy/' => array(
+			'target'     => '/what-to-expect-when-starting-therapy/',
+			'statusCode' => 301,
+		),
+		'/articles/' => array(
+			'target'     => '/blogs/',
+			'statusCode' => 301,
+		),
+		'/court-ordered/' => array(
+			'target'     => '/family-court/',
+			'statusCode' => 301,
+		),
+		'/child-counseling/' => array(
+			'target'     => '/child-therapy/',
+			'statusCode' => 301,
+		),
+		'/individual-counseling/' => array(
+			'target'     => '/individual-therapy/',
+			'statusCode' => 301,
+		),
+		'/faq/about-lmhg/' => array(
+			'target'     => '/what-we-do/',
+			'statusCode' => 301,
+		),
+		'/careers/' => array(
+			'target'     => '/we-are-hiring/',
+			'statusCode' => 301,
+		),
+		'/services/' => array(
+			'target'     => '/our-services/',
+			'statusCode' => 301,
+		),
+		'/faqs/questions-about-individual-therapy/' => array(
+			'target'     => '/faq/',
+			'statusCode' => 301,
+		),
+		'/sitemap/'                      => array(
+			'target'     => '/sitemap_index.xml',
+			'statusCode' => 301,
+		),
+		'/jeffersontown-ky/'             => array(
+			'target'     => '/jefferson-county-ky/',
+			'statusCode' => 301,
+		),
+		'/shively-ky/'                   => array(
+			'target'     => '/jefferson-county-ky/',
+			'statusCode' => 301,
+		),
+		'/springhurst-ky/'               => array(
+			'target'     => '/jefferson-county-ky/',
+			'statusCode' => 301,
+		),
+		'/crestwood-ky/'                 => array(
+			'target'     => '/oldham-county-ky/',
+			'statusCode' => 301,
+		),
+		'/la-grange-ky/'                 => array(
+			'target'     => '/oldham-county-ky/',
+			'statusCode' => 301,
+		),
+		'/prospect-ky/'                  => array(
+			'target'     => '/locations/',
+			'statusCode' => 301,
+		),
+		'/bardstown-ky/'                 => array(
+			'target'     => '/locations/',
+			'statusCode' => 301,
+		),
+		'/taylorsville-ky/'              => array(
+			'target'     => '/locations/',
+			'statusCode' => 301,
+		),
+		'/clarksville-ky/'               => array(
+			'target'     => '/locations/',
+			'statusCode' => 301,
+		),
+		'/jeffersonville-ky/'            => array(
+			'target'     => '/locations/',
+			'statusCode' => 301,
+		),
 		'/couples-conflict-resolution/' => array(
 			'target'     => '/couples-counseling/',
 			'statusCode' => 301,
@@ -200,7 +296,7 @@ function lmhg_site_core_normalize_redirect_path( string $path ): string {
 		return '/';
 	}
 
-	if ( str_ends_with( $path, '.html' ) ) {
+	if ( preg_match( '/\.(?:html|xml)$/', $path ) ) {
 		return $path;
 	}
 

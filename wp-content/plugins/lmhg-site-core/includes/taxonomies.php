@@ -297,15 +297,15 @@ function lmhg_site_core_technical_taxonomy_fallbacks( int $post_id, string $path
 	$families    = array(
 		'homepage'               => array( '/' ),
 		'page'                   => array( '/not-found/' ),
-		'article'                => array( '/articles/what-to-expect-when-starting-therapy/' ),
-		'broad-service-category' => array( '/child-counseling/', '/community-based-services/', '/couples-counseling/', '/court-ordered/', '/family-therapy/', '/group-therapy/', '/individual-counseling/', '/trauma-therapy/' ),
+		'article'                => array( '/what-to-expect-when-starting-therapy/' ),
+		'broad-service-category' => array( '/child-therapy/', '/community-based-services/', '/couples-counseling/', '/family-court/', '/family-therapy/', '/group-therapy/', '/individual-therapy/', '/trauma-therapy/' ),
 		'concern-condition'      => array( '/adolescent-counseling/', '/anxiety-depression-therapy/', '/conflict-resolution-counseling/', '/parenting-support/' ),
 		'contextual-parent'      => array( '/locations/community/', '/locations/in-home/', '/locations/in-person/', '/locations/online/', '/locations/school/' ),
-		'primary-hub'            => array( '/contact-us/', '/faq/', '/locations/', '/meet-the-team/', '/services/', '/specialties/' ),
-		'secondary-footer'       => array( '/articles/', '/careers/', '/insurance/', '/reviews/' ),
+		'primary-hub'            => array( '/contact-us/', '/faq/', '/locations/', '/meet-the-team/', '/our-services/', '/specialties/' ),
+		'secondary-footer'       => array( '/blogs/', '/we-are-hiring/', '/insurance/', '/reviews/' ),
 		'service-area'           => array( '/bullitt-county-ky/', '/jefferson-county-ky/', '/louisville-ky/', '/oldham-county-ky/' ),
 		'specialty'              => array( '/adult-counseling/', '/attachment-therapy/', '/case-management/', '/child-behavioral-intervention/', '/co-parenting/', '/community-support/', '/emdr-therapy/', '/family-reunification/', '/play-therapy/' ),
-		'support'                => array( '/articles/family-therapy-vs-individual-therapy/', '/articles/guide-to-individual-therapy/', '/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/', '/articles/top-5-signs-its-time-to-seek-therapy/', '/faq/about-lmhg/', '/faq/cost/', '/faq/our-approach/' ),
+		'support'                => array( '/family-therapy-vs-individual-therapy/', '/guide-to-individual-therapy/', '/how-to-talk-to-your-loved-ones-about-going-to-therapy/', '/top-5-signs-its-time-to-seek-therapy/', '/what-we-do/', '/faq/cost/', '/faq/our-approach/' ),
 		'utility'                => array( '/compliance/', '/privacy-policy/', '/terms-of-use/' ),
 	);
 	foreach ( $families as $family => $paths ) {
@@ -339,12 +339,15 @@ function lmhg_site_core_technical_taxonomy_fallbacks( int $post_id, string $path
 	}
 
 	$schema_type = '';
-	if ( '' !== $page_family ) {
+	if ( 'article-page' === $template ) {
+		$schema_type = 'Article';
+	} elseif ( 'article-hub' === $template ) {
+		$schema_type = 'CollectionPage';
+	} elseif ( '' !== $page_family ) {
 		$schema_type = 'MedicalWebPage';
 	}
 	$schema_overrides = array(
 		'/'               => 'MedicalClinic',
-		'/articles/'      => 'Article',
 		'/contact-us/'    => 'ContactPage',
 		'/faq/'           => 'FAQPage',
 		'/meet-the-team/' => 'AboutPage',

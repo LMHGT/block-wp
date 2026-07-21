@@ -72,12 +72,12 @@ function lmhg_site_core_media_asset_meta_auth_callback( mixed $allowed = false, 
  */
 function lmhg_site_core_service_icon_definitions(): array {
 	return array(
-		'individual-counseling'       => array(
+		'individual-therapy'          => array(
 			'file'  => 'individual-counseling-card-icon-transparent.webp',
 			'alt'   => 'Individual Counseling icon',
 			'title' => 'Individual Counseling service icon',
 		),
-		'child-counseling'            => array(
+		'child-therapy'               => array(
 			'file'  => 'child-counseling-card-icon-transparent.webp',
 			'alt'   => 'Child Therapy icon',
 			'title' => 'Child Counseling service icon',
@@ -92,7 +92,7 @@ function lmhg_site_core_service_icon_definitions(): array {
 			'alt'   => 'Couples Counseling icon',
 			'title' => 'Couples Counseling service icon',
 		),
-		'court-ordered'               => array(
+		'family-court'                => array(
 			'file'  => 'court-ordered-card-icon-transparent.webp',
 			'alt'   => 'Court Ordered Services icon',
 			'title' => 'Court-Ordered Services service icon',
@@ -200,12 +200,12 @@ function lmhg_site_core_specialty_icon_definitions(): array {
  */
 function lmhg_site_core_service_graphic_definitions(): array {
 	return array(
-		'individual-counseling'    => array(
+		'individual-therapy'       => array(
 			'file'  => 'individual-counseling-category-graphic-transparent.webp',
 			'alt'   => 'Illustration of a therapist and client in an individual counseling session.',
 			'title' => 'Individual Counseling page graphic',
 		),
-		'child-counseling'         => array(
+		'child-therapy'            => array(
 			'file'  => 'child-counseling-category-graphic-transparent.webp',
 			'alt'   => 'Illustration of a therapist and child in a child counseling session with toys and art supplies.',
 			'title' => 'Child Counseling page graphic',
@@ -220,7 +220,7 @@ function lmhg_site_core_service_graphic_definitions(): array {
 			'alt'   => 'Illustration of a therapist meeting with a couple during couples counseling.',
 			'title' => 'Couples Counseling page graphic',
 		),
-		'court-ordered'            => array(
+		'family-court'             => array(
 			'file'  => 'court-ordered-category-graphic-transparent.webp',
 			'alt'   => 'Illustration of a provider and client in a structured court-ordered counseling session.',
 			'title' => 'Court-Ordered Services page graphic',

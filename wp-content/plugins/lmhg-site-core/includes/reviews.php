@@ -498,7 +498,7 @@ function lmhg_site_core_register_review_style(): void {
 		LMHG_SITE_CORE_REVIEW_STYLE,
 		plugin_dir_url( dirname( __DIR__ ) . '/lmhg-site-core.php' ) . 'assets/css/reviews.css',
 		array(),
-		'0.1.0'
+		'0.1.1'
 	);
 }
 

@@ -384,11 +384,11 @@ function lmhg_site_core_seed_related_page_terms(): void {
  */
 function lmhg_site_core_related_page_term_seed_items(): array {
 	return array(
-		'individual-counseling'    => array(
+		'individual-therapy'       => array(
 			'name'        => 'Individual Counseling',
 			'description' => 'One-on-one care for adults and teens comparing therapy, counseling, anxiety, depression, stress, trauma, and life-change support.',
 		),
-		'child-counseling'         => array(
+		'child-therapy'            => array(
 			'name'        => 'Child Counseling',
 			'description' => 'Child and adolescent support for behavior, emotional regulation, family stress, school pressure, trauma, and developmentally appropriate care.',
 		),
@@ -400,7 +400,7 @@ function lmhg_site_core_related_page_term_seed_items(): array {
 			'name'        => 'Couples Counseling',
 			'description' => 'Relationship support for communication, recurring conflict, emotional distance, repair, and relationship decisions.',
 		),
-		'court-ordered'            => array(
+		'family-court'             => array(
 			'name'        => 'Court-Ordered Services',
 			'description' => 'Court-involved family support for reunification, co-parenting, documentation questions, and stability during legal stress.',
 		),
@@ -512,7 +512,7 @@ function lmhg_site_core_seed_service_specialty_relationships(): void {
  */
 function lmhg_site_core_service_specialty_relationship_seed_items(): array {
 	return array(
-		'child-counseling'         => array(
+		'child-therapy'            => array(
 			'adolescent-counseling'         => 'Teen Therapy',
 			'child-behavioral-intervention' => 'Child Behavioral Therapy',
 			'parenting-support'              => 'Parenting Support',
@@ -522,7 +522,7 @@ function lmhg_site_core_service_specialty_relationship_seed_items(): array {
 			'case-management'   => 'Case Management',
 			'community-support' => 'Community Support',
 		),
-		'court-ordered'            => array(
+		'family-court'             => array(
 			'co-parenting'         => 'Co-Parenting',
 			'family-reunification' => 'Family Reunification',
 		),
@@ -530,7 +530,7 @@ function lmhg_site_core_service_specialty_relationship_seed_items(): array {
 			'attachment-therapy'             => 'Parent-Child Attachment Therapy',
 			'conflict-resolution-counseling' => 'Conflict Resolution Counseling',
 		),
-		'individual-counseling'    => array(
+		'individual-therapy'       => array(
 			'adult-counseling'           => 'Adult Counseling',
 			'anxiety-depression-therapy' => 'Anxiety and Depression Therapy',
 		),
@@ -1346,7 +1346,7 @@ function lmhg_site_core_register_relationship_assets(): void {
 		LMHG_SITE_CORE_RELATIONSHIP_STYLE,
 		plugin_dir_url( dirname( __DIR__ ) . '/lmhg-site-core.php' ) . 'assets/css/relationships.css',
 		array(),
-		'0.1.19'
+		'0.1.20'
 	);
 
 	if ( lmhg_site_core_request_needs_relationship_assets() ) {
@@ -1410,6 +1410,16 @@ function lmhg_site_core_append_relationship_sections( string $content ): string 
 
 	$post = get_post();
 	if ( ! $post instanceof WP_Post ) {
+		return $content;
+	}
+	if (
+		'page' === $post->post_type
+		&& (
+			( 'services-hub' === get_page_template_slug( $post ) && str_contains( (string) $post->post_content, 'wp2026-home-services' ) )
+			|| ( 'specialties-hub' === get_page_template_slug( $post ) && str_contains( (string) $post->post_content, 'wp2026-specialty-grid' ) )
+			|| ( 'location-access-page' === get_page_template_slug( $post ) && 'locations' === $post->post_name && str_contains( (string) $post->post_content, 'wp2026-location-grid' ) )
+		)
+	) {
 		return $content;
 	}
 
@@ -1795,11 +1805,11 @@ function lmhg_site_core_home_service_icon_from_content( string $content, string 
  */
 function lmhg_site_core_home_service_icon_fallback_data( string $slug ): array {
 	$icons = array(
-		'individual-counseling'       => array( 'individual-counseling-card-icon-transparent.webp', 'Individual Counseling icon' ),
-		'child-counseling'            => array( 'child-counseling-card-icon-transparent.webp', 'Child Therapy icon' ),
+		'individual-therapy'          => array( 'individual-counseling-card-icon-transparent.webp', 'Individual Counseling icon' ),
+		'child-therapy'               => array( 'child-counseling-card-icon-transparent.webp', 'Child Therapy icon' ),
 		'family-therapy'              => array( 'family-therapy-card-icon-transparent.webp', 'Family Therapy icon' ),
 		'couples-counseling'          => array( 'couples-counseling-card-icon-transparent.webp', 'Couples Counseling icon' ),
-		'court-ordered'               => array( 'court-ordered-card-icon-transparent.webp', 'Court Ordered Services icon' ),
+		'family-court'                => array( 'court-ordered-card-icon-transparent.webp', 'Court Ordered Services icon' ),
 		'community-based-services'    => array( 'community-based-services-card-icon-transparent.webp', 'Community-Based Services icon' ),
 		'group-therapy'               => array( 'group-therapy-card-icon-transparent.webp', 'Group Therapy icon' ),
 		'trauma-therapy'              => array( 'trauma-therapy-card-icon-transparent.webp', 'Trauma Therapy icon' ),

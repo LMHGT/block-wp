@@ -11,8 +11,70 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_OPTION  = 'lmhg_content_topology_migration_version';
 const LMHG_SITE_CORE_TOPOLOGY_MIGRATION_VERSION = '2026-07-10-rich-copy-v8';
+const LMHG_SITE_CORE_HOMEPAGE_PRESENTATION_OPTION = 'lmhg_homepage_presentation_migration_version';
+const LMHG_SITE_CORE_HOMEPAGE_PRESENTATION_VERSION = '2026-07-20-linked-service-grid-v1';
+const LMHG_SITE_CORE_ROUTE_PARITY_MIGRATION_OPTION = 'lmhg_public_route_parity_migration_version';
+const LMHG_SITE_CORE_ROUTE_PARITY_MIGRATION_VERSION = '2026-07-21-public-route-parity-v2';
+const LMHG_SITE_CORE_ARTICLE_STUB_RETIREMENT_OPTION = 'lmhg_article_stub_retirement_version';
+const LMHG_SITE_CORE_ARTICLE_STUB_RETIREMENT_VERSION = '2026-07-21-page-canonicals-v1';
 
 add_action( 'init', 'lmhg_site_core_run_topology_migration', 27 );
+add_action( 'init', 'lmhg_site_core_run_homepage_presentation_migration', 28 );
+add_action( 'init', 'lmhg_site_core_run_public_route_parity_migration', 29 );
+add_action( 'init', 'lmhg_site_core_retire_duplicate_article_posts', 30 );
+
+/**
+ * Retires imported Post stubs whose complete canonical versions are Pages.
+ *
+ * The development site is not indexed, so preserving the richer root-level
+ * Page as the sole published object is safer than exposing a second date-based
+ * URL or sitemap entry for the same article intent.
+ */
+function lmhg_site_core_retire_duplicate_article_posts(): void {
+	if ( LMHG_SITE_CORE_ARTICLE_STUB_RETIREMENT_VERSION === (string) get_option( LMHG_SITE_CORE_ARTICLE_STUB_RETIREMENT_OPTION, '' ) ) {
+		return;
+	}
+
+	$slugs = array(
+		'family-therapy-vs-individual-therapy',
+		'guide-to-individual-therapy',
+		'top-5-signs-its-time-to-seek-therapy',
+	);
+	$complete = true;
+	foreach ( $slugs as $slug ) {
+		$page = get_page_by_path( $slug, OBJECT, 'page' );
+		if ( ! $page instanceof WP_Post || 'publish' !== $page->post_status ) {
+			$complete = false;
+			continue;
+		}
+
+		$posts = get_posts(
+			array(
+				'name'           => $slug,
+				'post_type'      => 'post',
+				'post_status'    => array( 'publish', 'future', 'pending', 'private' ),
+				'posts_per_page' => -1,
+				'fields'         => 'ids',
+			)
+		);
+		foreach ( $posts as $post_id ) {
+			$updated = wp_update_post(
+				array(
+					'ID'          => (int) $post_id,
+					'post_status' => 'draft',
+				),
+				true
+			);
+			if ( is_wp_error( $updated ) || (int) $updated <= 0 ) {
+				$complete = false;
+			}
+		}
+	}
+
+	if ( $complete ) {
+		update_option( LMHG_SITE_CORE_ARTICLE_STUB_RETIREMENT_OPTION, LMHG_SITE_CORE_ARTICLE_STUB_RETIREMENT_VERSION, false );
+	}
+}
 
 /**
  * Applies the approved service-page renames and in-home consolidation once.
@@ -35,18 +97,18 @@ function lmhg_site_core_run_topology_migration(): void {
 		'/anxiety-depression-therapy/'       => '/anxiety-depression-therapy/',
 		'/case-management/'                  => '/case-management/',
 		'/child-behavioral-intervention/'    => '/child-behavioral-intervention/',
-		'/child-counseling/'                 => '/child-counseling/',
+		'/child-counseling/'                 => '/child-therapy/',
 		'/co-parenting/'                     => '/co-parenting/',
 		'/community-based-services/'         => '/community-based-services/',
 		'/community-support/'                => '/community-support/',
 		'/couples-conflict-resolution/'      => '/conflict-resolution-counseling/',
 		'/couples-counseling/'               => '/couples-counseling/',
-		'/court-ordered/'                    => '/court-ordered/',
+		'/court-ordered/'                    => '/family-court/',
 		'/emdr-therapy/'                     => '/emdr-therapy/',
 		'/family-reunification/'             => '/family-reunification/',
 		'/family-therapy/'                   => '/family-therapy/',
 		'/group-therapy/'                    => '/group-therapy/',
-		'/individual-counseling/'            => '/individual-counseling/',
+		'/individual-counseling/'            => '/individual-therapy/',
 		'/locations/in-home/'                => '/locations/in-home/',
 		'/parenting-support/'                => '/parenting-support/',
 		'/play-therapy/'                     => '/play-therapy/',
@@ -107,18 +169,18 @@ function lmhg_site_core_run_topology_migration(): void {
 		'/anxiety-depression-therapy/'    => 'anxiety-depression-therapy',
 		'/case-management/'               => 'case-management',
 		'/child-behavioral-intervention/' => 'child-behavioral-intervention',
-		'/child-counseling/'              => 'child-counseling',
+		'/child-therapy/'                 => 'child-counseling',
 		'/co-parenting/'                  => 'co-parenting',
 		'/community-based-services/'      => 'community-based-services',
 		'/community-support/'             => 'community-support',
 		'/conflict-resolution-counseling/' => 'conflict-resolution-counseling',
 		'/couples-counseling/'            => 'couples-counseling',
-		'/court-ordered/'                 => 'court-ordered',
+		'/family-court/'                  => 'court-ordered',
 		'/emdr-therapy/'                  => 'emdr-therapy',
 		'/family-reunification/'          => 'family-reunification',
 		'/family-therapy/'                => 'family-therapy',
 		'/group-therapy/'                 => 'group-therapy',
-		'/individual-counseling/'         => 'individual-counseling',
+		'/individual-therapy/'            => 'individual-counseling',
 		'/locations/in-home/'             => 'locations-in-home',
 		'/parenting-support/'             => 'parenting-support',
 		'/play-therapy/'                  => 'play-therapy',
@@ -139,6 +201,125 @@ function lmhg_site_core_run_topology_migration(): void {
 	if ( $complete ) {
 		update_option( LMHG_SITE_CORE_TOPOLOGY_MIGRATION_OPTION, LMHG_SITE_CORE_TOPOLOGY_MIGRATION_VERSION, false );
 	}
+}
+
+/**
+ * Publishes the homepage interaction refinements from the durable page-data
+ * source without rerunning the broader page-topology migration.
+ */
+function lmhg_site_core_run_homepage_presentation_migration(): void {
+	if ( LMHG_SITE_CORE_HOMEPAGE_PRESENTATION_VERSION === (string) get_option( LMHG_SITE_CORE_HOMEPAGE_PRESENTATION_OPTION, '' ) ) {
+		return;
+	}
+
+	$page_data = lmhg_site_core_topology_page_data();
+	$entry     = $page_data['/'] ?? null;
+	$page      = get_post( (int) get_option( 'page_on_front' ) );
+	if ( ! is_array( $entry ) || ! $page instanceof WP_Post || 'page' !== $page->post_type ) {
+		return;
+	}
+
+	$content = (string) ( $entry['content'] ?? '' );
+	if ( '' === trim( $content ) ) {
+		return;
+	}
+
+	if ( $content !== (string) $page->post_content ) {
+		$updated = wp_update_post(
+			wp_slash(
+				array(
+					'ID'           => (int) $page->ID,
+					'post_content' => $content,
+				)
+			),
+			true
+		);
+		if ( is_wp_error( $updated ) || (int) $updated <= 0 ) {
+			return;
+		}
+	}
+
+	update_option( LMHG_SITE_CORE_HOMEPAGE_PRESENTATION_OPTION, LMHG_SITE_CORE_HOMEPAGE_PRESENTATION_VERSION, false );
+}
+
+/**
+ * Aligns private-development routes with their established public counterparts.
+ *
+ * Article children are detached before their former hub is renamed so their
+ * existing nested paths remain resolvable during the ID-preserving migration.
+ */
+function lmhg_site_core_run_public_route_parity_migration(): void {
+	if ( LMHG_SITE_CORE_ROUTE_PARITY_MIGRATION_VERSION === (string) get_option( LMHG_SITE_CORE_ROUTE_PARITY_MIGRATION_OPTION, '' ) ) {
+		return;
+	}
+
+	$page_data = lmhg_site_core_topology_page_data();
+	if ( empty( $page_data ) ) {
+		return;
+	}
+
+	$complete   = true;
+	$migrations = array(
+		'/articles/family-therapy-vs-individual-therapy/'            => '/family-therapy-vs-individual-therapy/',
+		'/articles/guide-to-individual-therapy/'                      => '/guide-to-individual-therapy/',
+		'/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/' => '/how-to-talk-to-your-loved-ones-about-going-to-therapy/',
+		'/articles/top-5-signs-its-time-to-seek-therapy/'             => '/top-5-signs-its-time-to-seek-therapy/',
+		'/articles/what-to-expect-when-starting-therapy/'             => '/what-to-expect-when-starting-therapy/',
+		'/articles/'                                                  => '/blogs/',
+		'/court-ordered/'                                             => '/family-court/',
+		'/child-counseling/'                                          => '/child-therapy/',
+		'/individual-counseling/'                                     => '/individual-therapy/',
+		'/faq/about-lmhg/'                                            => '/what-we-do/',
+		'/careers/'                                                   => '/we-are-hiring/',
+		'/services/'                                                  => '/our-services/',
+	);
+
+	foreach ( $migrations as $current_path => $target_path ) {
+		$synced   = lmhg_site_core_sync_topology_page( $page_data, $current_path, $target_path );
+		$complete = $synced && $complete;
+		if ( ! $synced ) {
+			continue;
+		}
+
+		$page = lmhg_site_core_find_published_topology_page( $target_path );
+		if ( ! $page instanceof WP_Post ) {
+			$complete = false;
+			continue;
+		}
+
+		$complete = lmhg_site_core_prepare_rank_math_route_meta( (int) $page->ID, $current_path, $target_path ) && $complete;
+		if ( taxonomy_exists( 'lmhg_schema_type' ) ) {
+			lmhg_site_core_set_single_route_term( (int) $page->ID, 'lmhg_schema_type', lmhg_site_core_default_schema_type_for_page( (int) $page->ID ) );
+		}
+	}
+
+	$complete = lmhg_site_core_replace_topology_references() && $complete;
+
+	if ( $complete ) {
+		update_option( LMHG_SITE_CORE_ROUTE_PARITY_MIGRATION_OPTION, LMHG_SITE_CORE_ROUTE_PARITY_MIGRATION_VERSION, false );
+	}
+}
+
+/**
+ * Removes only ordinary self-canonical Rank Math overrides after a route move.
+ *
+ * Rank Math should derive self-canonicals from the permalink so environment
+ * hosts are never persisted. An intentional cross-page canonical is preserved.
+ */
+function lmhg_site_core_prepare_rank_math_route_meta( int $post_id, string $current_path, string $target_path ): bool {
+	$canonical = trim( (string) get_post_meta( $post_id, 'rank_math_canonical_url', true ) );
+	if ( '' !== $canonical ) {
+		$canonical_path = lmhg_site_core_normalize_redirect_path( (string) wp_parse_url( $canonical, PHP_URL_PATH ) );
+		$current_path   = lmhg_site_core_normalize_redirect_path( $current_path );
+		$target_path    = lmhg_site_core_normalize_redirect_path( $target_path );
+		if ( in_array( $canonical_path, array( $current_path, $target_path ), true ) ) {
+			delete_post_meta( $post_id, 'rank_math_canonical_url' );
+		}
+	}
+
+	delete_post_meta( $post_id, 'rank_math_seo_score' );
+	clean_post_cache( $post_id );
+	return true;
 }
 
 /**
@@ -268,8 +449,12 @@ function lmhg_site_core_sync_topology_page( array $page_data, string $current_pa
 	lmhg_site_core_sync_topology_meta( (int) $page->ID, $entry, $target_path );
 
 	if ( $current_path !== $target_path ) {
-		lmhg_site_core_delete_topology_page_duplicates( sanitize_title( basename( trim( $current_path, '/' ) ) ), 0 );
-		lmhg_site_core_delete_topology_page_duplicates( sanitize_title( (string) ( $entry['slug'] ?? '' ) ), (int) $page->ID );
+		$current_slug = sanitize_title( basename( trim( $current_path, '/' ) ) );
+		$target_slug  = sanitize_title( (string) ( $entry['slug'] ?? '' ) );
+		if ( $current_slug !== $target_slug ) {
+			lmhg_site_core_delete_topology_page_duplicates( $current_slug, 0 );
+		}
+		lmhg_site_core_delete_topology_page_duplicates( $target_slug, (int) $page->ID );
 	}
 
 	return true;
@@ -291,7 +476,7 @@ function lmhg_site_core_sync_topology_meta( int $post_id, array $entry, string $
 			'_lmhg_h1'                 => (string) ( $seo['h1'] ?? '' ),
 			'_lmhg_primary_keyword'    => (string) ( $seo['primaryKeyword'] ?? '' ),
 			'_lmhg_secondary_keywords' => wp_json_encode( $seo['secondaryKeywords'] ?? array() ),
-			'_lmhg_schema_type'        => (string) ( $seo['schemaType'] ?? 'MedicalWebPage' ),
+			'_lmhg_schema_type'        => (string) ( $seo['schemaType'] ?? lmhg_site_core_default_schema_type_for_page( $post_id ) ),
 			'_lmhg_canonical_url'      => home_url( $target_path ),
 			'_lmhg_seo_status'         => (string) ( $seo['status'] ?? 'owner-answer-based-rich-copy' ),
 		);
@@ -639,7 +824,7 @@ function lmhg_site_core_move_conflict_resolution_relationship(): bool {
  */
 function lmhg_site_core_move_parenting_support_relationship(): bool {
 	$term   = get_term_by( 'slug', 'parenting-support', LMHG_SITE_CORE_SPECIALTY_TAXONOMY );
-	$child  = lmhg_site_core_find_published_topology_page( '/child-counseling/' );
+	$child  = lmhg_site_core_find_published_topology_page( '/child-therapy/' );
 	$family = lmhg_site_core_find_published_topology_page( '/family-therapy/' );
 	if ( ! $term instanceof WP_Term || ! $child instanceof WP_Post || ! $family instanceof WP_Post ) {
 		return false;
@@ -832,7 +1017,7 @@ function lmhg_site_core_remove_obsolete_in_home_records(): bool {
 function lmhg_site_core_replace_topology_references(): bool {
 	$pages = get_posts(
 		array(
-			'post_type'      => 'page',
+			'post_type'      => array( 'page', LMHG_SITE_CORE_FAQ_POST_TYPE, 'wp_navigation', 'wp_template_part' ),
 			'post_status'    => 'any',
 			'posts_per_page' => -1,
 			'no_found_rows'  => true,
@@ -852,6 +1037,7 @@ function lmhg_site_core_replace_topology_references(): bool {
 		'_lmhg_secondary_keywords',
 		'_lmhg_optimization_terms',
 		'_lmhg_faq_items',
+		'_lmhg_faq_queue_page_path',
 		'_lmhg_editable_blocks_manifest_entry',
 		'_lmhg_editable_blocks',
 		'_lmhg_editable_media_assets',
@@ -937,6 +1123,18 @@ function lmhg_site_core_replace_topology_references(): bool {
 function lmhg_site_core_replace_topology_string( string $value ): string {
 	$value = str_replace(
 		array(
+			'/articles/family-therapy-vs-individual-therapy/',
+			'/articles/guide-to-individual-therapy/',
+			'/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/',
+			'/articles/top-5-signs-its-time-to-seek-therapy/',
+			'/articles/what-to-expect-when-starting-therapy/',
+			'/individual-counseling/',
+			'/child-counseling/',
+			'/court-ordered/',
+			'/faq/about-lmhg/',
+			'/careers/',
+			'/services/',
+			'/articles/',
 			'/couples-conflict-resolution/',
 			'/relationship-counseling/',
 			'/therapy-in-your-home/',
@@ -944,6 +1142,18 @@ function lmhg_site_core_replace_topology_string( string $value ): string {
 			'Child Behavioral Intervention',
 		),
 		array(
+			'/family-therapy-vs-individual-therapy/',
+			'/guide-to-individual-therapy/',
+			'/how-to-talk-to-your-loved-ones-about-going-to-therapy/',
+			'/top-5-signs-its-time-to-seek-therapy/',
+			'/what-to-expect-when-starting-therapy/',
+			'/individual-therapy/',
+			'/child-therapy/',
+			'/family-court/',
+			'/what-we-do/',
+			'/we-are-hiring/',
+			'/our-services/',
+			'/blogs/',
 			'/couples-counseling/',
 			'/couples-counseling/',
 			'/locations/in-home/',

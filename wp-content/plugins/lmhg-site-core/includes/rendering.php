@@ -10,6 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 add_filter( 'the_content', 'lmhg_site_core_render_imported_content', 20 );
+add_filter( 'the_content', 'lmhg_site_core_prepend_sitewide_page_hero', 34 );
 add_filter( 'render_block', 'lmhg_site_core_mark_post_title_block', 20, 2 );
 add_filter( 'run_wptexturize', 'lmhg_site_core_disable_texturize_for_editable_blocks' );
 
@@ -73,6 +74,10 @@ function lmhg_site_core_mark_post_title_block( string $block_content, array $blo
 	}
 
 	$source_url = trim( (string) get_post_meta( $post_id, '_lmhg_source_url', true ) );
+	if ( lmhg_site_core_uses_sitewide_page_hero( $post_id ) ) {
+		return '';
+	}
+
 	$marker = lmhg_site_core_marker_id( $source_url, 'h1' );
 	$title = trim( wp_strip_all_tags( (string) get_the_title( $post_id ) ) );
 	$title_chars = function_exists( 'mb_strlen' ) ? mb_strlen( $title ) : strlen( $title );
@@ -127,6 +132,87 @@ function lmhg_site_core_mark_post_title_block( string $block_content, array $blo
 		$block_content,
 		1
 	) ?? $block_content;
+}
+
+/**
+ * Returns whether an imported page should use the shared title, description,
+ * logo, and CTA hero used by the homepage.
+ *
+ * @param int $post_id Post ID.
+ * @return bool
+ */
+function lmhg_site_core_uses_sitewide_page_hero( int $post_id ): bool {
+	if ( $post_id <= 0 || ! is_singular( 'page' ) || is_front_page() ) {
+		return false;
+	}
+
+	return '' !== trim( (string) get_post_meta( $post_id, '_lmhg_source_url', true ) );
+}
+
+/**
+ * Prepends the shared page hero while leaving the editable source blocks in
+ * place for WordPress authors. CSS suppresses the original lead and hero CTA
+ * inside the body so each value is presented once on the public page.
+ *
+ * @param string $content Rendered post content.
+ * @return string
+ */
+function lmhg_site_core_prepend_sitewide_page_hero( string $content ): string {
+	if ( is_admin() || ! in_the_loop() || ! is_main_query() ) {
+		return $content;
+	}
+
+	$post_id = lmhg_site_core_imported_post_id();
+	if ( ! lmhg_site_core_uses_sitewide_page_hero( $post_id ) || str_contains( $content, 'wp2026-sitewide-hero' ) ) {
+		return $content;
+	}
+
+	$title       = trim( wp_strip_all_tags( (string) get_the_title( $post_id ) ) );
+	$description = lmhg_site_core_page_hero_description( $content, $post_id );
+	if ( '' === $title || '' === $description ) {
+		return $content;
+	}
+
+	$source_url = trim( (string) get_post_meta( $post_id, '_lmhg_source_url', true ) );
+	$marker     = lmhg_site_core_marker_id( $source_url, 'h1' );
+	$reach_out  = function_exists( 'lmhg_site_core_render_reach_out_block' )
+		? lmhg_site_core_render_reach_out_block()
+		: '';
+	$call       = '<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="tel:+15024161416">Call (502) 416-1416</a></div>';
+
+	$hero = sprintf(
+		'<section class="wp-block-group alignwide wp2026-home-hero wp2026-sitewide-hero" aria-labelledby="lmhg-page-hero-title"><div class="wp-block-group wp2026-home-hero-columns"><div class="wp-block-group wp2026-hero-copy"><h1 id="lmhg-page-hero-title" class="wp-block-heading wp2026-home-title" data-lmhg-edit-field="%1$s">%2$s</h1><p class="wp2026-home-lead">%3$s</p><div class="wp-block-buttons wp2026-hero-actions">%4$s%5$s</div></div></div></section>',
+		esc_attr( $marker ),
+		esc_html( $title ),
+		wp_kses_post( $description ),
+		$reach_out,
+		$call
+	);
+
+	return $hero . "\n" . ltrim( $content );
+}
+
+/**
+ * Gets the first page-specific lead, falling back to the stored SEO summary.
+ *
+ * @param string $content Rendered post content.
+ * @param int    $post_id Post ID.
+ * @return string
+ */
+function lmhg_site_core_page_hero_description( string $content, int $post_id ): string {
+	if ( preg_match( '/<p\b[^>]*class=(["\'])[^"\']*\bwp2026-lead\b[^"\']*\1[^>]*>(.*?)<\/p>/is', $content, $matches ) ) {
+		$description = trim( wp_kses_post( $matches[2] ) );
+		if ( '' !== $description ) {
+			return $description;
+		}
+	}
+
+	$description = trim( (string) get_post_meta( $post_id, '_lmhg_meta_description', true ) );
+	if ( '' === $description ) {
+		$description = lmhg_site_core_fallback_meta_description( $post_id );
+	}
+
+	return esc_html( $description );
 }
 
 /**

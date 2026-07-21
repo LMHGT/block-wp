@@ -1,15 +1,15 @@
 /*
 Theme Name: WordPress 2026 LMHG
-Theme URI: http://100.70.222.25:8093/
+Theme URI: http://100.116.130.39:8093/
 Author: Louisville Mental Health Group
 Description: Fresh Gutenberg-native block theme for the 2026 WordPress rebuild.
-Version: 0.1.0
+Version: 0.1.7
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 8.0
 Text Domain: wordpress-2026
 */
-:root { --wp2026-green: #31584a; --wp2026-deep: #152821; --wp2026-mint: #dce9df; --wp2026-cream: #f7f3ed; --wp2026-clay: #a75f3f; --wp2026-ink: #1f2a26; --wp2026-soft: #f8fbf8; }
+:root { --wp2026-green: #31584a; --wp2026-deep: #152821; --wp2026-mint: #dce9df; --wp2026-cream: #f7f3ed; --wp2026-clay: #a75f3f; --wp2026-link-orange: #a45632; --wp2026-ink: #1f2a26; --wp2026-soft: #f8fbf8; --wp2026-heading-1: clamp(2rem, 4vw, 3.25rem); --wp2026-heading-2: clamp(1.5rem, 3vw, 2.7rem); --wp2026-heading-3: clamp(1.3rem, 2vw, 2rem); --wp2026-flow-gap: clamp(1rem, 2vw, 1.5rem); --wp2026-heading-gap: clamp(0.75rem, 1.5vw, 1rem); --wp2026-section-gap: clamp(2rem, 4vw, 3rem); }
 body { color: var(--wp2026-ink); background: #ffffff; }
 a { color: var(--wp2026-green); }
 body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, .wp-block-heading { font-family: Inter, Arial, sans-serif; }
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6, .wp-block-heading { letter-spacing: 0; line-height: 1.08
   background: transparent;
   border-color: var(--wp2026-clay);
 }
-.wp2026-template-home, .wp2026-template-page, .wp2026-template-service-page, .wp2026-template-specialty-page, .wp2026-template-location-access-page, .wp2026-template-faq-page, .wp2026-template-team-page, .wp2026-template-contact-page, .wp2026-template-trust-page, .wp2026-template-legal-utility-page, .wp2026-template-article-page, .wp2026-template-services-hub, .wp2026-template-specialties-hub, .wp2026-template-article-hub, .wp2026-template-faq-hub { box-sizing: border-box; padding-block: clamp(32px, 5vw, 72px); padding-inline: max(18px, calc((100vw - 1180px) / 2)); width: 100%; }
+.wp2026-template-home, .wp2026-template-page, .wp2026-template-service-page, .wp2026-template-specialty-page, .wp2026-template-location-access-page, .wp2026-template-faq-page, .wp2026-template-team-page, .wp2026-template-contact-page, .wp2026-template-trust-page, .wp2026-template-legal-utility-page, .wp2026-template-article-page, .wp2026-template-services-hub, .wp2026-template-specialties-hub, .wp2026-template-article-hub, .wp2026-template-faq-hub { box-sizing: border-box; padding-block: clamp(32px, 5vw, 72px); padding-inline: max(18px, calc(50vw - 590px)); width: 100%; }
 .wp2026-template-home { padding-block: 0; padding-inline: 0; }
 .wp2026-page-title { font-size: clamp(1.7rem, 4vw, 3.35rem); margin-left: auto; margin-right: auto; max-width: 100%; overflow-wrap: anywhere; position: relative; text-wrap: balance; white-space: normal; width: min(calc(100% - 36px), 980px); z-index: 0; }
 .wp2026-template-kicker { display: none; }
@@ -68,7 +68,7 @@ header.wp-block-template-part {
   column-gap: clamp(22px, 3vw, 42px);
   row-gap: 1px;
   min-height: 50px;
-  padding: 12px max(18px, calc((100vw - 1180px) / 2)) 10px;
+  padding: 12px max(18px, calc(50vw - 590px)) 10px;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -146,7 +146,7 @@ footer.wp-block-template-part {
   background: var(--wp2026-deep);
   color: #f9fbf8;
   margin-top: 0;
-  padding: 56px max(18px, calc((100vw - 1180px) / 2)) 28px;
+  padding: 56px max(18px, calc(50vw - 590px)) 28px;
 }
 
 footer.wp-block-template-part a {
@@ -316,7 +316,7 @@ footer.wp-block-template-part > hr {
   box-sizing: border-box;
   margin-inline: auto;
   max-width: none !important;
-  padding: clamp(32px, 5vw, 72px) max(18px, calc((100vw - 1180px) / 2));
+  padding: clamp(32px, 5vw, 72px) max(18px, calc(50vw - 590px));
   width: 100% !important;
 }
 
@@ -380,6 +380,31 @@ footer.wp-block-template-part > hr {
   min-height: 100%;
   padding: 18px 16px;
   text-align: center;
+}
+
+.wp2026-start-step--linked {
+  border: 2px solid var(--wp2026-clay);
+  position: relative;
+  transition: background-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.wp2026-start-step--linked:has(.wp2026-start-step-link:hover),
+.wp2026-start-step--linked:has(.wp2026-start-step-link:focus-visible) {
+  background: var(--wp2026-cream);
+  box-shadow: 0 16px 34px rgba(21, 40, 33, 0.12);
+  transform: translateY(-2px);
+}
+
+.wp2026-start-step-link {
+  border-radius: inherit;
+  inset: -2px;
+  position: absolute;
+  z-index: 2;
+}
+
+.wp2026-start-step-link:focus-visible {
+  outline: 3px solid var(--wp2026-clay);
+  outline-offset: 3px;
 }
 
 .wp2026-start-number {
@@ -538,6 +563,61 @@ footer.wp-block-template-part > hr {
   padding-block: clamp(56px, 6.5vw, 88px);
 }
 
+.wp2026-template-services-hub:has(.wp2026-home-services),
+.wp2026-template-specialties-hub:has(.wp2026-specialty-grid),
+.wp2026-template-location-access-page:has(.wp2026-location-grid) {
+  padding-inline: 0;
+  padding-top: 0;
+}
+
+.wp2026-template-location-access-page:has(.wp2026-location-grid) > .entry-content {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+.wp2026-template-services-hub .wp2026-home-services,
+.wp2026-template-specialties-hub .wp2026-specialties-grid-section,
+.wp2026-template-location-access-page .wp2026-locations-grid-section {
+  padding-block: 8px clamp(32px, 4vw, 56px);
+}
+
+.wp2026-template-services-hub .wp2026-service-grid,
+.wp2026-template-specialties-hub .wp2026-specialty-grid,
+.wp2026-template-location-access-page .wp2026-location-grid {
+  margin-top: 0;
+}
+
+.wp2026-template-services-hub .entry-content:has(> .wp2026-sitewide-hero) > .wp2026-service-hero-copy {
+  display: none !important;
+}
+
+.wp2026-template-specialties-hub .entry-content:has(> .wp2026-sitewide-hero) > .wp2026-specialty-hero-copy {
+  display: none !important;
+}
+
+.wp2026-template-location-access-page:has(.wp2026-location-grid) .entry-content:has(> .wp2026-sitewide-hero) > .wp2026-location-hero-copy {
+  display: none !important;
+}
+
+.wp2026-template-services-hub .wp2026-service-breadcrumbs,
+.wp2026-template-specialties-hub .wp2026-specialties-breadcrumbs,
+.wp2026-template-location-access-page .wp2026-locations-breadcrumbs {
+  box-sizing: border-box;
+  margin-bottom: 0;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 1180px !important;
+  text-align: center;
+  width: calc(100% - 36px) !important;
+}
+
+.wp2026-template-services-hub .wp2026-page-cta,
+.wp2026-template-specialties-hub .wp2026-page-cta,
+.wp2026-template-location-access-page:has(.wp2026-location-grid) .wp2026-page-cta {
+  max-width: 1180px;
+  width: calc(100% - 36px);
+}
+
 .wp2026-home-services > .wp-block-heading,
 .wp2026-home-services > p,
 .wp2026-home-closing > .wp-block-heading,
@@ -554,7 +634,7 @@ footer.wp-block-template-part > hr {
 }
 
 .wp2026-home-services > .wp2026-section-title {
-  font-size: min(2.8rem, 2vw) !important;
+  font-size: clamp(1.5rem, 2vw, 2.8rem) !important;
   line-height: 1.06;
   max-width: calc(100vw - 36px);
   overflow-wrap: normal;
@@ -597,7 +677,7 @@ footer.wp-block-template-part > hr {
 .wp2026-service-icon {
   align-items: center;
   background: #ffffff;
-  border: 1px solid var(--wp2026-clay);
+  border: 2px solid var(--wp2026-clay);
   border-radius: 999px;
   display: flex;
   height: 78px;
@@ -635,6 +715,24 @@ footer.wp-block-template-part > hr {
   line-height: 1.25;
   margin-bottom: 0.7rem;
   text-align: center;
+}
+
+.wp2026-service-card-title a {
+  color: var(--wp2026-deep);
+  text-decoration-color: var(--wp2026-clay);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.wp2026-service-card-title a:hover {
+  color: var(--wp2026-green);
+  text-decoration-thickness: 2px;
+}
+
+.wp2026-service-card-title a:focus-visible {
+  border-radius: 3px;
+  outline: 3px solid var(--wp2026-clay);
+  outline-offset: 3px;
 }
 
 .wp2026-service-card p {
@@ -698,7 +796,7 @@ footer.wp-block-template-part > hr {
 }
 
 .page-template-service-page .wp2026-page-title {
-  font-size: min(3.35rem, calc((100vw - 36px) / 18.4)) !important;
+  font-size: clamp(2rem, 4vw, 3.35rem) !important;
   line-height: 1.03;
   margin-bottom: clamp(92px, 9vw, 124px);
   margin-top: clamp(34px, 5vw, 70px);
@@ -711,7 +809,7 @@ footer.wp-block-template-part > hr {
 }
 
 .page-template-specialty-page .wp2026-page-title {
-  font-size: min(3.35rem, calc((100vw - 36px) / 28)) !important;
+  font-size: clamp(1.9rem, 3.5vw, 3.35rem) !important;
   line-height: 1.03;
   margin-bottom: clamp(92px, 9vw, 124px);
   margin-top: clamp(34px, 5vw, 70px);
@@ -782,7 +880,7 @@ footer.wp-block-template-part > hr {
 }
 
 .page-template-service-page .wp2026-service-process > .wp2026-section-title {
-  font-size: min(clamp(1.65rem, 3vw, 2.8rem), calc((100vw - 36px) / 19.6)) !important;
+  font-size: clamp(1.5rem, 3vw, 2.8rem) !important;
   line-height: 1.08;
   max-width: calc(100vw - 36px);
   overflow-wrap: normal;
@@ -915,7 +1013,7 @@ footer.wp-block-template-part > hr {
 .page-template-faq-page .wp2026-page-title,
 .page-template-team-page .wp2026-page-title,
 .page-template-contact-page .wp2026-page-title {
-  font-size: min(3.25rem, calc((100vw - 36px) / 18.6)) !important;
+  font-size: clamp(1.9rem, 4vw, 3.25rem) !important;
   line-height: 1.03;
   margin-bottom: clamp(86px, 8.5vw, 118px);
   margin-top: clamp(34px, 5vw, 70px);
@@ -1462,7 +1560,7 @@ footer.wp-block-template-part > hr {
 
 @media (max-width: 680px) {
   .page-template-service-page .wp2026-page-title {
-    font-size: min(2.45rem, calc((100vw - 36px) / 18.4)) !important;
+    font-size: clamp(1.9rem, 8vw, 2.45rem) !important;
     line-height: 1.03 !important;
     margin-bottom: 102px;
     max-width: calc(100vw - 36px) !important;
@@ -1482,7 +1580,7 @@ footer.wp-block-template-part > hr {
   .page-template-faq-page .wp2026-page-title,
   .page-template-team-page .wp2026-page-title,
   .page-template-contact-page .wp2026-page-title {
-    font-size: min(2.15rem, calc((100vw - 36px) / 18.6)) !important;
+    font-size: clamp(1.75rem, 7vw, 2.15rem) !important;
     line-height: 1.03 !important;
     margin-bottom: 102px;
     max-width: calc(100vw - 36px) !important;
@@ -1517,7 +1615,7 @@ footer.wp-block-template-part > hr {
   }
 
   .page-template-service-page .wp2026-service-process .wp2026-section-title {
-    font-size: min(2rem, calc((100vw - 36px) / 19.6)) !important;
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;
     line-height: 1.08 !important;
     overflow-wrap: normal;
     text-wrap: balance;
@@ -1590,7 +1688,7 @@ footer.wp-block-template-part a:focus-visible {
   box-shadow: none;
   color: var(--wp2026-ink);
   overflow: hidden;
-  padding: var(--wp2026-footer-badge-offset) max(18px, calc((100vw - 1180px) / 2)) 28px;
+  padding: var(--wp2026-footer-badge-offset) max(18px, calc(50vw - 590px)) 28px;
 }
 
 .wp2026-baseline-footer.alignfull {
@@ -2066,4 +2164,302 @@ footer.wp-block-template-part a:focus-visible {
 .wp2026-home-title {
   font-size: clamp(2rem, 4vw, 3.25rem) !important;
   line-height: 1.02 !important;
+}
+
+/* One shared title, description, logo, and CTA hero for every public page type. */
+main[class*="wp2026-template-"]:has(.wp2026-sitewide-hero) {
+  background: #ffffff !important;
+  padding-top: 0;
+}
+
+.entry-content > .wp2026-sitewide-hero {
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  max-width: none !important;
+  width: 100vw !important;
+}
+
+.wp2026-sitewide-hero .wp2026-home-lead {
+  margin-top: 1.65rem;
+}
+
+.wp2026-sitewide-hero .wp2026-hero-actions {
+  margin-top: 2.5rem !important;
+}
+
+.wp2026-sitewide-hero .wp-block-button.is-style-outline .wp-block-button__link {
+  color: var(--wp2026-deep);
+}
+
+.wp2026-sitewide-hero .wp-block-button.is-style-outline .wp-block-button__link:hover {
+  background: var(--wp2026-green);
+  color: #ffffff;
+}
+
+.entry-content:has(> .wp2026-sitewide-hero) > .wp2026-lead,
+.entry-content:has(> .wp2026-sitewide-hero) > :not(.wp2026-sitewide-hero) .wp2026-lead,
+.entry-content:has(> .wp2026-sitewide-hero) > .wp2026-hero-actions,
+.entry-content:has(> .wp2026-sitewide-hero) > :not(.wp2026-sitewide-hero) .wp2026-hero-actions {
+  display: none !important;
+}
+
+.entry-content:has(> .wp2026-sitewide-hero) > .wp2026-sitewide-hero .wp2026-home-lead {
+  display: block !important;
+}
+
+.entry-content:has(> .wp2026-sitewide-hero) > .wp2026-sitewide-hero .wp2026-hero-actions {
+  display: flex !important;
+}
+
+/* Global text-link rule: orange at rest, with decoration reserved for interaction. */
+body a:not(.wp-block-button__link):not(.lmhg-skip-link) {
+  color: var(--wp2026-link-orange) !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+body a:not(.wp-block-button__link):not(.lmhg-skip-link):hover,
+body a:not(.wp-block-button__link):not(.lmhg-skip-link):focus-visible {
+  color: var(--wp2026-link-orange) !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+
+body a:not(.wp-block-button__link):not(.lmhg-skip-link):focus-visible {
+  border-radius: 2px;
+  outline: 2px solid var(--wp2026-link-orange);
+  outline-offset: 2px;
+}
+
+/* Keep the site title and primary navigation in the original dark header treatment. */
+header.wp-block-template-part .wp-block-site-title a,
+header.wp-block-template-part .wp-block-navigation a,
+.wp2026-site-header .wp-block-site-title a,
+.wp2026-site-header .wp-block-navigation a {
+  color: var(--wp2026-deep) !important;
+  font-weight: inherit;
+  text-decoration: none !important;
+}
+
+header.wp-block-template-part .wp-block-site-title a:hover,
+header.wp-block-template-part .wp-block-site-title a:focus-visible,
+header.wp-block-template-part .wp-block-navigation a:hover,
+header.wp-block-template-part .wp-block-navigation a:focus-visible,
+.wp2026-site-header .wp-block-site-title a:hover,
+.wp2026-site-header .wp-block-site-title a:focus-visible,
+.wp2026-site-header .wp-block-navigation a:hover,
+.wp2026-site-header .wp-block-navigation a:focus-visible {
+  color: var(--wp2026-deep) !important;
+  text-decoration: none !important;
+}
+
+header.wp-block-template-part .wp-block-site-title a:focus-visible,
+header.wp-block-template-part .wp-block-navigation a:focus-visible,
+.wp2026-site-header .wp-block-site-title a:focus-visible,
+.wp2026-site-header .wp-block-navigation a:focus-visible {
+  outline-color: var(--wp2026-deep);
+}
+
+/* Cross-browser fluid type and spacing without CSS typed-arithmetic division. */
+body main .wp2026-home-title,
+body main .wp2026-page-title.wp2026-title-fit {
+  font-size: var(--wp2026-heading-1) !important;
+}
+
+body main .wp2026-service-detail h2.wp-block-heading,
+body main .wp2026-specialty-detail h2.wp-block-heading,
+body main .wp2026-content-section h2.wp-block-heading,
+body main .wp2026-support-detail h2.wp-block-heading,
+body main .wp2026-location-detail h2.wp-block-heading,
+body main .wp2026-contact-detail h2.wp-block-heading,
+body main .wp2026-faq-detail h2.wp-block-heading,
+body main .wp2026-team-detail h2.wp-block-heading {
+  font-size: var(--wp2026-heading-2) !important;
+  line-height: 1.12 !important;
+}
+
+body main :is(
+  .wp2026-service-detail,
+  .wp2026-specialty-detail,
+  .wp2026-content-section,
+  .wp2026-support-detail,
+  .wp2026-location-detail,
+  .wp2026-contact-detail,
+  .wp2026-faq-detail,
+  .wp2026-team-detail
+) > * {
+  margin-block-start: 0 !important;
+  margin-block-end: var(--wp2026-flow-gap) !important;
+}
+
+body main :is(
+  .wp2026-service-detail,
+  .wp2026-specialty-detail,
+  .wp2026-content-section,
+  .wp2026-support-detail,
+  .wp2026-location-detail,
+  .wp2026-contact-detail,
+  .wp2026-faq-detail,
+  .wp2026-team-detail
+) > :is(h2, h3, h4) {
+  margin-block-start: var(--wp2026-section-gap) !important;
+  margin-block-end: var(--wp2026-heading-gap) !important;
+}
+
+body main :is(
+  .wp2026-service-detail,
+  .wp2026-specialty-detail,
+  .wp2026-content-section,
+  .wp2026-support-detail,
+  .wp2026-location-detail,
+  .wp2026-contact-detail,
+  .wp2026-faq-detail,
+  .wp2026-team-detail
+) > :first-child {
+  margin-block-start: 0 !important;
+}
+
+body main :is(
+  .wp2026-service-detail,
+  .wp2026-specialty-detail,
+  .wp2026-content-section,
+  .wp2026-support-detail,
+  .wp2026-location-detail,
+  .wp2026-contact-detail,
+  .wp2026-faq-detail,
+  .wp2026-team-detail
+) > :last-child {
+  margin-block-end: 0 !important;
+}
+
+body main .lmhg-relationship-section {
+  margin-block: var(--wp2026-section-gap) !important;
+}
+
+body.page-template-service-page main .entry-content > .lmhg-relationship-section {
+  max-width: 1180px;
+  width: calc(100% - 36px);
+}
+
+body main .lmhg-relationship-section > h2 {
+  font-size: var(--wp2026-heading-3) !important;
+  line-height: 1.2 !important;
+  margin-block: 0 var(--wp2026-heading-gap) !important;
+}
+
+body main .lmhg-relationship-grid {
+  gap: var(--wp2026-flow-gap);
+}
+
+body main .lmhg-related-pages.lmhg-relationship-section--count-2 .lmhg-relationship-grid,
+body main .lmhg-related-pages.lmhg-relationship-section--count-3 .lmhg-relationship-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+body main .lmhg-relationship-card {
+  min-width: 0;
+}
+
+.wp2026-baseline-footer__column-title {
+  font-size: clamp(1rem, 1.35vw, 1.18rem) !important;
+}
+
+body main h3.wp2026-start-title {
+  font-size: clamp(1rem, 1vw, 1.1rem) !important;
+  line-height: 1.25 !important;
+}
+
+body main .wp2026-page-cta h2.wp2026-section-title {
+  font-size: clamp(1.45rem, 3vw, 2rem) !important;
+  line-height: 1.12 !important;
+}
+
+body main .wp2026-home-services > .wp2026-section-title {
+  max-width: calc(100% - 36px) !important;
+  overflow-wrap: normal !important;
+  text-wrap: balance !important;
+  white-space: normal !important;
+  width: auto !important;
+}
+
+@media (max-width: 900px) {
+  header.wp-block-template-part {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    row-gap: var(--wp2026-heading-gap);
+  }
+
+  header.wp-block-template-part .wp-block-site-title {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+  }
+
+  header.wp-block-template-part .wp-block-site-tagline {
+    grid-column: 1;
+    grid-row: 2;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  header.wp-block-template-part > .wp-block-button {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    justify-self: end;
+  }
+
+  header.wp-block-template-part .wp-block-navigation {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 600px) {
+  header.wp-block-template-part {
+    grid-template-columns: 1fr;
+  }
+
+  header.wp-block-template-part .wp-block-site-title,
+  header.wp-block-template-part .wp-block-site-tagline,
+  header.wp-block-template-part .wp-block-navigation,
+  header.wp-block-template-part > .wp-block-button {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: start;
+  }
+}
+
+/*
+ * Keep category hubs as the dependable navigation path. Dropdowns are an
+ * enhancement only when the header has room and the primary input can hover
+ * precisely; the complete submenu link graph stays in the HTML for crawlers.
+ */
+@media (max-width: 1199px), (hover: none), (pointer: coarse) {
+  .wp2026-primary-nav
+    .wp-block-navigation__responsive-container-content
+    > .wp-block-navigation__container
+    > .wp-block-navigation-item.has-child
+    > .wp-block-navigation__submenu-icon,
+  .wp2026-primary-nav
+    .wp-block-navigation__responsive-container-content
+    > .wp-block-navigation__container
+    > .wp-block-navigation-item.has-child
+    > .wp-block-navigation__submenu-container {
+    display: none !important;
+  }
+}
+
+/* Preserve comfortable direct-link targets in the mobile panel and on coarse input. */
+@media (max-width: 599px), (hover: none), (pointer: coarse) {
+  .wp2026-primary-nav
+    .wp-block-navigation__responsive-container-content
+    > .wp-block-navigation__container
+    > .wp-block-navigation-item
+    > .wp-block-navigation-item__content {
+    align-items: center;
+    display: flex;
+    min-height: 44px;
+    min-width: 44px;
+  }
 }

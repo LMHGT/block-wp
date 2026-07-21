@@ -358,11 +358,11 @@ function lmhg_site_core_faq_question_queue_catalog_is_valid( array $catalog ): b
  */
 function lmhg_site_core_faq_question_queue_catalog(): array {
 	return array(
-		'/services/' => array(
+		'/our-services/' => array(
 			'set' => 'services', 'label' => 'Counseling Services',
 			'questions' => array( 'What types of counseling services does LMHG offer in Louisville?', 'How do I choose between individual, couples, family, child, or trauma therapy?', 'Does LMHG accept Kentucky Medicaid, commercial insurance, and private pay?' ),
 		),
-		'/individual-counseling/' => array(
+		'/individual-therapy/' => array(
 			'set' => 'individual-counseling', 'label' => 'Individual Counseling',
 			'questions' => array( 'Does insurance or Kentucky Medicaid cover individual counseling?', 'What is the main focus of individual counseling?', 'How often do people usually attend individual therapy?' ),
 		),
@@ -374,7 +374,7 @@ function lmhg_site_core_faq_question_queue_catalog(): array {
 			'set' => 'anxiety-depression-therapy', 'label' => 'Anxiety and Depression Therapy',
 			'questions' => array( 'What type of therapy is used for anxiety and depression?', 'Can the same therapy address anxiety and depression together?', 'When should I seek therapy for anxiety or depression instead of waiting?' ),
 		),
-		'/child-counseling/' => array(
+		'/child-therapy/' => array(
 			'set' => 'child-counseling', 'label' => 'Child Therapy',
 			'questions' => array( 'What are signs that a child may benefit from therapy?', 'How are child therapy, play therapy, and behavioral therapy different?', 'Does Kentucky Medicaid or commercial insurance cover child therapy?' ),
 		),
@@ -398,7 +398,7 @@ function lmhg_site_core_faq_question_queue_catalog(): array {
 			'set' => 'group-therapy', 'label' => 'Group Therapy',
 			'questions' => array( 'What is the difference between group therapy and a support group?', 'Who is, and is not, a good fit for group therapy?', 'What types of therapy groups are available in Louisville?' ),
 		),
-		'/court-ordered/' => array(
+		'/family-court/' => array(
 			'set' => 'court-ordered', 'label' => 'Court-Ordered Services',
 			'questions' => array( 'How do I begin therapy after receiving a Kentucky Family Court order?', 'How is court-ordered therapy different from voluntary therapy?', 'Can insurance or Kentucky Medicaid cover court-ordered therapy?' ),
 		),

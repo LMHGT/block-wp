@@ -11,7 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_filter( 'the_content', 'lmhg_site_core_render_page_class_design_sections', 28 );
 add_filter( 'render_block', 'lmhg_site_core_render_page_graphic', 10, 2 );
-add_filter( 'render_block', 'lmhg_site_core_render_page_process_icon', 10, 2 );
 add_shortcode( 'lmhg_specialty_context', 'lmhg_site_core_specialty_context_shortcode' );
 
 /**
@@ -31,6 +30,12 @@ function lmhg_site_core_render_page_class_design_sections( string $content ): st
 	}
 
 	$template = lmhg_site_core_page_class_template_slug( $post );
+	if (
+		( 'services-hub' === $template && str_contains( (string) $post->post_content, 'wp2026-home-services' ) )
+		|| ( 'specialties-hub' === $template && str_contains( (string) $post->post_content, 'wp2026-specialty-grid' ) )
+	) {
+		return $content;
+	}
 	if ( 'service-page' === $template && lmhg_site_core_page_content_owns_service_context( $post ) ) {
 		return $content;
 	}
@@ -133,7 +138,7 @@ function lmhg_site_core_specialty_context_shortcode( array|string $atts = array(
 }
 
 /**
- * Adds the approved, meaningful page graphic to service and specialty heroes.
+ * Adds the canonical watercolor card illustration to service and specialty heroes.
  *
  * @param string $block_content Existing rendered block markup.
  * @param array  $block Rendered block data.
@@ -185,7 +190,11 @@ function lmhg_site_core_render_page_graphic( string $block_content, array $block
 }
 
 /**
- * Gets the durable page-graphic role for a service or specialty page.
+ * Gets the durable card-icon role for a service or specialty page.
+ *
+ * The grid and destination page intentionally share one asset. This keeps the
+ * watercolor illustration as the visual identity for the service or specialty
+ * and prevents a second page-graphic system from drifting in.
  *
  * @param WP_Post $post Page post.
  * @return string
@@ -193,12 +202,12 @@ function lmhg_site_core_render_page_graphic( string $block_content, array $block
 function lmhg_site_core_page_graphic_role_for_post( WP_Post $post ): string {
 	$template = lmhg_site_core_page_class_template_slug( $post );
 	$type     = match ( $template ) {
-		'service-page'   => 'service',
-		'specialty-page' => 'specialty',
+		'service-page'   => 'service-icon',
+		'specialty-page' => 'specialty-icon',
 		default          => '',
 	};
 
-	return '' !== $type ? $type . '-graphic-' . sanitize_title( $post->post_name ) : '';
+	return '' !== $type ? $type . '-' . sanitize_title( $post->post_name ) : '';
 }
 
 /**
@@ -225,17 +234,16 @@ function lmhg_site_core_page_graphic_markup_for_post( WP_Post $post ): string {
  * @return string
  */
 function lmhg_site_core_page_graphic_markup( string $role, array $asset ): string {
-	$alt           = sanitize_text_field( (string) ( $asset['alt'] ?? '' ) );
 	$attachment_id = function_exists( 'lmhg_site_core_media_asset_id' ) ? lmhg_site_core_media_asset_id( $role ) : 0;
 	$image          = '';
 
 	if ( $attachment_id > 0 ) {
 		$image = wp_get_attachment_image(
 			$attachment_id,
-			'large',
+			'full',
 			false,
 			array(
-				'alt'           => $alt,
+				'alt'           => '',
 				'class'         => 'lmhg-page-graphic__image',
 				'decoding'      => 'async',
 				'fetchpriority' => 'high',
@@ -249,14 +257,13 @@ function lmhg_site_core_page_graphic_markup( string $role, array $asset ): strin
 		$url = lmhg_site_core_media_asset_role_url( $role );
 		if ( '' !== $url ) {
 			$image = sprintf(
-				'<img src="%1$s" width="1254" height="1254" class="lmhg-page-graphic__image" alt="%2$s" loading="eager" decoding="async" fetchpriority="high">',
-				esc_url( $url ),
-				esc_attr( $alt )
+				'<img src="%1$s" width="512" height="512" class="lmhg-page-graphic__image" alt="" loading="eager" decoding="async" fetchpriority="high">',
+				esc_url( $url )
 			);
 		}
 	}
 
-	return '' !== $image ? '<figure class="lmhg-page-graphic">' . $image . '</figure>' : '';
+	return '' !== $image ? '<figure class="lmhg-page-graphic" aria-hidden="true">' . $image . '</figure>' : '';
 }
 
 /**
@@ -493,7 +500,7 @@ function lmhg_site_core_render_faq_hub_design(): string {
 			'title' => 'Starting care',
 			'body'  => 'Questions about what LMHG is, how the process works, and how to choose a first step.',
 			'links' => array(
-				array( 'title' => 'About LMHG', 'url' => '/faq/about-lmhg/' ),
+				array( 'title' => 'About LMHG', 'url' => '/what-we-do/' ),
 				array( 'title' => 'Our approach', 'url' => '/faq/our-approach/' ),
 				array( 'title' => 'Contact the office', 'url' => '/contact-us/' ),
 			),
@@ -511,7 +518,7 @@ function lmhg_site_core_render_faq_hub_design(): string {
 			'title' => 'Services and fit',
 			'body'  => 'Questions about choosing a service, specialty, or contact path.',
 			'links' => array(
-				array( 'title' => 'Services', 'url' => '/services/' ),
+				array( 'title' => 'Services', 'url' => '/our-services/' ),
 				array( 'title' => 'Specialties', 'url' => '/specialties/' ),
 			),
 		),
@@ -536,13 +543,13 @@ function lmhg_site_core_render_faq_page_design( string $path ): string {
 			array( 'title' => 'Contact the office', 'url' => '/contact-us/' ),
 			array( 'title' => 'Locations and access', 'url' => '/locations/' ),
 		),
-		'/faq/about-lmhg/' => array(
-			array( 'title' => 'Services', 'url' => '/services/' ),
+		'/what-we-do/' => array(
+			array( 'title' => 'Services', 'url' => '/our-services/' ),
 			array( 'title' => 'Team', 'url' => '/meet-the-team/' ),
 			array( 'title' => 'Reviews', 'url' => '/reviews/' ),
 		),
 		default => array(
-			array( 'title' => 'Services', 'url' => '/services/' ),
+			array( 'title' => 'Services', 'url' => '/our-services/' ),
 			array( 'title' => 'Specialties', 'url' => '/specialties/' ),
 			array( 'title' => 'Contact', 'url' => '/contact-us/' ),
 		),
@@ -561,9 +568,9 @@ function lmhg_site_core_render_faq_page_design( string $path ): string {
  */
 function lmhg_site_core_render_article_hub_design(): string {
 	$topics = array(
-		array( 'title' => 'Therapy versus counseling', 'url' => '/articles/family-therapy-vs-individual-therapy/', 'body' => 'Compare individual, family, and other care paths.' ),
-		array( 'title' => 'Starting therapy', 'url' => '/articles/what-to-expect-when-starting-therapy/', 'body' => 'Clarify what usually happens before your first appointment.' ),
-		array( 'title' => 'When support may help', 'url' => '/articles/top-5-signs-its-time-to-seek-therapy/', 'body' => 'Understand signs that extra support may be useful.' ),
+		array( 'title' => 'Therapy versus counseling', 'url' => '/family-therapy-vs-individual-therapy/', 'body' => 'Compare individual, family, and other care paths.' ),
+		array( 'title' => 'Starting therapy', 'url' => '/what-to-expect-when-starting-therapy/', 'body' => 'Clarify what usually happens before your first appointment.' ),
+		array( 'title' => 'When support may help', 'url' => '/top-5-signs-its-time-to-seek-therapy/', 'body' => 'Understand signs that extra support may be useful.' ),
 	);
 
 	return sprintf(
@@ -646,14 +653,14 @@ function lmhg_site_core_render_trust_page_design( string $path ): string {
 		),
 		'/reviews/' => array(
 			array( 'title' => 'Contact LMHG', 'url' => '/contact-us/', 'body' => 'Contact the office when you are ready to ask about fit and next steps.' ),
-			array( 'title' => 'Services', 'url' => '/services/', 'body' => 'Compare service options after reviewing trust information.' ),
+			array( 'title' => 'Services', 'url' => '/our-services/', 'body' => 'Compare service options after reviewing trust information.' ),
 		),
 		'/meet-the-team/' => array(
-			array( 'title' => 'Services', 'url' => '/services/', 'body' => 'Compare service options when choosing the next step.' ),
+			array( 'title' => 'Services', 'url' => '/our-services/', 'body' => 'Compare service options when choosing the next step.' ),
 			array( 'title' => 'Contact', 'url' => '/contact-us/', 'body' => 'Ask the office about provider availability and fit.' ),
 		),
-		'/careers/' => array(
-			array( 'title' => 'About LMHG', 'url' => '/faq/about-lmhg/', 'body' => 'Learn more about the practice before reaching out about career questions.' ),
+		'/we-are-hiring/' => array(
+			array( 'title' => 'About LMHG', 'url' => '/what-we-do/', 'body' => 'Learn more about the practice before reaching out about career questions.' ),
 			array( 'title' => 'Contact', 'url' => '/contact-us/', 'body' => 'Use contact details for practical next steps.' ),
 		),
 		default => array(
@@ -698,7 +705,7 @@ function lmhg_site_core_core30_service_families(): array {
 	return array(
 		array(
 			'title'       => 'Individual Counseling',
-			'url'         => '/individual-counseling/',
+			'url'         => '/individual-therapy/',
 			'description' => 'One-on-one care for adults and teens seeking support for anxiety, depression, stress, trauma, relationships, or major life changes.',
 			'children'    => array(
 				array( 'title' => 'Adult Counseling', 'url' => '/adult-counseling/' ),
@@ -707,7 +714,7 @@ function lmhg_site_core_core30_service_families(): array {
 		),
 		array(
 			'title'       => 'Child Counseling',
-			'url'         => '/child-counseling/',
+			'url'         => '/child-therapy/',
 			'description' => 'Child and adolescent support for behavior, emotional regulation, family stress, school pressure, trauma, and developmentally appropriate care.',
 			'children'    => array(
 				array( 'title' => 'Teen Therapy', 'url' => '/adolescent-counseling/' ),
@@ -733,7 +740,7 @@ function lmhg_site_core_core30_service_families(): array {
 		),
 		array(
 			'title'       => 'Court-Ordered Services',
-			'url'         => '/court-ordered/',
+			'url'         => '/family-court/',
 			'description' => 'Court-involved family support for reunification, co-parenting, documentation questions, and stability during legal stress.',
 			'children'    => array(
 				array( 'title' => 'Family Reunification', 'url' => '/family-reunification/' ),
@@ -810,24 +817,24 @@ function lmhg_site_core_find_specialty_parents( string $path ): array {
  */
 function lmhg_site_core_article_related_links( string $path ): array {
 	return match ( $path ) {
-		'/articles/family-therapy-vs-individual-therapy/' => array(
+		'/family-therapy-vs-individual-therapy/' => array(
 			array( 'title' => 'Family Therapy', 'url' => '/family-therapy/' ),
-			array( 'title' => 'Individual Counseling', 'url' => '/individual-counseling/' ),
+			array( 'title' => 'Individual Counseling', 'url' => '/individual-therapy/' ),
 		),
-		'/articles/guide-to-individual-therapy/' => array(
-			array( 'title' => 'Individual Counseling', 'url' => '/individual-counseling/' ),
+		'/guide-to-individual-therapy/' => array(
+			array( 'title' => 'Individual Counseling', 'url' => '/individual-therapy/' ),
 			array( 'title' => 'Adult Counseling', 'url' => '/adult-counseling/' ),
 		),
-		'/articles/how-to-talk-to-your-loved-ones-about-going-to-therapy/' => array(
-			array( 'title' => 'Services', 'url' => '/services/' ),
+		'/how-to-talk-to-your-loved-ones-about-going-to-therapy/' => array(
+			array( 'title' => 'Services', 'url' => '/our-services/' ),
 			array( 'title' => 'Family Therapy', 'url' => '/family-therapy/' ),
 		),
-		'/articles/top-5-signs-its-time-to-seek-therapy/' => array(
-			array( 'title' => 'Services', 'url' => '/services/' ),
+		'/top-5-signs-its-time-to-seek-therapy/' => array(
+			array( 'title' => 'Services', 'url' => '/our-services/' ),
 			array( 'title' => 'Contact', 'url' => '/contact-us/' ),
 		),
 		default => array(
-			array( 'title' => 'Services', 'url' => '/services/' ),
+			array( 'title' => 'Services', 'url' => '/our-services/' ),
 			array( 'title' => 'FAQ', 'url' => '/faq/' ),
 			array( 'title' => 'Contact', 'url' => '/contact-us/' ),
 		),

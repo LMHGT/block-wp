@@ -17,14 +17,62 @@ const LMHG_SITE_CORE_RANK_MATH_LOCK_TTL        = 900;
 const LMHG_SITE_CORE_RANK_MATH_KEYWORD_SYNC_OPTION  = 'lmhg_rank_math_keyword_sync_version';
 const LMHG_SITE_CORE_RANK_MATH_KEYWORD_SYNC_VERSION = '2026-07-16-seo-decision-lab-metadata-v3';
 const LMHG_SITE_CORE_RANK_MATH_KEYWORD_REPORT_OPTION = 'lmhg_rank_math_keyword_sync_report';
+const LMHG_SITE_CORE_RANK_MATH_SITEMAP_SYNC_OPTION = 'lmhg_rank_math_sitemap_sync_version';
+const LMHG_SITE_CORE_RANK_MATH_SITEMAP_SYNC_VERSION = '2026-07-21-page-inventory-v2';
+const LMHG_SITE_CORE_RANK_MATH_REWRITE_OPTION = 'lmhg_rank_math_rewrite_version';
+const LMHG_SITE_CORE_RANK_MATH_REWRITE_VERSION = '2026-07-21-sitemap-handoff-v2';
 
 add_action( 'init', 'lmhg_site_core_configure_rank_math_integration', 99 );
+add_action( 'init', 'lmhg_site_core_sync_rank_math_sitemap_inventory', 100 );
 add_action( 'init', 'lmhg_site_core_sync_canonical_rank_math_keywords', 101 );
+add_action( 'init', 'lmhg_site_core_refresh_rank_math_rewrites', 102 );
 add_action( 'admin_post_lmhg_rank_math_handoff', 'lmhg_site_core_handle_rank_math_handoff' );
 add_action( 'admin_post_lmhg_rank_math_handoff_rollback', 'lmhg_site_core_handle_rank_math_handoff_rollback' );
 add_action( 'enqueue_block_editor_assets', 'lmhg_site_core_enqueue_rank_math_content_bridge', 99 );
 add_filter( 'rank_math/frontend/disable_integration', 'lmhg_site_core_rank_math_disable_pending_frontend', PHP_INT_MAX );
 add_filter( 'rank_math/modules', 'lmhg_site_core_rank_math_limit_pending_modules', PHP_INT_MAX );
+
+/** Keeps Rank Math's sitemap aligned with LMHG's Page-based public inventory. */
+function lmhg_site_core_sync_rank_math_sitemap_inventory(): void {
+	if ( ! lmhg_site_core_rank_math_owns_standard_seo() ) {
+		return;
+	}
+	if ( LMHG_SITE_CORE_RANK_MATH_SITEMAP_SYNC_VERSION === (string) get_option( LMHG_SITE_CORE_RANK_MATH_SITEMAP_SYNC_OPTION, '' ) ) {
+		return;
+	}
+
+	$settings = get_option( 'rank-math-options-sitemap', array() );
+	if ( ! is_array( $settings ) ) {
+		return;
+	}
+	$settings['pt_page_sitemap']      = 'on';
+	$settings['pt_post_sitemap']      = 'off';
+	$settings['authors_sitemap']      = 'off';
+	$settings['tax_category_sitemap'] = 'off';
+	$settings['tax_post_tag_sitemap'] = 'off';
+	update_option( 'rank-math-options-sitemap', $settings, false );
+	if ( class_exists( '\\RankMath\\Sitemap\\Cache' ) ) {
+		\RankMath\Sitemap\Cache::invalidate_storage();
+	}
+
+	$stored = get_option( 'rank-math-options-sitemap', array() );
+	if ( is_array( $stored ) && 'on' === (string) ( $stored['pt_page_sitemap'] ?? '' ) && 'off' === (string) ( $stored['pt_post_sitemap'] ?? '' ) && 'off' === (string) ( $stored['tax_category_sitemap'] ?? '' ) ) {
+		update_option( LMHG_SITE_CORE_RANK_MATH_SITEMAP_SYNC_OPTION, LMHG_SITE_CORE_RANK_MATH_SITEMAP_SYNC_VERSION, false );
+	}
+}
+
+/** Refreshes rewrites once after Rank Math's public sitemap module takes ownership. */
+function lmhg_site_core_refresh_rank_math_rewrites(): void {
+	if ( ! lmhg_site_core_rank_math_owns_standard_seo() ) {
+		return;
+	}
+	if ( LMHG_SITE_CORE_RANK_MATH_REWRITE_VERSION === (string) get_option( LMHG_SITE_CORE_RANK_MATH_REWRITE_OPTION, '' ) ) {
+		return;
+	}
+
+	flush_rewrite_rules( false );
+	update_option( LMHG_SITE_CORE_RANK_MATH_REWRITE_OPTION, LMHG_SITE_CORE_RANK_MATH_REWRITE_VERSION, false );
+}
 
 /** Returns whether Rank Math Free is loaded and available. */
 function lmhg_site_core_rank_math_is_active(): bool {
@@ -177,10 +225,64 @@ function lmhg_site_core_configure_rank_math_integration(): void {
 	remove_action( 'wp_head', 'lmhg_site_core_output_canonical', 4 );
 	remove_action( 'wp_head', 'lmhg_site_core_output_meta_description', 5 );
 	remove_action( 'wp_head', 'lmhg_site_core_output_json_ld', 20 );
+	add_filter( 'rank_math/snippet/rich_snippet_article_entity', 'lmhg_site_core_rank_math_article_entity', 90 );
 	add_filter( 'rank_math/json_ld', 'lmhg_site_core_extend_rank_math_json_ld', 90, 2 );
+	add_filter( 'rank_math/json_ld', 'lmhg_site_core_finalize_rank_math_page_schema', 999, 2 );
+	add_filter( 'rank_math/sitemap/exclude_post_type', 'lmhg_site_core_rank_math_exclude_sitemap_post_type', 90, 2 );
+	add_filter( 'rank_math/sitemap/exclude_taxonomy', '__return_true', 90 );
 }
 
-/** Adds only LMHG-specific Service, FAQ, and Review entities to Rank Math's graph. */
+/** Keeps the Rank Math XML sitemap limited to canonical WordPress Pages. */
+function lmhg_site_core_rank_math_exclude_sitemap_post_type( bool $exclude, string $post_type ): bool {
+	return $exclude || 'page' !== $post_type;
+}
+
+/** Keeps Rank Math's post-type-wide Article default only on article templates. */
+function lmhg_site_core_rank_math_article_entity( array $entity ): array {
+	$post_id = is_singular() ? (int) get_queried_object_id() : 0;
+	if ( $post_id <= 0 || 'page' !== get_post_type( $post_id ) ) {
+		return $entity;
+	}
+
+	return 'Article' === lmhg_site_core_default_schema_type_for_page( $post_id ) ? $entity : array();
+}
+
+/** Applies the LMHG page type after Rank Math connects its graph entities. */
+function lmhg_site_core_finalize_rank_math_page_schema( array $data, mixed $json_ld = null ): array {
+	unset( $json_ld );
+	if ( ! is_singular() ) {
+		return $data;
+	}
+	$post_id = (int) get_queried_object_id();
+	if ( $post_id <= 0 ) {
+		return $data;
+	}
+
+	$canonical = lmhg_site_core_current_canonical_url();
+	$schema_type = trim( (string) get_post_meta( $post_id, '_lmhg_schema_type', true ) );
+	$schema_type = '' !== $schema_type ? $schema_type : lmhg_site_core_default_schema_type_for_page( $post_id );
+	if ( 'Article' !== $schema_type ) {
+		$webpage_id = untrailingslashit( $canonical ) . '/#webpage';
+		foreach ( $data as $key => $node ) {
+			if ( ! is_array( $node ) ) {
+				continue;
+			}
+			$types = isset( $node['@type'] ) && is_array( $node['@type'] ) ? $node['@type'] : array( $node['@type'] ?? '' );
+			if ( in_array( 'Article', $types, true ) && str_ends_with( (string) ( $node['@id'] ?? '' ), '/#richSnippet' ) ) {
+				unset( $data[ $key ] );
+				continue;
+			}
+			if ( $webpage_id === (string) ( $node['@id'] ?? '' ) ) {
+				$data[ $key ]['@type'] = in_array( 'FAQPage', $types, true ) && 'FAQPage' !== $schema_type
+					? array( $schema_type, 'FAQPage' )
+					: $schema_type;
+			}
+		}
+	}
+	return $data;
+}
+
+/** Adds LMHG's Service, FAQ, and Review entities to Rank Math's graph. */
 function lmhg_site_core_extend_rank_math_json_ld( array $data, mixed $json_ld = null ): array {
 	unset( $json_ld );
 	if ( ! is_singular() ) {
@@ -653,11 +755,19 @@ function lmhg_site_core_rank_math_mapping_for_page( int $post_id ): array {
 	$secondary = is_array( $secondary ) ? $secondary : array();
 	$keywords  = lmhg_site_core_unique_keywords( array_merge( array( $primary ), $secondary ) );
 	$robots    = '1' === (string) get_post_meta( $post_id, '_lmhg_noindex', true ) ? array( 'noindex', 'nofollow' ) : array();
+	$canonical = trim( (string) get_post_meta( $post_id, '_lmhg_canonical_url', true ) );
+	if ( '' !== $canonical ) {
+		$canonical_path = lmhg_site_core_normalize_redirect_path( (string) wp_parse_url( $canonical, PHP_URL_PATH ) );
+		$permalink_path = lmhg_site_core_normalize_redirect_path( (string) wp_parse_url( get_permalink( $post_id ), PHP_URL_PATH ) );
+		if ( '' !== $canonical_path && $canonical_path === $permalink_path ) {
+			$canonical = '';
+		}
+	}
 
 	return array(
 		'rank_math_title'          => trim( (string) get_post_meta( $post_id, '_lmhg_seo_title', true ) ),
 		'rank_math_description'    => trim( (string) get_post_meta( $post_id, '_lmhg_meta_description', true ) ),
-		'rank_math_canonical_url'  => trim( (string) get_post_meta( $post_id, '_lmhg_canonical_url', true ) ),
+		'rank_math_canonical_url'  => $canonical,
 		'rank_math_robots'         => $robots,
 		'rank_math_focus_keyword'  => implode( ',', $keywords ),
 	);

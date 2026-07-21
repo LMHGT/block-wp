@@ -122,7 +122,7 @@ function lmhg_site_core_run_owner_page_expansion(): void {
  */
 function lmhg_site_core_owner_page_expansion_catalog(): array {
 	return array(
-		'/services/' => array(
+		'/our-services/' => array(
 			'marker'       => 'lmhg-owner-expansion--matching',
 			'replacements' => array(),
 			'addition'     => <<<'HTML'
@@ -173,7 +173,7 @@ HTML,
 <!-- /wp:group -->
 HTML,
 		),
-		'/court-ordered/' => array(
+		'/family-court/' => array(
 			'marker'       => 'lmhg-owner-expansion--court-intake',
 			'replacements' => array(),
 			'addition'     => <<<'HTML'
@@ -196,7 +196,7 @@ HTML,
 <!-- /wp:group -->
 HTML,
 		),
-		'/articles/what-to-expect-when-starting-therapy/' => array(
+		'/what-to-expect-when-starting-therapy/' => array(
 			'marker'       => 'lmhg-owner-expansion--first-evaluation',
 			'replacements' => array(),
 			'addition'     => <<<'HTML'
@@ -216,7 +216,7 @@ HTML,
 <!-- /wp:group -->
 HTML,
 		),
-		'/child-counseling/' => array(
+		'/child-therapy/' => array(
 			'marker'       => 'lmhg-owner-expansion--caregiver-privacy',
 			'replacements' => array(),
 			'addition'     => <<<'HTML'
