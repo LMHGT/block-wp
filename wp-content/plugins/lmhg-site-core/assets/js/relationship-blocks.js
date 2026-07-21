@@ -59,14 +59,6 @@
 	}
 
 	registerRelationshipBlock( {
-		name: 'lmhg/related-pages',
-		title: __( 'LMHG Related Pages', 'lmhg-site-core' ),
-		description: __( 'Displays taxonomy-related pages using their current titles and descriptions.', 'lmhg-site-core' ),
-		icon: 'admin-links',
-		defaultHeading: 'Related Pages',
-	} );
-
-	registerRelationshipBlock( {
 		name: 'lmhg/faqs',
 		title: __( 'LMHG FAQs', 'lmhg-site-core' ),
 		description: __( 'Displays the FAQ records assigned through the page\'s FAQ Set taxonomy.', 'lmhg-site-core' ),

@@ -136,8 +136,11 @@ function lmhg_site_core_rank_math_extra_analysis_content( int $post_id ): string
 	if ( function_exists( 'lmhg_site_core_page_graphic_markup_for_post' ) ) {
 		$sections[] = lmhg_site_core_page_graphic_markup_for_post( $post );
 	}
-	if ( function_exists( 'lmhg_site_core_render_taxonomy_related_pages' ) && has_term( '', LMHG_SITE_CORE_SPECIALTY_TAXONOMY, $post ) ) {
-		$sections[] = lmhg_site_core_render_taxonomy_related_pages( $post_id );
+	if (
+		function_exists( 'lmhg_site_core_render_related_articles' )
+		&& in_array( get_page_template_slug( $post ), array( 'service-page', 'specialty-page' ), true )
+	) {
+		$sections[] = lmhg_site_core_render_related_articles( $post_id, 'Helpful Articles', 3 );
 	}
 	if ( function_exists( 'lmhg_site_core_render_faqs_for_page' ) && has_term( '', LMHG_SITE_CORE_FAQ_SET_TAXONOMY, $post ) ) {
 		$sections[] = lmhg_site_core_render_faqs_for_page( $post_id );

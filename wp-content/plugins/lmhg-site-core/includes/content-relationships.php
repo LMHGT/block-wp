@@ -14,7 +14,7 @@ const LMHG_SITE_CORE_TEAM_POST_TYPE      = 'lmhg_team_member';
 const LMHG_SITE_CORE_SPECIALTY_TAXONOMY  = 'lmhg_specialty';
 const LMHG_SITE_CORE_FAQ_SET_TAXONOMY    = 'lmhg_faq_set';
 const LMHG_SITE_CORE_RELATED_PAGES_META  = '_lmhg_related_page_ids';
-const LMHG_SITE_CORE_ARTICLE_CARD_DESCRIPTION_META = '_lmhg_meta_description';
+const LMHG_SITE_CORE_ARTICLE_CARD_DESCRIPTION_META = '_lmhg_article_card_description';
 const LMHG_SITE_CORE_SPECIALTY_CARD_DESCRIPTION_META = '_lmhg_specialty_card_description';
 const LMHG_SITE_CORE_SPECIALTY_ICON_ID_META = '_lmhg_specialty_icon_id';
 const LMHG_SITE_CORE_RELATIONSHIP_STYLE  = 'lmhg-site-core-relationships';
@@ -32,6 +32,11 @@ const LMHG_SITE_CORE_IN_HOME_SPECIALTY_CLEANUP_OPTION  = 'lmhg_in_home_specialty
 const LMHG_SITE_CORE_IN_HOME_SPECIALTY_CLEANUP_VERSION = '2026-07-05-in-home-location-v1';
 const LMHG_SITE_CORE_RELATIONSHIP_BLOCK_MIGRATION_OPTION  = 'lmhg_relationship_block_migration_version';
 const LMHG_SITE_CORE_RELATIONSHIP_BLOCK_MIGRATION_VERSION = '2026-07-11-native-relationship-blocks-v1';
+const LMHG_SITE_CORE_RELATED_PAGE_PRESENTATION_MIGRATION_OPTION  = 'lmhg_related_page_presentation_migration_version';
+const LMHG_SITE_CORE_RELATED_PAGE_PRESENTATION_MIGRATION_VERSION = '2026-07-21-contextual-links-v1';
+const LMHG_SITE_CORE_ARTICLE_CONTEXTUAL_LINK_MIGRATION_OPTION     = 'lmhg_article_contextual_link_migration_version';
+const LMHG_SITE_CORE_ARTICLE_CONTEXTUAL_LINK_MIGRATION_VERSION    = '2026-07-21-article-contextual-links-v1';
+const LMHG_SITE_CORE_ARTICLE_CONTEXTUAL_LINK_MIGRATION_REPORT     = 'lmhg_article_contextual_link_migration_report';
 
 add_action( 'init', 'lmhg_site_core_register_relationship_taxonomies', 8 );
 add_action( 'init', 'lmhg_site_core_register_relationship_post_types', 9 );
@@ -42,9 +47,13 @@ add_action( 'init', 'lmhg_site_core_seed_service_specialty_relationships', 29 );
 add_action( 'init', 'lmhg_site_core_seed_specialty_placeholder_faqs', 30 );
 add_action( 'init', 'lmhg_site_core_cleanup_in_home_specialty_classification', 31 );
 add_action( 'init', 'lmhg_site_core_run_relationship_block_migration', 44 );
-add_action( 'add_meta_boxes', 'lmhg_site_core_add_relationship_meta_boxes' );
+add_action( 'init', 'lmhg_site_core_run_related_page_presentation_migration', 45 );
+add_action( 'init', 'lmhg_site_core_run_article_contextual_link_migration', 46 );
+add_action( 'add_meta_boxes', 'lmhg_site_core_add_relationship_meta_boxes', 10, 2 );
 add_action( 'save_post_post', 'lmhg_site_core_save_article_relationship_meta', 10, 2 );
 add_action( 'save_post_post', 'lmhg_site_core_save_article_card_description_meta', 10, 2 );
+add_action( 'save_post_page', 'lmhg_site_core_save_article_relationship_meta', 10, 2 );
+add_action( 'save_post_page', 'lmhg_site_core_save_article_card_description_meta', 10, 2 );
 add_action( 'save_post_' . LMHG_SITE_CORE_TEAM_POST_TYPE, 'lmhg_site_core_save_team_member_meta', 10, 2 );
 add_action( LMHG_SITE_CORE_SPECIALTY_TAXONOMY . '_add_form_fields', 'lmhg_site_core_add_specialty_card_description_field' );
 add_action( LMHG_SITE_CORE_SPECIALTY_TAXONOMY . '_add_form_fields', 'lmhg_site_core_add_specialty_icon_field', 11 );
@@ -74,21 +83,6 @@ function lmhg_site_core_register_relationship_blocks(): void {
 		array( 'wp-block-editor', 'wp-blocks', 'wp-components', 'wp-data', 'wp-element', 'wp-i18n', 'wp-server-side-render' ),
 		is_readable( $script_path ) ? (string) filemtime( $script_path ) : '0.1.0',
 		true
-	);
-
-	register_block_type(
-		'lmhg/related-pages',
-		array(
-			'api_version'     => 3,
-			'editor_script'   => $script_handle,
-			'editor_style'    => LMHG_SITE_CORE_RELATIONSHIP_STYLE,
-			'style'           => LMHG_SITE_CORE_RELATIONSHIP_STYLE,
-			'uses_context'    => array( 'postId' ),
-			'attributes'      => array(
-				'heading' => array( 'type' => 'string', 'default' => 'Related Pages' ),
-			),
-			'render_callback' => 'lmhg_site_core_render_related_pages_block',
-		)
 	);
 
 	register_block_type(
@@ -122,15 +116,6 @@ function lmhg_site_core_relationship_block_empty_preview( int $post_id, string $
 		return '';
 	}
 	return '<p class="lmhg-relationship-editor-empty">' . esc_html( $message ) . '</p>';
-}
-
-/** Renders Related Pages from the current page's taxonomy relationships. */
-function lmhg_site_core_render_related_pages_block( array $attributes, string $content = '', ?WP_Block $block = null ): string {
-	unset( $content );
-	$post_id = lmhg_site_core_relationship_block_post_id( $block );
-	$heading = sanitize_text_field( (string) ( $attributes['heading'] ?? 'Related Pages' ) );
-	$rendered = $post_id > 0 ? lmhg_site_core_render_taxonomy_related_pages( $post_id, $heading ) : '';
-	return '' !== $rendered ? $rendered : lmhg_site_core_relationship_block_empty_preview( $post_id, 'No related pages are assigned to this page.' );
 }
 
 /** Renders FAQs from the current page's assigned FAQ Set taxonomy. */
@@ -169,7 +154,7 @@ function lmhg_site_core_replace_relationship_shortcodes( string $content ): stri
 	return $content;
 }
 
-/** Migrates page content and revisions, then disables the legacy shortcodes. */
+/** Migrates page content and revisions, then disables the migrated FAQ shortcode. */
 function lmhg_site_core_run_relationship_block_migration(): void {
 	global $wpdb;
 	$installed = (string) get_option( LMHG_SITE_CORE_RELATIONSHIP_BLOCK_MIGRATION_OPTION, '' );
@@ -205,6 +190,269 @@ function lmhg_site_core_run_relationship_block_migration(): void {
 		remove_shortcode( 'lmhg_related_pages' );
 		remove_shortcode( 'lmhg_faqs' );
 	}
+}
+
+/**
+ * Removes retired Related Pages presentation from Pages and revisions.
+ *
+ * Taxonomy assignments and relationship metadata remain intact for backend
+ * classification, service icons, breadcrumbs, and editorial article curation.
+ */
+function lmhg_site_core_run_related_page_presentation_migration(): void {
+	if ( LMHG_SITE_CORE_RELATED_PAGE_PRESENTATION_MIGRATION_VERSION === (string) get_option( LMHG_SITE_CORE_RELATED_PAGE_PRESENTATION_MIGRATION_OPTION, '' ) ) {
+		return;
+	}
+
+	global $wpdb;
+	$post_types  = array( 'page', 'revision' );
+	$placeholders = implode( ', ', array_fill( 0, count( $post_types ), '%s' ) );
+	$query        = "SELECT ID, post_content FROM {$wpdb->posts} WHERE post_type IN ({$placeholders}) AND (post_content LIKE %s OR post_content LIKE %s)";
+	$parameters   = array_merge(
+		$post_types,
+		array(
+			'%' . $wpdb->esc_like( 'wp:lmhg/related-pages' ) . '%',
+			'%' . $wpdb->esc_like( 'lmhg_related_pages' ) . '%',
+		)
+	);
+	$rows         = $wpdb->get_results( $wpdb->prepare( $query, ...$parameters ) );
+	if ( ! is_array( $rows ) ) {
+		return;
+	}
+
+	$changed  = 0;
+	$complete = true;
+	foreach ( $rows as $row ) {
+		$content = lmhg_site_core_remove_related_page_presentation( (string) $row->post_content );
+		if ( $content === (string) $row->post_content ) {
+			continue;
+		}
+
+		$written = $wpdb->update(
+			$wpdb->posts,
+			array( 'post_content' => $content ),
+			array( 'ID' => (int) $row->ID ),
+			array( '%s' ),
+			array( '%d' )
+		);
+		if ( false === $written ) {
+			$complete = false;
+			continue;
+		}
+
+		++$changed;
+		clean_post_cache( (int) $row->ID );
+	}
+
+	update_option(
+		'lmhg_related_page_presentation_migration_report',
+		array(
+			'rows'    => count( $rows ),
+			'changed' => $changed,
+		),
+		false
+	);
+	if ( $complete ) {
+		update_option(
+			LMHG_SITE_CORE_RELATED_PAGE_PRESENTATION_MIGRATION_OPTION,
+			LMHG_SITE_CORE_RELATED_PAGE_PRESENTATION_MIGRATION_VERSION,
+			false
+		);
+	}
+}
+
+/**
+ * Removes only native or legacy Related Pages presentation markup.
+ *
+ * @param string $content Gutenberg post content.
+ */
+function lmhg_site_core_remove_related_page_presentation( string $content ): string {
+	$patterns = array(
+		'/<!--\s+wp:lmhg\/related-pages(?:\s+\{.*?\})?\s+\/-->/s',
+		'/<!--\s+wp:lmhg\/related-pages(?:\s+\{.*?\})?\s+-->.*?<!--\s+\/wp:lmhg\/related-pages\s+-->/s',
+		'/<!--\s+wp:shortcode\s+-->\s*\[lmhg_related_pages[^\]]*\]\s*<!--\s+\/wp:shortcode\s+-->/s',
+		'/\[lmhg_related_pages[^\]]*\]/',
+	);
+
+	$cleaned = preg_replace( $patterns, '', $content );
+	return is_string( $cleaned ) ? $cleaned : $content;
+}
+
+/**
+ * Adds the approved contextual links to the five canonical article Pages.
+ *
+ * Only exact, unique plain-text phrases are upgraded. If an editor has changed
+ * a source phrase or introduced a duplicate, the Page is left untouched and a
+ * conflict is recorded for review.
+ */
+function lmhg_site_core_run_article_contextual_link_migration(): void {
+	if ( LMHG_SITE_CORE_ARTICLE_CONTEXTUAL_LINK_MIGRATION_VERSION === (string) get_option( LMHG_SITE_CORE_ARTICLE_CONTEXTUAL_LINK_MIGRATION_OPTION, '' ) ) {
+		return;
+	}
+
+	$catalog = lmhg_site_core_article_contextual_link_migration_catalog();
+	$report  = array(
+		'version'          => LMHG_SITE_CORE_ARTICLE_CONTEXTUAL_LINK_MIGRATION_VERSION,
+		'completed_at'     => '',
+		'pages_expected'   => count( $catalog ),
+		'pages_updated'    => 0,
+		'pages_current'    => 0,
+		'pages_conflicted' => 0,
+		'conflicts'        => array(),
+		'failures'         => array(),
+	);
+
+	foreach ( $catalog as $path => $replacements ) {
+		$page = get_page_by_path( trim( $path, '/' ), OBJECT, 'page' );
+		if ( ! $page instanceof WP_Post || 'publish' !== $page->post_status ) {
+			$report['failures'][] = array(
+				'path'   => $path,
+				'reason' => 'published_page_not_found',
+			);
+			continue;
+		}
+
+		$result = lmhg_site_core_apply_article_contextual_links( (string) $page->post_content, $replacements );
+		if ( ! $result['valid'] ) {
+			++$report['pages_conflicted'];
+			$report['conflicts'][] = array(
+				'path'        => $path,
+				'post_id'     => (int) $page->ID,
+				'replacement' => (int) $result['replacement'],
+				'reason'      => (string) $result['reason'],
+			);
+			continue;
+		}
+
+		if ( ! $result['changed'] ) {
+			++$report['pages_current'];
+			continue;
+		}
+
+		$updated = wp_update_post(
+			wp_slash(
+				array(
+					'ID'           => (int) $page->ID,
+					'post_content' => (string) $result['content'],
+				)
+			),
+			true
+		);
+		if ( is_wp_error( $updated ) || (int) $updated !== (int) $page->ID ) {
+			$report['failures'][] = array(
+				'path'   => $path,
+				'reason' => is_wp_error( $updated ) ? $updated->get_error_code() : 'page_update_failed',
+			);
+			continue;
+		}
+
+		++$report['pages_updated'];
+	}
+
+	if (
+		empty( $report['conflicts'] )
+		&& empty( $report['failures'] )
+		&& $report['pages_expected'] === $report['pages_updated'] + $report['pages_current']
+	) {
+		$report['completed_at'] = gmdate( 'c' );
+		update_option(
+			LMHG_SITE_CORE_ARTICLE_CONTEXTUAL_LINK_MIGRATION_OPTION,
+			LMHG_SITE_CORE_ARTICLE_CONTEXTUAL_LINK_MIGRATION_VERSION,
+			false
+		);
+	}
+
+	update_option( LMHG_SITE_CORE_ARTICLE_CONTEXTUAL_LINK_MIGRATION_REPORT, $report, false );
+}
+
+/**
+ * Applies exact, unique phrase-to-anchor replacements without partial writes.
+ *
+ * @param string                                          $content      Existing Page content.
+ * @param array<int,array{before:string,after:string}>     $replacements Approved replacements.
+ * @return array{valid:bool,changed:bool,content:string,replacement:int,reason:string}
+ */
+function lmhg_site_core_apply_article_contextual_links( string $content, array $replacements ): array {
+	$candidate = $content;
+	$changed   = false;
+
+	foreach ( $replacements as $index => $replacement ) {
+		$before       = (string) ( $replacement['before'] ?? '' );
+		$after        = (string) ( $replacement['after'] ?? '' );
+		$before_count = '' !== $before ? substr_count( $candidate, $before ) : 0;
+		$after_count  = '' !== $after ? substr_count( $candidate, $after ) : 0;
+
+		if ( 0 === $before_count && 1 === $after_count ) {
+			continue;
+		}
+		if ( 1 !== $before_count || 0 !== $after_count ) {
+			return array(
+				'valid'       => false,
+				'changed'     => false,
+				'content'     => $content,
+				'replacement' => (int) $index,
+				'reason'      => 0 !== $after_count ? 'target_count_unexpected' : 'source_count_unexpected',
+			);
+		}
+
+		$candidate = str_replace( $before, $after, $candidate );
+		$changed   = true;
+	}
+
+	return array(
+		'valid'       => true,
+		'changed'     => $changed,
+		'content'     => $candidate,
+		'replacement' => -1,
+		'reason'      => '',
+	);
+}
+
+/**
+ * Returns the five canonical article Page phrases approved for contextual links.
+ *
+ * @return array<string,array<int,array{before:string,after:string}>>
+ */
+function lmhg_site_core_article_contextual_link_migration_catalog(): array {
+	return array(
+		'/family-therapy-vs-individual-therapy/' => array(
+			array(
+				'before' => 'They answer different questions. Individual counseling focuses',
+				'after'  => 'They answer different questions. <a href="/individual-therapy/">Individual counseling</a> focuses',
+			),
+			array(
+				'before' => 'and goals. Family therapy focuses on the patterns between people',
+				'after'  => 'and goals. <a href="/family-therapy/">Family therapy</a> focuses on the patterns between people',
+			),
+		),
+		'/guide-to-individual-therapy/' => array(
+			array(
+				'before' => 'start by reviewing the individual counseling page or contacting the office',
+				'after'  => 'start by reviewing the <a href="/individual-therapy/">individual counseling</a> page or contacting the office',
+			),
+		),
+		'/how-to-talk-to-your-loved-ones-about-going-to-therapy/' => array(
+			array(
+				'before' => 'can help compare individual counseling, family therapy, couples counseling, and other support options',
+				'after'  => 'can help compare <a href="/individual-therapy/">individual counseling</a>, <a href="/family-therapy/">family therapy</a>, <a href="/couples-counseling/">couples counseling</a>, and other support options',
+			),
+		),
+		'/top-5-signs-its-time-to-seek-therapy/' => array(
+			array(
+				'before' => 'If several signs feel familiar, reaching out can help clarify the right service instead of guessing alone.',
+				'after'  => 'If several signs feel familiar, <a href="/contact-us/">reaching out</a> can help clarify the <a href="/our-services/">right service</a> instead of guessing alone.',
+			),
+		),
+		'/what-to-expect-when-starting-therapy/' => array(
+			array(
+				'before' => 'even if they are not sure which service, clinician, or care setting is the best fit.',
+				'after'  => 'even if they are not sure which <a href="/our-services/">service</a>, clinician, or care setting is the best fit.',
+			),
+			array(
+				'before' => 'whether care should happen at the Louisville office, by telehealth, or in another appropriate setting.',
+				'after'  => 'whether care should happen at the <a href="/locations/in-person/">Louisville office</a>, by <a href="/locations/online/">telehealth</a>, or in another appropriate setting.',
+			),
+		),
+	);
 }
 
 /**
@@ -753,7 +1001,8 @@ function lmhg_site_core_ensure_specialty_faq_post( array $faq, int $term_id ): i
  * Registers relationship meta for REST/editor compatibility.
  */
 function lmhg_site_core_register_relationship_meta(): void {
-	$auth_callback = 'lmhg_site_core_relationship_meta_auth_callback';
+	$auth_callback         = 'lmhg_site_core_relationship_meta_auth_callback';
+	$article_auth_callback = 'lmhg_site_core_article_meta_auth_callback';
 
 	register_term_meta(
 		LMHG_SITE_CORE_SPECIALTY_TAXONOMY,
@@ -779,36 +1028,38 @@ function lmhg_site_core_register_relationship_meta(): void {
 		)
 	);
 
-	register_post_meta(
-		'post',
-		LMHG_SITE_CORE_RELATED_PAGES_META,
-		array(
-			'type'              => 'array',
-			'single'            => true,
-			'show_in_rest'      => array(
-				'schema' => array(
-					'type'  => 'array',
-					'items' => array(
-						'type' => 'integer',
+	foreach ( array( 'post', 'page' ) as $article_post_type ) {
+		register_post_meta(
+			$article_post_type,
+			LMHG_SITE_CORE_RELATED_PAGES_META,
+			array(
+				'type'              => 'array',
+				'single'            => true,
+				'show_in_rest'      => array(
+					'schema' => array(
+						'type'  => 'array',
+						'items' => array(
+							'type' => 'integer',
+						),
 					),
 				),
-			),
-			'sanitize_callback' => 'lmhg_site_core_sanitize_page_id_array',
-			'auth_callback'     => $auth_callback,
-		)
-	);
+				'sanitize_callback' => 'lmhg_site_core_sanitize_page_id_array',
+				'auth_callback'     => $article_auth_callback,
+			)
+		);
 
-	register_post_meta(
-		'post',
-		LMHG_SITE_CORE_ARTICLE_CARD_DESCRIPTION_META,
-		array(
-			'type'              => 'string',
-			'single'            => true,
-			'show_in_rest'      => true,
-			'sanitize_callback' => 'sanitize_textarea_field',
-			'auth_callback'     => $auth_callback,
-		)
-	);
+		register_post_meta(
+			$article_post_type,
+			LMHG_SITE_CORE_ARTICLE_CARD_DESCRIPTION_META,
+			array(
+				'type'              => 'string',
+				'single'            => true,
+				'show_in_rest'      => true,
+				'sanitize_callback' => 'sanitize_textarea_field',
+				'auth_callback'     => $article_auth_callback,
+			)
+		);
+	}
 
 	foreach ( lmhg_site_core_team_meta_definitions() as $meta_key => $definition ) {
 		register_post_meta(
@@ -853,6 +1104,36 @@ function lmhg_site_core_relationship_meta_auth_callback( mixed $allowed = false,
 }
 
 /**
+ * Determines whether a post is an LMHG article.
+ *
+ * Posts remain supported for backwards compatibility. Canonical site articles
+ * are Pages assigned the article-page template.
+ *
+ * @param WP_Post|int|null $post Post object or ID.
+ */
+function lmhg_site_core_is_article( WP_Post|int|null $post ): bool {
+	$post = get_post( $post );
+	if ( ! $post instanceof WP_Post ) {
+		return false;
+	}
+
+	return 'post' === $post->post_type
+		|| ( 'page' === $post->post_type && 'article-page' === get_page_template_slug( $post ) );
+}
+
+/**
+ * Authorizes article metadata only for Posts and canonical article Pages.
+ *
+ * @param mixed  $allowed Existing permission value.
+ * @param string $meta_key Meta key.
+ * @param int    $object_id Post ID.
+ */
+function lmhg_site_core_article_meta_auth_callback( mixed $allowed = false, string $meta_key = '', int $object_id = 0 ): bool {
+	unset( $allowed, $meta_key );
+	return $object_id > 0 && lmhg_site_core_is_article( $object_id ) && current_user_can( 'edit_post', $object_id );
+}
+
+/**
  * Authorizes relationship term meta edits.
  *
  * @param mixed  $allowed Existing permission value.
@@ -868,33 +1149,37 @@ function lmhg_site_core_relationship_term_meta_auth_callback( mixed $allowed = f
 /**
  * Adds admin metaboxes for relationships and team member fields.
  */
-function lmhg_site_core_add_relationship_meta_boxes(): void {
-	add_meta_box(
-		'lmhg-related-pages',
-		'Related LMHG Pages',
-		'lmhg_site_core_render_article_pages_meta_box',
-		'post',
-		'side',
-		'default'
-	);
+function lmhg_site_core_add_relationship_meta_boxes( string $post_type, WP_Post $post ): void {
+	if ( lmhg_site_core_is_article( $post ) ) {
+		add_meta_box(
+			'lmhg-related-pages',
+			'Helpful Articles Placement',
+			'lmhg_site_core_render_article_pages_meta_box',
+			$post_type,
+			'side',
+			'default'
+		);
 
-	add_meta_box(
-		'lmhg-article-card-description',
-		'LMHG Article Card Description',
-		'lmhg_site_core_render_article_card_description_meta_box',
-		'post',
-		'normal',
-		'default'
-	);
+		add_meta_box(
+			'lmhg-article-card-description',
+			'LMHG Article Card Description',
+			'lmhg_site_core_render_article_card_description_meta_box',
+			$post_type,
+			'normal',
+			'default'
+		);
+	}
 
-	add_meta_box(
-		'lmhg-team-member-details',
-		'Team Member Details',
-		'lmhg_site_core_render_team_member_meta_box',
-		LMHG_SITE_CORE_TEAM_POST_TYPE,
-		'normal',
-		'high'
-	);
+	if ( LMHG_SITE_CORE_TEAM_POST_TYPE === $post_type ) {
+		add_meta_box(
+			'lmhg-team-member-details',
+			'Team Member Details',
+			'lmhg_site_core_render_team_member_meta_box',
+			LMHG_SITE_CORE_TEAM_POST_TYPE,
+			'normal',
+			'high'
+		);
+	}
 }
 
 /**
@@ -908,7 +1193,7 @@ function lmhg_site_core_render_article_pages_meta_box( WP_Post $post ): void {
 	$selected_ids = lmhg_site_core_related_page_ids( $post->ID );
 	$pages        = lmhg_site_core_page_choices();
 	?>
-	<label class="screen-reader-text" for="lmhg-related-page-ids">Related LMHG pages</label>
+	<label class="screen-reader-text" for="lmhg-related-page-ids">Show this article on LMHG pages</label>
 	<select id="lmhg-related-page-ids" name="lmhg_related_page_ids[]" multiple="multiple" size="12" style="width:100%;">
 		<?php foreach ( $pages as $page ) : ?>
 			<option value="<?php echo esc_attr( (string) $page->ID ); ?>" <?php selected( in_array( $page->ID, $selected_ids, true ) ); ?>>
@@ -916,7 +1201,16 @@ function lmhg_site_core_render_article_pages_meta_box( WP_Post $post ): void {
 			</option>
 		<?php endforeach; ?>
 	</select>
-	<p class="description">Select one or more service or specialty pages. Use <code>[lmhg_article_pages]</code> in article content to display them.</p>
+	<p class="description">Select the service or specialty pages where this article should appear. No more than three cards show on each selected page.</p>
+	<?php if ( 'post' === $post->post_type ) : ?>
+		<p>
+			<label for="lmhg-article-order"><strong>Helpful Articles order</strong></label><br />
+			<input id="lmhg-article-order" name="lmhg_article_order" type="number" step="1" class="small-text" value="<?php echo esc_attr( (string) $post->menu_order ); ?>" />
+		</p>
+		<p class="description">Lower numbers appear first; title breaks ties.</p>
+	<?php else : ?>
+		<p class="description">Use the Page Attributes Order to set card priority; title breaks ties.</p>
+	<?php endif; ?>
 	<?php
 }
 
@@ -932,7 +1226,7 @@ function lmhg_site_core_render_article_card_description_meta_box( WP_Post $post 
 	?>
 	<label class="screen-reader-text" for="lmhg-article-card-description">Helpful Articles card description</label>
 	<textarea id="lmhg-article-card-description" name="lmhg_article_card_description" rows="4" style="width:100%;"><?php echo esc_textarea( $description ); ?></textarea>
-	<p class="description">Controls the short description shown for this post inside service-page Helpful Articles cards. If empty, the card falls back to the excerpt or first content paragraph.</p>
+	<p class="description">Controls the short description shown for this article inside Helpful Articles cards. If empty, the card falls back to the excerpt or first content paragraph.</p>
 	<?php
 }
 
@@ -945,10 +1239,10 @@ function lmhg_site_core_add_specialty_card_description_field( string $taxonomy )
 	unset( $taxonomy );
 	?>
 	<div class="form-field term-lmhg-card-description-wrap">
-		<label for="lmhg-specialty-card-description">Related Card Description</label>
+		<label for="lmhg-specialty-card-description">Service Card Description</label>
 		<?php wp_nonce_field( 'lmhg_site_core_save_specialty_card_description', 'lmhg_specialty_card_description_nonce' ); ?>
 		<textarea id="lmhg-specialty-card-description" name="lmhg_specialty_card_description" rows="5" cols="40"></textarea>
-		<p>Controls the short description shown below this page when it appears in Related Pages cards. If empty, the term description or linked page summary is used.</p>
+		<p>Controls the short description shown when this page appears in a taxonomy-driven service or specialty card. If empty, the term description or linked page summary is used.</p>
 	</div>
 	<?php
 }
@@ -962,11 +1256,11 @@ function lmhg_site_core_edit_specialty_card_description_field( WP_Term $term ): 
 	$description = lmhg_site_core_specialty_card_description_meta( $term );
 	?>
 	<tr class="form-field term-lmhg-card-description-wrap">
-		<th scope="row"><label for="lmhg-specialty-card-description">Related Card Description</label></th>
+		<th scope="row"><label for="lmhg-specialty-card-description">Service Card Description</label></th>
 		<td>
 			<?php wp_nonce_field( 'lmhg_site_core_save_specialty_card_description', 'lmhg_specialty_card_description_nonce' ); ?>
 			<textarea id="lmhg-specialty-card-description" name="lmhg_specialty_card_description" rows="5" cols="50" class="large-text"><?php echo esc_textarea( $description ); ?></textarea>
-			<p class="description">Controls the short description shown below this page when it appears in Related Pages cards. If empty, the term description or linked page summary is used.</p>
+			<p class="description">Controls the short description shown when this page appears in a taxonomy-driven service or specialty card. If empty, the term description or linked page summary is used.</p>
 		</td>
 	</tr>
 	<?php
@@ -1137,8 +1431,9 @@ function lmhg_site_core_render_team_member_meta_box( WP_Post $post ): void {
  * @param WP_Post $post Article post.
  */
 function lmhg_site_core_save_article_relationship_meta( int $post_id, WP_Post $post ): void {
-	unset( $post );
-	if ( lmhg_site_core_should_skip_relationship_save( $post_id ) ) {
+	static $saving_order = false;
+
+	if ( $saving_order || ! lmhg_site_core_is_article( $post ) || lmhg_site_core_should_skip_relationship_save( $post_id ) ) {
 		return;
 	}
 
@@ -1155,10 +1450,23 @@ function lmhg_site_core_save_article_relationship_meta( int $post_id, WP_Post $p
 
 	if ( empty( $page_ids ) ) {
 		delete_post_meta( $post_id, LMHG_SITE_CORE_RELATED_PAGES_META );
-		return;
+	} else {
+		update_post_meta( $post_id, LMHG_SITE_CORE_RELATED_PAGES_META, $page_ids );
 	}
 
-	update_post_meta( $post_id, LMHG_SITE_CORE_RELATED_PAGES_META, $page_ids );
+	if ( 'post' === $post->post_type && isset( $_POST['lmhg_article_order'] ) ) {
+		$order = (int) wp_unslash( $_POST['lmhg_article_order'] );
+		if ( (int) $post->menu_order !== $order ) {
+			$saving_order = true;
+			wp_update_post(
+				array(
+					'ID'         => $post_id,
+					'menu_order' => $order,
+				)
+			);
+			$saving_order = false;
+		}
+	}
 }
 
 /**
@@ -1168,8 +1476,7 @@ function lmhg_site_core_save_article_relationship_meta( int $post_id, WP_Post $p
  * @param WP_Post $post Article post.
  */
 function lmhg_site_core_save_article_card_description_meta( int $post_id, WP_Post $post ): void {
-	unset( $post );
-	if ( lmhg_site_core_should_skip_relationship_save( $post_id ) ) {
+	if ( ! lmhg_site_core_is_article( $post ) || lmhg_site_core_should_skip_relationship_save( $post_id ) ) {
 		return;
 	}
 
@@ -1279,12 +1586,26 @@ function lmhg_site_core_sanitize_page_id_array( mixed $value ): array {
 	$page_ids = array();
 	foreach ( $value as $page_id ) {
 		$page_id = absint( $page_id );
-		if ( $page_id > 0 && 'page' === get_post_type( $page_id ) ) {
+		if ( lmhg_site_core_is_relationship_target_page( $page_id ) ) {
 			$page_ids[] = $page_id;
 		}
 	}
 
 	return array_values( array_unique( $page_ids ) );
+}
+
+/**
+ * Determines whether a Page can receive manually related articles.
+ *
+ * @param WP_Post|int|null $post Page object or ID.
+ */
+function lmhg_site_core_is_relationship_target_page( WP_Post|int|null $post ): bool {
+	$post = get_post( $post );
+	if ( ! $post instanceof WP_Post || 'page' !== $post->post_type ) {
+		return false;
+	}
+
+	return in_array( get_page_template_slug( $post ), array( 'service-page', 'specialty-page' ), true );
 }
 
 /**
@@ -1303,7 +1624,7 @@ function lmhg_site_core_related_page_ids( int $post_id ): array {
  * @return WP_Post[]
  */
 function lmhg_site_core_page_choices(): array {
-	return get_posts(
+	$pages = get_posts(
 		array(
 			'post_type'              => 'page',
 			'post_status'            => array( 'publish', 'draft', 'pending', 'private' ),
@@ -1313,11 +1634,20 @@ function lmhg_site_core_page_choices(): array {
 				'title'      => 'ASC',
 			),
 			'order'                  => 'ASC',
+			'meta_query'             => array(
+				array(
+					'key'     => '_wp_page_template',
+					'value'   => array( 'service-page', 'specialty-page' ),
+					'compare' => 'IN',
+				),
+			),
 			'no_found_rows'          => true,
-			'update_post_meta_cache' => false,
+			'update_post_meta_cache' => true,
 			'update_post_term_cache' => false,
 		)
 	);
+
+	return array_values( array_filter( $pages, 'lmhg_site_core_is_relationship_target_page' ) );
 }
 
 /**
@@ -1387,7 +1717,8 @@ function lmhg_site_core_request_needs_relationship_assets(): bool {
 	if ( 'page' === $post->post_type ) {
 		$template = get_page_template_slug( $post );
 
-		return has_term( '', LMHG_SITE_CORE_SPECIALTY_TAXONOMY, $post )
+		return in_array( $template, array( 'service-page', 'specialty-page' ), true )
+			|| has_term( '', LMHG_SITE_CORE_SPECIALTY_TAXONOMY, $post )
 			|| has_term( '', LMHG_SITE_CORE_FAQ_SET_TAXONOMY, $post )
 			|| 'faq-hub' === $template
 			|| 'team-page' === $template
@@ -1424,19 +1755,16 @@ function lmhg_site_core_append_relationship_sections( string $content ): string 
 	}
 
 	$sections = array();
-	$has_service_specialties = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-service-specialties' );
-	$has_related_pages       = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-related-pages' );
-	$has_faqs                = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-faqs' );
-	$has_faq_index           = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-faq-index' );
-	$has_team                = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-team-directory' );
-	$has_article_pages       = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-article-pages' );
-	$has_related_articles    = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-related-articles' );
+	$has_faqs             = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-faqs' );
+	$has_faq_index        = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-faq-index' );
+	$has_team             = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-team-directory' );
+	$has_related_articles = lmhg_site_core_content_has_rendered_section( $content, 'lmhg-related-articles' );
 
 	if ( 'page' === $post->post_type ) {
 		$template = get_page_template_slug( $post );
 
-		if ( 'location-access-page' !== $template && ! $has_service_specialties && ! $has_related_pages && has_term( '', LMHG_SITE_CORE_SPECIALTY_TAXONOMY, $post ) ) {
-			$sections[] = lmhg_site_core_render_taxonomy_related_pages( $post->ID );
+		if ( in_array( $template, array( 'service-page', 'specialty-page' ), true ) && ! $has_related_articles ) {
+			$sections[] = lmhg_site_core_render_related_articles( $post->ID, 'Helpful Articles', 3 );
 		}
 
 		if ( ! $has_faqs && ! $has_faq_index && has_term( '', LMHG_SITE_CORE_FAQ_SET_TAXONOMY, $post ) ) {
@@ -1454,10 +1782,6 @@ function lmhg_site_core_append_relationship_sections( string $content ): string 
 		if ( ! $has_team && ( 'team-page' === $template || in_array( $post->post_name, lmhg_site_core_team_page_slugs(), true ) ) ) {
 			$sections[] = lmhg_site_core_render_team_members();
 		}
-	}
-
-	if ( 'post' === $post->post_type && ! $has_article_pages && ! $has_related_pages && ! $has_related_articles ) {
-		$sections[] = lmhg_site_core_render_article_pages( $post->ID );
 	}
 
 	$sections = array_filter( $sections );
@@ -2372,6 +2696,64 @@ function lmhg_site_core_render_article_pages( int $post_id, string $heading = 'R
 }
 
 /**
+ * Queries manually related published articles for a page.
+ *
+ * The unbounded database query prevents an ordinary Page with stale
+ * relationship metadata from consuming one of the requested article slots.
+ * Results are filtered through the shared article predicate before limiting.
+ *
+ * @param int $page_id Related page ID.
+ * @param int $limit Maximum articles to return.
+ * @return WP_Post[]
+ */
+function lmhg_site_core_query_related_articles( int $page_id, int $limit = 3 ): array {
+	if ( ! lmhg_site_core_is_relationship_target_page( $page_id ) ) {
+		return array();
+	}
+
+	$query = new WP_Query(
+		array(
+			'post_type'              => array( 'post', 'page' ),
+			'post_status'            => 'publish',
+			'posts_per_page'         => -1,
+			'orderby'                => array(
+				'menu_order' => 'ASC',
+				'title'      => 'ASC',
+			),
+			'order'                  => 'ASC',
+			'meta_query'             => array(
+				array(
+					'key'     => LMHG_SITE_CORE_RELATED_PAGES_META,
+					'value'   => 'i:' . $page_id . ';',
+					'compare' => 'LIKE',
+				),
+			),
+			'no_found_rows'          => true,
+			'update_post_meta_cache' => true,
+			'update_post_term_cache' => false,
+		)
+	);
+
+	$articles = array_values( array_filter( $query->posts, 'lmhg_site_core_is_article' ) );
+	return array_slice( $articles, 0, min( 12, max( 1, $limit ) ) );
+}
+
+/**
+ * Renders manually related articles for a page.
+ *
+ * @param int    $page_id Related page ID.
+ * @param string $heading Section heading.
+ * @param int    $limit Maximum articles to render.
+ */
+function lmhg_site_core_render_related_articles( int $page_id, string $heading = 'Helpful Articles', int $limit = 3 ): string {
+	return lmhg_site_core_render_post_cards(
+		lmhg_site_core_query_related_articles( $page_id, $limit ),
+		$heading,
+		'lmhg-related-articles'
+	);
+}
+
+/**
  * Renders posts related to the current page.
  *
  * @param array<string,mixed>|string $atts Shortcode attributes.
@@ -2394,27 +2776,11 @@ function lmhg_site_core_related_articles_shortcode( array|string $atts = array()
 		return '';
 	}
 
-	$query = new WP_Query(
-		array(
-			'post_type'              => 'post',
-			'post_status'            => 'publish',
-			'posts_per_page'         => min( 12, max( 1, absint( $atts['count'] ) ) ),
-			'orderby'                => 'date',
-			'order'                  => 'DESC',
-			'meta_query'             => array(
-				array(
-					'key'     => LMHG_SITE_CORE_RELATED_PAGES_META,
-					'value'   => 'i:' . $page_id . ';',
-					'compare' => 'LIKE',
-				),
-			),
-			'no_found_rows'          => true,
-			'update_post_meta_cache' => false,
-			'update_post_term_cache' => false,
-		)
+	return lmhg_site_core_render_related_articles(
+		$page_id,
+		(string) $atts['heading'],
+		min( 12, max( 1, absint( $atts['count'] ) ) )
 	);
-
-	return lmhg_site_core_render_post_cards( $query->posts, (string) $atts['heading'], 'lmhg-related-articles' );
 }
 
 /**
@@ -2599,7 +2965,10 @@ function lmhg_site_core_render_post_cards( array $posts, string $heading, string
  */
 function lmhg_site_core_post_card_excerpt( WP_Post $post ): string {
 	$description = trim( (string) get_post_meta( $post->ID, LMHG_SITE_CORE_ARTICLE_CARD_DESCRIPTION_META, true ) );
-	if ( '' === $description && 'page' !== $post->post_type ) {
+	if ( '' === $description ) {
+		$description = trim( (string) get_post_meta( $post->ID, '_lmhg_meta_description', true ) );
+	}
+	if ( '' === $description && lmhg_site_core_is_article( $post ) ) {
 		$description = trim( wp_strip_all_tags( get_the_excerpt( $post ) ) );
 	}
 	if ( '' === $description ) {

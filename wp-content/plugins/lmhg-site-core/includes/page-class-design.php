@@ -52,7 +52,7 @@ function lmhg_site_core_render_page_class_design_sections( string $content ): st
 		'faq-hub'              => lmhg_site_core_render_faq_hub_design(),
 		'faq-page'             => lmhg_site_core_render_faq_page_design( $path ),
 		'article-hub'          => lmhg_site_core_render_article_hub_design(),
-		'article-page'         => lmhg_site_core_render_article_page_design( $path ),
+		'article-page'         => '',
 		'location-access-page' => '',
 		'team-page'           => '',
 		'contact-page'        => lmhg_site_core_render_contact_page_design( $path ),
@@ -580,21 +580,6 @@ function lmhg_site_core_render_article_hub_design(): string {
 }
 
 /**
- * Renders article detail enhancements.
- *
- * @param string $path Current path.
- * @return string
- */
-function lmhg_site_core_render_article_page_design( string $path ): string {
-	$links = lmhg_site_core_article_related_links( $path );
-
-	return sprintf(
-		'<section class="lmhg-page-class-guide lmhg-page-class-guide--article-page" aria-labelledby="lmhg-article-related-title"><p class="lmhg-page-class-eyebrow">Related care pages</p><h2 id="lmhg-article-related-title">Use this article as context, then compare care options.</h2>%s<p class="lmhg-page-class-note">Articles are educational support content and do not replace clinical care or emergency support.</p></section>',
-		lmhg_site_core_render_link_list( $links, 'lmhg-page-class-link-list lmhg-page-class-link-list--chips' )
-	);
-}
-
-/**
  * Renders location and access enhancements.
  *
  * @param string $path Current path.
@@ -807,38 +792,6 @@ function lmhg_site_core_find_specialty_parents( string $path ): array {
 	}
 
 	return $parents;
-}
-
-/**
- * Returns article-to-service links for current known article pages.
- *
- * @param string $path Current path.
- * @return array<int,array<string,string>>
- */
-function lmhg_site_core_article_related_links( string $path ): array {
-	return match ( $path ) {
-		'/family-therapy-vs-individual-therapy/' => array(
-			array( 'title' => 'Family Therapy', 'url' => '/family-therapy/' ),
-			array( 'title' => 'Individual Counseling', 'url' => '/individual-therapy/' ),
-		),
-		'/guide-to-individual-therapy/' => array(
-			array( 'title' => 'Individual Counseling', 'url' => '/individual-therapy/' ),
-			array( 'title' => 'Adult Counseling', 'url' => '/adult-counseling/' ),
-		),
-		'/how-to-talk-to-your-loved-ones-about-going-to-therapy/' => array(
-			array( 'title' => 'Services', 'url' => '/our-services/' ),
-			array( 'title' => 'Family Therapy', 'url' => '/family-therapy/' ),
-		),
-		'/top-5-signs-its-time-to-seek-therapy/' => array(
-			array( 'title' => 'Services', 'url' => '/our-services/' ),
-			array( 'title' => 'Contact', 'url' => '/contact-us/' ),
-		),
-		default => array(
-			array( 'title' => 'Services', 'url' => '/our-services/' ),
-			array( 'title' => 'FAQ', 'url' => '/faq/' ),
-			array( 'title' => 'Contact', 'url' => '/contact-us/' ),
-		),
-	};
 }
 
 /**

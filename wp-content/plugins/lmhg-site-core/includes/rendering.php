@@ -40,7 +40,6 @@ function lmhg_site_core_render_imported_content( string $content ): string {
 		lmhg_site_core_render_summary_section( $post_id, $source_url ),
 		lmhg_site_core_render_source_copy_section( $route, $source_url ),
 		lmhg_site_core_render_breadcrumb_section( $post_id, $route, $source_url ),
-		lmhg_site_core_render_related_section( $route, $source_url ),
 		lmhg_site_core_render_faq_section( $route, $source_url ),
 		lmhg_site_core_render_faq_readiness( $route, $source_url ),
 	);
