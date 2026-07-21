@@ -7,9 +7,9 @@ services:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
     env_file:
-      - mariadb.env
+      - ${LMHG_MARIADB_RUNTIME_ROOT:-/srv/codex/services/lmhg-blockwp-wordpress-mariadb}/secrets/mariadb.env
     volumes:
-      - ./mariadb:/var/lib/mysql
+      - ${LMHG_MARIADB_RUNTIME_ROOT:-/srv/codex/services/lmhg-blockwp-wordpress-mariadb}/mariadb:/var/lib/mysql
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       interval: 5s
@@ -18,16 +18,16 @@ services:
     restart: unless-stopped
 
   wordpress:
-    image: wordpress:7.0.1-php8.3-apache
+    image: wordpress:7.0.2-php8.3-apache
     depends_on:
       db:
         condition: service_healthy
     env_file:
-      - wordpress.env
+      - ${LMHG_MARIADB_RUNTIME_ROOT:-/srv/codex/services/lmhg-blockwp-wordpress-mariadb}/secrets/wordpress.env
     volumes:
-      - ./wordpress:/var/www/html
+      - ${LMHG_MARIADB_RUNTIME_ROOT:-/srv/codex/services/lmhg-blockwp-wordpress-mariadb}/wordpress:/var/www/html
     ports:
-      - "100.70.222.25:8093:80"
+      - "${LMHG_WORDPRESS_BIND:-100.116.130.39:8094}:80"
     healthcheck:
       test: ["CMD-SHELL", "php -r '$$s=@fsockopen(\"127.0.0.1\",80,$$e,$$m,2); exit($$s?0:1);'"]
       interval: 10s
@@ -41,10 +41,10 @@ services:
       db:
         condition: service_healthy
     env_file:
-      - wordpress.env
+      - ${LMHG_MARIADB_RUNTIME_ROOT:-/srv/codex/services/lmhg-blockwp-wordpress-mariadb}/secrets/wordpress.env
     user: "33:33"
     volumes:
-      - ./wordpress:/var/www/html
+      - ${LMHG_MARIADB_RUNTIME_ROOT:-/srv/codex/services/lmhg-blockwp-wordpress-mariadb}/wordpress:/var/www/html
     working_dir: /var/www/html
     entrypoint: ["wp"]
     profiles: ["tools"]

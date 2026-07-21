@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-root="${1:-/srv/storage/services/wordpress-2026-mariadb}"
+root="${1:-/srv/codex/services/lmhg-blockwp-wordpress-mariadb}"
 stamp="$(date -u +%Y%m%dT%H%M%SZ)"
 destination="$root/backups/$stamp-mariadb"
 
 test -f "$root/compose.yml"
-test -f "$root/mariadb.env"
-test -f "$root/wordpress.env"
+test -f "$root/secrets/mariadb.env"
+test -f "$root/secrets/wordpress.env"
 test -d "$root/wordpress/wp-content"
 
 install -d -m 0700 "$destination"
@@ -18,8 +18,8 @@ docker compose -f compose.yml exec -T db sh -c \
   > "$destination/wordpress2026.sql"
 
 tar -C "$root/wordpress" -czf "$destination/wp-content.tar.gz" wp-content
-install -m 0600 "$root/mariadb.env" "$destination/mariadb.env"
-install -m 0600 "$root/wordpress.env" "$destination/wordpress.env"
+install -m 0600 "$root/secrets/mariadb.env" "$destination/mariadb.env"
+install -m 0600 "$root/secrets/wordpress.env" "$destination/wordpress.env"
 install -m 0640 "$root/compose.yml" "$destination/compose.yml"
 gzip -9 "$destination/wordpress2026.sql"
 
