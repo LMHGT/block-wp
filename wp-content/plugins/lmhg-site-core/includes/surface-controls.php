@@ -265,6 +265,9 @@ function lmhg_site_core_render_inventory_404(): void {
 
 	status_header( 404 );
 	nocache_headers();
+	if ( ! headers_sent() ) {
+		header( 'X-Robots-Tag: noindex, follow', true );
+	}
 
 	$template = get_404_template();
 	if ( '' !== $template ) {
