@@ -3,8 +3,11 @@
   "private": true,
   "scripts": {
     "test:gutenberg": "node scripts/verify-gutenberg-stability.mjs",
+    "test:page-data": "node wp-content/themes/wordpress-2026/tests/page-data-authority.mjs",
     "test:responsive-h1": "node wp-content/themes/wordpress-2026/tests/responsive-h1-contract.mjs",
-    "test:responsive-text": "node wp-content/themes/wordpress-2026/tests/responsive-text-containment.mjs"
+    "test:responsive-text": "node wp-content/themes/wordpress-2026/tests/responsive-text-containment.mjs",
+    "test:site-core:accessibility": "php wp-content/plugins/lmhg-site-core/tests/accessibility-skip-link-contract.php",
+    "test:site-core:redirects": "php wp-content/plugins/lmhg-site-core/tests/redirects-contract.php"
   },
   "devDependencies": {
     "playwright": "1.61.1"
