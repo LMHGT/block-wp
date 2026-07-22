@@ -1,23 +1,23 @@
-# WordPress 2026 MariaDB staging and cutover
+# WordPress 2026 MariaDB development runtime
 
-MariaDB is the planned replacement for the current WordPress Playground/SQLite
-runtime. It is **not yet authoritative**. Build and validate it in parallel on
-the OVH host before any cutover.
+MariaDB is the authoritative LMHG development runtime as of July 22, 2026. The
+accepted Compose project serves `http://100.116.130.39:8093/`; the former
+WordPress Playground/SQLite service is retained only as a rollback artifact.
 
 - Source checkout: `/srv/codex/projects/lmhg-blockwp`
 - Current rollback runtime: `/srv/codex/services/lmhg-blockwp-wordpress`
 - MariaDB runtime root: `/srv/codex/services/lmhg-blockwp-wordpress-mariadb`
-- Staging endpoint: `http://100.116.130.39:8094`
-- Intended cutover endpoint: `http://100.116.130.39:8093`
+- Development endpoint: `http://100.116.130.39:8093`
+- Isolated rebuild endpoint, when explicitly needed: `http://100.116.130.39:8094`
 - WordPress: `wordpress:7.0.2-php8.3-apache`
 - Database: `mariadb:10.11.18`, internal to the Compose network
 
-The existing one-worker SQLite service remains the rollback path until the
-MariaDB site passes the complete acceptance checklist. Do not run both sites on
-port 8093, and do not delete the SQLite database or its verified backups during
-this migration.
+Do not run both runtimes on port 8093. Do not delete the retained SQLite data or
+verified migration backups without explicit authorization. The rebuild and
+cutover steps below are recovery documentation; do not repeat them against the
+accepted development database as routine deployment work.
 
-## Prepare the isolated runtime
+## Prepare an isolated rebuild runtime
 
 Copy the Compose and backup files from this repository into the runtime root as
 `compose.yml` and `backup-wordpress-mariadb.sh`. Create these runtime-only
@@ -49,7 +49,7 @@ WordPress core or its placeholder `wp-config.php`; the pinned WordPress image
 must create a fresh core and environment-backed configuration in the new
 runtime root.
 
-## Build and import on port 8094
+## Rebuild and import on port 8094
 
 The checked-in Compose file defaults to the OVH Tailscale address on staging
 port 8094. It can be inspected without starting anything:
@@ -77,7 +77,7 @@ The source database already uses the intended `http://100.116.130.39:8093`
 canonical URL. Validate staging with an explicit Host/connect mapping so the
 canonical options do not need a temporary rewrite.
 
-## Acceptance and cutover
+## Rebuild acceptance and cutover
 
 Validate the staging runtime sequentially: Compose health, PHP/WordPress logs,
 plugin versions and activation, authenticated administration, all canonical

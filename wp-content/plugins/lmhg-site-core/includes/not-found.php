@@ -90,6 +90,10 @@ function lmhg_site_core_not_found_message(): string {
  * Builds recovery navigation without redirecting an unknown URL to unrelated content.
  */
 function lmhg_site_core_helpful_404_markup( string $title, string $message ): string {
+	$title_chars = function_exists( 'mb_strlen' ) ? mb_strlen( $title ) : strlen( $title );
+	$title_style = function_exists( 'lmhg_site_core_title_fit_style' )
+		? lmhg_site_core_title_fit_style( (int) $title_chars )
+		: '';
 	$destinations = array(
 		'/our-services/' => array( 'Services', 'Browse counseling and support services.' ),
 		'/specialties/'   => array( 'Specialties', 'Find help by concern or type of support.' ),
@@ -113,14 +117,16 @@ function lmhg_site_core_helpful_404_markup( string $title, string $message ): st
 		'<main id="main-content" class="wp-block-group wp2026-template-404" aria-labelledby="lmhg-not-found-title">'
 		. '<div class="wp-block-group alignwide wp2026-content-section">'
 		. '<p class="wp2026-kicker">404 error</p>'
-		. '<h1 id="lmhg-not-found-title" class="wp-block-heading">%1$s</h1>'
-		. '<p class="wp2026-lead">%2$s</p>'
-		. '<div class="wp-block-buttons"><div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="%3$s">Return Home</a></div>'
-		. '<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="%4$s">Contact Us</a></div></div>'
+		. '<h1 id="lmhg-not-found-title" class="wp-block-heading wp2026-title-fit" style="%1$s" data-lmhg-title-chars="%2$d">%3$s</h1>'
+		. '<p class="wp2026-lead">%4$s</p>'
+		. '<div class="wp-block-buttons"><div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="%5$s">Return Home</a></div>'
+		. '<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="%6$s">Contact Us</a></div></div>'
 		. '<h2 class="wp-block-heading wp2026-section-title">Helpful places to continue</h2>'
-		. '<ul class="wp-block-list wp2026-service-grid wp2026-not-found-links">%5$s</ul>'
+		. '<ul class="wp-block-list wp2026-service-grid wp2026-not-found-links">%7$s</ul>'
 		. '<p>If you followed a link on this website, please contact the office so we can correct it.</p>'
 		. '</div></main>',
+		esc_attr( $title_style ),
+		(int) $title_chars,
 		esc_html( $title ),
 		esc_html( $message ),
 		esc_url( home_url( '/' ) ),

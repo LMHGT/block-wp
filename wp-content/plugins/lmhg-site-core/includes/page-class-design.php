@@ -654,10 +654,12 @@ function lmhg_site_core_article_hub_post_cards( array $legacy_cards, int $limit 
 function lmhg_site_core_article_hub_post_card_body( WP_Post $post ): string {
 	$body = trim( wp_strip_all_tags( (string) get_post_meta( $post->ID, '_lmhg_article_card_description', true ) ) );
 	if ( '' === $body ) {
-		$body = trim( wp_strip_all_tags( (string) get_the_excerpt( $post ) ) );
+		// Avoid get_the_excerpt() here: its generated-excerpt path reapplies
+		// the_content while the Article hub is already rendering the_content.
+		$body = trim( wp_strip_all_tags( (string) $post->post_excerpt ) );
 	}
 	if ( '' === $body ) {
-		$body = trim( wp_strip_all_tags( strip_shortcodes( strip_blocks( (string) $post->post_content ) ) ) );
+		$body = trim( wp_strip_all_tags( strip_shortcodes( (string) $post->post_content ) ) );
 	}
 	if ( '' === $body ) {
 		return 'Read this mental health article from Louisville Mental Health Group.';

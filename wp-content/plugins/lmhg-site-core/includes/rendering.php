@@ -10,8 +10,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 add_filter( 'the_content', 'lmhg_site_core_render_imported_content', 20 );
+add_filter( 'the_content', 'lmhg_site_core_mark_content_title_fit', 33 );
 add_filter( 'the_content', 'lmhg_site_core_prepend_sitewide_page_hero', 34 );
-add_filter( 'render_block', 'lmhg_site_core_mark_post_title_block', 20, 2 );
+add_filter( 'render_block', 'lmhg_site_core_mark_post_title_block', 20, 3 );
 add_filter( 'run_wptexturize', 'lmhg_site_core_disable_texturize_for_editable_blocks' );
 
 /**
@@ -52,39 +53,54 @@ function lmhg_site_core_render_imported_content( string $content ): string {
  *
  * @param string              $block_content Rendered block HTML.
  * @param array<string,mixed> $block Parsed block.
+ * @param mixed               $instance Block instance with render context.
  * @return string
  */
-function lmhg_site_core_mark_post_title_block( string $block_content, array $block ): string {
-	if ( ( $block['blockName'] ?? '' ) !== 'core/post-title' ) {
+function lmhg_site_core_mark_post_title_block( string $block_content, array $block, mixed $instance = null ): string {
+	if (
+		( $block['blockName'] ?? '' ) !== 'core/post-title'
+		|| 1 !== (int) ( $block['attrs']['level'] ?? 2 )
+		|| ! is_singular( array( 'page', 'post' ) )
+	) {
 		return $block_content;
 	}
 
-	$post_id = lmhg_site_core_imported_post_id();
-	if ( 0 === $post_id ) {
+	$post_id = (int) get_queried_object_id();
+	if ( $post_id <= 0 ) {
 		return $block_content;
 	}
+
+	$context_post_id = is_object( $instance ) && isset( $instance->context['postId'] )
+		? (int) $instance->context['postId']
+		: 0;
+	if ( $context_post_id > 0 && $context_post_id !== $post_id ) {
+		return $block_content;
+	}
+
+	$imported_post_id = lmhg_site_core_imported_post_id();
 
 	if (
-		function_exists( 'lmhg_site_core_has_editable_block_content' )
-		&& lmhg_site_core_has_editable_block_content( $post_id )
+		function_exists( 'lmhg_site_core_post_content_has_h1' )
 		&& lmhg_site_core_post_content_has_h1( $post_id )
 	) {
 		return '';
 	}
 
-	$source_url = trim( (string) get_post_meta( $post_id, '_lmhg_source_url', true ) );
-	if ( lmhg_site_core_uses_sitewide_page_hero( $post_id ) ) {
+	$source_url = $imported_post_id > 0
+		? trim( (string) get_post_meta( $post_id, '_lmhg_source_url', true ) )
+		: '';
+	if ( $imported_post_id > 0 && lmhg_site_core_uses_sitewide_page_hero( $post_id ) ) {
 		return '';
 	}
 
-	$marker = lmhg_site_core_marker_id( $source_url, 'h1' );
-	$title = trim( wp_strip_all_tags( (string) get_the_title( $post_id ) ) );
+	$marker      = '' !== $source_url ? lmhg_site_core_marker_id( $source_url, 'h1' ) : '';
+	$title       = trim( wp_strip_all_tags( (string) get_the_title( $post_id ) ) );
 	$title_chars = function_exists( 'mb_strlen' ) ? mb_strlen( $title ) : strlen( $title );
-	$title_fit_vw = lmhg_site_core_title_fit_vw( (int) $title_chars );
+	$title_style = lmhg_site_core_title_fit_style( (int) $title_chars );
 
 	return preg_replace_callback(
 		'/<(h[1-6])([^>]*)>/',
-		static function ( array $matches ) use ( $marker, $title_chars, $title_fit_vw ): string {
+		static function ( array $matches ) use ( $marker, $title_chars, $title_style ): string {
 			$attributes = $matches[2];
 			$class_count = 0;
 			$attributes = preg_replace_callback(
@@ -100,31 +116,25 @@ function lmhg_site_core_mark_post_title_block( string $block_content, array $blo
 				$attributes .= ' class="wp2026-title-fit"';
 			}
 
-			$style_value = '--wp2026-title-fit-vw: ' . $title_fit_vw;
 			$style_count = 0;
 			$attributes = preg_replace_callback(
 				'/\sstyle=(["\'])(.*?)\1/i',
-				static function ( array $style_matches ) use ( $style_value ): string {
-					$existing_style = trim( $style_matches[2] );
-					if ( '' !== $existing_style && ';' !== substr( $existing_style, -1 ) ) {
-						$existing_style .= ';';
-					}
-
-					return ' style=' . $style_matches[1] . esc_attr( trim( $existing_style . ' ' . $style_value . ';' ) ) . $style_matches[1];
+				static function ( array $style_matches ) use ( $title_style ): string {
+					return ' style=' . $style_matches[1] . esc_attr( lmhg_site_core_append_inline_style( $style_matches[2], $title_style ) ) . $style_matches[1];
 				},
 				$attributes,
 				1,
 				$style_count
 			) ?? $attributes;
 			if ( 0 === $style_count ) {
-				$attributes .= ' style="' . esc_attr( $style_value . ';' ) . '"';
+				$attributes .= ' style="' . esc_attr( $title_style ) . '"';
 			}
 
 			return sprintf(
-				'<%1$s%2$s data-lmhg-edit-field="%3$s" data-lmhg-title-chars="%4$d">',
+				'<%1$s%2$s%3$s data-lmhg-title-chars="%4$d">',
 				$matches[1],
 				$attributes,
-				esc_attr( $marker ),
+				'' !== $marker ? ' data-lmhg-edit-field="' . esc_attr( $marker ) . '"' : '',
 				(int) $title_chars
 			);
 		},
@@ -146,6 +156,53 @@ function lmhg_site_core_uses_sitewide_page_hero( int $post_id ): bool {
 	}
 
 	return '' !== trim( (string) get_post_meta( $post_id, '_lmhg_source_url', true ) );
+}
+
+/**
+ * Adds responsive title-fit metadata to an editable page H1.
+ *
+ * The homepage owns its H1 in post content, so the post-title block filter does
+ * not see it. Marking it at render time keeps the one-line design contract in
+ * sync when an editor changes the title copy.
+ *
+ * @param string $content Rendered post content.
+ * @return string
+ */
+function lmhg_site_core_mark_content_title_fit( string $content ): string {
+	if ( is_admin() || ! in_the_loop() || ! is_main_query() || ! class_exists( 'WP_HTML_Tag_Processor' ) ) {
+		return $content;
+	}
+
+	if ( ! preg_match( '/<h1\b[^>]*class=(["\'])[^"\']*\bwp2026-(?:home|page)-title\b[^"\']*\1[^>]*>(.*?)<\/h1>/is', $content, $title_match ) ) {
+		return $content;
+	}
+
+	$title = html_entity_decode( trim( wp_strip_all_tags( $title_match[2] ) ), ENT_QUOTES | ENT_HTML5, get_bloginfo( 'charset' ) );
+	if ( '' === $title ) {
+		return $content;
+	}
+
+	$processor = new WP_HTML_Tag_Processor( $content );
+	while ( $processor->next_tag( 'H1' ) ) {
+		if ( ! $processor->has_class( 'wp2026-home-title' ) && ! $processor->has_class( 'wp2026-page-title' ) ) {
+			continue;
+		}
+
+		$title_chars = function_exists( 'mb_strlen' ) ? mb_strlen( $title ) : strlen( $title );
+		$processor->add_class( 'wp2026-title-fit' );
+		$processor->set_attribute( 'data-lmhg-title-chars', (string) $title_chars );
+		$processor->set_attribute(
+			'style',
+			lmhg_site_core_append_inline_style(
+				(string) $processor->get_attribute( 'style' ),
+				lmhg_site_core_title_fit_style( (int) $title_chars )
+			)
+		);
+
+		return $processor->get_updated_html();
+	}
+
+	return $content;
 }
 
 /**
@@ -172,16 +229,20 @@ function lmhg_site_core_prepend_sitewide_page_hero( string $content ): string {
 		return $content;
 	}
 
-	$source_url = trim( (string) get_post_meta( $post_id, '_lmhg_source_url', true ) );
-	$marker     = lmhg_site_core_marker_id( $source_url, 'h1' );
-	$reach_out  = function_exists( 'lmhg_site_core_render_reach_out_block' )
+	$source_url  = trim( (string) get_post_meta( $post_id, '_lmhg_source_url', true ) );
+	$marker      = lmhg_site_core_marker_id( $source_url, 'h1' );
+	$title_chars = function_exists( 'mb_strlen' ) ? mb_strlen( $title ) : strlen( $title );
+	$title_style = lmhg_site_core_title_fit_style( (int) $title_chars );
+	$reach_out   = function_exists( 'lmhg_site_core_render_reach_out_block' )
 		? lmhg_site_core_render_reach_out_block()
 		: '';
 	$call       = '<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="tel:+15024161416">Call (502) 416-1416</a></div>';
 
 	$hero = sprintf(
-		'<section class="wp-block-group alignwide wp2026-home-hero wp2026-sitewide-hero" aria-labelledby="lmhg-page-hero-title"><div class="wp-block-group wp2026-home-hero-columns"><div class="wp-block-group wp2026-hero-copy"><h1 id="lmhg-page-hero-title" class="wp-block-heading wp2026-home-title" data-lmhg-edit-field="%1$s">%2$s</h1><p class="wp2026-home-lead">%3$s</p><div class="wp-block-buttons wp2026-hero-actions">%4$s%5$s</div></div></div></section>',
+		'<section class="wp-block-group alignwide wp2026-home-hero wp2026-sitewide-hero" aria-labelledby="lmhg-page-hero-title"><div class="wp-block-group wp2026-home-hero-columns"><div class="wp-block-group wp2026-hero-copy"><h1 id="lmhg-page-hero-title" class="wp-block-heading wp2026-home-title wp2026-title-fit" style="%1$s" data-lmhg-edit-field="%2$s" data-lmhg-title-chars="%3$d">%4$s</h1><p class="wp2026-home-lead">%5$s</p><div class="wp-block-buttons wp2026-hero-actions">%6$s%7$s</div></div></div></section>',
+		esc_attr( $title_style ),
 		esc_attr( $marker ),
+		(int) $title_chars,
 		esc_html( $title ),
 		wp_kses_post( $description ),
 		$reach_out,
@@ -222,10 +283,54 @@ function lmhg_site_core_page_hero_description( string $content, int $post_id ): 
  */
 function lmhg_site_core_title_fit_vw( int $title_chars ): string {
 	$effective_chars = max( 8, $title_chars );
-	$divisor = max( 8.0, round( $effective_chars * 0.66, 1 ) );
+	$divisor = max( 8.0, round( $effective_chars * 0.60, 1 ) );
 	$vw = 100 / $divisor;
 
 	return rtrim( rtrim( number_format( $vw, 2, '.', '' ), '0' ), '.' ) . 'vw';
+}
+
+/**
+ * Returns a container-relative font size for fitted page titles.
+ *
+ * @param int $title_chars Title character count.
+ * @return string CSS cqi value.
+ */
+function lmhg_site_core_title_fit_cqi( int $title_chars ): string {
+	$effective_chars = max( 8, $title_chars );
+	$divisor = max( 8.0, round( $effective_chars * 0.51, 1 ) );
+	$cqi = 100 / $divisor;
+
+	return rtrim( rtrim( number_format( $cqi, 2, '.', '' ), '0' ), '.' ) . 'cqi';
+}
+
+/**
+ * Returns the custom properties used by the responsive H1 contract.
+ *
+ * @param int $title_chars Title character count.
+ * @return string Inline CSS declarations.
+ */
+function lmhg_site_core_title_fit_style( int $title_chars ): string {
+	return sprintf(
+		'--wp2026-title-fit-vw: %1$s; --wp2026-title-fit-cqi: %2$s;',
+		lmhg_site_core_title_fit_vw( $title_chars ),
+		lmhg_site_core_title_fit_cqi( $title_chars )
+	);
+}
+
+/**
+ * Appends a declaration without discarding block-authored inline styles.
+ *
+ * @param string $existing Existing style attribute value.
+ * @param string $addition CSS declarations to append.
+ * @return string
+ */
+function lmhg_site_core_append_inline_style( string $existing, string $addition ): string {
+	$existing = trim( $existing );
+	if ( '' !== $existing && ';' !== substr( $existing, -1 ) ) {
+		$existing .= ';';
+	}
+
+	return trim( $existing . ' ' . $addition );
 }
 
 /**
