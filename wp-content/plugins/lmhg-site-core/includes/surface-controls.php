@@ -24,13 +24,13 @@ add_filter( 'xmlrpc_enabled', '__return_false' );
 add_action( 'plugins_loaded', 'lmhg_site_core_disable_xmlrpc_endpoint', 0 );
 add_action( 'init', 'lmhg_site_core_remove_xmlrpc_discovery' );
 add_action( 'init', 'lmhg_site_core_run_stock_hello_world_cleanup', 47 );
-add_action( 'init', 'lmhg_site_core_run_article_permalink_migration', 48 );
+add_action( 'wp_loaded', 'lmhg_site_core_run_article_permalink_migration', 20 );
 
 const LMHG_SITE_CORE_STOCK_POST_CLEANUP_OPTION  = 'lmhg_stock_hello_world_cleanup_version';
 const LMHG_SITE_CORE_STOCK_POST_CLEANUP_VERSION = '2026-07-22-conventional-articles-v1';
 const LMHG_SITE_CORE_STOCK_POST_CLEANUP_REPORT  = 'lmhg_stock_hello_world_cleanup_report';
 const LMHG_SITE_CORE_ARTICLE_PERMALINK_MIGRATION_OPTION  = 'lmhg_article_permalink_migration_version';
-const LMHG_SITE_CORE_ARTICLE_PERMALINK_MIGRATION_VERSION = '2026-07-22-root-article-permalinks-v1';
+const LMHG_SITE_CORE_ARTICLE_PERMALINK_MIGRATION_VERSION = '2026-07-22-root-article-permalinks-v2';
 const LMHG_SITE_CORE_ARTICLE_PERMALINK_MIGRATION_REPORT  = 'lmhg_article_permalink_migration_report';
 
 /** Stops the XML-RPC bootstrap before it can expose introspection or callable methods. */
@@ -161,10 +161,13 @@ function lmhg_site_core_run_stock_hello_world_cleanup(): void {
 /**
  * Moves only the known date-based Post permalink structure to root-level slugs.
  *
- * An already-correct structure is accepted without flushing. Any unexpected
- * structure is reported as a conflict and preserved for owner review.
+ * A target-current database receives one v2 repair flush so rewrite rules
+ * cannot retain the retired date structure from v1. Any unexpected structure
+ * is reported as a conflict and preserved for owner review.
  */
 function lmhg_site_core_run_article_permalink_migration(): void {
+	global $wp_rewrite;
+
 	if ( LMHG_SITE_CORE_ARTICLE_PERMALINK_MIGRATION_VERSION === (string) get_option( LMHG_SITE_CORE_ARTICLE_PERMALINK_MIGRATION_OPTION, '' ) ) {
 		return;
 	}
@@ -182,23 +185,26 @@ function lmhg_site_core_run_article_permalink_migration(): void {
 	);
 	$complete           = false;
 
-	if ( $target_structure === $current_structure ) {
-		$report['status'] = 'already_current';
-		$complete         = true;
-	} elseif ( $legacy_structure === $current_structure ) {
-		$updated = update_option( 'permalink_structure', $target_structure );
-		if ( $updated ) {
-			flush_rewrite_rules( false );
-			$report['status']         = 'updated';
-			$report['current']        = $target_structure;
-			$report['rewrites_flush'] = true;
-			$complete                 = true;
-		} elseif ( $target_structure === (string) get_option( 'permalink_structure', '' ) ) {
-			$report['status']  = 'concurrently_current';
-			$report['current'] = $target_structure;
-			$complete          = true;
+	if ( in_array( $current_structure, array( $legacy_structure, $target_structure ), true ) ) {
+		if ( ! $wp_rewrite instanceof WP_Rewrite ) {
+			$report['status'] = 'rewrite_api_unavailable';
 		} else {
-			$report['status'] = 'write_failed';
+			$wp_rewrite->set_permalink_structure( $target_structure );
+			$wp_rewrite->init();
+
+			$stored_structure = (string) get_option( 'permalink_structure', '' );
+			$live_structure   = (string) $wp_rewrite->permalink_structure;
+			$report['current'] = $stored_structure;
+			if ( $target_structure === $stored_structure && $target_structure === $live_structure ) {
+				flush_rewrite_rules( false );
+				$report['status']         = $legacy_structure === $current_structure ? 'updated' : 'repaired_current';
+				$report['rewrites_flush'] = true;
+				$complete                 = true;
+			} else {
+				$report['status']           = 'rewrite_sync_failed';
+				$report['live_structure']   = $live_structure;
+				$report['stored_structure'] = $stored_structure;
+			}
 		}
 	}
 
