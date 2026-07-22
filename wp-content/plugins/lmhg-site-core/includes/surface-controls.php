@@ -23,6 +23,15 @@ add_filter( 'rest_endpoints', 'lmhg_site_core_hide_public_user_rest_endpoints' )
 add_filter( 'xmlrpc_enabled', '__return_false' );
 add_action( 'plugins_loaded', 'lmhg_site_core_disable_xmlrpc_endpoint', 0 );
 add_action( 'init', 'lmhg_site_core_remove_xmlrpc_discovery' );
+add_action( 'init', 'lmhg_site_core_run_stock_hello_world_cleanup', 47 );
+add_action( 'init', 'lmhg_site_core_run_article_permalink_migration', 48 );
+
+const LMHG_SITE_CORE_STOCK_POST_CLEANUP_OPTION  = 'lmhg_stock_hello_world_cleanup_version';
+const LMHG_SITE_CORE_STOCK_POST_CLEANUP_VERSION = '2026-07-22-conventional-articles-v1';
+const LMHG_SITE_CORE_STOCK_POST_CLEANUP_REPORT  = 'lmhg_stock_hello_world_cleanup_report';
+const LMHG_SITE_CORE_ARTICLE_PERMALINK_MIGRATION_OPTION  = 'lmhg_article_permalink_migration_version';
+const LMHG_SITE_CORE_ARTICLE_PERMALINK_MIGRATION_VERSION = '2026-07-22-root-article-permalinks-v1';
+const LMHG_SITE_CORE_ARTICLE_PERMALINK_MIGRATION_REPORT  = 'lmhg_article_permalink_migration_report';
 
 /** Stops the XML-RPC bootstrap before it can expose introspection or callable methods. */
 function lmhg_site_core_disable_xmlrpc_endpoint(): void {
@@ -44,15 +53,158 @@ function lmhg_site_core_remove_xmlrpc_discovery(): void {
 }
 
 /**
- * Returns a 404 for default posts, archives, and the imported not-found page route.
+ * Returns a 404 for unsupported archives and the imported not-found page route.
+ *
+ * Conventional WordPress Posts are the site's public Articles and must remain
+ * available as singular requests. Their unsupported archive surfaces stay
+ * closed until the site intentionally designs and launches those experiences.
  */
 function lmhg_site_core_block_default_public_surfaces(): void {
 	if ( is_admin() || wp_doing_ajax() || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) ) {
 		return;
 	}
 
-	if ( is_feed() || is_search() || is_singular( 'post' ) || is_author() || is_category() || is_tag() || is_date() || is_page( 'not-found' ) ) {
+	if ( is_feed() || is_search() || is_author() || is_category() || is_tag() || is_date() || is_page( 'not-found' ) ) {
 		lmhg_site_core_render_inventory_404();
+	}
+}
+
+/**
+ * Identifies only the untouched stock WordPress starter Post.
+ *
+ * @param WP_Post|int|null $post Candidate Post or ID.
+ */
+function lmhg_site_core_is_stock_hello_world_post( WP_Post|int|null $post ): bool {
+	$post = get_post( $post );
+	if ( ! $post instanceof WP_Post ) {
+		return false;
+	}
+
+	$content        = trim( str_replace( array( "\r\n", "\r" ), "\n", (string) $post->post_content ) );
+	$stock_sentence = 'Welcome to WordPress. This is your first post. Edit or delete it, then start writing!';
+	$stock_content  = array(
+		$stock_sentence,
+		"<!-- wp:paragraph -->\n<p>{$stock_sentence}</p>\n<!-- /wp:paragraph -->",
+	);
+	return 'post' === $post->post_type
+		&& 'Hello world!' === $post->post_title
+		&& 'hello-world' === $post->post_name
+		&& '' === trim( (string) $post->post_excerpt )
+		&& in_array( $content, $stock_content, true );
+}
+
+/**
+ * Drafts the unique, untouched WordPress starter Post for recoverability.
+ *
+ * Every identifying field must match exactly. Missing, customized, or
+ * ambiguous Posts are reported and left intact. The migration never touches
+ * future editorial Posts.
+ */
+function lmhg_site_core_run_stock_hello_world_cleanup(): void {
+	if ( LMHG_SITE_CORE_STOCK_POST_CLEANUP_VERSION === (string) get_option( LMHG_SITE_CORE_STOCK_POST_CLEANUP_OPTION, '' ) ) {
+		return;
+	}
+
+	$candidates = get_posts(
+		array(
+			'post_type'              => 'post',
+			'post_status'            => array( 'publish', 'future', 'draft', 'pending', 'private' ),
+			'name'                   => 'hello-world',
+			'posts_per_page'         => -1,
+			'orderby'                => 'ID',
+			'order'                  => 'ASC',
+			'no_found_rows'          => true,
+			'update_post_meta_cache' => false,
+			'update_post_term_cache' => false,
+			'suppress_filters'       => true,
+		)
+	);
+	$matches    = array_values( array_filter( $candidates, 'lmhg_site_core_is_stock_hello_world_post' ) );
+	$report     = array(
+		'version'      => LMHG_SITE_CORE_STOCK_POST_CLEANUP_VERSION,
+		'completed_at' => current_time( 'mysql', true ),
+		'status'       => 'not_found',
+		'post_id'      => 0,
+	);
+	$complete   = true;
+
+	if ( count( $matches ) > 1 ) {
+		$report['status'] = 'ambiguous';
+	} elseif ( 1 === count( $matches ) ) {
+		$placeholder       = $matches[0];
+		$report['post_id'] = (int) $placeholder->ID;
+		if ( 'draft' === $placeholder->post_status ) {
+			$report['status'] = 'already_draft';
+		} else {
+			$updated = wp_update_post(
+				array(
+					'ID'          => (int) $placeholder->ID,
+					'post_status' => 'draft',
+				),
+				true
+			);
+			if ( is_wp_error( $updated ) ) {
+				$report['status'] = 'write_failed';
+				$complete         = false;
+			} else {
+				$report['status'] = 'drafted';
+			}
+		}
+	}
+
+	update_option( LMHG_SITE_CORE_STOCK_POST_CLEANUP_REPORT, $report, false );
+	if ( $complete ) {
+		update_option( LMHG_SITE_CORE_STOCK_POST_CLEANUP_OPTION, LMHG_SITE_CORE_STOCK_POST_CLEANUP_VERSION, false );
+	}
+}
+
+/**
+ * Moves only the known date-based Post permalink structure to root-level slugs.
+ *
+ * An already-correct structure is accepted without flushing. Any unexpected
+ * structure is reported as a conflict and preserved for owner review.
+ */
+function lmhg_site_core_run_article_permalink_migration(): void {
+	if ( LMHG_SITE_CORE_ARTICLE_PERMALINK_MIGRATION_VERSION === (string) get_option( LMHG_SITE_CORE_ARTICLE_PERMALINK_MIGRATION_OPTION, '' ) ) {
+		return;
+	}
+
+	$legacy_structure  = '/%year%/%monthnum%/%day%/%postname%/';
+	$target_structure  = '/%postname%/';
+	$current_structure = (string) get_option( 'permalink_structure', '' );
+	$report             = array(
+		'version'        => LMHG_SITE_CORE_ARTICLE_PERMALINK_MIGRATION_VERSION,
+		'completed_at'   => current_time( 'mysql', true ),
+		'status'         => 'conflict',
+		'previous'       => $current_structure,
+		'current'        => $current_structure,
+		'rewrites_flush' => false,
+	);
+	$complete           = false;
+
+	if ( $target_structure === $current_structure ) {
+		$report['status'] = 'already_current';
+		$complete         = true;
+	} elseif ( $legacy_structure === $current_structure ) {
+		$updated = update_option( 'permalink_structure', $target_structure );
+		if ( $updated ) {
+			flush_rewrite_rules( false );
+			$report['status']         = 'updated';
+			$report['current']        = $target_structure;
+			$report['rewrites_flush'] = true;
+			$complete                 = true;
+		} elseif ( $target_structure === (string) get_option( 'permalink_structure', '' ) ) {
+			$report['status']  = 'concurrently_current';
+			$report['current'] = $target_structure;
+			$complete          = true;
+		} else {
+			$report['status'] = 'write_failed';
+		}
+	}
+
+	update_option( LMHG_SITE_CORE_ARTICLE_PERMALINK_MIGRATION_REPORT, $report, false );
+	if ( $complete ) {
+		update_option( LMHG_SITE_CORE_ARTICLE_PERMALINK_MIGRATION_OPTION, LMHG_SITE_CORE_ARTICLE_PERMALINK_MIGRATION_VERSION, false );
 	}
 }
 
@@ -128,14 +280,13 @@ function lmhg_site_core_render_inventory_404(): void {
 }
 
 /**
- * Removes blog posts from the public WordPress sitemap while keeping page URLs.
+ * Allows only the intentional Page and Article post types in core sitemaps.
  *
  * @param array<string,WP_Post_Type> $post_types Sitemap post types.
  * @return array<string,WP_Post_Type>
  */
 function lmhg_site_core_filter_sitemap_post_types( array $post_types ): array {
-	unset( $post_types['post'] );
-	return $post_types;
+	return array_intersect_key( $post_types, array_flip( array( 'page', 'post' ) ) );
 }
 
 /**
@@ -195,10 +346,11 @@ function lmhg_site_core_filter_sitemap_providers( mixed $provider, string $name 
 /**
  * Keeps Rank Math sitemaps aligned with LMHG's intentionally public inventory.
  *
- * Rank Math does not use WordPress core's sitemap query filters, so exclusions
- * for posts and the routed not-found inventory page must be repeated at its
- * entry boundary. Password-protected and non-published objects are rejected as
- * a final safeguard even if a future Rank Math query starts returning them.
+ * Rank Math does not use WordPress core's sitemap query filters, so the routed
+ * not-found inventory page exclusion must be repeated at its entry boundary.
+ * Password-protected and non-published objects are rejected as a final
+ * safeguard even if a future Rank Math query starts returning them. Published
+ * Posts remain eligible because WordPress Posts are LMHG Articles.
  *
  * @param mixed  $url Sitemap entry generated by Rank Math.
  * @param string $type Rank Math object type.
@@ -218,7 +370,7 @@ function lmhg_site_core_filter_rank_math_sitemap_entry( mixed $url, string $type
 
 	$post_type = isset( $object->post_type ) ? (string) $object->post_type : '';
 	$post_name = isset( $object->post_name ) ? (string) $object->post_name : '';
-	if ( 'post' === $post_type || ( 'page' === $post_type && 'not-found' === $post_name ) ) {
+	if ( 'page' === $post_type && 'not-found' === $post_name ) {
 		return false;
 	}
 

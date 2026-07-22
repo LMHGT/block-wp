@@ -572,11 +572,110 @@ function lmhg_site_core_render_article_hub_design(): string {
 		array( 'title' => 'Starting therapy', 'url' => '/what-to-expect-when-starting-therapy/', 'body' => 'Clarify what usually happens before your first appointment.' ),
 		array( 'title' => 'When support may help', 'url' => '/top-5-signs-its-time-to-seek-therapy/', 'body' => 'Understand signs that extra support may be useful.' ),
 	);
+	$topics = array_merge( $topics, lmhg_site_core_article_hub_post_cards( $topics, 6 ) );
 
 	return sprintf(
 		'<section class="lmhg-page-class-guide lmhg-page-class-guide--article-hub" aria-labelledby="lmhg-article-hub-title"><p class="lmhg-page-class-eyebrow">Mental health articles</p><h2 id="lmhg-article-hub-title">Read practical guides, then compare care options.</h2><p class="lmhg-page-class-lead">Use these articles to understand common questions before choosing a service page or contacting the office.</p><div class="lmhg-page-class-grid">%s</div></section>',
 		lmhg_site_core_render_plain_cards( $topics )
 	);
+}
+
+/**
+ * Builds recent conventional Post cards for the Article hub.
+ *
+ * Legacy Page cards remain first. Published Posts are appended newest-first,
+ * without taxonomy inference, and duplicate destinations are omitted.
+ *
+ * @param array<int,array<string,string>> $legacy_cards Existing legacy Page cards.
+ * @param int                             $limit Maximum dynamic cards.
+ * @return array<int,array<string,string>>
+ */
+function lmhg_site_core_article_hub_post_cards( array $legacy_cards, int $limit = 6 ): array {
+	$limit = min( 6, max( 0, $limit ) );
+	if ( 0 === $limit ) {
+		return array();
+	}
+
+	$seen = array();
+	foreach ( $legacy_cards as $legacy_card ) {
+		$identity = lmhg_site_core_article_hub_url_identity( (string) ( $legacy_card['url'] ?? '' ) );
+		if ( '' !== $identity ) {
+			$seen[ $identity ] = true;
+		}
+	}
+
+	$posts = get_posts(
+		array(
+			'post_type'              => 'post',
+			'post_status'            => 'publish',
+			'has_password'           => false,
+			'posts_per_page'         => $limit + count( $legacy_cards ),
+			'orderby'                => array(
+				'date' => 'DESC',
+				'ID'   => 'DESC',
+			),
+			'no_found_rows'          => true,
+			'update_post_meta_cache' => true,
+			'update_post_term_cache' => false,
+			'suppress_filters'       => false,
+		)
+	);
+
+	$cards = array();
+	foreach ( $posts as $post ) {
+		if ( ! $post instanceof WP_Post || 'post' !== $post->post_type || 'publish' !== $post->post_status ) {
+			continue;
+		}
+
+		$url      = (string) get_permalink( $post );
+		$identity = lmhg_site_core_article_hub_url_identity( $url );
+		$title    = trim( wp_strip_all_tags( get_the_title( $post ) ) );
+		if ( '' === $identity || isset( $seen[ $identity ] ) || '' === $title ) {
+			continue;
+		}
+
+		$seen[ $identity ] = true;
+		$cards[]           = array(
+			'title' => $title,
+			'url'   => $url,
+			'body'  => lmhg_site_core_article_hub_post_card_body( $post ),
+		);
+		if ( count( $cards ) >= $limit ) {
+			break;
+		}
+	}
+
+	return $cards;
+}
+
+/**
+ * Creates safe summary copy for a conventional Article card.
+ */
+function lmhg_site_core_article_hub_post_card_body( WP_Post $post ): string {
+	$body = trim( wp_strip_all_tags( (string) get_post_meta( $post->ID, '_lmhg_article_card_description', true ) ) );
+	if ( '' === $body ) {
+		$body = trim( wp_strip_all_tags( (string) get_the_excerpt( $post ) ) );
+	}
+	if ( '' === $body ) {
+		$body = trim( wp_strip_all_tags( strip_shortcodes( strip_blocks( (string) $post->post_content ) ) ) );
+	}
+	if ( '' === $body ) {
+		return 'Read this mental health article from Louisville Mental Health Group.';
+	}
+
+	return wp_trim_words( $body, 28, '…' );
+}
+
+/**
+ * Normalizes an internal Article URL for duplicate detection.
+ */
+function lmhg_site_core_article_hub_url_identity( string $url ): string {
+	$path = wp_parse_url( $url, PHP_URL_PATH );
+	if ( ! is_string( $path ) || '' === trim( $path ) ) {
+		return '';
+	}
+
+	return strtolower( '/' . trim( rawurldecode( $path ), '/' ) . '/' );
 }
 
 /**

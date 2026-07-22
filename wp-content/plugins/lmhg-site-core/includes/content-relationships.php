@@ -2893,7 +2893,7 @@ function lmhg_site_core_query_related_articles( int $page_id, int $limit = 3 ): 
 		)
 	);
 
-	return array_slice( $query->posts, 0, min( 12, max( 1, $limit ) ) );
+	return array_slice( $query->posts, 0, min( 3, max( 1, $limit ) ) );
 }
 
 /**
@@ -2922,7 +2922,7 @@ function lmhg_site_core_related_articles_shortcode( array|string $atts = array()
 	$atts = shortcode_atts(
 		array(
 			'id'      => '',
-			'count'   => '6',
+			'count'   => '3',
 			'heading' => 'Related articles',
 		),
 		$atts,
@@ -2937,7 +2937,7 @@ function lmhg_site_core_related_articles_shortcode( array|string $atts = array()
 	return lmhg_site_core_render_related_articles(
 		$page_id,
 		(string) $atts['heading'],
-		min( 12, max( 1, absint( $atts['count'] ) ) )
+		min( 3, max( 1, absint( $atts['count'] ) ) )
 	);
 }
 
