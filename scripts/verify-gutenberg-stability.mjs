@@ -20,7 +20,7 @@ const OFFICIAL_SOURCES = [
   'https://developer.wordpress.org/block-editor/reference-guides/data/data-core-editor/',
   'https://developer.wordpress.org/plugins/javascript/heartbeat-api/',
   'https://developer.wordpress.org/rest-api/using-the-rest-api/pagination/',
-  'https://developer.wordpress.org/cli/commands/user/create/',
+  'https://developer.wordpress.org/reference/functions/wp_insert_user/',
   'https://developer.wordpress.org/cli/commands/user/delete/',
   'https://developer.wordpress.org/cli/commands/user/list/',
   'https://developer.wordpress.org/cli/commands/eval-file/',
@@ -191,6 +191,9 @@ const summary = {
       username: null,
       userId: null,
       locatedUserId: null,
+      creationOutputShape: null,
+      creationPreflightAbsent: false,
+      creationVerified: false,
       recoveryMarkers: [],
     }
     : { attempted: false, ok: true, reason: 'external administrator supplied' },
@@ -526,6 +529,7 @@ function buildEphemeralAdmin() {
     createAttempted: false,
     email: `lmhg-gutenberg-${suffix}@example.invalid`,
     password: `${randomBytes(30).toString('base64url')}!Aa8`,
+    preflightAbsent: false,
     recoveryMarkerPaths: new Set(),
     userId: null,
     username: `lmhg_gutenberg_${suffix}`,
@@ -586,42 +590,155 @@ async function clearEphemeralRecoveryMarkers(identity) {
   summary.cleanup.recoveryMarkers = [];
 }
 
+function processOutputShape(stdout) {
+  const normalized = String(stdout).replaceAll('\r\n', '\n');
+  const lines = normalized.split('\n');
+  if (lines.at(-1) === '') {
+    lines.pop();
+  }
+  const nonEmptyLines = lines.filter((line) => line.length > 0);
+  const terminalLine = nonEmptyLines.at(-1) || '';
+  let terminalLineKind = 'other';
+  if (/^\d+$/.test(terminalLine)) {
+    terminalLineKind = 'positive-integer-candidate';
+  } else if (terminalLine.startsWith('{') && terminalLine.endsWith('}')) {
+    terminalLineKind = 'json-object-candidate';
+  } else if (terminalLine === '') {
+    terminalLineKind = 'empty';
+  }
+  return {
+    byteLength: Buffer.byteLength(normalized),
+    endsWithNewline: normalized.endsWith('\n'),
+    lineCount: lines.length,
+    nonEmptyLineCount: nonEmptyLines.length,
+    terminalLineKind,
+  };
+}
+
 async function createEphemeralAdmin(identity) {
+  const preexistingUserId = await findExactUserIdByLogin(identity.username, {
+    secrets: [identity.password, identity.username],
+  });
+  if (preexistingUserId !== null) {
+    throw new Error('Generated administrator login unexpectedly existed before creation.');
+  }
+  identity.preflightAbsent = true;
+  summary.cleanup.creationPreflightAbsent = true;
   identity.createAttempted = true;
   // Persist the exact generated identity before the ambiguous create boundary.
   // The marker contains no password and is removed only after exact absence is
   // verified, so SIGKILL/npm-wrapper termination still leaves recovery data.
   await persistEphemeralRecoveryMarker(identity, 'ephemeral administrator creation pending');
-  // WP-CLI supports prompting for selected arguments, which keeps the generated
-  // password out of the process list.
-  // Source: https://developer.wordpress.org/cli/commands/user/create/
-  const { stdout } = await wpCli(
-    [
-      'user',
-      'create',
-      identity.username,
-      identity.email,
-      '--role=administrator',
-      '--display_name=LMHG Gutenberg Verifier',
-      '--porcelain',
-      '--prompt=user_pass',
-    ],
-    { input: `${identity.password}\n`, secrets: [identity.password] },
-  );
-  const userId = stdout.trim();
-  if (!/^\d+$/.test(userId)) {
+  // `--prompt=user_pass` prints both a prompt and a reconstructed command to
+  // stdout in current WP-CLI, so it cannot be combined with strict porcelain
+  // parsing. Instead, eval-file receives the complete creation program over
+  // stdin; the generated password never appears in argv, environment, or disk.
+  // Source: https://developer.wordpress.org/cli/commands/eval-file/
+  const encodedIdentity = Buffer.from(JSON.stringify({
+    displayName: 'LMHG Gutenberg Verifier',
+    email: identity.email,
+    password: identity.password,
+    username: identity.username,
+  }), 'utf8').toString('base64');
+  const php = `<?php
+$payload = json_decode(base64_decode('${encodedIdentity}', true), true);
+if (!is_array($payload)) {
+    fwrite(STDERR, "Could not decode the administrator creation payload.\n");
+    exit(61);
+}
+$required = array('displayName', 'email', 'password', 'username');
+sort($required);
+$actual = array_keys($payload);
+sort($actual);
+if ($actual !== $required) {
+    fwrite(STDERR, "Administrator creation payload has an invalid shape.\n");
+    exit(62);
+}
+$user_id = wp_insert_user(array(
+    'display_name' => (string) $payload['displayName'],
+    'role' => 'administrator',
+    'user_email' => (string) $payload['email'],
+    'user_login' => (string) $payload['username'],
+    'user_pass' => (string) $payload['password'],
+));
+if (is_wp_error($user_id)) {
+    $codes = array_values(array_filter(
+        $user_id->get_error_codes(),
+        static function ($code) {
+            return is_string($code) && preg_match('/^[a-z0-9_-]{1,80}$/i', $code);
+        }
+    ));
+    fwrite(STDERR, "Administrator creation failed" . ($codes ? ":" . implode(',', $codes) : "") . "\n");
+    exit(63);
+}
+$user_id = (int) $user_id;
+if ($user_id <= 0) {
+    fwrite(STDERR, "Administrator creation returned an invalid ID.\n");
+    exit(64);
+}
+$user = get_userdata($user_id);
+echo wp_json_encode(array(
+    'administratorRole' => $user && in_array('administrator', (array) $user->roles, true),
+    'emailMatches' => $user && hash_equals((string) $payload['email'], (string) $user->user_email),
+    'loginMatches' => $user && hash_equals((string) $payload['username'], (string) $user->user_login),
+    'sentinel' => 'lmhg-gutenberg-admin-created-v1',
+    'userId' => $user_id,
+));
+`;
+  const { stdout } = await wpCliEvalFile(php, {
+    secrets: [identity.password, encodedIdentity],
+  });
+  let creationResult;
+  try {
+    creationResult = JSON.parse(stdout.trim());
+  } catch {
+    creationResult = null;
+  }
+  if (
+    !hasOnlyKeys(creationResult, [
+      'administratorRole',
+      'emailMatches',
+      'loginMatches',
+      'sentinel',
+      'userId',
+    ])
+    || creationResult.sentinel !== 'lmhg-gutenberg-admin-created-v1'
+    || !Number.isSafeInteger(creationResult.userId)
+    || creationResult.userId <= 0
+    || typeof creationResult.administratorRole !== 'boolean'
+    || typeof creationResult.emailMatches !== 'boolean'
+    || typeof creationResult.loginMatches !== 'boolean'
+  ) {
+    summary.cleanup.creationOutputShape = processOutputShape(stdout);
     throw new Error(
-      'WP-CLI created the ephemeral administrator but did not return exactly one numeric ID.',
+      'WP-CLI administrator creation returned an invalid redacted output shape: '
+        + JSON.stringify(summary.cleanup.creationOutputShape),
     );
   }
-  const parsedUserId = Number.parseInt(userId, 10);
-  if (!Number.isSafeInteger(parsedUserId) || parsedUserId <= 0) {
-    throw new Error('WP-CLI returned an out-of-range administrator ID.');
-  }
-  identity.userId = parsedUserId;
+  identity.userId = creationResult.userId;
   summary.cleanup.username = identity.username;
   summary.cleanup.userId = identity.userId;
   await persistEphemeralRecoveryMarker(identity, 'ephemeral administrator cleanup pending');
+  if (
+    !creationResult.administratorRole
+    || !creationResult.emailMatches
+    || !creationResult.loginMatches
+  ) {
+    throw new Error(
+      'Created administrator failed server-side role or identity verification; '
+        + 'exact-ID recovery evidence was preserved.',
+    );
+  }
+  const exactLoginId = await findExactUserIdByLogin(identity.username, {
+    secrets: [identity.password, identity.username],
+  });
+  if (exactLoginId !== identity.userId) {
+    throw new Error(
+      `Immediate exact-login verification expected ID ${identity.userId}; `
+        + `received ${exactLoginId ?? 'no match'}.`,
+    );
+  }
+  summary.cleanup.creationVerified = true;
   console.log(`Created ephemeral administrator ID ${identity.userId}.`);
 }
 
@@ -660,6 +777,41 @@ async function findEphemeralAdminId(identity) {
   });
 }
 
+async function inspectExactUserId(identity) {
+  if (!Number.isSafeInteger(identity.userId) || identity.userId <= 0) {
+    throw new Error('Cannot inspect an invalid recovery user ID.');
+  }
+  const encodedLogin = Buffer.from(identity.username, 'utf8').toString('base64');
+  const php = `<?php
+$user_id = ${identity.userId};
+$expected_login = base64_decode('${encodedLogin}', true);
+if (!is_int($user_id) || $user_id <= 0 || !is_string($expected_login)) {
+    fwrite(STDERR, "Invalid exact-ID recovery lookup.\n");
+    exit(65);
+}
+$user = get_userdata($user_id);
+echo wp_json_encode(array(
+    'exists' => (bool) $user,
+    'loginMatches' => $user ? hash_equals($expected_login, (string) $user->user_login) : false,
+));
+`;
+  const { stdout } = await wpCliEvalFile(php, {
+    cleanupSafe: true,
+    secrets: [identity.password, identity.username, encodedLogin],
+    timeoutMs: CLEANUP_PROCESS_TIMEOUT_MS,
+  });
+  const result = JSON.parse(stdout.trim());
+  if (
+    !hasOnlyKeys(result, ['exists', 'loginMatches'])
+    || typeof result.exists !== 'boolean'
+    || typeof result.loginMatches !== 'boolean'
+    || (!result.exists && result.loginMatches)
+  ) {
+    throw new Error('Exact-ID recovery lookup returned malformed evidence.');
+  }
+  return result;
+}
+
 async function cleanupEphemeralAdmin(identity) {
   if (!identity?.createAttempted) {
     return;
@@ -669,25 +821,62 @@ async function cleanupEphemeralAdmin(identity) {
   summary.cleanup.username = identity.username;
   summary.cleanup.userId = identity.userId;
   try {
-    const userId = await findEphemeralAdminId(identity);
-    summary.cleanup.locatedUserId = userId;
-    if (!userId) {
-      summary.cleanup.ok = true;
-      summary.cleanup.reason = 'exact-login lookup confirmed the ephemeral user is absent';
-      await clearEphemeralRecoveryMarkers(identity);
-      return;
-    }
-    if (!summary.cleanup.userId) {
-      summary.cleanup.userId = userId;
-    }
-    if (!identity.userId) {
-      identity.userId = userId;
-    }
-    if (identity.userId && userId !== identity.userId) {
+    if (!identity.preflightAbsent) {
       throw new Error(
-        `Exact-login lookup for ${identity.username} returned ID ${userId}; `
-          + `creation returned ID ${identity.userId}. Refusing ambiguous deletion.`,
+        'Ephemeral administrator absence was not proven before creation; refusing deletion.',
       );
+    }
+
+    let userId;
+    if (identity.userId === null) {
+      // Creation may have succeeded even when its output was malformed. The
+      // generated login was proven absent immediately before that boundary, so
+      // exact-login recovery is the only safe way to discover the unknown ID.
+      userId = await findEphemeralAdminId(identity);
+      summary.cleanup.locatedUserId = userId;
+      if (userId === null) {
+        summary.cleanup.ok = true;
+        summary.cleanup.reason = 'exact-login lookup confirmed the unknown-ID user is absent';
+        await clearEphemeralRecoveryMarkers(identity);
+        return;
+      }
+      identity.userId = userId;
+      summary.cleanup.userId = userId;
+      await persistEphemeralRecoveryMarker(identity, 'ephemeral administrator cleanup pending');
+      const idState = await inspectExactUserId(identity);
+      if (!idState.exists || !idState.loginMatches) {
+        throw new Error(
+          'Exact-login recovery did not resolve to a matching exact user ID; refusing deletion.',
+        );
+      }
+    } else {
+      if (!Number.isSafeInteger(identity.userId) || identity.userId <= 0) {
+        throw new Error('Creation recorded an invalid exact user ID; refusing deletion.');
+      }
+      // Once creation supplies an ID, inspect that ID first. This keeps
+      // cleanup independent of a failing or stale user-list query and avoids
+      // deleting a different account that later acquires the generated login.
+      userId = identity.userId;
+      summary.cleanup.locatedUserId = userId;
+      const idState = await inspectExactUserId(identity);
+      if (!idState.exists) {
+        const remainingLoginId = await findEphemeralAdminId(identity);
+        if (remainingLoginId !== null) {
+          throw new Error(
+            `Created user ID ${userId} is absent, but the generated login now resolves to `
+              + `ID ${remainingLoginId}; refusing ambiguous deletion.`,
+          );
+        }
+        summary.cleanup.ok = true;
+        summary.cleanup.reason = 'exact ID and exact login were both confirmed absent';
+        await clearEphemeralRecoveryMarkers(identity);
+        return;
+      }
+      if (!idState.loginMatches) {
+        throw new Error(
+          `Created user ID ${userId} now belongs to a different login; refusing deletion.`,
+        );
+      }
     }
 
     // Source: https://developer.wordpress.org/cli/commands/user/delete/
@@ -699,15 +888,19 @@ async function cleanupEphemeralAdmin(identity) {
         timeoutMs: CLEANUP_PROCESS_TIMEOUT_MS,
       },
     );
-    const remainingUserId = await findEphemeralAdminId(identity);
-    if (remainingUserId !== null) {
+    const postDeleteIdState = await inspectExactUserId(identity);
+    if (postDeleteIdState.exists) {
+      throw new Error(`Exact-ID verification still found user ID ${userId} after deletion.`);
+    }
+    const remainingLoginId = await findEphemeralAdminId(identity);
+    if (remainingLoginId !== null) {
       throw new Error(
-        `Exact-login verification still found ${identity.username} as ID ${remainingUserId} after deletion.`,
+        `Exact-login verification still found ${identity.username} as ID ${remainingLoginId} after deletion.`,
       );
     }
     summary.cleanup.ok = true;
     summary.cleanup.userId = userId;
-    summary.cleanup.reason = 'delete succeeded and exact-login lookup confirmed absence';
+    summary.cleanup.reason = 'delete succeeded and exact ID plus exact login were confirmed absent';
     await clearEphemeralRecoveryMarkers(identity);
     console.log(`Deleted ephemeral administrator ID ${userId}.`);
   } catch (error) {
