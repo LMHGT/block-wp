@@ -477,7 +477,7 @@ footer.wp-block-template-part > hr {
 
 .wp2026-hero-copy {
   display: grid;
-  grid-template-columns: max-content max-content;
+  grid-template-columns: minmax(0, 1fr);
   column-gap: 0.9rem;
   row-gap: 0;
   align-items: start;
@@ -486,6 +486,22 @@ footer.wp-block-template-part > hr {
   min-width: 0;
   text-align: center;
   width: 100%;
+}
+
+.wp2026-hero-copy > * {
+  min-width: 0;
+}
+
+.wp2026-hero-copy > .wp2026-home-title {
+  box-sizing: border-box;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.wp2026-hero-copy > .wp2026-home-lead {
+  box-sizing: border-box;
+  max-width: min(760px, 100%) !important;
+  width: 100% !important;
 }
 
 .wp2026-hero-copy > :not(.wp-block-button) {
@@ -1399,18 +1415,20 @@ footer.wp-block-template-part > hr {
 
   .wp2026-start-bar .wp2026-start-lead.wp-block-paragraph {
     display: block !important;
-    max-width: 300px !important;
+    box-sizing: border-box;
+    max-width: min(720px, calc(100vw - 64px)) !important;
     overflow-wrap: anywhere !important;
     white-space: normal !important;
-    width: 300px !important;
+    width: 100% !important;
   }
 
   .wp2026-start-bar .wp2026-start-step > p.wp-block-paragraph:not(.wp2026-start-number) {
     display: block !important;
-    max-width: 280px !important;
+    box-sizing: border-box;
+    max-width: 100% !important;
     overflow-wrap: anywhere !important;
     white-space: normal !important;
-    width: 280px !important;
+    width: 100% !important;
   }
 
   .wp2026-home-hero-columns,
@@ -2376,11 +2394,48 @@ body main .wp2026-page-cta h2.wp2026-section-title {
 }
 
 body main .wp2026-home-services > .wp2026-section-title {
-  max-width: calc(100% - 36px) !important;
-  overflow-wrap: normal !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 1180px !important;
+  overflow-wrap: anywhere !important;
   text-wrap: balance !important;
   white-space: normal !important;
-  width: auto !important;
+  width: 100% !important;
+}
+
+/* Keep editable text inside its Gutenberg container at every fluid width. */
+body :where(header, main, footer) :where(
+  .wp-block-group,
+  .wp-block-column,
+  .wp-block-buttons,
+  .wp-block-button,
+  .wp-block-list,
+  .wp-block-image
+) {
+  min-inline-size: 0 !important;
+  min-width: 0 !important;
+}
+
+body :where(header, main, footer) :where(
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li,
+  figcaption,
+  summary,
+  blockquote,
+  .wp-block-button__link
+) {
+  box-sizing: border-box;
+  max-inline-size: 100%;
+  max-width: 100%;
+  overflow-wrap: anywhere !important;
+  white-space: normal !important;
+  word-break: normal !important;
 }
 
 @media (max-width: 900px) {
