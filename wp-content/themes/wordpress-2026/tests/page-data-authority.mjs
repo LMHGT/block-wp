@@ -7,6 +7,7 @@ const pageDataUrl = new URL('../wp2026-page-data.json', import.meta.url);
 const pageData = JSON.parse(await readFile(pageDataUrl, 'utf8'));
 const pages = Array.isArray(pageData.pages) ? pageData.pages : [];
 const attachment = pages.find((page) => page.path === '/attachment-therapy/');
+const notFound = pages.find((page) => page.path === '/not-found/');
 
 assert.equal(pages.length, 54, 'The source page inventory must retain all 54 records.');
 assert.ok(attachment, 'Attachment Therapy must remain in the source page inventory.');
@@ -14,6 +15,12 @@ assert.equal(
   attachment.seo?.title,
   'Parent-Child Attachment Therapy Louisville KY | LMHG',
   'Attachment Therapy source metadata must match the current migration and live database.',
+);
+assert.ok(notFound, 'Not Found must remain in the source page inventory.');
+assert.match(
+  notFound.content,
+  /<!-- wp:group [^>]+ -->\n<div class="wp-block-group wp2026-content-section">[\s\S]+<\/div>\n<!-- \/wp:group -->/,
+  'The Not Found Group block must retain its serialized wrapper element.',
 );
 
 console.log('PASS: page-data authority contract');
