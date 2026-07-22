@@ -10,6 +10,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 add_action( 'template_redirect', 'lmhg_site_core_start_accessibility_buffer', 20 );
+add_action( 'after_setup_theme', 'lmhg_site_core_disable_core_block_template_skip_link', 20 );
+
+/**
+ * Keeps the LMHG link as the sole skip link on block templates.
+ *
+ * WordPress 7.0 inserts its block-template skip link only while both of these
+ * core callbacks remain registered. LMHG already provides an equivalent link
+ * with a stable target, so remove the core pair before template rendering.
+ *
+ * @see https://developer.wordpress.org/reference/functions/wp_enqueue_block_template_skip_link/
+ */
+function lmhg_site_core_disable_core_block_template_skip_link(): void {
+	remove_action( 'wp_enqueue_scripts', 'wp_enqueue_block_template_skip_link' );
+	remove_action( 'wp_footer', 'the_block_template_skip_link' );
+}
 
 /**
  * Starts a small HTML buffer so the live rendered page has a skip link and main landmark.
