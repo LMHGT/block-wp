@@ -104,11 +104,8 @@ function lmhg_site_core_redirect_map(): array {
 
 	$map = lmhg_site_core_static_redirect_map();
 	$redirects = get_option( 'lmhg_route_redirects', array() );
-	if ( ! is_array( $redirects ) || empty( $redirects ) ) {
-		$manifest = lmhg_site_core_read_route_manifest();
-		$redirects = isset( $manifest['redirects'] ) && is_array( $manifest['redirects'] )
-			? $manifest['redirects']
-			: array();
+	if ( ! is_array( $redirects ) ) {
+		$redirects = array();
 	}
 
 	foreach ( $redirects as $redirect ) {
@@ -253,29 +250,6 @@ function lmhg_site_core_static_redirect_map(): array {
 			'statusCode' => 301,
 		),
 	);
-}
-
-/**
- * Reads the route manifest bundled with this proof repo.
- *
- * @return array<string,mixed>
- */
-function lmhg_site_core_read_route_manifest(): array {
-	static $manifest = null;
-
-	if ( is_array( $manifest ) ) {
-		return $manifest;
-	}
-
-	$path = dirname( __DIR__, 4 ) . '/data/lmhg/source-route-manifest.json';
-	if ( ! file_exists( $path ) ) {
-		$manifest = array();
-		return $manifest;
-	}
-
-	$decoded = json_decode( (string) file_get_contents( $path ), true );
-	$manifest = is_array( $decoded ) ? $decoded : array();
-	return $manifest;
 }
 
 /**
