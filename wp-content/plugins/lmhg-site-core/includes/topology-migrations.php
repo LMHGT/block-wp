@@ -288,9 +288,6 @@ function lmhg_site_core_run_public_route_parity_migration(): void {
 		}
 
 		$complete = lmhg_site_core_prepare_rank_math_route_meta( (int) $page->ID, $current_path, $target_path ) && $complete;
-		if ( taxonomy_exists( 'lmhg_schema_type' ) ) {
-			lmhg_site_core_set_single_route_term( (int) $page->ID, 'lmhg_schema_type', lmhg_site_core_default_schema_type_for_page( (int) $page->ID ) );
-		}
 	}
 
 	$complete = lmhg_site_core_replace_topology_references() && $complete;
@@ -476,7 +473,6 @@ function lmhg_site_core_sync_topology_meta( int $post_id, array $entry, string $
 			'_lmhg_h1'                 => (string) ( $seo['h1'] ?? '' ),
 			'_lmhg_primary_keyword'    => (string) ( $seo['primaryKeyword'] ?? '' ),
 			'_lmhg_secondary_keywords' => wp_json_encode( $seo['secondaryKeywords'] ?? array() ),
-			'_lmhg_schema_type'        => (string) ( $seo['schemaType'] ?? lmhg_site_core_default_schema_type_for_page( $post_id ) ),
 			'_lmhg_canonical_url'      => home_url( $target_path ),
 			'_lmhg_seo_status'         => (string) ( $seo['status'] ?? 'owner-answer-based-rich-copy' ),
 		);

@@ -253,7 +253,6 @@ function lmhg_site_core_update_route_meta( int $page_id, array $route, string $u
 		'_lmhg_primary_keyword'        => (string) ( $seo['primaryKeyword'] ?? '' ),
 		'_lmhg_secondary_keywords'     => wp_json_encode( $seo['secondaryKeywords'] ?? array() ),
 		'_lmhg_optimization_terms'     => wp_json_encode( $seo['optimizationTerms'] ?? array() ),
-		'_lmhg_schema_type'            => (string) ( $seo['schemaType'] ?? '' ),
 		'_lmhg_canonical_url'          => (string) ( $seo['canonicalUrl'] ?? $url ),
 		'_lmhg_noindex'                => ! empty( $seo['noindex'] ) ? '1' : '0',
 		'_lmhg_seo_status'             => (string) ( $seo['status'] ?? '' ),

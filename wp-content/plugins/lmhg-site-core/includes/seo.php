@@ -366,7 +366,7 @@ function lmhg_site_core_output_social_metadata(): void {
 	$title       = $post_id > 0 ? lmhg_site_core_resolved_seo_title_for_post( $post_id ) : wp_get_document_title();
 	$description = $post_id > 0 ? lmhg_site_core_resolved_meta_description_for_post( $post_id ) : trim( (string) get_bloginfo( 'description' ) );
 	$url         = lmhg_site_core_current_canonical_url();
-	$type        = $post_id > 0 && 'Article' === lmhg_site_core_default_schema_type_for_page( $post_id ) ? 'article' : 'website';
+	$type        = $post_id > 0 && lmhg_site_core_is_article_page( $post_id ) ? 'article' : 'website';
 
 	$tags = array(
 		array( 'property', 'og:locale', 'en_US' ),
@@ -402,62 +402,34 @@ function lmhg_site_core_output_social_metadata(): void {
  * Outputs JSON-LD from imported schema metadata.
  */
 function lmhg_site_core_output_json_ld(): void {
-	if ( is_admin() || is_feed() || is_robots() ) {
+	if ( is_admin() || is_feed() || is_robots() || is_404() ) {
 		return;
 	}
 
 	$site_url = home_url( '/' );
 	$name     = get_bloginfo( 'name' );
-	$post_id  = lmhg_site_core_imported_post_id();
+	$post_id  = is_singular() ? (int) get_queried_object_id() : 0;
 
-	if ( 0 === $post_id ) {
-		$queried_id = is_singular() ? (int) get_queried_object_id() : 0;
-		if ( $queried_id > 0 ) {
-			$headline = lmhg_site_core_normalize_core30_seo_copy( wp_strip_all_tags( get_the_title( $queried_id ) ) );
-			$canonical = lmhg_site_core_current_canonical_url();
-			$page_graph = array(
-				'@context'     => 'https://schema.org',
-				'@type'        => 'WebPage',
-				'name'         => $headline,
-				'headline'     => $headline,
-				'url'          => '' !== $canonical ? $canonical : get_permalink( $queried_id ),
-				'isPartOf'     => array(
-					'@type' => 'WebSite',
-					'name'  => $name,
-					'url'   => $site_url,
-				),
-				'dateModified' => get_the_modified_date( DATE_W3C, $queried_id ),
-			);
-
-			$graph = lmhg_site_core_singular_schema_graph( $page_graph, $queried_id );
-		} else {
-			$graph = array(
-				'@context'        => 'https://schema.org',
-				'@type'           => 'WebSite',
-				'name'            => $name,
-				'url'             => $site_url,
-				'potentialAction' => array(
-					'@type'       => 'SearchAction',
-					'target'      => add_query_arg( 's', '{search_term_string}', $site_url ),
-					'query-input' => 'required name=search_term_string',
-				),
-			);
+	if ( $post_id > 0 ) {
+		$schema_type = lmhg_site_core_resolved_schema_type_for_page( $post_id );
+		if ( '' === $schema_type ) {
+			return;
 		}
-	} else {
-		$schema_type = trim( (string) get_post_meta( $post_id, '_lmhg_schema_type', true ) );
-		$schema_type = '' !== $schema_type ? $schema_type : lmhg_site_core_default_schema_type_for_page( $post_id );
 		$headline    = lmhg_site_core_normalize_core30_seo_copy( wp_strip_all_tags( get_the_title( $post_id ) ) );
-		$canonical   = lmhg_site_core_imported_canonical_url( $post_id );
-		$route       = lmhg_site_core_route_manifest_entry( $post_id );
+		$canonical   = lmhg_site_core_current_canonical_url();
+		$page_url    = '' !== $canonical ? $canonical : (string) get_permalink( $post_id );
+		$route       = lmhg_site_core_imported_post_id() > 0 ? lmhg_site_core_route_manifest_entry( $post_id ) : array();
 
 		$page_graph = array(
 			'@context'     => 'https://schema.org',
 			'@type'        => $schema_type,
+			'@id'          => untrailingslashit( $page_url ) . '/#webpage',
 			'name'         => $headline,
 			'headline'     => $headline,
-			'url'          => '' !== $canonical ? $canonical : get_permalink( $post_id ),
+			'url'          => $page_url,
 			'isPartOf'     => array(
 				'@type' => 'WebSite',
+				'@id'   => home_url( '/#website' ),
 				'name'  => $name,
 				'url'   => $site_url,
 			),
@@ -471,6 +443,19 @@ function lmhg_site_core_output_json_ld(): void {
 		}
 
 		$graph = lmhg_site_core_singular_schema_graph( $page_graph, $post_id, $route, $graph_nodes );
+	} else {
+		$graph = array(
+			'@context'        => 'https://schema.org',
+			'@type'           => 'WebSite',
+			'@id'             => home_url( '/#website' ),
+			'name'            => $name,
+			'url'             => $site_url,
+			'potentialAction' => array(
+				'@type'       => 'SearchAction',
+				'target'      => add_query_arg( 's', '{search_term_string}', $site_url ),
+				'query-input' => 'required name=search_term_string',
+			),
+		);
 	}
 
 	printf(
@@ -479,23 +464,21 @@ function lmhg_site_core_output_json_ld(): void {
 	);
 }
 
-/** Returns the semantic base schema type for a page template. */
+/**
+ * Compatibility wrapper for callers that predate the taxonomy resolver.
+ *
+ * The LMHG schema taxonomy remains the only authoritative source.
+ */
 function lmhg_site_core_default_schema_type_for_page( int $post_id ): string {
-	if ( (int) get_option( 'page_on_front' ) === $post_id ) {
-		return 'WebPage';
-	}
+	return function_exists( 'lmhg_site_core_resolved_schema_type_for_page' )
+		? lmhg_site_core_resolved_schema_type_for_page( $post_id )
+		: 'WebPage';
+}
 
-	$template = sanitize_key( (string) get_page_template_slug( $post_id ) );
-	if ( 'article-page' === $template ) {
-		return 'Article';
-	}
-
-	return match ( $template ) {
-		'service-page', 'specialty-page', 'location-access-page' => 'MedicalWebPage',
-		'services-hub', 'specialties-hub', 'article-hub', 'faq-hub', 'team-page', 'trust-page' => 'CollectionPage',
-		'contact-page' => 'ContactPage',
-		default        => 'WebPage',
-	};
+/** Returns whether a page uses LMHG's dedicated article-page template. */
+function lmhg_site_core_is_article_page( int $post_id ): bool {
+	return 'page' === get_post_type( $post_id )
+		&& 'article-page' === sanitize_key( (string) get_page_template_slug( $post_id ) );
 }
 
 /**
@@ -513,6 +496,11 @@ function lmhg_site_core_singular_schema_graph( array $page_graph, int $post_id, 
 	}
 
 	$url = isset( $page_graph['url'] ) ? (string) $page_graph['url'] : '';
+
+	$article_node = lmhg_site_core_article_schema_node( $post_id, $url );
+	if ( ! empty( $article_node ) ) {
+		$graph_nodes[] = $article_node;
+	}
 
 	$service_node = lmhg_site_core_service_schema_node( $post_id, $url );
 	if ( ! empty( $service_node ) ) {
@@ -544,6 +532,79 @@ function lmhg_site_core_singular_schema_graph( array $page_graph, int $post_id, 
 		'@context' => 'https://schema.org',
 		'@graph'   => $graph_nodes,
 	);
+}
+
+/**
+ * Builds the separate Article entity linked to an article template's WebPage.
+ *
+ * @param int    $post_id Page ID.
+ * @param string $url Canonical page URL.
+ * @return array<string,mixed>
+ */
+function lmhg_site_core_article_schema_node( int $post_id, string $url ): array {
+	if ( ! lmhg_site_core_is_article_page( $post_id ) ) {
+		return array();
+	}
+
+	$url = '' !== $url ? $url : (string) get_permalink( $post_id );
+	if ( '' === $url ) {
+		return array();
+	}
+
+	$title       = lmhg_site_core_resolved_seo_title_for_post( $post_id );
+	$description = lmhg_site_core_resolved_meta_description_for_post( $post_id );
+	$webpage_id  = untrailingslashit( $url ) . '/#webpage';
+	$article     = array(
+		'@type'            => 'Article',
+		'@id'              => untrailingslashit( $url ) . '/#richSnippet',
+		'url'              => $url,
+		'name'             => $title,
+		'headline'         => $title,
+		'isPartOf'         => array( '@id' => $webpage_id ),
+		'mainEntityOfPage' => array( '@id' => $webpage_id ),
+	);
+
+	if ( '' !== $description ) {
+		$article['description'] = $description;
+	}
+
+	$keywords = array_values( array_filter( array_map( 'trim', explode( ',', (string) get_post_meta( $post_id, 'rank_math_focus_keyword', true ) ) ) ) );
+	if ( empty( $keywords ) ) {
+		$primary   = trim( (string) get_post_meta( $post_id, '_lmhg_primary_keyword', true ) );
+		$secondary = json_decode( (string) get_post_meta( $post_id, '_lmhg_secondary_keywords', true ), true );
+		$secondary = is_array( $secondary ) ? array_map( 'trim', $secondary ) : array();
+		$keywords  = array_values( array_unique( array_filter( array_merge( array( $primary ), $secondary ) ) ) );
+	}
+	if ( ! empty( $keywords ) ) {
+		$article['keywords'] = implode( ', ', $keywords );
+	}
+
+	$post = get_post( $post_id );
+	if ( $post instanceof WP_Post && (int) $post->post_author > 0 ) {
+		$author_name = trim( (string) get_the_author_meta( 'display_name', (int) $post->post_author ) );
+		if ( '' !== $author_name ) {
+			$article['author'] = array(
+				'@type' => 'Person',
+				'name'  => $author_name,
+			);
+		}
+	}
+
+	$article['publisher'] = lmhg_site_core_organization_schema_node();
+	$published            = (string) get_the_date( DATE_W3C, $post_id );
+	$modified             = (string) get_the_modified_date( DATE_W3C, $post_id );
+	$language             = trim( (string) get_bloginfo( 'language' ) );
+	if ( '' !== $published ) {
+		$article['datePublished'] = $published;
+	}
+	if ( '' !== $modified ) {
+		$article['dateModified'] = $modified;
+	}
+	if ( '' !== $language ) {
+		$article['inLanguage'] = $language;
+	}
+
+	return $article;
 }
 
 /**

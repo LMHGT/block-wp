@@ -356,8 +356,8 @@ function lmhg_site_core_refresh_rank_math_rewrites(): void {
  * Disables Rank Math's post-type-wide Article placeholder for WordPress Pages.
  *
  * LMHG applies each Page's semantic type to the base graph entity at render
- * time. Conventional article templates remain Article through that explicit
- * mapping instead of making every Page begin as an Article rich snippet.
+ * time. Article templates receive a separate Article entity instead of making
+ * every Page begin as an Article rich snippet.
  */
 function lmhg_site_core_sync_rank_math_page_schema_default(): void {
 	if (
@@ -568,11 +568,14 @@ function lmhg_site_core_configure_rank_math_integration(): void {
 	remove_action( 'wp_head', 'lmhg_site_core_output_canonical', 4 );
 	remove_action( 'wp_head', 'lmhg_site_core_output_meta_description', 5 );
 	remove_action( 'wp_head', 'lmhg_site_core_output_json_ld', 20 );
+	// Rank Math publishes the graph; Site Core owns each page's schema intent.
 	add_filter( 'rank_math/snippet/rich_snippet_article_entity', 'lmhg_site_core_rank_math_article_entity', 90 );
 	add_filter( 'rank_math/json_ld', 'lmhg_site_core_extend_rank_math_json_ld', 90, 2 );
 	add_filter( 'rank_math/json_ld', 'lmhg_site_core_finalize_rank_math_page_schema', 999, 2 );
 	add_filter( 'rank_math/sitemap/exclude_post_type', 'lmhg_site_core_rank_math_exclude_sitemap_post_type', 90, 2 );
 	add_filter( 'rank_math/sitemap/exclude_taxonomy', '__return_true', 90 );
+	add_action( 'transition_post_status', 'lmhg_site_core_invalidate_rank_math_post_sitemap_on_transition', PHP_INT_MAX, 3 );
+	add_action( 'deleted_post', 'lmhg_site_core_invalidate_rank_math_post_sitemap_on_delete', PHP_INT_MAX, 2 );
 }
 
 /** Keeps the Rank Math XML sitemap limited to canonical Pages and Posts. */
@@ -580,19 +583,58 @@ function lmhg_site_core_rank_math_exclude_sitemap_post_type( bool $exclude, stri
 	return $exclude || ! in_array( $post_type, array( 'page', 'post' ), true );
 }
 
-/** Keeps Rank Math's post-type-wide Article default only on article templates. */
+/** Invalidates Rank Math's sitemap index when a Post enters or leaves publish. */
+function lmhg_site_core_invalidate_rank_math_post_sitemap_on_transition( string $new_status, string $old_status, WP_Post $post ): void {
+	if ( 'post' !== $post->post_type || $new_status === $old_status ) {
+		return;
+	}
+	if ( 'publish' !== $new_status && 'publish' !== $old_status ) {
+		return;
+	}
+	lmhg_site_core_invalidate_rank_math_sitemap_storage();
+}
+
+/** Invalidates Rank Math's sitemap index after direct deletion of a published Post. */
+function lmhg_site_core_invalidate_rank_math_post_sitemap_on_delete( int $post_id, WP_Post $post ): void {
+	unset( $post_id );
+	if ( 'post' !== $post->post_type || 'publish' !== $post->post_status ) {
+		return;
+	}
+	lmhg_site_core_invalidate_rank_math_sitemap_storage();
+}
+
+/** Clears Rank Math's internal sitemap storage without issuing public requests. */
+function lmhg_site_core_invalidate_rank_math_sitemap_storage(): void {
+	if ( class_exists( '\\RankMath\\Sitemap\\Cache' ) ) {
+		\RankMath\Sitemap\Cache::invalidate_storage();
+	}
+}
+
+/** Returns whether the current Page uses LMHG's article template. */
+function lmhg_site_core_rank_math_is_article_page( int $post_id ): bool {
+	if ( function_exists( 'lmhg_site_core_is_article_page' ) ) {
+		return lmhg_site_core_is_article_page( $post_id );
+	}
+
+	return 'article-page' === sanitize_key( (string) get_page_template_slug( $post_id ) );
+}
+
+/** Keeps Rank Math Article entities only on article templates. */
 function lmhg_site_core_rank_math_article_entity( array $entity ): array {
 	$post_id = is_singular() ? (int) get_queried_object_id() : 0;
 	if ( $post_id <= 0 || 'page' !== get_post_type( $post_id ) ) {
 		return $entity;
 	}
 
-	return 'Article' === lmhg_site_core_default_schema_type_for_page( $post_id ) ? $entity : array();
+	return lmhg_site_core_rank_math_is_article_page( $post_id ) ? $entity : array();
 }
 
 /** Applies the LMHG page type after Rank Math connects its graph entities. */
 function lmhg_site_core_finalize_rank_math_page_schema( array $data, mixed $json_ld = null ): array {
 	unset( $json_ld );
+	if ( function_exists( 'is_404' ) && is_404() ) {
+		return lmhg_site_core_rank_math_remove_page_entities( $data );
+	}
 	if ( ! is_singular() ) {
 		return $data;
 	}
@@ -601,20 +643,15 @@ function lmhg_site_core_finalize_rank_math_page_schema( array $data, mixed $json
 		return $data;
 	}
 
-	$canonical = lmhg_site_core_current_canonical_url();
-	$schema_type = trim( (string) get_post_meta( $post_id, '_lmhg_schema_type', true ) );
-	$schema_type = '' !== $schema_type ? $schema_type : lmhg_site_core_default_schema_type_for_page( $post_id );
+	$canonical         = lmhg_site_core_current_canonical_url();
+	$schema_type       = lmhg_site_core_resolved_schema_type_for_page( $post_id );
+	$is_article_page   = lmhg_site_core_rank_math_is_article_page( $post_id );
 	$webpage_id        = untrailingslashit( $canonical ) . '/#webpage';
 	$has_article_node  = false;
 	$has_webpage_node  = false;
-	foreach ( $data as $node ) {
-		if ( ! is_array( $node ) ) {
-			continue;
-		}
-		$types = isset( $node['@type'] ) && is_array( $node['@type'] ) ? $node['@type'] : array( $node['@type'] ?? '' );
-		if ( in_array( 'Article', $types, true ) && str_ends_with( (string) ( $node['@id'] ?? '' ), '/#richSnippet' ) ) {
-			$has_article_node = true;
-		}
+
+	if ( '' === $schema_type ) {
+		return lmhg_site_core_rank_math_remove_page_entities( $data );
 	}
 
 	foreach ( $data as $key => $node ) {
@@ -622,34 +659,49 @@ function lmhg_site_core_finalize_rank_math_page_schema( array $data, mixed $json
 			continue;
 		}
 		$types = isset( $node['@type'] ) && is_array( $node['@type'] ) ? $node['@type'] : array( $node['@type'] ?? '' );
-		if (
-			'Article' !== $schema_type
-			&& in_array( 'Article', $types, true )
-			&& str_ends_with( (string) ( $node['@id'] ?? '' ), '/#richSnippet' )
-		) {
-			unset( $data[ $key ] );
-			continue;
-		}
 		if ( $webpage_id !== (string) ( $node['@id'] ?? '' ) ) {
+			if ( in_array( 'Article', $types, true ) ) {
+				if ( ! $is_article_page ) {
+					unset( $data[ $key ] );
+					continue;
+				}
+				$has_article_node = true;
+			}
 			continue;
 		}
 
 		$has_webpage_node = true;
-		if ( 'Article' === $schema_type ) {
-			continue;
-		}
 		$data[ $key ]['@type'] = in_array( 'FAQPage', $types, true ) && 'FAQPage' !== $schema_type
 			? array( $schema_type, 'FAQPage' )
 			: $schema_type;
 	}
 
 	if ( ! $has_webpage_node ) {
-		$base_type = 'Article' === $schema_type ? 'WebPage' : $schema_type;
-		$data['lmhg_webpage'] = lmhg_site_core_rank_math_base_page_entity( $post_id, $canonical, $base_type );
+		$data['lmhg_webpage'] = lmhg_site_core_rank_math_base_page_entity( $post_id, $canonical, $schema_type );
 	}
-	if ( 'Article' === $schema_type && ! $has_article_node ) {
+	if ( $is_article_page && ! $has_article_node ) {
 		$data['lmhg_article'] = lmhg_site_core_rank_math_article_entity_for_page( $post_id, $canonical, $data );
 	}
+	return $data;
+}
+
+/** Removes page/article entities while preserving site and organization nodes. */
+function lmhg_site_core_rank_math_remove_page_entities( array $data ): array {
+	$page_types = function_exists( 'lmhg_site_core_allowed_page_schema_types' )
+		? lmhg_site_core_allowed_page_schema_types()
+		: array( 'WebPage', 'MedicalWebPage', 'CollectionPage', 'FAQPage', 'AboutPage', 'ContactPage', 'ProfilePage' );
+	$page_types[] = 'Article';
+
+	foreach ( $data as $key => $node ) {
+		if ( ! is_array( $node ) ) {
+			continue;
+		}
+		$types = isset( $node['@type'] ) && is_array( $node['@type'] ) ? $node['@type'] : array( $node['@type'] ?? '' );
+		if ( array_intersect( $page_types, $types ) ) {
+			unset( $data[ $key ] );
+		}
+	}
+
 	return $data;
 }
 
