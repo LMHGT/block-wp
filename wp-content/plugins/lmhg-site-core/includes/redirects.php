@@ -241,7 +241,7 @@ function lmhg_site_core_static_redirect_map(): array {
 			'statusCode' => 301,
 		),
 		'/couples-conflict-resolution/' => array(
-			'target'     => '/couples-counseling/',
+			'target'     => '/conflict-resolution-counseling/',
 			'statusCode' => 301,
 		),
 		'/relationship-counseling/'      => array(

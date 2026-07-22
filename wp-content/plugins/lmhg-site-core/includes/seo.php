@@ -12,8 +12,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 remove_action( 'wp_head', 'rel_canonical' );
 add_filter( 'pre_get_document_title', 'lmhg_site_core_document_title' );
 add_filter( 'wp_robots', 'lmhg_site_core_filter_robots' );
+add_filter( 'rank_math/frontend/robots', 'lmhg_site_core_filter_rank_math_404_robots', 100 );
+add_filter( 'rank_math/frontend/canonical', 'lmhg_site_core_filter_rank_math_404_canonical', 100 );
 add_filter( 'wp_headers', 'lmhg_site_core_filter_development_robots_headers' );
+add_filter( 'wp_headers', 'lmhg_site_core_filter_unavailable_surface_headers', 100 );
 add_action( 'send_headers', 'lmhg_site_core_send_development_robots_header' );
+add_action( 'send_headers', 'lmhg_site_core_send_unavailable_surface_robots_header', 100 );
 add_action( 'wp_head', 'lmhg_site_core_output_canonical', 4 );
 add_action( 'wp_head', 'lmhg_site_core_output_meta_description', 5 );
 add_action( 'wp_head', 'lmhg_site_core_output_social_metadata', 6 );
@@ -46,6 +50,13 @@ function lmhg_site_core_document_title( string $title ): string {
  * @return array<string,bool|string>
  */
 function lmhg_site_core_filter_robots( array $robots ): array {
+	if ( is_404() ) {
+		return array(
+			'noindex' => true,
+			'follow'  => true,
+		);
+	}
+
 	if ( lmhg_site_core_should_suppress_indexing() ) {
 		$robots['noindex']     = true;
 		$robots['nofollow']    = true;
@@ -70,6 +81,33 @@ function lmhg_site_core_filter_robots( array $robots ): array {
 }
 
 /**
+ * Keeps Rank Math's robots output explicit and recovery-friendly on real 404s.
+ *
+ * @param array<string,string> $robots Rank Math robots directives.
+ * @return array<string,string>
+ */
+function lmhg_site_core_filter_rank_math_404_robots( array $robots ): array {
+	if ( ! is_404() ) {
+		return $robots;
+	}
+
+	return array(
+		'index'  => 'noindex',
+		'follow' => 'follow',
+	);
+}
+
+/**
+ * Prevents Rank Math from identifying an error URL as canonical content.
+ *
+ * @param string|false $canonical Rank Math canonical URL.
+ * @return string|false
+ */
+function lmhg_site_core_filter_rank_math_404_canonical( string|false $canonical ): string|false {
+	return is_404() ? false : $canonical;
+}
+
+/**
  * Adds staging/development discovery suppression headers through WordPress' header filter.
  *
  * @param array<string,string> $headers HTTP headers.
@@ -85,6 +123,21 @@ function lmhg_site_core_filter_development_robots_headers( array $headers ): arr
 }
 
 /**
+ * Marks real errors and intentionally unavailable feeds as non-indexable.
+ *
+ * @param array<string,string> $headers HTTP response headers.
+ * @return array<string,string>
+ */
+function lmhg_site_core_filter_unavailable_surface_headers( array $headers ): array {
+	if ( is_admin() || ( ! is_404() && ! is_feed() ) ) {
+		return $headers;
+	}
+
+	$headers['X-Robots-Tag'] = 'noindex, follow';
+	return $headers;
+}
+
+/**
  * Sends staging/development discovery suppression headers.
  */
 function lmhg_site_core_send_development_robots_header(): void {
@@ -93,6 +146,15 @@ function lmhg_site_core_send_development_robots_header(): void {
 	}
 
 	header( 'X-Robots-Tag: ' . LMHG_SITE_CORE_DEVELOPMENT_ROBOTS, true );
+}
+
+/** Ensures late header writers cannot make an unavailable surface indexable. */
+function lmhg_site_core_send_unavailable_surface_robots_header(): void {
+	if ( is_admin() || ( ! is_404() && ! is_feed() ) || headers_sent() ) {
+		return;
+	}
+
+	header( 'X-Robots-Tag: noindex, follow', true );
 }
 
 /**
