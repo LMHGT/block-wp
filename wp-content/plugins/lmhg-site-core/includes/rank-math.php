@@ -18,18 +18,22 @@ const LMHG_SITE_CORE_RANK_MATH_KEYWORD_SYNC_OPTION  = 'lmhg_rank_math_keyword_sy
 const LMHG_SITE_CORE_RANK_MATH_KEYWORD_SYNC_VERSION = '2026-07-16-seo-decision-lab-metadata-v3';
 const LMHG_SITE_CORE_RANK_MATH_KEYWORD_REPORT_OPTION = 'lmhg_rank_math_keyword_sync_report';
 const LMHG_SITE_CORE_RANK_MATH_SITEMAP_SYNC_OPTION = 'lmhg_rank_math_sitemap_sync_version';
-const LMHG_SITE_CORE_RANK_MATH_SITEMAP_SYNC_VERSION = '2026-07-21-page-inventory-v2';
+const LMHG_SITE_CORE_RANK_MATH_SITEMAP_SYNC_VERSION = '2026-07-22-page-and-post-inventory-v3';
 const LMHG_SITE_CORE_RANK_MATH_REWRITE_OPTION = 'lmhg_rank_math_rewrite_version';
 const LMHG_SITE_CORE_RANK_MATH_REWRITE_VERSION = '2026-07-21-sitemap-handoff-v2';
 const LMHG_SITE_CORE_RANK_MATH_PAGE_SCHEMA_OPTION = 'lmhg_rank_math_page_schema_default_version';
 const LMHG_SITE_CORE_RANK_MATH_PAGE_SCHEMA_VERSION = '2026-07-22-page-schema-default-off-v1';
 const LMHG_SITE_CORE_RANK_MATH_PAGE_SCHEMA_REPORT = 'lmhg_rank_math_page_schema_default_report';
+const LMHG_SITE_CORE_RANK_MATH_SETTINGS_CLEANUP_OPTION = 'lmhg_rank_math_settings_cleanup_version';
+const LMHG_SITE_CORE_RANK_MATH_SETTINGS_CLEANUP_VERSION = '2026-07-22-high-confidence-settings-v1';
+const LMHG_SITE_CORE_RANK_MATH_SETTINGS_CLEANUP_REPORT = 'lmhg_rank_math_settings_cleanup_report';
 
 add_action( 'init', 'lmhg_site_core_configure_rank_math_integration', 99 );
 add_action( 'init', 'lmhg_site_core_sync_rank_math_sitemap_inventory', 100 );
 add_action( 'init', 'lmhg_site_core_sync_canonical_rank_math_keywords', 101 );
 add_action( 'init', 'lmhg_site_core_refresh_rank_math_rewrites', 102 );
 add_action( 'init', 'lmhg_site_core_sync_rank_math_page_schema_default', 103 );
+add_action( 'init', 'lmhg_site_core_sync_rank_math_settings_cleanup', 104 );
 add_action( 'admin_post_lmhg_rank_math_handoff', 'lmhg_site_core_handle_rank_math_handoff' );
 add_action( 'admin_post_lmhg_rank_math_handoff_rollback', 'lmhg_site_core_handle_rank_math_handoff_rollback' );
 add_action( 'enqueue_block_editor_assets', 'lmhg_site_core_enqueue_rank_math_content_bridge', 99 );
@@ -49,8 +53,14 @@ function lmhg_site_core_sync_rank_math_sitemap_inventory(): void {
 	if ( ! is_array( $settings ) ) {
 		return;
 	}
+	$current_post_sitemap = $settings['pt_post_sitemap'] ?? null;
+	if ( ! in_array( $current_post_sitemap, array( 'off', 'on' ), true ) ) {
+		return;
+	}
 	$settings['pt_page_sitemap']      = 'on';
-	$settings['pt_post_sitemap']      = 'off';
+	if ( 'off' === $current_post_sitemap ) {
+		$settings['pt_post_sitemap'] = 'on';
+	}
 	$settings['authors_sitemap']      = 'off';
 	$settings['tax_category_sitemap'] = 'off';
 	$settings['tax_post_tag_sitemap'] = 'off';
@@ -60,8 +70,272 @@ function lmhg_site_core_sync_rank_math_sitemap_inventory(): void {
 	}
 
 	$stored = get_option( 'rank-math-options-sitemap', array() );
-	if ( is_array( $stored ) && 'on' === (string) ( $stored['pt_page_sitemap'] ?? '' ) && 'off' === (string) ( $stored['pt_post_sitemap'] ?? '' ) && 'off' === (string) ( $stored['tax_category_sitemap'] ?? '' ) ) {
+	if ( is_array( $stored ) && 'on' === (string) ( $stored['pt_page_sitemap'] ?? '' ) && 'on' === (string) ( $stored['pt_post_sitemap'] ?? '' ) && 'off' === (string) ( $stored['tax_category_sitemap'] ?? '' ) ) {
 		update_option( LMHG_SITE_CORE_RANK_MATH_SITEMAP_SYNC_OPTION, LMHG_SITE_CORE_RANK_MATH_SITEMAP_SYNC_VERSION, false );
+	}
+}
+
+/** Returns only the Rank Math values governed by the cleanup migration. */
+function lmhg_site_core_rank_math_settings_cleanup_snapshot( array $settings ): array {
+	$paths = array(
+		'titles' => array(
+			'knowledgegraph_type',
+			'disable_author_archives',
+			'tax_category_custom_robots',
+			'tax_category_robots',
+			'noindex_password_protected',
+			'pt_post_default_rich_snippet',
+			'pt_post_default_article_type',
+		),
+		'general' => array( 'new_window_external_links', 'llms_post_types' ),
+		'sitemap' => array( 'pt_page_sitemap', 'pt_post_sitemap', 'pt_product_sitemap', 'html_sitemap', 'tax_category_sitemap' ),
+	);
+	$snapshot = array();
+	foreach ( $paths as $group => $keys ) {
+		$snapshot[ $group ] = array();
+		if ( ! isset( $settings[ $group ] ) || ! is_array( $settings[ $group ] ) ) {
+			continue;
+		}
+		foreach ( $keys as $key ) {
+			$snapshot[ $group ][ $key ] = $settings[ $group ][ $key ] ?? null;
+		}
+	}
+	$snapshot['modules'] = isset( $settings['modules'] ) && is_array( $settings['modules'] ) ? $settings['modules'] : null;
+	return $snapshot;
+}
+
+/**
+ * Produces a conflict-safe, side-effect-free Rank Math cleanup plan.
+ *
+ * A governed scalar changes only from its audited value to the approved value.
+ * Already-correct values are no-ops; any third value is retained and reported.
+ */
+function lmhg_site_core_rank_math_settings_cleanup_plan( array $settings ): array {
+	$after     = $settings;
+	$changed   = array();
+	$conflicts = array();
+	$failures  = array();
+	$rules     = array(
+		'titles' => array(
+			'knowledgegraph_type'        => array( 'person', 'company' ),
+			'disable_author_archives'    => array( 'off', 'on' ),
+			'tax_category_custom_robots' => array( 'off', 'on' ),
+			'tax_category_robots'        => array( array( 'index' ), array( 'noindex' ) ),
+			'noindex_password_protected' => array( 'off', 'on' ),
+		),
+		'general' => array(
+			'new_window_external_links' => array( 'on', 'off' ),
+		),
+		'sitemap' => array(
+			'pt_post_sitemap'    => array( 'off', 'on' ),
+			'pt_product_sitemap' => array( 'on', 'off' ),
+			'html_sitemap'       => array( 'on', 'off' ),
+		),
+	);
+
+	foreach ( $rules as $group => $group_rules ) {
+		if ( ! isset( $after[ $group ] ) || ! is_array( $after[ $group ] ) ) {
+			$failures[] = $group . '_settings_unavailable';
+			continue;
+		}
+		foreach ( $group_rules as $key => $values ) {
+			$path    = $group . '.' . $key;
+			$current = $after[ $group ][ $key ] ?? null;
+			if ( $values[1] === $current ) {
+				continue;
+			}
+			if ( $values[0] !== $current ) {
+				$conflicts[] = $path;
+				continue;
+			}
+			$after[ $group ][ $key ] = $values[1];
+			$changed[]                = $path;
+		}
+	}
+
+	if ( ! isset( $after['modules'] ) || ! is_array( $after['modules'] ) ) {
+		$failures[] = 'modules_settings_unavailable';
+	} else {
+		$unused_modules = array( 'woocommerce', 'buddypress', 'bbpress', 'acf', 'web-stories', 'image-seo' );
+		$modules        = $after['modules'];
+		foreach ( $unused_modules as $module ) {
+			foreach ( $modules as $key => $candidate ) {
+				if ( $module !== $candidate ) {
+					continue;
+				}
+				unset( $modules[ $key ] );
+				$changed[] = 'modules.' . $module;
+			}
+		}
+		$after['modules'] = $modules;
+	}
+
+	return array(
+		'before'   => lmhg_site_core_rank_math_settings_cleanup_snapshot( $settings ),
+		'after'    => $after,
+		'changed'  => $changed,
+		'conflicts' => $conflicts,
+		'failures' => $failures,
+	);
+}
+
+/** Produces the exact-match metadata portion of the Rank Math cleanup plan. */
+function lmhg_site_core_rank_math_metadata_cleanup_plan( array $metadata ): array {
+	$after     = $metadata;
+	$changed   = array();
+	$conflicts = array();
+	$title_old = 'Parent Child Parent-Child Attachment Therapy Louisville KY';
+	$title_new = 'Parent-Child Attachment Therapy Louisville KY | LMHG';
+	$title_keys = array( '_lmhg_seo_title', 'rank_math_title' );
+
+	foreach ( $title_keys as $key ) {
+		$path  = 'metadata.attachment-therapy.' . $key;
+		$entry = $after['attachment-therapy'][ $key ] ?? array( 'exists' => false, 'value' => '' );
+		if ( true === (bool) ( $entry['exists'] ?? false ) && $title_new === (string) ( $entry['value'] ?? '' ) ) {
+			continue;
+		}
+		if ( true !== (bool) ( $entry['exists'] ?? false ) || $title_old !== (string) ( $entry['value'] ?? '' ) ) {
+			$conflicts[] = $path;
+			continue;
+		}
+		$after['attachment-therapy'][ $key ] = array( 'exists' => true, 'value' => $title_new );
+		$changed[] = $path;
+	}
+
+	$canonical_path  = 'metadata.specialties._lmhg_canonical_url';
+	$canonical_entry = $after['specialties']['_lmhg_canonical_url'] ?? array( 'exists' => false, 'value' => '' );
+	if ( true === (bool) ( $canonical_entry['exists'] ?? false ) ) {
+		if ( 'http://100.70.222.25:8093/specialties/' === (string) ( $canonical_entry['value'] ?? '' ) ) {
+			$after['specialties']['_lmhg_canonical_url'] = array( 'exists' => false, 'value' => '' );
+			$changed[] = $canonical_path;
+		} else {
+			$conflicts[] = $canonical_path;
+		}
+	}
+
+	return array(
+		'before'    => $metadata,
+		'after'     => $after,
+		'changed'   => $changed,
+		'conflicts' => $conflicts,
+		'failures'  => array(),
+	);
+}
+
+/** Reads only the page metadata governed by the cleanup migration. */
+function lmhg_site_core_rank_math_metadata_cleanup_state(): array {
+	$specs = array(
+		'attachment-therapy' => array( '_lmhg_seo_title', 'rank_math_title' ),
+		'specialties'        => array( '_lmhg_canonical_url' ),
+	);
+	$metadata = array();
+	$post_ids = array();
+	$failures = array();
+	foreach ( $specs as $slug => $keys ) {
+		$post = get_page_by_path( $slug, OBJECT, 'page' );
+		if ( ! $post instanceof WP_Post ) {
+			$failures[] = 'metadata_page_not_found:' . $slug;
+			continue;
+		}
+		$post_ids[ $slug ] = (int) $post->ID;
+		foreach ( $keys as $key ) {
+			$exists = metadata_exists( 'post', (int) $post->ID, $key );
+			$metadata[ $slug ][ $key ] = array(
+				'exists' => $exists,
+				'value'  => $exists ? get_post_meta( (int) $post->ID, $key, true ) : '',
+			);
+		}
+	}
+	return array( 'metadata' => $metadata, 'post_ids' => $post_ids, 'failures' => $failures );
+}
+
+/** Applies the approved high-confidence Rank Math cleanup exactly once. */
+function lmhg_site_core_sync_rank_math_settings_cleanup(): void {
+	if (
+		! lmhg_site_core_rank_math_is_active()
+		|| LMHG_SITE_CORE_RANK_MATH_SETTINGS_CLEANUP_VERSION === (string) get_option( LMHG_SITE_CORE_RANK_MATH_SETTINGS_CLEANUP_OPTION, '' )
+	) {
+		return;
+	}
+
+	$option_names = array(
+		'titles'  => 'rank-math-options-titles',
+		'general' => 'rank-math-options-general',
+		'sitemap' => 'rank-math-options-sitemap',
+		'modules' => 'rank_math_modules',
+	);
+	$settings = array();
+	foreach ( $option_names as $group => $option_name ) {
+		$settings[ $group ] = get_option( $option_name, null );
+	}
+
+	$plan           = lmhg_site_core_rank_math_settings_cleanup_plan( $settings );
+	$metadata_state = lmhg_site_core_rank_math_metadata_cleanup_state();
+	$metadata_plan  = lmhg_site_core_rank_math_metadata_cleanup_plan( $metadata_state['metadata'] );
+	$report = array(
+		'version'      => LMHG_SITE_CORE_RANK_MATH_SETTINGS_CLEANUP_VERSION,
+		'completed_at' => '',
+		'before'       => array( 'settings' => $plan['before'], 'metadata' => $metadata_plan['before'] ),
+		'after'        => array( 'settings' => lmhg_site_core_rank_math_settings_cleanup_snapshot( $plan['after'] ), 'metadata' => $metadata_plan['after'] ),
+		'changed'      => array_merge( $plan['changed'], $metadata_plan['changed'] ),
+		'conflicts'    => array_merge( $plan['conflicts'], $metadata_plan['conflicts'] ),
+		'failures'     => array_merge( $plan['failures'], $metadata_plan['failures'], $metadata_state['failures'] ),
+	);
+	if ( ! empty( $report['conflicts'] ) || ! empty( $report['failures'] ) ) {
+		update_option( LMHG_SITE_CORE_RANK_MATH_SETTINGS_CLEANUP_REPORT, $report, false );
+		return;
+	}
+
+	$changed_groups = array();
+	foreach ( $plan['changed'] as $path ) {
+		$changed_groups[ strstr( $path, '.', true ) ] = true;
+	}
+	foreach ( array_keys( $changed_groups ) as $group ) {
+		if ( 'metadata' === $group ) {
+			continue;
+		}
+		update_option( $option_names[ $group ], $plan['after'][ $group ], false );
+	}
+	if ( isset( $changed_groups['sitemap'] ) && class_exists( '\\RankMath\\Sitemap\\Cache' ) ) {
+		\RankMath\Sitemap\Cache::invalidate_storage();
+	}
+	foreach ( $metadata_plan['changed'] as $path ) {
+		[, $slug, $key] = explode( '.', $path, 3 );
+		$post_id         = (int) $metadata_state['post_ids'][ $slug ];
+		$entry           = $metadata_plan['after'][ $slug ][ $key ];
+		if ( true === (bool) $entry['exists'] ) {
+			update_post_meta( $post_id, $key, $entry['value'] );
+		} else {
+			delete_post_meta( $post_id, $key );
+		}
+	}
+
+	$stored = array();
+	foreach ( $option_names as $group => $option_name ) {
+		$stored[ $group ] = get_option( $option_name, null );
+	}
+	$stored_metadata = lmhg_site_core_rank_math_metadata_cleanup_state();
+	$report['after'] = array(
+		'settings' => lmhg_site_core_rank_math_settings_cleanup_snapshot( $stored ),
+		'metadata' => $stored_metadata['metadata'],
+	);
+	if ( $stored !== $plan['after'] || $stored_metadata['metadata'] !== $metadata_plan['after'] ) {
+		$report['failures'][] = 'cleanup_not_persisted';
+		update_option( LMHG_SITE_CORE_RANK_MATH_SETTINGS_CLEANUP_REPORT, $report, false );
+		return;
+	}
+
+	$report['completed_at'] = gmdate( 'c' );
+	update_option( LMHG_SITE_CORE_RANK_MATH_SETTINGS_CLEANUP_REPORT, $report, false );
+	if ( $report !== get_option( LMHG_SITE_CORE_RANK_MATH_SETTINGS_CLEANUP_REPORT, array() ) ) {
+		return;
+	}
+	update_option( LMHG_SITE_CORE_RANK_MATH_SETTINGS_CLEANUP_OPTION, LMHG_SITE_CORE_RANK_MATH_SETTINGS_CLEANUP_VERSION, false );
+	if ( LMHG_SITE_CORE_RANK_MATH_SETTINGS_CLEANUP_VERSION !== (string) get_option( LMHG_SITE_CORE_RANK_MATH_SETTINGS_CLEANUP_OPTION, '' ) ) {
+		$report['completed_at'] = '';
+		$report['failures'][]   = 'completion_marker_not_persisted';
+		update_option( LMHG_SITE_CORE_RANK_MATH_SETTINGS_CLEANUP_REPORT, $report, false );
+		return;
 	}
 }
 
@@ -301,9 +575,9 @@ function lmhg_site_core_configure_rank_math_integration(): void {
 	add_filter( 'rank_math/sitemap/exclude_taxonomy', '__return_true', 90 );
 }
 
-/** Keeps the Rank Math XML sitemap limited to canonical WordPress Pages. */
+/** Keeps the Rank Math XML sitemap limited to canonical Pages and Posts. */
 function lmhg_site_core_rank_math_exclude_sitemap_post_type( bool $exclude, string $post_type ): bool {
-	return $exclude || 'page' !== $post_type;
+	return $exclude || ! in_array( $post_type, array( 'page', 'post' ), true );
 }
 
 /** Keeps Rank Math's post-type-wide Article default only on article templates. */
@@ -323,7 +597,7 @@ function lmhg_site_core_finalize_rank_math_page_schema( array $data, mixed $json
 		return $data;
 	}
 	$post_id = (int) get_queried_object_id();
-	if ( $post_id <= 0 ) {
+	if ( $post_id <= 0 || 'page' !== get_post_type( $post_id ) ) {
 		return $data;
 	}
 
