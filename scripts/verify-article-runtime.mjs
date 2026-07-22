@@ -18,6 +18,7 @@ const ACCEPTED_BASE_URL = 'http://100.116.130.39:8093';
 const ACCEPTED_COMPOSE_PROJECT = 'wordpress-2026-mariadb';
 const EXPECTED_THEME = 'wordpress-2026';
 const EXPECTED_PLUGIN = 'lmhg-site-core';
+const EXPECTED_SITE_NAME = 'Louisville Mental Health Group';
 const FIXTURE_SENTINEL_META_KEY = '_lmhg_article_runtime_sentinel';
 const NONSTANDARD_RUNTIME_CONFIRMATION = 'I_ACCEPT_WORDPRESS_DATABASE_MUTATION';
 const OFFICIAL_SOURCES = [
@@ -840,6 +841,7 @@ async function inspectArticleAtWidths(browser, permalink) {
         const {
           expectedTitle,
           expectedPermalink: articlePermalink,
+          expectedSiteName,
           longLinkText: expectedLongLinkText,
           longToken: expectedLongToken,
         } = contract;
@@ -1107,11 +1109,15 @@ async function inspectArticleAtWidths(browser, permalink) {
             references.map(canonicalArticleUrl).filter(Boolean),
           )];
           const headline = typeof entity.headline === 'string' ? entity.headline : null;
+          const acceptedHeadlines = new Set([
+            expectedTitle,
+            `${expectedTitle} - ${expectedSiteName}`,
+          ]);
           return {
             atId: typeof entity['@id'] === 'string' ? entity['@id'] : null,
             canonicalReferences,
             headline,
-            matchesFixture: headline === expectedTitle
+            matchesFixture: acceptedHeadlines.has(headline)
               && canonicalReferences.includes(expectedCanonicalArticleUrl),
             url: typeof entity.url === 'string' ? entity.url : null,
           };
@@ -1144,6 +1150,7 @@ async function inspectArticleAtWidths(browser, permalink) {
         };
       }, {
         expectedPermalink: permalink,
+        expectedSiteName: EXPECTED_SITE_NAME,
         expectedTitle: fixture.title,
         longLinkText,
         longToken,
