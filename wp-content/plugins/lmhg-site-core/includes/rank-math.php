@@ -21,11 +21,15 @@ const LMHG_SITE_CORE_RANK_MATH_SITEMAP_SYNC_OPTION = 'lmhg_rank_math_sitemap_syn
 const LMHG_SITE_CORE_RANK_MATH_SITEMAP_SYNC_VERSION = '2026-07-21-page-inventory-v2';
 const LMHG_SITE_CORE_RANK_MATH_REWRITE_OPTION = 'lmhg_rank_math_rewrite_version';
 const LMHG_SITE_CORE_RANK_MATH_REWRITE_VERSION = '2026-07-21-sitemap-handoff-v2';
+const LMHG_SITE_CORE_RANK_MATH_PAGE_SCHEMA_OPTION = 'lmhg_rank_math_page_schema_default_version';
+const LMHG_SITE_CORE_RANK_MATH_PAGE_SCHEMA_VERSION = '2026-07-22-page-schema-default-off-v1';
+const LMHG_SITE_CORE_RANK_MATH_PAGE_SCHEMA_REPORT = 'lmhg_rank_math_page_schema_default_report';
 
 add_action( 'init', 'lmhg_site_core_configure_rank_math_integration', 99 );
 add_action( 'init', 'lmhg_site_core_sync_rank_math_sitemap_inventory', 100 );
 add_action( 'init', 'lmhg_site_core_sync_canonical_rank_math_keywords', 101 );
 add_action( 'init', 'lmhg_site_core_refresh_rank_math_rewrites', 102 );
+add_action( 'init', 'lmhg_site_core_sync_rank_math_page_schema_default', 103 );
 add_action( 'admin_post_lmhg_rank_math_handoff', 'lmhg_site_core_handle_rank_math_handoff' );
 add_action( 'admin_post_lmhg_rank_math_handoff_rollback', 'lmhg_site_core_handle_rank_math_handoff_rollback' );
 add_action( 'enqueue_block_editor_assets', 'lmhg_site_core_enqueue_rank_math_content_bridge', 99 );
@@ -72,6 +76,68 @@ function lmhg_site_core_refresh_rank_math_rewrites(): void {
 
 	flush_rewrite_rules( false );
 	update_option( LMHG_SITE_CORE_RANK_MATH_REWRITE_OPTION, LMHG_SITE_CORE_RANK_MATH_REWRITE_VERSION, false );
+}
+
+/**
+ * Disables Rank Math's post-type-wide Article placeholder for WordPress Pages.
+ *
+ * LMHG applies each Page's semantic type to the base graph entity at render
+ * time. Conventional article templates remain Article through that explicit
+ * mapping instead of making every Page begin as an Article rich snippet.
+ */
+function lmhg_site_core_sync_rank_math_page_schema_default(): void {
+	if (
+		! lmhg_site_core_rank_math_is_active()
+		|| LMHG_SITE_CORE_RANK_MATH_PAGE_SCHEMA_VERSION === (string) get_option( LMHG_SITE_CORE_RANK_MATH_PAGE_SCHEMA_OPTION, '' )
+	) {
+		return;
+	}
+
+	$settings = get_option( 'rank-math-options-titles', null );
+	$report   = array(
+		'version'      => LMHG_SITE_CORE_RANK_MATH_PAGE_SCHEMA_VERSION,
+		'completed_at' => '',
+		'before'       => is_array( $settings ) ? (string) ( $settings['pt_page_default_rich_snippet'] ?? '' ) : '',
+		'after'        => '',
+		'changed'      => false,
+		'conflicts'    => array(),
+		'failures'     => array(),
+	);
+	if ( ! is_array( $settings ) ) {
+		$report['failures'][] = 'rank_math_titles_settings_unavailable';
+		update_option( LMHG_SITE_CORE_RANK_MATH_PAGE_SCHEMA_REPORT, $report, false );
+		return;
+	}
+
+	$current = strtolower( trim( (string) ( $settings['pt_page_default_rich_snippet'] ?? '' ) ) );
+	if ( ! in_array( $current, array( 'article', 'off' ), true ) ) {
+		$report['after']       = (string) ( $settings['pt_page_default_rich_snippet'] ?? '' );
+		$report['conflicts'][] = 'unexpected_page_schema_default';
+		update_option( LMHG_SITE_CORE_RANK_MATH_PAGE_SCHEMA_REPORT, $report, false );
+		return;
+	}
+
+	if ( 'article' === $current ) {
+		$settings['pt_page_default_rich_snippet'] = 'off';
+		update_option( 'rank-math-options-titles', $settings, false );
+		$report['changed'] = true;
+	} elseif ( 'off' !== (string) ( $settings['pt_page_default_rich_snippet'] ?? '' ) ) {
+		$settings['pt_page_default_rich_snippet'] = 'off';
+		update_option( 'rank-math-options-titles', $settings, false );
+		$report['changed'] = true;
+	}
+
+	$stored          = get_option( 'rank-math-options-titles', null );
+	$report['after'] = is_array( $stored ) ? (string) ( $stored['pt_page_default_rich_snippet'] ?? '' ) : '';
+	if ( 'off' !== $report['after'] ) {
+		$report['failures'][] = 'page_schema_default_not_persisted';
+		update_option( LMHG_SITE_CORE_RANK_MATH_PAGE_SCHEMA_REPORT, $report, false );
+		return;
+	}
+
+	$report['completed_at'] = gmdate( 'c' );
+	update_option( LMHG_SITE_CORE_RANK_MATH_PAGE_SCHEMA_OPTION, LMHG_SITE_CORE_RANK_MATH_PAGE_SCHEMA_VERSION, false );
+	update_option( LMHG_SITE_CORE_RANK_MATH_PAGE_SCHEMA_REPORT, $report, false );
 }
 
 /** Returns whether Rank Math Free is loaded and available. */
@@ -264,25 +330,127 @@ function lmhg_site_core_finalize_rank_math_page_schema( array $data, mixed $json
 	$canonical = lmhg_site_core_current_canonical_url();
 	$schema_type = trim( (string) get_post_meta( $post_id, '_lmhg_schema_type', true ) );
 	$schema_type = '' !== $schema_type ? $schema_type : lmhg_site_core_default_schema_type_for_page( $post_id );
-	if ( 'Article' !== $schema_type ) {
-		$webpage_id = untrailingslashit( $canonical ) . '/#webpage';
-		foreach ( $data as $key => $node ) {
-			if ( ! is_array( $node ) ) {
-				continue;
-			}
-			$types = isset( $node['@type'] ) && is_array( $node['@type'] ) ? $node['@type'] : array( $node['@type'] ?? '' );
-			if ( in_array( 'Article', $types, true ) && str_ends_with( (string) ( $node['@id'] ?? '' ), '/#richSnippet' ) ) {
-				unset( $data[ $key ] );
-				continue;
-			}
-			if ( $webpage_id === (string) ( $node['@id'] ?? '' ) ) {
-				$data[ $key ]['@type'] = in_array( 'FAQPage', $types, true ) && 'FAQPage' !== $schema_type
-					? array( $schema_type, 'FAQPage' )
-					: $schema_type;
-			}
+	$webpage_id        = untrailingslashit( $canonical ) . '/#webpage';
+	$has_article_node  = false;
+	$has_webpage_node  = false;
+	foreach ( $data as $node ) {
+		if ( ! is_array( $node ) ) {
+			continue;
+		}
+		$types = isset( $node['@type'] ) && is_array( $node['@type'] ) ? $node['@type'] : array( $node['@type'] ?? '' );
+		if ( in_array( 'Article', $types, true ) && str_ends_with( (string) ( $node['@id'] ?? '' ), '/#richSnippet' ) ) {
+			$has_article_node = true;
 		}
 	}
+
+	foreach ( $data as $key => $node ) {
+		if ( ! is_array( $node ) ) {
+			continue;
+		}
+		$types = isset( $node['@type'] ) && is_array( $node['@type'] ) ? $node['@type'] : array( $node['@type'] ?? '' );
+		if (
+			'Article' !== $schema_type
+			&& in_array( 'Article', $types, true )
+			&& str_ends_with( (string) ( $node['@id'] ?? '' ), '/#richSnippet' )
+		) {
+			unset( $data[ $key ] );
+			continue;
+		}
+		if ( $webpage_id !== (string) ( $node['@id'] ?? '' ) ) {
+			continue;
+		}
+
+		$has_webpage_node = true;
+		if ( 'Article' === $schema_type ) {
+			continue;
+		}
+		$data[ $key ]['@type'] = in_array( 'FAQPage', $types, true ) && 'FAQPage' !== $schema_type
+			? array( $schema_type, 'FAQPage' )
+			: $schema_type;
+	}
+
+	if ( ! $has_webpage_node ) {
+		$base_type = 'Article' === $schema_type ? 'WebPage' : $schema_type;
+		$data['lmhg_webpage'] = lmhg_site_core_rank_math_base_page_entity( $post_id, $canonical, $base_type );
+	}
+	if ( 'Article' === $schema_type && ! $has_article_node ) {
+		$data['lmhg_article'] = lmhg_site_core_rank_math_article_entity_for_page( $post_id, $canonical, $data );
+	}
 	return $data;
+}
+
+/** Builds a minimal canonical base entity if Rank Math omitted its WebPage. */
+function lmhg_site_core_rank_math_base_page_entity( int $post_id, string $canonical, string $schema_type ): array {
+	$title = wp_strip_all_tags( (string) get_the_title( $post_id ) );
+	$node  = array(
+		'@type'    => $schema_type,
+		'@id'      => untrailingslashit( $canonical ) . '/#webpage',
+		'url'      => $canonical,
+		'name'     => $title,
+		'isPartOf' => array( '@id' => home_url( '/#website' ) ),
+	);
+	return $node;
+}
+
+/** Builds the explicit Article entity used only by LMHG article templates. */
+function lmhg_site_core_rank_math_article_entity_for_page( int $post_id, string $canonical, array $graph ): array {
+	$webpage_id = untrailingslashit( $canonical ) . '/#webpage';
+	$title      = function_exists( 'lmhg_site_core_resolved_seo_title_for_post' )
+		? lmhg_site_core_resolved_seo_title_for_post( $post_id )
+		: wp_strip_all_tags( (string) get_the_title( $post_id ) );
+	$article    = array(
+		'@type'            => 'Article',
+		'@id'              => untrailingslashit( $canonical ) . '/#richSnippet',
+		'url'              => $canonical,
+		'headline'         => $title,
+		'name'             => $title,
+		'isPartOf'         => array( '@id' => $webpage_id ),
+		'mainEntityOfPage' => array( '@id' => $webpage_id ),
+	);
+	if ( function_exists( 'lmhg_site_core_resolved_meta_description_for_post' ) ) {
+		$description = lmhg_site_core_resolved_meta_description_for_post( $post_id );
+		if ( '' !== $description ) {
+			$article['description'] = $description;
+		}
+	}
+	$keywords = trim( (string) get_post_meta( $post_id, 'rank_math_focus_keyword', true ) );
+	if ( '' !== $keywords ) {
+		$article['keywords'] = $keywords;
+	}
+	$language = trim( (string) get_bloginfo( 'language' ) );
+	if ( '' !== $language ) {
+		$article['inLanguage'] = $language;
+	}
+
+	$author_id    = '';
+	$publisher_id = '';
+	foreach ( $graph as $node ) {
+		if ( ! is_array( $node ) || empty( $node['@id'] ) ) {
+			continue;
+		}
+		$types = isset( $node['@type'] ) && is_array( $node['@type'] ) ? $node['@type'] : array( $node['@type'] ?? '' );
+		if ( '' === $author_id && array( 'Person' ) === $types ) {
+			$author_id = (string) $node['@id'];
+		}
+		if ( '' === $publisher_id && in_array( 'Organization', $types, true ) ) {
+			$publisher_id = (string) $node['@id'];
+		}
+	}
+	if ( '' !== $author_id ) {
+		$article['author'] = array( '@id' => $author_id );
+	}
+	if ( '' !== $publisher_id ) {
+		$article['publisher'] = array( '@id' => $publisher_id );
+	}
+	$published = (string) get_the_date( DATE_W3C, $post_id );
+	$modified  = (string) get_the_modified_date( DATE_W3C, $post_id );
+	if ( '' !== $published ) {
+		$article['datePublished'] = $published;
+	}
+	if ( '' !== $modified ) {
+		$article['dateModified'] = $modified;
+	}
+	return $article;
 }
 
 /** Adds LMHG's Service, FAQ, and Review entities to Rank Math's graph. */
