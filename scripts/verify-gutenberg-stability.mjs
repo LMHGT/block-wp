@@ -3,13 +3,14 @@
 import { spawn } from 'node:child_process';
 import { randomBytes, randomUUID } from 'node:crypto';
 import { existsSync } from 'node:fs';
-import { chmod, mkdir, writeFile } from 'node:fs/promises';
+import { chmod, mkdir, unlink, writeFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import path from 'node:path';
 
 const require = createRequire(import.meta.url);
 const startedAt = new Date();
 const timestamp = startedAt.toISOString().replace(/[-:]/g, '').replace(/\..+/, 'Z');
+const runId = randomUUID();
 const args = new Set(process.argv.slice(2));
 const supportedArgs = new Set(['--ephemeral-admin', '--headed', '--help', '-h']);
 const unknownArgs = [...args].filter((arg) => !supportedArgs.has(arg));
@@ -22,11 +23,13 @@ const OFFICIAL_SOURCES = [
   'https://developer.wordpress.org/cli/commands/user/create/',
   'https://developer.wordpress.org/cli/commands/user/delete/',
   'https://developer.wordpress.org/cli/commands/user/list/',
+  'https://developer.wordpress.org/cli/commands/eval-file/',
 ];
 
 const CHILD_TERMINATION_GRACE_MS = 5000;
 const BROWSER_CLOSE_TIMEOUT_MS = 5000;
 const CLEANUP_PROCESS_TIMEOUT_MS = 30000;
+const WRITE_BODY_LIMIT_BYTES = 64 * 1024;
 
 const CONTENT_TYPES = [
   { label: 'Page', postType: 'page', restBase: 'pages' },
@@ -36,12 +39,12 @@ const CONTENT_TYPES = [
 function printHelp() {
   console.log(`LMHG Gutenberg stability verifier
 
-Scans every published WordPress Page and Post in the block editor. The command
-never saves a post. It fails when an editor cannot load, Gutenberg reports an
-invalid block, or a block-recovery warning is visible.
+Scans every published WordPress Page and Post in the block editor. Browser
+network writes are blocked, except for the exact login POST; the command never
+saves a post. It fails when an editor cannot load, Gutenberg reports an invalid
+block, or a block-recovery warning is visible.
 
 Usage:
-  WP_ADMIN_USER=<login> WP_ADMIN_PASSWORD=<password> npm run test:gutenberg
   npm run test:gutenberg -- --ephemeral-admin
 
 Options:
@@ -52,28 +55,31 @@ Options:
 
 Environment:
   WP_URL                         Development URL (default: http://100.116.130.39:8093)
-  WP_ADMIN_USER                  Existing administrator login
-  WP_ADMIN_PASSWORD             Existing administrator password
   WP_GUTENBERG_OUTPUT_DIR       JSON/screenshot directory (default: .runtime/inspect/...)
   WP_EDITOR_TIMEOUT_MS          Navigation/editor timeout (default: 60000)
   WP_EDITOR_SETTLE_MS           Delay after the block store loads (default: 750)
   CHROME_PATH                   Chromium-compatible browser executable; uses
                                 /usr/bin/google-chrome when present
-  WP_RUNTIME_ROOT               Runtime root used by --ephemeral-admin
+  WP_RUNTIME_ROOT               Runtime root used for WP-CLI lock/admin cleanup
                                   (default: /srv/codex/services/lmhg-blockwp-wordpress-mariadb)
-  WP_COMPOSE_FILE               Active Compose file used by --ephemeral-admin
+  WP_COMPOSE_FILE               Active Compose file used by WP-CLI
                                   (default: <WP_RUNTIME_ROOT>/compose.yml)
   WP_CLI_SERVICE                Compose WP-CLI service (default: cli)
 
 Security:
-  Credentials are read only from the environment and are never written to the
-  report. Browser authentication state remains in memory. Ephemeral passwords
-  are sent to WP-CLI over stdin, not in process arguments.
+  A unique administrator is required so _edit_lock ownership is provable.
+  Existing/shared administrator credentials are rejected. The generated
+  password is sent to WP-CLI over stdin, remains in memory, and is never written
+  to the report. Browser authentication state likewise remains in memory.
   A browser-context guard allows reads and the exact wp-login.php POST only;
-  every other same-origin non-idempotent request is blocked. Unexpected writes
-  fail the run.
-  Periodic admin heartbeat/post-lock polls are also blocked and reported, but
-  are classified as expected and nonfatal because blocking prevents mutation.
+  every other non-idempotent browser request is blocked. Strictly recognized
+  core heartbeat, post-lock release, and preference-persistence requests remain
+  blocked and are reported as expected/nonfatal. Every other write fails the
+  run.
+  WordPress can acquire _edit_lock metadata while rendering an editor GET. The
+  verifier snapshots every inventoried lock through WP-CLI before browser use,
+  restores that exact database state during bounded cleanup, and verifies it.
+  Ephemeral administrator state is likewise deleted and verified in cleanup.
   Session cookies remain in memory and GET/HEAD/OPTIONS reads remain enabled.
 `);
 }
@@ -121,9 +127,13 @@ if (ephemeralAdminRequested && (externalUser || externalPassword)) {
 }
 
 if (!ephemeralAdminRequested && !externalUser) {
+  configurationError('--ephemeral-admin is required for unique _edit_lock ownership.');
+}
+
+if (!ephemeralAdminRequested) {
   configurationError(
-    'Administrator authentication is required. Set WP_ADMIN_USER and WP_ADMIN_PASSWORD, '
-      + 'or explicitly use --ephemeral-admin.',
+    'Existing/shared administrator credentials cannot prove that changed _edit_lock values '
+      + 'belong to this scan; use --ephemeral-admin.',
   );
 }
 
@@ -138,13 +148,18 @@ const config = {
   headed: args.has('--headed'),
   outputDir:
     process.env.WP_GUTENBERG_OUTPUT_DIR
-    || path.join('.runtime', 'inspect', `gutenberg-stability-${timestamp}`),
+    || path.join(
+      '.runtime',
+      'inspect',
+      `gutenberg-stability-${timestamp}-${runId.replaceAll('-', '').slice(0, 8)}`,
+    ),
   runtimeRoot,
   wpCliService: process.env.WP_CLI_SERVICE || 'cli',
 };
 
 const summary = {
   schemaVersion: 1,
+  runId,
   startedAt: startedAt.toISOString(),
   finishedAt: null,
   status: 'running',
@@ -156,7 +171,8 @@ const summary = {
     editorSettleMs: config.editorSettleMs,
     editorTimeoutMs: config.editorTimeoutMs,
     headed: config.headed,
-    readOnlyGuard: 'same-origin writes blocked except exact wp-login.php POST',
+    readOnlyGuard: 'browser network writes blocked except the exact wp-login.php POST',
+    databaseLifecycle: 'exact _edit_lock snapshot, bounded restoration, and verification',
   },
   inventory: {
     page: 0,
@@ -169,8 +185,30 @@ const summary = {
     failed: 0,
   },
   cleanup: ephemeralAdminRequested
-    ? { attempted: false, ok: null, username: null, userId: null, locatedUserId: null }
+    ? {
+      attempted: false,
+      ok: null,
+      username: null,
+      userId: null,
+      locatedUserId: null,
+      recoveryMarkers: [],
+    }
     : { attempted: false, ok: true, reason: 'external administrator supplied' },
+  editLocks: {
+    snapshotAttempted: false,
+    snapshotCount: 0,
+    restorationAttempted: false,
+    restorationCount: 0,
+    deletedScanCreatedCount: 0,
+    verifiedCount: 0,
+    ok: null,
+  },
+  runtimeIdentity: {
+    attempted: false,
+    homeMatches: null,
+    siteUrlMatches: null,
+    ok: null,
+  },
   readOnlyGuard: {
     expectedBlocked: { count: 0, requests: [] },
     fatalBlocked: { count: 0, requests: [] },
@@ -181,12 +219,22 @@ const summary = {
 };
 
 const lifecycle = {
+  adminCreationPromise: null,
   abortController: new AbortController(),
   browser: null,
   browserClosePromise: null,
   children: new Set(),
+  editLockSnapshot: null,
+  editLockSnapshotPromise: null,
+  ephemeralIdentity: null,
   interruptedBy: null,
+  itemTracker: { currentId: null, priorId: null },
   receivedSignals: [],
+  resourceCleanupPromise: null,
+  reportSecrets: [],
+  signalFinalizationPromise: null,
+  summaryWritePromise: Promise.resolve(),
+  userId: null,
 };
 
 async function closeBrowserBounded() {
@@ -213,15 +261,62 @@ async function closeBrowserBounded() {
   await lifecycle.browserClosePromise;
 }
 
-for (const signal of ['SIGINT', 'SIGTERM']) {
+function recordSignalFailure() {
+  if (!lifecycle.interruptedBy) {
+    return;
+  }
+  const existing = summary.failures.find(({ stage }) => stage === 'signal');
+  if (existing) {
+    existing.signal = lifecycle.interruptedBy;
+    existing.receivedSignals = [...lifecycle.receivedSignals];
+    return;
+  }
+  summary.failures.push({
+    stage: 'signal',
+    signal: lifecycle.interruptedBy,
+    receivedSignals: [...lifecycle.receivedSignals],
+  });
+}
+
+async function writeSummarySerialized() {
+  lifecycle.summaryWritePromise = lifecycle.summaryWritePromise
+    .catch(() => {})
+    .then(() => writeSummary());
+  return lifecycle.summaryWritePromise;
+}
+
+function startSignalFinalization() {
+  if (lifecycle.signalFinalizationPromise) {
+    return lifecycle.signalFinalizationPromise;
+  }
+  lifecycle.signalFinalizationPromise = (async () => {
+    await cleanupResources();
+    summary.finishedAt = new Date().toISOString();
+    summary.status = 'interrupted';
+    recordSignalFailure();
+    try {
+      await writeSummarySerialized();
+      console.error(`Interrupted summary: ${path.join(config.outputDir, 'summary.json')}`);
+    } catch (error) {
+      console.error(`Could not write the interrupted summary: ${errorMessage(error)}`);
+    }
+  })();
+  return lifecycle.signalFinalizationPromise;
+}
+
+for (const signal of ['SIGINT', 'SIGTERM', 'SIGHUP']) {
   process.on(signal, () => {
     lifecycle.receivedSignals.push(signal);
     if (!lifecycle.interruptedBy) {
       lifecycle.interruptedBy = signal;
       lifecycle.abortController.abort(new Error(`Received ${signal}`));
-      console.error(`Received ${signal}; stopping after browser shutdown and administrator cleanup.`);
+      console.error(
+        `Received ${signal}; starting bounded browser, edit-lock, and administrator cleanup.`,
+      );
     } else {
-      console.error(`Received ${signal} again; bounded administrator cleanup will still run.`);
+      console.error(
+        `Received ${signal} again; cleanup is already running and cleanup children remain protected.`,
+      );
     }
 
     for (const processHandle of lifecycle.children) {
@@ -229,7 +324,7 @@ for (const signal of ['SIGINT', 'SIGTERM']) {
         processHandle.terminate(`received ${signal}`);
       }
     }
-    void closeBrowserBounded();
+    void startSignalFinalization();
   });
 }
 
@@ -288,8 +383,16 @@ function runProcess(
     secrets = [],
   } = {},
 ) {
+  if (!cleanupSafe && lifecycle.abortController.signal.aborted) {
+    return Promise.reject(
+      lifecycle.abortController.signal.reason || new Error('Verifier interrupted.'),
+    );
+  }
   return new Promise((resolve, reject) => {
     const child = spawn(command, commandArgs, {
+      // Cleanup commands use their own process group. A second Ctrl-C sent to
+      // npm's foreground group must not kill the exact-delete/restore checks.
+      detached: cleanupSafe,
       env: process.env,
       stdio: ['pipe', 'pipe', 'pipe'],
     });
@@ -298,6 +401,10 @@ function runProcess(
     let settled = false;
     let terminationReason = '';
     let killTimer = null;
+    let resolveSettled;
+    const settledPromise = new Promise((resolve) => {
+      resolveSettled = resolve;
+    });
 
     const finalize = (callback) => {
       if (settled) {
@@ -308,7 +415,22 @@ function runProcess(
       clearTimeout(killTimer);
       lifecycle.abortController.signal.removeEventListener('abort', onAbort);
       lifecycle.children.delete(processHandle);
+      resolveSettled();
       callback();
+    };
+    const sendSignal = (signal) => {
+      if (child.exitCode !== null || child.signalCode !== null) {
+        return;
+      }
+      try {
+        if (cleanupSafe && Number.isSafeInteger(child.pid) && child.pid > 0) {
+          process.kill(-child.pid, signal);
+        } else {
+          child.kill(signal);
+        }
+      } catch {
+        // The close/error event below remains the authoritative process result.
+      }
     };
     const terminate = (reason) => {
       if (!terminationReason) {
@@ -317,24 +439,16 @@ function runProcess(
       if (child.exitCode !== null || child.signalCode !== null) {
         return;
       }
-      try {
-        child.kill('SIGTERM');
-      } catch {
-        // The close/error event below remains the authoritative process result.
-      }
+      sendSignal('SIGTERM');
       if (!killTimer) {
         killTimer = setTimeout(() => {
           if (child.exitCode === null && child.signalCode === null) {
-            try {
-              child.kill('SIGKILL');
-            } catch {
-              // A concurrent close may make the process unavailable here.
-            }
+            sendSignal('SIGKILL');
           }
         }, CHILD_TERMINATION_GRACE_MS);
       }
     };
-    const processHandle = { child, cleanupSafe, terminate };
+    const processHandle = { child, cleanupSafe, settledPromise, terminate };
     const onAbort = () => terminate('aborted after verifier interruption');
     const timeoutTimer = setTimeout(
       () => terminate(`timed out after ${timeoutMs}ms`),
@@ -412,13 +526,72 @@ function buildEphemeralAdmin() {
     createAttempted: false,
     email: `lmhg-gutenberg-${suffix}@example.invalid`,
     password: `${randomBytes(30).toString('base64url')}!Aa8`,
+    recoveryMarkerPaths: new Set(),
     userId: null,
     username: `lmhg_gutenberg_${suffix}`,
   };
 }
 
+function ephemeralRecoveryMarkerPath(identity) {
+  const identitySuffix = identity.userId ? `user-${identity.userId}` : 'login-only';
+  return path.join(
+    config.outputDir,
+    `ephemeral-admin-recovery-${identity.username}-${identitySuffix}.json`,
+  );
+}
+
+async function persistEphemeralRecoveryMarker(identity, reason) {
+  if (!identity) {
+    return;
+  }
+  await mkdir(config.outputDir, { recursive: true });
+  const markerPath = ephemeralRecoveryMarkerPath(identity);
+  if (identity.recoveryMarkerPaths.has(markerPath)) {
+    return;
+  }
+  const marker = {
+    schemaVersion: 1,
+    createdAt: new Date().toISOString(),
+    reason,
+    exactLogin: identity.username,
+    exactUserId: identity.userId,
+    recovery: identity.userId
+      ? `Verify login ${identity.username} resolves only to ID ${identity.userId}, then delete that exact ID.`
+      : `Resolve the exact login ${identity.username}; delete only the single matching ID.`,
+  };
+  // Identity-specific, exclusive creation means a later run can neither
+  // overwrite nor unlink an earlier orphan administrator's recovery record.
+  await writeFile(
+    markerPath,
+    `${JSON.stringify(marker, null, 2)}\n`,
+    { flag: 'wx', mode: 0o600 },
+  );
+  await chmod(markerPath, 0o600);
+  identity.recoveryMarkerPaths.add(markerPath);
+  summary.cleanup.recoveryMarkers = [...identity.recoveryMarkerPaths];
+}
+
+async function clearEphemeralRecoveryMarkers(identity) {
+  if (!ephemeralAdminRequested || !identity) {
+    return;
+  }
+  for (const markerPath of identity.recoveryMarkerPaths) {
+    await unlink(markerPath).catch((error) => {
+      if (error?.code !== 'ENOENT') {
+        throw error;
+      }
+    });
+  }
+  identity.recoveryMarkerPaths.clear();
+  summary.cleanup.recoveryMarkers = [];
+}
+
 async function createEphemeralAdmin(identity) {
   identity.createAttempted = true;
+  // Persist the exact generated identity before the ambiguous create boundary.
+  // The marker contains no password and is removed only after exact absence is
+  // verified, so SIGKILL/npm-wrapper termination still leaves recovery data.
+  await persistEphemeralRecoveryMarker(identity, 'ephemeral administrator creation pending');
   // WP-CLI supports prompting for selected arguments, which keeps the generated
   // password out of the process list.
   // Source: https://developer.wordpress.org/cli/commands/user/create/
@@ -435,39 +608,56 @@ async function createEphemeralAdmin(identity) {
     ],
     { input: `${identity.password}\n`, secrets: [identity.password] },
   );
-  const userId = stdout
-    .trim()
-    .split(/\s+/)
-    .find((token) => /^\d+$/.test(token));
-  if (!userId) {
-    throw new Error('WP-CLI created the ephemeral administrator but did not return its numeric ID.');
+  const userId = stdout.trim();
+  if (!/^\d+$/.test(userId)) {
+    throw new Error(
+      'WP-CLI created the ephemeral administrator but did not return exactly one numeric ID.',
+    );
   }
-  identity.userId = Number.parseInt(userId, 10);
+  const parsedUserId = Number.parseInt(userId, 10);
+  if (!Number.isSafeInteger(parsedUserId) || parsedUserId <= 0) {
+    throw new Error('WP-CLI returned an out-of-range administrator ID.');
+  }
+  identity.userId = parsedUserId;
   summary.cleanup.username = identity.username;
   summary.cleanup.userId = identity.userId;
+  await persistEphemeralRecoveryMarker(identity, 'ephemeral administrator cleanup pending');
   console.log(`Created ephemeral administrator ID ${identity.userId}.`);
 }
 
-async function findEphemeralAdminId(identity) {
+async function findExactUserIdByLogin(login, { cleanupSafe = false, secrets = [] } = {}) {
   // An exit-0 empty result means the exact login is absent. Any WP-CLI,
   // Docker, Compose, or database error rejects and is a cleanup failure.
   // Source: https://developer.wordpress.org/cli/commands/user/list/
   const { stdout } = await wpCli(
-    ['user', 'list', `--login=${identity.username}`, '--field=ID'],
+    ['user', 'list', `--login=${login}`, '--field=ID'],
     {
-      cleanupSafe: true,
-      secrets: [identity.password],
-      timeoutMs: CLEANUP_PROCESS_TIMEOUT_MS,
+      cleanupSafe,
+      secrets,
+      ...(cleanupSafe ? { timeoutMs: CLEANUP_PROCESS_TIMEOUT_MS } : {}),
     },
   );
   const tokens = stdout.trim() ? stdout.trim().split(/\s+/) : [];
   if (tokens.some((token) => !/^\d+$/.test(token)) || tokens.length > 1) {
     throw new Error(
-      `Exact-login lookup returned an unexpected ID list for ${identity.username}: `
-        + `${tokens.join(', ') || '(empty)'}`,
+      `Exact-login lookup returned an unexpected ID list: ${tokens.join(', ') || '(empty)'}`,
     );
   }
-  return tokens.length === 1 ? Number.parseInt(tokens[0], 10) : null;
+  if (tokens.length === 0) {
+    return null;
+  }
+  const userId = Number.parseInt(tokens[0], 10);
+  if (!Number.isSafeInteger(userId) || userId <= 0) {
+    throw new Error('Exact-login lookup returned an out-of-range user ID.');
+  }
+  return userId;
+}
+
+async function findEphemeralAdminId(identity) {
+  return findExactUserIdByLogin(identity.username, {
+    cleanupSafe: true,
+    secrets: [identity.password],
+  });
 }
 
 async function cleanupEphemeralAdmin(identity) {
@@ -484,10 +674,14 @@ async function cleanupEphemeralAdmin(identity) {
     if (!userId) {
       summary.cleanup.ok = true;
       summary.cleanup.reason = 'exact-login lookup confirmed the ephemeral user is absent';
+      await clearEphemeralRecoveryMarkers(identity);
       return;
     }
     if (!summary.cleanup.userId) {
       summary.cleanup.userId = userId;
+    }
+    if (!identity.userId) {
+      identity.userId = userId;
     }
     if (identity.userId && userId !== identity.userId) {
       throw new Error(
@@ -514,6 +708,7 @@ async function cleanupEphemeralAdmin(identity) {
     summary.cleanup.ok = true;
     summary.cleanup.userId = userId;
     summary.cleanup.reason = 'delete succeeded and exact-login lookup confirmed absence';
+    await clearEphemeralRecoveryMarkers(identity);
     console.log(`Deleted ephemeral administrator ID ${userId}.`);
   } catch (error) {
     summary.cleanup.ok = false;
@@ -522,8 +717,349 @@ async function cleanupEphemeralAdmin(identity) {
       stage: 'ephemeral-admin-cleanup',
       error: summary.cleanup.error,
     });
+    await persistEphemeralRecoveryMarker(
+      identity,
+      'bounded cleanup failed; exact administrator recovery is required',
+    ).catch(() => {});
     console.error(`Ephemeral administrator cleanup failed: ${summary.cleanup.error}`);
   }
+}
+
+function wpCliEvalFile(phpSource, options = {}) {
+  // `wp eval-file -` reads code from stdin. This is important for restoration:
+  // pre-scan lock values never enter argv, logs, reports, or a temporary file.
+  // Source: https://developer.wordpress.org/cli/commands/eval-file/
+  return wpCli(['eval-file', '-'], { ...options, input: phpSource });
+}
+
+function normalizeSiteIdentityUrl(value, label) {
+  let candidate;
+  try {
+    candidate = new URL(value);
+  } catch {
+    throw new Error(`${label} is not an absolute URL.`);
+  }
+  if (
+    !['http:', 'https:'].includes(candidate.protocol)
+    || candidate.username
+    || candidate.password
+    || candidate.search
+    || candidate.hash
+  ) {
+    throw new Error(`${label} is not a plain HTTP(S) site URL.`);
+  }
+  const normalizedPath = candidate.pathname.replace(/\/{2,}/g, '/').replace(/\/+$/, '');
+  return `${candidate.origin}${normalizedPath}`;
+}
+
+async function verifyRuntimeSiteIdentity() {
+  summary.runtimeIdentity.attempted = true;
+  const php = `<?php
+echo wp_json_encode(array(
+    'home' => (string) get_option('home'),
+    'siteurl' => (string) get_option('siteurl'),
+));
+`;
+  try {
+    const { stdout } = await wpCliEvalFile(php);
+    const identity = JSON.parse(stdout.trim());
+    if (!hasOnlyKeys(identity, ['home', 'siteurl'])) {
+      throw new Error('WP-CLI returned malformed site identity evidence.');
+    }
+    const expected = normalizeSiteIdentityUrl(config.baseUrl, 'WP_URL');
+    const home = normalizeSiteIdentityUrl(identity.home, 'WordPress home option');
+    const siteUrl = normalizeSiteIdentityUrl(identity.siteurl, 'WordPress siteurl option');
+    summary.runtimeIdentity.homeMatches = home === expected;
+    summary.runtimeIdentity.siteUrlMatches = siteUrl === expected;
+    summary.runtimeIdentity.ok = home === expected && siteUrl === expected;
+    if (!summary.runtimeIdentity.ok) {
+      throw new Error(
+        'WP_URL does not exactly match both WP-CLI WordPress home and siteurl; '
+          + 'refusing cross-site administrator or edit-lock mutation.',
+      );
+    }
+  } catch (error) {
+    summary.runtimeIdentity.ok = false;
+    const safeError = errorMessage(error);
+    summary.failures.push({ stage: 'runtime-site-identity', error: safeError });
+    throw new Error(`Runtime site identity preflight failed: ${safeError}`);
+  }
+}
+
+function exactPositiveIds(items) {
+  const ids = items.map(({ id }) => Number(id));
+  if (
+    ids.some((id) => !Number.isSafeInteger(id) || id <= 0)
+    || new Set(ids).size !== ids.length
+  ) {
+    throw new Error('Published inventory did not contain unique positive integer IDs.');
+  }
+  return ids;
+}
+
+async function snapshotEditLocks(items) {
+  const ids = exactPositiveIds(items);
+  const inventoryProof = items.map((item) => ({
+    id: Number(item.id),
+    postType: item.expectedPostType,
+    slug: item.slug,
+    status: item.status,
+  }));
+  if (inventoryProof.some((item) => (
+    !['page', 'post'].includes(item.postType)
+    || typeof item.slug !== 'string'
+    || item.status !== 'publish'
+  ))) {
+    throw new Error('Published REST inventory contains malformed identity evidence.');
+  }
+  summary.editLocks.snapshotAttempted = true;
+  const encodedInventory = Buffer.from(JSON.stringify(inventoryProof), 'utf8').toString('base64');
+  const php = `<?php
+$inventory = json_decode(base64_decode('${encodedInventory}', true), true);
+if (!is_array($inventory)) {
+    fwrite(STDERR, "Could not decode the exact edit-lock ID inventory.\n");
+    exit(41);
+}
+$result = array();
+foreach ($inventory as $expected) {
+    $id = is_array($expected) && array_key_exists('id', $expected) ? $expected['id'] : null;
+    $post_type = is_array($expected) && array_key_exists('postType', $expected) ? $expected['postType'] : null;
+    $slug = is_array($expected) && array_key_exists('slug', $expected) ? $expected['slug'] : null;
+    $status = is_array($expected) && array_key_exists('status', $expected) ? $expected['status'] : null;
+    if (!is_int($id) || $id <= 0 || !is_string($post_type) || !is_string($slug) || $status !== 'publish') {
+        fwrite(STDERR, "Edit-lock inventory contains an invalid ID.\n");
+        exit(42);
+    }
+    $post = get_post($id);
+    if (
+        !$post
+        || (int) $post->ID !== $id
+        || $post->post_type !== $post_type
+        || $post->post_name !== $slug
+        || $post->post_status !== $status
+    ) {
+        fwrite(STDERR, "REST/WP-CLI inventory identity mismatch for post " . $id . "\n");
+        exit(43);
+    }
+    $exists = metadata_exists('post', $id, '_edit_lock');
+    $values = $exists ? array_values(get_post_meta($id, '_edit_lock', false)) : array();
+    foreach ($values as $value) {
+        if (!is_string($value)) {
+            fwrite(STDERR, "Edit-lock metadata is not scalar for post " . $id . "\n");
+            exit(44);
+        }
+    }
+    $result[] = array('id' => $id, 'exists' => $exists, 'values' => $values);
+}
+echo wp_json_encode($result);
+`;
+
+  try {
+    const { stdout } = await wpCliEvalFile(php);
+    const payload = JSON.parse(stdout.trim());
+    if (!Array.isArray(payload) || payload.length !== ids.length) {
+      throw new Error('WP-CLI returned an incomplete edit-lock snapshot.');
+    }
+    const expectedIds = new Set(ids);
+    const seenIds = new Set();
+    for (const record of payload) {
+      if (
+        !record
+        || !Number.isSafeInteger(record.id)
+        || !expectedIds.has(record.id)
+        || seenIds.has(record.id)
+        || typeof record.exists !== 'boolean'
+        || !Array.isArray(record.values)
+        || record.values.some((value) => typeof value !== 'string')
+        || (record.exists && record.values.length === 0)
+        || (!record.exists && record.values.length !== 0)
+      ) {
+        throw new Error('WP-CLI returned a malformed edit-lock snapshot.');
+      }
+      seenIds.add(record.id);
+    }
+    lifecycle.editLockSnapshot = payload;
+    summary.editLocks.snapshotCount = payload.length;
+    summary.editLocks.ok = null;
+  } catch (error) {
+    summary.editLocks.ok = false;
+    const safeError = errorMessage(error);
+    summary.failures.push({ stage: 'edit-lock-snapshot', error: safeError });
+    throw new Error(`Edit-lock snapshot failed: ${safeError}`);
+  }
+}
+
+async function restoreEditLocks() {
+  const snapshot = lifecycle.editLockSnapshot;
+  if (!snapshot) {
+    return;
+  }
+  if (!Number.isSafeInteger(lifecycle.userId) || lifecycle.userId <= 0) {
+    summary.editLocks.ok = false;
+    summary.failures.push({
+      stage: 'edit-lock-restoration',
+      error: 'The exact scan user ID is unavailable; refusing ambiguous lock cleanup.',
+    });
+    return;
+  }
+
+  summary.editLocks.restorationAttempted = true;
+  const encodedSnapshot = Buffer.from(JSON.stringify(snapshot), 'utf8').toString('base64');
+  const scanUserId = lifecycle.userId;
+  const php = `<?php
+$records = json_decode(base64_decode('${encodedSnapshot}', true), true);
+$scan_user_id = ${scanUserId};
+if (!is_array($records) || !is_int($scan_user_id) || $scan_user_id <= 0) {
+    fwrite(STDERR, "Could not decode the exact edit-lock restoration state.\n");
+    exit(51);
+}
+$plans = array();
+foreach ($records as $record) {
+    $id = is_array($record) && array_key_exists('id', $record) ? $record['id'] : null;
+    $prior_exists = is_array($record) && array_key_exists('exists', $record) ? $record['exists'] : null;
+    $prior_values = is_array($record) && array_key_exists('values', $record) ? $record['values'] : null;
+    if (!is_int($id) || $id <= 0 || !is_bool($prior_exists) || !is_array($prior_values)) {
+        fwrite(STDERR, "Malformed edit-lock restoration record.\n");
+        exit(52);
+    }
+    $post = get_post($id);
+    if (!$post || (int) $post->ID !== $id) {
+        fwrite(STDERR, "Edit-lock restoration post is absent: " . $id . "\n");
+        exit(53);
+    }
+    $current_exists = metadata_exists('post', $id, '_edit_lock');
+    $current_values = $current_exists
+        ? array_values(get_post_meta($id, '_edit_lock', false))
+        : array();
+    if ($current_exists === $prior_exists && $current_values === $prior_values) {
+        $plans[] = array('id' => $id, 'mode' => 'same', 'prior_exists' => $prior_exists, 'prior_values' => $prior_values);
+        continue;
+    }
+    $scan_owned = count($current_values) > 0;
+    foreach ($current_values as $value) {
+        if (!is_string($value) || !preg_match('/^\\d{9,12}:' . preg_quote((string) $scan_user_id, '/') . '$/', $value)) {
+            $scan_owned = false;
+            break;
+        }
+    }
+    if ($current_exists && !$scan_owned) {
+        fwrite(STDERR, "Refusing to overwrite a non-scan edit lock for post " . $id . "\n");
+        exit(54);
+    }
+    $plans[] = array(
+        'id' => $id,
+        'mode' => $prior_exists ? 'restore' : 'delete-scan-created',
+        'prior_exists' => $prior_exists,
+        'prior_values' => $prior_values,
+    );
+}
+
+$restored = 0;
+$deleted = 0;
+foreach ($plans as $plan) {
+    if ($plan['mode'] === 'same') {
+        continue;
+    }
+    delete_post_meta($plan['id'], '_edit_lock');
+    if ($plan['prior_exists']) {
+        foreach ($plan['prior_values'] as $value) {
+            if (!add_post_meta($plan['id'], '_edit_lock', $value, false)) {
+                fwrite(STDERR, "Could not restore an edit lock for post " . $plan['id'] . "\n");
+                exit(55);
+            }
+        }
+        $restored++;
+    } else {
+        $deleted++;
+    }
+}
+
+foreach ($plans as $plan) {
+    $actual_exists = metadata_exists('post', $plan['id'], '_edit_lock');
+    $actual_values = $actual_exists
+        ? array_values(get_post_meta($plan['id'], '_edit_lock', false))
+        : array();
+    if ($actual_exists !== $plan['prior_exists'] || $actual_values !== $plan['prior_values']) {
+        fwrite(STDERR, "Edit-lock restoration verification failed for post " . $plan['id'] . "\n");
+        exit(56);
+    }
+}
+echo wp_json_encode(array(
+    'restored' => $restored,
+    'deletedScanCreated' => $deleted,
+    'verified' => count($plans),
+));
+`;
+
+  try {
+    const { stdout } = await wpCliEvalFile(php, {
+      cleanupSafe: true,
+      timeoutMs: CLEANUP_PROCESS_TIMEOUT_MS,
+    });
+    const result = JSON.parse(stdout.trim());
+    if (
+      !result
+      || !Number.isSafeInteger(result.restored)
+      || result.restored < 0
+      || !Number.isSafeInteger(result.deletedScanCreated)
+      || result.deletedScanCreated < 0
+      || result.verified !== snapshot.length
+    ) {
+      throw new Error('WP-CLI returned malformed edit-lock restoration evidence.');
+    }
+    summary.editLocks.restorationCount = result.restored;
+    summary.editLocks.deletedScanCreatedCount = result.deletedScanCreated;
+    summary.editLocks.verifiedCount = result.verified;
+    summary.editLocks.ok = true;
+    lifecycle.editLockSnapshot = null;
+  } catch (error) {
+    summary.editLocks.ok = false;
+    const safeError = errorMessage(error);
+    summary.failures.push({ stage: 'edit-lock-restoration', error: safeError });
+    console.error(`Edit-lock restoration failed: ${safeError}`);
+  }
+}
+
+async function waitForNonCleanupChildren() {
+  const pending = [...lifecycle.children]
+    .filter(({ cleanupSafe }) => !cleanupSafe)
+    .map(({ settledPromise }) => settledPromise);
+  if (pending.length === 0) {
+    return;
+  }
+  let timeout;
+  const timedOut = Symbol('timed-out');
+  const result = await Promise.race([
+    Promise.allSettled(pending),
+    new Promise((resolve) => {
+      timeout = setTimeout(
+        () => resolve(timedOut),
+        CHILD_TERMINATION_GRACE_MS + 2000,
+      );
+    }),
+  ]);
+  clearTimeout(timeout);
+  if (result === timedOut) {
+    summary.failures.push({
+      stage: 'cleanup-process-drain',
+      error: 'A pre-cleanup child did not settle within the bounded termination window.',
+    });
+  }
+}
+
+function cleanupResources() {
+  if (!lifecycle.resourceCleanupPromise) {
+    lifecycle.resourceCleanupPromise = (async () => {
+      await Promise.allSettled([
+        lifecycle.adminCreationPromise,
+        lifecycle.editLockSnapshotPromise,
+      ].filter(Boolean));
+      await Promise.allSettled([closeBrowserBounded(), waitForNonCleanupChildren()]);
+      await restoreEditLocks();
+      await cleanupEphemeralAdmin(lifecycle.ephemeralIdentity);
+    })();
+  }
+  return lifecycle.resourceCleanupPromise;
 }
 
 async function fetchWithLifecycleTimeout(url, options = {}) {
@@ -602,15 +1138,37 @@ function loadPlaywright() {
   }
 }
 
-async function login(page, credentials) {
-  await page.goto(`${config.baseUrl}/wp-login.php`, {
+function editorUrlForItem(item) {
+  const editUrl = new URL('/wp-admin/post.php', `${config.baseUrl}/`);
+  editUrl.searchParams.set('post', String(item.id));
+  editUrl.searchParams.set('action', 'edit');
+  return editUrl;
+}
+
+function isExactEditorLocation(candidate, item) {
+  const actual = new URL(candidate);
+  const expected = editorUrlForItem(item);
+  return actual.origin === expected.origin
+    && actual.pathname === expected.pathname
+    && actual.searchParams.get('post') === String(item.id)
+    && actual.searchParams.get('action') === 'edit';
+}
+
+async function login(page, credentials, firstItem) {
+  const editUrl = editorUrlForItem(firstItem);
+  const loginUrl = new URL('/wp-login.php', `${config.baseUrl}/`);
+  loginUrl.searchParams.set('redirect_to', editUrl.href);
+  await page.goto(loginUrl.href, {
     timeout: config.editorTimeoutMs,
     waitUntil: 'domcontentloaded',
   });
   await page.locator('#user_login').fill(credentials.username);
   await page.locator('#user_pass').fill(credentials.password);
+  await page.locator('input[name="redirect_to"]').evaluate((element, redirectTo) => {
+    element.value = redirectTo;
+  }, editUrl.href);
   await Promise.all([
-    page.waitForURL((url) => url.pathname.startsWith('/wp-admin'), {
+    page.waitForURL((url) => isExactEditorLocation(url, firstItem), {
       timeout: config.editorTimeoutMs,
       waitUntil: 'domcontentloaded',
     }),
@@ -624,10 +1182,10 @@ async function login(page, credentials) {
   const expectedOrigin = new URL(config.baseUrl).origin;
   if (
     authenticatedUrl.origin !== expectedOrigin
-    || !authenticatedUrl.pathname.startsWith('/wp-admin')
+    || !isExactEditorLocation(authenticatedUrl, firstItem)
   ) {
     throw new Error(
-      `Administrator login did not reach same-origin wp-admin; landed on ${page.url()}`,
+      `Administrator login did not reach the first same-origin editor; landed on ${page.url()}`,
     );
   }
 }
@@ -639,10 +1197,198 @@ function requestTargetForReport(requestUrl) {
     : `${requestUrl.pathname}?rest_route=${encodeURIComponent(restRoute)}`;
 }
 
-function isExpectedHeartbeatRequest(request, requestUrl, method) {
+function requestContentType(request) {
+  const header = request.headers()['content-type'] || '';
+  return {
+    header,
+    mediaType: header.split(';', 1)[0].trim().toLowerCase(),
+  };
+}
+
+function safeFieldNameForReport(field) {
+  return /^[a-z0-9_.\[\]-]{1,160}$/i.test(field) ? field : '[unsafe-field-name]';
+}
+
+function parseMultipartForm(request) {
+  const { header, mediaType } = requestContentType(request);
+  const result = {
+    action: null,
+    bodyLength: request.postDataBuffer()?.length ?? Buffer.byteLength(request.postData() || ''),
+    duplicateFields: [],
+    error: null,
+    fieldNames: [],
+    fields: new Map(),
+    hasFiles: false,
+    mediaType,
+  };
+  if (mediaType !== 'multipart/form-data' || result.bodyLength > WRITE_BODY_LIMIT_BYTES) {
+    result.error = mediaType !== 'multipart/form-data' ? 'not-multipart' : 'body-too-large';
+    return result;
+  }
+
+  const boundaryMatch = header.match(/(?:^|;)\s*boundary=(?:"([^"]+)"|([^;\s]+))\s*(?:;|$)/i);
+  const boundary = boundaryMatch?.[1] || boundaryMatch?.[2] || '';
+  if (!boundary || boundary.length > 200 || /[\r\n]/.test(boundary)) {
+    result.error = 'invalid-boundary';
+    return result;
+  }
+  const bodyBuffer = request.postDataBuffer();
+  if (!bodyBuffer) {
+    result.error = 'missing-body';
+    return result;
+  }
+  const body = bodyBuffer.toString('latin1');
+  const delimiter = `--${boundary}`;
+  const segments = body.split(delimiter);
+  const validFinalSegment = segments.at(-1) === '--\r\n' || segments.at(-1) === '--';
+  if (segments[0] !== '' || segments.length < 3 || !validFinalSegment) {
+    result.error = 'invalid-framing';
+    return result;
+  }
+
+  for (const segment of segments.slice(1, -1)) {
+    if (!segment.startsWith('\r\n') || !segment.endsWith('\r\n')) {
+      result.error = 'invalid-part-framing';
+      return result;
+    }
+    const part = segment.slice(2, -2);
+    const headerEnd = part.indexOf('\r\n\r\n');
+    if (headerEnd < 0) {
+      result.error = 'invalid-part-headers';
+      return result;
+    }
+    const rawHeaders = part.slice(0, headerEnd).split('\r\n');
+    const value = part.slice(headerEnd + 4);
+    const partHeaders = new Map();
+    for (const rawHeader of rawHeaders) {
+      const separator = rawHeader.indexOf(':');
+      if (separator <= 0) {
+        result.error = 'invalid-part-header';
+        return result;
+      }
+      const name = rawHeader.slice(0, separator).trim().toLowerCase();
+      const headerValue = rawHeader.slice(separator + 1).trim();
+      if (partHeaders.has(name)) {
+        result.error = 'duplicate-part-header';
+        return result;
+      }
+      partHeaders.set(name, headerValue);
+    }
+    if (partHeaders.size !== 1 || !partHeaders.has('content-disposition')) {
+      result.error = 'unexpected-part-header';
+      return result;
+    }
+    const disposition = partHeaders.get('content-disposition');
+    if (/;\s*filename\s*=/i.test(disposition)) {
+      result.hasFiles = true;
+      result.error = 'file-part';
+      return result;
+    }
+    const dispositionMatch = disposition.match(/^form-data;\s*name="([^"\r\n]+)"$/i);
+    if (!dispositionMatch) {
+      result.error = 'invalid-content-disposition';
+      return result;
+    }
+    const field = dispositionMatch[1];
+    if (result.fields.has(field)) {
+      result.duplicateFields.push(safeFieldNameForReport(field));
+      result.error = 'duplicate-field';
+      return result;
+    }
+    result.fields.set(field, value);
+  }
+
+  result.fieldNames = [...result.fields.keys()].map(safeFieldNameForReport).sort();
+  const candidateAction = result.fields.get('action');
+  if (candidateAction && /^[a-z0-9_-]{1,80}$/i.test(candidateAction)) {
+    result.action = candidateAction;
+  }
+  return result;
+}
+
+function requestBodyShapeForReport(request) {
+  const { mediaType } = requestContentType(request);
+  const postData = request.postData() || '';
+  const fieldNames = new Set();
+  const duplicateFields = new Set();
+  let action = null;
+  let parseStatus = 'not-inspected';
+  let scopes = [];
+
+  if (mediaType === 'application/x-www-form-urlencoded') {
+    const form = new URLSearchParams(postData);
+    const counts = new Map();
+    for (const field of form.keys()) {
+      const safeField = safeFieldNameForReport(field);
+      fieldNames.add(safeField);
+      counts.set(safeField, (counts.get(safeField) || 0) + 1);
+    }
+    for (const [field, count] of counts) {
+      if (count > 1) {
+        duplicateFields.add(field);
+      }
+    }
+    const candidateAction = form.get('action');
+    if (candidateAction && /^[a-z0-9_-]{1,80}$/i.test(candidateAction)) {
+      action = candidateAction;
+    }
+    parseStatus = 'parsed';
+  } else if (mediaType === 'multipart/form-data') {
+    const multipart = parseMultipartForm(request);
+    multipart.fieldNames.forEach((field) => fieldNames.add(field));
+    multipart.duplicateFields.forEach((field) => duplicateFields.add(field));
+    action = multipart.action;
+    parseStatus = multipart.error || 'parsed';
+  } else if (mediaType === 'application/json') {
+    try {
+      const body = JSON.parse(postData);
+      const visit = (value, prefix = '', depth = 0) => {
+        if (!value || typeof value !== 'object' || depth > 3) {
+          return;
+        }
+        for (const key of Object.keys(value)) {
+          const path = prefix ? `${prefix}.${key}` : key;
+          fieldNames.add(safeFieldNameForReport(path));
+          visit(value[key], path, depth + 1);
+        }
+      };
+      visit(body);
+      const persisted = body?.meta?.persisted_preferences;
+      if (persisted && typeof persisted === 'object' && !Array.isArray(persisted)) {
+        scopes = Object.keys(persisted)
+          .filter((key) => key !== '_modified')
+          .map(safeFieldNameForReport)
+          .sort();
+      }
+      parseStatus = 'parsed';
+    } catch {
+      fieldNames.add('[invalid-json]');
+      parseStatus = 'invalid-json';
+    }
+  }
+
+  return {
+    contentType: mediaType || null,
+    bodyLength: request.postDataBuffer()?.length ?? Buffer.byteLength(postData),
+    fieldNames: [...fieldNames].sort(),
+    duplicateFields: [...duplicateFields].sort(),
+    action,
+    parseStatus,
+    scopes,
+  };
+}
+
+function isExpectedHeartbeatRequest(request, requestUrl, method, itemTracker) {
+  const { mediaType } = requestContentType(request);
+  const bodyBuffer = request.postDataBuffer();
   if (
     method !== 'POST'
-    || !requestUrl.pathname.endsWith('/wp-admin/admin-ajax.php')
+    || requestUrl.pathname !== '/wp-admin/admin-ajax.php'
+    || requestUrl.search !== ''
+    || mediaType !== 'application/x-www-form-urlencoded'
+    || !bodyBuffer
+    || bodyBuffer.length <= 0
+    || bodyBuffer.length > WRITE_BODY_LIMIT_BYTES
   ) {
     return false;
   }
@@ -662,49 +1408,233 @@ function isExpectedHeartbeatRequest(request, requestUrl, method) {
     'interval',
     'screen_id',
   ]);
-  return [...form.keys()].every(
+  const keys = [...form.keys()];
+  if (
+    new Set(keys).size !== keys.length
+    || !/^[a-z0-9_-]{6,64}$/i.test(form.get('_nonce') || '')
+  ) {
+    return false;
+  }
+  const fieldsAreCore = keys.every(
     (field) => coreHeartbeatFields.has(field)
-      || /^data\[(?:wp-auth-check|wp-refresh-post-lock|wp-refresh-post-nonces)\](?:\[[^\]]+\])*$/.test(field),
+      || /^data\[(?:wp-auth-check|wp-refresh-post-lock|wp-refresh-post-nonces)\](?:\[[a-z0-9_-]{1,64}\]){0,3}$/i.test(field),
   );
+  if (!fieldsAreCore) {
+    return false;
+  }
+  const postIdFields = keys.filter((field) => /\[(?:post_id|post_ID)\]$/i.test(field));
+  return postIdFields.every((field) => {
+    const postIdText = form.get(field) || '';
+    const postId = Number.parseInt(postIdText, 10);
+    return /^\d+$/.test(postIdText)
+      && Number.isSafeInteger(postId)
+      && [itemTracker.currentId, itemTracker.priorId].includes(postId);
+  });
 }
 
-async function installReadOnlyRequestBarrier(context) {
+function isExpectedPostLockRelease(request, requestUrl, method, itemTracker, userId) {
+  if (
+    method !== 'POST'
+    || requestUrl.pathname !== '/wp-admin/admin-ajax.php'
+    || requestUrl.search !== ''
+    || !Number.isSafeInteger(userId)
+    || userId <= 0
+  ) {
+    return false;
+  }
+  const multipart = parseMultipartForm(request);
+  const expectedFields = ['_wpnonce', 'action', 'active_post_lock', 'post_ID'];
+  if (
+    multipart.error
+    || multipart.hasFiles
+    || multipart.duplicateFields.length > 0
+    || multipart.fieldNames.length !== expectedFields.length
+    || !expectedFields.every((field, index) => multipart.fieldNames[index] === field)
+    || multipart.fields.get('action') !== 'wp-remove-post-lock'
+    || !/^[a-z0-9_-]{6,64}$/i.test(multipart.fields.get('_wpnonce') || '')
+  ) {
+    return false;
+  }
+  const postIdText = multipart.fields.get('post_ID') || '';
+  const postId = Number.parseInt(postIdText, 10);
+  if (
+    !/^\d+$/.test(postIdText)
+    || !Number.isSafeInteger(postId)
+    || postId <= 0
+    || ![itemTracker.currentId, itemTracker.priorId].includes(postId)
+  ) {
+    return false;
+  }
+  const activePostLock = multipart.fields.get('active_post_lock') || '';
+  const lockMatch = activePostLock.match(/^(\d{9,12}):(\d+)$/);
+  return Boolean(lockMatch) && Number.parseInt(lockMatch[2], 10) === userId;
+}
+
+function isPlainJsonObject(value) {
+  return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
+}
+
+function hasOnlyKeys(value, expectedKeys) {
+  if (!isPlainJsonObject(value)) {
+    return false;
+  }
+  const actual = Object.keys(value).sort();
+  const expected = [...expectedKeys].sort();
+  return actual.length === expected.length
+    && actual.every((key, index) => key === expected[index]);
+}
+
+function isExpectedCorePreferencePersistence(request, requestUrl, method) {
+  const { mediaType } = requestContentType(request);
+  const requestLength = request.postDataBuffer()?.length ?? Buffer.byteLength(request.postData() || '');
+  const queryEntries = [...requestUrl.searchParams.entries()];
+  const queryIsExpected = queryEntries.length === 0
+    || (
+      queryEntries.length === 1
+      && queryEntries[0][0] === '_locale'
+      && queryEntries[0][1] === 'user'
+    );
+  if (
+    method !== 'POST'
+    || requestUrl.pathname !== '/wp-json/wp/v2/users/me'
+    || !queryIsExpected
+    || mediaType !== 'application/json'
+    || requestLength <= 0
+    || requestLength >= WRITE_BODY_LIMIT_BYTES
+    || (request.headers()['x-http-method-override'] || '').trim().toUpperCase() !== 'PUT'
+  ) {
+    return false;
+  }
+
+  try {
+    const body = JSON.parse(request.postData() || '');
+    if (!hasOnlyKeys(body, ['meta']) || !hasOnlyKeys(body.meta, ['persisted_preferences'])) {
+      return false;
+    }
+    const persisted = body.meta.persisted_preferences;
+    if (!hasOnlyKeys(persisted, ['_modified', 'core'])) {
+      return false;
+    }
+    if (
+      typeof persisted._modified !== 'string'
+      || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?Z$/.test(persisted._modified)
+      || !Number.isFinite(Date.parse(persisted._modified))
+      || !hasOnlyKeys(persisted.core, ['isComplementaryAreaVisible'])
+      || typeof persisted.core.isComplementaryAreaVisible !== 'boolean'
+    ) {
+      return false;
+    }
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function expectedBlockedClassification(request, requestUrl, method, itemTracker, userId) {
+  if (isExpectedHeartbeatRequest(request, requestUrl, method, itemTracker)) {
+    return 'expected-core-heartbeat';
+  }
+  if (isExpectedPostLockRelease(request, requestUrl, method, itemTracker, userId)) {
+    return 'expected-post-lock-release';
+  }
+  if (isExpectedCorePreferencePersistence(request, requestUrl, method)) {
+    return 'expected-core-preference-persistence';
+  }
+  return null;
+}
+
+function isExactLoginPost(request, requestUrl, method, state, credentials, firstItem) {
+  const { mediaType } = requestContentType(request);
+  const bodyBuffer = request.postDataBuffer();
+  if (
+    !state.loginPostAllowed
+    || method !== 'POST'
+    || requestUrl.pathname !== '/wp-login.php'
+    || requestUrl.search !== ''
+    || !request.isNavigationRequest()
+    || mediaType !== 'application/x-www-form-urlencoded'
+    || !bodyBuffer
+    || bodyBuffer.length <= 0
+    || bodyBuffer.length >= WRITE_BODY_LIMIT_BYTES
+  ) {
+    return false;
+  }
+  try {
+    const frame = request.frame();
+    if (frame !== frame.page().mainFrame()) {
+      return false;
+    }
+  } catch {
+    return false;
+  }
+  const form = new URLSearchParams(request.postData() || '');
+  const keys = [...form.keys()].sort();
+  const expectedKeys = ['log', 'pwd', 'redirect_to', 'testcookie', 'wp-submit'];
+  return keys.length === expectedKeys.length
+    && new Set(keys).size === keys.length
+    && expectedKeys.every((key, index) => keys[index] === key)
+    && form.get('log') === credentials.username
+    && form.get('pwd') === credentials.password
+    && form.get('redirect_to') === editorUrlForItem(firstItem).href
+    && form.get('testcookie') === '1'
+    && /^.{1,80}$/u.test(form.get('wp-submit') || '');
+}
+
+async function installReadOnlyRequestBarrier(
+  context,
+  itemTracker,
+  userId,
+  credentials,
+  firstItem,
+) {
   const blockedWrites = [];
+  const state = { loginPostAllowed: true };
   const siteOrigin = new URL(config.baseUrl).origin;
   const loginUrl = new URL(`${config.baseUrl}/wp-login.php`);
   const readMethods = new Set(['GET', 'HEAD', 'OPTIONS']);
 
-  // This method-and-origin guard covers REST requests made through both
-  // /wp-json/... and ?rest_route=..., plus admin-ajax, post.php, and future
-  // same-origin write endpoints. The only allowed non-idempotent request is
-  // the exact wp-login.php POST needed to establish the in-memory session.
+  // The guard covers all origins. Only one main-frame, same-origin login POST
+  // is permitted; every other browser write is aborted before network I/O.
   await context.route('**/*', async (route) => {
     const request = route.request();
     const method = request.method().toUpperCase();
     const requestUrl = new URL(request.url());
     const isSameOrigin = requestUrl.origin === siteOrigin;
     const isLoginPost = isSameOrigin
-      && method === 'POST'
-      && requestUrl.pathname === loginUrl.pathname;
+      && requestUrl.pathname === loginUrl.pathname
+      && isExactLoginPost(
+        request,
+        requestUrl,
+        method,
+        state,
+        credentials,
+        firstItem,
+      );
 
-    if (!isSameOrigin || readMethods.has(method) || isLoginPost) {
+    if (readMethods.has(method)) {
+      await route.continue();
+      return;
+    }
+    if (isLoginPost) {
+      state.loginPostAllowed = false;
       await route.continue();
       return;
     }
 
-    const expectedHeartbeat = isExpectedHeartbeatRequest(request, requestUrl, method);
+    const expectedClassification = isSameOrigin
+      ? expectedBlockedClassification(request, requestUrl, method, itemTracker, userId)
+      : null;
     blockedWrites.push({
-      classification: expectedHeartbeat
-        ? 'expected-heartbeat-or-post-lock-poll'
-        : 'unexpected-write',
-      fatal: !expectedHeartbeat,
+      classification: expectedClassification || 'unexpected-write',
+      fatal: !expectedClassification,
       method,
       target: requestTargetForReport(requestUrl),
+      bodyShape: requestBodyShapeForReport(request),
     });
     await route.abort('blockedbyclient');
   });
 
-  return blockedWrites;
+  return { blockedWrites, state };
 }
 
 async function readAuthenticatedRawContent(page, item) {
@@ -866,16 +1796,18 @@ async function waitForStableEditor(page, item, rawContent) {
 }
 
 async function scanEditor(page, item, contextBlockedWrites) {
-  const editUrl = `${config.baseUrl}/wp-admin/post.php?post=${item.id}&action=edit`;
+  const editUrl = editorUrlForItem(item).href;
   const consoleErrors = [];
   const pageErrors = [];
   const blockedWriteStart = contextBlockedWrites.length;
   const onConsole = (message) => {
     if (message.type() === 'error') {
-      consoleErrors.push(message.text().slice(0, 500));
+      consoleErrors.push(redact(message.text(), lifecycle.reportSecrets).slice(0, 500));
     }
   };
-  const onPageError = (error) => pageErrors.push(errorMessage(error).slice(0, 500));
+  const onPageError = (error) => pageErrors.push(
+    redact(errorMessage(error), lifecycle.reportSecrets).slice(0, 500),
+  );
   page.on('console', onConsole);
   page.on('pageerror', onPageError);
 
@@ -898,12 +1830,14 @@ async function scanEditor(page, item, contextBlockedWrites) {
   };
 
   try {
-    const response = await page.goto(editUrl, {
-      timeout: config.editorTimeoutMs,
-      waitUntil: 'domcontentloaded',
-    });
-    if (!response?.ok()) {
-      throw new Error(`Editor returned HTTP ${response?.status() ?? 'unknown'}.`);
+    if (!isExactEditorLocation(page.url(), item)) {
+      const response = await page.goto(editUrl, {
+        timeout: config.editorTimeoutMs,
+        waitUntil: 'domcontentloaded',
+      });
+      if (!response?.ok()) {
+        throw new Error(`Editor returned HTTP ${response?.status() ?? 'unknown'}.`);
+      }
     }
     if (new URL(page.url()).pathname === '/wp-login.php') {
       throw new Error('Authentication expired and the editor redirected to wp-login.php.');
@@ -1000,7 +1934,7 @@ async function scanEditor(page, item, contextBlockedWrites) {
       );
     }
   } catch (error) {
-    result.reasons.push(errorMessage(error));
+    result.reasons.push(redact(errorMessage(error), lifecycle.reportSecrets));
   } finally {
     result.diagnostics.blockedContentWrites = contextBlockedWrites.slice(blockedWriteStart);
     page.off('console', onConsole);
@@ -1008,7 +1942,7 @@ async function scanEditor(page, item, contextBlockedWrites) {
   }
 
   if (result.diagnostics.blockedContentWrites.some(({ fatal }) => fatal)) {
-    result.reasons.push('The read-only guard blocked an unexpected same-origin write request.');
+    result.reasons.push('The network guard blocked an unexpected browser write request.');
   }
   result.status = result.reasons.length === 0 ? 'passed' : 'failed';
 
@@ -1039,6 +1973,11 @@ async function runScan(credentials) {
     });
     return;
   }
+  lifecycle.editLockSnapshotPromise = snapshotEditLocks(items);
+  await lifecycle.editLockSnapshotPromise;
+  if (lifecycle.abortController.signal.aborted) {
+    throw lifecycle.abortController.signal.reason || new Error('Verifier interrupted.');
+  }
 
   const playwright = loadPlaywright();
   lifecycle.browser = await playwright.chromium.launch({
@@ -1051,13 +1990,24 @@ async function runScan(credentials) {
   }
   let context = null;
   let contextBlockedWrites = [];
+  let barrierState = null;
 
   try {
     context = await lifecycle.browser.newContext({
       serviceWorkers: 'block',
       viewport: { width: 1440, height: 1000 },
     });
-    contextBlockedWrites = await installReadOnlyRequestBarrier(context);
+    lifecycle.itemTracker.currentId = Number(items[0].id);
+    lifecycle.itemTracker.priorId = null;
+    const barrier = await installReadOnlyRequestBarrier(
+      context,
+      lifecycle.itemTracker,
+      lifecycle.userId,
+      credentials,
+      items[0],
+    );
+    contextBlockedWrites = barrier.blockedWrites;
+    barrierState = barrier.state;
     // Authentication cookies stay in this in-memory context and are never
     // saved as storageState. GET/HEAD/OPTIONS remain available so the editor
     // and authenticated context=edit REST reads can hydrate normally.
@@ -1066,12 +2016,18 @@ async function runScan(credentials) {
     page.setDefaultTimeout(config.editorTimeoutMs);
     page.setDefaultNavigationTimeout(config.editorTimeoutMs);
 
-    await login(page, credentials);
+    await login(page, credentials, items[0]);
+    barrierState.loginPostAllowed = false;
     console.log('Authenticated to the WordPress development editor.');
 
     for (const item of items) {
       if (lifecycle.interruptedBy) {
         break;
+      }
+      const itemId = Number(item.id);
+      if (lifecycle.itemTracker.currentId !== itemId) {
+        lifecycle.itemTracker.priorId = lifecycle.itemTracker.currentId;
+        lifecycle.itemTracker.currentId = itemId;
       }
       const result = await scanEditor(page, item, contextBlockedWrites);
       summary.results.push(result);
@@ -1100,6 +2056,9 @@ async function runScan(credentials) {
       });
     }
   } finally {
+    if (barrierState) {
+      barrierState.loginPostAllowed = false;
+    }
     // The context-level route remains installed until context.close() settles,
     // so late non-idempotent requests are still blocked and recorded.
     await context?.close().catch(() => {});
@@ -1125,40 +2084,62 @@ async function runScan(credentials) {
 }
 
 async function main() {
-  await mkdir(config.outputDir, { recursive: true });
   const ephemeralIdentity = ephemeralAdminRequested ? buildEphemeralAdmin() : null;
+  lifecycle.ephemeralIdentity = ephemeralIdentity;
   if (ephemeralIdentity) {
     summary.cleanup.username = ephemeralIdentity.username;
   }
+  await mkdir(config.outputDir, { recursive: true });
   const credentials = ephemeralIdentity
     ? { username: ephemeralIdentity.username, password: ephemeralIdentity.password }
     : { username: externalUser, password: externalPassword };
+  lifecycle.reportSecrets = [credentials.password, credentials.username].filter(Boolean);
 
   try {
-    if (ephemeralIdentity) {
-      await createEphemeralAdmin(ephemeralIdentity);
+    if (lifecycle.abortController.signal.aborted) {
+      throw lifecycle.abortController.signal.reason || new Error('Verifier interrupted.');
     }
+    await verifyRuntimeSiteIdentity();
+    if (lifecycle.abortController.signal.aborted) {
+      throw lifecycle.abortController.signal.reason || new Error('Verifier interrupted.');
+    }
+    if (ephemeralIdentity) {
+      lifecycle.adminCreationPromise = createEphemeralAdmin(ephemeralIdentity);
+      await lifecycle.adminCreationPromise;
+    }
+    if (lifecycle.abortController.signal.aborted) {
+      throw lifecycle.abortController.signal.reason || new Error('Verifier interrupted.');
+    }
+    const resolvedUserId = ephemeralIdentity?.userId
+      || await findExactUserIdByLogin(credentials.username, {
+        secrets: [credentials.username, credentials.password],
+      });
+    if (!Number.isSafeInteger(resolvedUserId) || resolvedUserId <= 0) {
+      throw new Error('Exact-login lookup did not resolve the supplied administrator to one user ID.');
+    }
+    if (ephemeralIdentity?.userId && resolvedUserId !== ephemeralIdentity.userId) {
+      throw new Error(
+        `Ephemeral administrator ID mismatch: create returned ${ephemeralIdentity.userId}, `
+          + `exact-login lookup returned ${resolvedUserId}.`,
+      );
+    }
+    lifecycle.userId = resolvedUserId;
     await runScan(credentials);
   } catch (error) {
-    const safeError = redact(errorMessage(error), [credentials.password]);
+    const safeError = redact(errorMessage(error), [credentials.password, credentials.username]);
     summary.failures.push({ stage: 'fatal', error: safeError });
     console.error(safeError);
   } finally {
-    await closeBrowserBounded();
-    await cleanupEphemeralAdmin(ephemeralIdentity);
+    await cleanupResources();
 
     summary.finishedAt = new Date().toISOString();
     if (lifecycle.interruptedBy) {
       summary.status = 'interrupted';
-      summary.failures.push({
-        stage: 'signal',
-        signal: lifecycle.interruptedBy,
-        receivedSignals: lifecycle.receivedSignals,
-      });
+      recordSignalFailure();
     } else {
       summary.status = summary.failures.length === 0 ? 'passed' : 'failed';
     }
-    await writeSummary();
+    await writeSummarySerialized();
     console.log(`summary: ${path.join(config.outputDir, 'summary.json')}`);
   }
 
@@ -1166,6 +2147,8 @@ async function main() {
     process.exitCode = 130;
   } else if (lifecycle.interruptedBy === 'SIGTERM') {
     process.exitCode = 143;
+  } else if (lifecycle.interruptedBy === 'SIGHUP') {
+    process.exitCode = 129;
   } else if (summary.status !== 'passed') {
     process.exitCode = 1;
   }
