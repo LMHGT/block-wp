@@ -2,6 +2,7 @@
   "name": "lmhg-block-wordpress",
   "private": true,
   "scripts": {
+    "test:gutenberg": "node scripts/verify-gutenberg-stability.mjs",
     "test:responsive-h1": "node wp-content/themes/wordpress-2026/tests/responsive-h1-contract.mjs",
     "test:responsive-text": "node wp-content/themes/wordpress-2026/tests/responsive-text-containment.mjs"
   },
