@@ -1,8 +1,11 @@
 # WordPress 2026 MariaDB development runtime
 
 MariaDB is the authoritative LMHG development runtime as of July 22, 2026. The
-accepted Compose project serves `http://100.116.130.39:8093/`; the former
-WordPress Playground/SQLite service is retained only as a rollback artifact.
+accepted Compose project currently serves `http://100.116.130.39:8093/`; this is
+a private/noindex operational development URL and may change. The canonical
+public site is `https://louisvillementalhealth.org/`, hosted on SiteGround. The
+former WordPress Playground/SQLite service is retained only as a rollback
+artifact.
 
 - Source checkout: `/srv/codex/projects/lmhg-blockwp`
 - Current rollback runtime: `/srv/codex/services/lmhg-blockwp-wordpress`
@@ -73,9 +76,10 @@ Before importing data:
 6. Import once, then compare per-table row counts and critical serialized
    options against the manifest and SQLite source.
 
-The source database already uses the intended `http://100.116.130.39:8093`
-canonical URL. Validate staging with an explicit Host/connect mapping so the
-canonical options do not need a temporary rewrite.
+The source database already uses `http://100.116.130.39:8093` as its current
+development `home`/`siteurl`. This is not the canonical public origin. Validate
+an isolated rebuild with an explicit Host/connect mapping so the development
+options do not need a temporary rewrite.
 
 ## Rebuild acceptance and cutover
 

@@ -1,7 +1,7 @@
 # LMHG content, route, and design provenance
 
 Status: current reconciliation record
-Last verified: 2026-07-22
+Last verified: 2026-07-23
 
 This document preserves the useful decisions discovered on historical branches
 without restoring their retired runtime instructions or raw research archives.
@@ -36,8 +36,10 @@ Do not import the raw DataForSEO archive into the deployable source tree.
 
 ## Current canonical routes
 
-The route inventory in `wp2026-page-data.json` and the accepted development
-runtime define current paths. Some historical SEO records use proposed aliases;
+The canonical public origin is `https://louisvillementalhealth.org/`, hosted on
+SiteGround. The route inventory in `wp2026-page-data.json` and the accepted
+development runtime define current paths, but the private development origin is
+not canonical and may change. Some historical SEO records use proposed aliases;
 translate them before writing links, metadata, relationships, or documentation.
 
 | Historical or proposed path | Current project path |
@@ -117,8 +119,9 @@ Content boundaries carried forward from direct owner decisions:
 
 ## Durable design rules
 
-The historical design contract supplied rationale, but current design values
-must be read from `theme.json`, templates, CSS, and `AGENTS.md`.
+The historical design contract supplied rationale, but `DESIGN.md` now defines
+the current WordPress design intent. Confirm implemented state against
+`theme.json`, templates, CSS, the LMHG Site Core plugin, and `AGENTS.md`.
 
 - Use Gutenberg core blocks, block-theme templates and parts, `theme.json`, and
   the LMHG Site Core plugin. Do not add a page builder or a duplicate component
@@ -151,9 +154,11 @@ must be read from `theme.json`, templates, CSS, and `AGENTS.md`.
    historical brief.
 2. Record whether the decision came from an owner, current runtime evidence,
    current source, or research.
-3. Reconcile the smallest durable change into the appropriate source: database
+3. Check `DESIGN.md` for the approved page archetype, element owner, decision
+   state, and any open conflict that requires approval before implementation.
+4. Reconcile the smallest durable change into the appropriate source: database
    content, page-data baseline, theme, or plugin.
-4. Preserve existing relationship data unless the content model itself is being
+5. Preserve existing relationship data unless the content model itself is being
    intentionally changed.
-5. Run the validation and publication gates in `AGENTS.md` and
+6. Run the validation and publication gates in `AGENTS.md` and
    `docs/project-authority.md`.

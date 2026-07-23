@@ -1,7 +1,7 @@
 # LMHG Block WordPress project authority
 
 Status: accepted working contract
-Last reconciled: 2026-07-22
+Last reconciled: 2026-07-23
 
 This document explains which project surface answers each kind of question. It
 supplements `AGENTS.md`; it does not replace that file or relax its validation
@@ -35,7 +35,7 @@ When sources disagree, classify the disagreement before changing anything:
 
 | Item | Current development authority |
 | --- | --- |
-| Endpoint | `http://100.116.130.39:8093/` |
+| Current endpoint | `http://100.116.130.39:8093/` (private/noindex; may change) |
 | Runtime root | `/srv/codex/services/lmhg-blockwp-wordpress-mariadb` |
 | Source checkout | `/srv/codex/projects/lmhg-blockwp` |
 | WordPress | `wordpress:7.0.2-php8.3-apache` |
@@ -43,18 +43,21 @@ When sources disagree, classify the disagreement before changing anything:
 | Active LMHG theme | `wp-content/themes/wordpress-2026` |
 | Durable behavior plugin | `wp-content/plugins/lmhg-site-core` |
 
-This is a private/noindex development site. Development publication is allowed
-only after proportional validation. The retained Playground/SQLite service is
-a rollback artifact, not a source of current content or configuration. See
-`ops/MARIADB_RUNTIME.md` for recovery and cutover details.
+This endpoint is an operational development address, not the canonical public
+origin. Development publication is allowed only after proportional validation.
+The retained Playground/SQLite service is a rollback artifact, not a source of
+current content or configuration. See `ops/MARIADB_RUNTIME.md` for recovery and
+cutover details.
 
 ## Production boundary
 
-Production is a separate environment with separate data, credentials, backups,
-release controls, and approval. A successful change or publication on the OVH
-development site does not authorize a production deployment. Do not copy
-development secrets to production, infer production state from development, or
-change production without an explicit production release request.
+The canonical public site is `https://louisvillementalhealth.org/`, hosted on
+SiteGround. Production is a separate environment with separate data,
+credentials, backups, release controls, and approval. A successful change or
+publication on the OVH development site does not authorize a production
+deployment. Do not copy development secrets to production, infer production
+state from development, or access or change SiteGround without an explicit
+production request and the approved SiteGround connection workflow.
 
 ## Tracked and runtime-owned surfaces
 
