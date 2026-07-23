@@ -67,6 +67,9 @@ restore their earlier implementation wholesale.
    version, and development-only URL.
 2. Inventory published Pages and Posts through the same authenticated/runtime
    authority used by the live editor scan.
+   Require strict REST pagination headers and exact bidirectional ID/type/status
+   parity with an authoritative WP-CLI/MariaDB inventory; do not allow a missing
+   or malformed pagination header to default to one passing page.
 3. Inventory tracked theme templates, parts, and all `content` fields in
    `wp2026-page-data.json`.
 4. Run the existing Gutenberg verifier unchanged and retain its cleanup summary
@@ -100,18 +103,30 @@ Extend `scripts/verify-gutenberg-stability.mjs` without weakening its request
 barrier or cleanup behavior:
 
 - retain complete published Page/Post coverage and fail closed on partial scans;
+- reconcile the REST inventory with exact WP-CLI IDs before acquiring locks or
+  opening an editor;
 - assert the editor identity, stable hydration, block count, and invalid-block
   state as it does now;
+- require the Gutenberg validity and serialization APIs instead of defaulting to
+  valid or falling back to non-equivalent JSON output when an API is absent;
 - assert that a no-interaction editor load is not unexpectedly dirty;
 - compare saved and edited content using redacted lengths/hashes and flag
   normalization drift without storing the content;
 - fail on uncaught page errors and block-validation console signatures;
+- inspect recovery/crash warnings in the top document and every same-origin
+  editor canvas frame;
+- record same-origin failed requests and HTTP 4xx/5xx responses under a reviewed
+  fail/allow policy;
 - record other console errors separately until a reviewed allow/fail policy is
   defined, avoiding both silent failures and uncalibrated false positives;
 - retain UI recovery-prompt detection as defense in depth;
 - remove duplicate or ambiguous diagnostic behavior and keep one screenshot per
   failed editor record;
 - record exact discovered/scanned/passed/failed counts and cleanup proof.
+- compute the final pass state through one invariant that requires runtime
+  identity, complete inventories, zero record failures, zero fatal blocked
+  writes, verified lock restoration, verified administrator cleanup, and no
+  recovery marker.
 
 Do not add arbitrary delays as the primary fix. Continue waiting for verified
 editor identity, saved-content hydration, stable block state, and bounded settle
@@ -121,7 +136,9 @@ samples.
 
 Add a separate opt-in command for write-capable editor proof:
 
-1. Verify runtime identity and a fresh backup.
+1. Create a separately named disposable Compose project with separate ports,
+   MariaDB and uploads volumes, restored from a fresh accepted-development
+   backup. Verify its rewritten `home`/`siteurl`, noindex boundary, and isolation.
 2. Create one uniquely named temporary Draft with a chosen fixture.
 3. Open it in the editor and require zero invalid blocks or recovery prompts.
 4. Save, reload, save without intentional edits, and reload again.
@@ -132,9 +149,13 @@ Add a separate opt-in command for write-capable editor proof:
    route, and related test metadata are absent.
 8. Restore and verify any edit-lock state and remove the temporary administrator
    using the existing exact-ID-first cleanup contract.
+9. Remove only the explicitly named disposable Compose project and volumes after
+   its cleanup evidence is complete; then rerun the accepted-development
+   read-only sweep.
 
-This command must never iterate save operations across existing published
-content.
+A Git worktree alone does not isolate the WordPress database. This command must
+never run against the accepted development database and must never iterate save
+operations across existing published content.
 
 ## Phase 4: Templates, parts, and Site Editor evidence
 
