@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>LMHG WordPress SiteGround Deployment and Performance Plan</title>
+  <style>
+    :root {
+      --green: #31584a;
+      --deep: #152821;
+      --mint: #dce9df;
+      --cream: #f7f3ed;
+      --clay: #a75f3f;
+      --ink: #1f2a26;
+      --soft: #f8fbf8;
+      --line: #cbd8d0;
+      --muted: #53645d;
+      --good: #27643f;
+      --warn: #8b452d;
+      --info: #295d78;
+      --shadow: 0 12px 34px rgba(21, 40, 33, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: #fff;
+      color: var(--ink);
+      font: 16px/1.6 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+    }
+
+    a { color: var(--green); text-underline-offset: 0.16em; }
+    a:hover, a:focus-visible { color: var(--clay); }
+    a:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; }
+
+    header {
+      background: linear-gradient(135deg, var(--deep), var(--green));
+      color: #fff;
+      padding: clamp(2rem, 6vw, 5rem) max(1rem, calc((100vw - 1120px) / 2));
+    }
+
+    header p { max-width: 780px; }
+
+    .eyebrow {
+      color: #dfeee5;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      margin: 0 0 0.65rem;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 { color: var(--deep); line-height: 1.18; text-wrap: balance; }
+    header h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.55rem); margin: 0; max-width: 900px; }
+    h2 { border-bottom: 2px solid var(--mint); font-size: clamp(1.45rem, 3vw, 2.1rem); margin-top: 2.8rem; padding-bottom: 0.45rem; }
+    h3 { font-size: 1.08rem; margin-bottom: 0.3rem; }
+
+    .subtitle { color: #edf5f0; font-size: 1.08rem; margin: 1rem 0 0; }
+
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.25rem;
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 999px;
+      color: #fff;
+      display: inline-flex;
+      font-size: 0.84rem;
+      font-weight: 750;
+      padding: 0.35rem 0.72rem;
+    }
+
+    nav {
+      background: var(--cream);
+      border-bottom: 1px solid var(--line);
+      padding: 0.85rem max(1rem, calc((100vw - 1120px) / 2));
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav ul { display: flex; flex-wrap: wrap; gap: 0.55rem 1.1rem; list-style: none; margin: 0; padding: 0; }
+    nav a { font-size: 0.9rem; font-weight: 750; text-decoration: none; }
+
+    main { margin: 0 auto; max-width: 1120px; padding: 1.4rem 1rem 4rem; }
+
+    .notice, .card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: clamp(1rem, 2.5vw, 1.5rem);
+    }
+
+    .notice { background: var(--cream); border-left: 5px solid var(--clay); margin: 1.3rem 0; }
+    .notice strong { color: var(--deep); }
+
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr)); }
+    .card { background: var(--soft); }
+    .card p { margin-bottom: 0; }
+
+    .metric { color: var(--green); font-size: 1.85rem; font-weight: 850; line-height: 1; }
+    .metric-label { color: var(--muted); font-size: 0.88rem; margin-top: 0.35rem; }
+
+    .table-wrap { border: 1px solid var(--line); border-radius: 10px; overflow-x: auto; }
+    table { border-collapse: collapse; min-width: 720px; width: 100%; }
+    th, td { border-bottom: 1px solid var(--line); padding: 0.75rem; text-align: left; vertical-align: top; }
+    th { background: var(--mint); color: var(--deep); }
+    tbody tr:last-child td { border-bottom: 0; }
+
+    .good { color: var(--good); font-weight: 800; }
+    .warn { color: var(--warn); font-weight: 800; }
+    .info { color: var(--info); font-weight: 800; }
+
+    code {
+      background: #edf1ee;
+      border-radius: 4px;
+      color: var(--deep);
+      font: 0.9em/1.4 ui-monospace, SFMono-Regular, Consolas, monospace;
+      overflow-wrap: anywhere;
+      padding: 0.1em 0.32em;
+    }
+
+    pre {
+      background: var(--deep);
+      border-radius: 8px;
+      color: #f4f8f5;
+      overflow: auto;
+      padding: 1rem;
+    }
+
+    pre code { background: transparent; color: inherit; padding: 0; }
+    li + li { margin-top: 0.42rem; }
+    .compact li + li { margin-top: 0.22rem; }
+
+    .step {
+      border-left: 4px solid var(--green);
+      margin: 1rem 0;
+      padding: 0.2rem 0 0.2rem 1rem;
+    }
+
+    .step p { margin-top: 0.25rem; }
+
+    footer {
+      background: var(--deep);
+      color: #e8f0eb;
+      padding: 1.5rem max(1rem, calc((100vw - 1120px) / 2));
+    }
+
+    footer p { margin: 0; }
+
+    @media (max-width: 700px) {
+      nav { position: static; }
+      .status-row { align-items: flex-start; flex-direction: column; }
+      .badge { border-radius: 7px; }
+      main { padding-top: 0.75rem; }
+    }
+
+    @media print {
+      nav { display: none; }
+      header { background: #fff; color: var(--ink); padding-block: 1rem; }
+      header h1, header .subtitle, header .eyebrow { color: var(--ink); }
+      .badge { border-color: var(--ink); color: var(--ink); }
+      .card, .notice { box-shadow: none; }
+      a { color: var(--ink); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Louisville Mental Health Group</p>
+    <h1>SiteGround Deployment and Performance Plan</h1>
+    <p class="subtitle">A Codex-executed production runbook for the Gutenberg-native WordPress implementation, MariaDB-compatible data, SiteGround caching, mobile performance, and regression safety.</p>
+    <div class="status-row" aria-label="Document status">
+      <span class="badge">Status: Proposed</span>
+      <span class="badge">Owner: Codex</span>
+      <span class="badge">Updated: 2026-07-23</span>
+      <span class="badge">No deployment authorized by this document</span>
+    </div>
+  </header>
+
+  <nav aria-label="Document sections">
+    <ul>
+      <li><a href="#authority">Authority</a></li>
+      <li><a href="#baseline">Baseline</a></li>
+      <li><a href="#siteground">SiteGround controls</a></li>
+      <li><a href="#source-work">Source work</a></li>
+      <li><a href="#database">Database</a></li>
+      <li><a href="#deployment">Deployment</a></li>
+      <li><a href="#validation">Validation</a></li>
+      <li><a href="#crawler">AI crawlers</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="authority">
+      <h2>Authority and environment boundary</h2>
+      <div class="notice">
+        <strong>Production destination:</strong> <code>https://louisvillementalhealth.org/</code>, hosted by SiteGround. The development URL <code>http://100.116.130.39:8093/</code> and the Tailscale review URL are private development surfaces, are subject to change, and must never be treated as canonical public origins.
+      </div>
+      <ul>
+        <li><strong>Source authority:</strong> the verified <code>main</code> branch. Short-lived review branches must be merged only after their required evidence passes.</li>
+        <li><strong>Deployment owner:</strong> Codex will perform the source promotion, database transfer, SiteGround configuration, cache verification, regression tests, and closeout report.</li>
+        <li><strong>Approval boundary:</strong> this plan records the procedure but does not authorize a production deployment. Codex begins production mutation only after explicit release approval.</li>
+        <li><strong>Plugin preservation:</strong> retain LMHG Site Core, Rank Math Free, Rank Math Pro, and the currently installed plugin inventory. SiteGround Speed Optimizer may be added as the single hosting-integrated performance plugin.</li>
+        <li><strong>Prohibited artifacts:</strong> never commit credentials, database dumps, backups, runtime secrets, SiteGround tokens, or licensed plugin files.</li>
+      </ul>
+    </section>
+
+    <section id="baseline">
+      <h2>Measured development baseline</h2>
+      <p>One mobile Lighthouse lab run was captured from the isolated Gutenberg review runtime on 2026-07-23. These numbers are synthetic development evidence, not production field data or CrUX measurements.</p>
+      <div class="grid" aria-label="Performance baseline">
+        <div class="card"><div class="metric">99</div><div class="metric-label">Lighthouse Performance</div></div>
+        <div class="card"><div class="metric">1.98s</div><div class="metric-label">Largest Contentful Paint</div></div>
+        <div class="card"><div class="metric">0</div><div class="metric-label">Cumulative Layout Shift</div></div>
+        <div class="card"><div class="metric">25ms</div><div class="metric-label">Total Blocking Time</div></div>
+      </div>
+      <ul>
+        <li>Total transfer was approximately 297KB over 13 requests; about 248KB was images.</li>
+        <li>Lighthouse estimated about 183KB of avoidable transfer from oversized homepage service icons.</li>
+        <li>INP was not measured. Production acceptance requires field data or real-user monitoring before claiming INP performance.</li>
+        <li>The isolated runtime intentionally does not reproduce SiteGround cache headers, edge behavior, CDN behavior, or production geography.</li>
+      </ul>
+    </section>
+
+    <section id="siteground">
+      <h2>SiteGround-specific performance controls</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Control</th><th>Codex default</th><th>Acceptance evidence</th><th>Important constraint</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>NGINX Direct Delivery</td>
+              <td class="good">Enable and verify</td>
+              <td>Static images, CSS, and JavaScript return long-lived browser-cache headers and compressed responses where supported.</td>
+              <td>Use SiteGround's implementation rather than duplicating equivalent rules in LMHG Site Core.</td>
+            </tr>
+            <tr>
+              <td>Dynamic Cache</td>
+              <td class="good">Enable with automatic purge</td>
+              <td>First anonymous request may return <code>x-proxy-cache: MISS</code>; the warmed repeat must return <code>HIT</code>.</td>
+              <td>Authenticated, preview, administrative, and personalized responses must bypass full-page caching.</td>
+            </tr>
+            <tr>
+              <td>Memcached object cache</td>
+              <td class="good">Enable through Speed Optimizer</td>
+              <td>WordPress recognizes the persistent object cache; editor, REST, Rank Math, and public pages remain correct after flush.</td>
+              <td>Do not add Redis or a second object-cache plugin without measured need.</td>
+            </tr>
+            <tr>
+              <td>File-based cache</td>
+              <td class="info">Optional after Dynamic Cache</td>
+              <td>Preheat completes and representative routes are warm after content updates.</td>
+              <td>Do not enable merely to accumulate cache layers; retain only if it improves measured cold or edge-miss behavior.</td>
+            </tr>
+            <tr>
+              <td>Browser-specific caching</td>
+              <td class="warn">Leave disabled</td>
+              <td>One responsive HTML representation passes mobile and desktop checks.</td>
+              <td>Browser variants reduce cache efficiency and are unnecessary because this theme does not generate separate mobile markup.</td>
+            </tr>
+            <tr>
+              <td>HTML/CSS/JS minification</td>
+              <td class="info">Test individually</td>
+              <td>Before/after Lighthouse median improves or remains neutral, with exact visual and Gutenberg parity.</td>
+              <td>Do not enable CSS/JS combination initially. The site has only two small external stylesheets and no custom public JavaScript.</td>
+            </tr>
+            <tr>
+              <td>Image optimization and WebP</td>
+              <td class="good">Enable after backup and preview</td>
+              <td>Watermark transparency and service icon appearance are unchanged; bytes decrease; responsive sources remain valid.</td>
+              <td>Use a reversible SiteGround backup and do not stack a second lazy-loading system over WordPress without testing.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Official references:</strong> <a href="https://www.siteground.com/tutorials/wordpress/speed-optimizer/supercacher/">SiteGround caching controls</a>, <a href="https://www.siteground.com/kb/siteground-dynamic-caching-configuration/">Dynamic Cache headers and purging</a>, and <a href="https://www.siteground.com/tutorials/wordpress/speed-optimizer/image-optimizations/">media optimization controls</a>.</p>
+    </section>
+
+    <section id="source-work">
+      <h2>Recommended source optimizations before production</h2>
+      <p>These are separate approval-gated implementation batches. None is required merely to document or configure SiteGround.</p>
+
+      <div class="step">
+        <h3>1. Right-size homepage service icons</h3>
+        <p>Generate a non-cropped 150–160px attachment size and let core Image blocks emit <code>srcset</code> and <code>sizes</code>. Preserve attachment IDs, links, alt text, editor geometry, and visible 52px rendering. Remove inappropriate high priority from service icons that begin roughly 2,000px below the mobile viewport.</p>
+      </div>
+
+      <div class="step">
+        <h3>2. Consolidate LMHG Site Core maintenance gates</h3>
+        <p>Replace roughly 28 public-request migration, seed, cleanup, and synchronization checks with one lightweight Site Core data-version gate. Run existing migrations in their current order only when the version is behind, while retaining all current markers and audit reports.</p>
+      </div>
+
+      <div class="step">
+        <h3>3. Bound two content queries</h3>
+        <p>Batch the FAQ-index query instead of issuing one query per FAQ set. Apply the three-card limit inside the Related Articles SQL query rather than loading every match and slicing in PHP. Preserve output ordering and content exactly.</p>
+      </div>
+
+      <div class="step">
+        <h3>4. Remove small request-path redundancies</h3>
+        <p>Do not enqueue review CSS on a homepage with no review showcase. Load the administration-only module only for administration requests. Add cheap no-op guards and request-local dimension memoization to the accessibility HTML buffer without removing any accessibility correction.</p>
+      </div>
+
+      <div class="step">
+        <h3>5. Limit CSS cleanup to proven legacy rules</h3>
+        <p>Remove only selectors proven unused across tracked template parts, database template-part state, and every rendered page archetype. Keep the exact <code>style.css</code> and <code>theme.json.styles.css</code> mirror. Do not introduce a new CSS architecture for a stylesheet that is currently about 10.6KB compressed.</p>
+      </div>
+    </section>
+
+    <section id="database">
+      <h2>MariaDB and WordPress database plan</h2>
+      <p>The current development database is approximately 10.4MB, with about 84KB of normally autoloaded options, zero orphaned post metadata, and a development InnoDB read-hit ratio above 99.99%. The database does not justify manual tuning or schema surgery.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Do</h3>
+          <ul class="compact">
+            <li>Export a consistent, checksummed MariaDB backup.</li>
+            <li>Verify SiteGround's target engine and version before import.</li>
+            <li>Use a portable WordPress SQL export without environment-specific paths or secrets.</li>
+            <li>Run immutable-content and critical-option comparisons after import.</li>
+            <li>Retain rollback data until production acceptance is complete.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Do not</h3>
+          <ul class="compact">
+            <li>Do not add custom indexes without <code>EXPLAIN</code> or slow-query evidence.</li>
+            <li>Do not run broad <code>OPTIMIZE TABLE</code> operations as routine deployment work.</li>
+            <li>Do not delete revisions, scheduler rows, or transients manually.</li>
+            <li>Do not copy Docker memory settings into SiteGround's managed database environment.</li>
+            <li>Do not present post-import runtime rows as immutable source parity.</li>
+          </ul>
+        </div>
+      </div>
+      <p>SiteGround identifies MariaDB 10.11 and 10.6 as recommended WordPress-compatible database versions. Codex must still confirm the actual managed target before importing. See <a href="https://www.siteground.com/kb/detailed_wordpress_requirements/">SiteGround's WordPress requirements</a>.</p>
+
+      <h3>Scheduled maintenance</h3>
+      <p>Codex should replace traffic-driven WP-Cron with a SiteGround real cron only after proving the scheduled command works. A reasonable starting point is twice hourly:</p>
+      <pre><code>cd /home/customer/www/louisvillementalhealth.org/public_html
+wp cron event run --due-now &gt;/dev/null 2&gt;&amp;1</code></pre>
+      <p>The path must be resolved from the actual SiteGround account. Disable request-driven WP-Cron only after a manual invocation succeeds and due events drain without duplicate execution. See <a href="https://www.siteground.com/tutorials/wordpress/real-cron-job/">SiteGround's real-cron procedure</a>.</p>
+    </section>
+
+    <section id="deployment">
+      <h2>Codex-owned deployment sequence</h2>
+      <ol>
+        <li><strong>Release authority:</strong> verify explicit approval, clean <code>main</code>, local/remote equality, required review-branch merges, and the exact production commit.</li>
+        <li><strong>Inventory:</strong> record WordPress, PHP, target database, active/inactive plugin versions, theme version, canonical URL, SiteGround document root, cache state, and current DNS/TLS behavior.</li>
+        <li><strong>Rollback set:</strong> create and verify a database backup, <code>wp-content</code> archive, current production file inventory, and SiteGround restore point before mutation.</li>
+        <li><strong>Staged transfer:</strong> deploy tracked theme/plugin files without secrets or licensed binaries; preserve uploads and required installed plugins.</li>
+        <li><strong>Database import:</strong> import once, perform serialized URL replacement with WordPress-aware tooling if needed, and compare critical content/options with the source snapshot.</li>
+        <li><strong>Canonical configuration:</strong> set <code>home</code>/<code>siteurl</code>, HTTPS, permalinks, noindex/indexability policy, Rank Math sitemap behavior, and production-safe environment constants.</li>
+        <li><strong>Application validation:</strong> verify administration, Gutenberg editors, REST, redirects, sitemap/schema, images, CTA destinations, accessibility, mobile layouts, and application logs before enabling aggressive optimization.</li>
+        <li><strong>SiteGround optimization:</strong> enable one control at a time, purge and warm caches, then collect raw headers, rendered parity, and Lighthouse evidence after each material control.</li>
+        <li><strong>Cutover:</strong> change public routing only after all blocking checks pass. Retain the rollback set and monitor public errors, cache behavior, scheduled actions, and form/CTA destinations.</li>
+        <li><strong>Closeout:</strong> publish the production commit, configuration evidence, validation results, known deferrals, and rollback window. Never include credentials in the report.</li>
+      </ol>
+    </section>
+
+    <section id="validation">
+      <h2>Regression and acceptance gates</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Gate</th><th>Minimum evidence</th><th>Stop condition</th></tr></thead>
+          <tbody>
+            <tr><td>Gutenberg integrity</td><td>Every editable published page loads with zero invalid blocks, zero recovery prompts, and no unauthorized write during read-only verification.</td><td class="warn">Any recovery prompt, invalid block, unexpected serialization change, or stranded lock/admin account.</td></tr>
+            <tr><td>Editor/public parity</td><td>Service icons, headings, buttons, images, and dynamic blocks have matching geometry and meaning in editor and public views.</td><td class="warn">Material visual divergence or missing editor controls.</td></tr>
+            <tr><td>Responsive behavior</td><td>H1 and text-containment suites pass all published routes at 319, 360, 390, 600, 768, 1024, 1292, and 1440 CSS pixels.</td><td class="warn">Horizontal overflow, wrapped contract H1, clipped text, or mobile navigation failure.</td></tr>
+            <tr><td>Performance</td><td>Three-run median mobile Lighthouse on homepage plus representative service, FAQ, team, and Article routes; no material regression in LCP, CLS, or transferred bytes.</td><td class="warn">CWV threshold regression, new blocking third party, or unexplained payload increase.</td></tr>
+            <tr><td>Cache correctness</td><td>Anonymous <code>MISS → HIT</code>, authenticated/preview bypass, correct purge after edits, and no stale editor/public divergence.</td><td class="warn">Private data cached, updates hidden, or cache variants return inconsistent markup.</td></tr>
+            <tr><td>Database</td><td>Critical content/options match the source snapshot; no SQL errors, orphan growth, or failed scheduled actions.</td><td class="warn">Serialization damage, missing content, duplicated canonical objects, or recurring database errors.</td></tr>
+            <tr><td>SEO/discovery</td><td>Canonical domain, robots, Rank Math XML sitemaps, schema, redirects, and status codes are internally consistent.</td><td class="warn">Development URL leakage, accidental noindex, sitemap loss, or duplicate schema authority.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Required repository checks</h3>
+      <ul class="compact">
+        <li>PHP syntax checks for every changed LMHG Site Core file and <code>git diff --check</code>.</li>
+        <li><code>npm run test:gutenberg:self</code>, then live all-editable Gutenberg verification with safe ephemeral-administrator cleanup.</li>
+        <li><code>npm run test:page-data</code>, <code>npm run test:responsive-h1</code>, and <code>npm run test:responsive-text</code>.</li>
+        <li><code>npm run test:site-core:accessibility</code>, <code>npm run test:site-core:redirects</code>, and Article runtime verification where applicable.</li>
+        <li>Exact <code>style.css</code> versus <code>theme.json.styles.css</code> comparison after every CSS change.</li>
+        <li>Raw and rendered production checks after every SiteGround purge/warm cycle; one stale rendering is not sufficient evidence of failure or success.</li>
+      </ul>
+    </section>
+
+    <section id="crawler">
+      <h2>Deferred AI-crawler and edge/WAF task</h2>
+      <div class="notice">
+        <strong>Post-deployment only:</strong> SiteGround has previously returned connection-level empty responses for selected AI crawler user agents even when <code>robots.txt</code> allowed them and static text files were requested. This is separate from WordPress performance work and must not block the initial optimization implementation.
+      </div>
+      <p>After production stabilizes, Codex will:</p>
+      <ol>
+        <li>Verify normal-browser, search-crawler, and named AI-crawler access to <code>/robots.txt</code>, <code>/llms.txt</code>, the sitemap, and one static asset.</li>
+        <li>Compare status, headers, TLS behavior, and response bodies using exact user-agent evidence.</li>
+        <li>Inspect WordPress, Speed Optimizer, Security Optimizer, <code>.htaccess</code>, and SiteGround controls without assuming the block originates in WordPress.</li>
+        <li>If connection-level drops persist, provide SiteGround support with timestamped curl evidence, source IP, DNS target, affected user agents, and successful control requests.</li>
+        <li>Reverify crawler access after any SiteGround edge/WAF adjustment without weakening general security controls.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Decision summary</h2>
+      <ul>
+        <li>Use SiteGround's native caching stack deliberately, with Speed Optimizer as the single integration surface.</li>
+        <li>Prioritize right-sized images and request-path cleanup over theme rearchitecture.</li>
+        <li>Use Memcached for persistent WordPress object caching, but make no speculative MariaDB schema or server changes.</li>
+        <li>Keep mobile responsiveness and Gutenberg validity as hard release gates.</li>
+        <li>Codex owns deployment execution and evidence collection after explicit production approval.</li>
+        <li>Handle AI-crawler edge blocking as a separate post-deployment SiteGround task.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>LMHG WordPress SiteGround deployment and performance plan — self-contained repository artifact, 2026-07-23.</p>
+  </footer>
+</body>
+</html>
