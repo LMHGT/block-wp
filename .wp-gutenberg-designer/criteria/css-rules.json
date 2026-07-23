@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "maxCustomCssBytes": 100000,
+  "disallowImportant": false,
+  "preferThemeJsonTokens": true,
+  "importantPolicy": "Existing scoped !important rules are permitted; new uses require a documented cascade reason.",
+  "allowedColorValues": [
+    "#000000",
+    "#152821",
+    "#1f2a26",
+    "#31584a",
+    "#a45632",
+    "#a75f3f",
+    "#d3e4d9",
+    "#d4e6da",
+    "#dce9df",
+    "#eaf4ee",
+    "#f7f3ed",
+    "#f8fbf8",
+    "#f9fbf8",
+    "#faf8f4",
+    "#ffffff"
+  ]
+}

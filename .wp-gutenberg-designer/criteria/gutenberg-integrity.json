@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "sourceCandidates": {
+    "templates": "wp-content/themes/wordpress-2026/templates/*.html",
+    "templateParts": "wp-content/themes/wordpress-2026/parts/*.html",
+    "pageData": "wp-content/themes/wordpress-2026/wp2026-page-data.json#pages[*].content"
+  },
+  "runtimeScope": {
+    "postEditor": [
+      "page",
+      "post",
+      "lmhg_faq",
+      "lmhg_review"
+    ],
+    "siteEditor": [
+      "wp_block",
+      "wp_navigation",
+      "wp_template",
+      "wp_template_part"
+    ],
+    "excludedStatuses": [
+      "auto-draft",
+      "inherit",
+      "trash"
+    ],
+    "newEditorCapableTypes": "block-until-reviewed"
+  },
+  "proofTiers": {
+    "static": "Syntax and project criteria only; does not prove editor validity.",
+    "runtimeReadonly": "Authenticated exact-inventory editor loads with all browser writes blocked and cleanup verified.",
+    "runtimeRoundtrip": "Save/reload/no-op-save evidence in a separately named disposable runtime clone only."
+  },
+  "hardFailures": [
+    "invalid or missing block",
+    "block recovery or crash UI in any same-origin editor frame",
+    "Gutenberg validation console signature",
+    "uncaught editor page error",
+    "unexpected no-interaction dirty state",
+    "inventory disagreement or incomplete coverage",
+    "failed lock or administrator cleanup",
+    "write-capable roundtrip targeting accepted development or production"
+  ],
+  "commands": {
+    "self": "npm run test:gutenberg:self",
+    "runtimeInventory": "npm run test:gutenberg:inventory",
+    "publishedRuntimeReadonly": "npm run test:gutenberg -- --ephemeral-admin",
+    "releaseRuntimeReadonly": "npm run test:gutenberg:all-editable -- --ephemeral-admin",
+    "responsiveH1": "npm run test:responsive-h1",
+    "responsiveText": "npm run test:responsive-text"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "status": "confirmed",
+  "tokens": {
+    "source": "wp-content/themes/wordpress-2026/theme.json",
+    "approvedColors": [
+      "#152821",
+      "#1f2a26",
+      "#31584a",
+      "#a75f3f",
+      "#dce9df",
+      "#f7f3ed"
+    ],
+    "allowedImplementationColors": [
+      "#000000",
+      "#a45632",
+      "#d3e4d9",
+      "#d4e6da",
+      "#eaf4ee",
+      "#f8fbf8",
+      "#f9fbf8",
+      "#faf8f4",
+      "#ffffff"
+    ]
+  },
+  "rules": [
+    {
+      "id": "wordpress-design-authority",
+      "description": "DESIGN.md and WordPress theme tokens control implementation; Astro rules are historical only.",
+      "status": "confirmed",
+      "severity": "blocker"
+    }
+  ]
+}

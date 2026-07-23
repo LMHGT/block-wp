@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "authority": "DESIGN.md and tracked WordPress theme assets",
+  "generatedAssetsAllowed": false,
+  "notes": [
+    "Do not invent replacement brand assets during routine content or theme work.",
+    "Treat theme.json palette and typography tokens as the implementation authority."
+  ]
+}

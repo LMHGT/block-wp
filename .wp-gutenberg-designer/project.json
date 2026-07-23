@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "name": "LMHG Block WordPress",
+    "slug": "lmhg-blockwp",
+    "description": "Agent-maintained WordPress block theme and Site Core integration for Louisville Mental Health Group."
+  },
+  "wordpress": {
+    "projectType": "block-theme-with-site-plugin",
+    "targetVersion": "7.0.2",
+    "developmentMode": "project-owned-docker-compose",
+    "runtimeConnection": "project-validator",
+    "developmentUrl": "http://100.116.130.39:8093/",
+    "developmentUrlMayChange": true,
+    "canonicalLiveUrl": "https://louisvillementalhealth.org/",
+    "productionHost": "SiteGround"
+  },
+  "outputs": {
+    "type": "existing-block-theme",
+    "themeSlug": "wordpress-2026",
+    "textDomain": "wordpress-2026"
+  },
+  "github": {
+    "mode": "existing-private-repository",
+    "authoritativeBranch": "main"
+  },
+  "visualSystem": {
+    "mode": "existing-authority",
+    "confidence": "confirmed",
+    "sources": [
+      "DESIGN.md",
+      "wp-content/themes/wordpress-2026/theme.json",
+      "wp-content/themes/wordpress-2026/style.css"
+    ],
+    "confirmedRules": [
+      "Astro is not an implementation surface.",
+      "Use WordPress core blocks, block-theme templates, template parts, theme.json, and LMHG Site Core.",
+      "Keep one visible fitted H1 and prevent document-level horizontal overflow at every supported viewport.",
+      "Keep style.css synchronized into theme.json styles.css after every CSS change."
+    ]
+  },
+  "brandAssets": {
+    "authority": "DESIGN.md and tracked WordPress theme assets"
+  },
+  "qualityGates": {
+    "editorValid": true,
+    "sourceRegistryValid": true,
+    "completeEditorInventory": true,
+    "noRecoveryPrompts": true,
+    "noUnexpectedHorizontalScroll": true,
+    "responsiveH1": true,
+    "cleanupVerified": true
+  },
+  "writeScope": {
+    "allowed": [
+      ".wp-gutenberg-designer",
+      "docs",
+      "scripts",
+      "package.json",
+      "wp-content/themes/wordpress-2026",
+      "wp-content/plugins/lmhg-site-core"
+    ],
+    "productionRequiresSeparateApproval": true
+  }
+}

@@ -712,6 +712,11 @@ footer.wp-block-template-part > hr {
   width: 100%;
 }
 
+/* Gutenberg's core/image editor wrapper overrides linked images to block/inline. */
+.block-editor-block-list__block.wp2026-service-icon > a {
+  display: flex !important;
+}
+
 .wp2026-service-icon a:focus-visible {
   outline: 2px solid var(--wp2026-clay);
   outline-offset: 3px;
