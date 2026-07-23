@@ -3,7 +3,10 @@
   "private": true,
   "scripts": {
     "test:article-runtime": "node scripts/verify-article-runtime.mjs",
+    "test:gutenberg:inventory": "node scripts/inventory-gutenberg-runtime.mjs",
+    "test:gutenberg:self": "node scripts/tests/gutenberg-integrity-contract.mjs",
     "test:gutenberg": "node scripts/verify-gutenberg-stability.mjs",
+    "test:gutenberg:all-editable": "node scripts/verify-gutenberg-stability.mjs --all-editable",
     "test:page-data": "node wp-content/themes/wordpress-2026/tests/page-data-authority.mjs",
     "test:responsive-h1": "node wp-content/themes/wordpress-2026/tests/responsive-h1-contract.mjs",
     "test:responsive-text": "node wp-content/themes/wordpress-2026/tests/responsive-text-containment.mjs",

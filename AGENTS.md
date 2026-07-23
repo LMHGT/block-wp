@@ -158,9 +158,13 @@ or render-filter drift discovered earlier in this sequence.
   browser audits may run concurrently.
 - Create and verify a fresh MariaDB backup before durable content changes or a
   release that can execute a migration.
-- `npm run test:gutenberg -- --ephemeral-admin` creates and removes a temporary
-  administrator and can temporarily touch edit-lock state. Require its cleanup
-  and lock-restoration evidence.
+- `npm run test:gutenberg:all-editable -- --ephemeral-admin` is the release-scope
+  Page, Post, FAQ, and Review editor gate. It creates and removes a temporary
+  administrator and can temporarily touch edit-lock state. Require complete
+  inventory parity, cleanup, and lock-restoration evidence. The shorter
+  `npm run test:gutenberg -- --ephemeral-admin` published Page/Post scan is a
+  diagnostic, not a substitute for the release gate. Follow
+  `docs/gutenberg-validation.md` for Site Editor and isolated-roundtrip proof.
 - `npm run test:article-runtime` creates and deletes a temporary published Post.
   Run it serially and require cleanup status `passed`.
 
@@ -172,10 +176,12 @@ or render-filter drift discovered earlier in this sequence.
 - Run `npm run test:responsive-h1` and `npm run test:responsive-text` after
   changing shared CSS, typography, containers, templates, parts, or rendering
   behavior. Validate all published Pages and Posts at every supported viewport.
-- Run `npm run test:gutenberg -- --ephemeral-admin` after changing block
+- Run `npm run test:gutenberg:inventory` and
+  `npm run test:gutenberg:all-editable -- --ephemeral-admin` after changing block
   serialization, templates, parts, editor-visible rendering, or save
-  normalization. Record the summary path and confirm administrator and edit-lock
-  cleanup.
+  normalization. Record the summary path and confirm complete post-editor/Site
+  Editor scope, administrator cleanup, and edit-lock restoration. The shorter
+  published-only scan may be used while diagnosing but does not close the gate.
 - Run `npm run test:article-runtime` after changing conventional Posts, Article
   permalinks, the Article hub, `BlogPosting` schema, Post sitemap behavior, or
   Helpful Articles. Confirm temporary-Post cleanup.

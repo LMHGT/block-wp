@@ -1,18 +1,36 @@
 #!/usr/bin/env node
 
 import { spawn } from 'node:child_process';
-import { randomBytes, randomUUID } from 'node:crypto';
+import { createHash, randomBytes, randomUUID } from 'node:crypto';
 import { existsSync } from 'node:fs';
-import { chmod, mkdir, unlink, writeFile } from 'node:fs/promises';
+import { chmod, mkdir, readFile, readdir, unlink, writeFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import {
+  classifyExpectedConsoleError,
+  classifyGutenbergConsoleError,
+  classifySameOriginReadFailure,
+  comparePublishedInventories,
+  finalInvariantFailedChecks,
+  strictRestCountValue,
+} from './lib/gutenberg-integrity.mjs';
 
 const require = createRequire(import.meta.url);
+const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const themeRoot = path.join(projectRoot, 'wp-content', 'themes', 'wordpress-2026');
+const pageDataPath = path.join(themeRoot, 'wp2026-page-data.json');
 const startedAt = new Date();
 const timestamp = startedAt.toISOString().replace(/[-:]/g, '').replace(/\..+/, 'Z');
 const runId = randomUUID();
 const args = new Set(process.argv.slice(2));
-const supportedArgs = new Set(['--ephemeral-admin', '--headed', '--help', '-h']);
+const supportedArgs = new Set([
+  '--all-editable',
+  '--ephemeral-admin',
+  '--headed',
+  '--help',
+  '-h',
+]);
 const unknownArgs = [...args].filter((arg) => !supportedArgs.has(arg));
 
 const OFFICIAL_SOURCES = [
@@ -30,24 +48,47 @@ const CHILD_TERMINATION_GRACE_MS = 5000;
 const BROWSER_CLOSE_TIMEOUT_MS = 5000;
 const CLEANUP_PROCESS_TIMEOUT_MS = 30000;
 const WRITE_BODY_LIMIT_BYTES = 64 * 1024;
+const EXPECTED_WORDPRESS_VERSION = '7.0.2';
+const EXPECTED_THEME_SLUG = 'wordpress-2026';
+const EXPECTED_SITE_CORE_PLUGIN = 'lmhg-site-core/lmhg-site-core.php';
+const WP_CLI_DISABLE_AUTOMATIC_CRON = "if (! defined('DISABLE_WP_CRON')) { define('DISABLE_WP_CRON', true); }";
+const READ_ONLY_PRELOADER_CONTAINER_PATH = '/tmp/lmhg-gutenberg-runtime-read-only.php';
+const readOnlyPreloaderPath = path.join(
+  projectRoot,
+  'scripts',
+  'php',
+  'gutenberg-runtime-inventory.php',
+);
+const inspectRoot = path.join(projectRoot, '.runtime', 'inspect');
 
-const CONTENT_TYPES = [
+const POST_EDITOR_CONTENT_TYPES = [
   { label: 'Page', postType: 'page', restBase: 'pages' },
   { label: 'Post', postType: 'post', restBase: 'posts' },
+  { label: 'FAQ', postType: 'lmhg_faq', restBase: 'lmhg_faq' },
+  { label: 'Review', postType: 'lmhg_review', restBase: 'lmhg_review' },
 ];
+const DURABLE_CONTENT_STATUSES = ['draft', 'future', 'pending', 'private', 'publish'];
+const allEditableRequested = args.has('--all-editable');
+const CONTENT_TYPES = allEditableRequested
+  ? POST_EDITOR_CONTENT_TYPES
+  : POST_EDITOR_CONTENT_TYPES.filter(({ postType }) => ['page', 'post'].includes(postType));
+const CONTENT_STATUSES = allEditableRequested ? DURABLE_CONTENT_STATUSES : ['publish'];
 
 function printHelp() {
   console.log(`LMHG Gutenberg stability verifier
 
-Scans every published WordPress Page and Post in the block editor. Browser
-network writes are blocked, except for the exact login POST; the command never
-saves a post. It fails when an editor cannot load, Gutenberg reports an invalid
-block, or a block-recovery warning is visible.
+Scans published WordPress Pages and Posts in the block editor by default. Use
+--all-editable for the release-scope Page, Post, FAQ, and Review inventory in
+every approved durable status. Browser network writes are blocked, except for
+the exact login POST; the command never saves content. It fails when an editor
+cannot load, Gutenberg reports an invalid block, or block-recovery UI is visible.
 
 Usage:
   npm run test:gutenberg -- --ephemeral-admin
 
 Options:
+  --all-editable     Scan the complete approved post-editor inventory in
+                     publish, draft, pending, private, and future statuses.
   --ephemeral-admin  Create a unique temporary administrator through the active
                      Docker Compose WP-CLI service, then delete it in cleanup.
   --headed           Show Chromium while the scan runs. Headless is the default.
@@ -62,8 +103,14 @@ Environment:
                                 /usr/bin/google-chrome when present
   WP_RUNTIME_ROOT               Runtime root used for WP-CLI lock/admin cleanup
                                   (default: /srv/codex/services/lmhg-blockwp-wordpress-mariadb)
+  WP_RUNTIME_WORDPRESS_ROOT     Host path for deployed-file parity
+                                  (default: <WP_RUNTIME_ROOT>/wordpress)
   WP_COMPOSE_FILE               Active Compose file used by WP-CLI
                                   (default: <WP_RUNTIME_ROOT>/compose.yml)
+  WP_WEB_SERVICE                Running Compose web service whose cron setting
+                                  must be proven (default: wordpress)
+  WP_WEB_WORDPRESS_CONFIG       WordPress config path inside the web container
+                                  (default: /var/www/html/wp-config.php)
   WP_CLI_SERVICE                Compose WP-CLI service (default: cli)
 
 Security:
@@ -154,11 +201,54 @@ const config = {
       `gutenberg-stability-${timestamp}-${runId.replaceAll('-', '').slice(0, 8)}`,
     ),
   runtimeRoot,
+  runtimeWordPressRoot:
+    process.env.WP_RUNTIME_WORDPRESS_ROOT || path.join(runtimeRoot, 'wordpress'),
+  webService: process.env.WP_WEB_SERVICE || 'wordpress',
+  webWordPressConfig:
+    process.env.WP_WEB_WORDPRESS_CONFIG || '/var/www/html/wp-config.php',
   wpCliService: process.env.WP_CLI_SERVICE || 'cli',
 };
 
+config.outputDir = path.resolve(projectRoot, config.outputDir);
+const outputRelativeToInspectRoot = path.relative(inspectRoot, config.outputDir);
+if (
+  !outputRelativeToInspectRoot
+  || outputRelativeToInspectRoot.startsWith(`..${path.sep}`)
+  || outputRelativeToInspectRoot === '..'
+  || path.isAbsolute(outputRelativeToInspectRoot)
+) {
+  configurationError(
+    'WP_GUTENBERG_OUTPUT_DIR must name a child directory under project-local .runtime/inspect/.',
+  );
+}
+
+let configuredSiteUrl;
+try {
+  configuredSiteUrl = new URL(config.baseUrl);
+} catch {
+  configurationError(`WP_URL must be an absolute HTTP(S) URL; received ${JSON.stringify(config.baseUrl)}`);
+}
+const configuredHostname = configuredSiteUrl.hostname.toLowerCase().replace(/\.+$/, '');
+if (
+  !['http:', 'https:'].includes(configuredSiteUrl.protocol)
+  || configuredSiteUrl.username
+  || configuredSiteUrl.password
+  || configuredSiteUrl.search
+  || configuredSiteUrl.hash
+) {
+  configurationError('WP_URL must be a plain HTTP(S) site URL without credentials, query, or fragment.');
+}
+if (configuredSiteUrl.pathname.replace(/\/+$/, '') !== '') {
+  configurationError('WP_URL must use the site origin with no subdirectory path.');
+}
+if (['louisvillementalhealth.org', 'www.louisvillementalhealth.org'].includes(configuredHostname)) {
+  configurationError(
+    'The canonical Louisville Mental Health Group production host is forbidden for this verifier.',
+  );
+}
+
 const summary = {
-  schemaVersion: 1,
+  schemaVersion: 2,
   runId,
   startedAt: startedAt.toISOString(),
   finishedAt: null,
@@ -168,6 +258,8 @@ const summary = {
     baseUrl: config.baseUrl,
     browserExecutablePath: config.browserExecutablePath || 'playwright-managed',
     contentTypes: CONTENT_TYPES.map(({ postType }) => postType),
+    contentStatuses: CONTENT_STATUSES,
+    scope: allEditableRequested ? 'all-editable-post-content' : 'published-pages-posts',
     editorSettleMs: config.editorSettleMs,
     editorTimeoutMs: config.editorTimeoutMs,
     headed: config.headed,
@@ -177,7 +269,20 @@ const summary = {
   inventory: {
     page: 0,
     post: 0,
+    lmhg_faq: 0,
+    lmhg_review: 0,
     total: 0,
+    restTotal: 0,
+    wpCliTotal: 0,
+    parity: null,
+  },
+  sourcePreflight: {
+    attempted: false,
+    expected: 0,
+    scanned: 0,
+    passed: 0,
+    failed: 0,
+    candidates: [],
   },
   counts: {
     scanned: 0,
@@ -200,6 +305,7 @@ const summary = {
   editLocks: {
     snapshotAttempted: false,
     snapshotCount: 0,
+    recoveryMarker: null,
     restorationAttempted: false,
     restorationCount: 0,
     deletedScanCreatedCount: 0,
@@ -208,13 +314,26 @@ const summary = {
   },
   runtimeIdentity: {
     attempted: false,
+    activeThemeMatches: null,
     homeMatches: null,
+    implementationParity: null,
+    implementationSurfaces: [],
+    isBlockTheme: null,
+    readOnlyBootstrapGuardOk: null,
+    siteCoreActive: null,
     siteUrlMatches: null,
+    webAutomaticCronDisabled: null,
+    wordpressVersionMatches: null,
     ok: null,
   },
   readOnlyGuard: {
     expectedBlocked: { count: 0, requests: [] },
     fatalBlocked: { count: 0, requests: [] },
+  },
+  finalInvariant: {
+    evaluated: false,
+    ok: false,
+    failedChecks: [],
   },
   failures: [],
   results: [],
@@ -225,16 +344,19 @@ const lifecycle = {
   adminCreationPromise: null,
   abortController: new AbortController(),
   browser: null,
+  browserCloseProven: true,
   browserClosePromise: null,
   children: new Set(),
   editLockSnapshot: null,
   editLockSnapshotPromise: null,
+  editLockRecoveryMarkerPath: null,
   ephemeralIdentity: null,
   interruptedBy: null,
   itemTracker: { currentId: null, priorId: null },
   receivedSignals: [],
   resourceCleanupPromise: null,
   reportSecrets: [],
+  signalHoldTimer: null,
   signalFinalizationPromise: null,
   summaryWritePromise: Promise.resolve(),
   userId: null,
@@ -242,26 +364,39 @@ const lifecycle = {
 
 async function closeBrowserBounded() {
   if (!lifecycle.browser) {
-    return;
+    return lifecycle.browserCloseProven;
   }
   if (!lifecycle.browserClosePromise) {
     const browser = lifecycle.browser;
     let timeout;
+    const timedOut = Symbol('browser-close-timeout');
     const timeoutPromise = new Promise((resolve) => {
-      timeout = setTimeout(resolve, BROWSER_CLOSE_TIMEOUT_MS);
+      timeout = setTimeout(() => resolve(timedOut), BROWSER_CLOSE_TIMEOUT_MS);
     });
     lifecycle.browserClosePromise = Promise.race([
-      browser.close().catch(() => {}),
+      browser.close().then(() => true).catch(() => false),
       timeoutPromise,
-    ]).finally(() => {
+    ]).then((result) => {
       clearTimeout(timeout);
-      if (lifecycle.browser === browser) {
+      const closed = result === true;
+      lifecycle.browserCloseProven = closed;
+      if (closed && lifecycle.browser === browser) {
         lifecycle.browser = null;
       }
+      if (!closed && !summary.failures.some(({ stage }) => stage === 'browser-close')) {
+        summary.failures.push({
+          stage: 'browser-close',
+          error: result === timedOut
+            ? `Browser close was not proven within ${BROWSER_CLOSE_TIMEOUT_MS}ms.`
+            : 'Browser close returned an error and was not proven.',
+        });
+      }
+      return closed;
+    }).finally(() => {
       lifecycle.browserClosePromise = null;
     });
   }
-  await lifecycle.browserClosePromise;
+  return lifecycle.browserClosePromise;
 }
 
 function recordSignalFailure() {
@@ -292,18 +427,7 @@ function startSignalFinalization() {
   if (lifecycle.signalFinalizationPromise) {
     return lifecycle.signalFinalizationPromise;
   }
-  lifecycle.signalFinalizationPromise = (async () => {
-    await cleanupResources();
-    summary.finishedAt = new Date().toISOString();
-    summary.status = 'interrupted';
-    recordSignalFailure();
-    try {
-      await writeSummarySerialized();
-      console.error(`Interrupted summary: ${path.join(config.outputDir, 'summary.json')}`);
-    } catch (error) {
-      console.error(`Could not write the interrupted summary: ${errorMessage(error)}`);
-    }
-  })();
+  lifecycle.signalFinalizationPromise = cleanupResources();
   return lifecycle.signalFinalizationPromise;
 }
 
@@ -312,6 +436,10 @@ for (const signal of ['SIGINT', 'SIGTERM', 'SIGHUP']) {
     lifecycle.receivedSignals.push(signal);
     if (!lifecycle.interruptedBy) {
       lifecycle.interruptedBy = signal;
+      // A pending Promise alone does not keep Node's event loop alive. Retain a
+      // small handle until main() has written the interrupted summary, so the
+      // exact lock/admin cleanup cannot be abandoned between child processes.
+      lifecycle.signalHoldTimer = setInterval(() => {}, 1000);
       lifecycle.abortController.abort(new Error(`Received ${signal}`));
       console.error(
         `Received ${signal}; starting bounded browser, edit-lock, and administrator cleanup.`,
@@ -327,7 +455,13 @@ for (const signal of ['SIGINT', 'SIGTERM', 'SIGHUP']) {
         processHandle.terminate(`received ${signal}`);
       }
     }
-    void startSignalFinalization();
+    void startSignalFinalization().catch((error) => {
+      const safeError = redact(errorMessage(error), lifecycle.reportSecrets);
+      if (!summary.failures.some(({ stage }) => stage === 'signal-cleanup')) {
+        summary.failures.push({ stage: 'signal-cleanup', error: safeError });
+      }
+      console.error(`Signal cleanup failed: ${safeError}`);
+    });
   });
 }
 
@@ -343,6 +477,10 @@ function redact(value, secrets = []) {
     }
   }
   return rendered;
+}
+
+function diagnosticFingerprint(value) {
+  return createHash('sha256').update(String(value || ''), 'utf8').digest('hex').slice(0, 16);
 }
 
 function abortableDelay(milliseconds) {
@@ -366,7 +504,7 @@ function abortableDelay(milliseconds) {
 }
 
 async function writeSummary() {
-  await mkdir(config.outputDir, { recursive: true });
+  await ensureOutputDirectory();
   const summaryPath = path.join(config.outputDir, 'summary.json');
   await writeFile(
     summaryPath,
@@ -374,6 +512,11 @@ async function writeSummary() {
     { mode: 0o600 },
   );
   await chmod(summaryPath, 0o600);
+}
+
+async function ensureOutputDirectory() {
+  await mkdir(config.outputDir, { recursive: true, mode: 0o700 });
+  await chmod(config.outputDir, 0o700);
 }
 
 function runProcess(
@@ -502,6 +645,7 @@ function runProcess(
 }
 
 function wpCli(commandArgs, options = {}) {
+  const { composeRunArgs = [], ...processOptions } = options;
   return runProcess(
     'docker',
     [
@@ -516,10 +660,12 @@ function wpCli(commandArgs, options = {}) {
       '--rm',
       '-T',
       '--no-deps',
+      ...composeRunArgs,
       config.wpCliService,
+      `--exec=${WP_CLI_DISABLE_AUTOMATIC_CRON}`,
       ...commandArgs,
     ],
-    options,
+    processOptions,
   );
 }
 
@@ -544,11 +690,63 @@ function ephemeralRecoveryMarkerPath(identity) {
   );
 }
 
+function editLockRecoveryMarkerPath() {
+  return path.join(config.outputDir, `edit-lock-recovery-${runId}.json`);
+}
+
+async function persistEditLockRecoveryMarker(snapshot, inventoryProof) {
+  if (!Number.isSafeInteger(lifecycle.userId) || lifecycle.userId <= 0) {
+    throw new Error('Cannot persist edit-lock recovery evidence without the exact scan user ID.');
+  }
+  await ensureOutputDirectory();
+  const markerPath = editLockRecoveryMarkerPath();
+  const marker = {
+    schemaVersion: 1,
+    createdAt: new Date().toISOString(),
+    runId,
+    exactScanUserId: lifecycle.userId,
+    exactScanLogin: lifecycle.ephemeralIdentity?.username || null,
+    runtime: {
+      baseUrl: config.baseUrl,
+      composeFile: config.composeFile,
+      runtimeRoot: config.runtimeRoot,
+      expectedTheme: EXPECTED_THEME_SLUG,
+      expectedWordPressVersion: EXPECTED_WORDPRESS_VERSION,
+    },
+    inventory: inventoryProof,
+    snapshot,
+    recovery:
+      'Verify every inventory identity and current lock owner before restoring this exact snapshot.',
+  };
+  await writeFile(
+    markerPath,
+    `${JSON.stringify(marker, null, 2)}\n`,
+    { flag: 'wx', mode: 0o600 },
+  );
+  await chmod(markerPath, 0o600);
+  lifecycle.editLockRecoveryMarkerPath = markerPath;
+  summary.editLocks.recoveryMarker = path.basename(markerPath);
+}
+
+async function clearEditLockRecoveryMarker() {
+  const markerPath = lifecycle.editLockRecoveryMarkerPath;
+  if (!markerPath) {
+    return;
+  }
+  await unlink(markerPath).catch((error) => {
+    if (error?.code !== 'ENOENT') {
+      throw error;
+    }
+  });
+  lifecycle.editLockRecoveryMarkerPath = null;
+  summary.editLocks.recoveryMarker = null;
+}
+
 async function persistEphemeralRecoveryMarker(identity, reason) {
   if (!identity) {
     return;
   }
-  await mkdir(config.outputDir, { recursive: true });
+  await ensureOutputDirectory();
   const markerPath = ephemeralRecoveryMarkerPath(identity);
   if (identity.recoveryMarkerPaths.has(markerPath)) {
     return;
@@ -925,6 +1123,103 @@ function wpCliEvalFile(phpSource, options = {}) {
   return wpCli(['eval-file', '-'], { ...options, input: phpSource });
 }
 
+function wpCliReadOnlyEvalFile(phpSource, options = {}) {
+  if (!existsSync(readOnlyPreloaderPath)) {
+    throw new Error('The WP-CLI read-only preloader is missing from the tooling checkout.');
+  }
+  return wpCli(
+    [
+      `--require=${READ_ONLY_PRELOADER_CONTAINER_PATH}`,
+      'eval-file',
+      '-',
+    ],
+    {
+      ...options,
+      composeRunArgs: [
+        '--volume',
+        `${readOnlyPreloaderPath}:${READ_ONLY_PRELOADER_CONTAINER_PATH}:ro`,
+      ],
+      input: phpSource,
+    },
+  );
+}
+
+async function implementationFileManifest(rootPath) {
+  const entries = [];
+
+  async function walk(currentPath, relativePath = '') {
+    const directoryEntries = await readdir(currentPath, { withFileTypes: true });
+    directoryEntries.sort((left, right) => left.name.localeCompare(right.name));
+    for (const entry of directoryEntries) {
+      const childRelativePath = relativePath
+        ? `${relativePath}/${entry.name}`
+        : entry.name;
+      if (childRelativePath === 'tests' || childRelativePath.startsWith('tests/')) {
+        continue;
+      }
+      const childPath = path.join(currentPath, entry.name);
+      if (entry.isDirectory()) {
+        await walk(childPath, childRelativePath);
+      } else if (entry.isFile()) {
+        const bytes = await readFile(childPath);
+        entries.push({
+          path: childRelativePath,
+          sha256: createHash('sha256').update(bytes).digest('hex'),
+        });
+      } else {
+        throw new Error(`Implementation surface contains a non-file entry: ${childRelativePath}`);
+      }
+    }
+  }
+
+  await walk(rootPath);
+  const manifestHash = createHash('sha256');
+  for (const entry of entries) {
+    manifestHash.update(entry.path, 'utf8');
+    manifestHash.update('\0');
+    manifestHash.update(entry.sha256, 'ascii');
+    manifestHash.update('\n');
+  }
+  return {
+    entries,
+    hash: manifestHash.digest('hex'),
+  };
+}
+
+async function compareImplementationSurface(label, relativePath) {
+  const sourceRoot = path.join(projectRoot, relativePath);
+  const runtimeSurfaceRoot = path.join(config.runtimeWordPressRoot, relativePath);
+  const [source, runtime] = await Promise.all([
+    implementationFileManifest(sourceRoot),
+    implementationFileManifest(runtimeSurfaceRoot),
+  ]);
+  const sourceByPath = new Map(source.entries.map((entry) => [entry.path, entry.sha256]));
+  const runtimeByPath = new Map(runtime.entries.map((entry) => [entry.path, entry.sha256]));
+  const missingFromRuntime = [...sourceByPath.keys()]
+    .filter((filePath) => !runtimeByPath.has(filePath));
+  const extraInRuntime = [...runtimeByPath.keys()]
+    .filter((filePath) => !sourceByPath.has(filePath));
+  const mismatched = [...sourceByPath.entries()]
+    .filter(([filePath, sha256]) => (
+      runtimeByPath.has(filePath) && runtimeByPath.get(filePath) !== sha256
+    ))
+    .map(([filePath]) => filePath);
+  return {
+    label,
+    sourceFileCount: source.entries.length,
+    runtimeFileCount: runtime.entries.length,
+    sourceHash: source.hash,
+    runtimeHash: runtime.hash,
+    missingFromRuntime,
+    extraInRuntime,
+    mismatched,
+    ok: source.hash === runtime.hash
+      && missingFromRuntime.length === 0
+      && extraInRuntime.length === 0
+      && mismatched.length === 0,
+  };
+}
+
 function normalizeSiteIdentityUrl(value, label) {
   let candidate;
   try {
@@ -947,28 +1242,255 @@ function normalizeSiteIdentityUrl(value, label) {
 
 async function verifyRuntimeSiteIdentity() {
   summary.runtimeIdentity.attempted = true;
+  try {
+  const webCronPhp = `final class LmhgNoBootstrapStream {
+    public $context;
+    private int $position = 0;
+    private string $payload = "<?php\\n";
+    public function stream_open(string $path, string $mode, int $options, ?string &$opened_path): bool {
+        return $path === 'lmhg-no-bootstrap://wp-settings.php' && $mode === 'rb';
+    }
+    public function stream_read(int $count): string {
+        $chunk = substr($this->payload, $this->position, $count);
+        $this->position += strlen($chunk);
+        return $chunk;
+    }
+    public function stream_eof(): bool { return $this->position >= strlen($this->payload); }
+    public function stream_stat(): array { return array(); }
+    public function url_stat(string $path, int $flags): array|false {
+        return $path === 'lmhg-no-bootstrap://wp-settings.php' ? array() : false;
+    }
+    public function stream_set_option(int $option, int $arg1, ?int $arg2): bool { return false; }
+}
+if (!stream_wrapper_register('lmhg-no-bootstrap', LmhgNoBootstrapStream::class)) {
+    fwrite(STDERR, "No-bootstrap stream registration failed.\\n");
+    exit(73);
+}
+define('ABSPATH', 'lmhg-no-bootstrap://');
+$config_path = $argv[1] ?? '';
+if (!is_string($config_path) || $config_path === '' || $config_path[0] !== '/') {
+    fwrite(STDERR, "WordPress config probe path is invalid.\\n");
+    exit(74);
+}
+require $config_path;
+echo json_encode(array(
+    'disableWpCronDefined' => defined('DISABLE_WP_CRON'),
+    'disableWpCronStrictTrue' => defined('DISABLE_WP_CRON') && true === DISABLE_WP_CRON,
+    'wordpressBootstrapped' => defined('WPINC')
+        || function_exists('add_action')
+        || class_exists('wpdb', false)
+        || isset($GLOBALS['wpdb']),
+));`;
+  const { stdout: webCronStdout } = await runProcess(
+    'docker',
+    [
+      'compose',
+      '--project-directory',
+      config.runtimeRoot,
+      '-f',
+      config.composeFile,
+      'exec',
+      '-T',
+      config.webService,
+      'php',
+      '-r',
+      webCronPhp,
+      '--',
+      config.webWordPressConfig,
+    ],
+  );
+  let webCron;
+  try {
+    webCron = JSON.parse(webCronStdout.trim());
+  } catch {
+    throw new Error('The running WordPress web service returned malformed cron evidence.');
+  }
+  if (!hasOnlyKeys(webCron, [
+    'disableWpCronDefined',
+    'disableWpCronStrictTrue',
+    'wordpressBootstrapped',
+  ]) || Object.values(webCron).some((value) => typeof value !== 'boolean')) {
+    throw new Error('The running WordPress web service returned malformed cron evidence.');
+  }
+  summary.runtimeIdentity.webAutomaticCronDisabled = webCron.disableWpCronDefined
+    && webCron.disableWpCronStrictTrue
+    && !webCron.wordpressBootstrapped;
+  summary.runtimeIdentity.webCronEvidence = webCron;
+  if (!summary.runtimeIdentity.webAutomaticCronDisabled) {
+    throw new Error(
+      'The running WordPress web service does not prove DISABLE_WP_CRON is strictly true; '
+        + 'refusing administrator or edit-lock mutation.',
+    );
+  }
   const php = `<?php
+global $wpdb;
+$home = (string) get_option('home');
+$siteurl = (string) get_option('siteurl');
+$is_block_theme = (bool) wp_is_block_theme();
+$stylesheet = (string) get_stylesheet();
+$template = (string) get_template();
+$wordpress_version = (string) get_bloginfo('version');
+$active_plugins = get_option('active_plugins', array());
+$guard = $GLOBALS['lmhg_gutenberg_inventory_read_only_guard'] ?? null;
+$operation_counts = is_array($guard) && is_array($guard['blockedOperationCounts'] ?? null)
+    ? $guard['blockedOperationCounts']
+    : array();
+$blocked_operation_count = array_sum(array_map('intval', $operation_counts));
+$expected_operation_counts = is_array($guard)
+    && is_array($guard['expectedBlockedOperationCounts'] ?? null)
+    ? $guard['expectedBlockedOperationCounts']
+    : array();
+$expected_blocked_operation_count = array_sum(array_map('intval', $expected_operation_counts));
+$suppressed_callbacks = is_array($guard) && is_array($guard['suppressedCallbacks'] ?? null)
+    ? array_values(array_unique(array_map('strval', $guard['suppressedCallbacks'])))
+    : array();
+sort($suppressed_callbacks, SORT_STRING);
+$shutdown_baseline = $blocked_operation_count + $expected_blocked_operation_count;
+register_shutdown_function(static function () use ($shutdown_baseline): void {
+    $latest_guard = $GLOBALS['lmhg_gutenberg_inventory_read_only_guard'] ?? array();
+    $latest_counts = is_array($latest_guard['blockedOperationCounts'] ?? null)
+        ? $latest_guard['blockedOperationCounts']
+        : array();
+    $latest_expected_counts = is_array($latest_guard['expectedBlockedOperationCounts'] ?? null)
+        ? $latest_guard['expectedBlockedOperationCounts']
+        : array();
+    $latest_total = array_sum(array_map('intval', $latest_counts))
+        + array_sum(array_map('intval', $latest_expected_counts));
+    if ($latest_total > $shutdown_baseline) {
+        fwrite(STDERR, "Runtime identity blocked a late database write.\n");
+        exit(72);
+    }
+});
+$transaction_rolled_back = isset($wpdb->dbh)
+    && $wpdb->dbh instanceof mysqli
+    && mysqli_rollback($wpdb->dbh);
 echo wp_json_encode(array(
-    'home' => (string) get_option('home'),
-    'siteurl' => (string) get_option('siteurl'),
+    'home' => $home,
+    'isBlockTheme' => $is_block_theme,
+    'readOnlyGuard' => array(
+        'active' => is_array($guard) && true === ($guard['active'] ?? false),
+        'automaticCronDisabled' => defined('DISABLE_WP_CRON') && DISABLE_WP_CRON,
+        'blockedOperationCount' => (int) $blocked_operation_count,
+        'expectedBlockedOperationCount' => (int) $expected_blocked_operation_count,
+        'objectCacheDropinSuppressed' => is_array($guard)
+            && true === ($guard['objectCacheDropinSuppressed'] ?? false),
+        'sessionDefaultReadOnly' => is_array($guard)
+            && true === ($guard['sessionDefaultReadOnly'] ?? false),
+        'suppressedCallbacks' => $suppressed_callbacks,
+        'transactionReadOnly' => is_array($guard)
+            && true === ($guard['transactionReadOnly'] ?? false),
+        'transactionRolledBack' => (bool) $transaction_rolled_back,
+    ),
+    'siteCoreActive' => in_array('${EXPECTED_SITE_CORE_PLUGIN}', (array) $active_plugins, true),
+    'siteurl' => $siteurl,
+    'stylesheet' => $stylesheet,
+    'template' => $template,
+    'wordpressVersion' => $wordpress_version,
 ));
 `;
-  try {
-    const { stdout } = await wpCliEvalFile(php);
+    const { stdout } = await wpCliReadOnlyEvalFile(php);
     const identity = JSON.parse(stdout.trim());
-    if (!hasOnlyKeys(identity, ['home', 'siteurl'])) {
+    if (!hasOnlyKeys(identity, [
+      'home',
+      'isBlockTheme',
+      'readOnlyGuard',
+      'siteCoreActive',
+      'siteurl',
+      'stylesheet',
+      'template',
+      'wordpressVersion',
+    ]) || !hasOnlyKeys(identity.readOnlyGuard, [
+      'active',
+      'automaticCronDisabled',
+      'blockedOperationCount',
+      'expectedBlockedOperationCount',
+      'objectCacheDropinSuppressed',
+      'sessionDefaultReadOnly',
+      'suppressedCallbacks',
+      'transactionReadOnly',
+      'transactionRolledBack',
+    ])) {
       throw new Error('WP-CLI returned malformed site identity evidence.');
+    }
+    if (
+      typeof identity.isBlockTheme !== 'boolean'
+      || typeof identity.siteCoreActive !== 'boolean'
+      || typeof identity.readOnlyGuard.active !== 'boolean'
+      || typeof identity.readOnlyGuard.automaticCronDisabled !== 'boolean'
+      || !Number.isSafeInteger(identity.readOnlyGuard.blockedOperationCount)
+      || identity.readOnlyGuard.blockedOperationCount < 0
+      || !Number.isSafeInteger(identity.readOnlyGuard.expectedBlockedOperationCount)
+      || identity.readOnlyGuard.expectedBlockedOperationCount < 0
+      || typeof identity.readOnlyGuard.objectCacheDropinSuppressed !== 'boolean'
+      || typeof identity.readOnlyGuard.sessionDefaultReadOnly !== 'boolean'
+      || !Array.isArray(identity.readOnlyGuard.suppressedCallbacks)
+      || identity.readOnlyGuard.suppressedCallbacks.some((value) => typeof value !== 'string')
+      || typeof identity.readOnlyGuard.transactionReadOnly !== 'boolean'
+      || typeof identity.readOnlyGuard.transactionRolledBack !== 'boolean'
+    ) {
+      throw new Error('WP-CLI returned malformed runtime capability evidence.');
     }
     const expected = normalizeSiteIdentityUrl(config.baseUrl, 'WP_URL');
     const home = normalizeSiteIdentityUrl(identity.home, 'WordPress home option');
     const siteUrl = normalizeSiteIdentityUrl(identity.siteurl, 'WordPress siteurl option');
+    const implementationSurfaces = await Promise.all([
+      compareImplementationSurface(
+        'wordpress-2026-theme',
+        path.join('wp-content', 'themes', EXPECTED_THEME_SLUG),
+      ),
+      compareImplementationSurface(
+        'lmhg-site-core-plugin',
+        path.join('wp-content', 'plugins', 'lmhg-site-core'),
+      ),
+    ]);
+    summary.runtimeIdentity.observed = {
+      home,
+      siteUrl,
+      stylesheet: identity.stylesheet,
+      template: identity.template,
+      wordpressVersion: identity.wordpressVersion,
+    };
+    summary.runtimeIdentity.expected = {
+      siteUrl: expected,
+      stylesheet: EXPECTED_THEME_SLUG,
+      template: EXPECTED_THEME_SLUG,
+      wordpressVersion: EXPECTED_WORDPRESS_VERSION,
+      siteCorePlugin: EXPECTED_SITE_CORE_PLUGIN,
+    };
     summary.runtimeIdentity.homeMatches = home === expected;
     summary.runtimeIdentity.siteUrlMatches = siteUrl === expected;
-    summary.runtimeIdentity.ok = home === expected && siteUrl === expected;
+    summary.runtimeIdentity.wordpressVersionMatches = identity.wordpressVersion
+      === EXPECTED_WORDPRESS_VERSION;
+    summary.runtimeIdentity.activeThemeMatches = identity.stylesheet === EXPECTED_THEME_SLUG
+      && identity.template === EXPECTED_THEME_SLUG;
+    summary.runtimeIdentity.isBlockTheme = identity.isBlockTheme;
+    summary.runtimeIdentity.siteCoreActive = identity.siteCoreActive;
+    summary.runtimeIdentity.readOnlyBootstrapGuard = identity.readOnlyGuard;
+    summary.runtimeIdentity.readOnlyBootstrapGuardOk = identity.readOnlyGuard.active
+      && identity.readOnlyGuard.automaticCronDisabled
+      && identity.readOnlyGuard.blockedOperationCount === 0
+      && identity.readOnlyGuard.expectedBlockedOperationCount === 0
+      && identity.readOnlyGuard.objectCacheDropinSuppressed
+      && identity.readOnlyGuard.sessionDefaultReadOnly
+      && identity.readOnlyGuard.transactionReadOnly
+      && identity.readOnlyGuard.transactionRolledBack;
+    summary.runtimeIdentity.implementationSurfaces = implementationSurfaces;
+    summary.runtimeIdentity.implementationParity = implementationSurfaces.every(({ ok }) => ok);
+    summary.runtimeIdentity.ok = summary.runtimeIdentity.homeMatches
+      && summary.runtimeIdentity.siteUrlMatches
+      && summary.runtimeIdentity.wordpressVersionMatches
+      && summary.runtimeIdentity.activeThemeMatches
+      && summary.runtimeIdentity.isBlockTheme
+      && summary.runtimeIdentity.siteCoreActive
+      && summary.runtimeIdentity.webAutomaticCronDisabled
+      && summary.runtimeIdentity.readOnlyBootstrapGuardOk
+      && summary.runtimeIdentity.implementationParity;
     if (!summary.runtimeIdentity.ok) {
       throw new Error(
-        'WP_URL does not exactly match both WP-CLI WordPress home and siteurl; '
-          + 'refusing cross-site administrator or edit-lock mutation.',
+        'The configured runtime does not exactly match the expected development URL, '
+          + 'WordPress version, active block theme, LMHG Site Core plugin, read-only '
+          + 'bootstrap guard, and deployed implementation files; refusing administrator '
+          + 'or edit-lock mutation.',
       );
     }
   } catch (error) {
@@ -985,7 +1507,7 @@ function exactPositiveIds(items) {
     ids.some((id) => !Number.isSafeInteger(id) || id <= 0)
     || new Set(ids).size !== ids.length
   ) {
-    throw new Error('Published inventory did not contain unique positive integer IDs.');
+    throw new Error('Gutenberg inventory did not contain unique positive integer IDs.');
   }
   return ids;
 }
@@ -998,12 +1520,14 @@ async function snapshotEditLocks(items) {
     slug: item.slug,
     status: item.status,
   }));
+  const allowedPostTypes = new Set(CONTENT_TYPES.map(({ postType }) => postType));
+  const allowedStatuses = new Set(CONTENT_STATUSES);
   if (inventoryProof.some((item) => (
-    !['page', 'post'].includes(item.postType)
+    !allowedPostTypes.has(item.postType)
     || typeof item.slug !== 'string'
-    || item.status !== 'publish'
+    || !allowedStatuses.has(item.status)
   ))) {
-    throw new Error('Published REST inventory contains malformed identity evidence.');
+    throw new Error('Gutenberg inventory contains malformed identity evidence.');
   }
   summary.editLocks.snapshotAttempted = true;
   const encodedInventory = Buffer.from(JSON.stringify(inventoryProof), 'utf8').toString('base64');
@@ -1019,7 +1543,14 @@ foreach ($inventory as $expected) {
     $post_type = is_array($expected) && array_key_exists('postType', $expected) ? $expected['postType'] : null;
     $slug = is_array($expected) && array_key_exists('slug', $expected) ? $expected['slug'] : null;
     $status = is_array($expected) && array_key_exists('status', $expected) ? $expected['status'] : null;
-    if (!is_int($id) || $id <= 0 || !is_string($post_type) || !is_string($slug) || $status !== 'publish') {
+    if (
+        !is_int($id)
+        || $id <= 0
+        || !is_string($post_type)
+        || !is_string($slug)
+        || !is_string($status)
+        || $status === ''
+    ) {
         fwrite(STDERR, "Edit-lock inventory contains an invalid ID.\n");
         exit(42);
     }
@@ -1031,7 +1562,7 @@ foreach ($inventory as $expected) {
         || $post->post_name !== $slug
         || $post->post_status !== $status
     ) {
-        fwrite(STDERR, "REST/WP-CLI inventory identity mismatch for post " . $id . "\n");
+        fwrite(STDERR, "Authoritative inventory identity mismatch for post " . $id . "\n");
         exit(43);
     }
     $exists = metadata_exists('post', $id, '_edit_lock');
@@ -1072,6 +1603,7 @@ echo wp_json_encode($result);
       seenIds.add(record.id);
     }
     lifecycle.editLockSnapshot = payload;
+    await persistEditLockRecoveryMarker(payload, inventoryProof);
     summary.editLocks.snapshotCount = payload.length;
     summary.editLocks.ok = null;
   } catch (error) {
@@ -1085,7 +1617,7 @@ echo wp_json_encode($result);
 async function restoreEditLocks() {
   const snapshot = lifecycle.editLockSnapshot;
   if (!snapshot) {
-    return;
+    return true;
   }
   if (!Number.isSafeInteger(lifecycle.userId) || lifecycle.userId <= 0) {
     summary.editLocks.ok = false;
@@ -1093,7 +1625,7 @@ async function restoreEditLocks() {
       stage: 'edit-lock-restoration',
       error: 'The exact scan user ID is unavailable; refusing ambiguous lock cleanup.',
     });
-    return;
+    return false;
   }
 
   summary.editLocks.restorationAttempted = true;
@@ -1204,12 +1736,15 @@ echo wp_json_encode(array(
     summary.editLocks.deletedScanCreatedCount = result.deletedScanCreated;
     summary.editLocks.verifiedCount = result.verified;
     summary.editLocks.ok = true;
+    await clearEditLockRecoveryMarker();
     lifecycle.editLockSnapshot = null;
+    return true;
   } catch (error) {
     summary.editLocks.ok = false;
     const safeError = errorMessage(error);
     summary.failures.push({ stage: 'edit-lock-restoration', error: safeError });
     console.error(`Edit-lock restoration failed: ${safeError}`);
+    return false;
   }
 }
 
@@ -1248,7 +1783,19 @@ function cleanupResources() {
         lifecycle.editLockSnapshotPromise,
       ].filter(Boolean));
       await Promise.allSettled([closeBrowserBounded(), waitForNonCleanupChildren()]);
-      await restoreEditLocks();
+      if (!lifecycle.browserCloseProven) {
+        console.error(
+          'Browser termination was not proven; preserving administrator and lock recovery markers.',
+        );
+        return;
+      }
+      const editLocksRestored = await restoreEditLocks();
+      if (!editLocksRestored) {
+        console.error(
+          'Edit-lock restoration was not proven; preserving the exact administrator for recovery.',
+        );
+        return;
+      }
       await cleanupEphemeralAdmin(lifecycle.ephemeralIdentity);
     })();
   }
@@ -1278,10 +1825,228 @@ async function fetchWithLifecycleTimeout(url, options = {}) {
   }
 }
 
+async function loadSourceCandidates() {
+  const candidates = [];
+  for (const directoryName of ['templates', 'parts']) {
+    const directoryPath = path.join(themeRoot, directoryName);
+    const entries = (await readdir(directoryPath, { withFileTypes: true }))
+      .filter((entry) => entry.isFile() && entry.name.endsWith('.html'))
+      .sort((left, right) => left.name.localeCompare(right.name));
+    for (const entry of entries) {
+      candidates.push({
+        content: await readFile(path.join(directoryPath, entry.name), 'utf8'),
+        id: `${directoryName}/${entry.name}`,
+        kind: directoryName === 'templates' ? 'template' : 'template-part',
+      });
+    }
+  }
+
+  const pageData = JSON.parse(await readFile(pageDataPath, 'utf8'));
+  if (!pageData || !Array.isArray(pageData.pages) || pageData.pages.length === 0) {
+    throw new Error('Tracked page-data source did not contain a nonempty pages array.');
+  }
+  for (const pageRecord of pageData.pages) {
+    if (
+      !pageRecord
+      || typeof pageRecord.path !== 'string'
+      || typeof pageRecord.status !== 'string'
+      || typeof pageRecord.content !== 'string'
+    ) {
+      throw new Error('Tracked page-data source contains a malformed content record.');
+    }
+    candidates.push({
+      content: pageRecord.content,
+      id: `page-data:${pageRecord.status}:${pageRecord.path}`,
+      kind: 'page-data',
+    });
+  }
+
+  if (new Set(candidates.map(({ id }) => id)).size !== candidates.length) {
+    throw new Error('Tracked Gutenberg source inventory contains duplicate candidate IDs.');
+  }
+  return candidates;
+}
+
+async function inspectSourceCandidate(page, candidate) {
+  const validationConsole = [];
+  const onConsole = (message) => {
+    if (message.type() !== 'error') {
+      return;
+    }
+    for (const classification of classifyGutenbergConsoleError(message.text())) {
+      validationConsole.push(classification);
+    }
+  };
+  page.on('console', onConsole);
+  try {
+    const inspected = await page.evaluate(({ content }) => {
+      const blocksApi = window.wp?.blocks;
+      if (
+        typeof blocksApi?.parse !== 'function'
+        || typeof blocksApi?.serialize !== 'function'
+        || typeof blocksApi?.getBlockType !== 'function'
+      ) {
+        throw new Error('Required Gutenberg parse/serialize/registry APIs are unavailable.');
+      }
+      const hashText = (value) => {
+        let first = 2166136261;
+        let second = 2246822519;
+        for (let index = 0; index < value.length; index += 1) {
+          const code = value.charCodeAt(index);
+          first = Math.imul(first ^ code, 16777619);
+          second = Math.imul(second ^ code, 3266489917);
+        }
+        return [first >>> 0, second >>> 0]
+          .map((part) => part.toString(16).padStart(8, '0'))
+          .join('');
+      };
+      const flatten = (blocks, parentNames = []) => blocks.flatMap((block) => [
+        {
+          clientId: block.clientId,
+          isValid: block.isValid === true,
+          name: block.name,
+          parentNames,
+          registered: Boolean(blocksApi.getBlockType(block.name)),
+          validityKnown: typeof block.isValid === 'boolean',
+        },
+        ...flatten(block.innerBlocks || [], [...parentNames, block.name]),
+      ]);
+      const firstParse = blocksApi.parse(content);
+      if (!Array.isArray(firstParse)) {
+        throw new Error('Gutenberg parse API did not return a block array.');
+      }
+      const firstBlocks = flatten(firstParse);
+      const firstSerialization = blocksApi.serialize(firstParse);
+      const secondParse = blocksApi.parse(firstSerialization);
+      const secondBlocks = flatten(secondParse);
+      const secondSerialization = blocksApi.serialize(secondParse);
+      const blockTree = (blocks) => blocks.map((block) => ({
+        children: blockTree(block.innerBlocks || []),
+        name: block.name,
+      }));
+
+      return {
+        blockCount: firstBlocks.length,
+        contentHash: hashText(content),
+        contentLength: content.length,
+        invalidBlocks: firstBlocks
+          .filter((block) => !block.isValid)
+          .map(({ name, parentNames }) => ({ name, parentNames })),
+        missingBlocks: firstBlocks
+          .filter((block) => block.name === 'core/missing' || !block.registered)
+          .map(({ name, parentNames }) => ({ name, parentNames })),
+        normalizedHash: hashText(firstSerialization),
+        normalizedLength: firstSerialization.length,
+        reparsedBlockCount: secondBlocks.length,
+        reparsedInvalidBlocks: secondBlocks
+          .filter((block) => !block.isValid)
+          .map(({ name, parentNames }) => ({ name, parentNames })),
+        reparsedMissingBlocks: secondBlocks
+          .filter((block) => block.name === 'core/missing' || !block.registered)
+          .map(({ name, parentNames }) => ({ name, parentNames })),
+        stableBlockTree: JSON.stringify(blockTree(firstParse)) === JSON.stringify(blockTree(secondParse)),
+        stableNormalizedSerialization: firstSerialization === secondSerialization,
+        unknownValidityBlocks: firstBlocks
+          .filter((block) => !block.validityKnown)
+          .map(({ name, parentNames }) => ({ name, parentNames })),
+      };
+    }, { content: candidate.content });
+
+    const reasons = [];
+    if (candidate.content.trim() && inspected.blockCount === 0) {
+      reasons.push('Nonempty candidate parsed to an empty block inventory.');
+    }
+    if (inspected.invalidBlocks.length > 0 || inspected.reparsedInvalidBlocks.length > 0) {
+      reasons.push('Gutenberg reports invalid blocks.');
+    }
+    if (inspected.unknownValidityBlocks.length > 0) {
+      reasons.push('Gutenberg did not provide a boolean validity result for every block.');
+    }
+    if (inspected.missingBlocks.length > 0 || inspected.reparsedMissingBlocks.length > 0) {
+      reasons.push('Candidate contains missing or unregistered blocks.');
+    }
+    if (!inspected.stableNormalizedSerialization) {
+      reasons.push('Normalized parse/serialize output is not idempotent.');
+    }
+    if (!inspected.stableBlockTree || inspected.blockCount !== inspected.reparsedBlockCount) {
+      reasons.push('The block tree changes across parse/serialize/reparse.');
+    }
+    if (validationConsole.length > 0) {
+      reasons.push('Gutenberg emitted a block-validation console signature.');
+    }
+    return {
+      id: candidate.id,
+      kind: candidate.kind,
+      status: reasons.length === 0 ? 'passed' : 'failed',
+      reasons,
+      diagnostics: {
+        ...inspected,
+        validationConsole: [...new Set(validationConsole)],
+      },
+    };
+  } finally {
+    page.off('console', onConsole);
+  }
+}
+
+async function runSourcePreflight(page) {
+  summary.sourcePreflight.attempted = true;
+  await page.waitForFunction(
+    () => {
+      const blocksApi = window.wp?.blocks;
+      return typeof blocksApi?.parse === 'function'
+        && typeof blocksApi?.serialize === 'function'
+        && typeof blocksApi?.getBlockType === 'function'
+        && Boolean(blocksApi.getBlockType('core/group'))
+        && Boolean(blocksApi.getBlockType('core/buttons'))
+        && Boolean(blocksApi.getBlockType('lmhg/faqs'))
+        && Boolean(blocksApi.getBlockType('lmhg/reach-out-button'));
+    },
+    null,
+    { timeout: config.editorTimeoutMs },
+  );
+  const candidates = await loadSourceCandidates();
+  summary.sourcePreflight.expected = candidates.length;
+  console.log(`Discovered ${candidates.length} tracked Gutenberg source candidate(s).`);
+
+  for (const candidate of candidates) {
+    const result = await inspectSourceCandidate(page, candidate);
+    summary.sourcePreflight.candidates.push(result);
+    const prefix = result.status === 'passed' ? 'ok' : 'not ok';
+    console.log(`${prefix} - source ${result.id}`);
+    if (result.status === 'failed') {
+      summary.failures.push({
+        stage: 'source-preflight',
+        id: result.id,
+        kind: result.kind,
+        reasons: result.reasons,
+      });
+    }
+  }
+
+  summary.sourcePreflight.scanned = summary.sourcePreflight.candidates.length;
+  summary.sourcePreflight.passed = summary.sourcePreflight.candidates
+    .filter(({ status }) => status === 'passed').length;
+  summary.sourcePreflight.failed = summary.sourcePreflight.candidates
+    .filter(({ status }) => status === 'failed').length;
+  if (summary.sourcePreflight.scanned !== summary.sourcePreflight.expected) {
+    summary.failures.push({
+      stage: 'source-preflight-coverage',
+      expected: summary.sourcePreflight.expected,
+      scanned: summary.sourcePreflight.scanned,
+    });
+  }
+}
+
+function strictRestCountHeader(response, headerName) {
+  return strictRestCountValue(response.headers.get(headerName), headerName);
+}
+
 async function fetchPublishedItems(contentType) {
   const items = [];
   let pageNumber = 1;
-  let totalPages = 1;
+  let totalPages = null;
+  let totalItems = null;
 
   do {
     const endpoint = new URL(`/wp-json/wp/v2/${contentType.restBase}`, `${config.baseUrl}/`);
@@ -1312,14 +2077,191 @@ async function fetchPublishedItems(contentType) {
       expectedRestBase: contentType.restBase,
     })));
 
-    // WordPress caps collections at 100 records and exposes the remaining page
-    // count in X-WP-TotalPages.
+    // WordPress caps collections at 100 records and exposes complete counts in
+    // X-WP-Total and X-WP-TotalPages. Missing/malformed headers are a coverage
+    // failure rather than permission to scan one potentially truncated page.
     // Source: https://developer.wordpress.org/rest-api/using-the-rest-api/pagination/
-    const totalPagesHeader = Number.parseInt(response.headers.get('x-wp-totalpages') || '1', 10);
-    totalPages = Number.isSafeInteger(totalPagesHeader) && totalPagesHeader > 0 ? totalPagesHeader : 1;
+    const responseTotalItems = strictRestCountHeader(response, 'x-wp-total');
+    const responseTotalPages = strictRestCountHeader(response, 'x-wp-totalpages');
+    if (totalItems === null) {
+      totalItems = responseTotalItems;
+      totalPages = responseTotalPages;
+    } else if (totalItems !== responseTotalItems || totalPages !== responseTotalPages) {
+      throw new Error(`Published ${contentType.label} REST pagination changed during inventory.`);
+    }
+    if (
+      (totalItems === 0 && (totalPages !== 0 || payload.length !== 0))
+      || (totalItems > 0 && totalPages < 1)
+    ) {
+      throw new Error(`Published ${contentType.label} REST pagination headers are inconsistent.`);
+    }
     pageNumber += 1;
-  } while (pageNumber <= totalPages);
+  } while (pageNumber <= Math.max(totalPages, 1));
 
+  if (items.length !== totalItems) {
+    throw new Error(
+      `Published ${contentType.label} REST inventory expected ${totalItems} item(s), `
+        + `received ${items.length}.`,
+    );
+  }
+
+  return { items, totalItems, totalPages };
+}
+
+async function fetchWpCliItems() {
+  const encodedPolicy = Buffer.from(JSON.stringify({
+    activeTypes: CONTENT_TYPES,
+    classifiedTypes: {
+      postEditor: POST_EDITOR_CONTENT_TYPES.map(({ postType }) => postType),
+      siteEditor: ['wp_block', 'wp_navigation', 'wp_template', 'wp_template_part'],
+      specializedData: ['nav_menu_item', 'wp_global_styles'],
+    },
+    durableStatuses: DURABLE_CONTENT_STATUSES,
+    scanStatuses: CONTENT_STATUSES,
+  }), 'utf8').toString('base64');
+  const php = `<?php
+$policy = json_decode(base64_decode('${encodedPolicy}', true), true);
+if (!is_array($policy) || !is_array($policy['activeTypes']) || !is_array($policy['scanStatuses'])) {
+    fwrite(STDERR, "Could not decode Gutenberg inventory policy.\n");
+    exit(51);
+}
+$errors = array();
+$type_metadata = array();
+$active_types = array();
+foreach ($policy['activeTypes'] as $spec) {
+    if (!is_array($spec) || !isset($spec['postType'], $spec['restBase'])) {
+        $errors[] = 'Malformed active post-type specification.';
+        continue;
+    }
+    $post_type = $spec['postType'];
+    $object = get_post_type_object($post_type);
+    if (!$object) {
+        $errors[] = 'Required post type is not registered: ' . $post_type;
+        continue;
+    }
+    $rest_base = $object->rest_base ? $object->rest_base : $post_type;
+    $block_editor = post_type_supports($post_type, 'editor')
+        && use_block_editor_for_post_type($post_type);
+    if (!$object->show_in_rest || $rest_base !== $spec['restBase'] || !$block_editor) {
+        $errors[] = 'Post type does not match the reviewed Gutenberg/REST policy: ' . $post_type;
+    }
+    $active_types[] = $post_type;
+    $type_metadata[$post_type] = array(
+        'blockEditor' => (bool) $block_editor,
+        'restBase' => (string) $rest_base,
+        'showInRest' => (bool) $object->show_in_rest,
+    );
+}
+
+$registered_durable_statuses = array();
+foreach (get_post_stati(array(), 'objects') as $status_name => $status_object) {
+    if (
+        !$status_object->internal
+        && !in_array($status_name, array('auto-draft', 'inherit', 'trash'), true)
+    ) {
+        $registered_durable_statuses[] = (string) $status_name;
+    }
+}
+sort($registered_durable_statuses);
+$expected_durable_statuses = array_values($policy['durableStatuses']);
+sort($expected_durable_statuses);
+if ($registered_durable_statuses !== $expected_durable_statuses) {
+    $errors[] = 'Registered durable statuses differ from the reviewed policy.';
+}
+
+$classified_types = array();
+foreach ($policy['classifiedTypes'] as $classification => $post_types) {
+    foreach ($post_types as $post_type) {
+        $classified_types[$post_type] = $classification;
+    }
+}
+foreach (get_post_types(array(), 'objects') as $post_type => $object) {
+    $gutenberg_capable = $object->show_in_rest
+        && post_type_supports($post_type, 'editor')
+        && use_block_editor_for_post_type($post_type);
+    if ($gutenberg_capable && !isset($classified_types[$post_type])) {
+        $errors[] = 'Unclassified Gutenberg-capable post type: ' . $post_type;
+    }
+}
+
+$records = array();
+if (count($active_types) > 0 && count($policy['scanStatuses']) > 0) {
+    global $wpdb;
+    $type_placeholders = implode(', ', array_fill(0, count($active_types), '%s'));
+    $status_placeholders = implode(', ', array_fill(0, count($policy['scanStatuses']), '%s'));
+    $query = $wpdb->prepare(
+        "SELECT ID, post_type, post_status, post_name FROM {$wpdb->posts} "
+            . "WHERE post_type IN ({$type_placeholders}) "
+            . "AND post_status IN ({$status_placeholders}) ORDER BY ID ASC",
+        array_merge($active_types, array_values($policy['scanStatuses']))
+    );
+    foreach ($wpdb->get_results($query) as $row) {
+        $post = get_post((int) $row->ID);
+        if (!$post || !use_block_editor_for_post($post)) {
+            $errors[] = 'Durable inventory record is not block-editor compatible: ' . (int) $row->ID;
+            continue;
+        }
+        $records[] = array(
+            'id' => (int) $row->ID,
+            'type' => (string) $row->post_type,
+            'status' => (string) $row->post_status,
+            'slug' => (string) $row->post_name,
+            'restBase' => (string) $type_metadata[$row->post_type]['restBase'],
+        );
+    }
+}
+echo wp_json_encode(array(
+    'durableStatuses' => $registered_durable_statuses,
+    'errors' => $errors,
+    'records' => $records,
+    'typeMetadata' => $type_metadata,
+));
+`;
+  const { stdout } = await wpCliEvalFile(php);
+  const payload = JSON.parse(stdout.trim());
+  if (
+    !payload
+    || !Array.isArray(payload.errors)
+    || !Array.isArray(payload.records)
+    || !Array.isArray(payload.durableStatuses)
+    || !payload.typeMetadata
+  ) {
+    throw new Error('WP-CLI Gutenberg inventory returned malformed policy evidence.');
+  }
+  if (payload.errors.length > 0) {
+    throw new Error(`WP-CLI Gutenberg inventory policy failed: ${payload.errors.join(' ')}`);
+  }
+  const seen = new Set();
+  const allowedTypes = new Set(CONTENT_TYPES.map(({ postType }) => postType));
+  const allowedStatuses = new Set(CONTENT_STATUSES);
+  const items = payload.records.map((item) => {
+    const key = `${item?.type}:${item?.id}`;
+    if (
+      !item
+      || !allowedTypes.has(item.type)
+      || !Number.isSafeInteger(item.id)
+      || item.id <= 0
+      || !allowedStatuses.has(item.status)
+      || typeof item.slug !== 'string'
+      || typeof item.restBase !== 'string'
+      || seen.has(key)
+    ) {
+      throw new Error('WP-CLI Gutenberg inventory contains malformed or duplicate evidence.');
+    }
+    seen.add(key);
+    return {
+      ...item,
+      expectedPostType: item.type,
+      expectedRestBase: item.restBase,
+      link: null,
+      title: { rendered: '' },
+    };
+  });
+  summary.inventory.policy = {
+    durableStatuses: payload.durableStatuses,
+    mode: allEditableRequested ? 'all-editable-post-content' : 'published-pages-posts',
+    typeMetadata: payload.typeMetadata,
+  };
   return items;
 }
 
@@ -1831,7 +2773,7 @@ async function installReadOnlyRequestBarrier(
 }
 
 async function readAuthenticatedRawContent(page, item) {
-  return page.evaluate(async ({ id, postType, restBase }) => {
+  return page.evaluate(async ({ id, postType, restBase, expectedStatus, expectedSlug }) => {
     if (typeof window.wp?.apiFetch !== 'function') {
       throw new Error('wp.apiFetch is unavailable after editor hydration.');
     }
@@ -1841,31 +2783,118 @@ async function readAuthenticatedRawContent(page, item) {
     // copied into the verifier report.
     const query = new URLSearchParams({
       context: 'edit',
-      _fields: 'id,type,content',
+      _fields: 'id,type,status,slug,content',
     });
     const record = await window.wp.apiFetch({
       path: `/wp/v2/${restBase}/${id}?${query.toString()}`,
       method: 'GET',
     });
-    if (Number(record?.id) !== Number(id) || record?.type !== postType) {
+    if (
+      Number(record?.id) !== Number(id)
+      || record?.type !== postType
+      || record?.status !== expectedStatus
+      || record?.slug !== expectedSlug
+    ) {
       throw new Error(
-        `Authenticated REST identity mismatch: expected ${postType} ${id}, `
-          + `received ${record?.type ?? 'unknown'} ${record?.id ?? 'unknown'}.`,
+        `Authenticated REST identity mismatch: expected ${postType} ${id} ${expectedStatus} `
+          + `${JSON.stringify(expectedSlug)}, `
+          + `received ${record?.type ?? 'unknown'} ${record?.id ?? 'unknown'} `
+          + `${record?.status ?? 'unknown'} ${JSON.stringify(record?.slug ?? null)}.`,
       );
     }
     if (typeof record?.content?.raw !== 'string') {
       throw new Error('Authenticated REST context=edit response did not include content.raw.');
     }
+    const hashText = (value) => {
+      let first = 2166136261;
+      let second = 2246822519;
+      for (let index = 0; index < value.length; index += 1) {
+        const code = value.charCodeAt(index);
+        first = Math.imul(first ^ code, 16777619);
+        second = Math.imul(second ^ code, 3266489917);
+      }
+      return [first >>> 0, second >>> 0]
+        .map((part) => part.toString(16).padStart(8, '0'))
+        .join('');
+    };
 
     return {
+      rawContentHash: hashText(record.content.raw),
       rawContentLength: record.content.raw.length,
       rawContentNonWhitespaceLength: record.content.raw.trim().length,
       rawContentSource: 'authenticated-rest-context-edit',
+      rawContentSlug: record.slug,
+      rawContentStatus: record.status,
     };
   }, {
     id: item.id,
     postType: item.expectedPostType,
     restBase: item.expectedRestBase,
+    expectedStatus: item.status,
+    expectedSlug: item.slug,
+  });
+}
+
+async function readExactEditorContentParity(page, item) {
+  return page.evaluate(async ({ id, postType, restBase, expectedStatus, expectedSlug }) => {
+    const editor = window.wp?.data?.select?.('core/editor');
+    const blockEditor = window.wp?.data?.select?.('core/block-editor');
+    const blocksApi = window.wp?.blocks;
+    if (
+      typeof window.wp?.apiFetch !== 'function'
+      || typeof editor?.getCurrentPostAttribute !== 'function'
+      || typeof editor?.getEditedPostAttribute !== 'function'
+      || typeof blockEditor?.getBlocks !== 'function'
+      || typeof blocksApi?.parse !== 'function'
+      || typeof blocksApi?.serialize !== 'function'
+    ) {
+      throw new Error('Required REST/editor APIs are unavailable for exact content parity.');
+    }
+    const query = new URLSearchParams({
+      context: 'edit',
+      _fields: 'id,type,status,slug,content',
+    });
+    const record = await window.wp.apiFetch({
+      path: `/wp/v2/${restBase}/${id}?${query.toString()}`,
+      method: 'GET',
+    });
+    if (
+      Number(record?.id) !== Number(id)
+      || record?.type !== postType
+      || record?.status !== expectedStatus
+      || record?.slug !== expectedSlug
+      || typeof record?.content?.raw !== 'string'
+    ) {
+      throw new Error('Authenticated REST identity changed during exact content comparison.');
+    }
+    const stringValue = (candidate) => (
+      typeof candidate === 'string'
+        ? candidate
+        : typeof candidate?.raw === 'string'
+          ? candidate.raw
+          : null
+    );
+    const rawContent = record.content.raw;
+    const savedContent = stringValue(editor.getCurrentPostAttribute('content'));
+    const editedContent = stringValue(editor.getEditedPostAttribute('content'));
+    if (savedContent === null || editedContent === null) {
+      throw new Error('Editor content became unavailable during exact content comparison.');
+    }
+    const serializedContent = blocksApi.serialize(blockEditor.getBlocks());
+    const canonicalSavedContent = blocksApi.serialize(blocksApi.parse(savedContent));
+    return {
+      canonicalSavedEqualsSerialized: canonicalSavedContent === serializedContent,
+      rawEqualsCanonicalSaved: rawContent === canonicalSavedContent,
+      rawEqualsEdited: rawContent === editedContent,
+      rawEqualsSaved: rawContent === savedContent,
+      savedEqualsEdited: savedContent === editedContent,
+    };
+  }, {
+    id: item.id,
+    postType: item.expectedPostType,
+    restBase: item.expectedRestBase,
+    expectedStatus: item.status,
+    expectedSlug: item.slug,
   });
 }
 
@@ -1877,6 +2906,17 @@ async function readEditorHydrationSnapshot(page, item) {
     // Source: https://developer.wordpress.org/block-editor/reference-guides/data/data-core-editor/
     const editor = window.wp?.data?.select?.('core/editor');
     const blockEditor = window.wp?.data?.select?.('core/block-editor');
+    const blocksApi = window.wp?.blocks;
+    if (
+      typeof blockEditor?.getBlocks !== 'function'
+      || typeof blockEditor?.isBlockValid !== 'function'
+      || typeof blocksApi?.parse !== 'function'
+      || typeof blocksApi?.serialize !== 'function'
+      || typeof editor?.getEditedPostAttribute !== 'function'
+      || typeof editor?.isEditedPostDirty !== 'function'
+    ) {
+      throw new Error('Required Gutenberg block inventory, validity, or serialization API is unavailable.');
+    }
     const currentPost = editor?.getCurrentPost?.();
     const savedContentAttribute = editor?.getCurrentPostAttribute?.('content');
     const savedContent = typeof savedContentAttribute === 'string'
@@ -1886,55 +2926,81 @@ async function readEditorHydrationSnapshot(page, item) {
         : typeof currentPost?.content === 'string'
           ? currentPost.content
           : typeof currentPost?.content?.raw === 'string'
-            ? currentPost.content.raw
-            : null;
-    const rootBlocks = typeof blockEditor?.getBlocks === 'function'
-      ? blockEditor.getBlocks()
-      : null;
+          ? currentPost.content.raw
+          : null;
+    const editedContentAttribute = editor?.getEditedPostAttribute?.('content');
+    const editedContent = typeof editedContentAttribute === 'string'
+      ? editedContentAttribute
+      : typeof editedContentAttribute?.raw === 'string'
+        ? editedContentAttribute.raw
+        : null;
+    const rootBlocks = blockEditor.getBlocks();
     const flatten = (blocks) => blocks.flatMap(
       (block) => [block, ...flatten(block.innerBlocks || [])],
     );
     const allBlocks = Array.isArray(rootBlocks) ? flatten(rootBlocks) : [];
-    let serializedBlocks = '';
-    if (Array.isArray(rootBlocks)) {
-      serializedBlocks = typeof window.wp?.blocks?.serialize === 'function'
-        ? window.wp.blocks.serialize(rootBlocks)
-        : JSON.stringify(rootBlocks.map((block) => ({
-          attributes: block.attributes,
-          clientId: block.clientId,
-          innerBlocks: block.innerBlocks,
-          name: block.name,
-        })));
-    }
-    let serializedHash = 2166136261;
-    for (let index = 0; index < serializedBlocks.length; index += 1) {
-      serializedHash ^= serializedBlocks.charCodeAt(index);
-      serializedHash = Math.imul(serializedHash, 16777619);
-    }
+    const serializedBlocks = Array.isArray(rootBlocks) ? blocksApi.serialize(rootBlocks) : '';
+    const canonicalSavedContent = savedContent === null
+      ? null
+      : blocksApi.serialize(blocksApi.parse(savedContent));
+    const hashText = (value) => {
+      if (typeof value !== 'string') {
+        return null;
+      }
+      let first = 2166136261;
+      let second = 2246822519;
+      for (let index = 0; index < value.length; index += 1) {
+        const code = value.charCodeAt(index);
+        first = Math.imul(first ^ code, 16777619);
+        second = Math.imul(second ^ code, 3266489917);
+      }
+      return [first >>> 0, second >>> 0]
+        .map((part) => part.toString(16).padStart(8, '0'))
+        .join('');
+    };
     const currentPostId = Number(editor?.getCurrentPostId?.());
     const currentPostType = editor?.getCurrentPostType?.();
     const hydrated = currentPostId === Number(id)
       && currentPostType === postType
       && Number(currentPost?.id) === Number(id)
       && savedContent !== null
+      && editedContent !== null
       && Array.isArray(rootBlocks);
 
     return {
       blockCount: allBlocks.length,
+      canonicalSavedContentHash: hashText(canonicalSavedContent),
+      canonicalSavedContentLength: canonicalSavedContent?.length ?? null,
       currentPostId,
       currentPostType,
+      editedContentHash: hashText(editedContent),
+      editedContentLength: editedContent?.length ?? null,
+      editorSavedContentHash: hashText(savedContent),
       editorSavedContentLength: savedContent?.length ?? null,
       hydrated,
+      isDirty: Boolean(editor.isEditedPostDirty()),
+      hasChangedContent: typeof editor?.hasChangedContent === 'function'
+        ? Boolean(editor.hasChangedContent())
+        : null,
       isAutosaving: Boolean(editor?.isAutosavingPost?.()),
       isSaving: Boolean(editor?.isSavingPost?.()),
+      serializedContentHash: hashText(serializedBlocks),
+      serializedContentLength: serializedBlocks.length,
       signature: hydrated
         ? [
           currentPostId,
           currentPostType,
           savedContent.length,
+          hashText(savedContent),
+          hashText(editedContent),
+          hashText(canonicalSavedContent),
           allBlocks.length,
           serializedBlocks.length,
-          serializedHash >>> 0,
+          hashText(serializedBlocks),
+          Boolean(editor.isEditedPostDirty()),
+          typeof editor?.hasChangedContent === 'function'
+            ? Boolean(editor.hasChangedContent())
+            : 'unavailable',
         ].join(':')
         : null,
     };
@@ -1958,7 +3024,8 @@ async function waitForStableEditor(page, item, rawContent) {
     const ready = snapshot.hydrated
       && !snapshot.isSaving
       && !snapshot.isAutosaving
-      && snapshot.editorSavedContentLength === rawContent.rawContentLength;
+      && snapshot.editorSavedContentLength === rawContent.rawContentLength
+      && snapshot.editorSavedContentHash === rawContent.rawContentHash;
 
     if (ready && snapshot.signature === previousSignature) {
       stableSamples += 1;
@@ -1988,25 +3055,168 @@ async function waitForStableEditor(page, item, rawContent) {
   );
 }
 
+function frameTargetForReport(frameUrl) {
+  if (!frameUrl || frameUrl === 'about:blank' || frameUrl === 'about:srcdoc') {
+    return frameUrl || 'about:blank';
+  }
+  try {
+    const candidate = new URL(frameUrl);
+    return `${candidate.origin}${candidate.pathname}`;
+  } catch {
+    return 'unparseable-frame-url';
+  }
+}
+
+async function inspectRecoverySurfaces(page) {
+  const expectedOrigin = new URL(config.baseUrl).origin;
+  const mainFrame = page.mainFrame();
+  const surfaces = [];
+
+  for (const frame of page.frames()) {
+    const frameUrl = frame.url();
+    let sameOrigin = frame === mainFrame
+      || frameUrl === 'about:blank'
+      || frameUrl === 'about:srcdoc';
+    if (!sameOrigin) {
+      try {
+        sameOrigin = new URL(frameUrl).origin === expectedOrigin;
+      } catch {
+        sameOrigin = false;
+      }
+    }
+    if (!sameOrigin) {
+      continue;
+    }
+
+    const surface = {
+      kind: frame === mainFrame ? 'top-document' : 'same-origin-iframe',
+      target: frameTargetForReport(frameUrl),
+      recoveryTextMatches: [],
+      warningNodeCount: 0,
+      inspectionError: null,
+    };
+    try {
+      Object.assign(surface, await frame.evaluate(() => {
+        const warningSelectors = [
+          '.block-editor-warning',
+          '.block-editor-block-crash-warning',
+          '.block-editor-block-list__block .components-notice.is-error',
+          '.block-editor-block-list__block.has-warning',
+          '.block-editor-block-crash',
+          '[data-type="core/missing"]',
+        ];
+        const warningNodes = new Set(
+          warningSelectors.flatMap((selector) => [...document.querySelectorAll(selector)]),
+        );
+        const bodyText = document.body?.innerText || '';
+        const recoveryTextMatches = [
+          'Attempt Block Recovery',
+          'This block contains unexpected or invalid content.',
+          'This block has encountered an error and cannot be previewed.',
+        ].filter((text) => bodyText.includes(text));
+        return {
+          recoveryTextMatches,
+          warningNodeCount: warningNodes.size,
+        };
+      }));
+    } catch (error) {
+      surface.inspectionError = redact(errorMessage(error), lifecycle.reportSecrets).slice(0, 500);
+    }
+    surfaces.push(surface);
+  }
+
+  return surfaces;
+}
+
 async function scanEditor(page, item, contextBlockedWrites) {
   const editUrl = editorUrlForItem(item).href;
   const consoleErrors = [];
+  const gutenbergConsoleSignatures = [];
   const pageErrors = [];
+  const sameOriginHttpErrors = [];
+  const sameOriginReadFailures = [];
   const blockedWriteStart = contextBlockedWrites.length;
+  const expectedOrigin = new URL(config.baseUrl).origin;
+  let navigationInProgress = true;
   const onConsole = (message) => {
     if (message.type() === 'error') {
-      consoleErrors.push(redact(message.text(), lifecycle.reportSecrets).slice(0, 500));
+      const rawMessage = message.text();
+      const classifications = classifyGutenbergConsoleError(rawMessage);
+      const expectedClassification = classifyExpectedConsoleError(rawMessage);
+      gutenbergConsoleSignatures.push(...classifications);
+      const redactedMessage = redact(rawMessage, lifecycle.reportSecrets);
+      consoleErrors.push({
+        classifications,
+        expectedClassification,
+        fingerprint: diagnosticFingerprint(redactedMessage),
+        messageLength: redactedMessage.length,
+      });
     }
   };
-  const onPageError = (error) => pageErrors.push(
-    redact(errorMessage(error), lifecycle.reportSecrets).slice(0, 500),
-  );
+  const onPageError = (error) => {
+    const rawMessage = errorMessage(error);
+    const redactedMessage = redact(rawMessage, lifecycle.reportSecrets);
+    pageErrors.push({
+      fingerprint: diagnosticFingerprint(redactedMessage),
+      messageLength: redactedMessage.length,
+      name: error instanceof Error && error.name ? error.name : 'Error',
+    });
+  };
+  const onResponse = (response) => {
+    const status = response.status();
+    if (status < 400) {
+      return;
+    }
+    try {
+      const responseUrl = new URL(response.url());
+      if (responseUrl.origin === expectedOrigin) {
+        sameOriginHttpErrors.push({
+          status,
+          target: requestTargetForReport(responseUrl),
+        });
+      }
+    } catch {
+      // A malformed URL cannot originate from a normal browser Response.
+    }
+  };
+  const onRequestFailed = (request) => {
+    if (!['GET', 'HEAD', 'OPTIONS'].includes(request.method().toUpperCase())) {
+      return;
+    }
+    try {
+      const requestUrl = new URL(request.url());
+      if (requestUrl.origin !== expectedOrigin) {
+        return;
+      }
+      const failureText = request.failure()?.errorText || 'unknown-read-failure';
+      const method = request.method().toUpperCase();
+      const target = requestTargetForReport(requestUrl);
+      sameOriginReadFailures.push({
+        classification: classifySameOriginReadFailure({
+          duringNavigation: navigationInProgress,
+          errorText: failureText,
+          method,
+          target,
+        }),
+        duringNavigation: navigationInProgress,
+        errorCode: /^net::ERR_[A-Z_]+$/.test(failureText) ? failureText : null,
+        errorFingerprint: diagnosticFingerprint(failureText),
+        method,
+        target,
+      });
+    } catch {
+      // A malformed URL cannot originate from a normal browser Request.
+    }
+  };
   page.on('console', onConsole);
   page.on('pageerror', onPageError);
+  page.on('requestfailed', onRequestFailed);
+  page.on('response', onResponse);
 
   const result = {
     id: item.id,
     type: item.expectedPostType,
+    contentStatus: item.status,
     slug: item.slug,
     title: item.title?.rendered || '',
     permalink: item.link,
@@ -2017,21 +3227,27 @@ async function scanEditor(page, item, contextBlockedWrites) {
     diagnostics: {
       blockedContentWrites: [],
       consoleErrors,
+      gutenbergConsoleSignatures,
       pageErrors,
+      sameOriginHttpErrors,
+      sameOriginReadFailures,
     },
     screenshot: null,
   };
 
   try {
-    if (!isExactEditorLocation(page.url(), item)) {
-      const response = await page.goto(editUrl, {
-        timeout: config.editorTimeoutMs,
-        waitUntil: 'domcontentloaded',
-      });
-      if (!response?.ok()) {
-        throw new Error(`Editor returned HTTP ${response?.status() ?? 'unknown'}.`);
-      }
+    // Always perform a fresh navigation with this item's listeners attached.
+    // The login flow initially lands on the first editor URL, before scan-level
+    // console/page-error collection exists; skipping that navigation would
+    // otherwise make the first record a weaker check than every later record.
+    const response = await page.goto(editUrl, {
+      timeout: config.editorTimeoutMs,
+      waitUntil: 'domcontentloaded',
+    });
+    if (!response?.ok()) {
+      throw new Error(`Editor returned HTTP ${response?.status() ?? 'unknown'}.`);
     }
+    navigationInProgress = false;
     if (new URL(page.url()).pathname === '/wp-login.php') {
       throw new Error('Authentication expired and the editor redirected to wp-login.php.');
     }
@@ -2052,59 +3268,66 @@ async function scanEditor(page, item, contextBlockedWrites) {
     );
     const rawContent = await readAuthenticatedRawContent(page, item);
     const stableEditor = await waitForStableEditor(page, item, rawContent);
+    const exactContentParity = await readExactEditorContentParity(page, item);
 
     result.editor = await page.evaluate(() => {
       const blockEditor = window.wp.data.select('core/block-editor');
       const editor = window.wp.data.select('core/editor');
+      const blocksApi = window.wp?.blocks;
+      if (
+        typeof blockEditor?.getBlocks !== 'function'
+        || typeof blockEditor?.isBlockValid !== 'function'
+        || typeof blocksApi?.getBlockType !== 'function'
+      ) {
+        throw new Error('Required Gutenberg block validity or registry API is unavailable.');
+      }
       const flatten = (blocks, parentNames = []) => blocks.flatMap((block) => {
-        const selectorSaysValid = typeof blockEditor.isBlockValid === 'function'
-          ? blockEditor.isBlockValid(block.clientId)
-          : true;
+        const selectorSaysValid = blockEditor.isBlockValid(block.clientId);
         const record = {
           clientId: block.clientId,
           name: block.name,
           parentNames,
+          registered: Boolean(blocksApi.getBlockType(block.name)),
           isValid:
             block.isValid !== false
-            && selectorSaysValid !== false,
+            && selectorSaysValid === true,
         };
         return [record, ...flatten(block.innerBlocks || [], [...parentNames, block.name])];
       });
       const blocks = flatten(blockEditor.getBlocks());
-      const warningNodes = [
-        ...document.querySelectorAll(
-          '.block-editor-warning, .block-editor-block-list__block .components-notice.is-error',
-        ),
-      ];
-      const warningTexts = [...new Set(
-        warningNodes
-          .map((node) => (node.innerText || node.textContent || '').trim())
-          .filter(Boolean),
-      )];
-      const bodyText = document.body.innerText || '';
-      const recoveryTextMatches = [
-        'Attempt Block Recovery',
-        'This block contains unexpected or invalid content.',
-        'This block has encountered an error and cannot be previewed.',
-      ].filter((text) => bodyText.includes(text));
 
       return {
         blockCount: blocks.length,
         postId: Number(editor.getCurrentPostId()),
         postType: editor.getCurrentPostType(),
         invalidBlocks: blocks.filter((block) => !block.isValid),
-        recoveryTextMatches,
-        warningTexts,
+        missingBlocks: blocks.filter(
+          (block) => block.name === 'core/missing' || !block.registered,
+        ),
       };
     });
+    result.editor.recoverySurfaces = await inspectRecoverySurfaces(page);
     Object.assign(result.editor, rawContent, {
+      editedContentHash: stableEditor.editedContentHash,
+      editedContentLength: stableEditor.editedContentLength,
+      canonicalSavedContentHash: stableEditor.canonicalSavedContentHash,
+      canonicalSavedContentLength: stableEditor.canonicalSavedContentLength,
+      editorSavedContentHash: stableEditor.editorSavedContentHash,
       editorSavedContentLength: stableEditor.editorSavedContentLength,
+      hasChangedContent: stableEditor.hasChangedContent,
+      isDirty: stableEditor.isDirty,
+      exactContentParity,
+      serializedContentHash: stableEditor.serializedContentHash,
+      serializedContentLength: stableEditor.serializedContentLength,
       stabilitySamplesRequired: 3,
       stabilityWindowMs: config.editorSettleMs,
     });
 
     if (result.editor.invalidBlocks.length > 0) {
       result.reasons.push('Gutenberg block store reports invalid blocks.');
+    }
+    if (result.editor.missingBlocks.length > 0) {
+      result.reasons.push('Gutenberg block store contains missing or unregistered blocks.');
     }
     if (
       result.editor.postId !== Number(item.id)
@@ -2115,7 +3338,11 @@ async function scanEditor(page, item, contextBlockedWrites) {
           + `loaded ${result.editor.postType} ${result.editor.postId}.`,
       );
     }
-    if (result.editor.recoveryTextMatches.length > 0 || result.editor.warningTexts.length > 0) {
+    if (result.editor.recoverySurfaces.some((surface) => (
+      surface.inspectionError
+      || surface.warningNodeCount > 0
+      || surface.recoveryTextMatches.length > 0
+    ))) {
       result.reasons.push('The editor displays a block warning or recovery prompt.');
     }
     if (
@@ -2126,45 +3353,144 @@ async function scanEditor(page, item, contextBlockedWrites) {
         'The authenticated saved content is nonempty, but the stable editor block inventory is empty.',
       );
     }
+    if (!result.editor.exactContentParity.rawEqualsSaved) {
+      result.reasons.push('Authenticated raw content and the editor saved entity differ exactly.');
+    }
+    if (
+      !result.editor.exactContentParity.rawEqualsEdited
+      || !result.editor.exactContentParity.savedEqualsEdited
+    ) {
+      result.reasons.push('The no-interaction editor content differs from the saved editor entity.');
+    }
+    result.editor.savedContentRequiresCanonicalization =
+      !result.editor.exactContentParity.rawEqualsCanonicalSaved;
+    if (!result.editor.exactContentParity.canonicalSavedEqualsSerialized) {
+      result.reasons.push(
+        'The editor block tree differs from a deterministic parse of the saved content.',
+      );
+    }
+    if (result.editor.isDirty || result.editor.hasChangedContent === true) {
+      result.reasons.push('The editor becomes dirty without user interaction.');
+    }
   } catch (error) {
     result.reasons.push(redact(errorMessage(error), lifecycle.reportSecrets));
   } finally {
+    navigationInProgress = false;
     result.diagnostics.blockedContentWrites = contextBlockedWrites.slice(blockedWriteStart);
     page.off('console', onConsole);
     page.off('pageerror', onPageError);
+    page.off('requestfailed', onRequestFailed);
+    page.off('response', onResponse);
   }
 
   if (result.diagnostics.blockedContentWrites.some(({ fatal }) => fatal)) {
     result.reasons.push('The network guard blocked an unexpected browser write request.');
+  }
+  result.diagnostics.gutenbergConsoleSignatures = [
+    ...new Set(result.diagnostics.gutenbergConsoleSignatures),
+  ];
+  if (result.diagnostics.gutenbergConsoleSignatures.length > 0) {
+    result.reasons.push('Gutenberg emitted a block-validation console error.');
+  }
+  const unknownConsoleErrors = result.diagnostics.consoleErrors.filter(
+    ({ classifications, expectedClassification }) => (
+      classifications.length === 0 && !expectedClassification
+    ),
+  );
+  result.diagnostics.unknownConsoleErrorCount = unknownConsoleErrors.length;
+  if (unknownConsoleErrors.length > 0) {
+    result.reasons.push('The editor emitted an unclassified console error.');
+  }
+  const expectedBarrierConsoleErrors = result.diagnostics.consoleErrors.filter(
+    ({ expectedClassification }) => (
+      expectedClassification === 'expected-read-only-barrier-resource-block'
+    ),
+  );
+  if (
+    expectedBarrierConsoleErrors.length > 0
+    && result.diagnostics.blockedContentWrites.length === 0
+  ) {
+    result.reasons.push(
+      'A barrier-style console error occurred without a corresponding blocked write.',
+    );
+  }
+  if (result.diagnostics.pageErrors.length > 0) {
+    result.reasons.push('The editor emitted an uncaught page error.');
+  }
+  if (result.diagnostics.sameOriginHttpErrors.some(({ status }) => status >= 500)) {
+    result.reasons.push('The editor received a same-origin HTTP 5xx response.');
+  }
+  const unknownReadFailures = result.diagnostics.sameOriginReadFailures.filter(
+    ({ classification }) => !classification,
+  );
+  result.diagnostics.unknownReadFailureCount = unknownReadFailures.length;
+  if (unknownReadFailures.length > 0) {
+    result.reasons.push('The editor emitted an unclassified same-origin read failure.');
   }
   result.status = result.reasons.length === 0 ? 'passed' : 'failed';
 
   if (result.status === 'failed') {
     const screenshotName = `${result.type}-${result.id}.png`;
     const screenshotPath = path.join(config.outputDir, screenshotName);
-    await page.screenshot({ path: screenshotPath, fullPage: true }).catch(() => {});
-    result.screenshot = screenshotName;
+    try {
+      await page.screenshot({ path: screenshotPath, fullPage: true });
+      await chmod(screenshotPath, 0o600);
+      result.screenshot = screenshotName;
+    } catch (error) {
+      result.diagnostics.screenshotError = redact(
+        errorMessage(error),
+        lifecycle.reportSecrets,
+      ).slice(0, 500);
+    }
   }
 
   return result;
 }
 
 async function runScan(credentials) {
-  const inventory = await Promise.all(CONTENT_TYPES.map(fetchPublishedItems));
-  const items = inventory.flat();
-  for (let index = 0; index < CONTENT_TYPES.length; index += 1) {
-    summary.inventory[CONTENT_TYPES[index].postType] = inventory[index].length;
+  const wpCliItems = await fetchWpCliItems();
+  let items = wpCliItems;
+  if (!allEditableRequested) {
+    const restInventory = await Promise.all(CONTENT_TYPES.map(fetchPublishedItems));
+    items = restInventory.flatMap(({ items: contentItems }) => contentItems);
+    summary.inventory.restTotal = items.length;
+    summary.inventory.parity = comparePublishedInventories(items, wpCliItems);
+  }
+  for (const contentType of CONTENT_TYPES) {
+    summary.inventory[contentType.postType] = items.filter(
+      ({ expectedPostType }) => expectedPostType === contentType.postType,
+    ).length;
   }
   summary.inventory.total = items.length;
-  console.log(
-    `Discovered ${summary.inventory.page} published Page(s) and ${summary.inventory.post} published Post(s).`,
-  );
+  summary.inventory.wpCliTotal = wpCliItems.length;
+  if (allEditableRequested) {
+    summary.inventory.parity = {
+      mode: 'authoritative-wp-cli-plus-per-record-authenticated-rest',
+      ok: null,
+    };
+  }
+  const inventoryCounts = CONTENT_TYPES.map(
+    ({ label, postType }) => `${summary.inventory[postType]} ${label}(s)`,
+  ).join(', ');
+  console.log(`Discovered ${inventoryCounts}.`);
   if (summary.inventory.total === 0) {
     summary.failures.push({
       stage: 'inventory-zero',
-      error: 'Published Page/Post inventory is empty; refusing a vacuous editor pass.',
+      error: 'Configured Gutenberg inventory is empty; refusing a vacuous editor pass.',
     });
     return;
+  }
+  if (!allEditableRequested && !summary.inventory.parity.ok) {
+    summary.failures.push({
+      stage: 'inventory-parity',
+      restTotal: summary.inventory.restTotal,
+      wpCliTotal: summary.inventory.wpCliTotal,
+      duplicateRestRecords: summary.inventory.parity.duplicateRestRecords,
+      duplicateWpCliRecords: summary.inventory.parity.duplicateWpCliRecords,
+      missingFromRest: summary.inventory.parity.missingFromRest,
+      missingFromWpCli: summary.inventory.parity.missingFromWpCli,
+    });
+    throw new Error('Published REST inventory does not exactly match authoritative WP-CLI inventory.');
   }
   lifecycle.editLockSnapshotPromise = snapshotEditLocks(items);
   await lifecycle.editLockSnapshotPromise;
@@ -2175,8 +3501,12 @@ async function runScan(credentials) {
   const playwright = loadPlaywright();
   lifecycle.browser = await playwright.chromium.launch({
     headless: !config.headed,
+    handleSIGHUP: false,
+    handleSIGINT: false,
+    handleSIGTERM: false,
     ...(config.browserExecutablePath ? { executablePath: config.browserExecutablePath } : {}),
   });
+  lifecycle.browserCloseProven = false;
   if (lifecycle.abortController.signal.aborted) {
     await closeBrowserBounded();
     throw lifecycle.abortController.signal.reason || new Error('Verifier interrupted.');
@@ -2212,6 +3542,7 @@ async function runScan(credentials) {
     await login(page, credentials, items[0]);
     barrierState.loginPostAllowed = false;
     console.log('Authenticated to the WordPress development editor.');
+    await runSourcePreflight(page);
 
     for (const item of items) {
       if (lifecycle.interruptedBy) {
@@ -2241,6 +3572,32 @@ async function runScan(credentials) {
     summary.counts.scanned = summary.results.length;
     summary.counts.passed = summary.results.filter(({ status }) => status === 'passed').length;
     summary.counts.failed = summary.results.filter(({ status }) => status === 'failed').length;
+    if (allEditableRequested && !lifecycle.interruptedBy) {
+      const authenticatedRestItems = summary.results
+        .filter(({ editor }) => editor?.rawContentSource === 'authenticated-rest-context-edit')
+        .map((result) => ({
+          expectedPostType: result.type,
+          id: result.id,
+          slug: result.slug,
+          status: result.contentStatus,
+        }));
+      summary.inventory.restTotal = authenticatedRestItems.length;
+      summary.inventory.parity = {
+        mode: 'authoritative-wp-cli-plus-per-record-authenticated-rest',
+        ...comparePublishedInventories(authenticatedRestItems, wpCliItems),
+      };
+      if (!summary.inventory.parity.ok) {
+        summary.failures.push({
+          stage: 'inventory-parity',
+          restTotal: summary.inventory.restTotal,
+          wpCliTotal: summary.inventory.wpCliTotal,
+          duplicateRestRecords: summary.inventory.parity.duplicateRestRecords,
+          duplicateWpCliRecords: summary.inventory.parity.duplicateWpCliRecords,
+          missingFromRest: summary.inventory.parity.missingFromRest,
+          missingFromWpCli: summary.inventory.parity.missingFromWpCli,
+        });
+      }
+    }
     if (!lifecycle.interruptedBy && summary.counts.scanned !== summary.inventory.total) {
       summary.failures.push({
         stage: 'inventory-coverage',
@@ -2276,13 +3633,33 @@ async function runScan(credentials) {
   }
 }
 
+function evaluateFinalInvariant() {
+  const failedChecks = finalInvariantFailedChecks(
+    summary,
+    CONTENT_TYPES.map(({ postType }) => postType),
+  );
+  summary.finalInvariant = {
+    evaluated: true,
+    ok: failedChecks.length === 0,
+    failedChecks,
+  };
+  if (failedChecks.length > 0) {
+    const existing = summary.failures.find(({ stage }) => stage === 'final-invariant');
+    if (existing) {
+      existing.failedChecks = failedChecks;
+    } else {
+      summary.failures.push({ stage: 'final-invariant', failedChecks });
+    }
+  }
+}
+
 async function main() {
   const ephemeralIdentity = ephemeralAdminRequested ? buildEphemeralAdmin() : null;
   lifecycle.ephemeralIdentity = ephemeralIdentity;
   if (ephemeralIdentity) {
     summary.cleanup.username = ephemeralIdentity.username;
   }
-  await mkdir(config.outputDir, { recursive: true });
+  await ensureOutputDirectory();
   const credentials = ephemeralIdentity
     ? { username: ephemeralIdentity.username, password: ephemeralIdentity.password }
     : { username: externalUser, password: externalPassword };
@@ -2327,10 +3704,11 @@ async function main() {
 
     summary.finishedAt = new Date().toISOString();
     if (lifecycle.interruptedBy) {
-      summary.status = 'interrupted';
       recordSignalFailure();
+      summary.status = 'interrupted';
     } else {
-      summary.status = summary.failures.length === 0 ? 'passed' : 'failed';
+      evaluateFinalInvariant();
+      summary.status = summary.finalInvariant.ok ? 'passed' : 'failed';
     }
     await writeSummarySerialized();
     console.log(`summary: ${path.join(config.outputDir, 'summary.json')}`);
@@ -2347,4 +3725,14 @@ async function main() {
   }
 }
 
-await main();
+try {
+  await main();
+  if (lifecycle.signalFinalizationPromise) {
+    await lifecycle.signalFinalizationPromise;
+  }
+} finally {
+  if (lifecycle.signalHoldTimer) {
+    clearInterval(lifecycle.signalHoldTimer);
+    lifecycle.signalHoldTimer = null;
+  }
+}

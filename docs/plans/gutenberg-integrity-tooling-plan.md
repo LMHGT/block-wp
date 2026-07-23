@@ -11,10 +11,19 @@ Give independent agents deterministic preflight and runtime gates that prevent
 Gutenberg recovery prompts, invalid-block warnings, silent serialization drift,
 and incomplete editor coverage from reaching `main`.
 
-The primary acceptance target is every published WordPress Page and Post on the
-accepted development runtime. Tracked block-theme templates, template parts,
-and page-data content are also source candidates and must be validated even when
-they are not currently represented by a published database record.
+The primary acceptance target is every durable Gutenberg-editable entity on the
+accepted development runtime, not only published Pages. Tracked block-theme
+templates, template parts, and page-data content are also source candidates and
+must be validated even when they are not currently represented by a database
+record.
+
+The 2026-07-23 read-only inventory found 219 durable database-backed editor
+entities: 53 published Pages, 11 draft Posts, 134 published and 20 draft FAQs,
+and one Navigation entity. Reviews and synced Patterns currently contain zero
+records but remain explicitly classified. The Site Editor has 20 effective
+theme entities: 18 templates and two template parts. These counts are a measured
+snapshot, not hard-coded future expectations; each run must rediscover and
+reconcile its complete inventory.
 
 The canonical public site, `https://louisvillementalhealth.org/`, is hosted on
 SiteGround and is out of scope. The current private/noindex development endpoint
@@ -46,8 +55,8 @@ restore their earlier implementation wholesale.
 - Run static and fixture tests before any runtime test that can write.
 - Serialize all runtime tests that create a user, draft, Post, lock, revision,
   option, or metadata row through one coordinator.
-- Existing published content is read-only during validation. Never save a
-  published Page/Post as a test strategy.
+- Existing content is read-only during validation. Never save an existing Page,
+  Post, FAQ, Navigation, Pattern, template, or template part as a test strategy.
 - Any save/reload proof uses a uniquely named temporary Draft, captures its exact
   ID, and deletes/verifies that exact ID during bounded cleanup.
 - Create and verify a fresh MariaDB backup before introducing a new
@@ -63,13 +72,22 @@ restore their earlier implementation wholesale.
 
 ## Phase 0: Baseline and candidate inventory
 
-1. Confirm branch/worktree, runtime identity, active theme/plugin, WordPress
-   version, and development-only URL.
-2. Inventory published Pages and Posts through the same authenticated/runtime
-   authority used by the live editor scan.
+1. Confirm branch/worktree, exact development-only URL, WordPress 7.0.2,
+   active `wordpress-2026` block theme, active LMHG Site Core plugin, and
+   deployable theme/plugin file parity before creating a temporary identity.
+   Perform the bootstrap identity query under a database-session read-only
+   guard and require rollback evidence with zero unexpected blocked write
+   attempts. Disable automatic cron for every verifier WP-CLI process. Permit
+   only explicitly classified, guard-blocked WordPress theme-pattern cache
+   transient refresh attempts in the standalone inventory.
+2. Inventory all registered Gutenberg-capable content types and all durable,
+   non-internal statuses through the same authenticated/runtime authority used
+   by the live editor scan.
    Require strict REST pagination headers and exact bidirectional ID/type/status
    parity with an authoritative WP-CLI/MariaDB inventory; do not allow a missing
    or malformed pagination header to default to one passing page.
+   Fail closed when a newly registered editor-capable type lacks an explicit
+   post-editor, Site Editor, specialized-data, or excluded classification.
 3. Inventory tracked theme templates, parts, and all `content` fields in
    `wp2026-page-data.json`.
 4. Run the existing Gutenberg verifier unchanged and retain its cleanup summary
@@ -97,12 +115,17 @@ Create valid and invalid fixtures for each known regression class. Unit/fixture
 tests must prove that valid fixtures pass and intentionally invalid fixtures
 fail for the expected reason.
 
-## Phase 2: Harden the published-content editor scan
+## Phase 2: Harden the durable-content editor scan
 
 Extend `scripts/verify-gutenberg-stability.mjs` without weakening its request
 barrier or cleanup behavior:
 
-- retain complete published Page/Post coverage and fail closed on partial scans;
+- retain complete Page/Post coverage and expand the explicit post-editor policy
+  to `lmhg_faq` and `lmhg_review`, including durable draft, pending, private,
+  future, published, and reviewed custom statuses;
+- count but exclude trash, auto-drafts, revisions, and internal statuses;
+- validate specialized `wp_block` and `wp_navigation` entities with a separate
+  Site Editor adapter rather than treating them as ordinary `post.php` records;
 - reconcile the REST inventory with exact WP-CLI IDs before acquiring locks or
   opening an editor;
 - assert the editor identity, stable hydration, block count, and invalid-block
@@ -110,8 +133,10 @@ barrier or cleanup behavior:
 - require the Gutenberg validity and serialization APIs instead of defaulting to
   valid or falling back to non-equivalent JSON output when an API is absent;
 - assert that a no-interaction editor load is not unexpectedly dirty;
-- compare saved and edited content using redacted lengths/hashes and flag
-  normalization drift without storing the content;
+- compare saved, edited, canonical parse/serialize, and active block-tree content
+  using redacted lengths/hashes. Raw-to-canonical normalization drift is
+  evidence, while deterministic parse parity is the read-only gate; exact
+  no-op persistence is reserved for the isolated roundtrip gate;
 - fail on uncaught page errors and block-validation console signatures;
 - inspect recovery/crash warnings in the top document and every same-origin
   editor canvas frame;
@@ -163,11 +188,16 @@ operations across existing published content.
   project-aware rules.
 - Recognize filenames registered in `theme.json.customTemplates`; a generic
   filename heuristic must not classify those registered templates as blockers.
-- Open representative and changed templates/parts in the Site Editor when a
-  safe read-only route is available, and fail on load errors, invalid blocks, or
-  recovery prompts.
+- Open all 18 templates and both template parts in the Site Editor when a safe
+  read-only route is available, and fail on load errors, invalid blocks, or
+  recovery prompts. Representative-only coverage is not sufficient.
 - Detect database template overrides and report whether the tracked file or a
   database customization is active. Do not delete an override automatically.
+- Inventory raw `wp_template`/`wp_template_part` rows as well as the merged core
+  entities so orphaned rows cannot be hidden by both REST and Site Editor APIs.
+  The 2026-07-23 inventory found a published `footer` template-part row without
+  the required theme/area taxonomy relationships; report it as an integrity
+  finding and do not delete it automatically.
 
 ## Phase 5: Agent and plugin integration
 
@@ -193,8 +223,9 @@ The branch may be proposed for merge only when all applicable gates pass:
 1. Known valid fixtures pass and known invalid fixtures fail deterministically.
 2. Every tracked template, part, and page-data content candidate passes the
    source preflight.
-3. Every currently published Page and Post is scanned in the real development
-   editor with zero invalid blocks and zero recovery prompts.
+3. Every durable Gutenberg-editable database entity and all 20 effective Site
+   Editor entities are scanned in their real development editor with zero
+   invalid blocks and zero recovery prompts.
 4. No-interaction editor loads produce no unexplained dirty/serialization drift.
 5. The opt-in Draft roundtrip passes twice with exact no-op serialization
    stability and verified cleanup.

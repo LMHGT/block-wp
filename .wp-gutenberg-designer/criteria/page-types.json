@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "pageTypes": {
+    "404": {
+      "templates": [
+        "wp-content/themes/wordpress-2026/templates/404.html"
+      ],
+      "requiredBlocks": [
+        "core/template-part"
+      ],
+      "maxH1": 1
+    },
+    "front-page": {
+      "templates": [
+        "wp-content/themes/wordpress-2026/templates/front-page.html"
+      ],
+      "requiredBlocks": [
+        "core/template-part",
+        "core/post-content"
+      ],
+      "maxH1": 1
+    },
+    "page-families": {
+      "templates": [
+        "wp-content/themes/wordpress-2026/templates/article-hub.html",
+        "wp-content/themes/wordpress-2026/templates/article-page.html",
+        "wp-content/themes/wordpress-2026/templates/contact-page.html",
+        "wp-content/themes/wordpress-2026/templates/faq-hub.html",
+        "wp-content/themes/wordpress-2026/templates/faq-page.html",
+        "wp-content/themes/wordpress-2026/templates/index.html",
+        "wp-content/themes/wordpress-2026/templates/legal-utility-page.html",
+        "wp-content/themes/wordpress-2026/templates/location-access-page.html",
+        "wp-content/themes/wordpress-2026/templates/page.html",
+        "wp-content/themes/wordpress-2026/templates/service-page.html",
+        "wp-content/themes/wordpress-2026/templates/services-hub.html",
+        "wp-content/themes/wordpress-2026/templates/single.html",
+        "wp-content/themes/wordpress-2026/templates/specialties-hub.html",
+        "wp-content/themes/wordpress-2026/templates/specialty-page.html",
+        "wp-content/themes/wordpress-2026/templates/team-page.html",
+        "wp-content/themes/wordpress-2026/templates/trust-page.html"
+      ],
+      "requiredBlocks": [
+        "core/template-part",
+        "core/post-title",
+        "core/post-content"
+      ],
+      "maxH1": 1
+    }
+  }
+}
